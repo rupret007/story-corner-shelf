@@ -1426,10 +1426,10 @@
       "source_scope": "staged_r6"
     },
     {
-      "bytes": 96,
+      "bytes": 110,
       "destination": "requirements.txt",
       "mode": "0644",
-      "sha256": "664dc9885c1ecc2bd6e74146dbd814a3d4fb189baa840c946e94c346b6c49151",
+      "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd",
       "source": "requirements.txt",
       "source_scope": "repository_metadata"
     },
@@ -1719,7 +1719,7 @@
   "schema_version": 1,
   "software_model_publication_eligible": true,
   "tested_load_rating_exists": false,
-  "total_bytes_excluding_manifest": 18682075,
+  "total_bytes_excluding_manifest": 18682089,
   "verification": {
     "assembled_complete_test_suite_passed": true,
     "assembled_full_release_check_passed": true,
