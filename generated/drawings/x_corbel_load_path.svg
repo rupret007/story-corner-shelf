@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000"
+     viewBox="0 0 1600 1000" role="img" data-config-sha256="1bf52b56ab1030f1f88d061a75a8ea609bc82e0081aed105c704b5f6cdd719c8" data-crossing-mm="82.666667,92" data-diagonal-mm="180" data-drawing="x-corbel-load-path" data-horizontal-leg-mm="144" data-revision="r6" data-status="experimental-unrated-nominal-unverified-model-only-no-wall-bores" data-vertical-leg-mm="108">
+  <title>Exact 3 : 4 : 5 X-Corbel · Candidate Load Path</title>
+  <desc>Side elevation in wall projection x / frame elevation y; bearing and union continuity are test candidates EXPERIMENTAL / UNRATED · NOMINAL / UNVERIFIED · MODEL-ONLY · NO WALL BORES. SCHEMATIC DISPLAY PATHS ONLY — dimensions and parametric data labels govern; no load rating is claimed.</desc>
+  <defs>
+    <style>
+        :root { color-scheme: light; }
+        text { font-family: Inter, Avenir, Helvetica, Arial, sans-serif; fill: #181716; }
+        .sheet-bg { fill: #f7f0de; }
+        .border { fill: none; stroke: #181716; stroke-width: 2; }
+        .deco { fill: none; stroke: #a46b2a; stroke-width: 3; }
+        .hairline { fill: none; stroke: #756b5a; stroke-width: 1.2; }
+        .line { fill: none; stroke: #181716; stroke-width: 2.2; }
+        .heavy { fill: none; stroke: #111; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+        .arch { fill: none; stroke: #111; stroke-width: 11; stroke-linecap: round; stroke-linejoin: round; }
+        .arch-highlight { fill: none; stroke: #c78a2f; stroke-width: 2; }
+        .deck { fill: #151515; stroke: #c78a2f; stroke-width: 2; }
+        .petg { fill: #1a1a1a; stroke: #b77a28; stroke-width: 2; }
+        .petg-soft { fill: #32302c; stroke: #c78a2f; stroke-width: 1.5; }
+        .wall { fill: #d8d0bd; stroke: #756b5a; stroke-width: 1.5; }
+        .clearance { fill: #dce9e9; stroke: #2f6e73; stroke-width: 1.5; }
+        .warning-fill { fill: #f1d8c9; stroke: #a53c2d; stroke-width: 2; }
+        .candidate { fill: none; stroke: #b33c2e; stroke-width: 12; stroke-linecap: round; }
+        .candidate-2 { fill: none; stroke: #176c73; stroke-width: 12; stroke-linecap: round; }
+        .union { fill: none; stroke: #c78a2f; stroke-width: 18; stroke-linecap: round; opacity: .86; }
+        .seam-fixed { fill: none; stroke: #b33c2e; stroke-width: 2.2; }
+        .seam-floating { fill: none; stroke: #176c73; stroke-width: 2.2; stroke-dasharray: 7 5; }
+        .construction { fill: none; stroke: #8d8372; stroke-width: 1.2; stroke-dasharray: 5 5; }
+        .dimension { fill: none; stroke: #2d5960; stroke-width: 1.5; }
+        .motion { fill: none; stroke: #b33c2e; stroke-width: 3; marker-end: url(#motion-arrow); }
+        .motion-blue { fill: none; stroke: #176c73; stroke-width: 3; marker-end: url(#motion-blue-arrow); }
+        .node { fill: #f7f0de; stroke: #181716; stroke-width: 2; }
+        .support-node { fill: #b33c2e; stroke: #f7f0de; stroke-width: 1.5; }
+        .crown-node { fill: #c78a2f; stroke: #181716; stroke-width: 1.2; }
+        .title { font-family: Georgia, 'Times New Roman', serif; font-size: 34px; font-weight: 700; letter-spacing: 1.2px; }
+        .subtitle { font-size: 16px; letter-spacing: 1.5px; fill: #4a4439; }
+        .header-subtitle { font-size: 14px; letter-spacing: .25px; fill: #4a4439; }
+        .status { font-size: 14px; font-weight: 800; fill: #892f24; letter-spacing: .25px; }
+        .section { font-family: Georgia, 'Times New Roman', serif; font-size: 22px; font-weight: 700; }
+        .label { font-size: 15px; font-weight: 650; }
+        .small { font-size: 12px; }
+        .tiny { font-size: 10px; }
+        .note { font-size: 14px; }
+        .dimension-text { font-size: 13px; font-weight: 700; fill: #244f55; }
+        .callout { font-size: 15px; font-weight: 750; fill: #892f24; }
+        .inverse { fill: #f7f0de; font-size: 13px; font-weight: 700; }
+        .inverse-label { fill: #f7f0de; font-size: 15px; font-weight: 650; }
+        .inverse-callout { fill: #f7f0de; font-size: 15px; font-weight: 750; }
+        .panel { fill: #fbf6e8; stroke: #756b5a; stroke-width: 1.5; }
+        .panel-title { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; font-weight: 700; }
+        </style>
+    <marker id="motion-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b33c2e"/>
+    </marker>
+    <marker id="motion-blue-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#176c73"/>
+    </marker>
+    <marker id="dim-arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M0,4 L8,0 L8,8 z" fill="#2d5960"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1600" height="1000" class="sheet-bg"/>
+  <rect x="18" y="18" width="1564" height="964" class="border"/>
+  <path d="M42 72 H126 L146 52 H1454 L1474 72 H1558" class="deco"/>
+  <path d="M42 928 H126 L146 948 H1454 L1474 928 H1558" class="deco"/>
+  <text x="52" y="44" class="subtitle">STORY CORNER · TRIADIC PALATINE ORDER · r6</text>
+  <text x="52" y="96" class="title">Exact 3 : 4 : 5 X-Corbel · Candidate Load Path</text>
+  <text x="52" y="122" class="header-subtitle">Side elevation in wall projection x / frame elevation y; bearing and union continuity are test candidates</text>
+  <rect x="50" y="136" width="1500" height="34" rx="5" class="warning-fill"/>
+  <text x="800.0" y="159" class="status" text-anchor="middle">EXPERIMENTAL / UNRATED · NOMINAL / UNVERIFIED · MODEL-ONLY · NO WALL BORES</text>
+<rect x="167.25" y="234.5" width="45.5" height="585" rx="0" class="wall"/>
+<rect x="190" y="254" width="468" height="97.5" rx="0" class="deck"/>
+<line x1="190" y1="299.5" x2="658" y2="650.5" class="candidate"/>
+<line x1="190" y1="702.5" x2="658" y2="351.5" class="candidate-2"/>
+<line x1="190" y1="299.5" x2="280.133332" y2="367.1" class="union"/>
+<circle cx="190" cy="299.5" r="5.5" class="node"/>
+<text x="202" y="289.5" class="inverse-label" text-anchor="start" fill="#f7f0de">Wᵤ (0,154)</text>
+<circle cx="658" cy="650.5" r="5.5" class="node"/>
+<text x="646" y="640.5" class="label" text-anchor="end">Fₛ (144,46)</text>
+<circle cx="190" cy="702.5" r="5.5" class="node"/>
+<text x="202" y="692.5" class="label" text-anchor="start">Wₗ (0,30)</text>
+<circle cx="658" cy="351.5" r="5.5" class="node"/>
+<text x="646" y="376.5" class="label" text-anchor="end">Fᵦ (144,138)</text>
+<circle cx="458.666667" cy="501" r="7" class="node"/>
+<text x="470.666667" y="491" class="label" text-anchor="start">X (82.666667,92)</text>
+<line x1="182" y1="655.5" x2="198" y2="671.5" class="candidate"/>
+<line x1="198" y1="655.5" x2="182" y2="671.5" class="candidate"/>
+<text x="170" y="667.5" class="tiny" text-anchor="end">y 42</text>
+<line x1="182" y1="519" x2="198" y2="535" class="candidate"/>
+<line x1="198" y1="519" x2="182" y2="535" class="candidate"/>
+<text x="170" y="531" class="tiny" text-anchor="end">y 84</text>
+<line x1="182" y1="382.5" x2="198" y2="398.5" class="candidate"/>
+<line x1="198" y1="382.5" x2="182" y2="398.5" class="candidate"/>
+<text x="170" y="394.5" class="tiny" text-anchor="end">y 126</text>
+<line x1="190" y1="751.25" x2="658" y2="751.25" class="dimension" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+<text x="424" y="771.25" class="dimension-text" text-anchor="middle">144 mm · 4 units</text>
+<line x1="697" y1="299.5" x2="697" y2="650.5" class="dimension" marker-start="url(#dim-arrow)" marker-end="url(#dim-arrow)"/>
+<text x="745" y="479" class="dimension-text" text-anchor="middle" transform="rotate(-90 745 479)">108 mm · 3 units</text>
+<rect x="825" y="205" width="700" height="655" rx="8" class="panel"/>
+<text x="845" y="238" class="section">Exact path geometry</text>
+<text x="845" y="270" class="note">RED: upper wall node (0,154) → front spring (144,46)</text>
+<text x="845" y="292" class="note">BLUE: lower wall node (0,30) → integral cap at cassette underside (144,138)</text>
+<text x="845" y="314" class="note">Each diagonal: √(144² + 108²) = 180 mm · exact 3:4:5</text>
+<text x="845" y="336" class="note">GOLD CRADLE: (0,154) → (27.733333,133.2) in rear cassette</text>
+<text x="845" y="358" class="note">Both 12 mm paths union through ≥ 24 mm boss at x=82.666667, y=92</text>
+<text x="845" y="390" class="section">What is — and is not — being claimed</text>
+<text x="845" y="424" class="note">CANDIDATE CONTINUITY</text>
+<text x="845" y="446" class="note">• front spring shoulder → upper wall node</text>
+<text x="845" y="468" class="note">• cassette underside / integral bearing cap → lower wall node</text>
+<text x="845" y="490" class="note">• crossing boss joins both diagonal paths as one body</text>
+<text x="845" y="512" class="note">• upper diagonal is unioned into the cassette-zone rear rib</text>
+<text x="845" y="534" class="note"></text>
+<text x="845" y="556" class="note">NO CAPACITY CLAIM</text>
+<text x="845" y="578" class="note">The PETG corbel is anisotropic and creep-sensitive. These paths may</text>
+<text x="845" y="600" class="note">share compression, bending, tension and shear only after exact-orientation</text>
+<text x="845" y="622" class="note">coupon, full-corbel, full-bay, destructive and sustained-load testing.</text>
+<text x="845" y="644" class="note"></text>
+<text x="845" y="666" class="note">WALL BOUNDARY IS FAIL-CLOSED</text>
+<text x="845" y="688" class="note">Three red X marks at y = 42 / 84 / 126 mm are provisional targets only.</text>
+<text x="845" y="710" class="note">Clearance bores, head/washer pockets, bosses and driver tunnels remain</text>
+<text x="845" y="732" class="note">BLOCKED until the exact metal screw, head/washer, embedment, wall finish,</text>
+<text x="845" y="754" class="note">driver envelope, verified stud/blocking and utility-clearance method exist.</text>
+<text x="845" y="776" class="note"></text>
+<text x="845" y="798" class="note">Metal structural screws with suitable heads/washers into verified</text>
+<text x="845" y="820" class="note">wood studs or purpose-installed blocking remain the only nonprinted boundary.</text>
+  <text x="52" y="967" class="small">SCHEMATIC DISPLAY PATHS ONLY — dimensions and parametric data labels govern; no load rating is claimed.</text>
+  <text x="1548" y="967" class="small" text-anchor="end">CONFIG SHA-256 1bf52b56ab1030f1… · deterministic SVG</text>
+</svg>

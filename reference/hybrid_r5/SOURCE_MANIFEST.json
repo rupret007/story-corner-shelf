@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "1000c4a031e8e37d57512ee6f94ff2f74cf593aadc6e8349ab739100cb822d9d"
+    },
+    {
+      "path": "config.hybrid.json",
+      "sha256": "ac844c8abe48e61c973f7497aebd64fdfabdfb58a1e1bf7df2343fe7326a9322"
+    },
+    {
+      "path": "scripts/generate_hybrid_r5.py",
+      "sha256": "e21408fae0f1a3b5ffcc4e8345ad9249743011d6442721031558de76f5fe5373"
+    }
+  ],
+  "generated_output_policy": "Generated r5 artifacts are reproducible maintainer output and are intentionally excluded from the active r6 release tree.",
+  "revision": "triadic_palatine_fitted_l_corner_r5",
+  "status": "verified fallback source snapshot",
+  "warning": "The r5 fallback uses a plywood-and-steel structural chassis. It is not the active all-PETG r6 design."
+}

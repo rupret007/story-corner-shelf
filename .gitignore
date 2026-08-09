@@ -1,0 +1,14 @@
+.venv/
+**/__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+archive/
+generated/previews/
+generated/bambu_import_report.json
+reference/hybrid_r5/generated/
+result.json
+*.log
+*.tmp
+*.bak
+*~
