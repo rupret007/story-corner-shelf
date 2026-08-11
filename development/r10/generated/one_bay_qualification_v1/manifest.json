@@ -1,0 +1,599 @@
+{
+  "artifact_bytes_excluding_manifest": 575639,
+  "artifact_count_excluding_manifest": 44,
+  "cable_bookend_part_order": [
+    "r10_first_wall_s0_inward_two_socket_additive_bookend_candidate",
+    "r10_first_wall_socket_0_flush_blank",
+    "r10_first_wall_socket_1_flush_blank",
+    "r10_first_wall_multi_cable_comb_hook"
+  ],
+  "canonical_config_sha256": "f800b4ef27a6fbdca02594b5fab37e31861199789b196ef34017f3e8f19d9cef",
+  "catalog_translations_mm": {
+    "r10_first_wall_multi_cable_comb_hook": [
+      1600.942934,
+      0.0,
+      0.0
+    ],
+    "r10_first_wall_s0_inward_two_socket_additive_bookend_candidate": [
+      1359.061958,
+      0.0,
+      0.0
+    ],
+    "r10_first_wall_socket_0_flush_blank": [
+      1520.942934,
+      0.0,
+      0.0
+    ],
+    "r10_first_wall_socket_1_flush_blank": [
+      1560.942934,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_center_log_retainer": [
+      1238.261958,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_center_splice_log": [
+      847.661946,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_front_log_retainer": [
+      1270.661958,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_front_splice_log": [
+      1026.761952,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_left_cassette_half": [
+      323.761952,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_left_support": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_left_support_retainer": [
+      1303.061958,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_rear_log_retainer": [
+      1205.861958,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_rear_splice_log": [
+      668.56194,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_right_cassette_half": [
+      496.161946,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_right_support": [
+      161.880976,
+      0.0,
+      0.0
+    ],
+    "r10_one_bay_right_support_retainer": [
+      1331.061958,
+      0.0,
+      0.0
+    ]
+  },
+  "combined_catalog_path": "model_only_3mf/MODEL_ONLY_R10_ONE_BAY_QUALIFICATION_CATALOG_NOT_A_PRINT_PLATE.3mf",
+  "core_one_bay_part_order": [
+    "r10_one_bay_left_support",
+    "r10_one_bay_right_support",
+    "r10_one_bay_left_cassette_half",
+    "r10_one_bay_right_cassette_half",
+    "r10_one_bay_rear_splice_log",
+    "r10_one_bay_center_splice_log",
+    "r10_one_bay_front_splice_log",
+    "r10_one_bay_rear_log_retainer",
+    "r10_one_bay_center_log_retainer",
+    "r10_one_bay_front_log_retainer",
+    "r10_one_bay_left_support_retainer",
+    "r10_one_bay_right_support_retainer"
+  ],
+  "exact_file_allowlist": [
+    "ASSEMBLY.md",
+    "DESIGN_REQUIREMENTS.md",
+    "GUIDELINES.md",
+    "LOAD_QUALIFICATION.md",
+    "MATERIALS_AND_HARDWARE.md",
+    "PRINT_FIRST.md",
+    "R10_ONE_BAY_ASSEMBLY_AND_FIRST_WALL_REFERENCE.svg",
+    "README.md",
+    "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_multi_cable_comb_hook.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_s0_inward_two_socket_additive_bookend_candidate.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_socket_0_flush_blank.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_socket_1_flush_blank.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_center_log_retainer.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_center_splice_log.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_front_log_retainer.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_front_splice_log.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_left_cassette_half.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_left_support.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_left_support_retainer.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_rear_log_retainer.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_rear_splice_log.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_right_cassette_half.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_right_support.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_right_support_retainer.3mf",
+    "manifest.json",
+    "model_only_3mf/MODEL_ONLY_R10_ONE_BAY_QUALIFICATION_CATALOG_NOT_A_PRINT_PLATE.3mf",
+    "release_status.json",
+    "requirements.txt",
+    "stl/r10_first_wall_multi_cable_comb_hook.stl",
+    "stl/r10_first_wall_s0_inward_two_socket_additive_bookend_candidate.stl",
+    "stl/r10_first_wall_socket_0_flush_blank.stl",
+    "stl/r10_first_wall_socket_1_flush_blank.stl",
+    "stl/r10_one_bay_center_log_retainer.stl",
+    "stl/r10_one_bay_center_splice_log.stl",
+    "stl/r10_one_bay_front_log_retainer.stl",
+    "stl/r10_one_bay_front_splice_log.stl",
+    "stl/r10_one_bay_left_cassette_half.stl",
+    "stl/r10_one_bay_left_support.stl",
+    "stl/r10_one_bay_left_support_retainer.stl",
+    "stl/r10_one_bay_rear_log_retainer.stl",
+    "stl/r10_one_bay_rear_splice_log.stl",
+    "stl/r10_one_bay_right_cassette_half.stl",
+    "stl/r10_one_bay_right_support.stl",
+    "stl/r10_one_bay_right_support_retainer.stl",
+    "validation.json"
+  ],
+  "geometry_digests_by_mesh_id": {
+    "r10_first_wall_multi_cable_comb_hook": "3de87e3cbe910088d2034c2b7e3dcf559daf986342eca0bec6953b7c4455873e",
+    "r10_first_wall_s0_inward_two_socket_additive_bookend_candidate": "aa85cda20f82de5303d353f72bf295a18bbb373e1e2f8398abfcea407f96abee",
+    "r10_first_wall_socket_0_flush_blank": "00cd35a58ccd3e0e7c5c6912e9abdf6ca8e45d965d2a3abba434893f9a3e9c2e",
+    "r10_first_wall_socket_1_flush_blank": "00cd35a58ccd3e0e7c5c6912e9abdf6ca8e45d965d2a3abba434893f9a3e9c2e",
+    "r10_one_bay_center_log_retainer": "51809e456dbfbd2ca058f151d0363f950d6d503305bb8a2539522dd30e5969b3",
+    "r10_one_bay_center_splice_log": "25cd34f5c2ad760ed165709aebc65b860a2cd29bb2a5daa8e1fb903b182a8f50",
+    "r10_one_bay_front_log_retainer": "51809e456dbfbd2ca058f151d0363f950d6d503305bb8a2539522dd30e5969b3",
+    "r10_one_bay_front_splice_log": "25cd34f5c2ad760ed165709aebc65b860a2cd29bb2a5daa8e1fb903b182a8f50",
+    "r10_one_bay_left_cassette_half": "06c788c6867033ed71b909c9553d42c5764381cf81486a7ce15f0a9ce001f2ce",
+    "r10_one_bay_left_support": "1d6ceed0e954d54d81acc4c832cc4049ff6b3e0155f4535ff7495b4d706b7694",
+    "r10_one_bay_left_support_retainer": "13ad650679ad9c1fafb9c300d5611ecfd73dad345f61cf63c5acf8672a7d6604",
+    "r10_one_bay_rear_log_retainer": "51809e456dbfbd2ca058f151d0363f950d6d503305bb8a2539522dd30e5969b3",
+    "r10_one_bay_rear_splice_log": "25cd34f5c2ad760ed165709aebc65b860a2cd29bb2a5daa8e1fb903b182a8f50",
+    "r10_one_bay_right_cassette_half": "21356ae1656fc7f355fc0a3f517085615d1a49d818835615fafb66e4873002e0",
+    "r10_one_bay_right_support": "1d6ceed0e954d54d81acc4c832cc4049ff6b3e0155f4535ff7495b4d706b7694",
+    "r10_one_bay_right_support_retainer": "13ad650679ad9c1fafb9c300d5611ecfd73dad345f61cf63c5acf8672a7d6604"
+  },
+  "hashed_artifacts_excluding_manifest": [
+    {
+      "bytes": 12493,
+      "path": "ASSEMBLY.md",
+      "sha256": "70ce4038be2726088a1b2da3d4e5f2cab88920d638a5025218071e6bd3a6027a"
+    },
+    {
+      "bytes": 8597,
+      "path": "DESIGN_REQUIREMENTS.md",
+      "sha256": "24e396e05c209806e581a94690f0bacaa2acb7bbe99dd62e8dc3b9f7c9da796b"
+    },
+    {
+      "bytes": 6247,
+      "path": "GUIDELINES.md",
+      "sha256": "c82df2988c43befb348568b209f316581df9614879e4a71857913ae099581dbc"
+    },
+    {
+      "bytes": 14448,
+      "path": "LOAD_QUALIFICATION.md",
+      "sha256": "cd15d6f0065659fefa17301aa51074e4e6159b4ae0140bf76a758ef1cba214c3"
+    },
+    {
+      "bytes": 13599,
+      "path": "MATERIALS_AND_HARDWARE.md",
+      "sha256": "1a776ab200d1287378b40ddd7377573ee4c22ece08f268687bbe1322dded6869"
+    },
+    {
+      "bytes": 11964,
+      "path": "PRINT_FIRST.md",
+      "sha256": "18e125f0cdf921da8ed59df71f941bdb86449e665340daf88cb3504fd87e6529"
+    },
+    {
+      "bytes": 22607,
+      "path": "R10_ONE_BAY_ASSEMBLY_AND_FIRST_WALL_REFERENCE.svg",
+      "sha256": "3bd772110896c264f1cd927933841180dd154d2077b6038d298510256cbf05fb"
+    },
+    {
+      "bytes": 1018,
+      "path": "README.md",
+      "sha256": "a6eddddf454b68499f9485432611ba15ff1b8d59451f9c57b8a41e6313a29ac9"
+    },
+    {
+      "bytes": 14820,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_multi_cable_comb_hook.3mf",
+      "sha256": "36cc45acdd566d389b34333d0432be210656a3dd4b801d526c44799d363fedd3"
+    },
+    {
+      "bytes": 12920,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_s0_inward_two_socket_additive_bookend_candidate.3mf",
+      "sha256": "99a51f51938ea3d32af43a409180f39ea3b46b3e6e36cc460d56471011483074"
+    },
+    {
+      "bytes": 1762,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_socket_0_flush_blank.3mf",
+      "sha256": "85d5b00d8280804862d9a39cb8f99f9d2ba3c8f484b7960fc5f3be0787f52edb"
+    },
+    {
+      "bytes": 1763,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_first_wall_socket_1_flush_blank.3mf",
+      "sha256": "deb56b9dc74be7ba1ba69910035a2de96fbf5f552149859e52cd40e509ccd755"
+    },
+    {
+      "bytes": 1521,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_center_log_retainer.3mf",
+      "sha256": "94daf8127faccdb9b33629f1e760a388d72b1f2da262ae9cedcf23d8ead07715"
+    },
+    {
+      "bytes": 1915,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_center_splice_log.3mf",
+      "sha256": "e989396d4da78741ab12121ce758fcd0d1bbfed14ddae21ee53436a7ecc78517"
+    },
+    {
+      "bytes": 1520,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_front_log_retainer.3mf",
+      "sha256": "2bd1d4f292eade6a2fbd1b96f37175ece0d59ec525c169cea09cf4e0b2a491c8"
+    },
+    {
+      "bytes": 1915,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_front_splice_log.3mf",
+      "sha256": "ba9dfb50d3273cf4ddc75d7867d8f3f20d1cc8378c1b685f5d1d56d1df561281"
+    },
+    {
+      "bytes": 4426,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_left_cassette_half.3mf",
+      "sha256": "22c4b80d9d9f4ba181ce61683e63ae48f8e19c1f17e5d1a8fc9567349f7ef32d"
+    },
+    {
+      "bytes": 10179,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_left_support.3mf",
+      "sha256": "87bb7172643b4265e3bf7f9a10741bb11f6bc22227a16d3366e12beca8b190ee"
+    },
+    {
+      "bytes": 1727,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_left_support_retainer.3mf",
+      "sha256": "b8b6a91925c0dcff0373c627d613c0773f788b4043f5f9235014f6eb84ba4866"
+    },
+    {
+      "bytes": 1519,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_rear_log_retainer.3mf",
+      "sha256": "3ac297657aa0430953e59c6267c79b0fc70e73dff476a0b2f5ac407b7f677e8d"
+    },
+    {
+      "bytes": 1913,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_rear_splice_log.3mf",
+      "sha256": "162acfe5ee24cf9a80efed531ab1622c4282c4ca27c788a85ef79f8c2571d174"
+    },
+    {
+      "bytes": 5108,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_right_cassette_half.3mf",
+      "sha256": "62c709936098fbf5094e25497f7fe2def8c658309889878904d93c3d1a086c5f"
+    },
+    {
+      "bytes": 10180,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_right_support.3mf",
+      "sha256": "871240e5c7e684b4b70ef78e9e515358f464356e0de150881cf6c6758244871f"
+    },
+    {
+      "bytes": 1727,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r10_one_bay_right_support_retainer.3mf",
+      "sha256": "776ea7cab5091c0bb58db81443430a0909dd62f2d021411de3ae879071898358"
+    },
+    {
+      "bytes": 53323,
+      "path": "model_only_3mf/MODEL_ONLY_R10_ONE_BAY_QUALIFICATION_CATALOG_NOT_A_PRINT_PLATE.3mf",
+      "sha256": "6cecc1fc583935c4cbd72c1087698e256c0756af3fc0e7ad2e9f04af833b39d2"
+    },
+    {
+      "bytes": 7016,
+      "path": "release_status.json",
+      "sha256": "46a336e96faf4bcdc2bdbdd164beb4175fad86f43dca8af9db23fbba991823d7"
+    },
+    {
+      "bytes": 110,
+      "path": "requirements.txt",
+      "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+    },
+    {
+      "bytes": 86984,
+      "path": "stl/r10_first_wall_multi_cable_comb_hook.stl",
+      "sha256": "f5faf9566b05c3ca1ac6039a6839178d4c67d5f926536a9f4e596f30f2b67fb2"
+    },
+    {
+      "bytes": 61984,
+      "path": "stl/r10_first_wall_s0_inward_two_socket_additive_bookend_candidate.stl",
+      "sha256": "af537152de08951369899afe61d2923d1ed03c4ea729b542e961c395e7eb4325"
+    },
+    {
+      "bytes": 3184,
+      "path": "stl/r10_first_wall_socket_0_flush_blank.stl",
+      "sha256": "b3a98b5250b1f61dbbb9376ce9b955b9e87b5baf55d1f41fb8b80fc17fb4136a"
+    },
+    {
+      "bytes": 3184,
+      "path": "stl/r10_first_wall_socket_1_flush_blank.stl",
+      "sha256": "b3a98b5250b1f61dbbb9376ce9b955b9e87b5baf55d1f41fb8b80fc17fb4136a"
+    },
+    {
+      "bytes": 1684,
+      "path": "stl/r10_one_bay_center_log_retainer.stl",
+      "sha256": "9a3c73d284fdb55a7f2e7942b2ed4e257d3e588752f91f1993d4c92ed2bbd489"
+    },
+    {
+      "bytes": 4284,
+      "path": "stl/r10_one_bay_center_splice_log.stl",
+      "sha256": "b8fe932412acd6dd66af9bcaa8128917cce253054b54cfc7c77ec6bd854ead9d"
+    },
+    {
+      "bytes": 1684,
+      "path": "stl/r10_one_bay_front_log_retainer.stl",
+      "sha256": "9a3c73d284fdb55a7f2e7942b2ed4e257d3e588752f91f1993d4c92ed2bbd489"
+    },
+    {
+      "bytes": 4284,
+      "path": "stl/r10_one_bay_front_splice_log.stl",
+      "sha256": "b8fe932412acd6dd66af9bcaa8128917cce253054b54cfc7c77ec6bd854ead9d"
+    },
+    {
+      "bytes": 19684,
+      "path": "stl/r10_one_bay_left_cassette_half.stl",
+      "sha256": "c168aa542f1afb446f199288b122ba74b31ec867c1cdb74495c8c902589e7d2d"
+    },
+    {
+      "bytes": 49584,
+      "path": "stl/r10_one_bay_left_support.stl",
+      "sha256": "5eb1d611efede12bcd6cc4afcb16f64dba63fb14c610e17ca92c56c88ac8f31b"
+    },
+    {
+      "bytes": 2884,
+      "path": "stl/r10_one_bay_left_support_retainer.stl",
+      "sha256": "673bf4d3da452c9255092427172d8b0c7a63b7958d3c6db3656884558250f9cd"
+    },
+    {
+      "bytes": 1684,
+      "path": "stl/r10_one_bay_rear_log_retainer.stl",
+      "sha256": "9a3c73d284fdb55a7f2e7942b2ed4e257d3e588752f91f1993d4c92ed2bbd489"
+    },
+    {
+      "bytes": 4284,
+      "path": "stl/r10_one_bay_rear_splice_log.stl",
+      "sha256": "b8fe932412acd6dd66af9bcaa8128917cce253054b54cfc7c77ec6bd854ead9d"
+    },
+    {
+      "bytes": 23284,
+      "path": "stl/r10_one_bay_right_cassette_half.stl",
+      "sha256": "dcfed16011c9b9418b9e0681845de52902dba0a2145e18de88f8939896103fcf"
+    },
+    {
+      "bytes": 49584,
+      "path": "stl/r10_one_bay_right_support.stl",
+      "sha256": "5eb1d611efede12bcd6cc4afcb16f64dba63fb14c610e17ca92c56c88ac8f31b"
+    },
+    {
+      "bytes": 2884,
+      "path": "stl/r10_one_bay_right_support_retainer.stl",
+      "sha256": "673bf4d3da452c9255092427172d8b0c7a63b7958d3c6db3656884558250f9cd"
+    },
+    {
+      "bytes": 28158,
+      "path": "validation.json",
+      "sha256": "39f87463a137ea4e29e799240e65fb3776f527daeb97d251df055d572b42a2dd"
+    }
+  ],
+  "object_names_in_order": [
+    "r10_one_bay_left_support",
+    "r10_one_bay_right_support",
+    "r10_one_bay_left_cassette_half",
+    "r10_one_bay_right_cassette_half",
+    "r10_one_bay_rear_splice_log",
+    "r10_one_bay_center_splice_log",
+    "r10_one_bay_front_splice_log",
+    "r10_one_bay_rear_log_retainer",
+    "r10_one_bay_center_log_retainer",
+    "r10_one_bay_front_log_retainer",
+    "r10_one_bay_left_support_retainer",
+    "r10_one_bay_right_support_retainer",
+    "r10_first_wall_s0_inward_two_socket_additive_bookend_candidate",
+    "r10_first_wall_socket_0_flush_blank",
+    "r10_first_wall_socket_1_flush_blank",
+    "r10_first_wall_multi_cable_comb_hook"
+  ],
+  "package_id": "r10_palatine_lincoln_arcade_one_bay_qualification_v1",
+  "publication_boundary": {
+    "fresh_human_permission_required_before_every_print": true,
+    "gcode_or_toolpath_present": false,
+    "installation_or_drilling_authorized": false,
+    "load_rating_created": false,
+    "model_only_neutral_3mf": true,
+    "production_set": false,
+    "qualification_only": true,
+    "slicer_profile_present": false
+  },
+  "runtime_provenance": {
+    "byteorder": "little",
+    "manifold3d_version": "3.5.2",
+    "mapbox_earcut_version": "1.0.3",
+    "networkx_version": "3.5",
+    "numpy_version": "2.5.1",
+    "python_cache_tag": "cpython-312",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "r9_model_io_sha256_verified_before_execution": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5",
+    "requirements_runtime_exact_match": true,
+    "requirements_txt_sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd",
+    "requirements_versions": {
+      "manifold3d": "3.5.2",
+      "mapbox-earcut": "1.0.3",
+      "networkx": "3.5",
+      "numpy": "2.5.1",
+      "scipy": "1.18.0",
+      "shapely": "2.1.2",
+      "trimesh": "5.0.0"
+    },
+    "scipy_version": "1.18.0",
+    "shapely_version": "2.1.2",
+    "trimesh_version": "5.0.0",
+    "zlib_compile_version": "1.2.12",
+    "zlib_runtime_version": "1.2.12"
+  },
+  "schema_version": "r10_neutral_bundle_manifest_v1",
+  "source_records": [
+    {
+      "bytes": 12493,
+      "path": "development/r10/ASSEMBLY.md",
+      "sha256": "70ce4038be2726088a1b2da3d4e5f2cab88920d638a5025218071e6bd3a6027a"
+    },
+    {
+      "bytes": 8597,
+      "path": "development/r10/DESIGN_REQUIREMENTS.md",
+      "sha256": "24e396e05c209806e581a94690f0bacaa2acb7bbe99dd62e8dc3b9f7c9da796b"
+    },
+    {
+      "bytes": 6247,
+      "path": "development/r10/GUIDELINES.md",
+      "sha256": "c82df2988c43befb348568b209f316581df9614879e4a71857913ae099581dbc"
+    },
+    {
+      "bytes": 14448,
+      "path": "development/r10/LOAD_QUALIFICATION.md",
+      "sha256": "cd15d6f0065659fefa17301aa51074e4e6159b4ae0140bf76a758ef1cba214c3"
+    },
+    {
+      "bytes": 13599,
+      "path": "development/r10/MATERIALS_AND_HARDWARE.md",
+      "sha256": "1a776ab200d1287378b40ddd7377573ee4c22ece08f268687bbe1322dded6869"
+    },
+    {
+      "bytes": 11964,
+      "path": "development/r10/PRINT_FIRST.md",
+      "sha256": "18e125f0cdf921da8ed59df71f941bdb86449e665340daf88cb3504fd87e6529"
+    },
+    {
+      "bytes": 12787,
+      "path": "development/r10/README.md",
+      "sha256": "65f8c9ace16df2bdf9df10b28e2edca49390c6de730f0aaa45d2a64030453cf2"
+    },
+    {
+      "bytes": 32314,
+      "path": "development/r10/cable_bookend.py",
+      "sha256": "69bfdd3a3fa3ebef0df11edb21b30e881c8c6b24563516a2ee6f90f66d2d1f6b"
+    },
+    {
+      "bytes": 33544,
+      "path": "development/r10/capacity_study.py",
+      "sha256": "165f1958b46f2677208f71336a8a29c2d629b76244805ff39ea91228d9500c25"
+    },
+    {
+      "bytes": 11254,
+      "path": "development/r10/config.json",
+      "sha256": "64aad8eee3bc7bbc7b75f7bb7e77fce94cfd8232d13a77c149b91685e3dcd081"
+    },
+    {
+      "bytes": 11258,
+      "path": "development/r10/full_wall_plan.py",
+      "sha256": "4079141a42477b50cc361c7fb83784f370038c432bcc4052cb31fc02427ee406"
+    },
+    {
+      "bytes": 21483,
+      "path": "development/r10/generate_one_bay_qualification.py",
+      "sha256": "5abb2c78666799f0cf27fd9707d5b700cf2562547af4b1ea43ba122f7836ff58"
+    },
+    {
+      "bytes": 62088,
+      "path": "development/r10/lincoln_geometry.py",
+      "sha256": "9914cce9b8057bbb1ecd988475b97eb7fa36ab504d5fd84fc4e8f4070edb8ee5"
+    },
+    {
+      "bytes": 2594,
+      "path": "development/r10/model_io.py",
+      "sha256": "13dbdb4914f089908aa9b9267c0eb99aea615ddc852e39ce7e7ad73f323392f8"
+    },
+    {
+      "bytes": 22715,
+      "path": "development/r10/release_status.py",
+      "sha256": "99ad1578423717614826185e4ca3d53fe4210e36aef404f3c24bb182c863cfbb"
+    },
+    {
+      "bytes": 1844,
+      "path": "development/r10/visuals/README.md",
+      "sha256": "2f6cf0c8212d1a1c5383ab97f0bdda6164da788cf5a686f88952ff2c5cfcaf9c"
+    },
+    {
+      "bytes": 22607,
+      "path": "development/r10/visuals/r10_one_bay_exploded_and_first_wall_topology.svg",
+      "sha256": "3bd772110896c264f1cd927933841180dd154d2077b6038d298510256cbf05fb"
+    },
+    {
+      "bytes": 2655027,
+      "path": "development/r10/visuals/r10_palatine_lincoln_arcade_visual_intent.png",
+      "sha256": "915838a6b8b293a3f7b5944a8012c8a741456e495241851568712966571f8a42"
+    },
+    {
+      "bytes": 25019,
+      "path": "development/r8/model_io.py",
+      "sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b"
+    },
+    {
+      "bytes": 20210,
+      "path": "development/r9/bookend_attachment.py",
+      "sha256": "66f8ae974fd5fc6ab21a1b95f31b7550ab691c3969a179d69b2e53525741ee7e"
+    },
+    {
+      "bytes": 24162,
+      "path": "development/r9/cable_geometry.py",
+      "sha256": "e414b7bdeff0c0140f6621957f7d807ac291ce433d75a65e02ac6f5b5dd6a864"
+    },
+    {
+      "bytes": 10792,
+      "path": "development/r9/config.json",
+      "sha256": "7e3021c2f514886abdcb9c7714e6eb925c0703390a7aa1ac79fe10f0920c6653"
+    },
+    {
+      "bytes": 5816,
+      "path": "development/r9/field_layout.py",
+      "sha256": "fd446068a82fe33dcde1423c09ebb033a7c613fec03bff632adaea898b9c5876"
+    },
+    {
+      "bytes": 11319,
+      "path": "development/r9/generated/one_bay_prototype_v3/validation.json",
+      "sha256": "e9a22e69904c46b78dd1ced9752d46d3e81f19543ed2f3a115e8310519f63be2"
+    },
+    {
+      "bytes": 2534,
+      "path": "development/r9/model_io.py",
+      "sha256": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5"
+    },
+    {
+      "bytes": 27621,
+      "path": "development/r9/one_bay_geometry.py",
+      "sha256": "f712cec8cbfa15f09ecfacbc603feb64c6482f7cc9c0f6dc365f1ef7df9f8e4e"
+    },
+    {
+      "bytes": 8948,
+      "path": "development/r9/physical_records/STAGE0_2026-08-10.md",
+      "sha256": "d61689474c115585122ce21c456059207692cbbf558cae3db2be825b87516eff"
+    },
+    {
+      "bytes": 34451,
+      "path": "development/r9/support_geometry.py",
+      "sha256": "487a7cb0be5cfd2742dbbfc91cb440d1245ae7530c4fc6a4373a6ae2f424c964"
+    },
+    {
+      "bytes": 110,
+      "path": "requirements.txt",
+      "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+    }
+  ]
+}

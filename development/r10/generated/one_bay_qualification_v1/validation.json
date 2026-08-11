@@ -1,0 +1,1032 @@
+{
+  "actual_lincoln_log_one_bay_article_count": 12,
+  "assembly_order": [
+    "off the supports, slide the three independent dovetail logs into the left cassette half",
+    "with the right half absent, lower each independent retainer through the left-half top access into its exposed log notch",
+    "slide the right half over the logs and retainer ends so its closed top captures all three keys",
+    "place two printed supports at the 254 mm planning centers",
+    "lower the joined cassette onto its two 15.70 mm physical support contacts",
+    "at each cassette/support contact, insert its bay-local support retainer straight from the front and shift it 2.4 mm toward that bay to place its rear dog behind the positive shoulder; the integrated handle remains 4.0 mm proud for a hand grip",
+    "for disassembly shift each support retainer 2.4 mm away from its bay, grasp the 4.0 mm handle and pull it straight forward, lift the cassette clear of both lugs, then reverse the off-support slide"
+  ],
+  "assembly_visual": {
+    "off_plate_reference_only": true,
+    "path": "R10_ONE_BAY_ASSEMBLY_AND_FIRST_WALL_REFERENCE.svg"
+  },
+  "cable_release_blockers": [
+    "saved slicer Preview and first-article inspection remain open",
+    "both printed sockets and both module types require ten physical service cycles",
+    "door, trim, outlet, plug, cord-loop, snag, and human-access envelopes are unmeasured",
+    "cable accessories carry zero shelf-load or structural credit"
+  ],
+  "canonical_config_sha256": "f800b4ef27a6fbdca02594b5fab37e31861199789b196ef34017f3e8f19d9cef",
+  "catalog": {
+    "do_not_print": true,
+    "object_translations_mm": {
+      "r10_first_wall_multi_cable_comb_hook": [
+        1600.942934,
+        0.0,
+        0.0
+      ],
+      "r10_first_wall_s0_inward_two_socket_additive_bookend_candidate": [
+        1359.061958,
+        0.0,
+        0.0
+      ],
+      "r10_first_wall_socket_0_flush_blank": [
+        1520.942934,
+        0.0,
+        0.0
+      ],
+      "r10_first_wall_socket_1_flush_blank": [
+        1560.942934,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_center_log_retainer": [
+        1238.261958,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_center_splice_log": [
+        847.661946,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_front_log_retainer": [
+        1270.661958,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_front_splice_log": [
+        1026.761952,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_left_cassette_half": [
+        323.761952,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_left_support": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_left_support_retainer": [
+        1303.061958,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_rear_log_retainer": [
+        1205.861958,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_rear_splice_log": [
+        668.56194,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_right_cassette_half": [
+        496.161946,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_right_support": [
+        161.880976,
+        0.0,
+        0.0
+      ],
+      "r10_one_bay_right_support_retainer": [
+        1331.061958,
+        0.0,
+        0.0
+      ]
+    },
+    "off_plate_inspection_only": true,
+    "path": "model_only_3mf/MODEL_ONLY_R10_ONE_BAY_QUALIFICATION_CATALOG_NOT_A_PRINT_PLATE.3mf"
+  },
+  "drilling_schedule_released": false,
+  "embedded_slicer_profile_present": false,
+  "first_wall_s0_cable_candidate_article_count": 4,
+  "gcode_or_toolpath_present": false,
+  "geometry_records": [
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_left_support",
+      "raw_extents_mm": [
+        141.880976,
+        141.880975,
+        152.399994
+      ],
+      "required_build_volume_mm": [
+        156.080976,
+        156.080975,
+        152.399994
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            141.880981,
+            141.880981,
+            152.399994
+          ]
+        ],
+        "canonical_float32_triangle_digest": "1d6ceed0e954d54d81acc4c832cc4049ff6b3e0155f4535ff7495b4d706b7694",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          141.880981,
+          141.880981,
+          152.399994
+        ],
+        "positive_volume": true,
+        "triangle_count": 990,
+        "vertex_count": 489,
+        "volume_mm3": 362535.857745,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_right_support",
+      "raw_extents_mm": [
+        141.880976,
+        141.880975,
+        152.399994
+      ],
+      "required_build_volume_mm": [
+        156.080976,
+        156.080975,
+        152.399994
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            141.880981,
+            141.880981,
+            152.399994
+          ]
+        ],
+        "canonical_float32_triangle_digest": "1d6ceed0e954d54d81acc4c832cc4049ff6b3e0155f4535ff7495b4d706b7694",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          141.880981,
+          141.880981,
+          152.399994
+        ],
+        "positive_volume": true,
+        "triangle_count": 990,
+        "vertex_count": 489,
+        "volume_mm3": 362535.857745,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_left_cassette_half",
+      "raw_extents_mm": [
+        152.399994,
+        32.0,
+        126.650002
+      ],
+      "required_build_volume_mm": [
+        166.599994,
+        46.2,
+        126.650002
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            32.0,
+            126.650002
+          ]
+        ],
+        "canonical_float32_triangle_digest": "06c788c6867033ed71b909c9553d42c5764381cf81486a7ce15f0a9ce001f2ce",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          32.0,
+          126.650002
+        ],
+        "positive_volume": true,
+        "triangle_count": 392,
+        "vertex_count": 194,
+        "volume_mm3": 279712.707302,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_right_cassette_half",
+      "raw_extents_mm": [
+        152.399994,
+        32.0,
+        126.650002
+      ],
+      "required_build_volume_mm": [
+        166.599994,
+        46.2,
+        126.650002
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            32.0,
+            126.650002
+          ]
+        ],
+        "canonical_float32_triangle_digest": "21356ae1656fc7f355fc0a3f517085615d1a49d818835615fafb66e4873002e0",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          32.0,
+          126.650002
+        ],
+        "positive_volume": true,
+        "triangle_count": 464,
+        "vertex_count": 230,
+        "volume_mm3": 281993.675421,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_rear_splice_log",
+      "raw_extents_mm": [
+        159.100006,
+        24.0,
+        20.0
+      ],
+      "required_build_volume_mm": [
+        173.300006,
+        38.2,
+        20.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            159.100006,
+            24.0,
+            20.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "25cd34f5c2ad760ed165709aebc65b860a2cd29bb2a5daa8e1fb903b182a8f50",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          159.100006,
+          24.0,
+          20.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 84,
+        "vertex_count": 44,
+        "volume_mm3": 71944.641044,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_center_splice_log",
+      "raw_extents_mm": [
+        159.100006,
+        24.0,
+        20.0
+      ],
+      "required_build_volume_mm": [
+        173.300006,
+        38.2,
+        20.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            159.100006,
+            24.0,
+            20.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "25cd34f5c2ad760ed165709aebc65b860a2cd29bb2a5daa8e1fb903b182a8f50",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          159.100006,
+          24.0,
+          20.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 84,
+        "vertex_count": 44,
+        "volume_mm3": 71944.641044,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_front_splice_log",
+      "raw_extents_mm": [
+        159.100006,
+        24.0,
+        20.0
+      ],
+      "required_build_volume_mm": [
+        173.300006,
+        38.2,
+        20.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            159.100006,
+            24.0,
+            20.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "25cd34f5c2ad760ed165709aebc65b860a2cd29bb2a5daa8e1fb903b182a8f50",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          159.100006,
+          24.0,
+          20.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 84,
+        "vertex_count": 44,
+        "volume_mm3": 71944.641044,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_rear_log_retainer",
+      "raw_extents_mm": [
+        12.4,
+        28.0,
+        10.8
+      ],
+      "required_build_volume_mm": [
+        26.6,
+        42.2,
+        10.8
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            12.4,
+            28.0,
+            10.8
+          ]
+        ],
+        "canonical_float32_triangle_digest": "51809e456dbfbd2ca058f151d0363f950d6d503305bb8a2539522dd30e5969b3",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          12.4,
+          28.0,
+          10.8
+        ],
+        "positive_volume": true,
+        "triangle_count": 32,
+        "vertex_count": 18,
+        "volume_mm3": 2823.519966,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_center_log_retainer",
+      "raw_extents_mm": [
+        12.4,
+        28.0,
+        10.8
+      ],
+      "required_build_volume_mm": [
+        26.6,
+        42.2,
+        10.8
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            12.4,
+            28.0,
+            10.8
+          ]
+        ],
+        "canonical_float32_triangle_digest": "51809e456dbfbd2ca058f151d0363f950d6d503305bb8a2539522dd30e5969b3",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          12.4,
+          28.0,
+          10.8
+        ],
+        "positive_volume": true,
+        "triangle_count": 32,
+        "vertex_count": 18,
+        "volume_mm3": 2823.519966,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_front_log_retainer",
+      "raw_extents_mm": [
+        12.4,
+        28.0,
+        10.8
+      ],
+      "required_build_volume_mm": [
+        26.6,
+        42.2,
+        10.8
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            12.4,
+            28.0,
+            10.8
+          ]
+        ],
+        "canonical_float32_triangle_digest": "51809e456dbfbd2ca058f151d0363f950d6d503305bb8a2539522dd30e5969b3",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          12.4,
+          28.0,
+          10.8
+        ],
+        "positive_volume": true,
+        "triangle_count": 32,
+        "vertex_count": 18,
+        "volume_mm3": 2823.519966,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_left_support_retainer",
+      "raw_extents_mm": [
+        8.0,
+        136.0,
+        6.0
+      ],
+      "required_build_volume_mm": [
+        22.2,
+        150.2,
+        6.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            8.0,
+            136.0,
+            6.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "13ad650679ad9c1fafb9c300d5611ecfd73dad345f61cf63c5acf8672a7d6604",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          8.0,
+          136.0,
+          6.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 56,
+        "vertex_count": 30,
+        "volume_mm3": 3604.800133,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "actual_lincoln_log_one_bay",
+      "mesh_id": "r10_one_bay_right_support_retainer",
+      "raw_extents_mm": [
+        8.0,
+        136.0,
+        6.0
+      ],
+      "required_build_volume_mm": [
+        22.2,
+        150.2,
+        6.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            8.0,
+            136.0,
+            6.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "13ad650679ad9c1fafb9c300d5611ecfd73dad345f61cf63c5acf8672a7d6604",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          8.0,
+          136.0,
+          6.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 56,
+        "vertex_count": 30,
+        "volume_mm3": 3604.800133,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "first_wall_s0_cable_bookend_candidate_set",
+      "mesh_id": "r10_first_wall_s0_inward_two_socket_additive_bookend_candidate",
+      "raw_extents_mm": [
+        141.880976,
+        141.880975,
+        152.399994
+      ],
+      "required_build_volume_mm": [
+        156.080976,
+        156.080975,
+        152.399994
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            141.880981,
+            141.880981,
+            152.399994
+          ]
+        ],
+        "canonical_float32_triangle_digest": "aa85cda20f82de5303d353f72bf295a18bbb373e1e2f8398abfcea407f96abee",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          141.880981,
+          141.880981,
+          152.399994
+        ],
+        "positive_volume": true,
+        "triangle_count": 1238,
+        "vertex_count": 611,
+        "volume_mm3": 394660.876229,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "first_wall_s0_cable_bookend_candidate_set",
+      "mesh_id": "r10_first_wall_socket_0_flush_blank",
+      "raw_extents_mm": [
+        20.0,
+        9.2,
+        16.0
+      ],
+      "required_build_volume_mm": [
+        34.2,
+        23.4,
+        16.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            9.2,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "00cd35a58ccd3e0e7c5c6912e9abdf6ca8e45d965d2a3abba434893f9a3e9c2e",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          20.0,
+          9.2,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 62,
+        "vertex_count": 33,
+        "volume_mm3": 1499.199934,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "first_wall_s0_cable_bookend_candidate_set",
+      "mesh_id": "r10_first_wall_socket_1_flush_blank",
+      "raw_extents_mm": [
+        20.0,
+        9.2,
+        16.0
+      ],
+      "required_build_volume_mm": [
+        34.2,
+        23.4,
+        16.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            9.2,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "00cd35a58ccd3e0e7c5c6912e9abdf6ca8e45d965d2a3abba434893f9a3e9c2e",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          20.0,
+          9.2,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 62,
+        "vertex_count": 33,
+        "volume_mm3": 1499.199934,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "inventory_family": "first_wall_s0_cable_bookend_candidate_set",
+      "mesh_id": "r10_first_wall_multi_cable_comb_hook",
+      "raw_extents_mm": [
+        28.0,
+        30.5,
+        16.0
+      ],
+      "required_build_volume_mm": [
+        42.2,
+        44.7,
+        16.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            28.0,
+            30.5,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "3de87e3cbe910088d2034c2b7e3dcf559daf986342eca0bec6953b7c4455873e",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          28.0,
+          30.5,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 1738,
+        "vertex_count": 871,
+        "volume_mm3": 3758.709073,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    }
+  ],
+  "included_handoff_documents": [
+    "ASSEMBLY.md",
+    "PRINT_FIRST.md",
+    "MATERIALS_AND_HARDWARE.md",
+    "LOAD_QUALIFICATION.md",
+    "GUIDELINES.md",
+    "DESIGN_REQUIREMENTS.md"
+  ],
+  "individual_article_count": 16,
+  "manual_preview_and_fresh_print_permission_required": true,
+  "object_names_in_order": [
+    "r10_one_bay_left_support",
+    "r10_one_bay_right_support",
+    "r10_one_bay_left_cassette_half",
+    "r10_one_bay_right_cassette_half",
+    "r10_one_bay_rear_splice_log",
+    "r10_one_bay_center_splice_log",
+    "r10_one_bay_front_splice_log",
+    "r10_one_bay_rear_log_retainer",
+    "r10_one_bay_center_log_retainer",
+    "r10_one_bay_front_log_retainer",
+    "r10_one_bay_left_support_retainer",
+    "r10_one_bay_right_support_retainer",
+    "r10_first_wall_s0_inward_two_socket_additive_bookend_candidate",
+    "r10_first_wall_socket_0_flush_blank",
+    "r10_first_wall_socket_1_flush_blank",
+    "r10_first_wall_multi_cable_comb_hook"
+  ],
+  "package_id": "r10_palatine_lincoln_arcade_one_bay_qualification_v1",
+  "physical_qualification_complete": false,
+  "production_ready": false,
+  "qualification_only": true,
+  "rated_load_kg": 0.0,
+  "rated_load_lb": 0.0,
+  "requirements_lock_path": "requirements.txt",
+  "runtime_provenance": {
+    "byteorder": "little",
+    "manifold3d_version": "3.5.2",
+    "mapbox_earcut_version": "1.0.3",
+    "networkx_version": "3.5",
+    "numpy_version": "2.5.1",
+    "python_cache_tag": "cpython-312",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "r9_model_io_sha256_verified_before_execution": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5",
+    "requirements_runtime_exact_match": true,
+    "requirements_txt_sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd",
+    "requirements_versions": {
+      "manifold3d": "3.5.2",
+      "mapbox-earcut": "1.0.3",
+      "networkx": "3.5",
+      "numpy": "2.5.1",
+      "scipy": "1.18.0",
+      "shapely": "2.1.2",
+      "trimesh": "5.0.0"
+    },
+    "scipy_version": "1.18.0",
+    "shapely_version": "2.1.2",
+    "trimesh_version": "5.0.0",
+    "zlib_compile_version": "1.2.12",
+    "zlib_runtime_version": "1.2.12"
+  },
+  "schema_version": "r10_one_bay_qualification_validation_v1",
+  "source_records": [
+    {
+      "bytes": 12493,
+      "path": "development/r10/ASSEMBLY.md",
+      "sha256": "70ce4038be2726088a1b2da3d4e5f2cab88920d638a5025218071e6bd3a6027a"
+    },
+    {
+      "bytes": 8597,
+      "path": "development/r10/DESIGN_REQUIREMENTS.md",
+      "sha256": "24e396e05c209806e581a94690f0bacaa2acb7bbe99dd62e8dc3b9f7c9da796b"
+    },
+    {
+      "bytes": 6247,
+      "path": "development/r10/GUIDELINES.md",
+      "sha256": "c82df2988c43befb348568b209f316581df9614879e4a71857913ae099581dbc"
+    },
+    {
+      "bytes": 14448,
+      "path": "development/r10/LOAD_QUALIFICATION.md",
+      "sha256": "cd15d6f0065659fefa17301aa51074e4e6159b4ae0140bf76a758ef1cba214c3"
+    },
+    {
+      "bytes": 13599,
+      "path": "development/r10/MATERIALS_AND_HARDWARE.md",
+      "sha256": "1a776ab200d1287378b40ddd7377573ee4c22ece08f268687bbe1322dded6869"
+    },
+    {
+      "bytes": 11964,
+      "path": "development/r10/PRINT_FIRST.md",
+      "sha256": "18e125f0cdf921da8ed59df71f941bdb86449e665340daf88cb3504fd87e6529"
+    },
+    {
+      "bytes": 12787,
+      "path": "development/r10/README.md",
+      "sha256": "65f8c9ace16df2bdf9df10b28e2edca49390c6de730f0aaa45d2a64030453cf2"
+    },
+    {
+      "bytes": 32314,
+      "path": "development/r10/cable_bookend.py",
+      "sha256": "69bfdd3a3fa3ebef0df11edb21b30e881c8c6b24563516a2ee6f90f66d2d1f6b"
+    },
+    {
+      "bytes": 33544,
+      "path": "development/r10/capacity_study.py",
+      "sha256": "165f1958b46f2677208f71336a8a29c2d629b76244805ff39ea91228d9500c25"
+    },
+    {
+      "bytes": 11254,
+      "path": "development/r10/config.json",
+      "sha256": "64aad8eee3bc7bbc7b75f7bb7e77fce94cfd8232d13a77c149b91685e3dcd081"
+    },
+    {
+      "bytes": 11258,
+      "path": "development/r10/full_wall_plan.py",
+      "sha256": "4079141a42477b50cc361c7fb83784f370038c432bcc4052cb31fc02427ee406"
+    },
+    {
+      "bytes": 21483,
+      "path": "development/r10/generate_one_bay_qualification.py",
+      "sha256": "5abb2c78666799f0cf27fd9707d5b700cf2562547af4b1ea43ba122f7836ff58"
+    },
+    {
+      "bytes": 62088,
+      "path": "development/r10/lincoln_geometry.py",
+      "sha256": "9914cce9b8057bbb1ecd988475b97eb7fa36ab504d5fd84fc4e8f4070edb8ee5"
+    },
+    {
+      "bytes": 2594,
+      "path": "development/r10/model_io.py",
+      "sha256": "13dbdb4914f089908aa9b9267c0eb99aea615ddc852e39ce7e7ad73f323392f8"
+    },
+    {
+      "bytes": 22715,
+      "path": "development/r10/release_status.py",
+      "sha256": "99ad1578423717614826185e4ca3d53fe4210e36aef404f3c24bb182c863cfbb"
+    },
+    {
+      "bytes": 1844,
+      "path": "development/r10/visuals/README.md",
+      "sha256": "2f6cf0c8212d1a1c5383ab97f0bdda6164da788cf5a686f88952ff2c5cfcaf9c"
+    },
+    {
+      "bytes": 22607,
+      "path": "development/r10/visuals/r10_one_bay_exploded_and_first_wall_topology.svg",
+      "sha256": "3bd772110896c264f1cd927933841180dd154d2077b6038d298510256cbf05fb"
+    },
+    {
+      "bytes": 2655027,
+      "path": "development/r10/visuals/r10_palatine_lincoln_arcade_visual_intent.png",
+      "sha256": "915838a6b8b293a3f7b5944a8012c8a741456e495241851568712966571f8a42"
+    },
+    {
+      "bytes": 25019,
+      "path": "development/r8/model_io.py",
+      "sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b"
+    },
+    {
+      "bytes": 20210,
+      "path": "development/r9/bookend_attachment.py",
+      "sha256": "66f8ae974fd5fc6ab21a1b95f31b7550ab691c3969a179d69b2e53525741ee7e"
+    },
+    {
+      "bytes": 24162,
+      "path": "development/r9/cable_geometry.py",
+      "sha256": "e414b7bdeff0c0140f6621957f7d807ac291ce433d75a65e02ac6f5b5dd6a864"
+    },
+    {
+      "bytes": 10792,
+      "path": "development/r9/config.json",
+      "sha256": "7e3021c2f514886abdcb9c7714e6eb925c0703390a7aa1ac79fe10f0920c6653"
+    },
+    {
+      "bytes": 5816,
+      "path": "development/r9/field_layout.py",
+      "sha256": "fd446068a82fe33dcde1423c09ebb033a7c613fec03bff632adaea898b9c5876"
+    },
+    {
+      "bytes": 11319,
+      "path": "development/r9/generated/one_bay_prototype_v3/validation.json",
+      "sha256": "e9a22e69904c46b78dd1ced9752d46d3e81f19543ed2f3a115e8310519f63be2"
+    },
+    {
+      "bytes": 2534,
+      "path": "development/r9/model_io.py",
+      "sha256": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5"
+    },
+    {
+      "bytes": 27621,
+      "path": "development/r9/one_bay_geometry.py",
+      "sha256": "f712cec8cbfa15f09ecfacbc603feb64c6482f7cc9c0f6dc365f1ef7df9f8e4e"
+    },
+    {
+      "bytes": 8948,
+      "path": "development/r9/physical_records/STAGE0_2026-08-10.md",
+      "sha256": "d61689474c115585122ce21c456059207692cbbf558cae3db2be825b87516eff"
+    },
+    {
+      "bytes": 34451,
+      "path": "development/r9/support_geometry.py",
+      "sha256": "487a7cb0be5cfd2742dbbfc91cb440d1245ae7530c4fc6a4373a6ae2f424c964"
+    },
+    {
+      "bytes": 110,
+      "path": "requirements.txt",
+      "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+    }
+  ],
+  "unsliced": true,
+  "wall_installation_authorized": false
+}

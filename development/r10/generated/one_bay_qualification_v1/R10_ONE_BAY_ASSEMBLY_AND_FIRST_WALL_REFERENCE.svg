@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">R10 Palatine Lincoln arcade shelf: one-bay exploded assembly and first-wall topology</title>
+  <desc id="diagram-desc">Qualification-only engineering diagram. The main view shows one 254 millimeter bay with two supports, two cassette halves, three independent splice logs, three individual log retainers, and two bay-local support retainers. An inset shows seven supports and six bays across the 61.25 inch first wall, with a cable receiver only at the far-left outer bookend and a non-released terminal placeholder at the far right. Rated capacity is zero pounds and the diagram is not a drilling schedule.</desc>
+
+  <defs>
+    <marker id="arrow-charcoal" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#263238"/>
+    </marker>
+    <marker id="arrow-gold" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#a87522"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#116d83"/>
+    </marker>
+    <pattern id="bearing-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#f1d68a"/>
+      <path d="M0 0 V10" stroke="#a87522" stroke-width="3"/>
+    </pattern>
+    <pattern id="retainer-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#d9eef2"/>
+      <path d="M0 0 V8" stroke="#116d83" stroke-width="2"/>
+    </pattern>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#111820" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .title { font-family: "Avenir Next Condensed", "Arial Narrow", Arial, sans-serif; font-size: 34px; font-weight: 700; letter-spacing: 1.8px; }
+      .subtitle { font-family: "Avenir Next Condensed", "Arial Narrow", Arial, sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 1.1px; }
+      .section { font-family: "Avenir Next Condensed", "Arial Narrow", Arial, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: 1px; }
+      .label { font-family: Arial, sans-serif; font-size: 16px; fill: #263238; }
+      .label-strong { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #202a2f; }
+      .small { font-family: Arial, sans-serif; font-size: 13px; fill: #3d4b52; }
+      .tiny { font-family: Arial, sans-serif; font-size: 11px; fill: #3d4b52; }
+      .white { fill: #fffaf0; }
+      .gold-text { fill: #f0cf75; }
+      .danger-text { fill: #7c1717; font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.4px; }
+      .panel { fill: #fffdf7; stroke: #c9b98f; stroke-width: 2; }
+      .construction { fill: none; stroke: #76838a; stroke-width: 1.5; stroke-dasharray: 7 6; }
+      .dimension { fill: none; stroke: #263238; stroke-width: 1.5; marker-start: url(#arrow-charcoal); marker-end: url(#arrow-charcoal); }
+      .gold-leader { fill: none; stroke: #a87522; stroke-width: 2; marker-end: url(#arrow-gold); }
+      .blue-leader { fill: none; stroke: #116d83; stroke-width: 2; stroke-dasharray: 6 4; marker-end: url(#arrow-blue); }
+      .cassette { fill: #46535a; stroke: #182126; stroke-width: 3; }
+      .cassette-edge { fill: none; stroke: #d9e0e3; stroke-width: 1.5; opacity: 0.7; }
+      .log { fill: #b85f31; stroke: #5b2d1d; stroke-width: 2.5; }
+      .log-center { stroke: #f2c49d; stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .retainer { fill: url(#retainer-hatch); stroke: #0f6175; stroke-width: 2.5; }
+      .support { fill: #20292e; stroke: #11181c; stroke-width: 3; }
+      .support-detail { fill: none; stroke: #a87522; stroke-width: 2; }
+      .bearing { fill: url(#bearing-hatch); stroke: #8c631d; stroke-width: 2.5; }
+      .warning { fill: #fff2cf; stroke: #a43030; stroke-width: 2; }
+      .part-num { fill: #20292e; stroke: #d2aa4a; stroke-width: 2; }
+      .part-num-text { fill: #fffaf0; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <!-- Art-Deco / Roman title band -->
+  <rect x="0" y="0" width="1600" height="112" fill="#151d21"/>
+  <path d="M28 93 H360 L400 53 L440 93 H1160 L1200 53 L1240 93 H1572" fill="none" stroke="#b98a33" stroke-width="3"/>
+  <path d="M400 76 V25 M383 58 H417 M1200 76 V25 M1183 58 H1217" stroke="#b98a33" stroke-width="2"/>
+  <text x="800" y="47" text-anchor="middle" class="title white">R10 PALATINE LINCOLN ARCADE</text>
+  <text x="800" y="80" text-anchor="middle" class="subtitle gold-text">ONE-BAY ASSEMBLY + 61.25 IN FIRST-WALL TOPOLOGY</text>
+
+  <rect x="48" y="126" width="1504" height="48" rx="4" class="warning"/>
+  <text x="800" y="157" text-anchor="middle" class="danger-text">QUALIFICATION ARTICLE ONLY  •  RATED CAPACITY: 0 LB / 0 KG  •  NOT A DRILLING OR INSTALLATION DIAGRAM</text>
+
+  <!-- Main one-bay panel -->
+  <rect x="48" y="194" width="970" height="678" rx="4" class="panel"/>
+  <text x="78" y="230" class="section">ONE INDEPENDENT BAY — EXPLODED OVERLAY</text>
+  <text x="78" y="254" class="small">Frozen planning dimensions are labeled; exploded spacing and simplified silhouettes are schematic.</text>
+
+  <!-- Exact 254 mm support-center dimension -->
+  <line x1="220" y1="276" x2="220" y2="322" class="construction"/>
+  <line x1="918.5" y1="276" x2="918.5" y2="322" class="construction"/>
+  <line x1="220" y1="290" x2="918.5" y2="290" class="dimension"/>
+  <rect x="484" y="273" width="170" height="34" fill="#fffdf7"/>
+  <text x="569" y="296" text-anchor="middle" class="label-strong">254.00 mm exact pitch</text>
+
+  <!-- Top-plan supports and broad half-lands beneath the cassette -->
+  <rect x="176.34" y="322" width="87.32" height="243.84" rx="2" fill="#273138" stroke="#151d21" stroke-width="2" opacity="0.34"/>
+  <rect x="874.84" y="322" width="87.32" height="243.84" rx="2" fill="#273138" stroke="#151d21" stroke-width="2" opacity="0.34"/>
+  <rect x="220.48" y="322" width="43.18" height="243.84" class="bearing" opacity="0.9"/>
+  <rect x="874.84" y="322" width="43.18" height="243.84" class="bearing" opacity="0.9"/>
+
+  <!-- Two exact regular cassette halves -->
+  <rect x="220.48" y="322" width="348.29" height="243.84" rx="3" class="cassette" filter="url(#soft-shadow)"/>
+  <rect x="569.73" y="322" width="348.29" height="243.84" rx="3" class="cassette" filter="url(#soft-shadow)"/>
+  <path d="M229 332 H560 V556 H229 Z M579 332 H909 V556 H579 Z" class="cassette-edge"/>
+  <text x="280" y="444" transform="rotate(-90 280 444)" text-anchor="middle" class="label-strong white">LEFT CASSETTE HALF</text>
+  <text x="303" y="444" transform="rotate(-90 303 444)" text-anchor="middle" class="small white">126.65 mm printed</text>
+  <text x="858" y="444" transform="rotate(90 858 444)" text-anchor="middle" class="label-strong white">RIGHT CASSETTE HALF</text>
+  <text x="835" y="444" transform="rotate(90 835 444)" text-anchor="middle" class="small white">126.65 mm printed</text>
+
+  <!-- Captured channels and three independent splice logs -->
+  <rect x="350.49" y="343" width="437.53" height="32" rx="4" class="construction"/>
+  <rect x="350.49" y="421" width="437.53" height="32" rx="4" class="construction"/>
+  <rect x="350.49" y="499" width="437.53" height="32" rx="4" class="construction"/>
+  <rect x="350.49" y="343" width="437.53" height="32" rx="4" class="log"/>
+  <line x1="430" y1="359" x2="779" y2="359" class="log-center"/>
+  <rect x="350.49" y="421" width="437.53" height="32" rx="4" class="log"/>
+  <line x1="430" y1="437" x2="779" y2="437" class="log-center"/>
+  <rect x="350.49" y="499" width="437.53" height="32" rx="4" class="log"/>
+  <line x1="430" y1="515" x2="779" y2="515" class="log-center"/>
+  <text x="363" y="364" class="small white">REAR</text>
+  <text x="363" y="442" class="small white">CENTER</text>
+  <text x="363" y="520" class="small white">FRONT</text>
+
+  <!-- Three one-log retainers; each is independent -->
+  <rect x="552.75" y="336.6" width="33" height="44.8" rx="2" class="retainer"/>
+  <rect x="552.75" y="414.6" width="33" height="44.8" rx="2" class="retainer"/>
+  <rect x="552.75" y="492.6" width="33" height="44.8" rx="2" class="retainer"/>
+  <text x="595" y="411" class="small white">3 independent flush-cap keys</text>
+  <text x="595" y="429" class="tiny white">lower before mating right half</text>
+
+  <!-- Two bay-local, front-loaded support retainers -->
+  <rect x="209" y="340" width="22" height="217.6" rx="2" class="retainer"/>
+  <rect x="907.5" y="340" width="22" height="217.6" rx="2" class="retainer"/>
+  <line x1="220" y1="574" x2="220" y2="548" class="blue-leader"/>
+  <line x1="918.5" y1="574" x2="918.5" y2="548" class="blue-leader"/>
+  <text x="220" y="590" text-anchor="middle" class="small">front in → shift 2.4; grip +4.0</text>
+  <text x="918.5" y="590" text-anchor="middle" class="small">front in → shift 2.4; grip +4.0</text>
+
+  <!-- Seam and depth dimensions -->
+  <line x1="569.25" y1="310" x2="569.25" y2="570" stroke="#f5d57b" stroke-width="2" stroke-dasharray="5 4"/>
+  <path d="M569 317 C630 302 694 300 741 308" class="gold-leader"/>
+  <text x="747" y="307" class="label-strong">0.35 mm midpoint seam</text>
+  <text x="747" y="326" class="small">bridged by all 3 logs; no shared key</text>
+  <line x1="154" y1="322" x2="154" y2="565.84" class="dimension"/>
+  <text x="137" y="447" transform="rotate(-90 137 447)" text-anchor="middle" class="label-strong">152.40 mm shelf depth</text>
+  <line x1="350.49" y1="548" x2="350.49" y2="572" class="construction"/>
+  <line x1="788.02" y1="548" x2="788.02" y2="572" class="construction"/>
+  <line x1="350.49" y1="563" x2="788.02" y2="563" class="dimension"/>
+  <rect x="487" y="550" width="166" height="27" fill="#fffdf7"/>
+  <text x="570" y="568" text-anchor="middle" class="small">159.10 mm each log</text>
+
+  <!-- Exact support-line seam callouts -->
+  <line x1="220" y1="312" x2="220" y2="570" stroke="#8b969b" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <line x1="918.5" y1="312" x2="918.5" y2="570" stroke="#8b969b" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <text x="220" y="611" text-anchor="middle" class="tiny">0.35 mm support-line seam</text>
+  <text x="918.5" y="611" text-anchor="middle" class="tiny">0.35 mm support-line seam</text>
+  <text x="220" y="627" text-anchor="middle" class="tiny">adjacent bay omitted</text>
+  <text x="918.5" y="627" text-anchor="middle" class="tiny">adjacent bay omitted</text>
+
+  <!-- Two support front elevations, aligned to the exact centers -->
+  <line x1="220" y1="634" x2="220" y2="665" class="construction"/>
+  <line x1="918.5" y1="634" x2="918.5" y2="665" class="construction"/>
+  <g transform="translate(176.34 660)">
+    <path class="support" d="M0 0 H87.32 V182 H0 Z"/>
+    <rect x="0" y="0" width="87.32" height="25" class="bearing"/>
+    <path d="M12 169 H75 M19 157 H68 M10 38 H77 M18 157 V91 C18 45 69.32 45 69.32 91 V157 M29.32 157 V95 C29.32 66 58 66 58 95 V157" class="support-detail"/>
+  </g>
+  <g transform="translate(874.84 660)">
+    <path class="support" d="M0 0 H87.32 V182 H0 Z"/>
+    <rect x="0" y="0" width="87.32" height="25" class="bearing"/>
+    <path d="M12 169 H75 M19 157 H68 M10 38 H77 M18 157 V91 C18 45 69.32 45 69.32 91 V157 M29.32 157 V95 C29.32 66 58 66 58 95 V157" class="support-detail"/>
+  </g>
+  <text x="569" y="680" text-anchor="middle" class="label-strong">2 supports • 31.75 mm run width each</text>
+  <text x="569" y="706" text-anchor="middle" class="label">Gold hatched faces = broad bearing lands</text>
+  <text x="569" y="730" text-anchor="middle" class="small">gravity/load transfer occurs across the broad lands—not through the blue retainers</text>
+  <text x="569" y="768" text-anchor="middle" class="small">Roman side ornament is nonstructural and receives 0 capacity credit</text>
+  <text x="569" y="791" text-anchor="middle" class="small">compact visible corbel: 76.20 mm • full structural strap: 158.75 mm</text>
+  <path d="M332 696 C304 678 279 675 259 676" class="gold-leader"/>
+  <path d="M806 696 C834 678 859 675 879 676" class="gold-leader"/>
+  <rect x="331" y="811" width="476" height="34" fill="#e6f3f5" stroke="#116d83" stroke-width="1.5"/>
+  <text x="569" y="833" text-anchor="middle" class="label-strong">Retainers locate/capture only: assign 0 gravity or bending capacity credit</text>
+
+  <!-- Parts and load-path legend -->
+  <rect x="1038" y="194" width="514" height="678" rx="4" class="panel"/>
+  <text x="1068" y="230" class="section">PART + LOAD-PATH KEY</text>
+  <line x1="1068" y1="246" x2="1520" y2="246" stroke="#b98a33" stroke-width="2"/>
+
+  <circle cx="1090" cy="285" r="16" class="part-num"/><text x="1090" y="286" class="part-num-text">1</text>
+  <rect x="1120" y="265" width="70" height="35" rx="2" class="cassette"/>
+  <rect x="1197" y="265" width="70" height="35" rx="2" class="cassette"/>
+  <text x="1285" y="278" class="label-strong">2 cassette halves</text>
+  <text x="1285" y="298" class="small">primary shell / distributed load path</text>
+
+  <circle cx="1090" cy="352" r="16" class="part-num"/><text x="1090" y="353" class="part-num-text">2</text>
+  <rect x="1120" y="329" width="148" height="11" rx="3" class="log"/>
+  <rect x="1120" y="347" width="148" height="11" rx="3" class="log"/>
+  <rect x="1120" y="365" width="148" height="11" rx="3" class="log"/>
+  <text x="1285" y="346" class="label-strong">3 independent splice logs</text>
+  <text x="1285" y="366" class="small">rear / center / front load transfer</text>
+
+  <circle cx="1090" cy="426" r="16" class="part-num"/><text x="1090" y="427" class="part-num-text">3</text>
+  <rect x="1140" y="399" width="16" height="35" class="retainer"/>
+  <rect x="1172" y="399" width="16" height="35" class="retainer"/>
+  <rect x="1204" y="399" width="16" height="35" class="retainer"/>
+  <text x="1285" y="418" class="label-strong">3 one-log retainers</text>
+  <text x="1285" y="438" class="small">retention only • independent release</text>
+
+  <circle cx="1090" cy="503" r="16" class="part-num"/><text x="1090" y="504" class="part-num-text">4</text>
+  <path class="support" d="M1120 475 H1160 V531 H1120 Z"/>
+  <path d="M1129 522 V500 C1129 485 1151 485 1151 500 V522 M1135 522 V502 C1135 494 1145 494 1145 502 V522" class="support-detail"/>
+  <path class="support" d="M1180 475 H1220 V531 H1180 Z"/>
+  <path d="M1189 522 V500 C1189 485 1211 485 1211 500 V522 M1195 522 V502 C1195 494 1205 494 1205 502 V522" class="support-detail"/>
+  <rect x="1120" y="475" width="40" height="9" class="bearing"/>
+  <rect x="1180" y="475" width="40" height="9" class="bearing"/>
+  <text x="1285" y="497" class="label-strong">2 broad-land supports</text>
+  <text x="1285" y="517" class="small">primary wall reaction / compression path</text>
+
+  <circle cx="1090" cy="579" r="16" class="part-num"/><text x="1090" y="580" class="part-num-text">5</text>
+  <rect x="1140" y="552" width="13" height="57" class="retainer"/>
+  <rect x="1190" y="552" width="13" height="57" class="retainer"/>
+  <text x="1285" y="571" class="label-strong">2 bay-local support retainers</text>
+  <text x="1285" y="591" class="small">one per cassette/support contact</text>
+  <text x="1285" y="610" class="small">2.4 mm bayonet • 4.0 mm hand grip • retention only</text>
+
+  <rect x="1068" y="645" width="452" height="89" fill="#f6edd5" stroke="#a87522" stroke-width="2"/>
+  <text x="1086" y="671" class="label-strong">BEARING / LOAD-TRANSFER CANDIDATES</text>
+  <text x="1086" y="696" class="small">cassette shells • 3 splice-log bodies • broad support lands</text>
+  <text x="1086" y="719" class="small">All require exact saved-mesh and physical qualification.</text>
+
+  <rect x="1068" y="748" width="452" height="96" fill="#e6f3f5" stroke="#116d83" stroke-width="2"/>
+  <text x="1086" y="774" class="label-strong">LOCATOR / RETAINER-ONLY ELEMENTS</text>
+  <text x="1086" y="799" class="small">3 one-log retainers • 2 bay-local support retainers</text>
+  <text x="1086" y="822" class="small">No friction, snap-fit, gravity, or bending capacity credit.</text>
+
+  <!-- Full first-wall topology inset -->
+  <rect x="48" y="894" width="1504" height="308" rx="4" class="panel"/>
+  <text x="78" y="930" class="section">FIRST LOWER WALL — COMPLETE TOPOLOGY INSET</text>
+  <text x="1518" y="930" text-anchor="end" class="danger-text">TOPOLOGY ONLY • DO NOT DRILL</text>
+
+  <!-- 1555.75 mm clear-wall dimension, drawn to one common horizontal scale -->
+  <line x1="160" y1="950" x2="160" y2="981" class="construction"/>
+  <line x1="1435.72" y1="950" x2="1435.72" y2="981" class="construction"/>
+  <line x1="160" y1="960" x2="1435.72" y2="960" class="dimension"/>
+  <rect x="655" y="944" width="286" height="30" fill="#fffdf7"/>
+  <text x="798" y="965" text-anchor="middle" class="label-strong">1555.75 mm clear = 61.25 in</text>
+
+  <!-- Shelf run and six independent bays -->
+  <rect x="160" y="981" width="1275.72" height="44" rx="2" fill="#414d54" stroke="#172126" stroke-width="2"/>
+  <line x1="173.02" y1="981" x2="173.02" y2="1025" stroke="#f0cf75" stroke-width="2"/>
+  <line x1="381.30" y1="981" x2="381.30" y2="1025" stroke="#f0cf75" stroke-width="2"/>
+  <line x1="589.58" y1="981" x2="589.58" y2="1025" stroke="#f0cf75" stroke-width="2"/>
+  <line x1="797.86" y1="981" x2="797.86" y2="1025" stroke="#f0cf75" stroke-width="2"/>
+  <line x1="1006.14" y1="981" x2="1006.14" y2="1025" stroke="#f0cf75" stroke-width="2"/>
+  <line x1="1214.42" y1="981" x2="1214.42" y2="1025" stroke="#f0cf75" stroke-width="2"/>
+  <line x1="1422.70" y1="981" x2="1422.70" y2="1025" stroke="#f0cf75" stroke-width="2"/>
+  <text x="277.16" y="1009" text-anchor="middle" class="small white">B0 • 254</text>
+  <text x="485.44" y="1009" text-anchor="middle" class="small white">B1 • 254</text>
+  <text x="693.72" y="1009" text-anchor="middle" class="small white">B2 • 254</text>
+  <text x="902.00" y="1009" text-anchor="middle" class="small white">B3 • 254</text>
+  <text x="1110.28" y="1009" text-anchor="middle" class="small white">B4 • 254</text>
+  <text x="1318.56" y="1009" text-anchor="middle" class="small white">B5 • 254</text>
+
+  <!-- Seven supports: S0 bookend, S1-S5 compact, S6 placeholder -->
+  <g transform="translate(159 1025)">
+    <path class="support" d="M0 0 H28 V93 H0 Z"/>
+    <path d="M6 82 V47 C6 24 22 24 22 47 V82 M10 82 V48 C10 35 18 35 18 48 V82" class="support-detail"/>
+    <rect x="0" y="0" width="28" height="9" class="bearing"/>
+  </g>
+  <g transform="translate(367.3 1025)"><path class="support" d="M0 0 H28 V74 H0 Z"/><path d="M6 64 V40 C6 21 22 21 22 40 V64 M10 64 V41 C10 31 18 31 18 41 V64" class="support-detail"/><rect x="0" y="0" width="28" height="9" class="bearing"/></g>
+  <g transform="translate(575.58 1025)"><path class="support" d="M0 0 H28 V74 H0 Z"/><path d="M6 64 V40 C6 21 22 21 22 40 V64 M10 64 V41 C10 31 18 31 18 41 V64" class="support-detail"/><rect x="0" y="0" width="28" height="9" class="bearing"/></g>
+  <g transform="translate(783.86 1025)"><path class="support" d="M0 0 H28 V74 H0 Z"/><path d="M6 64 V40 C6 21 22 21 22 40 V64 M10 64 V41 C10 31 18 31 18 41 V64" class="support-detail"/><rect x="0" y="0" width="28" height="9" class="bearing"/></g>
+  <g transform="translate(992.14 1025)"><path class="support" d="M0 0 H28 V74 H0 Z"/><path d="M6 64 V40 C6 21 22 21 22 40 V64 M10 64 V41 C10 31 18 31 18 41 V64" class="support-detail"/><rect x="0" y="0" width="28" height="9" class="bearing"/></g>
+  <g transform="translate(1200.42 1025)"><path class="support" d="M0 0 H28 V74 H0 Z"/><path d="M6 64 V40 C6 21 22 21 22 40 V64 M10 64 V41 C10 31 18 31 18 41 V64" class="support-detail"/><rect x="0" y="0" width="28" height="9" class="bearing"/></g>
+  <g transform="translate(1408.7 1025)">
+    <rect x="0" y="0" width="28" height="74" fill="#fff2cf" stroke="#a43030" stroke-width="2.5" stroke-dasharray="5 4"/>
+    <path d="M4 8 L24 28 M24 8 L4 28" stroke="#a43030" stroke-width="2"/>
+  </g>
+
+  <!-- Exactly one active cable receiver, on S0 only -->
+  <g transform="translate(115 1038)">
+    <path d="M34 0 H54 V12 H44 V21 H34 Z M34 29 H54 V41 H44 V50 H34 Z" fill="url(#retainer-hatch)" stroke="#0f6175" stroke-width="2"/>
+    <path d="M28 11 C10 11 10 40 28 40" fill="none" stroke="#0f6175" stroke-width="3"/>
+  </g>
+  <path d="M116 1111 C95 1119 87 1131 87 1144" class="blue-leader"/>
+  <text x="78" y="1162" class="label-strong">S0 outer bookend: cable receiver only</text>
+  <text x="78" y="1183" class="small">2 sockets • 2 blanks • 1 comb/hook • 0 shelf-load credit</text>
+
+  <text x="173.02" y="1138" text-anchor="middle" class="small">S0</text>
+  <text x="381.30" y="1119" text-anchor="middle" class="small">S1</text>
+  <text x="589.58" y="1119" text-anchor="middle" class="small">S2</text>
+  <text x="797.86" y="1119" text-anchor="middle" class="small">S3</text>
+  <text x="1006.14" y="1119" text-anchor="middle" class="small">S4</text>
+  <text x="1214.42" y="1119" text-anchor="middle" class="small">S5</text>
+  <text x="1422.70" y="1119" text-anchor="middle" class="small">S6</text>
+  <text x="797.86" y="1145" text-anchor="middle" class="label-strong">7 supports • 6 independent bays • exact 254.00 mm support pitch</text>
+  <text x="797.86" y="1167" text-anchor="middle" class="small">12 cassette halves • 18 logs • 18 one-log retainers • 12 bay-local support retainers</text>
+  <text x="797.86" y="1188" text-anchor="middle" class="small">70 first-wall printed articles including the 3 cable modules • none are production-released</text>
+
+  <path d="M1408 1127 C1374 1135 1355 1149 1335 1171" fill="none" stroke="#a43030" stroke-width="2" marker-end="url(#arrow-charcoal)"/>
+  <text x="1520" y="1155" text-anchor="end" class="danger-text">S6 THROUGH-SIDE TERMINAL</text>
+  <text x="1520" y="1177" text-anchor="end" class="small">PLACEHOLDER — replace with measured, handed geometry</text>
+
+  <rect x="0" y="1218" width="1600" height="32" fill="#151d21"/>
+  <text x="800" y="1240" text-anchor="middle" class="small gold-text">NO HOLE LOCATIONS SHOWN • NO WALL INSTALLATION AUTHORIZED • PHYSICAL QUALIFICATION AND INDEPENDENT STRUCTURAL REVIEW REQUIRED</text>
+</svg>
