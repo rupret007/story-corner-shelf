@@ -98,10 +98,10 @@
       "source_scope": "staged_r6_publication_template"
     },
     {
-      "bytes": 1557,
+      "bytes": 2700,
       "destination": ".github/workflows/validate.yml",
       "mode": "0644",
-      "sha256": "d836d281e4a58b893c33a3fc44ae9dd9187507b21be8d568b1aaaa3afcc9c457",
+      "sha256": "957c6e540e5ac798db6b061082ef394e54916233eade30ef77b19786097c3902",
       "source": "publication/.github/workflows/validate.yml",
       "source_scope": "staged_r6_publication_template"
     },
@@ -1562,10 +1562,10 @@
       "source_scope": "staged_r6"
     },
     {
-      "bytes": 23591,
+      "bytes": 23823,
       "destination": "tests/test_publish_root.py",
       "mode": "0644",
-      "sha256": "f702ca51247e4fed7a8d628a6a66335bbf6d086a335f85954f5711b0dae659a7",
+      "sha256": "0ed84a05374718414dfc5eb1d9e866080742b771a1a10094c3e45fbfbe13d972",
       "source": "tests/test_publish_root.py",
       "source_scope": "staged_r6"
     },
@@ -1719,7 +1719,7 @@
   "schema_version": 1,
   "software_model_publication_eligible": true,
   "tested_load_rating_exists": false,
-  "total_bytes_excluding_manifest": 18682089,
+  "total_bytes_excluding_manifest": 18683464,
   "verification": {
     "assembled_complete_test_suite_passed": true,
     "assembled_full_release_check_passed": true,

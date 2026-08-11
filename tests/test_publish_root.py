@@ -522,7 +522,11 @@ class GithubPublicationTemplateTests(unittest.TestCase):
             encoding="utf-8"
         )
         for required in (
-            "publish_root.py --audit-publication .",
+            'Path(os.environ["RUNNER_TEMP"]) / "r6-publication"',
+            'manifest["files"]',
+            "unsafe publication destination",
+            "--audit-publication",
+            '"$RUNNER_TEMP/r6-publication"',
             "release_check.py --root . --source-only",
             "release_check.py --root .",
             "unittest discover -s tests",
@@ -530,6 +534,7 @@ class GithubPublicationTemplateTests(unittest.TestCase):
             "git status --porcelain=v1 --untracked-files=all",
         ):
             self.assertIn(required, workflow)
+        self.assertNotIn("--audit-publication .", workflow)
         self.assertNotIn("scripts/build_all.sh", workflow)
 
     def test_templates_do_not_reintroduce_obsolete_hybrid_release_language(self) -> None:

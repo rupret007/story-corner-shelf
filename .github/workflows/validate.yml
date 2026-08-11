@@ -34,7 +34,33 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: "1"
           PYTHONNOUSERSITE: "1"
-        run: python -I -B publish_root.py --audit-publication .
+        run: |
+          python -I -B - <<'PY'
+          import json
+          import os
+          import shutil
+          from pathlib import Path
+
+          repository = Path.cwd()
+          publication = Path(os.environ["RUNNER_TEMP"]) / "r6-publication"
+          if publication.exists():
+              raise SystemExit(f"refusing to replace existing path: {publication}")
+
+          manifest_path = repository / "PUBLICATION_MANIFEST.json"
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          publication.mkdir(parents=True)
+          for record in manifest["files"]:
+              relative = Path(record["destination"])
+              if relative.is_absolute() or ".." in relative.parts:
+                  raise SystemExit(f"unsafe publication destination: {relative}")
+              source = repository / relative
+              destination = publication / relative
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(source, destination)
+          shutil.copy2(manifest_path, publication / manifest_path.name)
+          PY
+          python -I -B publish_root.py \
+            --audit-publication "$RUNNER_TEMP/r6-publication"
 
       - name: Run source and complete model-only release gates
         env:
