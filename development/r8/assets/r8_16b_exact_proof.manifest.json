@@ -1,0 +1,182 @@
+{
+  "asset_id": "r8_16b_exact_proof",
+  "canvas_px": [
+    1800,
+    1200
+  ],
+  "config_revision": "R8-16B-SCAFFOLD-3",
+  "counts": {
+    "accessory_modules": 4,
+    "clean_terminal_markers": 8,
+    "default_rail_markers": 12,
+    "distinct_support_markers": 28,
+    "exploded_rail_sockets": 3,
+    "panels": 4,
+    "return_support_markers": 10,
+    "through_support_markers": 18
+  },
+  "exact": {
+    "cassette_internal_web_count": 3,
+    "d_frame_cap_mm": 32.0,
+    "d_frame_downleg_mm": 160.0,
+    "d_frame_measured_minimum_web_mm": 16.66628590450866,
+    "exact_full_l_placement": false,
+    "layout_representation": "frozen_nominal_two_run_topology_schematic_not_to_scale",
+    "levels": 2,
+    "module_count": 4,
+    "module_service_lift_mm": 8.0,
+    "rail_envelope_mm": [
+      36.0,
+      88.0,
+      8.8
+    ],
+    "rail_service_lift_mm": 4.0,
+    "rail_service_requires_module_removal": true,
+    "rail_socket_centers_mm": [
+      20.0,
+      46.0,
+      72.0
+    ],
+    "rail_socket_count": 3,
+    "return_and_corner_field_verified": false,
+    "return_default_rail_indices": [
+      1,
+      3
+    ],
+    "return_length_mm": 751.275,
+    "return_supports_per_level": 5,
+    "shelf_depth_mm": 152.4,
+    "terminal_support_center_inset_mm": 16.0,
+    "through_default_rail_indices": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "through_length_mm": 1514.475,
+    "through_supports_per_level": 9
+  },
+  "layout_validation": {
+    "all_heading_text_clear": true,
+    "all_text_contained": true,
+    "footer_bounds_px": [
+      50,
+      1137,
+      1700,
+      42
+    ],
+    "heading_text_overlap_pairs": [],
+    "minimum_font_size_px": 12.0,
+    "panel_bounds_px": {
+      "accessory_rail": [
+        720,
+        150,
+        510,
+        600
+      ],
+      "cassette_section": [
+        1250,
+        150,
+        500,
+        600
+      ],
+      "structural_frame": [
+        50,
+        150,
+        650,
+        600
+      ],
+      "two_level_layout": [
+        50,
+        775,
+        1700,
+        340
+      ]
+    }
+  },
+  "outputs": {
+    "png": {
+      "bytes": 217195,
+      "dimensions_px": [
+        1800,
+        1200
+      ],
+      "path": "development/r8/assets/r8_16b_exact_proof.png",
+      "sha256": "db1a435d6c3d7a9778ca048fb556a1c41b26ecd6278324831e238b43fa9fc7fd"
+    },
+    "svg": {
+      "bytes": 86245,
+      "path": "development/r8/assets/r8_16b_exact_proof.svg",
+      "sha256": "4df2af411611c0715e9abafc06cafed3aa09ef71950ebe76371f5cd10363b844"
+    }
+  },
+  "qualification_only": true,
+  "rated_load_kg": 0.0,
+  "rated_load_lb": 0.0,
+  "render": {
+    "generative_ai_used": false,
+    "kind": "deterministic code-native matplotlib SVG + PNG",
+    "publication": {
+      "commit_marker": "manifest replaced last",
+      "individual_replacement_primitive": "os.replace",
+      "source_hashes_checked_pre_render_pre_publish_and_post_publish": true,
+      "staged_and_validated_before_replacement": true
+    },
+    "script": "development/r8/render_proof.py"
+  },
+  "renderer_provenance": {
+    "cad": {
+      "invoked_interpreter": "/Users/jeffstory/Documents/Office Closet Project/PETG_Closet_Shelf/.venv/bin/python",
+      "packages": {
+        "manifold3d": "3.5.2",
+        "mapbox-earcut": "1.0.3",
+        "networkx": "3.5",
+        "numpy": "2.5.1",
+        "scipy": "1.18.0",
+        "shapely": "2.1.2",
+        "trimesh": "5.0.0"
+      },
+      "python_implementation": "CPython",
+      "python_version": "3.12.13",
+      "resolved_interpreter": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
+    },
+    "drawing": {
+      "font": {
+        "bytes": 773236,
+        "requested_family": "Arial",
+        "resolved_family": "Arial",
+        "resolved_path": "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+      },
+      "invoked_interpreter": "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "matplotlib_backend": "Agg",
+      "packages": {
+        "matplotlib": "3.9.4",
+        "numpy": "2.0.2"
+      },
+      "python_implementation": "CPython",
+      "python_version": "3.9.6",
+      "resolved_interpreter": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3.9"
+    }
+  },
+  "required_statements": [
+    "all printed parts PETG",
+    "metal structural screws into verified framing required",
+    "qualification only / zero rated load",
+    "remove all modules before rail service",
+    "return / corner field-unverified",
+    "not an exact full-L"
+  ],
+  "schema_version": 2,
+  "source_hashes": {
+    "development/r8/accessory_geometry.py": "9462c315d4d934b41254488f8fc082ff6a4bb678036caba407bbada08d665e46",
+    "development/r8/assembly_geometry.py": "ed11b5fa90f812d84fa0d0d171ea9c088d1b1d86652098a844edb3dc0e0b5058",
+    "development/r8/config.json": "e744f2a844bf22712e5f3ac0eaaeb9716340b819703d9fb80d9e1b422399df75",
+    "development/r8/design_math.py": "0f768df435717c290c6552d1560c60447fb4929a1a6d5f789dff14949fe8fd79",
+    "development/r8/interface_geometry.py": "3e2569a5f5701f007dac9bedde488243a13cf2db9233719cfe56936fdd237c38",
+    "development/r8/production_plan.py": "64075278213db931fef84249fbff5dfa64246167887fdcce6e525b3f7c9c291f",
+    "development/r8/render_proof.py": "cef55edeebd6496a08124c24290c2ccf29b2b7bffb7e7010d9ced70e2f761935",
+    "development/r8/shelf_geometry.py": "4969cf50377071597f0af3c92568fae308f372361bf78e51e9ca3d2c0d112751",
+    "requirements.txt": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+  }
+}

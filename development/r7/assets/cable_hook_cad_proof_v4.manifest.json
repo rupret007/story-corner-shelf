@@ -1,0 +1,88 @@
+{
+  "artifact": "R7 v4 removable cable-hook exact CAD proof",
+  "status": "qualification-only-zero-rated-load",
+  "relationship_to_placement_proof": "supplements; does not replace cable_hook_location_proof_exact.svg",
+  "frozen_inputs": {
+    "r7_config": {
+      "path": "development/r7/config.json",
+      "sha256": "bac5fdc0f1857ca03d786900984d946795706bc63527cae8b3aff7f8d7401f0a"
+    },
+    "r7_geometry_source": {
+      "path": "development/r7/cable_peg_geometry.py",
+      "sha256": "bf014de9c39899a204780c7f7ecf5b0ffdef42764d9c7cc8ea00e1aa3beb00e5"
+    },
+    "v4_qualification_manifest": {
+      "path": "development/r7/generated/cable_peg_qualification_v4/manifest.json",
+      "sha256": "fb38f7a019da284050416ffc1a2284ef9bfabba2fc87f9e1202d6a8756b85a9c"
+    },
+    "exact_r6_overlay_coupon_stl": {
+      "path": "development/r7/generated/cable_peg_qualification_v4/stl/R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON.stl",
+      "sha256": "42a9ba68475d8ab2ad8c7590be76ac6ab1592d7a8e22b15cedea5281ab009755"
+    },
+    "v4_collar_hook_stl": {
+      "path": "development/r7/generated/cable_peg_qualification_v4/stl/R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK.stl",
+      "sha256": "b8d2dada22c4273e790124310c61ee493ecd2c496256d50fb817b12967b907d1"
+    }
+  },
+  "render_artifacts": {
+    "renderer": {
+      "name": "render_cable_hook_cad_proof_v4.py",
+      "sha256": "d0d2689c856a489ac44243c72476f43380eff5d8c9a600c18b8dc948430adf0b"
+    },
+    "svg": {
+      "name": "cable_hook_cad_proof_v4.svg",
+      "sha256": "d3ccae0d40dc020bf7c89b9a37b302ffc0c5e29522f614d9172886efb43142d5",
+      "width_px": 1800,
+      "height_px": 1200,
+      "deterministic_second_render_match": true
+    },
+    "png": {
+      "name": "cable_hook_cad_proof_v4.png",
+      "sha256": "d68b40b9fb3129f85629a0d265d64c0220016f075e4628d03ba6b710c658dab4",
+      "width_px": 1800,
+      "height_px": 1200
+    }
+  },
+  "shown_contract": {
+    "front_snap": "open-center bridge and uncamed square rear lips",
+    "manual_jaw_spread_each_side_mm": 1.6,
+    "manual_jaw_total_opening_mm": 3.2,
+    "vertical_stop_free_travel_mm": 0.2,
+    "vertical_migration_gate_mm": 0.4,
+    "vertical_stop_overlap_at_gate_mm3": 0.9844774953092154,
+    "cable_seat_from_visible_face_mm": 18.0,
+    "maximum_cable_bundle_diameter_mm": 5.0,
+    "upturned_tip_height_mm": 5.0,
+    "rated_load_kg": 0.0,
+    "excluded_stations_each_level": [
+      "L1",
+      "R1"
+    ],
+    "excluded_station_total_for_two_levels": 4
+  },
+  "view_provenance": {
+    "installed_oblique": "orthographic triangle projection of the frozen installed source meshes",
+    "installed_side": "equal-scale orthographic silhouettes projected directly from the source meshes",
+    "snap_sections": "equal-scale sections through y = 26.013 mm; pre-spread view uses the frozen compressed-approach proxy translated outward for exploded clarity",
+    "vertical_stop_detail": "exact section paths through x = 1.513 mm; depth and elevation axes are explicitly expanded independently for legibility"
+  },
+  "visual_audit": {
+    "result": "pass",
+    "checked_at": "1800x1200 original-resolution rendering",
+    "checks": [
+      "ZERO RATED LOAD and qualification-only banner has high-contrast white text.",
+      "R6 overlay, v4 hook, and 5 mm cable envelope are visually distinct.",
+      "18.0 mm seat dimension and 5.0 mm cable/tip callouts are legible.",
+      "Manual 1.6 mm-per-jaw spread, 3.2 mm total opening, and rearward insertion arrow are legible without overlap.",
+      "Vertical-stop clearance and positive-arrest statement are legible.",
+      "L1 and R1 corner exclusions are separately labeled and explicitly apply at both levels.",
+      "The plate identifies itself as a supplement to the exact 9-hooks-per-level placement schematic."
+    ]
+  },
+  "limitations": [
+    "The plate does not prove printed fit, PETG flex life, creep performance, load capacity, or production readiness.",
+    "The exploded pre-spread view is a collision proxy, not a finite-element deformation result.",
+    "The vertical-stop detail expands its two axes independently and is labeled accordingly.",
+    "R7 CAD, the qualification protocol, and physical test results govern over this explanatory image."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "sha256",
+  "tree_hash_record_format": "UTF-8 relative POSIX path + NUL + decimal byte count + NUL + lowercase file SHA-256 + LF; records sorted by relative path",
+  "tree_hash_exclusions": [
+    "any __pycache__ directory",
+    "*.pyc",
+    ".DS_Store"
+  ],
+  "rule": "R8 development must not modify either frozen predecessor tree.",
+  "baselines": {
+    "r6": {
+      "path": "../r6",
+      "file_count": 179,
+      "byte_count": 18551049,
+      "tree_sha256": "435359dcec6bab05f616535f75533d95e90554d715c8e0463a28a6b524aaf134",
+      "config_sha256": "1bf52b56ab1030f1f88d061a75a8ea609bc82e0081aed105c704b5f6cdd719c8"
+    },
+    "r7": {
+      "path": "../r7",
+      "file_count": 58,
+      "byte_count": 6169918,
+      "tree_sha256": "3ea55550d117461e8800ecf7a36c6a386ff594ea0405b8febc4c98d84407ce7d",
+      "config_sha256": "bac5fdc0f1857ca03d786900984d946795706bc63527cae8b3aff7f8d7401f0a"
+    }
+  }
+}

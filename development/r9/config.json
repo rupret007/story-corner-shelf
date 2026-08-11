@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "Story Corner R9 compact bookend shelf",
+    "revision": "R9-COMPACT-BOOKEND-SCAFFOLD-1",
+    "visual_direction": "normal modern L shelf with two shortened outer cable columns per level",
+    "qualification_only": true,
+    "installed_release_allowed": false,
+    "physical_qualification_complete": false,
+    "tested_load_rating_exists": false,
+    "production_ready": false,
+    "load_rating_allowed": false,
+    "rated_load_kg": 0.0,
+    "rated_load_lb": 0.0,
+    "wall_bores_emitted": false,
+    "full_shelf_set_emitted": false,
+    "embedded_gcode_allowed": false
+  },
+  "material": {
+    "printed_material": "PETG only",
+    "primary_part_material": "PETG",
+    "pla_allowed_in_primary_or_load_path_parts": false,
+    "structural_credit_from_accessories_allowed": false,
+    "printed_wall_anchors_allowed": false,
+    "hollow_wall_anchors_allowed_in_primary_load_path": false,
+    "printed_fastener_or_anchor_substitution_allowed": false,
+    "required_wall_fastener_material": "metal structural screws and compatible washers"
+  },
+  "printer": {
+    "manufacturer": "Bambu Lab",
+    "model": "A1 mini",
+    "machine_preset": "Bambu Lab A1 mini 0.4 nozzle",
+    "plate_type": "Textured PEI Plate",
+    "process_preset": "0.20mm Strength @BBL A1M",
+    "printable_volume_mm": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "filament_manufacturer": "SUNLU",
+    "filament_product": "PETG",
+    "filament_color": "black",
+    "filament_asin": "B0D1KC72YP",
+    "filament_product_url": "https://www.amazon.com/dp/B0D1KC72YP?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1",
+    "filament_selected_variant": "4 kg bundle; 2 Black + 2 Black (four 1 kg black spools); 1.75 mm +/-0.02 mm",
+    "filament_lot_record_required": true,
+    "filament_lot": null,
+    "filament_preset": "SUNLU PETG @BBL A1M 0.4 nozzle",
+    "nozzle_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "wall_loops": 6,
+    "top_shell_layers": 5,
+    "bottom_shell_layers": 3,
+    "infill_percent": 25,
+    "infill_pattern": "grid",
+    "first_layer_nozzle_temperature_c": 250.0,
+    "other_layer_nozzle_temperature_c": 245.0,
+    "textured_pei_bed_temperature_c": 60.0,
+    "flow_ratio": 0.94,
+    "maximum_volumetric_speed_mm3_s": 9.0,
+    "fan_min_percent": 10,
+    "fan_max_percent": 30,
+    "overhang_fan_percent": 90,
+    "drying_temperature_c": 50.0,
+    "drying_duration_range_h": [
+      6.0,
+      8.0
+    ],
+    "drying_guidance_source_url": "https://store.sunlu.com/products/over-6kg-bundle-sale-petg-3d-printer-filament-1-75mm-1kg-roll",
+    "received_spool_and_dryer_lower_limit_controls": true,
+    "drying_record_required": true,
+    "drying_record": null,
+    "flow_calibration_record": null,
+    "brim_mm": 5.0,
+    "brim_object_gap_mm": 0.1,
+    "minimum_brim_to_brim_gap_mm": 2.0,
+    "edge_reserve_each_side_mm": 2.0
+  },
+  "field_reference": {
+    "ceiling_height_in": 96.0,
+    "outlet_faceplate_top_elevation_in": 53.5,
+    "outlet_measurement_is_approximate": true,
+    "lower_shelf_top_elevation_in": 68.0,
+    "upper_shelf_top_elevation_in": 84.0,
+    "through_wall_clear_length_in": 61.25,
+    "return_wall_clear_length_in": 36.75,
+    "through_wall_clear_length_at_lower_shelf_in": 61.25,
+    "through_wall_clear_length_at_upper_shelf_in": 61.25,
+    "return_wall_clear_length_at_lower_shelf_in": 36.75,
+    "return_wall_clear_length_at_upper_shelf_in": 36.75,
+    "through_wall_length_basis": "field-reported clear length at both 68 in and 84 in shelf-top elevations",
+    "return_wall_length_basis": "photo-derived conservative working clear length at both 68 in and 84 in shelf-top elevations",
+    "return_wall_length_is_conservative_working_value": true,
+    "wall_length_measurements_authorize_installed_cad": false,
+    "outlet_center_from_through_datum_in": null,
+    "inside_corner_angle_deg": null,
+    "stud_or_blocking_locations_in": null,
+    "wall_substrate_thickness_in": null
+  },
+  "shelf": {
+    "depth_mm": 152.4,
+    "cassette_total_height_mm": 30.0,
+    "selected_level_count": 2,
+    "between_module_seam_mm": 0.35,
+    "shelf_top_elevations_in": [
+      68.0,
+      84.0
+    ],
+    "selected_cassette_candidate": "front_first_open_back_u_box_3_web",
+    "selected_cassette_physical_qualification_complete": false
+  },
+  "support_topology": {
+    "structural_station_count_per_level": 8,
+    "visible_support_count_per_level": 6,
+    "outer_feature_columns_per_level": 2,
+    "ordinary_compact_supports_per_level": 4,
+    "hidden_corner_halves_per_level": 2,
+    "visible_inside_corner_columns_per_level": 0,
+    "shelf_projection_mm": 152.4,
+    "support_body_thickness_across_run_mm": 32.0,
+    "wall_hugging_strap_total_drop_mm": 160.0,
+    "wall_hugging_strap_projection_mm": 16.0,
+    "outer_feature_visible_drop_mm": 120.65,
+    "compact_arch_visible_drop_mm": 76.2,
+    "minimum_metal_structural_screws_per_station": 3,
+    "continuous_blocking_or_verified_equivalent_required": true,
+    "continuous_blocking_or_verified_equivalent_confirmed": false,
+    "structural_capacity_credit_allowed": false
+  },
+  "runs": [
+    {
+      "id": "through",
+      "coordinate_scope": "run-local qualification scaffold; not an R8 global or field drilling datum",
+      "coordinate_datum": "far-left outer wall end",
+      "positive_direction": "toward the inside corner",
+      "nominal_length_mm": 1514.475,
+      "terminal_center_inset_mm": 16.0,
+      "support_count": 5,
+      "source_r8_station_indices": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "outer_feature_index": 0,
+      "compact_support_indices": [
+        1,
+        2,
+        3
+      ],
+      "hidden_corner_index": 4
+    },
+    {
+      "id": "return",
+      "coordinate_scope": "run-local qualification scaffold; not an R8 global or field drilling datum",
+      "coordinate_datum": "inside corner",
+      "positive_direction": "toward the far-right outer wall end",
+      "nominal_length_mm": 751.275,
+      "terminal_center_inset_mm": 16.0,
+      "support_count": 3,
+      "source_r8_station_indices": [
+        0,
+        2,
+        4
+      ],
+      "outer_feature_index": 2,
+      "compact_support_indices": [
+        1
+      ],
+      "hidden_corner_index": 0
+    }
+  ],
+  "span_bridging_system": {
+    "rear_ledger_required": true,
+    "rear_ledger_segment_max_length_mm": 165.0,
+    "rear_ledger_joint_tongue_length_mm": 12.0,
+    "rear_ledger_complete_part_max_build_height_mm": 177.0,
+    "rear_ledger_saved_orientation": "member end on plate; member length builds in Z",
+    "rear_ledger_joint_coupon_required": true,
+    "front_beam_or_fascia_splice_required_at_unsupported_cassette_seams": true,
+    "front_beam_splice_coupon_required": true,
+    "support_every_second_r8_station_only": true,
+    "maximum_nominal_through_support_pitch_mm": 370.61875,
+    "maximum_nominal_return_support_pitch_mm": 359.6375,
+    "ledger_or_splice_structural_capacity_credit_allowed": false,
+    "physical_qualification_complete": false
+  },
+  "corner_system": {
+    "visible_column_pair_allowed": false,
+    "independent_hidden_half_per_wall": true,
+    "under_shelf_shear_key_candidate": true,
+    "single_cosmetic_cover_candidate": true,
+    "corner_load_path_authored": false,
+    "corner_physical_qualification_complete": false
+  },
+  "accessory_system": {
+    "rails_allowed_on_outer_feature_columns_only": true,
+    "rails_per_level": 2,
+    "sockets_per_rail": 2,
+    "sockets_per_level": 4,
+    "rails_or_pegs_at_inside_corner_allowed": false,
+    "rails_or_pegs_on_compact_supports_allowed": false,
+    "service_direction": "inward toward shelf field and away from door openings",
+    "rated_load_kg": 0.0,
+    "rated_load_lb": 0.0,
+    "structural_or_shelf_load_credit": false
+  },
+  "visual_reference": {
+    "path": "../simplified_shelf_concepts/artist_renderings/21_black_compact_bookend_columns_petg.png",
+    "sha256": "4a5380e623273ff1aa3345c320e35ecf6b765da399d3ecb2e3ac8db9caa7cee0",
+    "width_px": 1402,
+    "height_px": 1122,
+    "visual_intent_only": true
+  },
+  "predecessor_evidence": {
+    "r8_config": {
+      "path": "../r8/config.json",
+      "sha256": "e744f2a844bf22712e5f3ac0eaaeb9716340b819703d9fb80d9e1b422399df75"
+    },
+    "r8_component_v2_manifest": {
+      "path": "../r8/generated/qualification_v2/manifest.json",
+      "sha256": "3d8d2f71b2957369ec3ad1581b246b0da46558e5e963107328b6d518ba6f83a6"
+    },
+    "r8_one_bay_v2_manifest": {
+      "path": "../r8/generated/one_bay_qualification_v2/manifest.json",
+      "sha256": "9032940ffc2fcbf916ea2ccbbc47d04de37d9436da96aa3940a7d8fa47b67403"
+    },
+    "r8_exact_proof_png": {
+      "path": "../r8/assets/r8_16b_exact_proof.png",
+      "sha256": "db1a435d6c3d7a9778ca048fb556a1c41b26ecd6278324831e238b43fa9fc7fd"
+    }
+  },
+  "qualification": {
+    "compact_support_vs_r8_control_required": true,
+    "one_bay_compact_support_ledger_fixture_required": true,
+    "two_wall_hidden_corner_fixture_required": true,
+    "handed_outer_feature_column_service_test_required": true,
+    "framed_wall_hardware_test_required": true,
+    "proof_creep_and_destructive_tests_required": true,
+    "target_contents_load_kg": null,
+    "test_report": null
+  },
+  "unresolved_inputs": {
+    "field": {
+      "inside_corner_angle_lower_level_deg": null,
+      "inside_corner_angle_upper_level_deg": null,
+      "wall_bow_profile_lower_level_mm": null,
+      "wall_bow_profile_upper_level_mm": null,
+      "outlet_center_from_through_datum_mm": null,
+      "outlet_faceplate_envelope_mm": null,
+      "door_trim_and_service_envelope_mm": null,
+      "ceiling_and_faceplate_elevations_verified": null
+    },
+    "framing": {
+      "stud_or_blocking_map_lower_level_mm": null,
+      "stud_or_blocking_map_upper_level_mm": null,
+      "continuous_blocking_or_verified_equivalent_record": null,
+      "wall_substrate_material": null,
+      "wall_substrate_thickness_mm": null,
+      "framing_scan_method_and_reviewer": null
+    },
+    "hardware": {
+      "structural_screw_product_and_material": null,
+      "structural_screw_body_diameter_mm": null,
+      "structural_screw_head_diameter_mm": null,
+      "structural_screw_head_height_mm": null,
+      "structural_screw_length_mm": null,
+      "washer_inner_diameter_mm": null,
+      "washer_outer_diameter_mm": null,
+      "washer_thickness_mm": null,
+      "pilot_diameter_mm": null,
+      "verified_embedment_mm": null,
+      "driver_envelope_mm": null,
+      "approved_fastener_schedule": null
+    },
+    "load_and_physical_tests": {
+      "target_contents_and_load_kg": null,
+      "distributed_and_point_load_cases": null,
+      "proof_test_record": null,
+      "creep_test_record": null,
+      "recovery_test_record": null,
+      "destructive_test_record": null,
+      "final_reviewer_and_release_record": null
+    }
+  }
+}

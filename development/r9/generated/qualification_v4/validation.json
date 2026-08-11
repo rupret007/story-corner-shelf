@@ -1,0 +1,6877 @@
+{
+  "artifact_config_identity": {
+    "canonical_json_sha256": "37c46e68bc479a1af1fd2b075f6f54abe573cc26bf74efcc25415445d8ced079",
+    "contract_id": "r9_compact_bookend_artifact_config_v4",
+    "exact_match": true
+  },
+  "candidate_settings": {
+    "bottom_shell_layers": 3,
+    "brim_mm": 5.0,
+    "brim_object_gap_mm": 0.1,
+    "build_volume_mm": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "drying_duration_range_h": [
+      6.0,
+      8.0
+    ],
+    "drying_temperature_c": 50.0,
+    "edge_reserve_each_side_mm": 2.0,
+    "embedded_print_profile_present": false,
+    "fan_percent_range": [
+      10,
+      30
+    ],
+    "filament_asin": "B0D1KC72YP",
+    "filament_color": "black",
+    "filament_manufacturer": "SUNLU",
+    "filament_preset": "SUNLU PETG @BBL A1M 0.4 nozzle",
+    "filament_product": "PETG",
+    "filament_product_url": "https://www.amazon.com/dp/B0D1KC72YP?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1",
+    "filament_selected_variant": "4 kg bundle; 2 Black + 2 Black (four 1 kg black spools); 1.75 mm +/-0.02 mm",
+    "first_layer_nozzle_temperature_c": 250.0,
+    "flow_ratio": 0.94,
+    "infill_pattern": "grid",
+    "infill_percent": 25,
+    "layer_height_mm": 0.2,
+    "machine_preset": "Bambu Lab A1 mini 0.4 nozzle",
+    "manual_support_and_brim_review_required": true,
+    "maximum_volumetric_speed_mm3_s": 9.0,
+    "nozzle_mm": 0.4,
+    "other_layer_nozzle_temperature_c": 245.0,
+    "overhang_fan_percent": 90,
+    "plate_type": "Textured PEI Plate",
+    "printer": "Bambu Lab A1 mini",
+    "process_preset": "0.20mm Strength @BBL A1M",
+    "received_spool_and_dryer_lower_limit_controls": true,
+    "scale_percent": 100.0,
+    "status": "manual candidate values; neutral files contain no profile",
+    "textured_pei_bed_temperature_c": 60.0,
+    "top_shell_layers": 5,
+    "wall_loops": 6
+  },
+  "combined_catalog_is_single_a1_mini_plate": false,
+  "combined_catalog_path": "model_only_3mf/MODEL_ONLY_R9_QUALIFICATION_CATALOG.3mf",
+  "combined_object_names_in_order": [
+    "r9_shortened_outer_bookend_support",
+    "r9_compact_support",
+    "r9_concealed_corner_half_control",
+    "r9_through_hidden_corner_half",
+    "r9_return_hidden_corner_half",
+    "r9_under_shelf_shear_key_coupon",
+    "r9_cosmetic_corner_cover_coupon",
+    "r9_90_degree_tabletop_angle_fixture",
+    "r9_rear_ledger_male_coupon",
+    "r9_rear_ledger_female_coupon",
+    "r9_front_beam_lower_lap_coupon",
+    "r9_front_beam_upper_lap_coupon",
+    "r9_two_socket_outer_bookend_rail_fit_coupon",
+    "r9_flush_blank_cable_module",
+    "r9_multi_cable_comb_hook_module",
+    "r9_through_outer_bookend_additive_two_socket_candidate",
+    "r9_return_outer_bookend_additive_two_socket_candidate"
+  ],
+  "combined_object_order_readback_exact": true,
+  "combined_translations_mm": {
+    "r9_90_degree_tabletop_angle_fixture": [
+      10.0,
+      350.0,
+      0.0
+    ],
+    "r9_compact_support": [
+      172.399994,
+      10.0,
+      0.0
+    ],
+    "r9_concealed_corner_half_control": [
+      334.799988,
+      10.0,
+      0.0
+    ],
+    "r9_cosmetic_corner_cover_coupon": [
+      392.799988,
+      180.0,
+      0.0
+    ],
+    "r9_flush_blank_cable_module": [
+      330.0,
+      350.0,
+      0.0
+    ],
+    "r9_front_beam_lower_lap_coupon": [
+      232.0,
+      350.0,
+      0.0
+    ],
+    "r9_front_beam_upper_lap_coupon": [
+      258.0,
+      350.0,
+      0.0
+    ],
+    "r9_multi_cable_comb_hook_module": [
+      360.0,
+      350.0,
+      0.0
+    ],
+    "r9_rear_ledger_female_coupon": [
+      206.0,
+      350.0,
+      0.0
+    ],
+    "r9_rear_ledger_male_coupon": [
+      180.0,
+      350.0,
+      0.0
+    ],
+    "r9_return_hidden_corner_half": [
+      172.399994,
+      180.0,
+      0.0
+    ],
+    "r9_return_outer_bookend_additive_two_socket_candidate": [
+      172.399994,
+      520.0,
+      0.0
+    ],
+    "r9_shortened_outer_bookend_support": [
+      10.0,
+      10.0,
+      0.0
+    ],
+    "r9_through_hidden_corner_half": [
+      10.0,
+      180.0,
+      0.0
+    ],
+    "r9_through_outer_bookend_additive_two_socket_candidate": [
+      10.0,
+      520.0,
+      0.0
+    ],
+    "r9_two_socket_outer_bookend_rail_fit_coupon": [
+      284.0,
+      350.0,
+      0.0
+    ],
+    "r9_under_shelf_shear_key_coupon": [
+      334.799988,
+      180.0,
+      0.0
+    ]
+  },
+  "combined_translations_readback_exact": true,
+  "embedded_print_profile_present": false,
+  "embedded_toolpath_file_count": 0,
+  "exact_file_allowlist": [
+    "README.md",
+    "docs/ASSEMBLY.md",
+    "docs/MEASUREMENT_WORKSHEET.md",
+    "docs/PRINTER_KICKOFF.md",
+    "docs/PRINT_FIRST.md",
+    "docs/TEST_PROTOCOL.md",
+    "individual_model_only_3mf/MODEL_ONLY_r9_90_degree_tabletop_angle_fixture.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_compact_support.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_concealed_corner_half_control.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_cosmetic_corner_cover_coupon.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_flush_blank_cable_module.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_front_beam_lower_lap_coupon.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_front_beam_upper_lap_coupon.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_multi_cable_comb_hook_module.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_rear_ledger_female_coupon.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_rear_ledger_male_coupon.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_return_hidden_corner_half.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_return_outer_bookend_additive_two_socket_candidate.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_shortened_outer_bookend_support.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_through_hidden_corner_half.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_through_outer_bookend_additive_two_socket_candidate.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_two_socket_outer_bookend_rail_fit_coupon.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r9_under_shelf_shear_key_coupon.3mf",
+    "manifest.json",
+    "model_only_3mf/MODEL_ONLY_R9_QUALIFICATION_CATALOG.3mf",
+    "stl/r9_90_degree_tabletop_angle_fixture.stl",
+    "stl/r9_compact_support.stl",
+    "stl/r9_concealed_corner_half_control.stl",
+    "stl/r9_cosmetic_corner_cover_coupon.stl",
+    "stl/r9_flush_blank_cable_module.stl",
+    "stl/r9_front_beam_lower_lap_coupon.stl",
+    "stl/r9_front_beam_upper_lap_coupon.stl",
+    "stl/r9_multi_cable_comb_hook_module.stl",
+    "stl/r9_rear_ledger_female_coupon.stl",
+    "stl/r9_rear_ledger_male_coupon.stl",
+    "stl/r9_return_hidden_corner_half.stl",
+    "stl/r9_return_outer_bookend_additive_two_socket_candidate.stl",
+    "stl/r9_shortened_outer_bookend_support.stl",
+    "stl/r9_through_hidden_corner_half.stl",
+    "stl/r9_through_outer_bookend_additive_two_socket_candidate.stl",
+    "stl/r9_two_socket_outer_bookend_rail_fit_coupon.stl",
+    "stl/r9_under_shelf_shear_key_coupon.stl",
+    "validation.json"
+  ],
+  "field_measurements": {
+    "measurements_authorize_installed_cad": false,
+    "return": {
+      "clear_length_lower_mm": 933.45,
+      "clear_length_upper_mm": 933.45,
+      "minimum_unallocated_clear_length_mm": 182.175,
+      "run_id": "return",
+      "scaffold_length_mm": 751.275
+    },
+    "return_measurement_basis": "photo-derived conservative working clear length at both 68 in and 84 in shelf-top elevations",
+    "through": {
+      "clear_length_lower_mm": 1555.75,
+      "clear_length_upper_mm": 1555.75,
+      "minimum_unallocated_clear_length_mm": 41.275,
+      "run_id": "through",
+      "scaffold_length_mm": 1514.475
+    },
+    "unallocated_clear_length_is_cut_endpoint_or_drill_clearance": false
+  },
+  "fixture_evidence": {
+    "compact_one_bay": {
+      "blocked": true,
+      "emitted_meshes": false,
+      "missing_authored_interfaces": [
+        "compact-support rear-ledger seat, notch, or attachment interface",
+        "compact-support front-beam seat, notch, or attachment interface",
+        "shelf-cassette/member interface and exact cassette seam geometry",
+        "full bay member lengths and member-end conditions",
+        "wall fastener bores, hardware envelopes, and verified framing datums"
+      ],
+      "name": "r9_compact_support_ledger_front_beam_one_bay_tabletop_layout",
+      "placed_parts": [],
+      "printed_material": "PETG",
+      "production_ready": false,
+      "qualification_only": true,
+      "rated_load_kg": 0.0,
+      "rated_load_lb": 0.0,
+      "reason": "No exact one-bay transform can be derived from the present R9 qualification meshes without inventing structural interfaces."
+    },
+    "front_beam_joint": {
+      "name": "r9_staggered_front_beam_splice_coupon",
+      "parts": [
+        {
+          "a1_mini_fits": true,
+          "body_count": 1,
+          "mesh_fingerprint": "bf68d49cd809929e9ba6ff99e4359abb14aa2e6977dfb695caa3c84d601e4977",
+          "part_name": "r9_front_beam_lower_lap_coupon",
+          "positive_volume": true,
+          "raw_part_mm": [
+            76.0,
+            16.0,
+            30.0
+          ],
+          "required_build_volume_mm": [
+            90.2,
+            30.2,
+            30.0
+          ],
+          "watertight": true,
+          "winding_consistent": true
+        },
+        {
+          "a1_mini_fits": true,
+          "body_count": 1,
+          "mesh_fingerprint": "41ec6faf2825c4d5c77bb4d83066ae3132087862e765bbb0e8050f1dea517732",
+          "part_name": "r9_front_beam_upper_lap_coupon",
+          "positive_volume": true,
+          "raw_part_mm": [
+            76.0,
+            16.0,
+            30.0
+          ],
+          "required_build_volume_mm": [
+            90.2,
+            30.2,
+            30.0
+          ],
+          "watertight": true,
+          "winding_consistent": true
+        }
+      ],
+      "physical_qualification_complete": false,
+      "printed_material": "PETG",
+      "qualification_only": true,
+      "rated_load_kg": 0.0,
+      "rated_load_lb": 0.0,
+      "service_path": {
+        "collision_volume_tolerance_mm3": 1e-06,
+        "disengaged_transform": {
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              76.4
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "fixed_part_names": [
+          "r9_front_beam_lower_lap_coupon"
+        ],
+        "insertion_samples": [
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  76.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.0,
+            "service_offset_mm": 16.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  74.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.125,
+            "service_offset_mm": 14.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  72.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.25,
+            "service_offset_mm": 12.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  70.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.375,
+            "service_offset_mm": 10.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  68.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.5,
+            "service_offset_mm": 8.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  66.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.625,
+            "service_offset_mm": 6.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  64.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.75,
+            "service_offset_mm": 4.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  62.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.875,
+            "service_offset_mm": 2.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  60.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 1.0,
+            "service_offset_mm": 0.0,
+            "total_intersection_volume_mm3": 0.0
+          }
+        ],
+        "intended_target_contacts": [],
+        "maximum_intersection_volume_mm3": 0.0,
+        "moving_part_name": "r9_front_beam_upper_lap_coupon",
+        "name": "r9_front_beam_coupon_insertion_removal",
+        "removal_samples": [
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  60.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 1.0,
+            "service_offset_mm": 0.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  62.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.875,
+            "service_offset_mm": 2.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  64.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.75,
+            "service_offset_mm": 4.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  66.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.625,
+            "service_offset_mm": 6.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  68.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.5,
+            "service_offset_mm": 8.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  70.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.375,
+            "service_offset_mm": 10.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  72.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.25,
+            "service_offset_mm": 12.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  74.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.125,
+            "service_offset_mm": 14.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_front_beam_lower_lap_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  76.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.0,
+            "service_offset_mm": 16.0,
+            "total_intersection_volume_mm3": 0.0
+          }
+        ],
+        "sampled_path_collision_free": true,
+        "service_direction_unit_xyz": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "service_travel_mm": 16.0,
+        "target_clearances": [
+          {
+            "interpretation": "gap between the lower-part body and upper-lap start",
+            "name": "left_axial_shoulder_gap",
+            "value_mm": 0.4
+          },
+          {
+            "interpretation": "gap between the lower-lap tip and upper-part body",
+            "name": "right_axial_shoulder_gap",
+            "value_mm": 0.4
+          },
+          {
+            "interpretation": "total Z gap; 0.4 mm is reserved from each nominal half",
+            "name": "opposed_lap_face_gap",
+            "value_mm": 0.8
+          }
+        ],
+        "target_transform": {
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              60.4
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      }
+    },
+    "nominal_90_degree_corner": {
+      "corner_load_path_authored": false,
+      "field_angle_verified": false,
+      "maximum_target_intersection_volume_mm3": 0.0,
+      "name": "r9_nominal_90_degree_hidden_corner_tabletop_dry_fit",
+      "nominal_fixture_angle_deg": 90.0,
+      "physical_qualification_complete": false,
+      "placed_parts": [
+        {
+          "part": {
+            "a1_mini_fits": true,
+            "body_count": 1,
+            "mesh_fingerprint": "d79167312df6fc4321e601988f4243adb319168ad5cb6daf0261439db6ed2ba9",
+            "part_name": "r9_90_degree_tabletop_angle_fixture",
+            "positive_volume": true,
+            "raw_part_mm": [
+              160.0,
+              160.0,
+              4.0
+            ],
+            "required_build_volume_mm": [
+              174.2,
+              174.2,
+              4.0
+            ],
+            "watertight": true,
+            "winding_consistent": true
+          },
+          "target_transform": {
+            "matrix": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                -4.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "part": {
+            "a1_mini_fits": true,
+            "body_count": 1,
+            "mesh_fingerprint": "fae12bc4089b0e1b2db6922e1207266e848f7ea67b26b0e28c5288699b1ed49d",
+            "part_name": "r9_through_hidden_corner_half",
+            "positive_volume": true,
+            "raw_part_mm": [
+              152.39999389648438,
+              160.0,
+              16.0
+            ],
+            "required_build_volume_mm": [
+              166.59999389648436,
+              174.2,
+              16.0
+            ],
+            "watertight": true,
+            "winding_consistent": true
+          },
+          "target_transform": {
+            "matrix": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "part": {
+            "a1_mini_fits": true,
+            "body_count": 1,
+            "mesh_fingerprint": "4919ac7529a264d8c68ebfd974c8168264faf63676692c5a70e9a0fd21a24ba2",
+            "part_name": "r9_return_hidden_corner_half",
+            "positive_volume": true,
+            "raw_part_mm": [
+              152.39999389648438,
+              160.0,
+              16.0
+            ],
+            "required_build_volume_mm": [
+              166.59999389648436,
+              174.2,
+              16.0
+            ],
+            "watertight": true,
+            "winding_consistent": true
+          },
+          "target_transform": {
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                -1.0,
+                16.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "part": {
+            "a1_mini_fits": true,
+            "body_count": 1,
+            "mesh_fingerprint": "8a72cd561d07855190b49edd44532b160cfaab4f9a5232f436d6e9ffdccc81f7",
+            "part_name": "r9_under_shelf_shear_key_coupon",
+            "positive_volume": true,
+            "raw_part_mm": [
+              48.0,
+              48.0,
+              4.0
+            ],
+            "required_build_volume_mm": [
+              62.2,
+              62.2,
+              4.0
+            ],
+            "watertight": true,
+            "winding_consistent": true
+          },
+          "target_transform": {
+            "matrix": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                160.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "part": {
+            "a1_mini_fits": true,
+            "body_count": 1,
+            "mesh_fingerprint": "a257a93492c5a9819664a5d11b80c5f6f0ad01cb9e2e10d6db30a7954295808a",
+            "part_name": "r9_cosmetic_corner_cover_coupon",
+            "positive_volume": true,
+            "raw_part_mm": [
+              64.0,
+              64.0,
+              1.6
+            ],
+            "required_build_volume_mm": [
+              78.2,
+              78.2,
+              1.6
+            ],
+            "watertight": true,
+            "winding_consistent": true
+          },
+          "target_transform": {
+            "matrix": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                164.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      ],
+      "printed_material": "PETG",
+      "qualification_only": true,
+      "rated_load_kg": 0.0,
+      "rated_load_lb": 0.0,
+      "service_paths": [
+        {
+          "collision_volume_tolerance_mm3": 1e-06,
+          "disengaged_transform": {
+            "matrix": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                8.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "fixed_part_names": [
+            "r9_90_degree_tabletop_angle_fixture"
+          ],
+          "insertion_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    8.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 8.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    7.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 7.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    6.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 6.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    5.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 5.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    4.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 4.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    3.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 3.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 2.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 1.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "intended_target_contacts": [
+            "through-half bottom / fixture top"
+          ],
+          "maximum_intersection_volume_mm3": 0.0,
+          "moving_part_name": "r9_through_hidden_corner_half",
+          "name": "r9_corner_through_half_vertical_seating",
+          "removal_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 1.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 2.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    3.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 3.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    4.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 4.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    5.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 5.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    6.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 6.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    7.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 7.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    8.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 8.0,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "sampled_path_collision_free": true,
+          "service_direction_unit_xyz": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "service_travel_mm": 8.0,
+          "target_clearances": [
+            {
+              "interpretation": "support bottom intentionally rests on the angle fixture",
+              "name": "fixture_top_contact",
+              "value_mm": 0.0
+            }
+          ],
+          "target_transform": {
+            "matrix": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "collision_volume_tolerance_mm3": 1e-06,
+          "disengaged_transform": {
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                -1.0,
+                16.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                16.4
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "fixed_part_names": [
+            "r9_90_degree_tabletop_angle_fixture",
+            "r9_through_hidden_corner_half"
+          ],
+          "insertion_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    16.4
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 16.4,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    14.349999999999998
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 14.349999999999998,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    12.299999999999999
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 12.299999999999999,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    10.25
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 10.25,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    8.2
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 8.2,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    6.1499999999999995
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 6.1499999999999995,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    4.1
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 4.1,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    2.05
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 2.05,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "intended_target_contacts": [
+            "through/return complementary 45-degree miter",
+            "return-half bottom / fixture top"
+          ],
+          "maximum_intersection_volume_mm3": 0.0,
+          "moving_part_name": "r9_return_hidden_corner_half",
+          "name": "r9_corner_return_half_miter_insertion",
+          "removal_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    2.05
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 2.05,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    4.1
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 4.1,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    6.1499999999999995
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 6.1499999999999995,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    8.2
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 8.2,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    10.25
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 10.25,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    12.299999999999999
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 12.299999999999999,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    14.349999999999998
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 14.349999999999998,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_90_degree_tabletop_angle_fixture",
+                  0.0
+                ],
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    0.0,
+                    -1.0,
+                    16.0
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    16.4
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 16.4,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "sampled_path_collision_free": true,
+          "service_direction_unit_xyz": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "service_travel_mm": 16.4,
+          "target_clearances": [
+            {
+              "interpretation": "authored 45-degree faces meet at nominal 90 degrees",
+              "name": "complementary_miter_contact",
+              "value_mm": 0.0
+            },
+            {
+              "interpretation": "return-half bottom slides on the tabletop fixture plane",
+              "name": "fixture_top_contact",
+              "value_mm": 0.0
+            }
+          ],
+          "target_transform": {
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                -1.0,
+                16.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "collision_volume_tolerance_mm3": 1e-06,
+          "disengaged_transform": {
+            "matrix": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                168.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "fixed_part_names": [
+            "r9_through_hidden_corner_half",
+            "r9_return_hidden_corner_half"
+          ],
+          "insertion_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    168.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 8.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    167.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 7.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    166.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 6.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    165.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 5.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    164.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 4.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    163.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 3.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    162.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 2.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    161.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 1.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    160.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "intended_target_contacts": [
+            "key underside / both support tops"
+          ],
+          "maximum_intersection_volume_mm3": 0.0,
+          "moving_part_name": "r9_under_shelf_shear_key_coupon",
+          "name": "r9_corner_shear_key_vertical_seating",
+          "removal_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    160.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    161.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 1.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    162.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 2.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    163.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 3.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    164.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 4.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    165.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 5.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    166.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 6.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    167.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 7.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_through_hidden_corner_half",
+                  0.0
+                ],
+                [
+                  "r9_return_hidden_corner_half",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    168.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 8.0,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "sampled_path_collision_free": true,
+          "service_direction_unit_xyz": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "service_travel_mm": 8.0,
+          "target_clearances": [
+            {
+              "interpretation": "flat key rests on both support top planes for handling study",
+              "name": "support_top_contact",
+              "value_mm": 0.0
+            }
+          ],
+          "target_transform": {
+            "matrix": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                160.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "collision_volume_tolerance_mm3": 1e-06,
+          "disengaged_transform": {
+            "matrix": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                172.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "fixed_part_names": [
+            "r9_under_shelf_shear_key_coupon"
+          ],
+          "insertion_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    172.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 8.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    171.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 7.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    170.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 6.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    169.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 5.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    168.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 4.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    167.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 3.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    166.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 2.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    165.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 1.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    164.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "intended_target_contacts": [
+            "cosmetic-cover underside / key top"
+          ],
+          "maximum_intersection_volume_mm3": 0.0,
+          "moving_part_name": "r9_cosmetic_corner_cover_coupon",
+          "name": "r9_corner_cosmetic_cover_vertical_seating",
+          "removal_samples": [
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    164.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 1.0,
+              "service_offset_mm": 0.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    165.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.875,
+              "service_offset_mm": 1.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    166.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.75,
+              "service_offset_mm": 2.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    167.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.625,
+              "service_offset_mm": 3.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    168.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.5,
+              "service_offset_mm": 4.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    169.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.375,
+              "service_offset_mm": 5.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    170.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.25,
+              "service_offset_mm": 6.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    171.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.125,
+              "service_offset_mm": 7.0,
+              "total_intersection_volume_mm3": 0.0
+            },
+            {
+              "intersection_by_fixed_part_mm3": [
+                [
+                  "r9_under_shelf_shear_key_coupon",
+                  0.0
+                ]
+              ],
+              "moving_transform": {
+                "matrix": [
+                  [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    1.0,
+                    172.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "seated_fraction": 0.0,
+              "service_offset_mm": 8.0,
+              "total_intersection_volume_mm3": 0.0
+            }
+          ],
+          "sampled_path_collision_free": true,
+          "service_direction_unit_xyz": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "service_travel_mm": 8.0,
+          "target_clearances": [
+            {
+              "interpretation": "cosmetic coupon rests on the key only for seam visualization",
+              "name": "key_top_contact",
+              "value_mm": 0.0
+            }
+          ],
+          "target_transform": {
+            "matrix": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                164.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      ],
+      "target_pair_intersections": [
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_90_degree_tabletop_angle_fixture",
+          "part_b_name": "r9_through_hidden_corner_half"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_90_degree_tabletop_angle_fixture",
+          "part_b_name": "r9_return_hidden_corner_half"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_90_degree_tabletop_angle_fixture",
+          "part_b_name": "r9_under_shelf_shear_key_coupon"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_90_degree_tabletop_angle_fixture",
+          "part_b_name": "r9_cosmetic_corner_cover_coupon"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_through_hidden_corner_half",
+          "part_b_name": "r9_return_hidden_corner_half"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_through_hidden_corner_half",
+          "part_b_name": "r9_under_shelf_shear_key_coupon"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_through_hidden_corner_half",
+          "part_b_name": "r9_cosmetic_corner_cover_coupon"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_return_hidden_corner_half",
+          "part_b_name": "r9_under_shelf_shear_key_coupon"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_return_hidden_corner_half",
+          "part_b_name": "r9_cosmetic_corner_cover_coupon"
+        },
+        {
+          "intersection_volume_mm3": 0.0,
+          "part_a_name": "r9_under_shelf_shear_key_coupon",
+          "part_b_name": "r9_cosmetic_corner_cover_coupon"
+        }
+      ],
+      "target_pose_collision_free": true
+    },
+    "rear_ledger_joint": {
+      "name": "r9_modular_rear_ledger_joint_coupon",
+      "parts": [
+        {
+          "a1_mini_fits": true,
+          "body_count": 1,
+          "mesh_fingerprint": "f7a5d8a4698196aafa4ef5fc2947ed34613059003d8878a619d6413029c25a46",
+          "part_name": "r9_rear_ledger_male_coupon",
+          "positive_volume": true,
+          "raw_part_mm": [
+            72.0,
+            16.0,
+            30.0
+          ],
+          "required_build_volume_mm": [
+            86.2,
+            30.2,
+            30.0
+          ],
+          "watertight": true,
+          "winding_consistent": true
+        },
+        {
+          "a1_mini_fits": true,
+          "body_count": 1,
+          "mesh_fingerprint": "5577409c8851a2590d9b9e9529ee0eb2891cdb6e4181d6b5834d7fbe9ab8bb7b",
+          "part_name": "r9_rear_ledger_female_coupon",
+          "positive_volume": true,
+          "raw_part_mm": [
+            60.0,
+            16.0,
+            30.0
+          ],
+          "required_build_volume_mm": [
+            74.2,
+            30.2,
+            30.0
+          ],
+          "watertight": true,
+          "winding_consistent": true
+        }
+      ],
+      "physical_qualification_complete": false,
+      "printed_material": "PETG",
+      "qualification_only": true,
+      "rated_load_kg": 0.0,
+      "rated_load_lb": 0.0,
+      "service_path": {
+        "collision_volume_tolerance_mm3": 1e-06,
+        "disengaged_transform": {
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              72.4
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "fixed_part_names": [
+          "r9_rear_ledger_male_coupon"
+        ],
+        "insertion_samples": [
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  72.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.0,
+            "service_offset_mm": 12.4,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  70.85
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.125,
+            "service_offset_mm": 10.85,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  69.3
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.25,
+            "service_offset_mm": 9.3,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  67.75
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.375,
+            "service_offset_mm": 7.75,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  66.2
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.5,
+            "service_offset_mm": 6.2,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  64.65
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.625,
+            "service_offset_mm": 4.65,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  63.1
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.75,
+            "service_offset_mm": 3.1,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  61.55
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.875,
+            "service_offset_mm": 1.55,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  60.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 1.0,
+            "service_offset_mm": 0.0,
+            "total_intersection_volume_mm3": 0.0
+          }
+        ],
+        "intended_target_contacts": [
+          "male/female body shoulder plane at X = 60 mm"
+        ],
+        "maximum_intersection_volume_mm3": 0.0,
+        "moving_part_name": "r9_rear_ledger_female_coupon",
+        "name": "r9_rear_ledger_coupon_insertion_removal",
+        "removal_samples": [
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  60.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 1.0,
+            "service_offset_mm": 0.0,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  61.55
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.875,
+            "service_offset_mm": 1.55,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  63.1
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.75,
+            "service_offset_mm": 3.1,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  64.65
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.625,
+            "service_offset_mm": 4.65,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  66.2
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.5,
+            "service_offset_mm": 6.2,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  67.75
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.375,
+            "service_offset_mm": 7.75,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  69.3
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.25,
+            "service_offset_mm": 9.3,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  70.85
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.125,
+            "service_offset_mm": 10.85,
+            "total_intersection_volume_mm3": 0.0
+          },
+          {
+            "intersection_by_fixed_part_mm3": [
+              [
+                "r9_rear_ledger_male_coupon",
+                0.0
+              ]
+            ],
+            "moving_transform": {
+              "matrix": [
+                [
+                  1.0,
+                  0.0,
+                  0.0,
+                  72.4
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "seated_fraction": 0.0,
+            "service_offset_mm": 12.4,
+            "total_intersection_volume_mm3": 0.0
+          }
+        ],
+        "sampled_path_collision_free": true,
+        "service_direction_unit_xyz": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "service_travel_mm": 12.4,
+        "target_clearances": [
+          {
+            "interpretation": "radial running clearance on both tongue-depth faces",
+            "name": "socket_y_clearance_each_face",
+            "value_mm": 0.4
+          },
+          {
+            "interpretation": "radial running clearance on both tongue-height faces",
+            "name": "socket_z_clearance_each_face",
+            "value_mm": 0.4
+          },
+          {
+            "interpretation": "axial gap from the tongue tip to the blind socket end",
+            "name": "tongue_tip_clearance",
+            "value_mm": 0.4
+          },
+          {
+            "interpretation": "intentional coplanar end-face contact outside the tongue",
+            "name": "body_shoulder_contact",
+            "value_mm": 0.0
+          }
+        ],
+        "target_transform": {
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              60.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "full_shelf_set_present": false,
+  "generated_gcode_present": false,
+  "geometry_digests_by_mesh_id": {
+    "r9_90_degree_tabletop_angle_fixture": "67e6d1dbfdef3019ccf85e03c4e525bb64523f9e267f211d29671bc3b7761eb5",
+    "r9_compact_support": "8a90f76c62053f882d3975ce0fe119106233722dd04df419935c5f7b0b86bb32",
+    "r9_concealed_corner_half_control": "78d93aa388e13281a30adda2ad1b34999ee0f6e1bd321dcf0c71a21dc5dab2db",
+    "r9_cosmetic_corner_cover_coupon": "d1dc1bf2133209fed38000e4c35256ac75c9113173fd61e86755f77b484bccb9",
+    "r9_flush_blank_cable_module": "00cd35a58ccd3e0e7c5c6912e9abdf6ca8e45d965d2a3abba434893f9a3e9c2e",
+    "r9_front_beam_lower_lap_coupon": "bfaef95808b134b9d1f05a50268a0ba3a99c9956fcbda15c304823e149bd7eed",
+    "r9_front_beam_upper_lap_coupon": "35ecd8ae097860fd52cbfd30d22994e0d4a937406b7b27eefa20c9a8b8529610",
+    "r9_multi_cable_comb_hook_module": "3de87e3cbe910088d2034c2b7e3dcf559daf986342eca0bec6953b7c4455873e",
+    "r9_rear_ledger_female_coupon": "517ea7b1b8d40f4a0852ba6da884aee9ba833b32aa18af3704bcbb6977e1f7c5",
+    "r9_rear_ledger_male_coupon": "37c90998513db8545c5c307083985a725537fabc482687f88ed324a22b296496",
+    "r9_return_hidden_corner_half": "aaf79f8d529c67bd2a7ee6fd63f291b529cd31f33cdfd821d030e912bcd48183",
+    "r9_return_outer_bookend_additive_two_socket_candidate": "511bc309a8a2c9b722eb026847c5421d1af9864805ed622780472e581441508e",
+    "r9_shortened_outer_bookend_support": "4d16786bc2654ff192d64709a6bb32dbb68a849fbbcae0fdeeb72540510d39ce",
+    "r9_through_hidden_corner_half": "9f3088b27fd1f9935b83d99df081d5c9c6ed7f3449ff72a5e1e02f8f173cb10b",
+    "r9_through_outer_bookend_additive_two_socket_candidate": "447f32bf7751aa2de9777e530cfe7d916f3986678b334fc831039dc3010e18c4",
+    "r9_two_socket_outer_bookend_rail_fit_coupon": "2291a4fd85cd5b558cb5d1ae64051975e5fafaed36bbb3a8fbcb11951788f1ae",
+    "r9_under_shelf_shear_key_coupon": "bf8e2dc01f7be763b79d0c92ccbf6e3fc376edfb166ca84a1d0627f8950a0138"
+  },
+  "geometry_records_in_order": [
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Smooth shortened outer bookend core control",
+      "mesh_id": "r9_shortened_outer_bookend_support",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          152.4,
+          160.0,
+          32.0
+        ],
+        "required_build_volume_mm": [
+          166.6,
+          174.2,
+          32.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "broad_min_z_constant_profile",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            160.0,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "4d16786bc2654ff192d64709a6bb32dbb68a849fbbcae0fdeeb72540510d39ce",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          160.0,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 40,
+        "vertex_count": 20,
+        "volume_mm3": 266982.394531,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every layer repeats one connected D-window profile",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Smooth compact intermediate support candidate",
+      "mesh_id": "r9_compact_support",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          152.4,
+          160.0,
+          32.0
+        ],
+        "required_build_volume_mm": [
+          166.6,
+          174.2,
+          32.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "broad_min_z_constant_profile",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            160.0,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "8a90f76c62053f882d3975ce0fe119106233722dd04df419935c5f7b0b86bb32",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          160.0,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 40,
+        "vertex_count": 20,
+        "volume_mm3": 244223.992188,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every layer repeats one connected D-window profile",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Untrimmed hidden-corner half control",
+      "mesh_id": "r9_concealed_corner_half_control",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          152.4,
+          160.0,
+          16.0
+        ],
+        "required_build_volume_mm": [
+          166.6,
+          174.2,
+          16.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "broad_min_z_constant_profile",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            160.0,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "78d93aa388e13281a30adda2ad1b34999ee0f6e1bd321dcf0c71a21dc5dab2db",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          160.0,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 40,
+        "vertex_count": 20,
+        "volume_mm3": 115609.597656,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every layer repeats one connected D-window profile",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Through-wall handed hidden-corner half",
+      "mesh_id": "r9_through_hidden_corner_half",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          152.399994,
+          160.0,
+          16.0
+        ],
+        "required_build_volume_mm": [
+          166.599994,
+          174.2,
+          16.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "broad_min_z_miter_only_subtracts",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            160.0,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "9f3088b27fd1f9935b83d99df081d5c9c6ed7f3449ff72a5e1e02f8f173cb10b",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          160.0,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 38,
+        "vertex_count": 19,
+        "volume_mm3": 95129.597656,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "later layers only remove the 45-degree miter field",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Return-wall handed hidden-corner half",
+      "mesh_id": "r9_return_hidden_corner_half",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          152.399994,
+          160.0,
+          16.0
+        ],
+        "required_build_volume_mm": [
+          166.599994,
+          174.2,
+          16.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "broad_max_z_miter_only_subtracts",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            160.0,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "aaf79f8d529c67bd2a7ee6fd63f291b529cd31f33cdfd821d030e912bcd48183",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          160.0,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 38,
+        "vertex_count": 19,
+        "volume_mm3": 95129.597656,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "reversed broad-face build makes later layers only remove the miter field",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Non-rated under-shelf corner key coupon",
+      "mesh_id": "r9_under_shelf_shear_key_coupon",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          48.0,
+          48.0,
+          4.0
+        ],
+        "required_build_volume_mm": [
+          62.2,
+          62.2,
+          4.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "flat_authored_face_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            48.0,
+            48.0,
+            4.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "bf8e2dc01f7be763b79d0c92ccbf6e3fc376edfb166ca84a1d0627f8950a0138",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          48.0,
+          48.0,
+          4.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 20,
+        "vertex_count": 12,
+        "volume_mm3": 4032.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "constant connected L profile repeats through thickness",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Cosmetic corner-cover reveal coupon",
+      "mesh_id": "r9_cosmetic_corner_cover_coupon",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          64.0,
+          64.0,
+          1.6
+        ],
+        "required_build_volume_mm": [
+          78.2,
+          78.2,
+          1.6
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "flat_authored_face_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            64.0,
+            64.0,
+            1.6
+          ]
+        ],
+        "canonical_float32_triangle_digest": "d1dc1bf2133209fed38000e4c35256ac75c9113173fd61e86755f77b484bccb9",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          64.0,
+          64.0,
+          1.6
+        ],
+        "positive_volume": true,
+        "triangle_count": 20,
+        "vertex_count": 12,
+        "volume_mm3": 2227.200033,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "constant connected L profile repeats through thickness",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Nominal 90-degree tabletop reference",
+      "mesh_id": "r9_90_degree_tabletop_angle_fixture",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          160.0,
+          160.0,
+          4.0
+        ],
+        "required_build_volume_mm": [
+          174.2,
+          174.2,
+          4.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "flat_authored_face_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            160.0,
+            160.0,
+            4.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "67e6d1dbfdef3019ccf85e03c4e525bb64523f9e267f211d29671bc3b7761eb5",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          160.0,
+          160.0,
+          4.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 20,
+        "vertex_count": 12,
+        "volume_mm3": 24000.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "constant connected L profile repeats through thickness",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Rear-ledger male fit coupon",
+      "mesh_id": "r9_rear_ledger_male_coupon",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          16.0,
+          30.0,
+          72.0
+        ],
+        "required_build_volume_mm": [
+          30.2,
+          44.2,
+          72.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "minimum_member_end_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            16.0,
+            30.0,
+            72.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "37c90998513db8545c5c307083985a725537fabc482687f88ed324a22b296496",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          16.0,
+          30.0,
+          72.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 28,
+        "vertex_count": 16,
+        "volume_mm3": 30528.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "full member end precedes the smaller tongue or lap section",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Rear-ledger female fit coupon",
+      "mesh_id": "r9_rear_ledger_female_coupon",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          16.0,
+          30.0,
+          60.0
+        ],
+        "required_build_volume_mm": [
+          30.2,
+          44.2,
+          60.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "closed_maximum_member_end_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            16.0,
+            30.0,
+            60.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "517ea7b1b8d40f4a0852ba6da884aee9ba833b32aa18af3704bcbb6977e1f7c5",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          16.0,
+          30.0,
+          60.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 28,
+        "vertex_count": 16,
+        "volume_mm3": 26748.543845,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "closed socket end precedes the cavity opening",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Front-beam lower-lap fit coupon",
+      "mesh_id": "r9_front_beam_lower_lap_coupon",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          16.0,
+          30.0,
+          76.0
+        ],
+        "required_build_volume_mm": [
+          30.2,
+          44.2,
+          76.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "minimum_member_end_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            16.0,
+            30.0,
+            76.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "bfaef95808b134b9d1f05a50268a0ba3a99c9956fcbda15c304823e149bd7eed",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          16.0,
+          30.0,
+          76.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 24,
+        "vertex_count": 14,
+        "volume_mm3": 32537.600098,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "full member end precedes the smaller tongue or lap section",
+      "support_required": false
+    },
+    {
+      "category": "support_corner_or_span_joint",
+      "label": "Front-beam upper-lap fit coupon",
+      "mesh_id": "r9_front_beam_upper_lap_coupon",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          16.0,
+          30.0,
+          76.0
+        ],
+        "required_build_volume_mm": [
+          30.2,
+          44.2,
+          76.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "maximum_member_end_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            16.0,
+            30.0,
+            76.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "35ecd8ae097860fd52cbfd30d22994e0d4a937406b7b27eefa20c9a8b8529610",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          16.0,
+          30.0,
+          76.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 24,
+        "vertex_count": 14,
+        "volume_mm3": 32537.600098,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "full member end precedes the smaller upper-lap section",
+      "support_required": false
+    },
+    {
+      "category": "cable_interface",
+      "label": "Two-socket cable-rail interface coupon",
+      "mesh_id": "r9_two_socket_outer_bookend_rail_fit_coupon",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          36.0,
+          62.0,
+          8.8
+        ],
+        "required_build_volume_mm": [
+          50.2,
+          76.2,
+          8.8
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "solid_back_web_on_plate_installed_xz_bed",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            36.0,
+            62.0,
+            8.8
+          ]
+        ],
+        "canonical_float32_triangle_digest": "2291a4fd85cd5b558cb5d1ae64051975e5fafaed36bbb3a8fbcb11951788f1ae",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          36.0,
+          62.0,
+          8.8
+        ],
+        "positive_volume": true,
+        "triangle_count": 160,
+        "vertex_count": 82,
+        "volume_mm3": 16989.568352,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every saved-layer component overlaps deposited material below",
+      "support_required": false
+    },
+    {
+      "category": "cable_interface",
+      "label": "Flush cable-rail blank module",
+      "mesh_id": "r9_flush_blank_cable_module",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          20.0,
+          9.2,
+          16.0
+        ],
+        "required_build_volume_mm": [
+          34.2,
+          23.4,
+          16.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "local_minimum_z_broad_side_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            9.2,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "00cd35a58ccd3e0e7c5c6912e9abdf6ca8e45d965d2a3abba434893f9a3e9c2e",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          20.0,
+          9.2,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 62,
+        "vertex_count": 33,
+        "volume_mm3": 1499.199934,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every saved-layer component overlaps deposited material below",
+      "support_required": false
+    },
+    {
+      "category": "cable_interface",
+      "label": "Three-position cable comb/hook module",
+      "mesh_id": "r9_multi_cable_comb_hook_module",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          28.0,
+          30.5,
+          16.0
+        ],
+        "required_build_volume_mm": [
+          42.2,
+          44.7,
+          16.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "local_minimum_z_broad_side_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            28.0,
+            30.5,
+            16.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "3de87e3cbe910088d2034c2b7e3dcf559daf986342eca0bec6953b7c4455873e",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          28.0,
+          30.5,
+          16.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 1738,
+        "vertex_count": 871,
+        "volume_mm3": 3758.709073,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every saved-layer component overlaps deposited material below",
+      "support_required": false
+    },
+    {
+      "category": "integral_bookend_receiver",
+      "label": "Through-run handed shortened bookend with integral two-socket receiver",
+      "mesh_id": "r9_through_outer_bookend_additive_two_socket_candidate",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          152.399994,
+          160.0,
+          36.0
+        ],
+        "required_build_volume_mm": [
+          166.599994,
+          174.2,
+          36.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "broad_run_side_additive_print_foot_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            160.0,
+            36.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "447f32bf7751aa2de9777e530cfe7d916f3986678b334fc831039dc3010e18c4",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          160.0,
+          36.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 260,
+        "vertex_count": 130,
+        "volume_mm3": 299815.161106,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every saved layer is connected; additive broad-face print foot provides the first-layer support field",
+      "support_required": false
+    },
+    {
+      "category": "integral_bookend_receiver",
+      "label": "Return-run handed shortened bookend with integral two-socket receiver",
+      "mesh_id": "r9_return_outer_bookend_additive_two_socket_candidate",
+      "print_envelope": {
+        "available_build_volume_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "raw_part_mm": [
+          152.399994,
+          160.0,
+          36.0
+        ],
+        "required_build_volume_mm": [
+          166.599994,
+          174.2,
+          36.0
+        ],
+        "reserve_per_bed_edge_mm": 2.0
+      },
+      "print_orientation": "broad_run_side_additive_print_foot_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            160.0,
+            36.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "511bc309a8a2c9b722eb026847c5421d1af9864805ed622780472e581441508e",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          160.0,
+          36.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 260,
+        "vertex_count": 130,
+        "volume_mm3": 299815.161106,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_evidence": "every saved layer is connected; additive broad-face print foot provides the first-layer support field",
+      "support_required": false
+    }
+  ],
+  "installed_release_allowed": false,
+  "integral_bookend_receiver_evidence": {
+    "endpoint_semantics": {
+      "mirrored_through_matches_return": true,
+      "reason": "The inherited keyed socket extension is asymmetric across the run; publish deterministic through/return mirrors, not one same-SKU claim.",
+      "return_mirrored_back_matches_through": true,
+      "return_part_name": "r9_return_outer_bookend_additive_two_socket_candidate",
+      "same_candidate_sku_both_endpoints": false,
+      "through_is_self_mirror_symmetric": false,
+      "through_part_name": "r9_through_outer_bookend_additive_two_socket_candidate"
+    },
+    "installed_clearance_qualified": false,
+    "rated_load_kg": 0.0,
+    "return_core_containment": {
+      "additive_only": true,
+      "additive_print_foot_volume_mm3": 20023.67999999999,
+      "endpoint": "return_outer",
+      "expected_overlap_volume_mm3": 793.6,
+      "mapped_rail_volume_mm3": 16989.568352340717,
+      "missing_source_core_volume_mm3": 0.0,
+      "positive_overlap_volume_mm3": 793.5992431640625,
+      "source_core_digest_after": "1637ec745f63bb6eeebaa156e38e55d6d493ae39c5faa4a2fda44cd0ef48f2a8",
+      "source_core_digest_before": "1637ec745f63bb6eeebaa156e38e55d6d493ae39c5faa4a2fda44cd0ef48f2a8",
+      "source_core_preserved": true,
+      "source_core_volume_mm3": 266982.4,
+      "union_volume_mm3": 299815.16110571293,
+      "volume_balance_error_mm3": 0.0022402190952561796
+    },
+    "through_core_containment": {
+      "additive_only": true,
+      "additive_print_foot_volume_mm3": 20023.679999999997,
+      "endpoint": "through_outer",
+      "expected_overlap_volume_mm3": 793.6,
+      "mapped_rail_volume_mm3": 16989.568352340717,
+      "missing_source_core_volume_mm3": 0.0,
+      "positive_overlap_volume_mm3": 793.5992431640625,
+      "source_core_digest_after": "6e42507415d78ad08dff90eee784bde379fb99f358fe9d6e02db53c4c46b4dfb",
+      "source_core_digest_before": "6e42507415d78ad08dff90eee784bde379fb99f358fe9d6e02db53c4c46b4dfb",
+      "source_core_preserved": true,
+      "source_core_volume_mm3": 266982.4,
+      "union_volume_mm3": 299815.16110571293,
+      "volume_balance_error_mm3": 0.0022402190370485187
+    },
+    "wall_attachment_authored": false
+  },
+  "load_rating_allowed": false,
+  "manual_support_and_brim_review_required": true,
+  "package_id": "r9_compact_bookend_petg_qualification_v4",
+  "physical_qualification_complete": false,
+  "printed_material": "PETG only",
+  "production_ready": false,
+  "qualification_only": true,
+  "r8_gate0_and_control_dependency": {
+    "gate0_print_order_mesh_ids": [
+      "r8_clearance_ladder_receiver",
+      "r8_clearance_key_0p5",
+      "r8_clearance_key_0p4",
+      "r8_clearance_key_0p3",
+      "r8_clearance_key_0p2"
+    ],
+    "manifest_path_from_r9_bundle": "../../../r8/generated/qualification_v2/manifest.json",
+    "manifest_sha256": "3d8d2f71b2957369ec3ad1581b246b0da46558e5e963107328b6d518ba6f83a6",
+    "matched_control_mesh_id": "r8_smooth_curved_core",
+    "package_id": "r8_16b_petg_qualification_v2",
+    "records": [
+      {
+        "bytes": 3776,
+        "canonical_float32_triangle_digest": "58596262de9677d180d4e3af7562abbedb410a7dacbeb3927d7c0360f0e29ffa",
+        "mesh_id": "r8_clearance_ladder_receiver",
+        "path_from_r9_bundle": "../../../r8/generated/qualification_v2/individual_model_only_3mf/MODEL_ONLY_r8_clearance_ladder_receiver.3mf",
+        "sha256": "8d11964f9f4ba58613f02fc24abb8950a6a0ecba2a5148187cf18e5a09a85d91"
+      },
+      {
+        "bytes": 1812,
+        "canonical_float32_triangle_digest": "b5c161e4ac436cc656eeb4c2a4026c14ccba4bb8cf0dbedabcd7ef9ae4646f88",
+        "mesh_id": "r8_clearance_key_0p5",
+        "path_from_r9_bundle": "../../../r8/generated/qualification_v2/individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p5.3mf",
+        "sha256": "74c087353909fdb5f80daa6f1273ff40cf63dd49c82d56766a84fc92ac16d61e"
+      },
+      {
+        "bytes": 1813,
+        "canonical_float32_triangle_digest": "7fb21c05a193853aa8d428fdf5ebae0c381487d2e024cdecbeb1723255858d9a",
+        "mesh_id": "r8_clearance_key_0p4",
+        "path_from_r9_bundle": "../../../r8/generated/qualification_v2/individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p4.3mf",
+        "sha256": "21d92528972d32131edab13e66b09e3a56b9df09884ef825ef87645bb98bc55a"
+      },
+      {
+        "bytes": 1830,
+        "canonical_float32_triangle_digest": "6b537b503e66242b7826de9758b4536a63306728a6045ad13dcac0e59ebdddd6",
+        "mesh_id": "r8_clearance_key_0p3",
+        "path_from_r9_bundle": "../../../r8/generated/qualification_v2/individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p3.3mf",
+        "sha256": "563c78e31c35c66561b6d7ec99add921afdfd0b10d79ca148cd30d2f3876af29"
+      },
+      {
+        "bytes": 1818,
+        "canonical_float32_triangle_digest": "71b46492e4249adbba1c7d08c24693054375725d77cff85af3836b20c30d047c",
+        "mesh_id": "r8_clearance_key_0p2",
+        "path_from_r9_bundle": "../../../r8/generated/qualification_v2/individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p2.3mf",
+        "sha256": "02bc27fcfc50a73efe05ada5d5418ca71107b3d380a14c42458d3fc08320ef3d"
+      },
+      {
+        "bytes": 3626,
+        "canonical_float32_triangle_digest": "40f732f4c2a4cae6693f3d8de501d2bba8a92cdc69f2423f10697e8d9ddda790",
+        "mesh_id": "r8_smooth_curved_core",
+        "path_from_r9_bundle": "../../../r8/generated/qualification_v2/individual_model_only_3mf/MODEL_ONLY_r8_smooth_curved_core.3mf",
+        "sha256": "acbc2fa13b7dc7efc57f2e93e5fa8c4a9d12ea82ce051df38eb9cc6e2e9a7201"
+      }
+    ]
+  },
+  "rated_load_kg": 0.0,
+  "rated_load_lb": 0.0,
+  "release_blockers": [
+    "field wall lengths are recorded, but exact installed station/end/corner geometry is unauthored",
+    "field corner angle, wall bow, outlet, trim, and service envelopes are unresolved",
+    "framing, blocking, substrate, hardware, pilot, embedment, and driver records are unresolved",
+    "compact-support ledger/front-beam one-bay interfaces are not authored",
+    "endpoint doorway, trim, cable-loop, snag, and installed service clearances are not qualified",
+    "full shelf and corner load paths are not authored or physically qualified",
+    "target load, proof, creep, recovery, and destructive tests are unresolved"
+  ],
+  "runtime_provenance": {
+    "boolean_engine": "manifold",
+    "distributions": [
+      {
+        "distribution": "numpy",
+        "exact_match": true,
+        "observed_version": "2.5.1",
+        "required_version": "2.5.1"
+      },
+      {
+        "distribution": "shapely",
+        "exact_match": true,
+        "observed_version": "2.1.2",
+        "required_version": "2.1.2"
+      },
+      {
+        "distribution": "trimesh",
+        "exact_match": true,
+        "observed_version": "5.0.0",
+        "required_version": "5.0.0"
+      },
+      {
+        "distribution": "manifold3d",
+        "exact_match": true,
+        "observed_version": "3.5.2",
+        "required_version": "3.5.2"
+      },
+      {
+        "distribution": "mapbox-earcut",
+        "exact_match": true,
+        "observed_version": "1.0.3",
+        "required_version": "1.0.3"
+      },
+      {
+        "distribution": "scipy",
+        "exact_match": true,
+        "observed_version": "1.18.0",
+        "required_version": "1.18.0"
+      },
+      {
+        "distribution": "networkx",
+        "exact_match": true,
+        "observed_version": "3.5",
+        "required_version": "3.5"
+      }
+    ],
+    "frozen_r8_model_writer_sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b",
+    "mesh_serialization": "canonical float32 triangles",
+    "neutral_model_only": true,
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "requirements_exactly_matched": true,
+    "requirements_path": "requirements.txt",
+    "requirements_sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+  },
+  "source_bundle": {
+    "algorithm": "sha256",
+    "bundle_sha256": "22a8ab52897dd5d1c422b58b5245d69aa46578c95ac014a0f39cd41b3ec776fd",
+    "records": [
+      {
+        "bytes": 110,
+        "path": "requirements.txt",
+        "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+      },
+      {
+        "bytes": 25019,
+        "path": "development/r8/model_io.py",
+        "sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b"
+      },
+      {
+        "bytes": 26961,
+        "path": "development/r8/generated/qualification_v2/manifest.json",
+        "sha256": "3d8d2f71b2957369ec3ad1581b246b0da46558e5e963107328b6d518ba6f83a6"
+      },
+      {
+        "bytes": 65502,
+        "path": "development/r8/generated/qualification_v2/validation.json",
+        "sha256": "8ca69d8045c45e16e1771eda11edf5ef24b003d3fc4af23ae2c7f6cee1eab434"
+      },
+      {
+        "bytes": 10792,
+        "path": "development/r9/config.json",
+        "sha256": "7e3021c2f514886abdcb9c7714e6eb925c0703390a7aa1ac79fe10f0920c6653"
+      },
+      {
+        "bytes": 1224,
+        "path": "development/r9/FROZEN_BASELINES.json",
+        "sha256": "4a29eaf0a4ae18a576fb9260326249214962d1e39e06ff293510c2d316297b83"
+      },
+      {
+        "bytes": 32955,
+        "path": "development/r9/design_math.py",
+        "sha256": "1832660b9dd7db2c3d3162c3aa72b9543fe67896f178098a0abc22dbb282f6cd"
+      },
+      {
+        "bytes": 2534,
+        "path": "development/r9/model_io.py",
+        "sha256": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5"
+      },
+      {
+        "bytes": 34451,
+        "path": "development/r9/support_geometry.py",
+        "sha256": "487a7cb0be5cfd2742dbbfc91cb440d1245ae7530c4fc6a4373a6ae2f424c964"
+      },
+      {
+        "bytes": 24162,
+        "path": "development/r9/cable_geometry.py",
+        "sha256": "e414b7bdeff0c0140f6621957f7d807ac291ce433d75a65e02ac6f5b5dd6a864"
+      },
+      {
+        "bytes": 20210,
+        "path": "development/r9/bookend_attachment.py",
+        "sha256": "66f8ae974fd5fc6ab21a1b95f31b7550ab691c3969a179d69b2e53525741ee7e"
+      },
+      {
+        "bytes": 29255,
+        "path": "development/r9/fixture_assembly.py",
+        "sha256": "d5e977544e18f05e32b5171d03ca68586dcd74bc24e95e979bdeec07f7accb81"
+      },
+      {
+        "bytes": 42736,
+        "path": "development/r9/generate_qualification.py",
+        "sha256": "d5247f8684927616805aca5c3c30db01fa6986908e1e96bbc7f0b4b0aea38713"
+      },
+      {
+        "bytes": 9403,
+        "path": "development/r9/README.md",
+        "sha256": "8c602c3a41350980c23943aa568bb9dcb5c2fe1b2fe94cf364240e521d13ba67"
+      },
+      {
+        "bytes": 13525,
+        "path": "development/r9/docs/PRINTER_KICKOFF.md",
+        "sha256": "1cadd36f7bcbe826c4ba517903548ba1b22672332facbe359a9818913888439e"
+      },
+      {
+        "bytes": 14751,
+        "path": "development/r9/docs/PRINT_FIRST.md",
+        "sha256": "6066a66500e0a8e556f05a8858931ae10863dfb576a177517856ce50bcbbb21c"
+      },
+      {
+        "bytes": 10601,
+        "path": "development/r9/docs/ASSEMBLY.md",
+        "sha256": "efcda732b814def1a3a6f410d58874034b85be04ae45ab066328c0d55bb5f517"
+      },
+      {
+        "bytes": 9934,
+        "path": "development/r9/docs/MEASUREMENT_WORKSHEET.md",
+        "sha256": "af091a8de51b43b7517bba9a20f72d438e1fe24cfc9e6528006ad599d04cf24e"
+      },
+      {
+        "bytes": 14688,
+        "path": "development/r9/docs/TEST_PROTOCOL.md",
+        "sha256": "a93cfe6c05e0f09302f8fa614401cea3631b333cc99df2c2777bc68dd4256b88"
+      }
+    ]
+  },
+  "topology": {
+    "cable_rails_per_level": 2,
+    "cable_sockets_per_level": 4,
+    "hidden_corner_halves_per_level": 2,
+    "levels": 2,
+    "ordinary_compact_supports_per_level": 4,
+    "outer_feature_columns_per_level": 2,
+    "run_local_datums": [
+      {
+        "coordinate_datum": "far-left outer wall end",
+        "coordinate_scope": "run-local qualification scaffold; not an R8 global or field drilling datum",
+        "positive_direction": "toward the inside corner",
+        "run_id": "through"
+      },
+      {
+        "coordinate_datum": "inside corner",
+        "coordinate_scope": "run-local qualification scaffold; not an R8 global or field drilling datum",
+        "positive_direction": "toward the far-right outer wall end",
+        "run_id": "return"
+      }
+    ],
+    "structural_stations_per_level": 8,
+    "visible_inside_corner_columns_per_level": 0,
+    "visible_supports_per_level": 6
+  },
+  "unsliced": true,
+  "wall_bores_present": false
+}

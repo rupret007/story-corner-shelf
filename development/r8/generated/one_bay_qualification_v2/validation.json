@@ -1,0 +1,1159 @@
+{
+  "all_candidate_orientations_fit_a1_mini": true,
+  "all_serialized_parts_watertight_one_body_positive": true,
+  "artifact_config_identity": {
+    "algorithm": "sha256",
+    "canonical_json_sha256": "56ce54aa078ff728efb7d989f5844d62bcf4e2e456bd7166f29e74868220e402",
+    "contract_id": "r8_16b_petg_artifact_config_v2",
+    "exact_match": true
+  },
+  "combined_catalog_is_single_a1_mini_plate": false,
+  "combined_neutral_3mf_count": 1,
+  "combined_package": {
+    "catalog_extent_mm": [
+      507.199249,
+      281.399994,
+      152.399994
+    ],
+    "neutral_model_checks": {
+      "all_source_meshes_closed_one_body_positive": true,
+      "canonical_zip_metadata": true,
+      "content_types_exact": true,
+      "core_namespace_only": true,
+      "each_mesh_built_once_translation_only": true,
+      "entry_names_unique": true,
+      "entry_order_exact": true,
+      "mesh_object_shape_exact": true,
+      "metadata_exact": true,
+      "model_root_exact": true,
+      "no_components_or_extensions": true,
+      "no_slicer_gcode_or_toolpath_entries": true,
+      "petg_material_exact": true,
+      "relationships_exact": true,
+      "resource_shape_exact": true,
+      "zip_crc_ok": true
+    },
+    "object_names_in_order": [
+      "r8_one_bay_registered_cassette",
+      "r8_one_bay_left_rail_ready_locator_d_frame",
+      "r8_one_bay_right_smooth_locator_seated_keeper_d_frame",
+      "r8_one_bay_mounted_rail",
+      "r8_one_bay_retained_blank"
+    ],
+    "object_order_readback_exact": true,
+    "path": "model_only_3mf/MODEL_ONLY_R8_ONE_BAY_QUALIFICATION_CATALOG.3mf",
+    "readback_object_names_in_order": [
+      "r8_one_bay_registered_cassette",
+      "r8_one_bay_left_rail_ready_locator_d_frame",
+      "r8_one_bay_right_smooth_locator_seated_keeper_d_frame",
+      "r8_one_bay_mounted_rail",
+      "r8_one_bay_retained_blank"
+    ],
+    "readback_translations_mm": {
+      "r8_one_bay_left_rail_ready_locator_d_frame": [
+        171.999237,
+        10.0,
+        0.0
+      ],
+      "r8_one_bay_mounted_rail": [
+        10.0,
+        183.399994,
+        0.0
+      ],
+      "r8_one_bay_registered_cassette": [
+        10.0,
+        10.0,
+        0.0
+      ],
+      "r8_one_bay_retained_blank": [
+        56.0,
+        183.399994,
+        0.0
+      ],
+      "r8_one_bay_right_smooth_locator_seated_keeper_d_frame": [
+        339.599243,
+        10.0,
+        0.0
+      ]
+    },
+    "single_plate_claim": false,
+    "translations_mm": {
+      "r8_one_bay_left_rail_ready_locator_d_frame": [
+        171.999237,
+        10.0,
+        0.0
+      ],
+      "r8_one_bay_mounted_rail": [
+        10.0,
+        183.399994,
+        0.0
+      ],
+      "r8_one_bay_registered_cassette": [
+        10.0,
+        10.0,
+        0.0
+      ],
+      "r8_one_bay_retained_blank": [
+        56.0,
+        183.399994,
+        0.0
+      ],
+      "r8_one_bay_right_smooth_locator_seated_keeper_d_frame": [
+        339.599243,
+        10.0,
+        0.0
+      ]
+    },
+    "translations_readback_exact": true
+  },
+  "embedded_print_profile_present": false,
+  "embedded_toolpath_file_count": 0,
+  "generated_gcode_present": false,
+  "individual_neutral_3mf_count": 5,
+  "individual_stl_count": 5,
+  "installed_scene_evidence": {
+    "all_installed_scene_evidence_passed": true,
+    "bearing_contact_datums": [
+      {
+        "cap_overlap_width_mm": 15.825,
+        "cap_x_bounds_mm": [
+          -16.175,
+          15.825
+        ],
+        "cassette_overlap_x_bounds_mm": [
+          0.0,
+          15.825
+        ],
+        "contact_z_mm": 160.0,
+        "net_cap_contact_area_mm2": 2360.53,
+        "net_selected_land_contact_area_mm2": 924.1600000000001,
+        "pocket_plan_area_mm2": 51.2,
+        "selected_end_land_width_mm": 6.4,
+        "side": "left",
+        "support_center_x_mm": -0.175
+      },
+      {
+        "cap_overlap_width_mm": 15.825,
+        "cap_x_bounds_mm": [
+          169.13437499999998,
+          201.13437499999998
+        ],
+        "cassette_overlap_x_bounds_mm": [
+          169.13437499999998,
+          184.95937499999997
+        ],
+        "contact_z_mm": 160.0,
+        "net_cap_contact_area_mm2": 2360.53,
+        "net_selected_land_contact_area_mm2": 924.1600000000001,
+        "pocket_plan_area_mm2": 51.2,
+        "selected_end_land_width_mm": 6.4,
+        "side": "right",
+        "support_center_x_mm": 185.13437499999998
+      }
+    ],
+    "bearing_contacts_passed": true,
+    "boolean_engine": "manifold",
+    "collision_numeric_tolerance_mm3": 3e-05,
+    "evidence_source": "development/r8/assembly_geometry.py",
+    "keeper_retention": {
+      "blocking_lift_mm": 0.8,
+      "blocking_positive_overlap_mm3": 1.279960938,
+      "contact_lift_mm": 0.4,
+      "contact_positive_overlap_mm3": 0.0,
+      "seated_blocks_and_deflected_service_clears": true,
+      "strain_proxy": {
+        "arm_length_mm": 10.0,
+        "arm_thickness_mm": 1.0,
+        "below_three_percent": true,
+        "surface_strain": 0.027000000000000003,
+        "tip_deflection_mm": 1.8
+      }
+    },
+    "nominal_five_part_pairwise_boolean": {
+      "all_pairs_clear_within_numeric_tolerance": true,
+      "pair_count": 10,
+      "records": [
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "registered_cassette",
+          "positive_overlap_mm3": 0.0,
+          "second": "left_rail_ready_support"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "registered_cassette",
+          "positive_overlap_mm3": 0.0,
+          "second": "right_keeper_support"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "registered_cassette",
+          "positive_overlap_mm3": 0.0,
+          "second": "mounted_rail"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "registered_cassette",
+          "positive_overlap_mm3": 0.0,
+          "second": "retained_blank"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "left_rail_ready_support",
+          "positive_overlap_mm3": 0.0,
+          "second": "right_keeper_support"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "left_rail_ready_support",
+          "positive_overlap_mm3": 0.0,
+          "second": "mounted_rail"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "left_rail_ready_support",
+          "positive_overlap_mm3": 0.0,
+          "second": "retained_blank"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "right_keeper_support",
+          "positive_overlap_mm3": 0.0,
+          "second": "mounted_rail"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "right_keeper_support",
+          "positive_overlap_mm3": 0.0,
+          "second": "retained_blank"
+        },
+        {
+          "clear_within_numeric_tolerance": true,
+          "first": "mounted_rail",
+          "positive_overlap_mm3": 0.0,
+          "second": "retained_blank"
+        }
+      ]
+    },
+    "registration_clearance_fail_closed": {
+      "axes": [
+        {
+          "accepted_offset_mm": 0.4,
+          "accepted_positive_overlap_mm3": 0.0,
+          "axis": "x",
+          "fail_closed": true,
+          "rejected_offset_mm": 0.8,
+          "rejected_positive_overlap_mm3": 9.983913777
+        },
+        {
+          "accepted_offset_mm": 0.4,
+          "accepted_positive_overlap_mm3": 2.4414e-05,
+          "axis": "y",
+          "fail_closed": true,
+          "rejected_offset_mm": 0.8,
+          "rejected_positive_overlap_mm3": 4.479974432
+        }
+      ],
+      "clearance_per_face_mm": 0.4,
+      "passed": true,
+      "remaining_bottom_skin_mm": 1.0
+    },
+    "service_evidence": {
+      "cassette": {
+        "all_phases_clear": true,
+        "increment_mm": 0.2,
+        "lift_mm": 2.0,
+        "phases": [
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "installation_with_keeper_deflected",
+            "station_count": 11
+          },
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "removal_with_keeper_deflected",
+            "station_count": 11
+          }
+        ]
+      },
+      "rail": {
+        "all_phases_clear": true,
+        "increment_mm": 0.4,
+        "module_removal_required_first": true,
+        "phases": [
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "approach",
+            "station_count": 7
+          },
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "drop",
+            "station_count": 11
+          },
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "reverse_lift",
+            "station_count": 11
+          },
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "reverse_outward",
+            "station_count": 7
+          }
+        ],
+        "unauthorized_pull_fail_closed": true,
+        "unauthorized_pull_without_lift_overlap_mm3": 8.639985352
+      },
+      "retained_blank": {
+        "all_phases_clear": true,
+        "increment_mm": 0.4,
+        "phases": [
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "approach",
+            "station_count": 17
+          },
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "drop",
+            "station_count": 21
+          },
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "reverse_lift",
+            "station_count": 21
+          },
+          {
+            "clear_within_numeric_tolerance": true,
+            "maximum_at": null,
+            "maximum_positive_overlap_mm3": 0.0,
+            "phase": "reverse_outward",
+            "station_count": 17
+          }
+        ]
+      },
+      "safe_order": {
+        "installation": [
+          "hold right keeper deflected",
+          "lower registered cassette through full 2.0 mm clear approach",
+          "release keeper to seated state",
+          "mount empty rail through approach and 4.0 mm drop",
+          "install retained blank through entry, 8.0 mm drop, and latch"
+        ],
+        "removal": [
+          "release and remove retained blank",
+          "lift and remove empty rail",
+          "hold right keeper deflected",
+          "lift cassette 2.0 mm and remove"
+        ]
+      }
+    },
+    "structural_core_preservation": {
+      "all_cores_preserved_additions_only": true,
+      "keeper_structural_credit": false,
+      "records": [
+        {
+          "body_volume_mm3": 279218.854356,
+          "core_preserved_additions_only": true,
+          "core_retained_overlap_mm3": 278884.058429027,
+          "frozen_core_digest": "ce56f254d73dcc4a7cdbac45189b65616477149a22b6d60f9d0f0b92f4609bda",
+          "installed_core_volume_mm3": 278884.06674,
+          "rail_mount_boss_count": 4,
+          "restored_core_digest": "ce56f254d73dcc4a7cdbac45189b65616477149a22b6d60f9d0f0b92f4609bda",
+          "side": "interior",
+          "source_core_digest": "ce56f254d73dcc4a7cdbac45189b65616477149a22b6d60f9d0f0b92f4609bda"
+        },
+        {
+          "body_volume_mm3": 279088.766689,
+          "core_preserved_additions_only": true,
+          "core_retained_overlap_mm3": 278884.066740419,
+          "frozen_core_digest": "ce56f254d73dcc4a7cdbac45189b65616477149a22b6d60f9d0f0b92f4609bda",
+          "installed_core_volume_mm3": 278884.06674,
+          "rail_mount_boss_count": 0,
+          "restored_core_digest": "ce56f254d73dcc4a7cdbac45189b65616477149a22b6d60f9d0f0b92f4609bda",
+          "side": "interior",
+          "source_core_digest": "ce56f254d73dcc4a7cdbac45189b65616477149a22b6d60f9d0f0b92f4609bda"
+        }
+      ],
+      "registration_structural_credit": false
+    }
+  },
+  "manual_support_and_brim_review_required": true,
+  "material": "PETG only",
+  "package_id": "r8_16b_petg_one_bay_qualification_v2",
+  "parts": [
+    {
+      "a1_mini_candidate_envelope": {
+        "additional_edge_reserve_each_side_mm": 2.0,
+        "available_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "part_mm": [
+          151.999237,
+          151.999237,
+          152.399994
+        ],
+        "required_with_brim_and_reserved_edges_mm": [
+          166.199237,
+          166.199237,
+          152.399994
+        ]
+      },
+      "individual_3mf_neutral_checks": {
+        "all_source_meshes_closed_one_body_positive": true,
+        "canonical_zip_metadata": true,
+        "content_types_exact": true,
+        "core_namespace_only": true,
+        "each_mesh_built_once_translation_only": true,
+        "entry_names_unique": true,
+        "entry_order_exact": true,
+        "mesh_object_shape_exact": true,
+        "metadata_exact": true,
+        "model_root_exact": true,
+        "no_components_or_extensions": true,
+        "no_slicer_gcode_or_toolpath_entries": true,
+        "petg_material_exact": true,
+        "relationships_exact": true,
+        "resource_shape_exact": true,
+        "zip_crc_ok": true
+      },
+      "individual_3mf_path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_registered_cassette.3mf",
+      "label": "Registered one-bay front-first U-box cassette",
+      "mesh_id": "r8_one_bay_registered_cassette",
+      "print_orientation": "visible front face down with frozen 45 degree bed yaw",
+      "saved_layer_support_evidence": {
+        "all_layers_supported": true,
+        "first_layer_body_contact_area_mm2": 5539.182498593469,
+        "island_layer_indices": [],
+        "layer_height_mm": 0.2,
+        "sampled_layer_count": 762,
+        "support_classification": "support_free",
+        "support_evidence": "every saved-layer component overlaps deposited material below",
+        "support_required": false
+      },
+      "scale_percent": 100.0,
+      "serialized_geometry_digests": {
+        "combined_3mf": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d",
+        "individual_3mf": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d",
+        "source_float32": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d",
+        "stl": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d"
+      },
+      "serialized_geometry_evidence": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            151.999237,
+            151.999237,
+            152.399994
+          ]
+        ],
+        "canonical_float32_triangle_digest": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          151.999237,
+          151.999237,
+          152.399994
+        ],
+        "positive_volume": true,
+        "triangle_count": 142,
+        "vertex_count": 73,
+        "volume_mm3": 248168.333859,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "stl_path": "stl/r8_one_bay_registered_cassette.stl"
+    },
+    {
+      "a1_mini_candidate_envelope": {
+        "additional_edge_reserve_each_side_mm": 2.0,
+        "available_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "part_mm": [
+          157.600006,
+          163.399994,
+          32.0
+        ],
+        "required_with_brim_and_reserved_edges_mm": [
+          171.800006,
+          177.599994,
+          32.0
+        ]
+      },
+      "individual_3mf_neutral_checks": {
+        "all_source_meshes_closed_one_body_positive": true,
+        "canonical_zip_metadata": true,
+        "content_types_exact": true,
+        "core_namespace_only": true,
+        "each_mesh_built_once_translation_only": true,
+        "entry_names_unique": true,
+        "entry_order_exact": true,
+        "mesh_object_shape_exact": true,
+        "metadata_exact": true,
+        "model_root_exact": true,
+        "no_components_or_extensions": true,
+        "no_slicer_gcode_or_toolpath_entries": true,
+        "petg_material_exact": true,
+        "relationships_exact": true,
+        "resource_shape_exact": true,
+        "zip_crc_ok": true
+      },
+      "individual_3mf_path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_left_rail_ready_locator_d_frame.3mf",
+      "label": "Left rail-ready locator D-frame",
+      "mesh_id": "r8_one_bay_left_rail_ready_locator_d_frame",
+      "print_orientation": "broad run-side face down; installed Y/Z mapped to bed X/Y",
+      "saved_layer_support_evidence": {
+        "all_layers_supported": true,
+        "first_layer_body_contact_area_mm2": 8723.12707800871,
+        "island_layer_indices": [],
+        "layer_height_mm": 0.2,
+        "sampled_layer_count": 160,
+        "support_classification": "support_free",
+        "support_evidence": "every saved-layer component overlaps deposited material below",
+        "support_required": false
+      },
+      "scale_percent": 100.0,
+      "serialized_geometry_digests": {
+        "combined_3mf": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11",
+        "individual_3mf": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11",
+        "source_float32": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11",
+        "stl": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11"
+      },
+      "serialized_geometry_evidence": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            157.600006,
+            163.399994,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          157.600006,
+          163.399994,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 504,
+        "vertex_count": 252,
+        "volume_mm3": 279218.862666,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "stl_path": "stl/r8_one_bay_left_rail_ready_locator_d_frame.stl"
+    },
+    {
+      "a1_mini_candidate_envelope": {
+        "additional_edge_reserve_each_side_mm": 2.0,
+        "available_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "part_mm": [
+          157.600006,
+          163.399994,
+          32.0
+        ],
+        "required_with_brim_and_reserved_edges_mm": [
+          171.800006,
+          177.599994,
+          32.0
+        ]
+      },
+      "individual_3mf_neutral_checks": {
+        "all_source_meshes_closed_one_body_positive": true,
+        "canonical_zip_metadata": true,
+        "content_types_exact": true,
+        "core_namespace_only": true,
+        "each_mesh_built_once_translation_only": true,
+        "entry_names_unique": true,
+        "entry_order_exact": true,
+        "mesh_object_shape_exact": true,
+        "metadata_exact": true,
+        "model_root_exact": true,
+        "no_components_or_extensions": true,
+        "no_slicer_gcode_or_toolpath_entries": true,
+        "petg_material_exact": true,
+        "relationships_exact": true,
+        "resource_shape_exact": true,
+        "zip_crc_ok": true
+      },
+      "individual_3mf_path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_right_smooth_locator_seated_keeper_d_frame.3mf",
+      "label": "Right smooth locator plus seated keeper D-frame",
+      "mesh_id": "r8_one_bay_right_smooth_locator_seated_keeper_d_frame",
+      "print_orientation": "broad run-side face down; installed Y/Z mapped to bed X/Y",
+      "saved_layer_support_evidence": {
+        "all_layers_supported": true,
+        "first_layer_body_contact_area_mm2": 8715.127085638107,
+        "island_layer_indices": [],
+        "layer_height_mm": 0.2,
+        "sampled_layer_count": 160,
+        "support_classification": "support_free",
+        "support_evidence": "every saved-layer component overlaps deposited material below",
+        "support_required": false
+      },
+      "scale_percent": 100.0,
+      "serialized_geometry_digests": {
+        "combined_3mf": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df",
+        "individual_3mf": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df",
+        "source_float32": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df",
+        "stl": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df"
+      },
+      "serialized_geometry_evidence": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            157.600006,
+            163.399994,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          157.600006,
+          163.399994,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 344,
+        "vertex_count": 172,
+        "volume_mm3": 279088.766689,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "stl_path": "stl/r8_one_bay_right_smooth_locator_seated_keeper_d_frame.stl"
+    },
+    {
+      "a1_mini_candidate_envelope": {
+        "additional_edge_reserve_each_side_mm": 0.0,
+        "available_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "part_mm": [
+          36.0,
+          88.0,
+          8.8
+        ],
+        "required_with_brim_and_reserved_edges_mm": [
+          46.2,
+          98.2,
+          8.8
+        ]
+      },
+      "individual_3mf_neutral_checks": {
+        "all_source_meshes_closed_one_body_positive": true,
+        "canonical_zip_metadata": true,
+        "content_types_exact": true,
+        "core_namespace_only": true,
+        "each_mesh_built_once_translation_only": true,
+        "entry_names_unique": true,
+        "entry_order_exact": true,
+        "mesh_object_shape_exact": true,
+        "metadata_exact": true,
+        "model_root_exact": true,
+        "no_components_or_extensions": true,
+        "no_slicer_gcode_or_toolpath_entries": true,
+        "petg_material_exact": true,
+        "relationships_exact": true,
+        "resource_shape_exact": true,
+        "zip_crc_ok": true
+      },
+      "individual_3mf_path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_mounted_rail.3mf",
+      "label": "Mounted three-station retention rail",
+      "mesh_id": "r8_one_bay_mounted_rail",
+      "print_orientation": "broad rear face down; installed X/Z mapped to bed X/Y",
+      "saved_layer_support_evidence": {
+        "all_layers_supported": true,
+        "first_layer_body_contact_area_mm2": 3006.319955472942,
+        "island_layer_indices": [],
+        "layer_height_mm": 0.2,
+        "sampled_layer_count": 45,
+        "support_classification": "support_free",
+        "support_evidence": "every saved-layer component overlaps deposited material below",
+        "support_required": false
+      },
+      "scale_percent": 100.0,
+      "serialized_geometry_digests": {
+        "combined_3mf": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551",
+        "individual_3mf": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551",
+        "source_float32": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551",
+        "stl": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551"
+      },
+      "serialized_geometry_evidence": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            36.0,
+            88.0,
+            8.8
+          ]
+        ],
+        "canonical_float32_triangle_digest": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          36.0,
+          88.0,
+          8.8
+        ],
+        "positive_volume": true,
+        "triangle_count": 484,
+        "vertex_count": 244,
+        "volume_mm3": 23409.360048,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "stl_path": "stl/r8_one_bay_mounted_rail.stl"
+    },
+    {
+      "a1_mini_candidate_envelope": {
+        "additional_edge_reserve_each_side_mm": 0.0,
+        "available_mm": [
+          180.0,
+          180.0,
+          180.0
+        ],
+        "brim_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "fits": true,
+        "part_mm": [
+          22.4,
+          11.7,
+          27.4
+        ],
+        "required_with_brim_and_reserved_edges_mm": [
+          32.6,
+          21.9,
+          27.4
+        ]
+      },
+      "individual_3mf_neutral_checks": {
+        "all_source_meshes_closed_one_body_positive": true,
+        "canonical_zip_metadata": true,
+        "content_types_exact": true,
+        "core_namespace_only": true,
+        "each_mesh_built_once_translation_only": true,
+        "entry_names_unique": true,
+        "entry_order_exact": true,
+        "mesh_object_shape_exact": true,
+        "metadata_exact": true,
+        "model_root_exact": true,
+        "no_components_or_extensions": true,
+        "no_slicer_gcode_or_toolpath_entries": true,
+        "petg_material_exact": true,
+        "relationships_exact": true,
+        "resource_shape_exact": true,
+        "zip_crc_ok": true
+      },
+      "individual_3mf_path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_retained_blank.3mf",
+      "label": "Retained blank module",
+      "mesh_id": "r8_one_bay_retained_blank",
+      "print_orientation": "local XY on bed; 180 degree X flip; local negative Z builds upward",
+      "saved_layer_support_evidence": {
+        "all_layers_supported": true,
+        "first_layer_body_contact_area_mm2": 64.00000095367432,
+        "island_layer_indices": [],
+        "layer_height_mm": 0.2,
+        "sampled_layer_count": 137,
+        "support_classification": "support_free",
+        "support_evidence": "every saved-layer component overlaps deposited material below",
+        "support_required": false
+      },
+      "scale_percent": 100.0,
+      "serialized_geometry_digests": {
+        "combined_3mf": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+        "individual_3mf": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+        "source_float32": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+        "stl": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5"
+      },
+      "serialized_geometry_evidence": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            22.4,
+            11.7,
+            27.4
+          ]
+        ],
+        "canonical_float32_triangle_digest": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          22.4,
+          11.7,
+          27.4
+        ],
+        "positive_volume": true,
+        "triangle_count": 148,
+        "vertex_count": 76,
+        "volume_mm3": 1568.040032,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "stl_path": "stl/r8_one_bay_retained_blank.stl"
+    }
+  ],
+  "petg_a1_mini_candidate_settings": {
+    "bottom_shell_layers": 3,
+    "brim_mm": 5.0,
+    "brim_object_gap_mm": 0.1,
+    "build_volume_mm": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "drying_dryer_limit_controls": true,
+    "drying_duration_range_h": [
+      6.0,
+      8.0
+    ],
+    "drying_guidance_source_url": "https://store.sunlu.com/products/over-6kg-bundle-sale-petg-3d-printer-filament-1-75mm-1kg-roll",
+    "drying_never_exceed_lower_stated_limit": true,
+    "drying_received_spool_label_controls": true,
+    "drying_record_required": true,
+    "drying_temperature_range_c": [
+      50.0,
+      50.0
+    ],
+    "fan_percent_range": [
+      10,
+      30
+    ],
+    "filament": "SUNLU PETG black",
+    "filament_asin": "B0D1KC72YP",
+    "filament_color": "black",
+    "filament_manufacturer": "SUNLU",
+    "filament_preset": "SUNLU PETG @BBL A1M 0.4 nozzle",
+    "filament_product": "PETG",
+    "filament_product_url": "https://www.amazon.com/dp/B0D1KC72YP?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1",
+    "filament_selected_variant": "4 kg bundle; 2 Black + 2 Black (four 1 kg black spools); 1.75 mm +/-0.02 mm",
+    "first_layer_nozzle_temperature_c": 250.0,
+    "flow_ratio": 0.94,
+    "infill_pattern": "grid",
+    "infill_percent": 25,
+    "layer_height_mm": 0.2,
+    "material": "PETG only",
+    "maximum_volumetric_speed_mm3_s": 9.0,
+    "nozzle_mm": 0.4,
+    "other_layer_nozzle_temperature_c": 245.0,
+    "overhang_fan_percent": 90,
+    "printer": "Bambu Lab A1 mini",
+    "profile_embedded": false,
+    "scale_percent": 100.0,
+    "status": "candidate values for manual Bambu Studio entry and review",
+    "support_and_brim_review_required": true,
+    "textured_pei_bed_temperature_c": 60.0,
+    "top_shell_layers": 5,
+    "wall_loops": 6
+  },
+  "physical_test_requirements": [
+    "Prior 0.4 mm per-face receiver/key clearance coupon must pass.",
+    "Record PETG lot, drying cycle, flow calibration, dimensions, and warp.",
+    "Dry-fit both locator keys and verify full bearing without rocking.",
+    "Cycle cassette installation/removal with the keeper deflected.",
+    "Cycle seated keeper retention and inspect for whitening, cracks, or set.",
+    "Cycle blank latch and empty-rail install/removal in the safe order.",
+    "Run approved thermal, creep, proof-load, and destructive protocols later.",
+    "Do not infer a shelf load rating from this one-bay fit qualification."
+  ],
+  "printer_candidate": "Bambu Lab A1 mini",
+  "prior_clearance_qualification": {
+    "clearance_v2_geometry_contract": {
+      "canonical_float32_triangle_digests": {
+        "r8_clearance_key_0p2": "71b46492e4249adbba1c7d08c24693054375725d77cff85af3836b20c30d047c",
+        "r8_clearance_key_0p3": "6b537b503e66242b7826de9758b4536a63306728a6045ad13dcac0e59ebdddd6",
+        "r8_clearance_key_0p4": "7fb21c05a193853aa8d428fdf5ebae0c381487d2e024cdecbeb1723255858d9a",
+        "r8_clearance_key_0p5": "b5c161e4ac436cc656eeb4c2a4026c14ccba4bb8cf0dbedabcd7ef9ae4646f88",
+        "r8_clearance_ladder_receiver": "58596262de9677d180d4e3af7562abbedb410a7dacbeb3927d7c0360f0e29ffa"
+      },
+      "clearance_per_face_mm_in_order": [
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "contract_version": 1,
+      "mesh_ids_in_order": [
+        "r8_clearance_ladder_receiver",
+        "r8_clearance_key_0p2",
+        "r8_clearance_key_0p3",
+        "r8_clearance_key_0p4",
+        "r8_clearance_key_0p5"
+      ],
+      "source_package_id": "r8_16b_petg_qualification_v2"
+    },
+    "coupon_included_in_this_bundle": false,
+    "required": true,
+    "required_clearance_per_face_mm": 0.4,
+    "source_contract_without_checked_output_dependency": true,
+    "source_package_id": "r8_16b_petg_qualification_v2"
+  },
+  "qualification_object_count": 5,
+  "qualification_only": true,
+  "release_state": {
+    "installed_release_allowed": false,
+    "load_rating_allowed": false,
+    "physical_qualification_complete": false,
+    "print_profile_released": false,
+    "production_ready": false,
+    "rated_load_kg": 0.0,
+    "rated_load_lb": 0.0,
+    "wall_bores_emitted": false
+  },
+  "retained_blank_cross_bundle_contract": {
+    "exact_match": true,
+    "general_v2_canonical_float32_triangle_digest": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+    "general_v2_package_id": "r8_16b_petg_qualification_v2",
+    "installed_scene_copy_canonical_float32_triangle_digest": "e91594cf97ff519dd7b52a09b9ffd948a28b3182735c2dcee108fa6118d497a0",
+    "installed_scene_copy_used_only_for_scene_evidence": true,
+    "one_bay_printable_canonical_float32_triangle_digest": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5"
+  },
+  "runtime_provenance": {
+    "boolean_engine": "manifold",
+    "distributions": [
+      {
+        "distribution": "numpy",
+        "exact_match": true,
+        "observed_version": "2.5.1",
+        "required_version": "2.5.1"
+      },
+      {
+        "distribution": "shapely",
+        "exact_match": true,
+        "observed_version": "2.1.2",
+        "required_version": "2.1.2"
+      },
+      {
+        "distribution": "trimesh",
+        "exact_match": true,
+        "observed_version": "5.0.0",
+        "required_version": "5.0.0"
+      },
+      {
+        "distribution": "manifold3d",
+        "exact_match": true,
+        "observed_version": "3.5.2",
+        "required_version": "3.5.2"
+      },
+      {
+        "distribution": "mapbox-earcut",
+        "exact_match": true,
+        "observed_version": "1.0.3",
+        "required_version": "1.0.3"
+      },
+      {
+        "distribution": "scipy",
+        "exact_match": true,
+        "observed_version": "1.18.0",
+        "required_version": "1.18.0"
+      },
+      {
+        "distribution": "networkx",
+        "exact_match": true,
+        "observed_version": "3.5",
+        "required_version": "3.5"
+      }
+    ],
+    "mesh_serialization": "canonical float32 triangles",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "requirements_exactly_matched": true,
+    "requirements_path": "requirements.txt",
+    "requirements_sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+  },
+  "saved_orientation_support_contracts_passed": true,
+  "scale_percent": 100.0,
+  "schema_version": 1,
+  "serialized_stl_individual_3mf_combined_bijection": true,
+  "source_sha_bundle": {
+    "algorithm": "sha256",
+    "bundle_sha256": "ff3ed6540421f3ca3dd11f57f9878288666494960f59149ca6587e9e958f6895",
+    "records": [
+      {
+        "bytes": 110,
+        "path": "requirements.txt",
+        "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+      },
+      {
+        "bytes": 7565,
+        "path": "development/r8/config.json",
+        "sha256": "e744f2a844bf22712e5f3ac0eaaeb9716340b819703d9fb80d9e1b422399df75"
+      },
+      {
+        "bytes": 952,
+        "path": "development/r8/FROZEN_BASELINES.json",
+        "sha256": "703b19b3116b57aeb864740d95e2cd30213c14e33d26afcf80683990d646696c"
+      },
+      {
+        "bytes": 16956,
+        "path": "development/r8/design_math.py",
+        "sha256": "0f768df435717c290c6552d1560c60447fb4929a1a6d5f789dff14949fe8fd79"
+      },
+      {
+        "bytes": 25572,
+        "path": "development/r8/shelf_geometry.py",
+        "sha256": "4969cf50377071597f0af3c92568fae308f372361bf78e51e9ca3d2c0d112751"
+      },
+      {
+        "bytes": 20833,
+        "path": "development/r8/accessory_geometry.py",
+        "sha256": "9462c315d4d934b41254488f8fc082ff6a4bb678036caba407bbada08d665e46"
+      },
+      {
+        "bytes": 30351,
+        "path": "development/r8/interface_geometry.py",
+        "sha256": "3e2569a5f5701f007dac9bedde488243a13cf2db9233719cfe56936fdd237c38"
+      },
+      {
+        "bytes": 40266,
+        "path": "development/r8/assembly_geometry.py",
+        "sha256": "ed11b5fa90f812d84fa0d0d171ea9c088d1b1d86652098a844edb3dc0e0b5058"
+      },
+      {
+        "bytes": 25019,
+        "path": "development/r8/model_io.py",
+        "sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b"
+      },
+      {
+        "bytes": 86403,
+        "path": "development/r8/production_plan.py",
+        "sha256": "64075278213db931fef84249fbff5dfa64246167887fdcce6e525b3f7c9c291f"
+      },
+      {
+        "bytes": 49009,
+        "path": "development/r8/generate_qualification.py",
+        "sha256": "c1b37a5538fe0ec720ff46f112ad6b393c0c45bd6557aae7857dc71b275fbedf"
+      },
+      {
+        "bytes": 49954,
+        "path": "development/r8/generate_one_bay_qualification.py",
+        "sha256": "3ca80781c24f4c6cea2a3450c597a501208aa959da530989878a791b75f6c0b7"
+      }
+    ]
+  },
+  "support_required_part_ids": [],
+  "unresolved_blockers": [
+    "project.qualification_only",
+    "project.installed_release_allowed",
+    "project.physical_qualification_complete",
+    "project.production_ready",
+    "project.load_rating_allowed",
+    "project.tested_load_rating_exists",
+    "project.wall_bores_emitted",
+    "project.zero_rated_load",
+    "unresolved_inputs.wall.allowable_anchor_loads",
+    "unresolved_inputs.wall.blocking_locations_mm",
+    "unresolved_inputs.wall.construction",
+    "unresolved_inputs.wall.framing_material_and_grade",
+    "unresolved_inputs.wall.stud_center_locations_mm",
+    "unresolved_inputs.hardware.approved_fastener_schedule",
+    "unresolved_inputs.hardware.driver_access_envelope_mm",
+    "unresolved_inputs.hardware.minimum_verified_embedment_mm",
+    "unresolved_inputs.hardware.pilot_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_head_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_head_height_mm",
+    "unresolved_inputs.hardware.structural_screw_length_mm",
+    "unresolved_inputs.hardware.structural_screw_manufacturer",
+    "unresolved_inputs.hardware.structural_screw_model",
+    "unresolved_inputs.hardware.wall_substrate_thickness_mm",
+    "unresolved_inputs.hardware.washer_inner_diameter_mm",
+    "unresolved_inputs.hardware.washer_outer_diameter_mm",
+    "unresolved_inputs.hardware.washer_thickness_mm",
+    "unresolved_inputs.field.corner_datum_uncertainty_mm",
+    "unresolved_inputs.field.door_trim_clearance_mm",
+    "unresolved_inputs.field.inside_corner_angle_deg",
+    "unresolved_inputs.field.lower_shelf_top_elevation_mm",
+    "unresolved_inputs.field.maximum_wall_bow_mm",
+    "unresolved_inputs.field.outlet_clearance_mm",
+    "unresolved_inputs.field.return_clear_length_mm",
+    "unresolved_inputs.field.through_clear_length_mm",
+    "unresolved_inputs.field.upper_shelf_top_elevation_mm",
+    "qualification.creep_duration_days",
+    "qualification.creep_load_kg",
+    "qualification.destructive_test_protocol",
+    "qualification.proof_load_kg",
+    "qualification.prototype_test_load_kg",
+    "qualification.target_contents_load_kg",
+    "qualification.target_contents_load_lb",
+    "qualification.test_report",
+    "qualification.thermal_cycle_protocol",
+    "printer.drying_record",
+    "printer.filament_lot",
+    "printer.flow_calibration_record",
+    "shelf.cassette_saved_orientation_candidate.physical_printability_qualified",
+    "shelf.selected_cassette_physical_qualification_complete",
+    "wall_attachment.continuous_blocking_or_verified_equivalent_confirmed"
+  ],
+  "unsliced": true,
+  "validation_passed": true
+}

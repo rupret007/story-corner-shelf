@@ -1,0 +1,60 @@
+{
+  "artifact": "R7 deterministic cable-hook location proof",
+  "status": "placement-and-count-proof-only",
+  "source_contract": {
+    "revision": "r6",
+    "config_sha256": "1bf52b56ab1030f1f88d061a75a8ea609bc82e0081aed105c704b5f6cdd719c8",
+    "source_drawing": "story-corner-shelf-r6-publication-bambu-petg-v1/generated/drawings/plan_layout.svg",
+    "long_run_bays_per_level": 6,
+    "return_run_bays_per_level": 3,
+    "support_stations_per_level": 11
+  },
+  "placement_contract": {
+    "levels": 2,
+    "authorized_stations_each_level": [
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "R2",
+      "R3",
+      "R4"
+    ],
+    "authorized_hooks_per_level": 9,
+    "authorized_hooks_total": 18,
+    "excluded_stations_each_level": [
+      "L1",
+      "R1"
+    ],
+    "excluded_hooks_per_level": 2,
+    "excluded_hooks_total": 4,
+    "exclusion_reason": "run-start inside-corner service clearance"
+  },
+  "files": {
+    "svg": {
+      "name": "cable_hook_location_proof_exact.svg",
+      "sha256": "bc84e6d33d81d5c13b92d9f747b79df68f0959a9f1c7bcc4d1449b20cdc4e901",
+      "width_px": 1800,
+      "height_px": 1200
+    },
+    "png": {
+      "name": "cable_hook_location_proof_exact.png",
+      "sha256": "a14410d8b629a5a9fd864ae009e18662c6ee4f3d27e39dffd8c863d705aeda29",
+      "width_px": 1800,
+      "height_px": 1200
+    }
+  },
+  "authority": {
+    "placement_and_count": "this deterministic schematic",
+    "physical_geometry_and_fit": "R7 CAD and printed qualification",
+    "ai_v2_rendering": "visual intent only; not count authority",
+    "load_rating": "zero until physical qualification gates pass"
+  },
+  "limitations": [
+    "Station spacing in the schematic is diagrammatic, not an installation dimension.",
+    "The image proves placement and count only; it does not prove printed fit, material strength, or load capacity.",
+    "The two corner-adjacent run-start stations remain intentionally unavailable for hooks."
+  ]
+}

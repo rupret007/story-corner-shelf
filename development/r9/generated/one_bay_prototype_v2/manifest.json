@@ -1,0 +1,135 @@
+{
+  "artifact_records": [
+    {
+      "bytes": 2140,
+      "path": "ASSEMBLY.md",
+      "sha256": "3be3053bfc7addbda6f82b57ffb7c98f39abcdda5bd701efeb9054e907118974"
+    },
+    {
+      "bytes": 11453,
+      "path": "R9_ONE_BAY_ASSEMBLY_REFERENCE.svg",
+      "sha256": "3851c98e0622eeead44735cf6385d06c376e563fd613149a59697e08365a5277"
+    },
+    {
+      "bytes": 2999,
+      "path": "README.md",
+      "sha256": "29790caf2aa00c8b8d677cd4c6629b249646bcab1a6efd832711f0fe74016616"
+    },
+    {
+      "bytes": 6048,
+      "path": "assembly_reference/R9_ONE_BAY_ASSEMBLED_REFERENCE_NOT_A_PRINT_PLATE.3mf",
+      "sha256": "cea8df567b5e75b205d5ccf14e8175e0c98e634c93de81086c10426649fdf8bb"
+    },
+    {
+      "bytes": 1606,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_front_beam.3mf",
+      "sha256": "50f442784958105e0b73a87e5e789f6ffa101adcfebbbe15227b27840ec2d6f3"
+    },
+    {
+      "bytes": 2547,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_left_compact_support.3mf",
+      "sha256": "f63c3a874b434bb5b51033916543838153778faa0bb825fdd2a2fa6264ec440d"
+    },
+    {
+      "bytes": 1606,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_rear_ledger.3mf",
+      "sha256": "142f653a7fc7809a8ca88cabce505445f88a98a57f95f80353e79f8f8cfec738"
+    },
+    {
+      "bytes": 2535,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_right_compact_support.3mf",
+      "sha256": "251b4f3f8278aec74b6a518b18c51e7276d104f0817d1cee89d4ba34c3a25df7"
+    },
+    {
+      "bytes": 3199,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_shelf_cassette.3mf",
+      "sha256": "3cd7df745b808aa2baa8a41ec0c820e3e46e90a844e5c003aead8de852c1a95a"
+    },
+    {
+      "bytes": 5326,
+      "path": "model_only_3mf/R9_ONE_BAY_PRINTABLE_PARTS_CATALOG_NOT_A_PLATE.3mf",
+      "sha256": "d49d7f95edc670c1aa9acb46d2d1ee4283d56c911d8f0cd0e111cd09e0d3de26"
+    },
+    {
+      "bytes": 2284,
+      "path": "stl/r9_one_bay_front_beam.stl",
+      "sha256": "71402da75d7a8492e3806d3b80c47b47a87a8edbd17e0ea1c291780945708c8d"
+    },
+    {
+      "bytes": 8684,
+      "path": "stl/r9_one_bay_left_compact_support.stl",
+      "sha256": "9f89f2b3fbbd718c6febcb84eca786b1f30eb8514f412ed7b51f0ea0a38aa273"
+    },
+    {
+      "bytes": 2284,
+      "path": "stl/r9_one_bay_rear_ledger.stl",
+      "sha256": "71402da75d7a8492e3806d3b80c47b47a87a8edbd17e0ea1c291780945708c8d"
+    },
+    {
+      "bytes": 8684,
+      "path": "stl/r9_one_bay_right_compact_support.stl",
+      "sha256": "ab2e852968646afe801684c036a9450886c81bf15317db71c2e1527ab5e69408"
+    },
+    {
+      "bytes": 12284,
+      "path": "stl/r9_one_bay_shelf_cassette.stl",
+      "sha256": "e39b922f0c663a93ba3bbca5fbcb96053aea9f0476a9c9912dc7ba59f1e157ae"
+    },
+    {
+      "bytes": 10504,
+      "path": "validation.json",
+      "sha256": "595c440a46e7fd0ebd561d3a50fd373b9f4453ace44d1250f1bea6f826714702"
+    }
+  ],
+  "package_id": "r9_tabletop_one_bay_prototype_v2",
+  "publication_contract": {
+    "manual_preview_and_explicit_print_approval_required": true,
+    "no_profile_or_gcode": true,
+    "no_wall_installation_or_load": true,
+    "qualification_only": true,
+    "unsliced": true
+  },
+  "source_records": [
+    {
+      "bytes": 22934,
+      "path": "one_bay_geometry.py",
+      "sha256": "20017ff5f3a687fce61553053778d3689d09eaff17509653902108d9eaf9108e"
+    },
+    {
+      "bytes": 5816,
+      "path": "field_layout.py",
+      "sha256": "fd446068a82fe33dcde1423c09ebb033a7c613fec03bff632adaea898b9c5876"
+    },
+    {
+      "bytes": 7728,
+      "path": "render_one_bay_reference.py",
+      "sha256": "4eb6b2e2889c6d2ae12617d7bbc21483e9c4260d5dff6c635e16aaa7fa8f8bd1"
+    },
+    {
+      "bytes": 34451,
+      "path": "support_geometry.py",
+      "sha256": "487a7cb0be5cfd2742dbbfc91cb440d1245ae7530c4fc6a4373a6ae2f424c964"
+    },
+    {
+      "bytes": 32955,
+      "path": "design_math.py",
+      "sha256": "1832660b9dd7db2c3d3162c3aa72b9543fe67896f178098a0abc22dbb282f6cd"
+    },
+    {
+      "bytes": 2534,
+      "path": "model_io.py",
+      "sha256": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5"
+    },
+    {
+      "bytes": 10792,
+      "path": "config.json",
+      "sha256": "7e3021c2f514886abdcb9c7714e6eb925c0703390a7aa1ac79fe10f0920c6653"
+    },
+    {
+      "bytes": 26978,
+      "path": "generate_one_bay_prototype.py",
+      "sha256": "d496d131f916c9e459c602034fda647d2c7418d5d78dbef54e3d882dd30f3007"
+    }
+  ],
+  "supersedes_package_id": "r9_tabletop_one_bay_prototype_v1"
+}

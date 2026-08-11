@@ -1,0 +1,416 @@
+{
+  "artifact_bytes_excluding_manifest": 162323,
+  "artifact_config_identity": {
+    "algorithm": "sha256",
+    "canonical_json_sha256": "56ce54aa078ff728efb7d989f5844d62bcf4e2e456bd7166f29e74868220e402",
+    "contract_id": "r8_16b_petg_artifact_config_v2",
+    "exact_match": true
+  },
+  "artifact_count_excluding_manifest": 13,
+  "combined_catalog_is_single_a1_mini_plate": false,
+  "combined_object_order_readback_exact": true,
+  "combined_package_path": "model_only_3mf/MODEL_ONLY_R8_ONE_BAY_QUALIFICATION_CATALOG.3mf",
+  "combined_translations_readback_exact": true,
+  "embedded_print_profile_present": false,
+  "embedded_toolpath_file_count": 0,
+  "exact_file_allowlist": [
+    "README.md",
+    "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_left_rail_ready_locator_d_frame.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_mounted_rail.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_registered_cassette.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_retained_blank.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_right_smooth_locator_seated_keeper_d_frame.3mf",
+    "manifest.json",
+    "model_only_3mf/MODEL_ONLY_R8_ONE_BAY_QUALIFICATION_CATALOG.3mf",
+    "stl/r8_one_bay_left_rail_ready_locator_d_frame.stl",
+    "stl/r8_one_bay_mounted_rail.stl",
+    "stl/r8_one_bay_registered_cassette.stl",
+    "stl/r8_one_bay_retained_blank.stl",
+    "stl/r8_one_bay_right_smooth_locator_seated_keeper_d_frame.stl",
+    "validation.json"
+  ],
+  "generated_gcode_present": false,
+  "geometry_digests_by_mesh_id": {
+    "r8_one_bay_left_rail_ready_locator_d_frame": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11",
+    "r8_one_bay_mounted_rail": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551",
+    "r8_one_bay_registered_cassette": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d",
+    "r8_one_bay_retained_blank": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+    "r8_one_bay_right_smooth_locator_seated_keeper_d_frame": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df"
+  },
+  "hashed_artifacts_excluding_manifest": [
+    {
+      "bytes": 4811,
+      "kind": "bundle_readme",
+      "path": "README.md",
+      "sha256": "820e63cc770314aaa258928ca4bfdfbfabd4038d14b0dd2be29d8ae53436d538"
+    },
+    {
+      "bytes": 5706,
+      "canonical_float32_triangle_digest": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_one_bay_left_rail_ready_locator_d_frame",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_left_rail_ready_locator_d_frame.3mf",
+      "sha256": "98ba2476e03d8b1436cfd22a47097e924abe7cb61e2fe000fb743cf12dea5e48"
+    },
+    {
+      "bytes": 5232,
+      "canonical_float32_triangle_digest": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_one_bay_mounted_rail",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_mounted_rail.3mf",
+      "sha256": "92c2daf292f9f330225cca3cc181ab3a9aaec61cf9921071e7469bc59812b49c"
+    },
+    {
+      "bytes": 2869,
+      "canonical_float32_triangle_digest": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_one_bay_registered_cassette",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_registered_cassette.3mf",
+      "sha256": "28e46f232030bc8ea7e70e8117c96731213f714289358e3167f996bac85d84be"
+    },
+    {
+      "bytes": 2474,
+      "canonical_float32_triangle_digest": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_one_bay_retained_blank",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_retained_blank.3mf",
+      "sha256": "931691eea532a71430a8a988e98bcc024137210d182f11c67ab82c8b51ddfd82"
+    },
+    {
+      "bytes": 4450,
+      "canonical_float32_triangle_digest": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_one_bay_right_smooth_locator_seated_keeper_d_frame",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_one_bay_right_smooth_locator_seated_keeper_d_frame.3mf",
+      "sha256": "ffec66e4dd6ea4f8d55461c2a294c5859c89b331880d030b0f224355a7911c9d"
+    },
+    {
+      "bytes": 15342,
+      "kind": "combined_neutral_model_only_3mf",
+      "path": "model_only_3mf/MODEL_ONLY_R8_ONE_BAY_QUALIFICATION_CATALOG.3mf",
+      "sha256": "a9769a5121cdc9ebb61945aac92e6ac3d641781b27187eb8bb92126ae4c7beec"
+    },
+    {
+      "bytes": 25284,
+      "canonical_float32_triangle_digest": "2d1f9ea3cc0e66fb7ef91b5cf2158b17859f887c84192573275df17e1ad43e11",
+      "kind": "individual_stl",
+      "mesh_id": "r8_one_bay_left_rail_ready_locator_d_frame",
+      "path": "stl/r8_one_bay_left_rail_ready_locator_d_frame.stl",
+      "sha256": "7a24d72314f3581ee93278763ecec46f6685483e68c9b08df7b7f4a5d89c5c9a"
+    },
+    {
+      "bytes": 24284,
+      "canonical_float32_triangle_digest": "accb8f39850766827f9ceb27220b0f0fc00248d782b9711cdbc16a5fac150551",
+      "kind": "individual_stl",
+      "mesh_id": "r8_one_bay_mounted_rail",
+      "path": "stl/r8_one_bay_mounted_rail.stl",
+      "sha256": "4b24da5a472bceb39f12c182c086dbb4e9bbe96b512e7260576709d15203b02d"
+    },
+    {
+      "bytes": 7184,
+      "canonical_float32_triangle_digest": "41bd36f9c82ce81535f56299e99974a30a47410074f0b2e06d807bc7027cb31d",
+      "kind": "individual_stl",
+      "mesh_id": "r8_one_bay_registered_cassette",
+      "path": "stl/r8_one_bay_registered_cassette.stl",
+      "sha256": "550385d020f6e1611d3758b2740c534f7bb73b5191829d8dc58c1875219ece80"
+    },
+    {
+      "bytes": 7484,
+      "canonical_float32_triangle_digest": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+      "kind": "individual_stl",
+      "mesh_id": "r8_one_bay_retained_blank",
+      "path": "stl/r8_one_bay_retained_blank.stl",
+      "sha256": "fbd935ff661603f4909e10222724e403c879a50943ec93c3db585fdf4d44c64d"
+    },
+    {
+      "bytes": 17284,
+      "canonical_float32_triangle_digest": "99033ab393c58657b5d47a9adf6e39a9812112089ab32f7a54b7a7cf0559b9df",
+      "kind": "individual_stl",
+      "mesh_id": "r8_one_bay_right_smooth_locator_seated_keeper_d_frame",
+      "path": "stl/r8_one_bay_right_smooth_locator_seated_keeper_d_frame.stl",
+      "sha256": "2ac106feea31a42b797254bb195085a2db9b1da75dc41f942f9883ba066be572"
+    },
+    {
+      "bytes": 39919,
+      "kind": "validation_report",
+      "path": "validation.json",
+      "sha256": "6ae42cc3697b2bb452a82b31f1796f38489eff078a06cf86ab3a12c4603ddd39"
+    }
+  ],
+  "installed_release_allowed": false,
+  "load_rating_allowed": false,
+  "manifest_filename": "manifest.json",
+  "manual_support_and_brim_review_required": true,
+  "material": "PETG only",
+  "package_id": "r8_16b_petg_one_bay_qualification_v2",
+  "petg_a1_mini_candidate_settings": {
+    "bottom_shell_layers": 3,
+    "brim_mm": 5.0,
+    "brim_object_gap_mm": 0.1,
+    "build_volume_mm": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "drying_dryer_limit_controls": true,
+    "drying_duration_range_h": [
+      6.0,
+      8.0
+    ],
+    "drying_guidance_source_url": "https://store.sunlu.com/products/over-6kg-bundle-sale-petg-3d-printer-filament-1-75mm-1kg-roll",
+    "drying_never_exceed_lower_stated_limit": true,
+    "drying_received_spool_label_controls": true,
+    "drying_record_required": true,
+    "drying_temperature_range_c": [
+      50.0,
+      50.0
+    ],
+    "fan_percent_range": [
+      10,
+      30
+    ],
+    "filament": "SUNLU PETG black",
+    "filament_asin": "B0D1KC72YP",
+    "filament_color": "black",
+    "filament_manufacturer": "SUNLU",
+    "filament_preset": "SUNLU PETG @BBL A1M 0.4 nozzle",
+    "filament_product": "PETG",
+    "filament_product_url": "https://www.amazon.com/dp/B0D1KC72YP?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1",
+    "filament_selected_variant": "4 kg bundle; 2 Black + 2 Black (four 1 kg black spools); 1.75 mm +/-0.02 mm",
+    "first_layer_nozzle_temperature_c": 250.0,
+    "flow_ratio": 0.94,
+    "infill_pattern": "grid",
+    "infill_percent": 25,
+    "layer_height_mm": 0.2,
+    "material": "PETG only",
+    "maximum_volumetric_speed_mm3_s": 9.0,
+    "nozzle_mm": 0.4,
+    "other_layer_nozzle_temperature_c": 245.0,
+    "overhang_fan_percent": 90,
+    "printer": "Bambu Lab A1 mini",
+    "profile_embedded": false,
+    "scale_percent": 100.0,
+    "status": "candidate values for manual Bambu Studio entry and review",
+    "support_and_brim_review_required": true,
+    "textured_pei_bed_temperature_c": 60.0,
+    "top_shell_layers": 5,
+    "wall_loops": 6
+  },
+  "physical_qualification_complete": false,
+  "prior_clearance_qualification_required_mm_per_face": 0.4,
+  "prior_clearance_v2_geometry_contract": {
+    "canonical_float32_triangle_digests": {
+      "r8_clearance_key_0p2": "71b46492e4249adbba1c7d08c24693054375725d77cff85af3836b20c30d047c",
+      "r8_clearance_key_0p3": "6b537b503e66242b7826de9758b4536a63306728a6045ad13dcac0e59ebdddd6",
+      "r8_clearance_key_0p4": "7fb21c05a193853aa8d428fdf5ebae0c381487d2e024cdecbeb1723255858d9a",
+      "r8_clearance_key_0p5": "b5c161e4ac436cc656eeb4c2a4026c14ccba4bb8cf0dbedabcd7ef9ae4646f88",
+      "r8_clearance_ladder_receiver": "58596262de9677d180d4e3af7562abbedb410a7dacbeb3927d7c0360f0e29ffa"
+    },
+    "clearance_per_face_mm_in_order": [
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "contract_version": 1,
+    "mesh_ids_in_order": [
+      "r8_clearance_ladder_receiver",
+      "r8_clearance_key_0p2",
+      "r8_clearance_key_0p3",
+      "r8_clearance_key_0p4",
+      "r8_clearance_key_0p5"
+    ],
+    "source_package_id": "r8_16b_petg_qualification_v2"
+  },
+  "production_ready": false,
+  "qualification_object_count": 5,
+  "qualification_only": true,
+  "rated_load_kg": 0.0,
+  "rated_load_lb": 0.0,
+  "retained_blank_cross_bundle_contract": {
+    "exact_match": true,
+    "general_v2_canonical_float32_triangle_digest": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5",
+    "general_v2_package_id": "r8_16b_petg_qualification_v2",
+    "installed_scene_copy_canonical_float32_triangle_digest": "e91594cf97ff519dd7b52a09b9ffd948a28b3182735c2dcee108fa6118d497a0",
+    "installed_scene_copy_used_only_for_scene_evidence": true,
+    "one_bay_printable_canonical_float32_triangle_digest": "d79a4c628b74934e15081d799c72a58b199c60ba6fa1790629260761d6b5b3d5"
+  },
+  "runtime_provenance": {
+    "boolean_engine": "manifold",
+    "distributions": [
+      {
+        "distribution": "numpy",
+        "exact_match": true,
+        "observed_version": "2.5.1",
+        "required_version": "2.5.1"
+      },
+      {
+        "distribution": "shapely",
+        "exact_match": true,
+        "observed_version": "2.1.2",
+        "required_version": "2.1.2"
+      },
+      {
+        "distribution": "trimesh",
+        "exact_match": true,
+        "observed_version": "5.0.0",
+        "required_version": "5.0.0"
+      },
+      {
+        "distribution": "manifold3d",
+        "exact_match": true,
+        "observed_version": "3.5.2",
+        "required_version": "3.5.2"
+      },
+      {
+        "distribution": "mapbox-earcut",
+        "exact_match": true,
+        "observed_version": "1.0.3",
+        "required_version": "1.0.3"
+      },
+      {
+        "distribution": "scipy",
+        "exact_match": true,
+        "observed_version": "1.18.0",
+        "required_version": "1.18.0"
+      },
+      {
+        "distribution": "networkx",
+        "exact_match": true,
+        "observed_version": "3.5",
+        "required_version": "3.5"
+      }
+    ],
+    "mesh_serialization": "canonical float32 triangles",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "requirements_exactly_matched": true,
+    "requirements_path": "requirements.txt",
+    "requirements_sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+  },
+  "saved_orientation_support_contracts_passed": true,
+  "scale_percent": 100.0,
+  "schema_version": 1,
+  "source_sha_bundle": {
+    "algorithm": "sha256",
+    "bundle_sha256": "ff3ed6540421f3ca3dd11f57f9878288666494960f59149ca6587e9e958f6895",
+    "records": [
+      {
+        "bytes": 110,
+        "path": "requirements.txt",
+        "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+      },
+      {
+        "bytes": 7565,
+        "path": "development/r8/config.json",
+        "sha256": "e744f2a844bf22712e5f3ac0eaaeb9716340b819703d9fb80d9e1b422399df75"
+      },
+      {
+        "bytes": 952,
+        "path": "development/r8/FROZEN_BASELINES.json",
+        "sha256": "703b19b3116b57aeb864740d95e2cd30213c14e33d26afcf80683990d646696c"
+      },
+      {
+        "bytes": 16956,
+        "path": "development/r8/design_math.py",
+        "sha256": "0f768df435717c290c6552d1560c60447fb4929a1a6d5f789dff14949fe8fd79"
+      },
+      {
+        "bytes": 25572,
+        "path": "development/r8/shelf_geometry.py",
+        "sha256": "4969cf50377071597f0af3c92568fae308f372361bf78e51e9ca3d2c0d112751"
+      },
+      {
+        "bytes": 20833,
+        "path": "development/r8/accessory_geometry.py",
+        "sha256": "9462c315d4d934b41254488f8fc082ff6a4bb678036caba407bbada08d665e46"
+      },
+      {
+        "bytes": 30351,
+        "path": "development/r8/interface_geometry.py",
+        "sha256": "3e2569a5f5701f007dac9bedde488243a13cf2db9233719cfe56936fdd237c38"
+      },
+      {
+        "bytes": 40266,
+        "path": "development/r8/assembly_geometry.py",
+        "sha256": "ed11b5fa90f812d84fa0d0d171ea9c088d1b1d86652098a844edb3dc0e0b5058"
+      },
+      {
+        "bytes": 25019,
+        "path": "development/r8/model_io.py",
+        "sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b"
+      },
+      {
+        "bytes": 86403,
+        "path": "development/r8/production_plan.py",
+        "sha256": "64075278213db931fef84249fbff5dfa64246167887fdcce6e525b3f7c9c291f"
+      },
+      {
+        "bytes": 49009,
+        "path": "development/r8/generate_qualification.py",
+        "sha256": "c1b37a5538fe0ec720ff46f112ad6b393c0c45bd6557aae7857dc71b275fbedf"
+      },
+      {
+        "bytes": 49954,
+        "path": "development/r8/generate_one_bay_qualification.py",
+        "sha256": "3ca80781c24f4c6cea2a3450c597a501208aa959da530989878a791b75f6c0b7"
+      }
+    ]
+  },
+  "support_required_part_ids": [],
+  "unresolved_blockers": [
+    "project.qualification_only",
+    "project.installed_release_allowed",
+    "project.physical_qualification_complete",
+    "project.production_ready",
+    "project.load_rating_allowed",
+    "project.tested_load_rating_exists",
+    "project.wall_bores_emitted",
+    "project.zero_rated_load",
+    "unresolved_inputs.wall.allowable_anchor_loads",
+    "unresolved_inputs.wall.blocking_locations_mm",
+    "unresolved_inputs.wall.construction",
+    "unresolved_inputs.wall.framing_material_and_grade",
+    "unresolved_inputs.wall.stud_center_locations_mm",
+    "unresolved_inputs.hardware.approved_fastener_schedule",
+    "unresolved_inputs.hardware.driver_access_envelope_mm",
+    "unresolved_inputs.hardware.minimum_verified_embedment_mm",
+    "unresolved_inputs.hardware.pilot_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_head_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_head_height_mm",
+    "unresolved_inputs.hardware.structural_screw_length_mm",
+    "unresolved_inputs.hardware.structural_screw_manufacturer",
+    "unresolved_inputs.hardware.structural_screw_model",
+    "unresolved_inputs.hardware.wall_substrate_thickness_mm",
+    "unresolved_inputs.hardware.washer_inner_diameter_mm",
+    "unresolved_inputs.hardware.washer_outer_diameter_mm",
+    "unresolved_inputs.hardware.washer_thickness_mm",
+    "unresolved_inputs.field.corner_datum_uncertainty_mm",
+    "unresolved_inputs.field.door_trim_clearance_mm",
+    "unresolved_inputs.field.inside_corner_angle_deg",
+    "unresolved_inputs.field.lower_shelf_top_elevation_mm",
+    "unresolved_inputs.field.maximum_wall_bow_mm",
+    "unresolved_inputs.field.outlet_clearance_mm",
+    "unresolved_inputs.field.return_clear_length_mm",
+    "unresolved_inputs.field.through_clear_length_mm",
+    "unresolved_inputs.field.upper_shelf_top_elevation_mm",
+    "qualification.creep_duration_days",
+    "qualification.creep_load_kg",
+    "qualification.destructive_test_protocol",
+    "qualification.proof_load_kg",
+    "qualification.prototype_test_load_kg",
+    "qualification.target_contents_load_kg",
+    "qualification.target_contents_load_lb",
+    "qualification.test_report",
+    "qualification.thermal_cycle_protocol",
+    "printer.drying_record",
+    "printer.filament_lot",
+    "printer.flow_calibration_record",
+    "shelf.cassette_saved_orientation_candidate.physical_printability_qualified",
+    "shelf.selected_cassette_physical_qualification_complete",
+    "wall_attachment.continuous_blocking_or_verified_equivalent_confirmed"
+  ],
+  "unsliced": true,
+  "validation_path": "validation.json"
+}

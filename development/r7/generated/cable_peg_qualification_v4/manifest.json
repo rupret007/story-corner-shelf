@@ -1,0 +1,350 @@
+{
+  "artifact_bytes_excluding_manifest": 201900,
+  "artifact_count_excluding_manifest": 7,
+  "artifacts": [
+    {
+      "bytes": 1984,
+      "canonical_triangle_digest_0p001mm": "c81847ea63b7e7d66324368f1f934b4490460e074801261e467bc597a621daa1",
+      "kind": "individual_model_only_3mf",
+      "mesh_name": "R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5",
+      "path": "individual_model_only_3mf/MODEL_ONLY_R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5.3mf",
+      "sha256": "1810be560e3f350a94bb6ef5c970b36fd4375931e0858a0028ae712e1076eb4b",
+      "translation_mm": [
+        5.2,
+        5.2,
+        0.0
+      ]
+    },
+    {
+      "bytes": 23412,
+      "canonical_triangle_digest_0p001mm": "3b67228e205c97275e55e5a5003d50c4c8274b5064dba1a4eb1c7e0c2287f5b1",
+      "kind": "individual_model_only_3mf",
+      "mesh_name": "R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON",
+      "path": "individual_model_only_3mf/MODEL_ONLY_R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON.3mf",
+      "sha256": "23fcdab2d315b9da0fe5025497436f18e23f05ca0a6dbe19845a6d8e3248ce53",
+      "translation_mm": [
+        5.2,
+        5.2,
+        0.0
+      ]
+    },
+    {
+      "bytes": 11743,
+      "canonical_triangle_digest_0p001mm": "e3e49db1f4f00fec98f01da2f9ce5fc041faa42367570ec388aa9009f091ae18",
+      "kind": "individual_model_only_3mf",
+      "mesh_name": "R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK",
+      "path": "individual_model_only_3mf/MODEL_ONLY_R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK.3mf",
+      "sha256": "2d27cdb518a2eb31760aaad7e7035408d394bfba6abb61040bfb67a877e58ecd",
+      "translation_mm": [
+        5.2,
+        5.2,
+        0.0
+      ]
+    },
+    {
+      "brim_plus_object_gap_mm": 5.1,
+      "bytes": 34709,
+      "canonical_source_triangle_digests_0p001mm": {
+        "R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5": "c81847ea63b7e7d66324368f1f934b4490460e074801261e467bc597a621daa1",
+        "R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON": "3b67228e205c97275e55e5a5003d50c4c8274b5064dba1a4eb1c7e0c2287f5b1",
+        "R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK": "e3e49db1f4f00fec98f01da2f9ce5fc041faa42367570ec388aa9009f091ae18"
+      },
+      "kind": "qualification_model_only_3mf",
+      "minimum_brim_to_brim_gap_mm": 2.399998474121091,
+      "object_count": 3,
+      "object_names": [
+        "R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5",
+        "R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON",
+        "R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK"
+      ],
+      "path": "model_only_3mf/MODEL_ONLY_R7_CABLE_PEG_COLUMN_QUALIFICATION.3mf",
+      "placed_bounds_mm": {
+        "R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5": [
+          [
+            100.2,
+            5.2,
+            0.0
+          ],
+          [
+            148.2,
+            21.2,
+            8.0
+          ]
+        ],
+        "R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON": [
+          [
+            5.2,
+            5.2,
+            0.0
+          ],
+          [
+            39.600002,
+            64.799998,
+            10.2
+          ]
+        ],
+        "R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK": [
+          [
+            52.2,
+            5.2,
+            0.0
+          ],
+          [
+            86.7,
+            20.900466,
+            39.502834
+          ]
+        ]
+      },
+      "sha256": "7f31dca2b44559fef846744c12cc2020908f6c23c6c2948d635ad89512feaef2",
+      "translations_mm": {
+        "R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5": [
+          100.2,
+          5.2,
+          0.0
+        ],
+        "R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON": [
+          5.2,
+          5.2,
+          0.0
+        ],
+        "R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK": [
+          52.2,
+          5.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "bytes": 3884,
+      "kind": "individual_stl",
+      "mesh_audit": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            48.0,
+            16.0,
+            8.0
+          ]
+        ],
+        "positive_volume": true,
+        "triangle_count": 76,
+        "volume_mm3": 5348.399986624718,
+        "watertight": true,
+        "zero_area_triangle_count": 0
+      },
+      "mesh_name": "R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5",
+      "path": "stl/R7_DEV_CABLE_PEG_COLLAR_CLEARANCE_LADDER_0P2_0P3_0P4_0P5.stl",
+      "sha256": "9de1bae9549e8b7b2d871d115a6b6203eee852e298fa572b56101cf80a467f9f"
+    },
+    {
+      "bytes": 92884,
+      "kind": "individual_stl",
+      "mesh_audit": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            34.400002,
+            59.599998,
+            10.2
+          ]
+        ],
+        "positive_volume": true,
+        "triangle_count": 1856,
+        "volume_mm3": 7719.856080728481,
+        "watertight": true,
+        "zero_area_triangle_count": 0
+      },
+      "mesh_name": "R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON",
+      "path": "stl/R7_DEV_CABLE_PEG_EXACT_R6_PIER_OVERLAY_COUPON.stl",
+      "sha256": "42a9ba68475d8ab2ad8c7590be76ac6ab1592d7a8e22b15cedea5281ab009755"
+    },
+    {
+      "bytes": 33284,
+      "kind": "individual_stl",
+      "mesh_audit": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            34.5,
+            15.700466,
+            39.502834
+          ]
+        ],
+        "positive_volume": true,
+        "triangle_count": 664,
+        "volume_mm3": 2358.6104666329206,
+        "watertight": true,
+        "zero_area_triangle_count": 0
+      },
+      "mesh_name": "R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK",
+      "path": "stl/R7_DEV_CABLE_PEG_FRONT_SNAP_C_COLLAR_HOOK.stl",
+      "sha256": "b8d2dada22c4273e790124310c61ee493ecd2c496256d50fb817b12967b907d1"
+    }
+  ],
+  "base_r6_installed_counts_unchanged": {
+    "one_level": 258,
+    "two_levels": 516
+  },
+  "embedded_toolpath_file_count": 0,
+  "excluded_run_start_corner_locations_per_level": 2,
+  "generated_gcode_present": false,
+  "hook_metrics": {
+    "cable_bundle_to_tip_clearance_mm": 1.0104076400856536,
+    "downward_stop_overlap_at_gate_mm3": 0.9844774953092154,
+    "estimated_petg_mass_g": 2.995435281910094,
+    "flex_strain_proxy": 0.02926383173296754,
+    "installed_bounds_mm": [
+      [
+        -2.5798656940460205,
+        19.0,
+        -28.5
+      ],
+      [
+        36.97986602783203,
+        33.5,
+        6.0
+      ]
+    ],
+    "maximum_cable_bundle_to_bridge_overlap_mm3": 0.0,
+    "maximum_cable_bundle_to_collar_overlap_mm3": 0.0,
+    "maximum_compressed_approach_overlap_mm3": 0.0,
+    "maximum_free_downward_travel_mm": 0.2,
+    "maximum_seated_overlay_overlap_mm3": 0.0,
+    "saved_bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        34.5,
+        15.700466081063926,
+        39.50283438079107
+      ]
+    ],
+    "saved_plate_contact_area_mm2": 196.28230989079876,
+    "volume_mm3": 2358.6104581969244
+  },
+  "installed_release_allowed": false,
+  "load_qualification": {
+    "actual_parent_load_fixture_required": "exact pier overlay installed on the relevant real R6 X-corbel parent and complete assembly load path; the loose overlay coupon alone cannot qualify proof, creep, migration, or installed load",
+    "creep_duration_days": 90,
+    "creep_load_kg": 0.5,
+    "creep_root_moment_n_mm": 88.29,
+    "load_application_point": "cable seat exactly 18.0 mm normal to the overlay visible face; tip-applied loads are prohibited",
+    "maximum_clip_migration_mm": 0.4,
+    "maximum_tip_permanent_set_after_recovery_mm": 0.5,
+    "prohibited_uses": [
+      "garments",
+      "bags",
+      "tools",
+      "leashes",
+      "tensioned extension cords",
+      "user pull loads"
+    ],
+    "proof_duration_h": 1.0,
+    "proof_load_kg": 1.0,
+    "proof_root_moment_n_mm": 176.58,
+    "provisional_working_load_after_all_gates_kg": 0.25,
+    "rated_load_before_physical_qualification_kg": 0.0,
+    "required_parent_variants": [
+      "interior",
+      "run-end",
+      "run-start exclusion verification only"
+    ],
+    "snap_removal_cycles": 100,
+    "thermal_cycles": 20,
+    "thermal_dwell_h_each_end": 4.0,
+    "thermal_range_c": [
+      10.0,
+      45.0
+    ],
+    "unloaded_recovery_h": 72.0,
+    "working_root_moment_n_mm": 44.145,
+    "zero_to_working_load_cycles": 1000
+  },
+  "load_rating_allowed": false,
+  "normal_hook_locations_per_level_after_qualification": 9,
+  "package_filename": "MODEL_ONLY_R7_CABLE_PEG_COLUMN_QUALIFICATION.3mf",
+  "package_id": "r7_cable_peg_column_qualification",
+  "physical_qualification_complete": false,
+  "printing": {
+    "brim_mm": 5.0,
+    "brim_object_gap_mm": 0.1,
+    "infill_pattern": "grid",
+    "infill_percent": 25,
+    "layer_height_mm": 0.2,
+    "material": "SUNLU black PETG",
+    "minimum_brim_to_brim_gap_mm": 2.0,
+    "minimum_plate_contact_area_mm2": 100.0,
+    "nozzle_mm": 0.4,
+    "orientation_warning": "do not print the hook projection upright or place the overlay-visible face on the plate",
+    "printable_volume_mm": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "printer": "Bambu Lab A1 mini",
+    "saved_left_run_side_rotation_deg": -3.0733325110733523,
+    "saved_orientation": "left tapered run-side jaw face rotated flat onto the build plate; hook projection remains in the bed plane and installed elevation is deliberately tilted 3.073332511 degrees by the taper-seat rotation",
+    "support_free": false,
+    "wall_loops": 6
+  },
+  "production_ready": false,
+  "project": {
+    "base_revision": "R6",
+    "installed_release_allowed": false,
+    "load_rating_allowed": false,
+    "name": "Story Corner R7 removable column cable hook",
+    "physical_qualification_complete": false,
+    "production_ready": false,
+    "qualification_only": true,
+    "revision": "R7-CABLE-PEG-QUALIFICATION-1"
+  },
+  "promoted_counts_if_all_physical_gates_pass": {
+    "one_level": 267,
+    "two_levels": 534
+  },
+  "qualification_object_count": 3,
+  "qualification_only": true,
+  "schema_version": 1,
+  "source_provenance": {
+    "r6_config": {
+      "path": "development/r6/config.json",
+      "sha256": "1bf52b56ab1030f1f88d061a75a8ea609bc82e0081aed105c704b5f6cdd719c8"
+    },
+    "r6_ornament_geometry": {
+      "path": "development/r6/ornament_geometry.py",
+      "sha256": "22cfec7d161a1971112cdb4374f66f4189b9a94ef7225813711ede5e41f421e8"
+    },
+    "r7_config": {
+      "path": "development/r7/config.json",
+      "sha256": "bac5fdc0f1857ca03d786900984d946795706bc63527cae8b3aff7f8d7401f0a"
+    },
+    "r7_generator": {
+      "path": "development/r7/generate_cable_peg_qualification.py",
+      "sha256": "dab41c968e0dc175914f61eb5e1773b566949e89508513f6ab13b009b31dfe2d"
+    },
+    "r7_geometry": {
+      "path": "development/r7/cable_peg_geometry.py",
+      "sha256": "bf014de9c39899a204780c7f7ecf5b0ffdef42764d9c7cc8ea00e1aa3beb00e5"
+    }
+  },
+  "unsliced": true
+}

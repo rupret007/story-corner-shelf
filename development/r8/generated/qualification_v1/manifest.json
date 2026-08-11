@@ -1,0 +1,508 @@
+{
+  "accessory_rail_layout": {
+    "clean_default_equipped_corbel_indices": {
+      "return": [
+        1,
+        3
+      ],
+      "through": [
+        1,
+        3,
+        5,
+        7
+      ]
+    },
+    "clean_default_rails_per_level": 6,
+    "clean_default_rails_selected_two_levels": 12,
+    "clean_default_sockets_per_level": 18,
+    "clean_default_sockets_selected_two_levels": 36,
+    "geometrically_eligible_corbel_indices": {
+      "return": [
+        1,
+        2,
+        3
+      ],
+      "through": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "geometrically_eligible_rails_per_level": 10,
+    "geometrically_eligible_rails_selected_two_levels": 20,
+    "geometrically_eligible_sockets_per_level": 30,
+    "geometrically_eligible_sockets_selected_two_levels": 60,
+    "sockets_per_rail": 3
+  },
+  "artifact_bytes_excluding_manifest": 554355,
+  "artifact_count_excluding_manifest": 33,
+  "combined_package_path": "model_only_3mf/MODEL_ONLY_R8_QUALIFICATION_ALL_PARTS.3mf",
+  "embedded_toolpath_file_count": 0,
+  "exact_file_allowlist": [
+    "README.md",
+    "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p2.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p3.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p4.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p5.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_clearance_ladder_receiver.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_curved_eligible_d_frame_mount.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_equal_volume_straight_control.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_matched_heavy_coffer_control.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_mounted_retention_rail.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_retained_blank.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_retained_shortened_coil_j_hook.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_retained_single_peg.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_retained_three_cable_comb.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_selected_front_first_u_box_cassette.3mf",
+    "individual_model_only_3mf/MODEL_ONLY_r8_smooth_curved_core.3mf",
+    "manifest.json",
+    "model_only_3mf/MODEL_ONLY_R8_QUALIFICATION_ALL_PARTS.3mf",
+    "stl/r8_clearance_key_0p2.stl",
+    "stl/r8_clearance_key_0p3.stl",
+    "stl/r8_clearance_key_0p4.stl",
+    "stl/r8_clearance_key_0p5.stl",
+    "stl/r8_clearance_ladder_receiver.stl",
+    "stl/r8_curved_eligible_d_frame_mount.stl",
+    "stl/r8_equal_volume_straight_control.stl",
+    "stl/r8_matched_heavy_coffer_control.stl",
+    "stl/r8_mounted_retention_rail.stl",
+    "stl/r8_retained_blank.stl",
+    "stl/r8_retained_shortened_coil_j_hook.stl",
+    "stl/r8_retained_single_peg.stl",
+    "stl/r8_retained_three_cable_comb.stl",
+    "stl/r8_selected_front_first_u_box_cassette.stl",
+    "stl/r8_smooth_curved_core.stl",
+    "validation.json"
+  ],
+  "generated_gcode_present": false,
+  "geometry_digests_by_mesh_id": {
+    "r8_clearance_key_0p2": "71b46492e4249adbba1c7d08c24693054375725d77cff85af3836b20c30d047c",
+    "r8_clearance_key_0p3": "6b537b503e66242b7826de9758b4536a63306728a6045ad13dcac0e59ebdddd6",
+    "r8_clearance_key_0p4": "7fb21c05a193853aa8d428fdf5ebae0c381487d2e024cdecbeb1723255858d9a",
+    "r8_clearance_key_0p5": "b5c161e4ac436cc656eeb4c2a4026c14ccba4bb8cf0dbedabcd7ef9ae4646f88",
+    "r8_clearance_ladder_receiver": "58596262de9677d180d4e3af7562abbedb410a7dacbeb3927d7c0360f0e29ffa",
+    "r8_curved_eligible_d_frame_mount": "fd90555b3b46e84b23de7691642d56647feaeead82cba38ad725c47850b24294",
+    "r8_equal_volume_straight_control": "34dcc6ba240032cc88c7273a48b2537cb22388e7aff01b95c91985460fde72e2",
+    "r8_matched_heavy_coffer_control": "39c0d448c7dd3025d0f2fa306ff90e2fe90c71c317f919a7dcb1c7f3a543613b",
+    "r8_mounted_retention_rail": "fb999e5a9c53ddee7bb11864bc0fe1471fcba06055e736303dd3c99c2433891e",
+    "r8_retained_blank": "ccf27d263c147c7c3bd54d08bb34243fce9ede9c30ba3fe202af75415a3fbfa3",
+    "r8_retained_shortened_coil_j_hook": "ed589bbe58e3a443f6880d4dc7531108474e3d92172f9e4bbedc3ab283aa5700",
+    "r8_retained_single_peg": "859bc987496b785c5b6fd02ca05bc9cb1f0efb22abbb2e5ca7d10730d92f08c0",
+    "r8_retained_three_cable_comb": "913d8066d685c70e09b7b4fcbc756a1610f26448c7dac82577333f23674a61a1",
+    "r8_selected_front_first_u_box_cassette": "5dd75412e5ce75d827db3c6e58eb5c2c3bb3dcad89eb9ad494344296d57a2ed7",
+    "r8_smooth_curved_core": "40f732f4c2a4cae6693f3d8de501d2bba8a92cdc69f2423f10697e8d9ddda790"
+  },
+  "hashed_artifacts_excluding_manifest": [
+    {
+      "bytes": 2765,
+      "kind": "bundle_readme",
+      "path": "README.md",
+      "sha256": "370d45c14de0c19da7a379d999d8059fa7c6c0a8c160367347137c4b3d1a9ba6"
+    },
+    {
+      "bytes": 1818,
+      "canonical_float32_triangle_digest": "71b46492e4249adbba1c7d08c24693054375725d77cff85af3836b20c30d047c",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_clearance_key_0p2",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p2.3mf",
+      "sha256": "02bc27fcfc50a73efe05ada5d5418ca71107b3d380a14c42458d3fc08320ef3d"
+    },
+    {
+      "bytes": 1830,
+      "canonical_float32_triangle_digest": "6b537b503e66242b7826de9758b4536a63306728a6045ad13dcac0e59ebdddd6",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_clearance_key_0p3",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p3.3mf",
+      "sha256": "563c78e31c35c66561b6d7ec99add921afdfd0b10d79ca148cd30d2f3876af29"
+    },
+    {
+      "bytes": 1813,
+      "canonical_float32_triangle_digest": "7fb21c05a193853aa8d428fdf5ebae0c381487d2e024cdecbeb1723255858d9a",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_clearance_key_0p4",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p4.3mf",
+      "sha256": "21d92528972d32131edab13e66b09e3a56b9df09884ef825ef87645bb98bc55a"
+    },
+    {
+      "bytes": 1812,
+      "canonical_float32_triangle_digest": "b5c161e4ac436cc656eeb4c2a4026c14ccba4bb8cf0dbedabcd7ef9ae4646f88",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_clearance_key_0p5",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_clearance_key_0p5.3mf",
+      "sha256": "74c087353909fdb5f80daa6f1273ff40cf63dd49c82d56766a84fc92ac16d61e"
+    },
+    {
+      "bytes": 3776,
+      "canonical_float32_triangle_digest": "58596262de9677d180d4e3af7562abbedb410a7dacbeb3927d7c0360f0e29ffa",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_clearance_ladder_receiver",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_clearance_ladder_receiver.3mf",
+      "sha256": "8d11964f9f4ba58613f02fc24abb8950a6a0ecba2a5148187cf18e5a09a85d91"
+    },
+    {
+      "bytes": 4988,
+      "canonical_float32_triangle_digest": "fd90555b3b46e84b23de7691642d56647feaeead82cba38ad725c47850b24294",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_curved_eligible_d_frame_mount",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_curved_eligible_d_frame_mount.3mf",
+      "sha256": "c791a98f1a823f69868a72536ac3c5debfaaa826f781660062f6ea2ea62dfa98"
+    },
+    {
+      "bytes": 1559,
+      "canonical_float32_triangle_digest": "34dcc6ba240032cc88c7273a48b2537cb22388e7aff01b95c91985460fde72e2",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_equal_volume_straight_control",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_equal_volume_straight_control.3mf",
+      "sha256": "907252fa3e3223cebf244f975ed2e7f2b722e19c6cc4702f837d183f54addf78"
+    },
+    {
+      "bytes": 16132,
+      "canonical_float32_triangle_digest": "39c0d448c7dd3025d0f2fa306ff90e2fe90c71c317f919a7dcb1c7f3a543613b",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_matched_heavy_coffer_control",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_matched_heavy_coffer_control.3mf",
+      "sha256": "8d55f21fa8c89d541ba2cd225d62ec1c245e9fc7a740d2479aa4b28301dc958a"
+    },
+    {
+      "bytes": 4990,
+      "canonical_float32_triangle_digest": "fb999e5a9c53ddee7bb11864bc0fe1471fcba06055e736303dd3c99c2433891e",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_mounted_retention_rail",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_mounted_retention_rail.3mf",
+      "sha256": "490be555e325653c761b7eb32205db3708275d96e186751ad5965112093e66bb"
+    },
+    {
+      "bytes": 2453,
+      "canonical_float32_triangle_digest": "ccf27d263c147c7c3bd54d08bb34243fce9ede9c30ba3fe202af75415a3fbfa3",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_retained_blank",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_retained_blank.3mf",
+      "sha256": "901d647faaa9ef1a5d12c3a8a0426f7fc40b09c87bd970bc446cc5185c72ed91"
+    },
+    {
+      "bytes": 10241,
+      "canonical_float32_triangle_digest": "ed589bbe58e3a443f6880d4dc7531108474e3d92172f9e4bbedc3ab283aa5700",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_retained_shortened_coil_j_hook",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_retained_shortened_coil_j_hook.3mf",
+      "sha256": "09e2cab8f0024859ee6e25ac7b95ff679acbd0d68e62addb00760e029122cbaa"
+    },
+    {
+      "bytes": 7188,
+      "canonical_float32_triangle_digest": "859bc987496b785c5b6fd02ca05bc9cb1f0efb22abbb2e5ca7d10730d92f08c0",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_retained_single_peg",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_retained_single_peg.3mf",
+      "sha256": "1fa14d9ab51df9db6c12006cd1319aea0225be5939180af4de65545ccf3ae84b"
+    },
+    {
+      "bytes": 16068,
+      "canonical_float32_triangle_digest": "913d8066d685c70e09b7b4fcbc756a1610f26448c7dac82577333f23674a61a1",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_retained_three_cable_comb",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_retained_three_cable_comb.3mf",
+      "sha256": "593d9c30d99a7c8d58d2f591b4f03d0bf0e1488f552242b947616bcf1197156b"
+    },
+    {
+      "bytes": 2360,
+      "canonical_float32_triangle_digest": "5dd75412e5ce75d827db3c6e58eb5c2c3bb3dcad89eb9ad494344296d57a2ed7",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_selected_front_first_u_box_cassette",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_selected_front_first_u_box_cassette.3mf",
+      "sha256": "a4fef2a2fc205f6841f5b0788c72d7908072eee53ad5aff867a7dc153037a8fe"
+    },
+    {
+      "bytes": 3626,
+      "canonical_float32_triangle_digest": "40f732f4c2a4cae6693f3d8de501d2bba8a92cdc69f2423f10697e8d9ddda790",
+      "kind": "individual_neutral_model_only_3mf",
+      "mesh_id": "r8_smooth_curved_core",
+      "path": "individual_model_only_3mf/MODEL_ONLY_r8_smooth_curved_core.3mf",
+      "sha256": "acbc2fa13b7dc7efc57f2e93e5fa8c4a9d12ea82ce051df38eb9cc6e2e9a7201"
+    },
+    {
+      "bytes": 60349,
+      "kind": "combined_neutral_model_only_3mf",
+      "path": "model_only_3mf/MODEL_ONLY_R8_QUALIFICATION_ALL_PARTS.3mf",
+      "sha256": "ecf9f10ad84722128d99055a91482976d47e168e3e1657ac1073101a46ee6bb2"
+    },
+    {
+      "bytes": 3184,
+      "canonical_float32_triangle_digest": "71b46492e4249adbba1c7d08c24693054375725d77cff85af3836b20c30d047c",
+      "kind": "individual_stl",
+      "mesh_id": "r8_clearance_key_0p2",
+      "path": "stl/r8_clearance_key_0p2.stl",
+      "sha256": "bdc8d2f4d45ec98df9bcabb7c81a2838b79641ce98e7bbdee40b1a27f67ff593"
+    },
+    {
+      "bytes": 3184,
+      "canonical_float32_triangle_digest": "6b537b503e66242b7826de9758b4536a63306728a6045ad13dcac0e59ebdddd6",
+      "kind": "individual_stl",
+      "mesh_id": "r8_clearance_key_0p3",
+      "path": "stl/r8_clearance_key_0p3.stl",
+      "sha256": "cc4f3aa1e66fe51d30ace10bcf259248d5216ef445bcc984ac44d1a02c76e54e"
+    },
+    {
+      "bytes": 3184,
+      "canonical_float32_triangle_digest": "7fb21c05a193853aa8d428fdf5ebae0c381487d2e024cdecbeb1723255858d9a",
+      "kind": "individual_stl",
+      "mesh_id": "r8_clearance_key_0p4",
+      "path": "stl/r8_clearance_key_0p4.stl",
+      "sha256": "92c1b673523921b72868b62166fb3515cb538bcdcbd1e4abb82d5b2128e6f45e"
+    },
+    {
+      "bytes": 3084,
+      "canonical_float32_triangle_digest": "b5c161e4ac436cc656eeb4c2a4026c14ccba4bb8cf0dbedabcd7ef9ae4646f88",
+      "kind": "individual_stl",
+      "mesh_id": "r8_clearance_key_0p5",
+      "path": "stl/r8_clearance_key_0p5.stl",
+      "sha256": "4b4bdc568f2092c4291af1194fcc23c2f9600bd3350f28faf67249a7b6ba41d3"
+    },
+    {
+      "bytes": 14984,
+      "canonical_float32_triangle_digest": "58596262de9677d180d4e3af7562abbedb410a7dacbeb3927d7c0360f0e29ffa",
+      "kind": "individual_stl",
+      "mesh_id": "r8_clearance_ladder_receiver",
+      "path": "stl/r8_clearance_ladder_receiver.stl",
+      "sha256": "edcc0ca5a2fb8a959de5bf70db305b10627f3c78a890adc6c72dd4bc0512cabf"
+    },
+    {
+      "bytes": 20484,
+      "canonical_float32_triangle_digest": "fd90555b3b46e84b23de7691642d56647feaeead82cba38ad725c47850b24294",
+      "kind": "individual_stl",
+      "mesh_id": "r8_curved_eligible_d_frame_mount",
+      "path": "stl/r8_curved_eligible_d_frame_mount.stl",
+      "sha256": "97a775f434fc64b87d3b620288d0f53855e12335e760fc7ffe42934a09212c79"
+    },
+    {
+      "bytes": 1684,
+      "canonical_float32_triangle_digest": "34dcc6ba240032cc88c7273a48b2537cb22388e7aff01b95c91985460fde72e2",
+      "kind": "individual_stl",
+      "mesh_id": "r8_equal_volume_straight_control",
+      "path": "stl/r8_equal_volume_straight_control.stl",
+      "sha256": "eda61ad703072473db1837e8fd267ebab8691e8e2ac492dce9de5b4ea7892d48"
+    },
+    {
+      "bytes": 87084,
+      "canonical_float32_triangle_digest": "39c0d448c7dd3025d0f2fa306ff90e2fe90c71c317f919a7dcb1c7f3a543613b",
+      "kind": "individual_stl",
+      "mesh_id": "r8_matched_heavy_coffer_control",
+      "path": "stl/r8_matched_heavy_coffer_control.stl",
+      "sha256": "e16aea0022bdbec3864007bb7e8e05e3a2f72e151529b8d724458b8092b24b51"
+    },
+    {
+      "bytes": 23384,
+      "canonical_float32_triangle_digest": "fb999e5a9c53ddee7bb11864bc0fe1471fcba06055e736303dd3c99c2433891e",
+      "kind": "individual_stl",
+      "mesh_id": "r8_mounted_retention_rail",
+      "path": "stl/r8_mounted_retention_rail.stl",
+      "sha256": "a2b2b6bbeda0949a0b1d51fe112e6a1887b097b4ea711e131f61595136dd4d4a"
+    },
+    {
+      "bytes": 7484,
+      "canonical_float32_triangle_digest": "ccf27d263c147c7c3bd54d08bb34243fce9ede9c30ba3fe202af75415a3fbfa3",
+      "kind": "individual_stl",
+      "mesh_id": "r8_retained_blank",
+      "path": "stl/r8_retained_blank.stl",
+      "sha256": "0b86b0cf8472cedc4e45564f0dbd64567d6db7bea996f994678392de26c9f303"
+    },
+    {
+      "bytes": 47984,
+      "canonical_float32_triangle_digest": "ed589bbe58e3a443f6880d4dc7531108474e3d92172f9e4bbedc3ab283aa5700",
+      "kind": "individual_stl",
+      "mesh_id": "r8_retained_shortened_coil_j_hook",
+      "path": "stl/r8_retained_shortened_coil_j_hook.stl",
+      "sha256": "888a38c45e24f88c2b7222f9e086326ea2c2ad6ea06cd63c9b132e71a84e05aa"
+    },
+    {
+      "bytes": 34684,
+      "canonical_float32_triangle_digest": "859bc987496b785c5b6fd02ca05bc9cb1f0efb22abbb2e5ca7d10730d92f08c0",
+      "kind": "individual_stl",
+      "mesh_id": "r8_retained_single_peg",
+      "path": "stl/r8_retained_single_peg.stl",
+      "sha256": "b1ed21e36b35f67ec9effe512832249af444ba005ea679f3fd49b581ac99c032"
+    },
+    {
+      "bytes": 91284,
+      "canonical_float32_triangle_digest": "913d8066d685c70e09b7b4fcbc756a1610f26448c7dac82577333f23674a61a1",
+      "kind": "individual_stl",
+      "mesh_id": "r8_retained_three_cable_comb",
+      "path": "stl/r8_retained_three_cable_comb.stl",
+      "sha256": "21e6fb95bef252d94735ea3827e51065c42133d4c4a9d3ea4017300abb52aeda"
+    },
+    {
+      "bytes": 4784,
+      "canonical_float32_triangle_digest": "5dd75412e5ce75d827db3c6e58eb5c2c3bb3dcad89eb9ad494344296d57a2ed7",
+      "kind": "individual_stl",
+      "mesh_id": "r8_selected_front_first_u_box_cassette",
+      "path": "stl/r8_selected_front_first_u_box_cassette.stl",
+      "sha256": "993e69be7f8b879128e3b86256436bc4c94a36a8d7d9b744ab13ef2c0ace8c30"
+    },
+    {
+      "bytes": 12484,
+      "canonical_float32_triangle_digest": "40f732f4c2a4cae6693f3d8de501d2bba8a92cdc69f2423f10697e8d9ddda790",
+      "kind": "individual_stl",
+      "mesh_id": "r8_smooth_curved_core",
+      "path": "stl/r8_smooth_curved_core.stl",
+      "sha256": "e728ec5e5fd5abcc81ce7fe7615eae8431e59aed1c7bd06e55c961828bfec56d"
+    },
+    {
+      "bytes": 51627,
+      "kind": "validation_report",
+      "path": "validation.json",
+      "sha256": "bb6ec49f5cab03cf21443bcbab5f387b64d62703d3b447ea9881033c7dd1cb7e"
+    }
+  ],
+  "installed_release_allowed": false,
+  "load_rating_allowed": false,
+  "manifest_filename": "manifest.json",
+  "material": "PETG only",
+  "package_id": "r8_16b_petg_qualification_v1",
+  "petg_a1_mini_candidate_settings": {
+    "brim_mm": 5.0,
+    "brim_object_gap_mm": 0.1,
+    "build_volume_mm": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "drying_duration_range_h": [
+      6.0,
+      8.0
+    ],
+    "drying_temperature_range_c": [
+      60.0,
+      65.0
+    ],
+    "fan_percent_range": [
+      10,
+      30
+    ],
+    "filament": "SUNLU PETG black",
+    "filament_preset": "SUNLU PETG @BBL A1M 0.4 nozzle",
+    "first_layer_nozzle_temperature_c": 250.0,
+    "flow_ratio": 0.94,
+    "infill_pattern": "grid",
+    "infill_percent": 25,
+    "layer_height_mm": 0.2,
+    "material": "PETG only",
+    "maximum_volumetric_speed_mm3_s": 9.0,
+    "nozzle_mm": 0.4,
+    "other_layer_nozzle_temperature_c": 245.0,
+    "overhang_fan_percent": 90,
+    "printer": "Bambu Lab A1 mini",
+    "scale_percent": 100.0,
+    "status": "candidate values to enter and verify manually in Bambu Studio; not embedded",
+    "textured_pei_bed_temperature_c": 60.0,
+    "wall_loops": 6
+  },
+  "physical_qualification_complete": false,
+  "production_ready": false,
+  "qualification_object_count": 15,
+  "qualification_only": true,
+  "rated_load_kg": 0.0,
+  "rated_load_lb": 0.0,
+  "scale_percent": 100.0,
+  "schema_version": 1,
+  "source_sha_bundle": {
+    "algorithm": "sha256",
+    "bundle_sha256": "2b4f5aa29b7a13ed977ba19b0fea88348e71b68d376ba72649ea951319461bc3",
+    "records": [
+      {
+        "bytes": 6772,
+        "path": "development/r8/config.json",
+        "sha256": "1d39d74716e6642c3fbe903dcee71520ff2ac8bc255a80310b92211f0c1dd5af"
+      },
+      {
+        "bytes": 952,
+        "path": "development/r8/FROZEN_BASELINES.json",
+        "sha256": "703b19b3116b57aeb864740d95e2cd30213c14e33d26afcf80683990d646696c"
+      },
+      {
+        "bytes": 16062,
+        "path": "development/r8/design_math.py",
+        "sha256": "a95248c22a0ae4cf66510e5aeee34ea7a8f76fb02252fddc0ea2d769c7f47acf"
+      },
+      {
+        "bytes": 25287,
+        "path": "development/r8/shelf_geometry.py",
+        "sha256": "23c9c4497a2b948196156c44f36bcb57480ceb9f7c7aae3da58ce91a1ceb6379"
+      },
+      {
+        "bytes": 20538,
+        "path": "development/r8/accessory_geometry.py",
+        "sha256": "8b4926eb416f540c57f25cd0e1116191669af33400e3ed5486ff261cd9e3fca2"
+      },
+      {
+        "bytes": 23566,
+        "path": "development/r8/interface_geometry.py",
+        "sha256": "6b6acf19c18ba8adfc03fe4dc629800b602a26ff1bd4e507873ef97429ef0306"
+      },
+      {
+        "bytes": 25019,
+        "path": "development/r8/model_io.py",
+        "sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b"
+      },
+      {
+        "bytes": 32390,
+        "path": "development/r8/generate_qualification.py",
+        "sha256": "f1905a4f28808c37c882b4c9942638ce516aa90d27c03de51f87e508234feb36"
+      }
+    ]
+  },
+  "unresolved_blockers": [
+    "project.qualification_only",
+    "project.installed_release_allowed",
+    "project.physical_qualification_complete",
+    "project.production_ready",
+    "project.load_rating_allowed",
+    "project.tested_load_rating_exists",
+    "project.wall_bores_emitted",
+    "project.zero_rated_load",
+    "unresolved_inputs.wall.allowable_anchor_loads",
+    "unresolved_inputs.wall.blocking_locations_mm",
+    "unresolved_inputs.wall.construction",
+    "unresolved_inputs.wall.framing_material_and_grade",
+    "unresolved_inputs.wall.stud_center_locations_mm",
+    "unresolved_inputs.wall.substrate_thickness_mm",
+    "unresolved_inputs.hardware.approved_fastener_schedule",
+    "unresolved_inputs.hardware.driver_access_envelope_mm",
+    "unresolved_inputs.hardware.minimum_verified_embedment_mm",
+    "unresolved_inputs.hardware.pilot_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_head_diameter_mm",
+    "unresolved_inputs.hardware.structural_screw_length_mm",
+    "unresolved_inputs.hardware.structural_screw_manufacturer",
+    "unresolved_inputs.hardware.structural_screw_model",
+    "unresolved_inputs.hardware.washer_outer_diameter_mm",
+    "unresolved_inputs.field.corner_datum_uncertainty_mm",
+    "unresolved_inputs.field.door_trim_clearance_mm",
+    "unresolved_inputs.field.inside_corner_angle_deg",
+    "unresolved_inputs.field.lower_shelf_top_elevation_mm",
+    "unresolved_inputs.field.maximum_wall_bow_mm",
+    "unresolved_inputs.field.outlet_clearance_mm",
+    "unresolved_inputs.field.return_clear_width_mm",
+    "unresolved_inputs.field.through_clear_width_mm",
+    "unresolved_inputs.field.upper_shelf_top_elevation_mm",
+    "qualification.creep_duration_days",
+    "qualification.creep_load_kg",
+    "qualification.destructive_test_protocol",
+    "qualification.proof_load_kg",
+    "qualification.prototype_test_load_kg",
+    "qualification.target_contents_load_kg",
+    "qualification.target_contents_load_lb",
+    "qualification.test_report",
+    "qualification.thermal_cycle_protocol",
+    "printer.drying_record",
+    "printer.filament_lot",
+    "printer.flow_calibration_record",
+    "shelf.cassette_saved_orientation_candidate.physical_printability_qualified",
+    "shelf.selected_cassette_physical_qualification_complete",
+    "wall_attachment.continuous_blocking_or_verified_equivalent_confirmed"
+  ],
+  "unsliced": true,
+  "validation_path": "validation.json"
+}

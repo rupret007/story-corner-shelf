@@ -1,0 +1,70 @@
+name: r6 field measurement update
+description: Record the wall, framing, storage, printer, PETG, and fastener facts required before physical qualification.
+title: "r6 field measurements: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not post addresses, faces, serial numbers, or other private information. Story Corner r6 is an experimental, unrated, all-PETG shelf body that still requires suitable metal structural screws into verified wood studs or purpose-installed blocking. A software-complete model package is not permission to print, drill, install, or load it.
+
+  - type: textarea
+    id: finished_walls
+    attributes:
+      label: Finished-wall geometry
+      description: Record limiting clear widths at the rear, middle, and front planes; usable depth; corner angle; wall bow; and datum uncertainty for both walls.
+    validations:
+      required: true
+
+  - type: textarea
+    id: vertical_zone
+    attributes:
+      label: Two-level vertical zone
+      description: Record the common level datum, outlet-top-to-ceiling distance, proposed shelf-top elevations, ceiling/trim/door clearance, and stored-item service clearance.
+    validations:
+      required: true
+
+  - type: textarea
+    id: framing
+    attributes:
+      label: Framing and hidden services
+      description: List every verified stud or blocking edge and center from the corner datum, material and thickness, wall finish thickness, locating method, protective plates, wiring, plumbing, and no-drill zones.
+    validations:
+      required: true
+
+  - type: textarea
+    id: storage
+    attributes:
+      label: Storage and target load
+      description: Record every bin's widest, deepest, and tallest outside dimensions; loaded weights; quantity; heaviest item; intended distribution; and target load for each arm and level.
+    validations:
+      required: true
+
+  - type: textarea
+    id: printer_material
+    attributes:
+      label: Printer and black PETG
+      description: Confirm printer, nozzle diameter and material, build plate, slicer version, exact black-PETG brand/product, filament condition, drying procedure, and calibrated flow/temperature settings.
+    validations:
+      required: true
+
+  - type: textarea
+    id: metal_fasteners
+    attributes:
+      label: Metal structural fasteners
+      description: Record exact screw type, shank and head/washer dimensions, length, thread embedment, driver envelope, and manufacturer data. Printed or hollow-wall anchors are not part of the primary load path.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Required acknowledgements
+      options:
+        - label: I understand the nominal 3 ft / 5 ft geometry is not a drilling map and every structural station must resolve to verified framing or blocking.
+          required: true
+        - label: I understand there is no tested load rating and no overhead installation is authorized by generated files, renderings, or passing software checks.
+          required: true
+        - label: I will complete the named coupons, actual-parent cycles, wall mockup, full-bay proof/creep/recovery tests, and teardown inspection before requesting physical release.
+          required: true
+        - label: I understand the model-only 3MF files contain no embedded G-code or approved printer profile.
+          required: true

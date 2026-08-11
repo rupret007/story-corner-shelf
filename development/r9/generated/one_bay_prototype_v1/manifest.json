@@ -1,0 +1,129 @@
+{
+  "artifact_records": [
+    {
+      "bytes": 1942,
+      "path": "ASSEMBLY.md",
+      "sha256": "43474a2c0881339615869af5ae841885500f266611bdd71101409464ab3e45f2"
+    },
+    {
+      "bytes": 74625,
+      "path": "R9_ONE_BAY_ASSEMBLY_REFERENCE.svg",
+      "sha256": "2b99baee4ad1504a235ddbac87d11c9131ebb8a9068c99167883cca6197d50ee"
+    },
+    {
+      "bytes": 2270,
+      "path": "README.md",
+      "sha256": "da7c03f2cfe155c0afa4b4339e78883ded8387496f3e977bbcd27ad85b839d03"
+    },
+    {
+      "bytes": 5066,
+      "path": "assembly_reference/R9_ONE_BAY_ASSEMBLED_REFERENCE_NOT_A_PRINT_PLATE.3mf",
+      "sha256": "9324702c0a3c9730a7956a934e290c53bdfa0697270a841339b8a1ddbc754917"
+    },
+    {
+      "bytes": 1590,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_front_beam.3mf",
+      "sha256": "89dcf329e162f19f6b054af1503427deb2b1d750329263a0da1e8ec2e013123e"
+    },
+    {
+      "bytes": 2061,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_left_compact_support.3mf",
+      "sha256": "a1bbfa30c9e3175cc560b7e6f6936aa835eeffb32886a20e6028cf3a4f49735a"
+    },
+    {
+      "bytes": 1590,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_rear_ledger.3mf",
+      "sha256": "bdb1f901bc74f2b8bce8c62273b32f5bb35d83c0471a01f92b04eb2127ae02a6"
+    },
+    {
+      "bytes": 2058,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_right_compact_support.3mf",
+      "sha256": "99dc41e8e9c6672b2994e9a2fdb11d9d3905dd65d312534a8b2dd13d8ee530e6"
+    },
+    {
+      "bytes": 3169,
+      "path": "individual_model_only_3mf/MODEL_ONLY_r9_one_bay_shelf_cassette.3mf",
+      "sha256": "877db4b2ef97b0707ebdfd17fe5206a13dc6d52c0f1f364018531d70a5358185"
+    },
+    {
+      "bytes": 4666,
+      "path": "model_only_3mf/R9_ONE_BAY_PRINTABLE_PARTS_CATALOG_NOT_A_PLATE.3mf",
+      "sha256": "29831652962c25bac389e8483ea93b40284b4c4eeb4a2654751535acd089be5d"
+    },
+    {
+      "bytes": 2284,
+      "path": "stl/r9_one_bay_front_beam.stl",
+      "sha256": "2ddaf45630218dcbab3afba4603d523d2d623369007de4e2f8971f1112572150"
+    },
+    {
+      "bytes": 5284,
+      "path": "stl/r9_one_bay_left_compact_support.stl",
+      "sha256": "8b91dd7820bb3e478552f56a3210f0c1822bc336d52a32b6cadda89ac75cf7c1"
+    },
+    {
+      "bytes": 2284,
+      "path": "stl/r9_one_bay_rear_ledger.stl",
+      "sha256": "2ddaf45630218dcbab3afba4603d523d2d623369007de4e2f8971f1112572150"
+    },
+    {
+      "bytes": 5284,
+      "path": "stl/r9_one_bay_right_compact_support.stl",
+      "sha256": "af03b9c6cb255254790bd441baa9076bed4b32fe3260b2163d1cec2896d078e7"
+    },
+    {
+      "bytes": 12284,
+      "path": "stl/r9_one_bay_shelf_cassette.stl",
+      "sha256": "e39b922f0c663a93ba3bbca5fbcb96053aea9f0476a9c9912dc7ba59f1e157ae"
+    },
+    {
+      "bytes": 7887,
+      "path": "validation.json",
+      "sha256": "411cada2e479e22f1f72cea9b7a06a3fadf112626bff6cd931bedf2265e11545"
+    }
+  ],
+  "package_id": "r9_tabletop_one_bay_prototype_v1",
+  "publication_contract": {
+    "manual_preview_and_explicit_print_approval_required": true,
+    "no_profile_or_gcode": true,
+    "no_wall_installation_or_load": true,
+    "qualification_only": true,
+    "unsliced": true
+  },
+  "source_records": [
+    {
+      "bytes": 17966,
+      "path": "one_bay_geometry.py",
+      "sha256": "6629d89795f1098b0f144b3b2e44db69f215381b4ca685b4d823d8a8d9c08e64"
+    },
+    {
+      "bytes": 4526,
+      "path": "render_one_bay_reference.py",
+      "sha256": "a8366f4c952669fcd093a963f560c673c3fd279f598ae8b45f52da8d6ec25fdd"
+    },
+    {
+      "bytes": 34451,
+      "path": "support_geometry.py",
+      "sha256": "487a7cb0be5cfd2742dbbfc91cb440d1245ae7530c4fc6a4373a6ae2f424c964"
+    },
+    {
+      "bytes": 32955,
+      "path": "design_math.py",
+      "sha256": "1832660b9dd7db2c3d3162c3aa72b9543fe67896f178098a0abc22dbb282f6cd"
+    },
+    {
+      "bytes": 2534,
+      "path": "model_io.py",
+      "sha256": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5"
+    },
+    {
+      "bytes": 10792,
+      "path": "config.json",
+      "sha256": "7e3021c2f514886abdcb9c7714e6eb925c0703390a7aa1ac79fe10f0920c6653"
+    },
+    {
+      "bytes": 15393,
+      "path": "generate_one_bay_prototype.py",
+      "sha256": "2b2717a8e84754986a79a8e472ea3242e5deb78a6904ddb1f2eaa72d89a0a864"
+    }
+  ]
+}

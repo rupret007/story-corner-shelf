@@ -1,0 +1,397 @@
+{
+  "embedded_print_profile_present": false,
+  "first_shelf_execution_phase": {
+    "equal_pitch_mm": 304.75,
+    "return_wall_deferred": true,
+    "run_id": "through",
+    "shelf_top_elevation_in": 68.0,
+    "station_centers_from_far_left_in": [
+      0.629921,
+      12.627953,
+      24.625984,
+      36.624016,
+      48.622047,
+      60.620079
+    ],
+    "support_count": 6,
+    "upper_84_in_shelf_deferred": true,
+    "wall_clear_length_in": 61.25,
+    "wall_installation_authorized": false
+  },
+  "full_measured_shelf_set_present": false,
+  "generated_gcode_present": false,
+  "geometry_records": [
+    {
+      "mesh_id": "r9_one_bay_left_compact_support",
+      "raw_extents_mm": [
+        152.399994,
+        161.399994,
+        32.0
+      ],
+      "required_build_volume_mm": [
+        166.599994,
+        175.599994,
+        32.0
+      ],
+      "saved_orientation": "broad_minimum_run_face_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            161.399994,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "7b289ef25e1366c9b01a9501e75a35eeacab91ed563228a12c6ff1f9605e5263",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          161.399994,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 172,
+        "vertex_count": 80,
+        "volume_mm3": 237417.816119,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "solid_volume_mm3": 237417.816119,
+      "support_required": false
+    },
+    {
+      "mesh_id": "r9_one_bay_right_compact_support",
+      "raw_extents_mm": [
+        152.399994,
+        161.399994,
+        32.0
+      ],
+      "required_build_volume_mm": [
+        166.599994,
+        175.599994,
+        32.0
+      ],
+      "saved_orientation": "broad_maximum_run_face_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            152.399994,
+            161.399994,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "5af19d376b81db561328fce3e3d28e4346f7e40d96d77340aeae7fe57e6945be",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          152.399994,
+          161.399994,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 172,
+        "vertex_count": 80,
+        "volume_mm3": 237417.816119,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "solid_volume_mm3": 237417.816119,
+      "support_required": false
+    },
+    {
+      "mesh_id": "r9_one_bay_rear_ledger",
+      "raw_extents_mm": [
+        112.0,
+        16.0,
+        30.0
+      ],
+      "required_build_volume_mm": [
+        126.2,
+        30.2,
+        30.0
+      ],
+      "saved_orientation": "complete_112x16_member_footprint_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            112.0,
+            16.0,
+            30.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "63e03e496a5aa4997cdde29ff9fe36ac798f7ebbf2c73b54e74875d8b1d62f70",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          112.0,
+          16.0,
+          30.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 44,
+        "vertex_count": 24,
+        "volume_mm3": 49920.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "solid_volume_mm3": 49920.0,
+      "support_required": false
+    },
+    {
+      "mesh_id": "r9_one_bay_front_beam",
+      "raw_extents_mm": [
+        112.0,
+        16.0,
+        30.0
+      ],
+      "required_build_volume_mm": [
+        126.2,
+        30.2,
+        30.0
+      ],
+      "saved_orientation": "complete_112x16_member_footprint_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            112.0,
+            16.0,
+            30.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "63e03e496a5aa4997cdde29ff9fe36ac798f7ebbf2c73b54e74875d8b1d62f70",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          112.0,
+          16.0,
+          30.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 44,
+        "vertex_count": 24,
+        "volume_mm3": 49920.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "solid_volume_mm3": 49920.0,
+      "support_required": false
+    },
+    {
+      "mesh_id": "r9_one_bay_shelf_cassette",
+      "raw_extents_mm": [
+        160.0,
+        152.399994,
+        30.0
+      ],
+      "required_build_volume_mm": [
+        174.2,
+        166.599994,
+        30.0
+      ],
+      "saved_orientation": "finished_top_face_on_plate",
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            160.0,
+            152.399994,
+            30.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "5d5ee164c5bc4a20df290ba83c6f9728e5df571cb70c26af41cb872624fc6803",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          160.0,
+          152.399994,
+          30.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 244,
+        "vertex_count": 124,
+        "volume_mm3": 138863.890033,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "solid_volume_mm3": 138863.890033,
+      "support_required": false
+    }
+  ],
+  "installed_target": {
+    "assembly_order": [
+      "place both handed compact supports upright on a padded table",
+      "lower the rear ledger vertically into both rear top-open sockets",
+      "lower the front beam vertically into both front top-open sockets",
+      "lower the shelf cassette vertically onto all four locator bosses",
+      "inspect the assembled bay unloaded; reverse these steps to remove"
+    ],
+    "bay_width_mm": 160.0,
+    "collision_free": true,
+    "deck_locator_clearance_per_face_mm": 0.4,
+    "maximum_pair_intersection_volume_mm3": 0.0,
+    "member_socket_clearance_per_face_mm": 0.4,
+    "service_path_maximum_intersection_volume_mm3": 0.0,
+    "service_paths_collision_free": true,
+    "shelf_depth_mm": 152.4,
+    "shelf_height_mm": 30.0
+  },
+  "measured_even_support_candidate": {
+    "drilling_coordinates_released": false,
+    "level_top_elevations_in": [
+      68.0,
+      84.0
+    ],
+    "mounting_bores_per_support": 3,
+    "primary_hollow_wall_anchor_authorized": false,
+    "runs": [
+      {
+        "clear_length_mm": 1555.75,
+        "equal_pitch_in": 11.998031,
+        "equal_pitch_mm": 304.75,
+        "roles": [
+          "outer_bookend",
+          "compact",
+          "compact",
+          "compact",
+          "compact",
+          "hidden_corner"
+        ],
+        "run_id": "through",
+        "station_centers_from_datum_mm": [
+          16.0,
+          320.75,
+          625.5,
+          930.25,
+          1235.0,
+          1539.75
+        ],
+        "support_count": 6
+      },
+      {
+        "clear_length_mm": 933.45,
+        "equal_pitch_in": 11.830052,
+        "equal_pitch_mm": 300.483333,
+        "roles": [
+          "hidden_corner",
+          "compact",
+          "compact",
+          "outer_bookend"
+        ],
+        "run_id": "return",
+        "station_centers_from_datum_mm": [
+          16.0,
+          316.483333,
+          616.966667,
+          917.45
+        ],
+        "support_count": 4
+      }
+    ],
+    "supports_per_level": 10,
+    "visible_supports_per_level": 8
+  },
+  "package_id": "r9_tabletop_one_bay_prototype_v2",
+  "part_order": [
+    "r9_one_bay_left_compact_support",
+    "r9_one_bay_right_compact_support",
+    "r9_one_bay_rear_ledger",
+    "r9_one_bay_front_beam",
+    "r9_one_bay_shelf_cassette"
+  ],
+  "physical_qualification_complete": false,
+  "production_ready": false,
+  "qualification_only": true,
+  "rated_load_kg": 0.0,
+  "rated_load_lb": 0.0,
+  "source_records": [
+    {
+      "bytes": 22934,
+      "path": "one_bay_geometry.py",
+      "sha256": "20017ff5f3a687fce61553053778d3689d09eaff17509653902108d9eaf9108e"
+    },
+    {
+      "bytes": 5816,
+      "path": "field_layout.py",
+      "sha256": "fd446068a82fe33dcde1423c09ebb033a7c613fec03bff632adaea898b9c5876"
+    },
+    {
+      "bytes": 7728,
+      "path": "render_one_bay_reference.py",
+      "sha256": "4eb6b2e2889c6d2ae12617d7bbc21483e9c4260d5dff6c635e16aaa7fa8f8bd1"
+    },
+    {
+      "bytes": 34451,
+      "path": "support_geometry.py",
+      "sha256": "487a7cb0be5cfd2742dbbfc91cb440d1245ae7530c4fc6a4373a6ae2f424c964"
+    },
+    {
+      "bytes": 32955,
+      "path": "design_math.py",
+      "sha256": "1832660b9dd7db2c3d3162c3aa72b9543fe67896f178098a0abc22dbb282f6cd"
+    },
+    {
+      "bytes": 2534,
+      "path": "model_io.py",
+      "sha256": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5"
+    },
+    {
+      "bytes": 10792,
+      "path": "config.json",
+      "sha256": "7e3021c2f514886abdcb9c7714e6eb925c0703390a7aa1ac79fe10f0920c6653"
+    },
+    {
+      "bytes": 26978,
+      "path": "generate_one_bay_prototype.py",
+      "sha256": "d496d131f916c9e459c602034fda647d2c7418d5d78dbef54e3d882dd30f3007"
+    }
+  ],
+  "supersedes_package_id": "r9_tabletop_one_bay_prototype_v1",
+  "supersession_reason": "members now print with their complete footprint on layer one and lower vertically into top-open support sockets",
+  "tabletop_one_bay_present": true,
+  "unsliced": true,
+  "wall_bores_emitted": true,
+  "wall_mounting_candidate": {
+    "bores_clear_member_sockets": true,
+    "bores_per_support": 3,
+    "drops_below_shelf_underside_mm": [
+      24.0,
+      80.0,
+      136.0
+    ],
+    "exact_fastener_or_anchor_selected": false,
+    "framing_or_blocking_verified": false,
+    "maximum_flat_washer_outer_diameter_mm": 20.0,
+    "round_fastener_clearance_diameter_mm": 7.0,
+    "wall_installation_authorized": false
+  }
+}
