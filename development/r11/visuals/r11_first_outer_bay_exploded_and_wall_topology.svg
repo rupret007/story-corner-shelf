@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100"
+     role="img" aria-labelledby="r11-title r11-desc">
+  <title id="r11-title">R11 first outer terminal bay exploded assembly and first-wall topology</title>
+  <desc id="r11-desc">Qualification-only schematic of the S0 fused two-socket support, S1 ordinary support, two 162.175 millimetre terminal half-decks with three reciprocal 55 millimetre overlap lanes, and one zero-credit keystone. It also shows the lower two millimetres, slide thirty-two millimetres wallward, settle two millimetres capture motion; its exact reverse; cable-module states; and the 1555.75 millimetre first-wall six-bay, seven-support topology. Printing, drilling, installation, and loading are not authorized and the rated load is zero.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, "Avenir Next", Arial, sans-serif; fill: #17202a; }
+      .title { font-size: 30px; font-weight: 800; letter-spacing: .3px; }
+      .banner { font-size: 20px; font-weight: 800; fill: #ffffff; letter-spacing: .7px; }
+      .panel-title { font-size: 20px; font-weight: 800; }
+      .label { font-size: 16px; font-weight: 700; }
+      .small { font-size: 14px; }
+      .micro { font-size: 12px; }
+      .struct { fill: #0b6b78; stroke: #064b54; stroke-width: 3; }
+      .struct-light { fill: #78c9c3; stroke: #064b54; stroke-width: 2; }
+      .bearing { fill: #8fd175; stroke: #2f6e32; stroke-width: 2; }
+      .candidate-path { fill: none; stroke: #2f6e32; stroke-width: 8; stroke-linecap: round; }
+      .motion { fill: none; stroke: #d57b00; stroke-width: 4; stroke-linecap: round; }
+      .reverse { fill: none; stroke: #7451a6; stroke-width: 3; stroke-dasharray: 9 7; stroke-linecap: round; }
+      .zero { fill: #f1b6bd; stroke: #8b2735; stroke-width: 2; }
+      .zero-text { fill: #8b2735; font-size: 13px; font-weight: 800; }
+      .support { fill: #38414a; stroke: #111820; stroke-width: 3; }
+      .support-land { fill: #8fd175; stroke: #2f6e32; stroke-width: 2; }
+      .panel { fill: #f7f8f8; stroke: #c6ced4; stroke-width: 2; }
+      .inset { fill: #ffffff; stroke: #c6ced4; stroke-width: 2; }
+      .datum { fill: none; stroke: #68737d; stroke-width: 2; stroke-dasharray: 7 7; }
+      .dimension { fill: none; stroke: #17202a; stroke-width: 2; }
+      .thin { fill: none; stroke: #68737d; stroke-width: 1.5; }
+      .terminal { fill: #0b6b78; stroke: #064b54; stroke-width: 2; }
+      .regular { fill: #468abf; stroke: #245f89; stroke-width: 2; }
+      .socket { fill: #ffffff; stroke: #17202a; stroke-width: 2; }
+    </style>
+    <marker id="arrow-motion" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#d57b00"/>
+    </marker>
+    <marker id="arrow-reverse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#7451a6"/>
+    </marker>
+    <marker id="arrow-dim" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M 0 5 L 10 0 L 10 10 z" fill="#17202a"/>
+    </marker>
+    <pattern id="crosslap" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#cceae7"/>
+      <rect width="4" height="12" fill="#78c9c3"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1100" fill="#eef1f2"/>
+  <rect x="0" y="0" width="1600" height="88" fill="#8b2735"/>
+  <text x="32" y="36" class="banner">QUALIFICATION-ONLY ENGINEERING SCHEMATIC · R11 v1</text>
+  <text x="32" y="68" class="banner">NO PRINT · NO DRILL · NO INSTALL · NO LOAD · RATED LOAD 0 kg / 0 lb</text>
+
+  <rect x="30" y="108" width="990" height="590" rx="14" class="panel"/>
+  <text x="55" y="144" class="title">First outer terminal bay — exploded</text>
+  <text x="55" y="170" class="small">One independently removable cell · schematic, not to scale · broad candidate load path highlighted green</text>
+
+  <!-- Left and right terminal half-decks, exploded vertically for legibility. -->
+  <g id="terminal-half-decks">
+    <text x="72" y="214" class="label">LEFT TERMINAL HALF-DECK · 162.175 mm</text>
+    <rect x="74" y="230" width="510" height="130" rx="5" class="struct-light"/>
+    <rect x="74" y="242" width="510" height="20" rx="4" class="struct"/>
+    <rect x="74" y="285" width="510" height="20" rx="4" class="struct"/>
+    <rect x="74" y="328" width="510" height="20" rx="4" class="struct"/>
+    <path d="M 96 252 H 554" class="candidate-path"/>
+    <path d="M 96 295 H 554" class="candidate-path"/>
+    <path d="M 96 338 H 554" class="candidate-path"/>
+    <text x="86" y="278" class="micro">rear / center / front full-height load lanes</text>
+
+    <text x="662" y="403" class="label">RIGHT TERMINAL HALF-DECK · 162.175 mm</text>
+    <rect x="430" y="418" width="510" height="130" rx="5" class="struct-light"/>
+    <rect x="430" y="430" width="510" height="20" rx="4" class="struct"/>
+    <rect x="430" y="473" width="510" height="20" rx="4" class="struct"/>
+    <rect x="430" y="516" width="510" height="20" rx="4" class="struct"/>
+    <path d="M 460 440 H 918" class="candidate-path"/>
+    <path d="M 460 483 H 918" class="candidate-path"/>
+    <path d="M 460 526 H 918" class="candidate-path"/>
+
+    <rect x="500" y="224" width="154" height="330" fill="url(#crosslap)" stroke="#064b54" stroke-width="3" stroke-dasharray="8 6"/>
+    <text x="512" y="376" class="label">55 mm</text>
+    <text x="512" y="395" class="small">reciprocal overlap</text>
+    <text x="512" y="412" class="small">across all 3 lanes</text>
+    <path d="M 480 382 H 625" class="motion" marker-end="url(#arrow-motion)"/>
+  </g>
+
+  <!-- Zero-credit keystone, intentionally separated from the green gravity path. -->
+  <g id="keystone-zero-credit">
+    <path d="M 675 276 L 713 259 L 751 276 L 740 334 L 686 334 Z" class="zero"/>
+    <text x="768" y="286" class="label">1 removable keystone</text>
+    <text x="768" y="307" class="zero-text">0 VERTICAL-LOAD CREDIT</text>
+    <text x="768" y="327" class="small">blocks half-to-half X separation only</text>
+    <path d="M 713 248 V 216" class="motion" marker-end="url(#arrow-motion)"/>
+  </g>
+
+  <!-- Supports shown without bore symbols: no drilling map exists. -->
+  <g id="supports-no-drilling-map">
+    <text x="64" y="586" class="label">S0 · fused two-socket outer support</text>
+    <path d="M 74 602 H 262 V 675 H 222 V 633 H 74 Z" class="support"/>
+    <rect x="74" y="592" width="188" height="14" class="support-land"/>
+    <rect x="48" y="615" width="30" height="58" class="support"/>
+    <rect x="53" y="624" width="20" height="16" rx="3" class="socket"/>
+    <rect x="53" y="648" width="20" height="16" rx="3" class="socket"/>
+    <text x="283" y="622" class="small">two keyed furniture sockets</text>
+    <text x="283" y="642" class="zero-text">cable furniture: 0 shelf-load credit</text>
+
+    <text x="651" y="586" class="label">S1 · ordinary support</text>
+    <path d="M 722 602 H 910 V 675 H 870 V 633 H 722 Z" class="support"/>
+    <rect x="722" y="592" width="188" height="14" class="support-land"/>
+    <text x="425" y="690" class="micro">No drilling map: bore positions intentionally omitted; drilling coordinates are not released.</text>
+  </g>
+
+  <rect x="1040" y="108" width="530" height="340" rx="14" class="panel"/>
+  <text x="1064" y="144" class="panel-title">Positive support capture motion</text>
+  <text x="1064" y="167" class="small">Joined bay moves as one body; keystone receives no capture credit.</text>
+  <line x1="1080" y1="359" x2="1532" y2="359" class="datum"/>
+  <text x="1080" y="384" class="micro">final broad support-bearing plane</text>
+  <path d="M 1130 330 H 1502 V 358 H 1130 Z" class="struct-light"/>
+  <path d="M 1250 340 V 370 H 1292 V 340" fill="#38414a" stroke="#111820" stroke-width="3"/>
+  <rect x="1245" y="320" width="52" height="20" rx="4" class="support"/>
+  <rect x="1239" y="310" width="64" height="13" rx="4" class="support"/>
+  <path d="M 1170 256 V 322" class="motion" marker-end="url(#arrow-motion)"/>
+  <text x="1064" y="226" class="label">1 · lower with 2 mm clearance</text>
+  <path d="M 1170 289 H 1370" class="motion" marker-end="url(#arrow-motion)"/>
+  <text x="1265" y="280" class="label">2 · slide 32 mm wallward</text>
+  <path d="M 1370 289 V 324" class="motion" marker-end="url(#arrow-motion)"/>
+  <text x="1324" y="305" class="label">3 · settle 2 mm</text>
+  <text x="1316" y="345" class="micro">behind solid 8.4 mm roof / shoulder</text>
+  <path d="M 1480 337 V 265 H 1244" class="reverse" marker-end="url(#arrow-reverse)"/>
+  <text x="1064" y="418" class="small">Exact reverse: lift 2 mm → slide 32 mm outward → lift clear.</text>
+
+  <rect x="1040" y="466" width="530" height="232" rx="14" class="panel"/>
+  <text x="1064" y="502" class="panel-title">S0 furniture states · 2 sockets</text>
+  <text x="1064" y="526" class="small">Service: lift 8 mm, move outward; installation is the exact reverse.</text>
+  <g transform="translate(1070 548)">
+    <rect x="0" y="0" width="44" height="108" class="support"/>
+    <rect x="10" y="16" width="24" height="25" rx="3" class="socket"/>
+    <rect x="10" y="67" width="24" height="25" rx="3" class="socket"/>
+    <rect x="58" y="16" width="42" height="25" rx="3" class="zero"/>
+    <rect x="58" y="67" width="42" height="25" rx="3" class="zero"/>
+    <text x="116" y="35" class="label">two flush blanks</text>
+    <text x="116" y="79" class="small">or</text>
+    <rect x="167" y="62" width="42" height="30" rx="3" class="zero"/>
+    <path d="M 209 69 h 29 v 13 h -18 v 17 h -11 z" class="zero"/>
+    <text x="248" y="80" class="label">blank + comb/hook</text>
+    <text x="116" y="106" class="zero-text">ALL CABLE MODULES: 0 SHELF-LOAD CREDIT</text>
+  </g>
+
+  <rect x="30" y="718" width="1540" height="350" rx="14" class="panel"/>
+  <text x="55" y="756" class="title">First-wall topology inset</text>
+  <text x="55" y="782" class="small">Measured wall L = 1555.75 mm · seven supports · six independent bays · maximum candidate pitch 254.00 mm</text>
+
+  <!-- Six-bay topology: each bay explicitly contains two halves. -->
+  <line x1="80" y1="834" x2="1510" y2="834" class="dimension" marker-start="url(#arrow-dim)" marker-end="url(#arrow-dim)"/>
+  <text x="705" y="823" class="label">1555.75 mm first wall</text>
+  <g id="first-wall-supports">
+    <rect x="78" y="856" width="22" height="128" class="support"/><text x="72" y="1006" class="micro">S0</text>
+    <rect x="313" y="856" width="22" height="128" class="support"/><text x="307" y="1006" class="micro">S1</text>
+    <rect x="548" y="856" width="22" height="128" class="support"/><text x="542" y="1006" class="micro">S2</text>
+    <rect x="783" y="856" width="22" height="128" class="support"/><text x="777" y="1006" class="micro">S3</text>
+    <rect x="1018" y="856" width="22" height="128" class="support"/><text x="1012" y="1006" class="micro">S4</text>
+    <rect x="1253" y="856" width="22" height="128" class="support"/><text x="1247" y="1006" class="micro">S5</text>
+    <rect x="1488" y="856" width="22" height="128" class="support"/><text x="1482" y="1006" class="micro">S6</text>
+  </g>
+  <g id="first-wall-half-decks">
+    <!-- Bay 0: two terminal halves. -->
+    <rect x="101" y="868" width="104" height="40" class="terminal"/><rect x="205" y="868" width="107" height="40" class="terminal"/>
+    <text x="150" y="894" class="micro" fill="#fff">T</text><text x="254" y="894" class="micro" fill="#fff">T</text>
+    <!-- Bays 1-4: eight regular halves. -->
+    <rect x="336" y="868" width="104" height="40" class="regular"/><rect x="440" y="868" width="107" height="40" class="regular"/>
+    <rect x="571" y="868" width="104" height="40" class="regular"/><rect x="675" y="868" width="107" height="40" class="regular"/>
+    <rect x="806" y="868" width="104" height="40" class="regular"/><rect x="910" y="868" width="107" height="40" class="regular"/>
+    <rect x="1041" y="868" width="104" height="40" class="regular"/><rect x="1145" y="868" width="107" height="40" class="regular"/>
+    <!-- Bay 5: two terminal halves. -->
+    <rect x="1276" y="868" width="104" height="40" class="terminal"/><rect x="1380" y="868" width="107" height="40" class="terminal"/>
+    <text x="1325" y="894" class="micro" fill="#fff">T</text><text x="1429" y="894" class="micro" fill="#fff">T</text>
+  </g>
+  <g id="first-wall-bay-labels">
+    <text x="184" y="934" class="small">bay 0</text><text x="419" y="934" class="small">bay 1</text>
+    <text x="654" y="934" class="small">bay 2</text><text x="889" y="934" class="small">bay 3</text>
+    <text x="1124" y="934" class="small">bay 4</text><text x="1359" y="934" class="small">bay 5</text>
+  </g>
+  <rect x="88" y="1024" width="19" height="19" class="terminal"/><text x="116" y="1039" class="small">4 terminal halves × 162.175 mm (both halves of bays 0 and 5)</text>
+  <rect x="570" y="1024" width="19" height="19" class="regular"/><text x="598" y="1039" class="small">8 regular halves × 154.325 mm</text>
+  <text x="940" y="1039" class="label">28-kit · 27 active max · 28 safe starts · 21 unverified batched target</text>
+
+  <text x="1464" y="1084" text-anchor="end" class="micro">R11 v1 · deterministic repository diagram · not a fabrication drawing</text>
+</svg>

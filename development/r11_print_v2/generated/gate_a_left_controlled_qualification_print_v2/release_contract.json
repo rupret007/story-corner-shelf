@@ -1,0 +1,293 @@
+{
+  "schema_version": "r11.gate-a-left-controlled-release-contract.v2",
+  "package_id": "r11_gate_a_left_controlled_qualification_print_v2",
+  "baseline_lock": "baseline_lock.json",
+  "selected_article_id": "r11_bay0_left_terminal_integrated_half_deck",
+  "selection": {
+    "allowed_copy_count": 1,
+    "allowed_plate_object_count": 1,
+    "left_terminal_only": true,
+    "right_half_authorized": false,
+    "catalog_authorized": false,
+    "supports_keystone_and_cable_articles_authorized": false
+  },
+  "slice_contract": {
+    "application": "Bambu Studio",
+    "application_version": "02.07.01.62",
+    "application_executable_sha256": "b022be6750898454803e9e07178b7c7446c0e5b4d148c593b4b56efde09ba281",
+    "application_executable_bytes": 253787536,
+    "printer_model": "Bambu Lab A1 mini",
+    "nozzle_diameter_mm": 0.4,
+    "nozzle_flow": "standard",
+    "plate_type": "Textured PEI Plate",
+    "process_preset": "0.20mm Strength @BBL A1M",
+    "layer_height_mm": 0.2,
+    "initial_layer_height_mm": 0.2,
+    "wall_loops": 6,
+    "sparse_infill_density_percent": 25,
+    "sparse_infill_pattern": "grid",
+    "top_shell_layers": 5,
+    "bottom_shell_layers": 3,
+    "support_enabled": false,
+    "support_build_plate_only": false,
+    "support_critical_regions_only": false,
+    "support_remove_small_overhang": true,
+    "brim_type": "outer",
+    "brim_width_mm": 5.0,
+    "brim_object_gap_mm": 0.1,
+    "nozzle_temperature_first_layer_c": 250,
+    "nozzle_temperature_other_layers_c": 245,
+    "bed_temperature_first_layer_c": 60,
+    "bed_temperature_other_layers_c": 60,
+    "flow_ratio": 0.94,
+    "maximum_volumetric_speed_mm3_s": 9.0,
+    "part_cooling_fan_min_percent": 10,
+    "part_cooling_fan_max_percent": 30,
+    "overhang_fan_percent": 90,
+    "bridge_speed_mm_s": 50,
+    "overhang_0_25_speed_mm_s": 0,
+    "overhang_25_50_speed_mm_s": 50,
+    "overhang_50_75_speed_mm_s": 30,
+    "overhang_75_100_speed_mm_s": 10,
+    "machine_start_gcode_sha256": "98b77ddf8f9dd85612adf93c87d82cb6618e952968ff12ada7f7109bfe4a977e",
+    "machine_end_gcode_sha256": "10a6b35a5b0236cc338b0e323a57255cd76a7b6bb7fceefaadce5d55dc30c877",
+    "change_filament_gcode_sha256": "7d97876d466c074e7ff166a29a790928e6cb2219b2cbc6c9896da2e986e55a65",
+    "layer_change_gcode_sha256": "137df44edc98f7192367ef747fa45b94e38f29286791277b8eccf64dc5af227e",
+    "time_lapse_gcode_sha256": "01b3039a61b288a88931d5ece9f2c41eb77753deaacaf617d4813e97cdd11a52",
+    "scale_percent_xyz": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "rotation_degrees_xyz": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "effective_profile_proof_contract": {
+    "native_export_format": "bambu_studio_full_effective_profile_json_v1",
+    "snapshot_schema_version": "r11.gate-a-left-effective-profile-snapshot.v1",
+    "approved_emitted_gcode_config": {
+      "bytes": 40428,
+      "sha256": "339fde3346204d32dd72ed466a4b14b1c5a16f21c9f4f6855f4f064ac50f8eea"
+    },
+    "approved_native_exports": {
+      "printer": {
+        "bytes": 904,
+        "sha256": "93a23775ba1956f096a73fba191f79b90d5e79b38b772e4a040b5975befc9a89"
+      },
+      "filament": {
+        "bytes": 633,
+        "sha256": "2ceeac51453172510f32c398adf4b8be3f7db09162a6b984a97fb7769ad62b26"
+      },
+      "process": {
+        "bytes": 813,
+        "sha256": "dfa70111bc798a7694ed300ceff66cb01d93e6e60a53561aeec94c065a066bae"
+      }
+    },
+    "installed_native_source_pins": {
+      "printer": {
+        "application_relative_path": "Contents/Resources/profiles/BBL/machine/Bambu Lab A1 mini 0.4 nozzle.json",
+        "bytes": 2466,
+        "sha256": "ca85210a9065eb658256385807cc715c3bb07727316a1be6818bfa6256bfbce8"
+      },
+      "filament": {
+        "application_relative_path": "Contents/Resources/profiles/BBL/filament/SUNLU/SUNLU PETG @BBL A1M.json",
+        "bytes": 376,
+        "sha256": "20f49fbb67911438554c2794b40f48e07b3e86cfe5bdb667222558e9e0afbf16"
+      },
+      "process": {
+        "application_relative_path": "Contents/Resources/profiles/BBL/process/0.20mm Strength @BBL A1M.json",
+        "bytes": 811,
+        "sha256": "839f32d1f3a9c3190898c079533f95cf47eb78a9a013d5a18dc87aecbcdb1dd8"
+      }
+    },
+    "printer": {
+      "type": "machine",
+      "name": "Bambu Lab A1 mini 0.4 nozzle",
+      "from": "native_bambu_export",
+      "version": "02.07.01.62",
+      "setting_id": "GM020",
+      "effective_settings": {
+        "printer_model": "Bambu Lab A1 mini",
+        "printer_variant": "0.4",
+        "nozzle_diameter_mm": 0.4,
+        "nozzle_material": "stainless_steel",
+        "nozzle_flow": "standard",
+        "plate_type": "Textured PEI Plate",
+        "machine_start_gcode_sha256": "98b77ddf8f9dd85612adf93c87d82cb6618e952968ff12ada7f7109bfe4a977e",
+        "machine_end_gcode_sha256": "10a6b35a5b0236cc338b0e323a57255cd76a7b6bb7fceefaadce5d55dc30c877",
+        "change_filament_gcode_sha256": "7d97876d466c074e7ff166a29a790928e6cb2219b2cbc6c9896da2e986e55a65",
+        "layer_change_gcode_sha256": "137df44edc98f7192367ef747fa45b94e38f29286791277b8eccf64dc5af227e",
+        "time_lapse_gcode_sha256": "01b3039a61b288a88931d5ece9f2c41eb77753deaacaf617d4813e97cdd11a52"
+      }
+    },
+    "filament": {
+      "type": "filament",
+      "name": "SUNLU PETG @BBL A1M 0.4 nozzle",
+      "from": "native_bambu_export",
+      "version": "02.07.01.62",
+      "setting_id": "GFSNL08",
+      "effective_settings": {
+        "brand": "SUNLU",
+        "material": "PETG",
+        "color": "black",
+        "diameter_mm": 1.75,
+        "nozzle_temperature_first_layer_c": 250,
+        "nozzle_temperature_other_layers_c": 245,
+        "bed_temperature_first_layer_c": 60,
+        "bed_temperature_other_layers_c": 60,
+        "flow_ratio": 0.94,
+        "maximum_volumetric_speed_mm3_s": 9.0,
+        "part_cooling_fan_min_percent": 10,
+        "part_cooling_fan_max_percent": 30,
+        "overhang_fan_percent": 90
+      }
+    },
+    "process": {
+      "type": "process",
+      "name": "0.20mm Strength @BBL A1M",
+      "from": "native_bambu_export",
+      "version": "02.07.01.62",
+      "setting_id": "GP046",
+      "effective_settings": {
+        "layer_height_mm": 0.2,
+        "initial_layer_height_mm": 0.2,
+        "wall_loops": 6,
+        "sparse_infill_density_percent": 25,
+        "sparse_infill_pattern": "grid",
+        "top_shell_layers": 5,
+        "bottom_shell_layers": 3,
+        "support_enabled": false,
+        "support_build_plate_only": false,
+        "support_critical_regions_only": false,
+        "support_remove_small_overhang": true,
+        "brim_type": "outer",
+        "brim_width_mm": 5.0,
+        "brim_object_gap_mm": 0.1,
+        "bridge_speed_mm_s": 50,
+        "overhang_0_25_speed_mm_s": 0,
+        "overhang_25_50_speed_mm_s": 50,
+        "overhang_50_75_speed_mm_s": 30,
+        "overhang_75_100_speed_mm_s": 10
+      }
+    },
+    "gcode_config_exact_controlled_values": {
+      "printer_model": "Bambu Lab A1 mini",
+      "nozzle_diameter": "0.4",
+      "curr_bed_type": "Textured PEI Plate",
+      "layer_height": "0.2",
+      "initial_layer_print_height": "0.2",
+      "wall_loops": "6",
+      "sparse_infill_density": "25%",
+      "sparse_infill_pattern": "grid",
+      "top_shell_layers": "5",
+      "bottom_shell_layers": "3",
+      "enable_support": "0",
+      "support_on_build_plate_only": "0",
+      "support_critical_regions_only": "0",
+      "support_remove_small_overhang": "1",
+      "brim_type": "outer_only",
+      "brim_width": "5",
+      "brim_object_gap": "0.1",
+      "nozzle_temperature_initial_layer": "250",
+      "nozzle_temperature": "245",
+      "hot_plate_temp_initial_layer": "60",
+      "hot_plate_temp": "60",
+      "filament_flow_ratio": "0.94",
+      "filament_max_volumetric_speed": "9",
+      "fan_min_speed": "10",
+      "fan_max_speed": "30",
+      "overhang_fan_speed": "90",
+      "bridge_speed": "50",
+      "overhang_1_4_speed": "0",
+      "overhang_2_4_speed": "50",
+      "overhang_3_4_speed": "30",
+      "overhang_4_4_speed": "10"
+    }
+  },
+  "filament_contract": {
+    "brand": "SUNLU",
+    "material": "PETG",
+    "color": "black",
+    "diameter_mm": 1.75,
+    "product_asin": "B0D1KC72YP",
+    "project_filament_mapping": "SUNLU PETG @BBL A1M 0.4 nozzle",
+    "lot_required": true,
+    "structured_completed_drying_record_required": true,
+    "drying_temperature_c": 50.0,
+    "drying_duration_hours_minimum": 6.0,
+    "drying_duration_hours_maximum": 8.0
+  },
+  "physical_printer_contract": {
+    "model": "Bambu Lab A1 mini",
+    "device_serial_sha256": "a3c07a6f58e39c108ea8f0ee1d96e9582d00a8b9c7973195e26fe2625ff525d8",
+    "base_firmware_version": "01.08.01.00",
+    "nozzle_diameter_mm": 0.4,
+    "nozzle_material": "stainless_steel",
+    "module_firmware": {
+      "esp32_software_version": "01.16.41.96",
+      "esp32_hardware_revision": "AP05",
+      "motion_controller_software_version": "00.00.34.17",
+      "motion_controller_hardware_revision": "MC02",
+      "motion_controller_loader_revision_suffix": ".32",
+      "toolhead_software_version": "00.01.07.73",
+      "toolhead_hardware_revision": "TH03",
+      "toolhead_loader_revision_suffix": ".26"
+    }
+  },
+  "permission_contract": {
+    "exact_question": "Start this exact one-piece Gate A-left qualification print now?",
+    "exact_affirmative_response": "yes",
+    "maximum_age_seconds": 300,
+    "single_use": true,
+    "consume_before_send_attempt": true,
+    "failed_cancelled_rejected_or_ambiguous_send_still_consumes": true,
+    "retry_requires_new_attempt_reslice_review_live_check_and_permission": true
+  },
+  "hard_boundary": {
+    "static_print_authorized": false,
+    "static_effective_print_authorized": false,
+    "drilling_coordinates_released": false,
+    "drilling_schedule_released": false,
+    "wall_installation_authorized": false,
+    "test_load_authorized": false,
+    "stored_load_authorized": false,
+    "production_printing_authorized": false,
+    "full_wall_printing_authorized": false,
+    "rated_load_kg": 0.0,
+    "rated_load_lb": 0.0
+  },
+  "runtime_evidence_policy": {
+    "must_remain_outside_repository": true,
+    "credentials_forbidden": true,
+    "repository_gcode_toolpath_and_profile_payloads_forbidden": true,
+    "external_exact_payload_evidence_required_but_never_published": true,
+    "approved_external_profile_payloads_verified_by_content_size_and_sha256": true,
+    "all_slicer_warnings_must_be_recorded_verbatim": true,
+    "unresolved_warning_blocks": true,
+    "live_state_and_permission_expire": true,
+    "canonical_ledger_relative_to_os_account_database_home": ".local/state/office-closet-project/r11-gate-a-left-v2",
+    "canonical_ledger_requires_manual_identity_bound_initialization": true,
+    "attempt_job_gcode_and_permission_identities_spent_at_permit_issue": true,
+    "all_external_payloads_read_once_by_no_follow_fd_snapshot": true,
+    "live_state_requires_distinct_telemetry_plate_nozzle_spool_and_drying_provenance": true,
+    "flat_live_state_fields_cannot_self_attest": true,
+    "sliced_archive_gcode_and_config_are_trusted_derivations": true,
+    "send_requires_lock_scoped_consumption_and_same_open_content_addressed_blob": true,
+    "physical_printer_serial_stored_as_sha256_only": true,
+    "firmware_version_exactly_reviewed_and_job_permission_bound": true
+  },
+  "static_package_allowlist": [
+    "README.md",
+    "baseline_lock.json",
+    "release_contract.json",
+    "schemas/attempt_evidence.schema.json",
+    "schemas/ephemeral_permit.schema.json",
+    "schemas/fresh_permission.schema.json",
+    "schemas/send_attempt_consumption.schema.json",
+    "status.json",
+    "manifest.json"
+  ]
+}

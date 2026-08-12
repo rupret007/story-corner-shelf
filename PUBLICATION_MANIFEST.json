@@ -162,28 +162,28 @@
       "source_scope": "staged_r6"
     },
     {
-      "bytes": 10177,
+      "bytes": 12699,
       "destination": "PRINT_ME_FIRST.md",
       "mode": "0644",
-      "sha256": "7ca8bccb20b81d55c308b60215d60c9cdd979a8954a145ebce5656277b012739",
+      "sha256": "0fefbefeb4efb8658457f63b71064c60c9608045431a690a0085b4d4fae8f59d",
       "source": "docs/PRINT_ME_FIRST.md",
-      "source_scope": "staged_r6"
+      "source_scope": "current_router_overlay"
     },
     {
-      "bytes": 3588,
+      "bytes": 6289,
       "destination": "PROGRESS.md",
       "mode": "0644",
-      "sha256": "ab9dab64da2df105bd9e3d5b9afa6d61c4ed9c38a076723b76ac71611f8145a7",
+      "sha256": "e0b96cabb9ad3caae5af738b3107c31e843e3261236dd950e2263e8ac4ee3e57",
       "source": "PROGRESS.md",
-      "source_scope": "staged_r6"
+      "source_scope": "current_router_overlay"
     },
     {
-      "bytes": 11914,
+      "bytes": 15613,
       "destination": "README.md",
       "mode": "0644",
-      "sha256": "e7e9c5a13e1fe3c31ebc8cd5e3c153d755f67e19756de3858527ff1f8eda6ca0",
+      "sha256": "af5fac4a55178dcfd17145b4566008abdbf85c45d2a501be499696eaebf05749",
       "source": "docs/README.md",
-      "source_scope": "staged_r6"
+      "source_scope": "current_router_overlay"
     },
     {
       "bytes": 2300,
@@ -314,20 +314,20 @@
       "source_scope": "staged_r6"
     },
     {
-      "bytes": 10177,
+      "bytes": 12699,
       "destination": "docs/PRINT_ME_FIRST.md",
       "mode": "0644",
-      "sha256": "7ca8bccb20b81d55c308b60215d60c9cdd979a8954a145ebce5656277b012739",
+      "sha256": "0fefbefeb4efb8658457f63b71064c60c9608045431a690a0085b4d4fae8f59d",
       "source": "docs/PRINT_ME_FIRST.md",
-      "source_scope": "staged_r6"
+      "source_scope": "current_router_overlay"
     },
     {
-      "bytes": 11914,
+      "bytes": 15613,
       "destination": "docs/README.md",
       "mode": "0644",
-      "sha256": "e7e9c5a13e1fe3c31ebc8cd5e3c153d755f67e19756de3858527ff1f8eda6ca0",
+      "sha256": "af5fac4a55178dcfd17145b4566008abdbf85c45d2a501be499696eaebf05749",
       "source": "docs/README.md",
-      "source_scope": "staged_r6"
+      "source_scope": "current_router_overlay"
     },
     {
       "bytes": 6836,
@@ -1719,7 +1719,7 @@
   "schema_version": 1,
   "software_model_publication_eligible": true,
   "tested_load_rating_exists": false,
-  "total_bytes_excluding_manifest": 18683464,
+  "total_bytes_excluding_manifest": 18698607,
   "verification": {
     "assembled_complete_test_suite_passed": true,
     "assembled_full_release_check_passed": true,

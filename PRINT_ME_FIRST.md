@@ -1,5 +1,40 @@
 # Print me first — r6 gate card
 
+> **CURRENT DEVELOPMENT IS R11, NOT R6.** Before doing anything, read
+> [development/r11/README.md](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11/README.md), its
+> [v1 print hold](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11/PRINT_FIRST.md), and the separate
+> [Gate A-left v2 control overlay](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11_print_v2/PRINT_GATE_A_LEFT.md).
+> The current first-wall design uses the measured **1555.75 mm** wall.
+> The immutable R11 v1 neutral bundle is model-only and never
+> print-authorized. The checked-in v2 package is also non-authorizing; it can
+> support only one external, exact-job, fresh, single-use permit for the exact
+> bay-0 **left** terminal half-deck, quantity one. That permit must be consumed
+> before one Send attempt. **No print is authorized by the checked-in files
+> themselves.** The permit is consumed even when the attempt fails or is
+> cancelled, rejected, or ambiguous, and cannot be reused. Every retry needs a
+> new slice, review, live-state check, and fresh permission.
+>
+> Real-world observations now live in the separate
+> [beginner physical guide](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11_physical/README.md) and
+> [append-only physical record](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11_physical/PHYSICAL_RECORD.md).
+> The left terminal half-deck was printed, cooled, and removed; the user reports
+> no rocking, no visible finger flex, and no sanding. A later right-half job was
+> initiated outside the frozen left-only v2 overlay, but its completed-part
+> outcome has not yet been recorded. That does not retroactively authorize it
+> or change v1/v2. Once both halves are cool and inspected, the next reviewed
+> action is an **unloaded flat-table dry-fit**, never wall work or a load test.
+>
+> Full-wall planning remains **28 kit articles**, at most **27 simultaneously
+> installed**, **28 safe unbatched starts**, and an
+> **unverified 21-start batched target**. Neither v1 nor v2 authorizes drilling, wall installation,
+> test or stored load, production/full-wall printing, or a nonzero rating
+> (**0 kg / 0 lb**).
+>
+> This R6 gate card is retained as historical/frozen evidence, along with the
+> R7-R10 trees under `development/`. It cannot authorize or define an R11 job.
+> A standalone historical R6 publication may omit the `development/` tree; use
+> the full source repository for current R11 work.
+
 > **STOP: Story Corner r6 is experimental, unrated, and not released for
 > overhead use. There is no tested load rating. Production wall holes are
 > blocked. Do not print the complete set, drill the wall, install the shelf, or

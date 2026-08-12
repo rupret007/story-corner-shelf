@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "sha256",
+  "tree_hash_record_format": "UTF-8 relative POSIX path + NUL + decimal byte count + NUL + lowercase file SHA-256 + LF; records sorted by relative path",
+  "tree_hash_exclusions": [
+    "any __pycache__ directory",
+    "*.pyc",
+    ".DS_Store"
+  ],
+  "rule": "R11 development must not modify any frozen R10 byte.",
+  "baselines": {
+    "r10": {
+      "path": "../r10",
+      "source_commit": "9a36df75ac1979193fbd56637c0dfa0aff1ce285",
+      "git_tree_sha1": "c4989cebcd990011f6255d00fea15060d00c6c85",
+      "file_count": 73,
+      "byte_count": 3639668,
+      "tree_sha256": "8146ceac7d392529cc41ce75fbd01ecf8a160a742843b074f4822d7c62f3b5a2",
+      "config_sha256": "64aad8eee3bc7bbc7b75f7bb7e77fce94cfd8232d13a77c149b91685e3dcd081"
+    }
+  }
+}

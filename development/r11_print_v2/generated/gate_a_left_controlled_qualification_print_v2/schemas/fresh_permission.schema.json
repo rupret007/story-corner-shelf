@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:r11:gate-a-left:fresh-permission:v1",
+  "title": "R11 Gate A-left fresh human permission",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "permission_id",
+    "attempt_id",
+    "attempt_evidence_sha256",
+    "reviewed_job_digest",
+    "question_exact",
+    "response_exact",
+    "granted",
+    "granted_by",
+    "granted_at_utc",
+    "expires_at_utc"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "r11.gate-a-left-fresh-permission.v1"
+    },
+    "permission_id": {
+      "type": "string",
+      "pattern": "^r11-permission-[A-Za-z0-9][A-Za-z0-9._-]{7,95}$"
+    },
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^r11-gate-a-left-[A-Za-z0-9][A-Za-z0-9._-]{7,95}$"
+    },
+    "attempt_evidence_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "reviewed_job_digest": {
+      "$ref": "#/$defs/sha256"
+    },
+    "question_exact": {
+      "const": "Start this exact one-piece Gate A-left qualification print now?"
+    },
+    "response_exact": {
+      "const": "yes"
+    },
+    "granted": {
+      "const": true
+    },
+    "granted_by": {
+      "const": "human_user"
+    },
+    "granted_at_utc": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "expires_at_utc": {
+      "$ref": "#/$defs/utcTimestamp"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "utcTimestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]{1,6})?Z$"
+    }
+  }
+}

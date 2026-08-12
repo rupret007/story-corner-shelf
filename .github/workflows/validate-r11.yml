@@ -1,0 +1,88 @@
+name: Validate R11 integrated Lincoln qualification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: r11-integrated-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-r11:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install pinned geometry dependencies
+        run: python -m pip install --requirement requirements.txt
+
+      - name: Run the complete R11 contract suite
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONNOUSERSITE: "1"
+        run: python -I -B -m unittest discover -s development/r11/tests -p 'test_*.py'
+
+      - name: Run the physical handoff and documentation suite
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONNOUSERSITE: "1"
+        run: python -I -B -m unittest discover -s development/r11_physical/tests -p 'test_*.py'
+
+      - name: Require complete first-outer-bay geometry and source closure
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONNOUSERSITE: "1"
+        run: |
+          python -I -B - <<'PY'
+          import sys
+          from pathlib import Path
+
+          root = Path.cwd() / "development" / "r11"
+          sys.path.insert(0, str(root))
+          import release_status
+
+          gate = release_status.geometry_gate_report()
+          if gate["passed"] is not True:
+              raise SystemExit(
+                  "R11 first-outer-bay geometry is incomplete: "
+                  + "; ".join(gate["analytic_blockers"])
+              )
+          release_status.source_records()
+          PY
+
+      - name: Recheck frozen R10 predecessor bytes
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          PYTHONNOUSERSITE: "1"
+        run: |
+          python -I -B - <<'PY'
+          import sys
+          from pathlib import Path
+
+          root = Path.cwd() / "development" / "r11"
+          sys.path.insert(0, str(root))
+          import layout
+
+          evidence = layout.verify_frozen_r10()
+          if evidence["verified"] is not True:
+              raise SystemExit("R10 predecessor verification did not pass")
+          PY
+
+      - name: Require a read-only validation run
+        run: |
+          git diff --exit-code
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"

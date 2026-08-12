@@ -1,5 +1,50 @@
 # Story Corner
 
+> **CURRENT DEVELOPMENT ROUTER — frozen R11 engineering evidence plus a
+> separate physical handoff.** Historical/frozen R6-R10 evidence remains
+> preserved below and under `development/`. The qualification-only first-wall design at
+> [development/r11/README.md](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11/README.md) is for the measured
+> **1555.75 mm** wall. Its v1 neutral bundle is immutable, model-only, and
+> **never print-authorized**; read its
+> [v1 print hold](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11/PRINT_FIRST.md). For the separately controlled pathway covering
+> exactly one fail-fast tabletop attempt of the bay-0 **left** terminal
+> half-deck, quantity one, read the
+> [v2 overlay](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11_print_v2/README.md) and its
+> [Gate A-left contract](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11_print_v2/PRINT_GATE_A_LEFT.md).
+> The checked-in v2 package also never self-authorizes: any eligibility exists
+> only in an external, exact-job, fresh, single-use permit consumed before one
+> Send attempt. **No print is authorized by the checked-in files themselves.**
+> A failed, cancelled, rejected, or ambiguous attempt consumes
+> it; every retry requires a new slice, review, live-state check, and fresh
+> permission. Within that frozen overlay, the right half and every later
+> article remain blocked.
+>
+> The full-wall planning targets remain a **28-article supplied kit**, no more
+> than **27 articles simultaneously installed**, **28 safe unbatched starts**,
+> and an **unverified 21-start batched target**. Neither v1 nor v2 authorizes
+> wall drilling, installation, test load, stored load, production/full-wall
+> printing, or a nonzero load rating; the rating remains **0 kg / 0 lb**.
+>
+> Current real-world observations are recorded separately in the
+> [beginner physical guide](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11_physical/README.md) and
+> [append-only physical record](https://github.com/rupret007/story-corner-shelf/blob/main/development/r11_physical/PHYSICAL_RECORD.md), so the frozen v1/v2 evidence is not silently rewritten.
+> The bay-0 left terminal half-deck was printed, cooled, and removed; the user
+> reports that it lies flat without rocking, shows no visible finger flex, and
+> was not sanded. A later right-half job was initiated outside the frozen
+> left-only v2 overlay; its completed-part outcome has not yet been recorded.
+> Neither event retroactively changes v1/v2 or authorizes another print.
+> After the right half is cool, removed, and inspected, the next decision is an
+> **unloaded tabletop dry-fit of those two halves**, not bulk printing, wall
+> work, or load testing.
+>
+> Start with the physical guide and the current R11/v2 documents above, not
+> the historical R6 instructions below.
+>
+> The R6 material below and the R7-R10 trees under `development/` are preserved
+> historical/frozen evidence. They are not substitutes for an R11 part or
+> permission to print. A standalone historical R6 publication may omit the
+> `development/` tree; use the full source repository for current R11 work.
+
 Story Corner is a fitted, two-level, inside-corner shelf whose entire shelf
 body is printed in black PETG. The deck cassettes, tied-arcade halves,
 X-corbels with integral bearing caps, joinery, keeper strips, pins, cross-keys,
@@ -136,10 +181,10 @@ structural credit.
 
 ## Visual-intent assets
 
-The [exact 6 + 3 two-level rendering](assets/artist_rendering_all_petg_two_level_exact_6_plus_3.png)
-is the current visual-intent hero. The [earlier two-level rendering](assets/artist_rendering_all_petg_two_level.png)
+The [exact 6 + 3 two-level rendering](https://github.com/rupret007/story-corner-shelf/blob/main/assets/artist_rendering_all_petg_two_level_exact_6_plus_3.png)
+is the current visual-intent hero. The [earlier two-level rendering](https://github.com/rupret007/story-corner-shelf/blob/main/assets/artist_rendering_all_petg_two_level.png)
 is preserved as visual-development history, and the
-[rendering prompt](assets/artist_rendering_all_petg_two_level.prompt.md) records
+[rendering prompt](https://github.com/rupret007/story-corner-shelf/blob/main/assets/artist_rendering_all_petg_two_level.prompt.md) records
 the intended scene. Both images are illustrative only: generated drawings,
 schedules, and the manifest govern dimensions, bay counts, object counts, and
 geometry.
@@ -149,17 +194,17 @@ geometry.
 1. Read [PRINT_ME_FIRST.md](PRINT_ME_FIRST.md) and [SAFETY.md](SAFETY.md).
 2. Complete [MEASUREMENT_WORKSHEET.md](MEASUREMENT_WORKSHEET.md), including
    photos, framing verification, storage, printer, material, and fastener data.
-3. Review the governing [plan drawing](generated/drawings/plan_layout.svg),
-   [two-level layout](generated/drawings/two_level_vertical_layout.svg), and
-   [joinery sequence](generated/drawings/exploded_joinery.svg). Drawings govern;
+3. Review the governing [plan drawing](https://github.com/rupret007/story-corner-shelf/blob/main/generated/drawings/plan_layout.svg),
+   [two-level layout](https://github.com/rupret007/story-corner-shelf/blob/main/generated/drawings/two_level_vertical_layout.svg), and
+   [joinery sequence](https://github.com/rupret007/story-corner-shelf/blob/main/generated/drawings/exploded_joinery.svg). Drawings govern;
    renderings are visual intent only.
 4. Follow [TEST_PROTOCOL.md](TEST_PROTOCOL.md) before any overhead installation.
 5. Use [ASSEMBLY.md](ASSEMBLY.md) only after every hard gate has passed.
 
 The design rationale and exact load-path boundaries are in
 [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md). Research and the supplied-file
-audit are recorded in [REFERENCE_RESEARCH.md](REFERENCE_RESEARCH.md) and
-[REFERENCE_3MF_AUDIT.md](REFERENCE_3MF_AUDIT.md).
+audit are recorded in [REFERENCE_RESEARCH.md](https://github.com/rupret007/story-corner-shelf/blob/main/REFERENCE_RESEARCH.md) and
+[REFERENCE_3MF_AUDIT.md](https://github.com/rupret007/story-corner-shelf/blob/main/REFERENCE_3MF_AUDIT.md).
 
 ## Artifact status
 

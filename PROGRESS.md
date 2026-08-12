@@ -1,7 +1,52 @@
-# Story Corner r6 development checkpoints
+# Story Corner development checkpoints
 
 This log records software/design evidence only. It is not evidence of physical
 capacity, installation readiness, or a load rating.
+
+## Current development — frozen R11 evidence and separate physical handoff
+
+Historical/frozen R6-R10 evidence remains preserved; it is not a substitute
+for the current R11 source, physical record, or per-job control boundary. The
+controlling rating remains **0 kg / 0 lb**.
+
+Current work is routed through [development/r11/README.md](development/r11/README.md)
+and [development/r11/PRINT_FIRST.md](development/r11/PRINT_FIRST.md), with the
+separate one-attempt control pathway in
+[development/r11_print_v2/README.md](development/r11_print_v2/README.md) and
+[development/r11_print_v2/PRINT_GATE_A_LEFT.md](development/r11_print_v2/PRINT_GATE_A_LEFT.md).
+R11 is a qualification/development study for the measured **1555.75 mm** first
+wall. Its planning targets remain a **28-article supplied kit**, no more than
+**27 articles simultaneously installed**, **28 safe unbatched starts**, and an
+**unverified 21-start batched target**.
+
+The immutable v1 neutral bundle contains model-only qualification evidence and
+is never print-authorized. The isolated v2 checked-in package is also
+permanently non-authorizing. **No print is authorized by the checked-in files
+themselves.** It binds a controlled external pathway to exactly
+one bay-0 **left** terminal half-deck, quantity one: the exact final slice,
+Preview and live-state evidence, fresh exact human permission, and a fresh
+single-use permit must all bind the same job. The permit is consumed before
+one Send attempt, including a failed, cancelled, rejected, or ambiguous
+attempt. It is not reusable; every retry requires a new slice, review,
+live-state check, and fresh permission.
+
+Current real-world observations are kept outside those frozen trees in
+[development/r11_physical/README.md](development/r11_physical/README.md) and
+[development/r11_physical/PHYSICAL_RECORD.md](development/r11_physical/PHYSICAL_RECORD.md).
+The bay-0 left terminal half-deck was printed, cooled, and removed. The user
+reports that it lies flat without rocking, shows no visible finger flex, and
+was not sanded. A later bay-0 right-half print was initiated outside the frozen
+left-only overlay; its completed-part outcome is not yet recorded. These facts
+do not retroactively alter v1/v2. The next decision after both halves are cool
+and inspected is an unloaded tabletop dry-fit, not bulk printing.
+
+Neither v1 nor v2 authorizes drilling, wall installation, test load, stored
+load, production/full-wall printing, or a nonzero load rating; the rating
+remains **0 kg / 0 lb**. The R6 record below and the R7-R10 trees under
+`development/` remain historical/frozen and must not be substituted for
+current R11 geometry, evidence, or permission.
+
+## Historical R6 checkpoint
 
 ## 2026-08-09
 

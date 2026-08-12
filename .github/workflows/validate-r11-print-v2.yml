@@ -1,0 +1,214 @@
+name: Validate R11 Gate A-left print overlay v2
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: r11-print-v2-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-r11-print-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONNOUSERSITE: "1"
+      R11_V1_BEFORE: ${{ runner.temp }}/r11-v1-before.json
+      R11_V1_AFTER: ${{ runner.temp }}/r11-v1-after.json
+      R11_V2_BUILD_ONE: ${{ runner.temp }}/r11-v2-build-one-${{ github.run_id }}-${{ github.run_attempt }}
+      R11_V2_BUILD_TWO: ${{ runner.temp }}/r11-v2-build-two-${{ github.run_id }}-${{ github.run_attempt }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install pinned geometry dependencies
+        run: python -m pip install --requirement requirements.txt
+
+      - name: Run the existing complete R11 contract first
+        run: python -I -B -m unittest discover -s development/r11/tests -p 'test_*.py'
+
+      - name: Require complete R11 geometry, source closure, and frozen R10
+        run: |
+          python -I -B - <<'PY'
+          import sys
+          from pathlib import Path
+
+          root = Path.cwd() / "development" / "r11"
+          sys.path.insert(0, str(root))
+          import layout
+          import release_status
+
+          gate = release_status.geometry_gate_report()
+          if gate["passed"] is not True:
+              raise SystemExit(
+                  "R11 first-outer-bay geometry is incomplete: "
+                  + "; ".join(gate["analytic_blockers"])
+              )
+          release_status.source_records()
+          if layout.verify_frozen_r10()["verified"] is not True:
+              raise SystemExit("R10 predecessor verification did not pass")
+          PY
+
+      - name: Snapshot the immutable v1 bundle before v2 checks
+        run: |
+          python -I -B - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          root = Path("development/r11/generated/first_outer_actual_bay_qualification_v1")
+          digest = hashlib.sha256()
+          records = []
+          total = 0
+          for path in sorted(item for item in root.rglob("*") if item.is_file()):
+              if path.is_symlink():
+                  raise SystemExit(f"v1 bundle contains a symlink: {path}")
+              payload = path.read_bytes()
+              relative = path.relative_to(root).as_posix()
+              file_sha = hashlib.sha256(payload).hexdigest()
+              digest.update(relative.encode("utf-8"))
+              digest.update(b"\0")
+              digest.update(str(len(payload)).encode("ascii"))
+              digest.update(b"\0")
+              digest.update(file_sha.encode("ascii"))
+              digest.update(b"\n")
+              records.append({"path": relative, "bytes": len(payload), "sha256": file_sha})
+              total += len(payload)
+          evidence = {
+              "file_count": len(records),
+              "total_bytes": total,
+              "tree_sha256": digest.hexdigest(),
+              "manifest_sha256": hashlib.sha256((root / "manifest.json").read_bytes()).hexdigest(),
+              "records": records,
+          }
+          expected = {
+              "file_count": 33,
+              "total_bytes": 475553,
+              "tree_sha256": "af5f8a4b97e857fb0aeb08c40b5b576c05efe7b651d6555151518180377eec99",
+              "manifest_sha256": "bc267498314d37f1528b20e46727d90e8184270351f6a4e6fda7bcf82f986661",
+          }
+          if {key: evidence[key] for key in expected} != expected:
+              raise SystemExit("immutable v1 bundle identity changed before v2 validation")
+          Path(os.environ["R11_V1_BEFORE"]).write_text(
+              json.dumps(evidence, sort_keys=True, separators=(",", ":")) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Require the complete isolated v2 overlay
+        run: |
+          test -f development/r11_print_v2/control_contract.py
+          test -f development/r11_print_v2/generate_controlled_release.py
+          test -f development/r11_print_v2/tests/test_controlled_release.py
+          test -f development/r11_print_v2/generated/gate_a_left_controlled_qualification_print_v2/manifest.json
+
+      - name: Run the complete v2 fail-closed contract suite
+        run: python -I -B -m unittest discover -s development/r11_print_v2/tests -p 'test_*.py'
+
+      - name: Validate the checked-in static non-authorizing package
+        run: python -I -B development/r11_print_v2/generate_controlled_release.py --validate
+
+      - name: Build two fresh external v2 packages
+        run: |
+          python -I -B development/r11_print_v2/generate_controlled_release.py --output "$R11_V2_BUILD_ONE"
+          python -I -B development/r11_print_v2/generate_controlled_release.py --output "$R11_V2_BUILD_TWO"
+
+      - name: Require byte-identical external rebuilds
+        run: |
+          python -I -B - <<'PY'
+          import os
+          import sys
+          from pathlib import Path
+
+          root = Path.cwd() / "development" / "r11_print_v2"
+          sys.path.insert(0, str(root))
+          import control_contract as control
+
+          first = Path(os.environ["R11_V2_BUILD_ONE"])
+          second = Path(os.environ["R11_V2_BUILD_TWO"])
+          control.validate_static_package(first)
+          control.validate_static_package(second)
+          if control.tree_evidence(first) != control.tree_evidence(second):
+              raise SystemExit("two fresh v2 package trees are not byte-identical")
+          if control.artifact_records(first) != control.artifact_records(second):
+              raise SystemExit("two fresh v2 package artifact records differ")
+          PY
+
+      - name: Prove v1 identity is unchanged after every v2 check
+        run: |
+          python -I -B - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          root = Path("development/r11/generated/first_outer_actual_bay_qualification_v1")
+          digest = hashlib.sha256()
+          records = []
+          total = 0
+          for path in sorted(item for item in root.rglob("*") if item.is_file()):
+              if path.is_symlink():
+                  raise SystemExit(f"v1 bundle contains a symlink: {path}")
+              payload = path.read_bytes()
+              relative = path.relative_to(root).as_posix()
+              file_sha = hashlib.sha256(payload).hexdigest()
+              digest.update(relative.encode("utf-8"))
+              digest.update(b"\0")
+              digest.update(str(len(payload)).encode("ascii"))
+              digest.update(b"\0")
+              digest.update(file_sha.encode("ascii"))
+              digest.update(b"\n")
+              records.append({"path": relative, "bytes": len(payload), "sha256": file_sha})
+              total += len(payload)
+          evidence = {
+              "file_count": len(records),
+              "total_bytes": total,
+              "tree_sha256": digest.hexdigest(),
+              "manifest_sha256": hashlib.sha256((root / "manifest.json").read_bytes()).hexdigest(),
+              "records": records,
+          }
+          destination = Path(os.environ["R11_V1_AFTER"])
+          destination.write_text(
+              json.dumps(evidence, sort_keys=True, separators=(",", ":")) + "\n",
+              encoding="utf-8",
+          )
+          if Path(os.environ["R11_V1_BEFORE"]).read_bytes() != destination.read_bytes():
+              raise SystemExit("immutable v1 bundle changed during v2 validation")
+          PY
+
+      - name: Require repository and overlay hygiene
+        run: |
+          python -I -B - <<'PY'
+          from pathlib import Path
+
+          root = Path("development/r11_print_v2")
+          forbidden = []
+          for path in root.rglob("*"):
+              if path.is_dir() and path.name == "__pycache__":
+                  forbidden.append(path)
+              elif path.is_file() and (
+                  path.suffix.lower() in {".pyc", ".pyo", ".3mf", ".stl", ".gcode", ".bgcode", ".gco"}
+                  or path.name.endswith((".permit.json", ".consumed.json", ".issued.json", ".permission-used.json"))
+                  or path.name in {"attempt.json", "permission.json"}
+              ):
+                  forbidden.append(path)
+          if forbidden:
+              raise SystemExit("forbidden v2 cache/runtime/payload files: " + ", ".join(map(str, forbidden)))
+          PY
+          python -I -B development/r11_print_v2/generate_controlled_release.py --validate
+          git diff --exit-code
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"

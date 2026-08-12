@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:r11:gate-a-left:send-attempt-consumption:v1",
+  "title": "R11 Gate A-left atomic send-attempt consumption",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "permit_id",
+    "attempt_id",
+    "reviewed_job_digest",
+    "job_identity_sha256",
+    "gcode_payload_sha256",
+    "gcode_payload_bytes",
+    "consumed_at_utc",
+    "reason",
+    "permit_consumed",
+    "effective_print_authorized",
+    "send_attempt_may_be_made_once_after_this_atomic_record",
+    "failed_cancelled_rejected_or_ambiguous_still_consumed",
+    "hard_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "r11.gate-a-left-send-attempt-consumption.v1"
+    },
+    "permit_id": {
+      "type": "string"
+    },
+    "attempt_id": {
+      "type": "string"
+    },
+    "reviewed_job_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "job_identity_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gcode_payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gcode_payload_bytes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "consumed_at_utc": {
+      "type": "string"
+    },
+    "reason": {
+      "const": "atomic_consume_and_open_exact_content_addressed_send_payload"
+    },
+    "permit_consumed": {
+      "const": true
+    },
+    "effective_print_authorized": {
+      "const": false
+    },
+    "send_attempt_may_be_made_once_after_this_atomic_record": {
+      "const": true
+    },
+    "failed_cancelled_rejected_or_ambiguous_still_consumed": {
+      "const": true
+    },
+    "hard_boundary": {
+      "$ref": "ephemeral_permit.schema.json#/$defs/hardBoundary"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">R11 joint closeups: reciprocal laps, support capture, and keystone</title>
+  <desc id="desc">Three closeup diagrams explain the R11 shelf joint system. The first shows all three reciprocal lap rows sliding straight together between the left and right halves. The second is an independent side cutaway of the support capture, with the installation path of lower two millimeters, slide thirty-two millimeters wallward, then settle two millimeters, and the exact reverse removal path. The third shows that the keystone only locks the left and right halves against separation and carries no gravity load. Orange means motion, green means bearing or contact, and red means stop.</desc>
+
+  <defs>
+    <style>
+      .page { fill: #f6f8fa; }
+      .panel { fill: #ffffff; stroke: #24292f; stroke-width: 2; }
+      .panel-head { fill: #24292f; }
+      .heading { font: 700 42px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0d1117; }
+      .subheading { font: 500 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #57606a; }
+      .panel-title { font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
+      .label { font: 700 19px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #24292f; }
+      .onpart { font: 700 19px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
+      .small { font: 500 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #24292f; }
+      .tiny { font: 500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #57606a; }
+      .left { fill: #5c6370; stroke: #24292f; stroke-width: 2; }
+      .right { fill: #8c959f; stroke: #24292f; stroke-width: 2; }
+      .support { fill: #6e7781; stroke: #24292f; stroke-width: 2; }
+      .void { fill: #ffffff; stroke: #57606a; stroke-width: 2; }
+      .contact { fill: #2da44e; stroke: #1a7f37; stroke-width: 2; }
+      .contact-line { fill: none; stroke: #2da44e; stroke-width: 8; stroke-linecap: round; }
+      .motion { fill: none; stroke: #f28c28; stroke-width: 7; stroke-linecap: round; marker-end: url(#arrow-orange); }
+      .reverse { fill: none; stroke: #f28c28; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 11 8; marker-end: url(#arrow-orange); }
+      .gravity { fill: none; stroke: #57606a; stroke-width: 6; marker-end: url(#arrow-gray); }
+      .stop-box { fill: #ffebe9; stroke: #d1242f; stroke-width: 3; }
+      .stop { font: 800 19px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cf222e; }
+      .dimension { fill: #fff8c5; stroke: #bf8700; stroke-width: 2; }
+      .legend { fill: #ffffff; stroke: #d0d7de; stroke-width: 2; }
+    </style>
+    <marker id="arrow-orange" markerWidth="22" markerHeight="22" refX="20" refY="11" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L22,11 L0,22 Z" fill="#f28c28"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="24" markerHeight="24" refX="22" refY="12" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L24,12 L0,24 Z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <rect class="page" width="1600" height="900"/>
+  <text class="heading" x="50" y="58">Joint closeups — what each connection does</text>
+  <text class="subheading" x="50" y="92">Orange = motion  •  Green = bearing/contact  •  Red = STOP</text>
+  <text class="label" x="1130" y="50">WALL SIDE ↑</text>
+  <text class="label" x="1335" y="50">FRONT EDGE ↓</text>
+  <text class="tiny" x="1130" y="80">TOP views face you unless marked “side cutaway.”</text>
+
+  <!-- Closeup 1 -->
+  <g aria-label="Closeup 1: all three reciprocal lap rows">
+    <rect class="panel" x="35" y="120" width="500" height="680" rx="18"/>
+    <path class="panel-head" d="M53 120h464a18 18 0 0 1 18 18v52H35v-52a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="57" y="155">A  THREE RECIPROCAL LAP ROWS</text>
+    <text class="tiny" x="57" y="179">TOP VIEW • align all three before moving</text>
+
+    <text class="label" x="77" y="235">LEFT HALF</text>
+    <text class="label" x="367" y="235">RIGHT HALF</text>
+    <path class="left" d="M70 260h150v36h96v46h-96v52h96v46h-96v52h96v46h-96v36H70z"/>
+    <path class="right" d="M500 260H350v36h-96v46h96v52h-96v46h96v52h-96v46h96v36h150z"/>
+
+    <rect class="contact" x="305" y="300" width="20" height="38" rx="4"/>
+    <rect class="contact" x="305" y="398" width="20" height="38" rx="4"/>
+    <rect class="contact" x="305" y="496" width="20" height="38" rx="4"/>
+    <text class="label" x="326" y="326">ROW 1</text>
+    <text class="label" x="326" y="424">ROW 2</text>
+    <text class="label" x="326" y="522">ROW 3</text>
+    <path class="motion" d="M105 638H210"/>
+    <path class="motion" d="M465 638H360"/>
+    <text class="small" x="97" y="674">Slide both halves straight.</text>
+    <text class="small" x="97" y="700">No tilt, twist, or rocking.</text>
+    <rect class="stop-box" x="65" y="722" width="440" height="55" rx="10"/>
+    <text class="stop" x="86" y="755">STOP if any row binds or any finger flexes.</text>
+  </g>
+
+  <!-- Closeup 2 -->
+  <g aria-label="Closeup 2: independent support capture and reverse path">
+    <rect class="panel" x="550" y="120" width="500" height="680" rx="18"/>
+    <path class="panel-head" d="M568 120h464a18 18 0 0 1 18 18v52H550v-52a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="572" y="155">B  SUPPORT CAPTURE IS INDEPENDENT</text>
+    <text class="tiny" x="572" y="179">SIDE CUTAWAY • deck already joined and unloaded</text>
+
+    <rect class="support" x="595" y="330" width="86" height="330"/>
+    <rect class="support" x="681" y="560" width="275" height="100"/>
+    <path class="left" d="M615 260h360v74H615z"/>
+    <path class="void" d="M818 330h122v76H818z"/>
+    <path class="contact" d="M838 405h102v56H838z"/>
+    <path class="contact-line" d="M838 465h102"/>
+    <text class="label" x="630" y="247">ASSEMBLED DECK (TOP)</text>
+    <text class="small" x="604" y="694">PRINTED SUPPORT</text>
+    <text class="small" x="790" y="493">BEARING CONTACT</text>
+
+    <path class="motion" d="M971 226v43"/>
+    <path class="motion" d="M970 356H850"/>
+    <path class="motion" d="M822 374v45"/>
+    <rect class="dimension" x="812" y="205" width="210" height="34" rx="8"/>
+    <text class="small" x="827" y="228">1  LOWER 2 mm</text>
+    <rect class="dimension" x="754" y="311" width="270" height="34" rx="8"/>
+    <text class="small" x="768" y="334">2  SLIDE 32 mm WALLWARD</text>
+    <rect class="dimension" x="698" y="384" width="210" height="34" rx="8"/>
+    <text class="small" x="714" y="407">3  SETTLE 2 mm</text>
+
+    <text class="label" x="580" y="720">REMOVE = EXACT REVERSE PATH</text>
+    <path class="reverse" d="M825 515v-35"/>
+    <path class="reverse" d="M848 520H970"/>
+    <path class="reverse" d="M990 495v-40"/>
+    <text class="tiny" x="580" y="758">Lift 2 mm → slide 32 mm OUTWARD (away from wall) → raise clear.</text>
+    <text class="tiny" x="580" y="782">Each support carries the deck independently of the keystone.</text>
+  </g>
+
+  <!-- Closeup 3 -->
+  <g aria-label="Closeup 3: keystone locking function">
+    <rect class="panel" x="1065" y="120" width="500" height="680" rx="18"/>
+    <path class="panel-head" d="M1083 120h464a18 18 0 0 1 18 18v52h-500v-52a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="1087" y="155">C  KEYSTONE LOCKS SEPARATION ONLY</text>
+    <text class="tiny" x="1087" y="179">SECTION VIEW • insert only after support capture</text>
+
+    <path class="left" d="M1100 330h205v170h-205z"/>
+    <path class="right" d="M1325 330h205v170h-205z"/>
+    <rect class="void" x="1295" y="330" width="40" height="130"/>
+    <path class="contact" d="M1275 235h80l-14 177h-52z"/>
+    <path class="motion" d="M1315 202v24"/>
+    <text class="onpart" x="1116" y="362">LEFT HALF</text>
+    <text class="onpart" x="1373" y="362">RIGHT HALF</text>
+    <text class="label" x="1249" y="220">KEYSTONE</text>
+    <path class="motion" d="M1270 540h-95"/>
+    <path class="motion" d="M1360 540h95"/>
+    <text class="small" x="1120" y="579">Blocks LEFT HALF / RIGHT HALF separation.</text>
+
+    <path class="gravity" d="M1315 610v80"/>
+    <text class="label" x="1145" y="628">GRAVITY LOAD BYPASSES KEYSTONE</text>
+    <path class="contact" d="M1150 708h330v34h-330z"/>
+    <text class="small" x="1187" y="733">LOAD GOES TO PRINTED SUPPORTS</text>
+
+    <rect class="stop-box" x="1095" y="756" width="440" height="43" rx="10"/>
+    <text class="stop" x="1112" y="784">Keystone carries no gravity load.</text>
+  </g>
+
+  <g aria-label="Global stop note">
+    <rect class="legend" x="35" y="825" width="1530" height="54" rx="12"/>
+    <text class="stop" x="60" y="859">STOP: no sanding, force, tools, glue, wall mounting, or load during dry fit. Reverse the shown paths to separate.</text>
+  </g>
+</svg>

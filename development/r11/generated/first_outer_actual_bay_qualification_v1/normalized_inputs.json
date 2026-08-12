@@ -1,0 +1,150 @@
+{
+  "blocking_input": {
+    "blocking_material_species_grade": null,
+    "blocking_thickness_mm": null,
+    "blocking_vertical_end_mm": null,
+    "blocking_vertical_start_mm": null,
+    "continuous_blocking_confirmed": false,
+    "exact_fastener_schedule_approved": false,
+    "exact_screw_axes_clear_of_utilities": false,
+    "screw_axis_elevations_mm": [],
+    "segments": [],
+    "shelf_top_elevation_mm": 1727.2,
+    "survey_complete": false,
+    "utilities_scan_complete": false,
+    "wall_substrate_material": null,
+    "wall_substrate_thickness_mm": null
+  },
+  "cable_system": {
+    "comb_hooks_supplied": 1,
+    "corner_support_receivers_allowed": false,
+    "flush_blanks_supplied": 2,
+    "intermediate_support_receivers_allowed": false,
+    "module_clearance_per_face_mm": 0.4,
+    "receiver_sockets_per_support": 2,
+    "receiver_support_indices": [
+      0
+    ],
+    "service_lift_drop_mm": 8.0,
+    "simultaneously_installed_modules": 2,
+    "structural_credit_allowed": false
+  },
+  "environment_input": {
+    "direct_sun_exposure_assessed": false,
+    "maximum_expected_relative_humidity_percent": null,
+    "maximum_expected_service_temperature_c": null,
+    "measurement_end_date": null,
+    "measurement_instrument": null,
+    "measurement_start_date": null,
+    "minimum_expected_relative_humidity_percent": null,
+    "minimum_expected_service_temperature_c": null,
+    "nearby_heat_sources_assessed": false,
+    "service_environment_record_complete": false
+  },
+  "field_measurement_input": {
+    "clear_length_samples_mm": [
+      1555.75,
+      1555.75
+    ],
+    "endpoint_trim_clearance_mm": null,
+    "height_samples_in": [
+      68.0,
+      84.0
+    ],
+    "instrument_resolution_mm": null,
+    "measurement_date": null,
+    "measurement_instrument": null,
+    "measurement_reference": "finished-wall clear span between the two authored terminal faces",
+    "measurement_uncertainty_mm": null,
+    "observer": null,
+    "wall_plane_bow_mm": null
+  },
+  "hardware_candidate": {
+    "fastener_product": "GRK RSS Rugged Structural Screw, Climatek, 1/4 in x 3-1/2 in, T25, part 90306",
+    "hardware_is_a_candidate_not_a_drilling_schedule": true,
+    "hollow_wall_anchor_primary_load_path_allowed": false,
+    "wall_fasteners_per_support": 3,
+    "washer_product": "L.H. Dottie FW14 1/4 in USS flat washer",
+    "washers_per_fastener": 1
+  },
+  "joinery_candidate": {
+    "architecture_id": "r11_integrated_reciprocal_lincoln_v1",
+    "gravity_bearing_surfaces_validated": false,
+    "integral_bay_local_support_capture_required": true,
+    "integral_bay_local_support_capture_validated": false,
+    "integrated_reciprocal_overlap_mm": 55.0,
+    "joint_clearance_mm": 0.35,
+    "minimum_bearing_per_support_side_mm": 15.7,
+    "overlap_is_initial_candidate_only": true,
+    "overlap_physical_gate_passed": false,
+    "positive_bay_wedge_required": true,
+    "shelf_depth_mm": 152.4,
+    "shelf_total_thickness_mm": 32.0,
+    "structural_credit_from_friction_snap_glue_or_wedge": false,
+    "support_wall_strap_drop_mm": 158.75,
+    "terminal_extension_formula": "(support_run_width_mm - joint_clearance_mm) / 4"
+  },
+  "keepout_input": {
+    "explicit_no_keepouts_confirmed": false,
+    "measurement_complete": false,
+    "required_classes": [
+      "outlet_plug_and_cord",
+      "door_and_trim",
+      "inside_corner",
+      "wall_bow",
+      "human_access"
+    ],
+    "zones": []
+  },
+  "piece_contract": {
+    "cable_plate_nesting_verified": false,
+    "candidate_cable_modules_per_plate": 3,
+    "candidate_wedges_per_plate": 6,
+    "first_wall_cable_modules_simultaneously_installed": 2,
+    "first_wall_cable_modules_supplied": 3,
+    "individual_supports_and_half_decks_are_not_copacked_for_start_estimate": true,
+    "integrated_half_decks_per_bay": 2,
+    "positive_bay_wedges_per_bay": 1,
+    "supports_per_station": 1,
+    "wedge_plate_nesting_verified": false
+  },
+  "printer_input": {
+    "actual_saved_mesh_envelopes_verified": false,
+    "all_auxiliary_plate_envelopes_verified": false,
+    "brim_object_gap_mm": 0.1,
+    "brim_width_mm": 5.0,
+    "build_volume_mm": [
+      180.0,
+      180.0,
+      180.0
+    ],
+    "edge_reserve_mm": 2.0,
+    "printer": "Bambu Lab A1 mini",
+    "required_xy_allowance_formula": "2 * (brim_width_mm + brim_object_gap_mm + edge_reserve_mm)",
+    "saved_orientation_required": true
+  },
+  "project": {
+    "drilling_coordinates_released": false,
+    "geometry_release_complete": false,
+    "independent_engineering_review_approved": false,
+    "name": "Story Corner R11 integrated Lincoln-log shelf",
+    "physical_load_qualification_passed": false,
+    "print_authorized": false,
+    "production_ready": false,
+    "qualification_only": true,
+    "rated_load_kg": 0.0,
+    "rated_load_lb": 0.0,
+    "scope": "first lower shelf on the 61.25 inch through wall",
+    "test_load_authorized": false,
+    "tested_load_rating_exists": false,
+    "wall_installation_authorized": false
+  },
+  "schema_version": "r11_integrated_lincoln_layout_v1",
+  "wall_input": {
+    "clear_length_mm": 1555.75,
+    "maximum_bay_pitch_mm": 254.0,
+    "support_end_faces_flush_with_wall_ends": true,
+    "support_run_width_mm": 31.75,
+    "supports_evenly_spaced": true
+  }
+}

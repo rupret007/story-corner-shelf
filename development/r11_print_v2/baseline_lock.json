@@ -1,0 +1,34 @@
+{
+  "schema_version": "r11.gate-a-left-baseline-lock.v1",
+  "v1_bundle": {
+    "file_count": 33,
+    "manifest_sha256": "bc267498314d37f1528b20e46727d90e8184270351f6a4e6fda7bcf82f986661",
+    "package_id": "r11_first_outer_actual_bay_neutral_qualification_v1",
+    "relative_path": "development/r11/generated/first_outer_actual_bay_qualification_v1",
+    "total_bytes": 475553,
+    "tree_sha256": "af5f8a4b97e857fb0aeb08c40b5b576c05efe7b651d6555151518180377eec99"
+  },
+  "v1_config": {
+    "canonical_sha256": "de47d37ba05446a49a34f7e346f93e3187a7be64f24495783d8b4fee58abbb68"
+  },
+  "v1_source_closure": {
+    "file_count": 22,
+    "source_bytes": 362091,
+    "tree_sha256": "91544e30a14fdf16e0cd770c1e9492b24221362d47a172bde0718c82fa00137c"
+  },
+  "selected_article": {
+    "article_id": "r11_bay0_left_terminal_integrated_half_deck",
+    "canonical_geometry_sha256": "5fe65ebfda9f1d3df77f3db99485983b6313e829a202b536b89b15d2eaea12d1",
+    "model_3mf_bytes": 3969,
+    "model_3mf_relative_path": "individual_model_only_3mf/MODEL_ONLY_r11_bay0_left_terminal_integrated_half_deck.3mf",
+    "model_3mf_sha256": "ff6793255147413b9845dbc771a5b2e5581c1dcbbdcfe5e39b2a7cdb8e6bcbfc",
+    "saved_extents_mm": [
+      162.175003,
+      152.399994,
+      32.0
+    ],
+    "stl_bytes": 16584,
+    "stl_relative_path": "stl/r11_bay0_left_terminal_integrated_half_deck.stl",
+    "stl_sha256": "28e73c75004ea4b9e59e74295272de4bfb19ff908382936b1742cdb0d7a820c6"
+  }
+}
