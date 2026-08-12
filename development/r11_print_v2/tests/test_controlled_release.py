@@ -407,6 +407,22 @@ def replace_gcode_evidence(
 
 
 class FrozenBaselineAndStaticPackageTests(unittest.TestCase):
+    def test_workflow_binds_runner_temp_inside_a_step(self) -> None:
+        workflow = (V2_ROOT.parents[1] / ".github" / "workflows" / "validate-r11-print-v2.yml").read_text(
+            encoding="utf-8"
+        )
+        job_env = workflow.split("    steps:", 1)[0]
+        self.assertNotIn("${{ runner.temp }}", job_env)
+        self.assertIn("Bind runner-local validation paths", workflow)
+        for variable in (
+            "R11_V1_BEFORE",
+            "R11_V1_AFTER",
+            "R11_V2_BUILD_ONE",
+            "R11_V2_BUILD_TWO",
+        ):
+            self.assertIn(f'echo "{variable}=$RUNNER_TEMP/', workflow)
+        self.assertIn('>> "$GITHUB_ENV"', workflow)
+
     def test_exact_v1_pins_and_false_physical_boundary(self) -> None:
         evidence = control.verify_frozen_v1()
         self.assertTrue(evidence["verified"])
