@@ -225,6 +225,8 @@ class PhysicalHandoffTests(unittest.TestCase):
             "zero skips and zero failures",
             "two fresh builds",
             "Monitor every new GitHub Actions run to completion",
+            "completed run with zero jobs is a workflow-definition failure",
+            "RUNNER_TEMP into GITHUB_ENV inside a runner step",
             "fresh, explicit authorization",
         ):
             self.assertIn(token, normalized)

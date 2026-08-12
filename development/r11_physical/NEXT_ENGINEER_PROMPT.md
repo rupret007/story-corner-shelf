@@ -170,6 +170,17 @@ where practical. At minimum:
    - report exact commands, test counts, hashes, skips, warnings, and any
      limitations. Do not summarize a partial run as a full pass.
 
+6. GitHub Actions startup and runner-context checks
+   - parse every changed workflow and confirm GitHub creates the expected jobs;
+     a completed run with zero jobs is a workflow-definition failure, not a
+     passing or ignorable test result;
+   - do not use step-only or runner-only expression contexts in workflow keys
+     where GitHub evaluates them before a runner exists;
+   - bind runner-temporary paths from RUNNER_TEMP into GITHUB_ENV inside a
+     runner step, then test that exact contract locally;
+   - after pushing a fix, require a new run at the new HEAD SHA. Never treat a
+     rerun of an older SHA as validation of newer bytes.
+
 Git and publication rules:
 
 - Work only in a clean worktree based on the latest origin/main. Do not use or
