@@ -43,6 +43,11 @@ exact edit prompt, retained C2PA provenance, output hash, and evidence limits
 are recorded in [the photo provenance](photos/README.md). Do not use the
 cleaned image for dimensions, contact, flatness, or capacity.
 
+For a future Codex task, use the
+[copy-paste continuation and full-validation prompt](NEXT_ENGINEER_PROMPT.md).
+It preserves this physical boundary and requires the full regression and
+publication checks before another engineering release.
+
 ## Before the first dry fit
 
 Proceed only when the right half has finished, fully cooled, and been removed

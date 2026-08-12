@@ -210,6 +210,29 @@ class PhysicalHandoffTests(unittest.TestCase):
         ):
             self.assertIn(token, normalized)
 
+    def test_next_engineer_prompt_is_complete_and_fail_closed(self) -> None:
+        text = read("NEXT_ENGINEER_PROMPT.md")
+        normalized = " ".join(text.split())
+        for token in (
+            "0 kg / 0 lb",
+            "PRINT IN PROGRESS / OUTCOME NOT RECORDED",
+            "No sanding",
+            "cycles 1, 5, and 10",
+            "never use git add . or git add -A",
+            "full root unittest discovery suite",
+            "R6 source-only and full release checks",
+            "run all R7, R8, R9, and R10 tests",
+            "zero skips and zero failures",
+            "two fresh builds",
+            "Monitor every new GitHub Actions run to completion",
+            "fresh, explicit authorization",
+        ):
+            self.assertIn(token, normalized)
+        self.assertIn("NEXT_ENGINEER_PROMPT.md", read("README.md"))
+        self.assertNotIn("/Users/", text)
+        self.assertNotIn("/private/tmp/", text)
+        self.assertNotRegex(text, r"(?i)print_authorized\s*[:=]\s*true")
+
 
 if __name__ == "__main__":
     unittest.main()
