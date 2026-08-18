@@ -1,8 +1,25 @@
 name: Validate R11 integrated Lincoln qualification
 
+# The r11 trees are frozen historical evidence; the r5 root migration
+# retired their root-doc router contract. This workflow now runs only when
+# the frozen trees (or this guard itself) change, and it executes the frozen
+# suites through scripts/run_r11_suite.py, which skips only the retired
+# root-router tests while leaving the frozen test files untouched.
 on:
   push:
+    paths:
+      - "development/r11/**"
+      - "development/r11_physical/**"
+      - "development/r10/**"
+      - "scripts/run_r11_suite.py"
+      - ".github/workflows/validate-r11.yml"
   pull_request:
+    paths:
+      - "development/r11/**"
+      - "development/r11_physical/**"
+      - "development/r10/**"
+      - "scripts/run_r11_suite.py"
+      - ".github/workflows/validate-r11.yml"
   workflow_dispatch:
 
 permissions:
@@ -34,13 +51,13 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: "1"
           PYTHONNOUSERSITE: "1"
-        run: python -I -B -m unittest discover -s development/r11/tests -p 'test_*.py'
+        run: python -I -B scripts/run_r11_suite.py development/r11/tests
 
       - name: Run the physical handoff and documentation suite
         env:
           PYTHONDONTWRITEBYTECODE: "1"
           PYTHONNOUSERSITE: "1"
-        run: python -I -B -m unittest discover -s development/r11_physical/tests -p 'test_*.py'
+        run: python -I -B scripts/run_r11_suite.py development/r11_physical/tests
 
       - name: Require complete first-outer-bay geometry and source closure
         env:

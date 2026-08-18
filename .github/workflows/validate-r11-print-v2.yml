@@ -1,8 +1,23 @@
 name: Validate R11 Gate A-left print overlay v2
 
+# The r11 trees are frozen historical evidence; the r5 root migration
+# retired their root-doc router contract. This workflow now runs only when
+# the frozen trees (or this guard itself) change, and it executes the frozen
+# r11 contract through scripts/run_r11_suite.py, which skips only the retired
+# root-router test while leaving the frozen test files untouched.
 on:
   push:
+    paths:
+      - "development/r11/**"
+      - "development/r11_print_v2/**"
+      - "scripts/run_r11_suite.py"
+      - ".github/workflows/validate-r11-print-v2.yml"
   pull_request:
+    paths:
+      - "development/r11/**"
+      - "development/r11_print_v2/**"
+      - "scripts/run_r11_suite.py"
+      - ".github/workflows/validate-r11-print-v2.yml"
   workflow_dispatch:
 
 permissions:
@@ -41,7 +56,7 @@ jobs:
           echo "R11_V2_BUILD_TWO=$RUNNER_TEMP/r11-v2-build-two-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT" >> "$GITHUB_ENV"
 
       - name: Run the existing complete R11 contract first
-        run: python -I -B -m unittest discover -s development/r11/tests -p 'test_*.py'
+        run: python -I -B scripts/run_r11_suite.py development/r11/tests
 
       - name: Require complete R11 geometry, source closure, and frozen R10
         run: |
