@@ -1,135 +1,89 @@
-# Safety
+# Safety boundary
 
-## Experimental and unrated
+Story Corner r5 is an untested DIY prototype—not a stamped structural design, code approval, certified installation, or rated storage product. The current 55 lb return-arm and 120 lb through-arm evenly distributed values are system-selection targets only. They are not published safe-working loads.
 
-Story Corner r6 has **no tested load rating** and is **not approved for
-overhead use**. The current files are geometry-development/model-only artifacts.
-They do not prove that the shelf, wall, fasteners, printed layers, joints, or
-PETG will carry closet contents safely.
+## Nonnegotiable hybrid load path
 
-Every shelf-body part is intended to be printed in black PETG. The only
-nonprinted installation boundary is suitable metal structural screws with
-integral heads or compatible metal washers into verified wood studs or
-purpose-installed blocking. “All printed shelf” does not mean hardware-free
-wall attachment.
+All generated printable components are PETG, but none are structural. Stored weight must pass through each continuous plywood deck and its continuous steel front angle, then through independently supported steel brackets, locks, standards, appropriate structural fasteners, and verified wood framing or purpose-installed blocking.
 
-## Hard prohibitions
+Never use a generated PETG component as:
 
-Do not:
+- a wall bracket, standard, anchor, beam, ledger, deck, structural splice, or fastener;
+- a connector that lets either plywood arm omit its nearest bracket;
+- a substitute for framing, blocking, bracket locks, or mechanical deck attachment;
+- a personnel support, ladder step, seat, or climbing surface;
+- a rated restraint for hazardous, fragile, dense, or liquid-filled objects.
 
-- install r6 above people, pets, beds, seating, doors, valuable equipment, or
-  an occupied work area before qualification;
-- use printed wall anchors or primary hollow-wall anchors;
-- assume an outlet, stud finder indication, old screw, trim nail, or wall edge
-  proves structural framing;
-- drill development X-corbels or copy provisional screw stations into a wall;
-- use production wall holes until exact fastener and wall geometry has been
-  measured, regenerated, and wall-mockup tested;
-- substitute structural adhesive for a missing bearing, screw, pin, cross-key,
-  integral corbel cap, keeper, or verified framing connection;
-- add a hidden metal shelf member and still describe the design as r6;
-- use a tiny latch, key, cross-key, or pin as the intentional vertical load path;
-- rigidly join the two L arms at the corner or tie the two shelf levels
-  vertically;
-- use embedded G-code, inherited slicer settings, or the supplied reference
-  3MF profiles as a production recipe;
-- scale structural meshes in a slicer to fit a different wall or printer;
-- claim capacity from a material datasheet, slicer estimate, short proof test,
-  simulation, artist rendering, or another printed shelf;
-- load a part showing cracks, layer whitening, warping, poor fusion, burned or
-  wet filament artifacts, damaged holes, or forced joinery.
+The Palatine arches, fluted piers, keystones, groin vault, and entablatures are architectural trim. Their Roman appearance does not give them masonry behavior or structural credit. PETG creeps under sustained stress and varies with temperature, formulation, moisture, print orientation, settings, layer adhesion, and stress concentration. A larger or more intricate printed part does not establish a safe long-term overhead rating. A structurally all-PETG shelf is outside this project.
 
-## Wall and electrical risk
+## Corner stop conditions
 
-Production bores are intentionally blocked because screw and utility geometry
-is unknown. Before any drilling, verify the wall finish, finish thickness,
-framing material and thickness, station centers and widths, and a documented
-method for avoiding electrical, plumbing, and other concealed services. The
-nearby outlet makes utility verification especially important. De-energize
-relevant circuits and use a qualified electrician or other competent trade
-professional where required. Do not open an electrical box or probe a wall
-cavity unless you are qualified and permitted to do so.
+- Do not overlap two full-depth boards. The 5 ft through deck owns the corner; the shortened return begins beyond it.
+- Do not cut from nominal stations until the clear wall lengths and installed shelf-back offset have been measured **separately on both walls**, and wall bow/full-size template are known.
+- Stop if the measured included angle differs from 90° by more than **0.25°**, or if the calculated remaining nominal 1.6 mm joint gap is below **0.6 mm**. The residual-derived theoretical limit is approximately 0.282°, but the configured gate is deliberately stricter.
+- Do not treat a small printed gauge as a substitute for the full-size template.
+- Dry-fit the two nearest perpendicular brackets, locks, fasteners, and both continuous angles. Numerical clearance does not capture actual body width or installation tolerance.
+- Trim and deburr the return angle for controlled clearance. Do not force the angle ends together.
+- Do not use a keystone, corner pilaster, groin vault, curb, quadrant, fascia, or optional alignment plate to pull misaligned decks coplanar.
+- Keep the first return bracket. The plywood seam and optional alignment plates receive no vertical-support credit.
+- Treat a completed L level as coupled: unload and move both arms together to one common top elevation.
 
-The regular 3/6 support rhythm requires verified continuous wood blocking
-unless all 11 generated support stations per level independently land on
-verified framing. If they do not, install suitable blocking or regenerate the
-structural layout. Drywall, plaster, or an optional printed study rail is not a
-substitute for the required framing in the active design.
+## Palatine trim and falling-object controls
 
-The exact structural screw must be selected for the verified substrate and
-reviewed for required embedment, edge distance, head/washer bearing, corrosion
-environment, and driver access. Do not infer screw suitability from diameter
-alone.
+The full set includes hanging and overlay components. A loose decorative part can still injure someone even though it carries no shelf load.
 
-## PETG-specific risk
+- Verify that every arcade/fascia half is captured by both full-depth channel flanges without splitting, binding, lifting a tile, or bearing on ornament. Assemble the lateral train before closing it with the two outer endcaps and re-entrant corner cover.
+- Use one tiny centered dot of qualified removable neutral-cure silicone inside each fascia channel only to prevent creep and rattle. Do not drill or notch the continuous steel angle for cosmetic retention.
+- Retain each entablature overlay to its own fascia half with one tiny centered qualified removable silicone dot; never bridge its 0.6 mm seams.
+- Retain each keystone with two pinhead-size qualified removable silicone dots on one half only; let it float over the opposite half's 0.6 mm seam.
+- Use two tiny qualified removable silicone dots inside one upper leg of the re-entrant corner pilaster; its perpendicular leg floats and no adhesive crosses the seam.
+- Mount the 42 mm groin-vault soffit through its two generated clearance slots with short nonstructural pan-head screws only into the underside of the through-owned corner square after a depth-stop and bracket-clearance check. Preserve at least 10 mm generated clearance to the nearest verified bracket plane and never bridge the plywood joint.
+- Use only qualified removable attachment products. Hand pull-check every overlay, endcap, keystone, pilaster, and soffit before loading and after every move.
+- Unload immediately for a loose, cracked, warped, whitening, or rattling ornament.
 
-FFF PETG is anisotropic, process-sensitive, temperature-sensitive, and subject
-to creep. Apparent short-term stiffness can decay under sustained load.
-Printer, nozzle, layer bonding, moisture, extrusion, orientation, cooling,
-pigment, product formulation, batch, and service temperature all matter. A
-result for one material/profile combination does not qualify another.
+Attachment retains trim only. It does not make the fascia lip, curb, arches, or vault a rated cargo restraint.
 
-Keep stored loads away from heat sources and direct solar heating. Record the
-actual closet temperature range during testing. Do not expose the shelf to a
-temperature or chemical environment outside the qualified range. If the
-closet becomes hotter than the tested service condition, unload the shelf
-until it is requalified.
+## Rear-curb and top-tile controls
 
-## Safe test setup
+The rear curb sits on the printed tile, not directly on bare plywood:
 
-Conduct coupons and full-bay tests on a guarded bench or low sacrificial wall
-mockup. Exclude people and pets from the fall zone. Use stable, restrained test
-weights and add them remotely or from outside the likely failure path. Wear
-appropriate eye and foot protection. Never stand beneath or in front of a
-loaded experimental bay.
+```text
+deck top datum             z = 0
+top tile                   z = 0–2.0 mm
+rear-curb base             z = 2.0–4.4 mm
+rear-curb upright top      z = 17.0 mm
+```
 
-Set the target test load, load increments, deflection stop limit, permanent-set
-limit, and emergency removal method in writing before adding load. Those
-values are intentionally blank in the configuration until the intended
-contents and review basis are known.
+- Keep the long-wall straight curb and 172.6 mm through-zone piece on the through deck.
+- Start the return curb on its own board beyond the 1.6 mm plywood gap. No printed curb or fastener may cross that joint.
+- Use each generated curb clearance slot only after field-drilling the matching tile at final layout.
+- Verify that every short pan-head screw has safe plywood engagement and cannot emerge below the deck or hit steel/bracket hardware.
+- Do not clamp PETG rigidly; keep every 0.6 mm seam free.
+- Use one small centered dot of qualified removable neutral-cure silicone per top tile on sealed plywood; remove with floss rather than prying.
 
-Stop, unload from a protected position, and quarantine the specimen if any of
-the following occurs:
+## Before drilling
 
-- audible cracking or layer whitening;
-- pin or cross-key migration, or hole ovalization;
-- screw-head embedment, PETG crushing, or wall damage;
-- joint opening that consumes its movement reserve;
-- accelerating front-edge deflection;
-- corbel rotation or fastener movement;
-- loss of the required 75 mm service path;
-- a new noise, visible defect, or measurement trend whose cause is uncertain.
+- Verify wall material and framing; the nominal plan assumes wood framing.
+- Map both stud edges and centers on both walls, especially within 14 in of the corner, using more than one method.
+- Confirm every proposed standard has usable structural backing and passes spacing/overhang limits. Field centers must be finite and independently spaced.
+- Locate wiring, pipes, and protective plates around the outlets. Never infer cable paths from outlet position alone.
+- Verify the common shelf-top elevation, ceiling clearance, door/trim clearance, the 39 in standard zone, and the complete 168.056 mm Palatine fascia envelope.
+- Follow the current instructions for one compatible hardware system, including prescribed fasteners, holes, edge distances, torque, locks, and deck attachment.
+- Stop and involve a qualified local professional if framing, wiring, structural fastener selection, any drilling needed for the steel angle's structural connection, wall condition, or injury consequences remain uncertain. Cosmetic fascia retention must not add holes or notches to the angle.
 
-An emergency stop is a failed test, not a near pass.
+Hollow-wall anchors are excluded from the primary load path. A nominal support coordinate is not permission to drill there.
 
-## Installation and use controls
+## Before loading
 
-After qualification, install the upper level first and fully inspect all
-wall-fastener, cross-key, spring, crown-pin, keeper, floating seam, and removal access before
-installing the lower level. Every level needs its own 7 + 4 support set. Keep
-all visible-front and open-underside service paths clear. Ornament must remain
-removable and may not conceal an inaccessible structural retainer.
+1. Install and inspect the bare plywood/steel L before adding PETG.
+2. Verify standards are plumb, tops are coplanar, brackets do not interfere, every lock is engaged, and each deck is mechanically attached at every support.
+3. Record unloaded front-edge position at the center and ends of both arms.
+4. Apply known, nonfragile test weights gradually and evenly while keeping people clear.
+5. Stop immediately for movement, noise, cracking, whitening, wall damage, ridge formation, bracket contact, permanent deflection, or connection slip.
+6. Reinspect after one hour, 24 hours, one week, one month, after every move, and at least annually.
 
-Distribute stored objects as established by the qualified test. Avoid impact,
-climbing, hanging, pulling on the front edge, concentrated point loads, and
-placing a bin that projects beyond the qualified depth. Do not let children
-use the shelf as a step or handhold.
+This controlled check can reveal obvious defects; it does not certify a load rating. Keep dense items near and between supports, put the heaviest items low, and avoid point, impact, front-edge, seismic, and accidental loads.
 
-Establish an inspection log. At minimum, inspect after installation and first
-loading, after temperature excursions, at the qualification checkpoints, and
-periodically thereafter. Compare front-edge deflection to the recorded
-baseline. Fully unload before removing a pin, cross-key, bridge, cassette, corbel,
-or screw.
+## Before printing
 
-Immediately unload and take the shelf out of service after impact, wall work,
-water exposure, a moved fastener, damaged PETG, unexplained deflection, or a
-change in intended load. Replace parts only with parts made and requalified
-under the same controlled material/profile basis.
-
-## Qualification does not erase uncertainty
-
-The required 1 hour, 24 hour, 7 day, 30 day, and 90 day observations plus 72
-hour unloaded recovery and teardown reduce uncertainty for the tested specimen.
-They do not automatically establish a universal rating. A competent review of
-the wall, fastener, test evidence, load case, environment, and desired safety
-margin remains necessary before overhead use or any published load claim.
+Confirm the exact printer, nozzle diameter and material, plate, slicer version, black PETG product, and filament condition. Print the corner gauge, fascia coupon, and Palatine detail coupon first. The repository intentionally contains model-only 3MFs and no embedded G-code. Arrange and slice for the confirmed machine; never reuse machine instructions from another setup.

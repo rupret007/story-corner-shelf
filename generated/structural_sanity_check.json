@@ -1,0 +1,32 @@
+{
+  "warning": "Simplified serviceability sanity check only; not a load rating or complete structural analysis.",
+  "scope": "Plywood deck acting alone as a longitudinal beam under an evenly distributed total development line-load proxy. The continuous steel angle is omitted, which is conservative for deck stiffness but does not validate its connections.",
+  "load_scope_note": "total development line-load proxy chosen above the approximately 24.3 lb/ft contents-selection density to include a rough shelf-dead-load allowance; not a measured dead load, safety factor, or rating",
+  "excluded": [
+    "wall and stud capacity",
+    "standard, bracket, lock, and fastener capacity",
+    "cumulative loading from multiple shelves",
+    "point, impact, front-edge, seismic, and accidental loads",
+    "plywood defects, moisture, orthotropic direction, holes, bearing, and connection slip",
+    "the L-corner butt seam, corner alignment hardware, differential arm movement, and non-square wall geometry"
+  ],
+  "inputs": {
+    "development_line_load_proxy_lb_per_ft": 30.0,
+    "support_span_in": 16.0,
+    "maximum_end_overhang_in": 6.0,
+    "deck_depth_in": 8.0,
+    "deck_thickness_in": 0.71875,
+    "assumed_plywood_modulus_psi": 600000.0
+  },
+  "section": {
+    "moment_of_inertia_in4": 0.247538,
+    "section_modulus_in3": 0.688802
+  },
+  "results": {
+    "simple_span_max_moment_lb_in": 80.0,
+    "simple_span_nominal_bending_stress_psi": 116.14,
+    "simple_span_center_deflection_in": 0.01436,
+    "uniform_load_end_overhang_tip_deflection_in": 0.00273
+  },
+  "interpretation": "Under these narrow assumptions, the 16 in plywood span is a serviceability rather than a governing concern; the wall attachment, complete steel support system, and field-fitted L junction remain the critical verification items."
+}

@@ -1,151 +1,81 @@
-# Contributing to Story Corner
+# Contributing
 
-Issue reports and evidence-backed design discussion are welcome. Code, mesh,
-and asset contributions are not currently invited because the owner has not
-selected a project license or contribution agreement. The technical rules
-below document the review standard that will apply if that posture changes.
-r6 is an experimental, unrated all-black-PETG shelf body whose only nonprinted
-installation boundary is suitable metal structural screws with heads/washers
-into verified wood framing.
+Changes are welcome after the repository owner selects a license and contribution policy. Until then, this is the required local change workflow rather than permission to reuse the design.
 
-## Rights first
+## Design invariants
 
-This repository currently has no `LICENSE` file. Public visibility does not
-grant permission to copy, modify, redistribute, or sell its contents. Do not
-assume contribution or reuse rights that have not been stated. Maintainers
-should select an intentional project license before inviting broad reuse.
+Every change must preserve these boundaries unless the project is explicitly re-scoped and independently reviewed:
 
-Do not contribute copied or derivative third-party meshes without explicit,
-compatible permission and provenance. The supplied MakerWorld 3MFs are
-read-only functional references and must not be bundled. If permissively
-licensed code is ported, preserve its required notices and identify the exact
-source, version, license, and changes. Ideas are not load evidence.
+- PETG parts are nonstructural finish, ornament, fit-check, and modest item-retention components.
+- Each plywood deck and steel front angle remains continuous within its own arm.
+- The 5 ft through deck owns the corner square; the 3 ft return starts beyond its front plane; plywood footprints do not overlap.
+- Both arms retain independent steel-bracket support. PETG, the wood seam, angle contact, and optional alignment plates receive no capacity credit.
+- A visually all-PETG Palatine finish is not permission to substitute printed brackets, a printed deck, or printed wall anchors.
+- Primary wall attachment uses verified framing or purpose-installed structural blocking.
+- Support intervals do not exceed 16 in, end overhangs do not exceed 6 in, field centers remain independently spaced, and nominal conservative perpendicular-bracket clearance does not fall below 1 in.
+- Installed shelf-back offset is measured and stored independently for both wall runs.
+- The square-footprint corner gate is ±0.25°, the nominal plywood gap is 1.6 mm, and the remaining nominal clearance must be at least 0.6 mm. A full-size template remains required.
+- No rear curb, curb fastener, Palatine corner piece, or groin-vault soffit crosses the plywood joint.
+- Every entablature remains attached to its own fascia half; keystones and the corner pilaster retain one fixed side and one floating side.
+- The groin-vault soffit stays entirely on the through-owned corner square and retains at least 10 mm generated clearance to the nearest verified support plane.
+- A same-height L level is unloaded and moved as one coupled assembly.
+- No untested load rating or machine-specific G-code is committed.
 
-## Non-negotiable safety contract
+The r5 3/6-bay arcade, nine-keystone rhythm, and related 3–6–9 details are edition-level parameters. Changing them creates a new reviewed edition rather than an incidental cosmetic patch.
 
-Every change must continue to state that:
+## Change workflow
 
-- r6 is experimental and unrated; no tested load rating exists;
-- production wall holes are blocked until actual fastener, driver, wall
-  finish, framing, and utility data are measured and regenerated;
-- primary hollow-wall and printed wall anchors are prohibited;
-- all shelf-body parts are printed black PETG; only wall screws and compatible
-  heads/washers are nonprinted;
-- the two levels are complete and structurally independent;
-- cross-keys, retention pins, floating keys, corner trim, and fine ornament receive
-  zero independent vertical load credit;
-- neutral 3MFs contain no G-code and no unconfirmed printer profile;
-- wall, full-bay, creep, recovery, and teardown evidence is required before
-  overhead use or any load claim.
+1. Create a focused branch.
+2. Update `config.json`; do not hard-code project measurements or Palatine proportions in the generator.
+3. Update documentation whenever an assumption, datum, measurement, part name, count, attachment policy, mass, safety boundary, rendering, or workflow changes.
+4. Add or update regression tests for every changed parameter relationship.
+5. Rebuild with Python 3.12 and the pinned dependencies:
 
-Do not soften warnings because a mesh is watertight, a calculation is elegant,
-or a short test appears successful.
+   ```sh
+   PYTHON_BIN=.venv/bin/python SKIP_BAMBU=1 scripts/build_all.sh
+   ```
 
-## Source-of-truth flow
+6. On a Mac with Bambu Studio installed, run the strict integration check before a printable release:
 
-Keep the dependency direction explicit:
+   ```sh
+   PYTHON_BIN=.venv/bin/python REQUIRE_BAMBU=1 scripts/build_all.sh
+   ```
 
-1. `config.json` holds authoritative dimensions, scope, status, and gates.
-2. `design_math.py` derives the fitted plan and core geometry.
-3. `release_plan.py` enumerates cassette and support positions.
-4. `release_inventory.py` enumerates each independently printed installed
-   object and reconciles 258 per level / 516 for two levels.
-5. mesh and drawing generators consume those sources; they must not carry
-   shadow constants or silent fallbacks.
-6. generated schedules, manifests, validation, `model_3mf_report.json`, and
-   `slice_report.json` are
-   outputs, never hand-edited sources.
+7. Review the complete generated diff, including `corner_layout.svg`, `palatine_elevation.svg`, `validation.json`, structural/cut/support reports, every STL/3MF filename, object counts, packaged/installed mass estimates, and artifact hashes.
+8. Confirm the final rendering referenced by documentation is `generated/artist_rendering_triadic_palatine_order.png`.
+9. Run the build again and require a clean generated diff. Renamed parts must not leave stale artifacts or stale r4 counts.
+10. Keep commits small enough to distinguish source changes from regenerated artifacts.
 
-Integral features and interfaces are not physical objects. Do not inflate the
-inventory with cassette/spring tenons, receivers, or cassette seams. Per level,
-the active contract is 225 chassis/joinery/retention
-objects plus 33 removable zero-credit ornament objects. Test coupons and spares
-are outside the installed total.
+## Measurement changes
 
-## Design rules to preserve
+The common coordinate datum is the intersection of the two finished wall planes. A measurement update must include:
 
-- 6 in depth; six through bays plus three return bays equals nine.
-- Seven through and four return supports on every independent level.
-- The through arm owns the 6 x 6 in corner; the return remains independently
-  supported and the visual corner mate floats.
-- Final-X vertical lift: two cassette tenons plus one spring tenon enter
-  open-bottom receivers together at zero run-axis travel.
-- Two accessible top quarter-turn cross-keys plus one spring cross-key retain
-  each half against withdrawal; broad shoulders carry the candidate bearing path.
-- Crown bridges insert upward from below and use one fixed-right accessible
-  anti-drop pin; no top-down bridge or second fixed pin.
-- Nine crown seams are locally fixed; seven supported pier seams float.
-- One left-owned removable keeper, opposite the fixed-right crown-pin ear,
-  positively traps all three diaphragm keys with one rear-bayonet tongue; a
-  separate underside indexed quarter-turn pin blocks its unlock slide, and the
-  fixed front tie has its own separate indexed pin.
-- Floating-pier keys remain trapped beneath the integral corbel bearing cap
-  through the qualified 1.2 mm axial travel. Stitch rails are excluded from
-  the baseline and receive no credit.
-- At least 75 mm straight visible-front/open-underside access for every
-  structural cross-key and pin.
-- Upper level installs first; no cross-level structural tie.
-- Roman/Greek/Egyptian/Art Deco fine detail stays isolated and zero-credit.
-- Drawings govern; the artist rendering is visual intent only.
+- limiting clear length for both walls at the rear, center, and front planes of every proposed elevation;
+- installed shelf-back offset for the long wall and short wall as separate measurements;
+- support centers as absolute distances from the corner datum, with stud edges/centers and framing material;
+- included corner angle, wall bow, drywall/caulk profile, calculated residual joint clearance, and a full-size template;
+- exact bracket width/reach/body envelope, locks, fasteners, and perpendicular dry-fit result;
+- regenerated groin-vault-to-bracket clearance;
+- common shelf-top elevation, 168.056 mm Palatine fascia clearance, door/trim clearance, electrical/plumbing constraints, and number of loaded levels;
+- bin dimensions, heaviest object, intended evenly distributed contents, and measured shelf-arm dead load;
+- confirmed printer, nozzle, plate, slicer, black PETG product, and filament condition;
+- selected removable silicone, captured fascia-channel fit, curb/groin-vault screw stack, and removal method with qualification results on printed PETG, sealed plywood, and actual coated steel where applicable.
 
-If a field condition requires a different station layout, regenerate the
-parametric structure. Do not scale a mesh or move only the ornament to conceal
-a missed support.
-
-## Development workflow
-
-1. Work on a focused branch and describe the safety/design issue being solved.
-2. Update configuration first when changing an authoritative parameter.
-3. Add or update deterministic tests before changing generated artifacts.
-4. Regenerate through project scripts; do not manually edit STL, 3MF, SVG,
-   schedules, or manifests.
-5. Run all r6 regression, package, inventory, drawing, documentation, and
-   determinism tests in a clean environment.
-6. Regenerate twice and compare hashes when changing geometry or packaging.
-7. Inspect meshes for watertightness, positive volume, one intended body,
-   envelope, thin walls, collisions, trapped access paths, and correct saved
-   orientation.
-8. Inspect 3MF archives for neutral model content and absence of G-code,
-   machine commands, or hidden slicer payloads.
-9. Render and visually inspect governing drawings. Confirm warning/status text
-   is legible and dimensions match the configuration.
-10. Review the staged diff, including generated-file size and manifest changes,
-    before opening a pull request.
-
-Never add credentials, local absolute paths, owner Downloads, private reference
-3MFs, machine caches, G-code, or unrelated generated files.
-
-## Tests and evidence
-
-Tests should fail closed on duplicate configuration keys, missing required
-fields, stale counts, build-envelope violations, impossible assembly motion,
-wall-bore generation while blocked, cross-level ties, hidden access, neutral
-3MF violations, and nondeterminism.
-
-Use exact assertions for the nominal regression fixture but label it nominal
-and unverified. Geometry/software tests may claim only what they test. Physical
-test records belong with a clear specimen ID and must include raw measurements,
-material/profile/hardware, environment, failures, 1 h / 24 h / 7 d / 30 d /
-90 d creep readings, 72 h recovery, and teardown. Never summarize a failed or
-incomplete test as “passed with caveats.”
+Photographs must exclude faces, addresses, serial numbers, and other private information before being added to a public issue.
 
 ## Pull-request checklist
 
-- [ ] Scope and motivation are clear.
-- [ ] No third-party mesh or incompatible code was copied.
-- [ ] Safety/status language remains explicit.
-- [ ] Configuration, math, plan, inventory, generator, drawings, and docs agree.
-- [ ] 258 per level = 225 + 33; 516 for two independent levels.
-- [ ] No production wall hole or printed/primary hollow-wall anchor was added.
-- [ ] No G-code or unconfirmed slicer profile was added.
-- [ ] Final-X lift, two top plus one spring cross-key per half, upward crown bridge, positively retained
-  crown keys/tie, thermal floating seams, rail-free baseline, corner
-  independence, and upper-first service remain.
-- [ ] Tests are deterministic and claims are limited to observed evidence.
-- [ ] Generated artifacts were produced by the checked-in scripts and reconcile
-  with their manifest.
-- [ ] Documentation contains no local absolute paths or private file data.
-
-The preserved `reference/hybrid_r5/` design is a separate fallback. Modify it
-only in an explicitly scoped change, and never merge its assumptions or test
-claims silently into active r6 documentation.
+- [ ] Field values are clearly measured, nominal, or unconfirmed.
+- [ ] Both per-wall installed shelf-back offsets are represented correctly.
+- [ ] Through/return ownership is unchanged or separately reviewed; plywood footprints do not overlap.
+- [ ] Both arms remain independently supported and no PETG/alignment detail entered the permanent load path.
+- [ ] Spacing, overhang, distinct-center, perpendicular-bracket, and groin-vault-clearance gates pass.
+- [ ] Exact perpendicular brackets, locks, angles, and fasteners were dry-fitted when field hardware changed.
+- [ ] Corner angle is within ±0.25°, remaining nominal joint clearance is at least 0.6 mm, and the full-size template was reviewed—or the footprints were redesigned and reviewed.
+- [ ] Rear-curb pieces, slots, tile drill paths, and fasteners remain separated from the plywood joint and have underside clearance.
+- [ ] Palatine overlays, keystones, pilaster, endcaps, and soffit follow their own-segment/floating/removable attachment rules.
+- [ ] All STL meshes are one closed, consistently wound body in saved orientation and fit the declared 180 mm envelope.
+- [ ] All 3MF packages contain no embedded G-code and pass archive/Bambu checks as applicable.
+- [ ] The full-set count, installed count, packaged/installed mass, cut/print plans, reports, and hashes agree.
+- [ ] Documentation links, final rendering filename, and a clean deterministic rebuild pass.
+- [ ] No local archives, virtual environments, slicer scratch files, machine code, or personal data are included.

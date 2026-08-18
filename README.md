@@ -1,218 +1,190 @@
 # Story Corner
 
-Story Corner is a fitted, two-level, inside-corner shelf whose entire shelf
-body is printed in black PETG. The deck cassettes, tied-arcade halves,
-X-corbels with integral bearing caps, joinery, keeper strips, pins, cross-keys,
-facade, and ornament
-are printed.
-The only nonprinted installation boundary is suitable metal structural screws
-with integral heads or compatible metal washers, driven into verified wood
-studs or purpose-installed blocking.
+**Triadic Palatine Order — a parametric PETG-finished hybrid closet shelf**
 
-> **EXPERIMENTAL / UNRATED / NOT READY FOR OVERHEAD USE.** No tested load
-> rating exists. Production wall holes are deliberately blocked, the real wall
-> and storage measurements are incomplete, and the printer, nozzle, build
-> plate, black-PETG product, and target load are unconfirmed. Do not install or
-> load this design until the measurement, coupon, wall-mockup, full-bay,
-> whole-article thermal-cycle, sustained-creep, recovery, teardown, and
-> separate destructive-specimen gates are completed.
+Story Corner is a same-height L shelf for nominal 3 ft and 5 ft closet walls. The r5 **Triadic Palatine Order** gives the visible black PETG skin a palace-like 3–6–9 composition: three arcade bays on the short arm, six on the long arm, nine keystones, fluted shared piers, stepped entablatures, dentils, a fitted corner pilaster, and a groin-vault corner soffit. Continuous plywood and steel—not the printed architecture—carry stored weight.
 
-There is no embedded G-code. Release artifacts remain model-only so that an
-unconfirmed machine or material profile cannot be mistaken for a safe print
-recipe.
+> **Prototype status:** the meshes and model-only 3MF packages are generated design-development artifacts. The wall lengths, separate installed offset on each wall, corner angle, wall bow, framing map, hardware envelope, 8 in depth, attachment stack, printer, nozzle, build plate, PETG product, and completed assembly remain unverified. No tested load rating is claimed. No embedded G-code is included.
 
-## The nominal fitted L
+![Artist rendering of the Story Corner Triadic Palatine Order](generated/artist_rendering_triadic_palatine_order.png)
 
-The current reference geometry fits nominal 60 in and 36 in finished walls at
-one elevation. It is 6 in (152.4 mm) deep. The long-wall run passes through the
-corner; its 6 x 6 in corner cassette visually completes the short wall, whose
-independent return begins beyond that front plane.
+The rendering shows visual intent only. It is not a measurement drawing, hardware layout, proof of fit, or load test. Construction is governed by the field measurements, [corner plan](generated/corner_layout.svg), [support plan](generated/support_layout.svg), and [safety boundary](SAFETY.md).
 
-| Item | Nominal value |
-| --- | ---: |
-| Long-wall through run | 1514.475 mm (59.625 in) |
-| Short-wall structural return start from the corner datum | 177.55 mm (6.990 in) |
-| Short-wall printed return length | 733.675 mm (28.885 in) |
-| Shelf depth | 152.4 mm (6 in) |
-| Chassis-to-return structural clearance | 18.8 mm |
-| Locked all-solid / relieved visible-base corner gap | 1.2 / 2.0 mm |
-| Long / return visible bays | 6 / 3 |
-| Total visible bays | 9 |
-| Long / return wall-fastened supports per level | 7 / 4 |
-| Half-bay cassettes per level | 18 |
+## Design snapshot
 
-This is the design's 3 / 6 / 9 rhythm: three return bays plus six through bays
-make nine. The support equation is `(3 + 1) + (6 + 1) = 11` independently
-wall-fastened X-corbel/pier stations per level. Dimensions are nominal
-regression fixtures, not permission to print or drill; field measurements must
-regenerate them.
+Viewed from the closet opening, the nominal plan places the 5 ft through arm on the right wall and the 3 ft return on the back wall; this handedness still requires field confirmation. The through deck owns the 8 x 8 in corner square. The return starts beyond the through deck's front plane, so the boards do not overlap and both arms retain independent bracket support.
 
-Field qualification requires four distinct elevation/run support records:
-lower-through, lower-return, upper-through, and upper-return. Each record must
-contain the exact clear width, every verified support center, wood
-stud/blocking material, and framing verification method. Matching nominal
-centers do not permit one elevation's record to stand in for the other. The
-fastener record must also include maximum driver outside diameter and required
-straight approach, and the material record must name the filament drying
-method.
+| Arm | Nominal plywood stations from inside corner | Nominal deck | Desired support centers from inside corner | Palatine arcade |
+|---|---:|---:|---|---:|
+| 5 ft through | 0.688–59.875 in | 59.188 x 8 in | 6.281, 22.281, 38.281, 54.281 in | 6 bays / 12 halves |
+| 3 ft return | 8.750–35.875 in | 27.125 x 8 in | 10.750, 22.313, 33.875 in | 3 bays / 6 halves |
 
-The corner datums are deliberately distinct: chassis front 158.75 mm,
-integral-boss front 165.95 mm, full locked removable-facade front 171.95 mm,
-floating return-finish solid/visible leading planes 173.15/173.95 mm, maximum
-through-facade service face 176.35 mm, and return structural start 177.55 mm.
-The floating return finish cantilevers 4.4 mm back from its cassette and must
-be removed first before servicing the fixed through rosette.
+The shortened return still completes the full short-wall surface because the through deck supplies the corner. Nominal geometry uses 0.6875 in as the provisional installed shelf-back offset on **each** wall, an 8 in deck, a 1.6 mm concealed plywood fit gap, and 1/8 in clearance at each exposed outer end. These are not field cut dimensions.
 
-Each complete level contains 258 installed printed objects: 225 chassis,
-joinery, and retention objects plus 33 removable ornament objects. The two
-selected, structurally independent levels contain 516 installed printed
-objects. Calibration coupons and destructive test pieces are additional and
-are not included in those totals.
+![Dimensioned fitted corner plan](generated/corner_layout.svg)
 
-At a contextual PETG density of 1.27 g/cm³, the current repeat-weighted CAD
-solids total about **16.000 kg per level** and **32.001 kg for two levels**
-(current exact software report: 16.000337 / 32.000674 kg).
-Those are model-solid context values—not slicer estimates, finished tare, or a
-load rating—but they expose the project's substantial possible material and
-dead-load demand. The generated package report must derive these totals from
-the actual meshes and repeat counts. Confirmed Bambu Studio sliced mass and a
-weighed finished-level tare are mandatory before any wall-fastener, full-bay,
-or wall-mockup qualification; contents load is additional.
+The desired support layout limits longitudinal spacing to 16 in and overhang to 5.594 in or less. It is not a drilling map. Every standard must land on verified wood framing or purpose-installed structural blocking. Dry-fit the two nearest perpendicular brackets, locks, fasteners, and both steel angles together before drilling.
 
-No authoritative print-time estimate is available. The printer, nozzle,
-black-PETG product, drying method, layer/profile settings, supports, brim, and
-plate layout are unconfirmed, and `slice_report.json` correctly records that
-slicing was not performed. Print time must come from a retained slice report
-for the exact qualified machine/material/profile; CAD volume is not a time
-estimate.
+## Permanent load path
 
-## Two independent levels
+Every generated printable component is PETG-only and intentionally nonstructural:
 
-The provisional layout places shelf tops at +12 in and +33 in above the top of
-the outlet, giving 21 in top-to-top spacing. Those positions use the reported
-43.5 in outlet-top-to-ceiling zone and must be remeasured from a common level
-datum. Install and service-check the upper level first, then the lower level.
-No column, arch, key, or corner trim transfers load between levels.
+`contents -> each continuous plywood deck / its continuous steel front angle -> independent steel brackets -> steel standards -> structural fasteners -> verified framing or blocking`
 
-## How the system works
+The printed arches, piers, keystones, entablatures, top tiles, curbs, corner pieces, and fascia can conceal the chassis, but they do not become that chassis. Roman arch geometry does not solve the tension and long-term creep demands of a wall-mounted cantilever. An all-PETG structural shelf or printed wall bracket is outside this project and cannot inherit its selection targets, support plan, or safety language.
 
-The coffered deck, integral front/rear cassette chords, front tied-spandrel
-arcade, and wall-fastened 3:4:5 X-corbels form a candidate load-sharing
-chassis. The
-curved Roman rib is not treated as a pure-compression arch: it may see mixed
-compression, bending, tension, and shear. Only matched full-bay testing with
-and without the curved frame may establish whether it earns structural credit.
+![Shelf section and permanent load path](assembly_overview.svg)
 
-Assembly uses a final-position vertical lift. Each arcade half rises at its
-final run coordinate so two top tenons and one spring tenon enter three
-open-bottom receivers together. Two top positive quarter-turn cross-keys plus
-one spring cross-key are then inserted and visibly indexed from the front. A separate crown bridge rises from below
-to a hard stop and receives one accessible anti-drop pin on the fixed right
-half. No whole-half longitudinal slide is allowed; the rejected sliding motion
-would deadlock at the crown.
+## Two-wall corner model
 
-Nine crown seams are locally fixed within their bays. After three diaphragm
-keys are installed at each fixed crown, one left-owned keeper lifts from below
-and slides rearward so its single rear-bayonet tongue is captured. A separate underside keeper-reach
-indexed quarter-turn pin blocks the full forward unlock slide.
-The front crown tie inserts from the visible edge and has its own
-separate visible-front indexed quarter-turn pin.
-Seven supported pier seams float axially to accommodate movement and their
-three keys remain trapped by the X-corbel's integral bearing cap. Cross-keys, alignment keys,
-keeper strips, and retention pins receive no independent vertical load rating.
+The coordinate datum is the intersection of the two finished wall planes. Measure the installed wall-to-plywood-back offset independently on both walls:
 
-The earlier stitch-rail study is deliberately excluded from the installed
-baseline. At the geometry-current return length it would add 119 unqualified
-pieces per level and an unproven second
-thermal/load path. Any future rail must earn its way back through a named,
-rail-on/rail-off full-bay experiment; the active design assigns it no capacity
-credit.
+- `b5`: offset on the long/through wall;
+- `b3`: offset on the short/return wall;
+- `D`: shelf depth;
+- `j`: plywood fit gap.
 
-Roman arcade and entablature are the primary visual language, disciplined by
-Greek proportion and fluting. Egyptian influence is limited to a shallow
-cavetto, and Art Deco appears only as restrained sunbursts, chevrons, and a
-stepped keystone. Fine ornament is isolated, removable, and assigned zero
-structural credit.
+The through deck starts at `b3` along the long-wall axis. The return deck starts at `b5 + D + j` along the short-wall axis. The through-owned corner zone spans `b3` to `b3 + D` on the long-wall axis and `b5` to `b5 + D` on the short-wall axis. Equal catalog standard projections do not prove that the installed offsets are equal after wall bow, drywall mud, shims, and fastener seating.
 
-## Visual-intent assets
+The current nominal values happen to give the same stations shown in the table because both unverified offsets fall back to 0.6875 in.
 
-The [exact 6 + 3 two-level rendering](assets/artist_rendering_all_petg_two_level_exact_6_plus_3.png)
-is the current visual-intent hero. The [earlier two-level rendering](assets/artist_rendering_all_petg_two_level.png)
-is preserved as visual-development history, and the
-[rendering prompt](assets/artist_rendering_all_petg_two_level.prompt.md) records
-the intended scene. Both images are illustrative only: generated drawings,
-schedules, and the manifest govern dimensions, bay counts, object counts, and
-geometry.
+## Near-square angle and residual-gap rule
+
+The square deck footprints use a deliberately narrow field-angle gate:
+
+- nominal plywood gap: 1.6 mm;
+- required residual nominal clearance: at least 0.6 mm;
+- configured maximum verified deviation from 90°: ±0.25°;
+- gap-only physical overlap limit across 203.2 mm depth: approximately ±0.451°;
+- residual-clearance-derived limit: approximately ±0.282°.
+
+Angular edge shift is `203.2 mm × tan(|angle − 90°|)`. At ±0.25°, the nominal shift is about 0.887 mm and the remaining nominal joint clearance is about 0.713 mm. Generation must stop if the configured gate exceeds the residual-derived limit, a verified angle exceeds ±0.25°, or the remaining clearance is below 0.6 mm. A full-size template is still mandatory because this trigonometric check does not include wall bow, caulk, or drywall buildup.
+
+## Triadic Palatine Order
+
+The ornament follows a controlled 3–6–9 grammar rather than adding unrelated decoration:
+
+- 3 segmental-arch bays on the short arm and 6 on the long arm;
+- 18 handed arcade/fascia halves separated by 0.6 mm seams and finished by 9 floating keystones;
+- 113.994 mm short-arm halves and 107.630 mm long-arm halves;
+- 92 mm arch drop, 48 mm rise, 6 mm overlap into the functional fascia, and 168.056 mm total saved height;
+- a 5 mm outer archivolt order, 2.4 mm true shadow reveal, and 4 mm inner order;
+- a 22 mm shared pier with six 1 mm flutes when its two halves meet, plus 9 mm-high / 4 mm-projecting bases and 8 mm-high / 5 mm-projecting capitals;
+- one 3:4:5 spandrel void per half;
+- removable 24 mm-high entablature overlays, each with 9 dentils, 3 triglyph groups, 3 cornice orders, and an 11 mm central patera;
+- an 18 x 24 x 2.4 mm keystone at every bay center, retained to one half while floating over the other;
+- an 18 mm-leg full-height re-entrant corner pilaster fixed on one upper leg and floating on the perpendicular leg;
+- a 42 mm groin-vault soffit with diagonal ribs and a 9-petal boss, mounted only beneath the through-owned corner square.
+
+The groin-vault footprint currently has 18.519 mm nominal clearance to the nearest through support plane, above the 10 mm development minimum. Field support locations must regenerate and re-pass that check. None of these forms receives structural credit, even when it visually resembles an arch, pier, bracket, or vault.
+
+![Dimensioned Triadic Palatine elevation](generated/palatine_elevation.svg)
+
+The elevation drawing records exact nominal stations, counts, and module dimensions; its displayed arch curves are schematic. It is not a structural elevation or a substitute for checking the 180 mm printer envelope.
+
+## Finish fit and attachment
+
+- All top tiles use a 0.25 mm plan radius and 0.6 mm seams. Four 101.3 mm quadrants finish the through-owned corner square. The return's inner tile floats 1.0 mm over the concealed 1.6 mm plywood gap without receiving load-path credit.
+- The fascia channel opening is nominally 46.256 mm: 18.256 mm plywood + 25.4 mm steel-angle vertical leg + 2.0 mm top tile + 0.6 mm fitting clearance. The upper flange overlays the tile.
+- Each arcade/fascia half is mechanically captured around the real shelf stack by its full-depth upper and lower channel flanges. Assemble the lateral fascia train before fitting the two outer endcaps and the re-entrant corner cover; use one tiny centered dot of qualified removable neutral-cure silicone inside each channel only to prevent creep and rattle. Do not drill or notch the continuous steel angle for cosmetic retention.
+- Each entablature overlay uses one tiny centered qualified removable silicone dot on its own fascia half. Each keystone uses two pinhead-size dots on one arch half and floats over the other. The corner pilaster uses two tiny dots inside one upper leg while its perpendicular leg floats.
+- A top tile uses one small centered dot of qualified removable neutral-cure silicone on sealed plywood, with every perimeter and seam free to move.
+- Endcaps use two tiny qualified removable silicone dots inside the final fascia channel, followed by a hand pull-check.
+- The groin vault uses its two generated clearance slots and short nonstructural pan-head screws into the underside of the through-owned plywood only after a depth-stop and bracket-clearance check; it never bridges the joint.
+
+Attachment prevents loose trim, rattle, and falling only. It does not carry stored weight or turn the printed anti-fall features into rated cargo restraints.
+
+## Split rear-curb system
+
+The rear curb sits on the PETG tile/plywood stack and never crosses the structural joint:
+
+- deck top datum: `z = 0`;
+- top tile: `z = 0–2.0 mm`;
+- curb base: `z = 2.0–4.4 mm`;
+- curb upright top: `z = 17.0 mm`.
+
+The long-wall straight curb starts at station 1.892 in after the 30 mm fitted replacement. A separate 172.6 mm corner-side curb stays on the through-owned corner square and stops at the through front plane. The return curb starts on its own plywood at 8.750 in, beyond the 1.6 mm wood gap. Nominal rear-curb ends are therefore arm-specific: 126.481 mm on the through arm and 115.581 mm on the return.
+
+Each straight curb piece has one generated 8 x 4.4 mm clearance slot; the corner replacement has one per arm. Field-drill the matching top tile only after final layout and verify that the selected short pan-head screw cannot emerge from the plywood underside. Do not clamp PETG rigidly, bridge a seam, or put a fastener through the wood joint.
+
+## Safe customization
+
+- Universal top and rear-curb centers use a 152.4 mm pitch and are 151.8 mm wide with 0.6 mm seams.
+- Measured arm lengths regenerate symmetric top/curb ends and the complete 3/6-bay Palatine fascia layout.
+- The nominal top ends are shared at 116.081 mm. Rear-curb ends and all Palatine half widths are arm-specific.
+- A same-height L level must be unloaded and moved as one coupled assembly. Moving one arm alone breaks the fitted corner.
+- Moving a standard horizontally requires a new framing, wiring, bracket-interference, spacing, overhang, and groin-vault-clearance review.
+
+The structural plywood and steel angle do not use printed snap joints. Modularity is limited to replaceable finish pieces and controlled vertical movement on the steel standards.
 
 ## Start here
 
-1. Read [PRINT_ME_FIRST.md](PRINT_ME_FIRST.md) and [SAFETY.md](SAFETY.md).
-2. Complete [MEASUREMENT_WORKSHEET.md](MEASUREMENT_WORKSHEET.md), including
-   photos, framing verification, storage, printer, material, and fastener data.
-3. Review the governing [plan drawing](generated/drawings/plan_layout.svg),
-   [two-level layout](generated/drawings/two_level_vertical_layout.svg), and
-   [joinery sequence](generated/drawings/exploded_joinery.svg). Drawings govern;
-   renderings are visual intent only.
-4. Follow [TEST_PROTOCOL.md](TEST_PROTOCOL.md) before any overhead installation.
-5. Use [ASSEMBLY.md](ASSEMBLY.md) only after every hard gate has passed.
+1. Read [PRINT_ME_FIRST.md](PRINT_ME_FIRST.md) before opening a production file.
+2. Read [SAFETY.md](SAFETY.md) before cutting, drilling, attaching trim, or loading.
+3. Review [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) for formulas, failure modes, and verification limits.
+4. Enter field measurements in [config.json](config.json), then rebuild every generated artifact.
+5. Open [the full model-only print set](generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf) only after confirming the printer, nozzle, plate, PETG product, and attachment coupons.
 
-The design rationale and exact load-path boundaries are in
-[ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md). Research and the supplied-file
-audit are recorded in [REFERENCE_RESEARCH.md](REFERENCE_RESEARCH.md) and
-[REFERENCE_3MF_AUDIT.md](REFERENCE_3MF_AUDIT.md).
+The full 3MF contains **101 exact-quantity catalog objects**: 98 installed finish pieces plus three print-first test objects. It is not arranged into real printer plates and contains no machine instructions. The nominal geometry estimate is **2.45 kg packaged PETG** and **2.42 kg installed PETG**, excluding purge, supports, failures, spares, fasteners, plywood, and steel.
 
-## Artifact status
+## Field information still required
 
-The deterministic r6 build has emitted all five canonical **software-model
-packages**. Their current manifest, package, mesh, source-map, real-parent
-Boolean-sweep, and neutral-3MF checks pass; this is software evidence only:
+Before this can become an installation-ready revision, record:
 
-| Canonical package ID | Frozen model-only filename | Current model count |
-| --- | --- | ---: |
-| `print_first_prototypes` | `MODEL_ONLY_R6_PRINT_FIRST_PROTOTYPES.3mf` | 8 |
-| `unique_parts_catalog` | `MODEL_ONLY_R6_UNIQUE_PARTS_CATALOG.3mf` | 49 |
-| `worst_case_one_bay_qualification` | `MODEL_ONLY_R6_WORST_CASE_ONE_BAY_QUALIFICATION.3mf` | 25 |
-| `one_level_l` | `MODEL_ONLY_R6_ONE_LEVEL_L.3mf` | 258 |
-| `two_level_full_project` | `MODEL_ONLY_R6_TWO_LEVEL_FULL_PROJECT.3mf` | 516 |
+1. The limiting clear length of both walls at the rear, middle, and front shelf planes for every candidate common elevation.
+2. The included inside-corner angle, wall bow, drywall/caulk buildup, and a full-size cardboard or hardboard corner template.
+3. The installed wall-to-plywood-back offset **separately for each wall**, plus bracket wall-to-tip envelope, bracket width, locks, and final wall-to-fascia projection using the exact hardware.
+4. Both edges and center of every stud on both walls—especially the first 14 in from the corner—plus framing material, drywall thickness, wiring, pipes, and protective plates.
+5. Confirmation that the 8 in depth and 168.056 mm Palatine fascia envelope clear the doorway, trim, people, bins, outlets, and every intended elevation.
+6. Storage-bin outside width, depth, height, lid overhang, quantity, loaded weight, and the heaviest individual object.
+7. Exact printer, nozzle diameter and material, build plate, Bambu Studio version, black PETG brand/product, and filament condition.
+8. Intended evenly distributed contents, point loads, measured shelf-arm dead load, common shelf-top elevation, and number of levels sharing the standards.
+9. The exact removable silicone products, captured-channel fit, rear-curb screw stack, groin-vault screws, and removal method, qualified on printed PETG, sealed plywood, and the actual coated steel where each product is used.
 
-`software_model_package_eligible: true` means only that the geometry and
-neutral package conform to the checked software contract. Every package must
-still state `physical_installation_qualified: false` and
-`production_release_eligible: false`. The one-bay qualification file is a
-specimen model for future tests, not evidence that any qualification test
-passed. None of the five files is a print recipe, safety approval, load rating,
-or permission to install overhead.
+In `config.json`, fill each run's `field_verified_min_clear_wall_width_in`, `field_verified_installed_shelf_back_offset_in`, `field_verified_support_centers_in`, and `field_verified_shelf_arm_dead_load_lb`; also fill the corner's `field_verified_angle_deg` and structural `field_verified_bracket_reach_in`. Empty values keep the output explicitly nominal. Support centers are absolute distances from the intersection of the finished wall planes, not from a board end.
 
-Naming alone is not release evidence. The generated model-only packages,
-49 individual STL files under `generated/stl/`, and their exact 49 one-part
-model-only 3MF counterparts under `generated/individual_model_only_3mf/`,
-parts schedules, `model_3mf_report.json`,
-`slice_report.json`, validation report, and cryptographic manifest form one
-checked artifact set and must remain digest-aligned. Do not rename a
-development prototype to a canonical filename. `slice_report.json` says
-`performed: false` because the printer, nozzle, plate, PETG, and settings are
-unconfirmed; it is neither a print-time estimate nor a substitute for slicing
-or physical qualification.
+## Generated deliverables
 
-## Project map
+- `generated/model_only_3mf/`: individual, parts-catalog, and full-print-set model-only 3MF packages;
+- `generated/*.stl`: matching individual meshes;
+- `generated/artifact_manifest.json`: SHA-256 hashes and sizes for every printable artifact;
+- `generated/validation.json`: geometry, counts, mesh checks, fit envelope, Palatine data, and packaged/installed mass estimates;
+- `generated/model_3mf_report.json`: deterministic 3MF archive and mesh validation;
+- `generated/cut_plan.csv`: nominal structural cut list and printable counts;
+- `generated/support_plan.csv`: nominal or field-supplied support coordinates;
+- `generated/corner_layout.svg` and `generated/support_layout.svg`: dimensioned design-development drawings;
+- `generated/palatine_elevation.svg`: exact nominal stations/counts with a schematic curved profile for the r5 decorative order;
+- `generated/structural_sanity_check.json`: deliberately limited plywood serviceability calculation;
+- `generated/artist_rendering_triadic_palatine_order.png`: final r5 visual design intent.
 
-- `config.json` — authoritative parameters, hard gates, and nominal snapshot
-- `design_math.py` — fitted plan and geometry calculations
-- `release_plan.py` — exact cassette and support stationing
-- `release_inventory.py` — 258-object per-level physical inventory
-- `generate_all_petg_r6.py` — deterministic mesh/package generator
-- `generate_drawings.py` — deterministic governing SVG sheets
-- `generated/` — reproducible development/release artifacts and reports
-- `assets/` — current hero, preserved earlier rendering, and reproducible prompt
-- `reference/hybrid_r5/` — preserved r5 hybrid fallback; it is not the active
-  all-PETG design
+## Rebuild and verify
 
-## Rights and references
+Python 3.12 and the pinned packages in `requirements.txt` reproduce the model artifacts:
 
-No third-party mesh is copied into Story Corner. Supplied MakerWorld packages
-were inspected read-only for functional principles and are not redistributed.
-See the reference documents for provenance and applicable upstream licenses.
+```sh
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+PYTHON_BIN=.venv/bin/python SKIP_BAMBU=1 scripts/build_all.sh
+```
 
-This repository currently has no `LICENSE` file. Public visibility does not
-grant permission to copy, modify, redistribute, or sell the project. A project
-license must be selected deliberately before reuse rights can be assumed.
+On macOS with Bambu Studio in the normal Applications location, run the stricter integration check:
+
+```sh
+PYTHON_BIN=.venv/bin/python REQUIRE_BAMBU=1 scripts/build_all.sh
+```
+
+The build regenerates generator-owned STL/3MF outputs, exercises parametric relationships, and checks mesh closure, body count, the 180 mm saved-orientation envelope, exact 101-object packaging, 3MF integrity, hashes, documentation links, and absence of embedded G-code. Strict local mode also imports each 3MF into Bambu Studio and exports it back to STL.
+
+## Hardware and rating boundary
+
+The reference support family is the black Knape & Vogt 82 Series standard with 182 Series 7 in bracket, bracket lock, and manufacturer-prescribed shelf attachment. The [official KV 82/182 specification](https://www.knapeandvogt.com/sites/default/files/OL2243-82Standards-182Brackets-Specs-WEB.pdf) documents nominal dimensions and warns that actual conditions reduce laboratory results and require representative testing.
+
+The current 55 lb return-arm and 120 lb through-arm evenly distributed values are **system-selection targets, not ratings**. The corner-square load belongs to the through deck. No bracket result may be multiplied by bracket count or added across shelf levels to claim an installed capacity.
+
+## Repository status
+
+The canonical repository is [rupret007/story-corner-shelf](https://github.com/rupret007/story-corner-shelf). The active revision is `triadic_palatine_fitted_l_corner_r5`. See [CHANGELOG.md](CHANGELOG.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+
+The earlier R6–R11 development trees under `development/` are retained as frozen historical records with their own print-authorization rules; the r5 Triadic Palatine Order supersedes them as the current design focus. In particular, the R11 tree keeps an explicit print hold, a single-use permit protocol, and a **0 kg / 0 lb** rating — nothing checked in there authorizes printing, drilling, installation, or load. See [development/r11/README.md](development/r11/README.md), the [R11 print hold](development/r11/PRINT_FIRST.md), and the [append-only physical record](development/r11_physical/PHYSICAL_RECORD.md).
+
+No open-source license has been selected. Add the intended license before inviting public reuse or contributions.

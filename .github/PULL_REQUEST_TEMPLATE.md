@@ -1,33 +1,30 @@
 ## Summary
 
-Describe the r6 design, documentation, test, or model-only artifact change. State whether it affects geometry, package taxonomy, wall attachment, physical gates, or only presentation.
+Describe the design, documentation, measurement, attachment, or generated-artifact change. State whether it preserves the r5 Triadic Palatine Order or creates a separately reviewed edition.
 
-## Required evidence
+## Verification
 
-- [ ] `python -B release_check.py --root . --source-only` passes.
-- [ ] `python -B release_check.py --root .` passes with the complete canonical model-only package set.
-- [ ] `python -I -B -m unittest discover -s tests -p 'test_*.py'` passes.
-- [ ] `python -I -B publish_root.py --audit-publication .` passes for a promoted publication tree.
-- [ ] Generated artifacts and `PUBLICATION_MANIFEST.json` are current and no unlisted file is present.
+- [ ] Measurements are labeled nominal, user-reported, or field-verified.
+- [ ] Long-wall and short-wall installed shelf-back offsets are represented independently.
+- [ ] Through and return deck footprints do not overlap; both arms remain independently bracket-supported.
+- [ ] PETG arches, piers, vault, fascia, curbs, corner seam, angle contact, and optional alignment hardware remain outside the credited permanent load path.
+- [ ] A structurally all-PETG shelf or printed wall bracket has not been implied by the visual design.
+- [ ] Corner angle is within ±0.25°, nominal residual joint clearance is at least 0.6 mm, and the full-size template was reviewed where applicable.
+- [ ] Support spacing, overhang, distinct-center, perpendicular-bracket, and groin-vault-clearance gates pass.
+- [ ] The exact perpendicular brackets, locks, continuous angles, and fasteners were physically dry-fitted where hardware or field geometry changed.
+- [ ] Rear-curb intervals stop at the plywood joint; matching tile drill paths and underside fastener clearance were reviewed.
+- [ ] Fascia channels capture the complete stack without binding; lateral assembly/end closure is workable; no cosmetic hole or notch enters the continuous steel angle; each entablature stays on its host half; keystones and corner pilaster retain one fixed and one floating side.
+- [ ] Selected silicone and fasteners were coupon-tested on printed PETG, sealed plywood, and the actual coated steel.
+- [ ] All STL meshes are closed, single-body, consistently wound, and fit the declared 180 mm saved-orientation envelope.
+- [ ] The full-set catalog resolves to 101 objects for the nominal r5 configuration, or changed counts are explained and regenerated consistently.
+- [ ] Packaged and installed mass estimates, cut/print plans, `validation.json`, model report, and `artifact_manifest.json` agree.
+- [ ] All generated 3MFs contain no embedded G-code.
+- [ ] Bambu Studio import/export was run locally, or the reason it was unavailable is documented.
+- [ ] Documentation references `generated/artist_rendering_triadic_palatine_order.png` as the final r5 design-intent rendering.
+- [ ] `generated/palatine_elevation.svg` agrees with the configured and generated r5 module geometry.
+- [ ] Portable tests, repository checks, and a clean deterministic rebuild pass.
+- [ ] No stale r4 artifacts/counts, local archives, virtual environments, slicer scratch files, machine code, or personal data are included.
 
-## Safety and release boundaries
+## Evidence
 
-- [ ] The shelf remains experimental, unrated, and blocked from overhead use.
-- [ ] `physical_installation_qualified` and `production_release_eligible` remain `false`, with nonempty physical qualification blockers.
-- [ ] No tested load rating, embedded G-code, slicer profile, printer profile, or printed wall anchor was added or implied.
-- [ ] Every wall-fastened support still requires suitable metal structural screws into verified wood studs or purpose-installed blocking.
-- [ ] Both shelf levels remain structurally independent and all required keys, pins, housings, and removal/service sweeps remain accessible.
-- [ ] Removable ornament retains zero structural credit and does not reduce a frozen structural web, clearance, or isolation threshold.
-- [ ] Any changed part still passes one-body, watertight, saved-orientation envelope, actual-parent interface, and package validation checks.
-- [ ] Field measurements and physical coupon/full-bay/creep gates remain explicitly unresolved unless supported by reviewed evidence.
-
-## Scope and provenance
-
-- [ ] The exact 6 + 3 two-level hero is identified as visual intent, not engineering evidence.
-- [ ] `reference/hybrid_r5` remains byte-identical and clearly labeled as the inactive hybrid fallback.
-- [ ] No third-party mesh, personal path/data, cache, temporary output, G-code, or unreviewed license text was introduced.
-- [ ] Root documents, their `docs/` mirrors, canonical package labels, and filenames agree.
-
-## Evidence links
-
-Link the relevant validation report, drawing, measurement record, and physical test record. Do not use a rendering as evidence of fit or capacity.
+Include relevant dimensions, residual-gap calculation, validation output, attachment/pull-check results, and privacy-reviewed photos or renderings. Do not present a rendering as proof of fit or structural capacity.

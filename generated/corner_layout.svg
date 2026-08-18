@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <style>
+    .heading{font:700 26px Arial,sans-serif;fill:#16191c} .title{font:700 17px Arial,sans-serif;fill:#222}
+    .small{font:14px Arial,sans-serif;fill:#343a40} .note{font:15px Arial,sans-serif;fill:#7a3100}
+    .wall{stroke:#687078;stroke-width:7} .deck{fill:#222;stroke:#000;stroke-width:2}
+    .return{fill:#303030;stroke:#000;stroke-width:2} .quad{fill:#111;stroke:#d6d9dc;stroke-width:1}
+    .support{stroke:#4aa3df;stroke-width:3;stroke-dasharray:7 5} .fascia{stroke:#e55300;stroke-width:7;stroke-linecap:round}
+    .rear{stroke:#2b8a3e;stroke-width:5;stroke-linecap:butt} .curbseam{stroke:#fff;stroke-width:3}
+    .topseam{stroke:#f8f9fa;stroke-width:2;stroke-dasharray:3 2}
+    .joint{fill:#ffd8a8;stroke:#e67700;stroke-width:1} .dimension{stroke:#555;stroke-width:1.5}
+  </style>
+  <rect width="900" height="650" fill="#f7f8fa"/>
+  <text x="45" y="42" class="heading">Fitted same-height L corner — plan view</text>
+  <line x1="105.0" y1="105.0" x2="617.0" y2="105.0" class="wall"/>
+  <line x1="105.0" y1="105.0" x2="105.0" y2="425.0" class="wall"/>
+  <rect x="110.5" y="110.5" width="473.5" height="64.0" class="deck"/>
+  <rect x="110.5" y="175.0" width="64.0" height="217.0" class="return"/>
+  <rect x="110.5" y="110.5" width="31.9" height="31.9" class="quad"/><rect x="142.6" y="110.5" width="31.9" height="31.9" class="quad"/><rect x="110.5" y="142.6" width="31.9" height="31.9" class="quad"/><rect x="142.6" y="142.6" width="31.9" height="31.9" class="quad"/>
+  <rect x="110.5" y="174.5" width="64.0" height="1.5" class="joint"/>
+  <line x1="174.7" y1="110.5" x2="174.7" y2="174.5" class="topseam"/>
+  <line x1="110.5" y1="174.7" x2="174.5" y2="174.7" class="topseam"/>
+  <line x1="155.2" y1="105.0" x2="155.2" y2="174.5" class="support"/><line x1="283.2" y1="105.0" x2="283.2" y2="174.5" class="support"/><line x1="411.2" y1="105.0" x2="411.2" y2="174.5" class="support"/><line x1="539.2" y1="105.0" x2="539.2" y2="174.5" class="support"/><line x1="105.0" y1="191.0" x2="174.5" y2="191.0" class="support"/><line x1="105.0" y1="283.5" x2="174.5" y2="283.5" class="support"/><line x1="105.0" y1="376.0" x2="174.5" y2="376.0" class="support"/>
+  <line x1="174.5" y1="174.5" x2="584.0" y2="174.5" class="fascia"/>
+  <line x1="174.5" y1="175.0" x2="174.5" y2="392.0" class="fascia"/>
+  <line x1="110.5" y1="110.5" x2="119.9" y2="110.5" class="rear"/>
+  <line x1="110.5" y1="110.5" x2="110.5" y2="119.9" class="rear"/>
+  <line x1="120.1" y1="110.5" x2="584.0" y2="110.5" class="rear"/>
+  <line x1="110.5" y1="120.1" x2="110.5" y2="174.5" class="rear"/>
+  <line x1="110.5" y1="175.0" x2="110.5" y2="392.0" class="rear"/>
+  <line x1="119.9" y1="106.5" x2="119.9" y2="114.5" class="curbseam"/>
+  <line x1="106.5" y1="119.9" x2="114.5" y2="119.9" class="curbseam"/>
+  <line x1="106.5" y1="174.5" x2="114.5" y2="174.5" class="curbseam"/>
+  <line x1="106.5" y1="175.0" x2="114.5" y2="175.0" class="curbseam"/>
+  <circle cx="105.0" cy="105.0" r="6" fill="#e55300"/>
+  <text x="117.0" y="93.0" class="small">inside finished-wall datum</text>
+  <text x="355.0" y="80.0" class="title">5 ft through deck: 59.188 in</text>
+  <text x="187.0" y="350.0" class="title">3 ft return: 27.125 in</text>
+  <text x="187.0" y="373.0" class="small">starts at 8.750 in</text>
+  <text x="187.0" y="396.0" class="small">wood fit gap: 1.6 mm</text>
+  <text x="187.0" y="419.0" class="small">nominal bracket-envelope clearance: 2.063 in</text>
+  <text x="187.0" y="447.0" class="small">rear curb: 30 mm fitted corner replacement + 0.6 mm seams</text>
+  <rect x="620" y="105" width="235" height="235" rx="9" fill="#fff" stroke="#b8bec4"/>
+  <text x="640" y="133" class="title">Legend</text>
+  <rect x="640" y="150" width="28" height="16" class="deck"/><text x="680" y="163" class="small">through-owned plywood</text>
+  <rect x="640" y="178" width="28" height="16" class="return"/><text x="680" y="191" class="small">return plywood</text>
+  <line x1="640" y1="214" x2="668" y2="214" class="support"/><text x="680" y="219" class="small">desired support line</text>
+  <line x1="640" y1="242" x2="668" y2="242" class="fascia"/><text x="680" y="247" class="small">exposed fascia</text>
+  <line x1="640" y1="274" x2="668" y2="274" class="rear"/><text x="680" y="279" class="small">rear curb on deck</text>
+  <line x1="640" y1="306" x2="668" y2="306" class="topseam"/><text x="680" y="311" class="small">0.6 mm top seam</text>
+  <rect x="45" y="555" width="810" height="65" rx="9" fill="#fff3cd" stroke="#b77900" stroke-width="2"/>
+  <text x="65" y="582" class="note">The through deck supplies the entire 8 x 8 in corner surface; the return does not overlap it.</text>
+  <text x="65" y="607" class="note">PETG corner pieces hide finish seams only. Field angle, wall bow, bracket bodies, and framing still govern.</text>
+</svg>

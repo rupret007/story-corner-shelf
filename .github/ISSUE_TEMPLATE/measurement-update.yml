@@ -1,70 +1,144 @@
-name: r6 field measurement update
-description: Record the wall, framing, storage, printer, PETG, and fastener facts required before physical qualification.
-title: "r6 field measurements: "
+name: Field measurement update
+description: Record verified closet, framing, hardware, Palatine-clearance, and printing data before regeneration.
+title: "Field measurements: "
 body:
   - type: markdown
     attributes:
       value: |
-        Do not post addresses, faces, serial numbers, or other private information. Story Corner r6 is an experimental, unrated, all-PETG shelf body that still requires suitable metal structural screws into verified wood studs or purpose-installed blocking. A software-complete model package is not permission to print, drill, install, or load it.
+        Do not include addresses, faces, serial numbers, or other private information in a public issue. The common datum is the intersection of the two finished wall planes. Distances along each wall run outward from that corner.
 
-  - type: textarea
-    id: finished_walls
+        Story Corner is an untested hybrid prototype. PETG is finish and ornament only; plywood and steel remain the permanent load path. No tested load rating or embedded G-code is provided.
+
+  - type: input
+    id: short_width
     attributes:
-      label: Finished-wall geometry
-      description: Record limiting clear widths at the rear, middle, and front planes; usable depth; corner angle; wall bow; and datum uncertainty for both walls.
+      label: Short-wall limiting clear width
+      description: Smallest rear/center/front-plane width across every shelf elevation that may be used, in inches.
+      placeholder: "Example: 35.875 in"
+    validations:
+      required: true
+
+  - type: input
+    id: long_width
+    attributes:
+      label: Long-wall limiting clear width
+      description: Smallest rear/center/front-plane width across every shelf elevation that may be used, in inches.
+      placeholder: "Example: 59.750 in"
+    validations:
+      required: true
+
+  - type: input
+    id: depth
+    attributes:
+      label: Verified usable depth
+      description: Record wall-to-obstruction depth and selected shelf depth, in inches.
+    validations:
+      required: true
+
+  - type: input
+    id: short_back_offset
+    attributes:
+      label: Short-wall installed shelf-back offset
+      description: Measured finished short wall to its installed plywood back plane, including the real standard, shims, mud, and fastener seating.
+      placeholder: "Do not copy the catalog projection"
+    validations:
+      required: true
+
+  - type: input
+    id: long_back_offset
+    attributes:
+      label: Long-wall installed shelf-back offset
+      description: Measured finished long wall to its installed plywood back plane, independently of the short-wall value.
+      placeholder: "Do not assume both walls match"
     validations:
       required: true
 
   - type: textarea
-    id: vertical_zone
+    id: corner_geometry
     attributes:
-      label: Two-level vertical zone
-      description: Record the common level datum, outlet-top-to-ceiling distance, proposed shelf-top elevations, ceiling/trim/door clearance, and stored-item service clearance.
+      label: Inside-corner geometry and full-size template
+      description: Record angle at each elevation, wall bow/buildup, and template method. R5 requires deviation within ±0.25 degrees and at least 0.6 mm residual from the 1.6 mm gap.
+      placeholder: "Example: 89.82 degrees; residual calculation attached; maximum bow 1/8 in; hardboard template attached"
     validations:
       required: true
 
   - type: textarea
-    id: framing
+    id: hardware_envelope
     attributes:
-      label: Framing and hidden services
-      description: List every verified stud or blocking edge and center from the corner datum, material and thickness, wall finish thickness, locating method, protective plates, wiring, plumbing, and no-drill zones.
+      label: Installed bracket and angle envelope
+      description: Record bracket wall-to-tip reach, body width, locks, fasteners, steel-angle fit, and the physical perpendicular dry-fit clearance using the exact hardware.
     validations:
       required: true
 
   - type: textarea
-    id: storage
+    id: supports
     attributes:
-      label: Storage and target load
-      description: Record every bin's widest, deepest, and tallest outside dimensions; loaded weights; quantity; heaviest item; intended distribution; and target load for each arm and level.
+      label: Verified structural support centers
+      description: List each center as an absolute distance from the inside-corner datum. Include stud edges/centers, material, blocking, and the nearest through support used for the groin-vault clearance check.
     validations:
       required: true
 
   - type: textarea
-    id: printer_material
+    id: groin_clearance
     attributes:
-      label: Printer and black PETG
-      description: Confirm printer, nozzle diameter and material, build plate, slicer version, exact black-PETG brand/product, filament condition, drying procedure, and calibrated flow/temperature settings.
+      label: Palatine groin-vault clearance
+      description: Record the regenerated and physical clearance between the 42 mm through-owned soffit footprint and the nearest bracket/support plane. The generated development minimum is 10 mm.
     validations:
       required: true
 
   - type: textarea
-    id: metal_fasteners
+    id: electrical
     attributes:
-      label: Metal structural fasteners
-      description: Record exact screw type, shank and head/washer dimensions, length, thread embedment, driver envelope, and manufacturer data. Printed or hollow-wall anchors are not part of the primary load path.
+      label: Electrical and hidden-service constraints
+      description: Record locating methods, protective plates, wiring, plumbing, and every no-drill area. Do not guess a cable path from an outlet.
+    validations:
+      required: true
+
+  - type: textarea
+    id: elevation
+    attributes:
+      label: Common elevation and movement zone
+      description: Record the common laser datum, candidate elevations, ceiling/door/trim/outlet clearance, full 168.056 mm Palatine fascia envelope, and number of shelf levels sharing the standards.
+    validations:
+      required: true
+
+  - type: textarea
+    id: bins
+    attributes:
+      label: Bins, contents, and dead load
+      description: Record outside dimensions, quantities, loaded weights, heaviest individual item, intended distribution, and measured dead load of each completed shelf arm.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachment
+    attributes:
+      label: Finish attachment qualification
+      description: Record qualification and removal results for every finish attachment. Fascia uses holeless channel capture; curb/groin screws require safe underside clearance.
+      placeholder: "Include silicone/product and surface, channel fit/order, screw details, tile drill paths, depth stop, pull checks, and confirmation that fascia adds no hole or notch to the steel angle."
+    validations:
+      required: true
+
+  - type: textarea
+    id: printer
+    attributes:
+      label: Confirmed printing setup
+      description: Record printer, nozzle diameter/material, build plate, Bambu Studio version, black PETG brand/product, and filament condition.
     validations:
       required: true
 
   - type: checkboxes
-    id: acknowledgements
+    id: acknowledgement
     attributes:
-      label: Required acknowledgements
+      label: Safety acknowledgement
       options:
-        - label: I understand the nominal 3 ft / 5 ft geometry is not a drilling map and every structural station must resolve to verified framing or blocking.
+        - label: I understand the nominal support plan is not a drilling map and no tested load rating is claimed.
           required: true
-        - label: I understand there is no tested load rating and no overhead installation is authorized by generated files, renderings, or passing software checks.
+        - label: I dry-fitted the exact perpendicular brackets and understand both L arms require independent plywood-and-steel support.
           required: true
-        - label: I will complete the named coupons, actual-parent cycles, wall mockup, full-bay proof/creep/recovery tests, and teardown inspection before requesting physical release.
+        - label: I understand a structurally all-PETG shelf is outside this project; Palatine arches and piers are decoration only.
           required: true
-        - label: I understand the model-only 3MF files contain no embedded G-code or approved printer profile.
+        - label: I understand the square-footprint gate is ±0.25 degrees, residual nominal clearance must be at least 0.6 mm, and a full-size template is still required.
+          required: true
+        - label: I understand no curb or Palatine corner part may bridge the plywood joint and every hanging finish piece needs qualified retention and inspection.
           required: true

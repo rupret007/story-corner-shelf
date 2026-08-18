@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <style>
+    .h{font:700 25px Arial,sans-serif;fill:#20252a}.t{font:19px Arial,sans-serif;fill:#20252a}.s{font:15px Arial,sans-serif;fill:#343a40}
+    .wall{fill:#f1f1f1;stroke:#555;stroke-width:3}.shelf{fill:#171717;stroke:#000;stroke-width:2}.std{stroke:#303030;stroke-width:10}
+    .datum{stroke:#e55300;stroke-width:5;stroke-dasharray:9 6}
+  </style>
+  <rect width="1200" height="720" fill="#fafbfc"/>
+  <text x="55" y="50" class="h">Story Corner — unfolded same-height L elevation</text>
+  <rect x="70" y="90" width="360" height="520" class="wall"/><rect x="430" y="90" width="600" height="520" class="wall"/>
+  <text x="150" y="130" class="t">36 in short wall / return arm</text><text x="640" y="130" class="t">60 in long wall / through arm</text>
+  <line x1="430" y1="90" x2="430" y2="610" class="datum"/>
+  <text x="442" y="590" class="s">inside-corner datum</text>
+  <rect x="85" y="245" width="930" height="22" class="shelf"/>
+  <line x1="178" y1="155" x2="178" y2="475" class="std"/><line x1="290" y1="155" x2="290" y2="475" class="std"/><line x1="402" y1="155" x2="402" y2="475" class="std"/>
+  <line x1="493" y1="155" x2="493" y2="475" class="std"/><line x1="653" y1="155" x2="653" y2="475" class="std"/><line x1="813" y1="155" x2="813" y2="475" class="std"/><line x1="973" y1="155" x2="973" y2="475" class="std"/>
+  <text x="118" y="520" class="s">3 desired return supports</text><text x="600" y="520" class="s">4 desired through supports</text>
+  <rect x="135" y="555" width="930" height="115" rx="12" fill="#fff3cd" stroke="#a67c00" stroke-width="2"/>
+  <text x="165" y="590" class="t">The black line is one common shelf-top elevation, not two independently movable shelves.</text>
+  <text x="165" y="622" class="t">Support centers are nominal geometry; verified framing/blocking and bracket dry-fit govern.</text>
+  <text x="165" y="650" class="s">The reported outlet-top-to-ceiling zone is 43.5 in; remeasure and verify wiring before placement.</text>
+</svg>

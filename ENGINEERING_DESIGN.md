@@ -1,319 +1,272 @@
-# Engineering design — Triadic Palatine r6
+# Engineering design basis — Triadic Palatine fitted-L prototype
 
-## Status and design boundary
+This document records r5 design intent, parametric geometry, and verification requirements. It is not a stamped calculation, code approval, installation certification, or tested load rating.
 
-Story Corner r6 is an **experimental, unrated candidate system**. This document
-describes geometry and intended load paths; it is not a structural analysis,
-code approval, or load rating. PETG is anisotropic and creep-sensitive, wall
-conditions are unverified, and the target contents load is unknown.
+## 1. Design problem and load-path split
 
-All components inside the shelf assembly are printed black PETG: deck
-cassettes, front tied frames, X-corbels with integral bearing caps, keys,
-keeper strips, pins, cross-keys, facade, and ornament. The only nonprinted
-installed boundary is
-suitable metal structural screws with integral heads or compatible metal
-washers into verified wood studs or purpose-installed blocking. Production
-wall holes remain hard-blocked until the exact fastener, driver, wall finish,
-framing, and utility-clearance data are entered.
+Story Corner is one same-height L shelf whose visible surface reaches the exposed ends of nominal 36 and 60 in walls. The selected development depth is 8 in. Black PETG creates the Triadic Palatine finish; long-term storage load remains outside creep-sensitive printed plastic.
 
-The two selected L-shaped levels are complete and mechanically independent.
-There is no cross-level column, rail, key, or other vertical load transfer.
+The jobs are deliberately separate:
 
-## 1. Nominal plan and the 3 / 6 / 9 order
+1. Verified wood framing or purpose-installed blocking and structural fasteners transfer load into the wall.
+2. Locked steel brackets resist the shelf cantilever moment.
+3. A continuous plywood deck and continuous front steel angle within each arm distribute stored load.
+4. PETG provides replaceable top finish, modest item retention, fitted seams, and architectural ornament.
 
-The coordinate datum is the intersection of the two finished wall planes. The
-60 in wall is the through arm; the 36 in wall is the return. Reference back
-clearance is 6.35 mm (0.25 in) on both walls, outer clearance is 3.175 mm
-(0.125 in), and depth is 152.4 mm (6 in). The return structure clears the
-through arm's complete 13.2 mm locked removable facade, its 4.4 mm axial
-service stroke, and a 1.2 mm reserve. The smaller 7.2 mm integral-boss
-projection is tracked separately and does not govern the return start.
+The 5 ft arm runs through and owns the corner. The shortened 3 ft return starts beyond the through deck's front plane. Both decks retain independent supports. The plywood joint, optional alignment plates, PETG fascia, arches, piers, and vault receive no capacity credit.
 
-| Geometry | Through / 5 ft wall | Return / 3 ft wall |
-| --- | ---: | ---: |
-| Run start from corner datum | 6.35 mm | 177.55 mm |
-| Printed run length | 1514.475 mm | 733.675 mm |
-| Visible bays | 6 | 3 |
-| Pier/X-corbel stations | 7 | 4 |
-| Bay span | 241.935 mm | 225.07 mm |
-| Start / end pier inset | 31.4325 / 31.4325 mm | 27.0325 / 31.4325 mm |
-| Half-bay cassettes | 12 | 6 |
+An all-PETG structural shelf is not an alternate configuration of this design. Roman arches develop compression reactions between abutments; they do not eliminate tension at a cantilevered wall connection, printed layer anisotropy, joint behavior, or PETG creep. Any all-printed structural concept would be a separately scoped, tested, light-duty project and could not inherit r5's selection targets.
 
-The through cassette owns the 6 x 6 in structural corner. Its chassis front is
-158.75 mm from the corner datum, its fixed zero-credit integral bosses reach
-165.95 mm, and its full locked removable facade reaches 171.95 mm. The fixed
-through rosette's complete axial service sweep reaches 176.35 mm. The return
-structure therefore begins at 177.55 mm, retaining a 1.2 mm service-to-
-structure reserve and 18.8 mm structural clearance between the chassis
-envelopes. A removable,
-zero-credit return-corner finish cantilevers 4.4 mm back from that structure:
-its all-solid leading plane is 173.15 mm, while its relieved visible base
-begins at 173.95 mm. The resulting locked all-solid gap is 1.2 mm and the
-intentional visible-base relief is 2.0 mm. This finish must be removed first
-before the fixed through rosette moves through its service path.
-The first through crown and the structural corner front plane both lie at
-158.75 mm, producing zero nominal alignment error. The complete integrated-cap
-envelopes retain 30.2325 mm nominal corbel-to-corbel clearance. The structural
-chassis, integral boss, locked facade, and service-swept facade retain
-21.8325, 14.6325, 8.6325, and 4.2325 mm respectively to the first
-perpendicular cap. Exact real-mesh final and representative
-perpendicular seating sweeps show zero positive-volume overlap in the nominal
-software model, but field fit remains unqualified.
+## 2. Two-wall corner coordinate model
 
-Support centers, measured from the common inside-corner datum, are:
+The coordinate datum is the intersection of the two finished wall planes. Positive long-wall and short-wall stations run outward from that datum.
 
-- through arm: `37.7825, 279.7175, 521.6525, 763.5875, 1005.5225,
-  1247.4575, 1489.3925 mm`;
-- return arm: `204.5825, 429.6525, 654.7225, 879.7925 mm`.
+Define:
 
-These stations are geometry outputs, not drilling locations. The regular
-classical rhythm requires continuous verified wood blocking unless every
-station is proven over framing. If framing controls, regenerate unequal
-structural bay widths from real stations while preserving three and six
-visible arches with independent ornamental half-piers.
+- `WL = 60 in`: nominal long-wall clear length;
+- `WS = 36 in`: nominal short-wall clear length;
+- `bL`: installed shelf-back offset on the long/through wall;
+- `bS`: installed shelf-back offset on the short/return wall;
+- `D = 8.000 in = 203.2 mm`: selected deck depth, pending confirmation;
+- `j = 1.6 mm = 0.062992 in`: concealed plywood fit gap;
+- `c = 0.125 in`: nominal exposed-end clearance.
 
-## 2. Candidate load path
+The offsets are measured independently. Catalog projection does not include differences caused by drywall mud, wall bow, shims, or fastener seating. When a field value is absent, each wall currently falls back to the 0.6875 in reference standard projection.
 
-The intended vertical path is:
+The corner formulas are:
 
-`stored object → cassette top skin, coffer ribs, and integral front/rear chords
-→ broad cassette pads and integral corbel caps → tied-spandrel candidate
-load sharing → X-corbel → printed wall
-plate bearing → metal screw head or washer → structural screw → verified wood
-stud or blocking → building structure`
+- through-deck start on the long-wall axis: `bS`;
+- through-deck end: `WL − c`;
+- through-deck length: `WL − c − bS`;
+- through-owned corner bounds: long axis `bS..bS + D`, short axis `bL..bL + D`;
+- return-deck start on the short-wall axis: `bL + D + j`;
+- return-deck end: `WS − c`;
+- return-deck length: `WS − c − bL − D − j`.
 
-No primary vertical load is intentionally assigned to a small snap, cross-key,
-alignment key, cosmetic carrier, or pin. Those parts retain, preload, align, or
-prevent reverse motion. The 3/6 visual rhythm results in 11 separately
-wall-fastened reaction stations on every level.
+At the current equal nominal offsets:
 
-### Coffer deck
+- through deck: stations 0.6875–59.875 in; length 59.1875 in;
+- return deck: stations 8.750492–35.875 in; length 27.124508 in;
+- plywood footprint overlap: 0;
+- concealed gap: 1.6 mm.
 
-Each level has 18 half-bay deck cassettes. A cassette is nominally 30 mm high,
-with 3.2 mm top and bottom skins, 4.8 mm perimeter walls, 3.2 mm internal ribs,
-nine depth cells, and no clear bridge greater than 14 mm in the configured
-geometry. The physical intermodule seam is 0.35 mm. The largest configured
-part axis including its 10 mm comb projection is 162.225 mm, below the design's
-180 mm maximum part-axis design envelope.
+The structural front angle stays continuous within each arm. The return angle is field-trimmed and deburred to clear the through angle; contact between them is not a splice.
 
-The cassette train behaves as a segmented diaphragm, not one monolithic
-five-foot polymer beam. Sixteen internal seams receive three diaphragm keys
-each, for 48 keys per level. Nine crown seams are fixed locally within their
-bays; each uses one left-owned removable keeper strip opposite the fixed-right
-crown-pin ear. Its single rear-bayonet tongue traps all three keys after the
-rearward slide, and a separate underside indexed quarter-turn pin blocks the
-forward unlock slide. The visible-front fixed tie has its own separate indexed
-pin. Seven inter-bay
-seams sit over supported piers and use elongated floating seats with zero
-longitudinal tension-splice credit; their integral corbel caps physically trap
-all three keys throughout the qualified movement.
+The shelf tops must be set from one laser datum. Matching bracket slot numbers do not establish coplanarity if the two standard arrays start at different elevations.
 
-### Tied-spandrel arcade
+![Fitted corner plan](generated/corner_layout.svg)
 
-Each visible bay has two printed structural arcade halves. The separate
-candidate frame combines a compact 28 mm clevis/capital, minimum 8 mm root
-web, and 14 mm curved rib with two broad cassette pads plus one spring shoulder
-per half. Those three bearing interfaces seat against the 30 mm cassette and
-integral-cap chassis. The full fluted column is a removable visual overlay and
-receives zero structural credit.
-Total facade/chassis height is 168 mm. The structural spring extrados is at
-y = 46 mm and the structural crown extrados touches the cassette underside at
-y = 138 mm without solid overlap; the crown intrados is y = 124 mm. The
-cassette underside/top are y = 138/168 mm. A removable, zero-credit visual
-facade retains the taller y = 152 mm palace crown in a separate depth lane.
+## 3. Near-square angle and residual-gap derivation
 
-The hidden structural rib begins 0.4 mm beyond the actual compact-clevis
-housing, at local `u = 28.8 mm`, rather than occupying the support. Its
-root-to-physical-crown half-runs are 91.9925 mm through and 83.56 mm return,
-both with a 92 mm rise. Their circular radii are 91.992500306 and
-83.947139130 mm. The removable visual facade retains the full 241.935 and
-225.07 mm bay rhythms and visual radii of 125.527913 and 114.826773 mm. This
-geometry is **not** analyzed as a masonry arch or guaranteed
-pure-compression form. The closed frame is expected to see mixed compression,
-bending, tension, and shear. Its curved rib remains only a candidate contributor
-until matched, instrumented arch-on / arch-off full-bay tests show a repeatable
-benefit without worsening failure behavior.
+Let `delta = |measured angle − 90°|`. The approximate edge shift across the 203.2 mm deck depth is:
 
-### 3:4:5 X-corbels
+`shift = 203.2 × tan(delta)`
 
-Every support uses two 12 mm brace paths over a 144 mm horizontal by 108 mm
-vertical triangle with a 180 mm diagonal. One runs from `(0,154)` at the upper
-wall node to `(144,46)` at the front spring; the other runs from `(0,30)` to
-`(144,138)` at the cassette underside. They are unioned through a minimum 24
-mm boss at `(82.666667,92)`. The candidate saved orientation places the common
-wall-contact face on the build plate: installed run and elevation lie in the
-bed plane while wall projection grows in build Z. That creates one connected
-first layer, but it changes the layer relationship to the X paths and is not
-qualified until the compact-clevis cheeks, locator-ridge onsets, lock-bore
-closures, integral bearing-cap transition, every generated layer, and actual
-brim/toolpath are verified together on the confirmed printer. Arcade halves
-likewise need an exact same-PETG support or sacrificial strategy for their
-centered pads, shoulder, and tenons in the saved broad-face orientation. No
-support-free claim is made for either family.
+The remaining nominal joint clearance is:
 
-The wall plate is intentionally solid in development geometry. Provisional y
-stations 42, 84, and 126 mm are layout studies only. Actual bores, head seats,
-bosses, driver tunnels, and screw locations must be regenerated after measuring
-the screw shank, head or washer, embedment, driver, wall finish, framing, and
-utilities. A printed surface rail is not a substitute for verified framing.
+`residual = 1.6 − shift`
 
-## 3. Final-X vertical-lift joinery
+The gap-only physical overlap limit is:
 
-The active assembly has zero whole-half travel along the run. Holding a half
-at its final X/run coordinate, lift it vertically so all three interfaces enter
-together:
+`atan(1.6 / 203.2) = 0.451139°`
 
-- two 18 x 8 x 22 mm top tenons enter 18.8 x 8.8 mm open-bottom cassette
-  receivers and seat two 22 x 16 mm compression pads;
-- one 20 x 8 x 22 mm spring tenon enters a 20.8 x 8.8 mm open-bottom pier
-  receiver and seats a 28 x 16 mm shoulder.
+The stricter limit that preserves the required 0.6 mm residual is:
 
-The two top-tenon centers from the crownward physical end are
-`50, 80.5925 mm` on the through arm and
-`49.6, 72.16 mm` on the return. Each half receives two top positive quarter-turn
-cross-keys and one spring cross-key inserted and indexed from the visible
-front, with at least 75 mm of straight service access. The cross-keys resist
-withdrawal only; they receive zero vertical shelf-load credit and may not pull
-an unseated shoulder into position.
+`atan((1.6 − 0.6) / 203.2) = 0.281965°`
 
-The tighter return interface uses a 112.535 mm nominal half-bay and 112.36 mm
-physical crown half. Its `49.6 / 72.16 mm` top-key centers retain 3.76 mm of
-receiver web, 3.36 mm between the adjacent boss and handle, 4.2 mm from the
-receiver to the body, 4.0 mm from the handle to the body, a 7.0 mm keyway
-margin, a 30.625 mm cassette-pier ligament, and a 0.4 mm root pad. The compact
-19.2 mm handle contains an authored folded-U path of `17.1 + 1.6 + 7.1 =
-25.8 mm`; its conservative 20.0 mm strain-screen length retains the 0.0288
-proxy. These are geometry screens, not physical flexure qualification.
+The configured square-footprint gate is ±0.25°. At that limit, nominal shift is approximately 0.887 mm and residual clearance is approximately 0.713 mm. The generator rejects:
 
-The two halves do not slide through one another at the crown. After they are
-seated, a 72 x 48 x 6.4 mm rear bridge inserts **upward from below** into two
-open-bottom keyways and stops on integral shoulders. One 5 mm PETG pin in a
-5.4 mm fixed-right-half hole prevents drop or reverse slide. A second fixed pin
-is prohibited because it would overconstrain the moving fit. The pin receives
-zero shelf-load credit and must remain accessible without removing a cassette
-or ornament. The crown bridge pin is saved with its shaft axis parallel to the
-build plate, its split plane perpendicular to the plate, and its round head
-and circular cross-section vertical/tangent to the plate. This orientation is
-neither support-free nor production-qualified and requires the physical
-same-PETG slicer/orientation coupon gate.
+- a nonpositive or impossible residual policy;
+- a configured gate above the residual-derived 0.281965° limit;
+- a verified angle beyond ±0.25°;
+- a verified angle leaving less than 0.6 mm nominal residual clearance.
 
-At the return crown, the regenerated structural parent rib is
-`120.239805561..131.231041356 mm`; the through/return common guaranteed band is
-`120.646226096..131.231041356 mm`. The shifted lug occupies
-`120.9..127.9 mm`, its open-bottom service sweep occupies
-`72.9..127.9 mm`, and the worst-case hard-stop roof remains
-3.331041356 mm. The shift preserves the 7.0 mm engagement without lowering the
-4.0 mm ligament threshold.
+This calculation addresses only ideal straight edges. A full-size template remains required for wall bow, mud, caulk, surface damage, and the actual cut line. Exceeding the gate requires revised deck and corner footprints, not slicer scaling of cosmetic parts.
 
-This sequence replaces the rejected 12 mm whole-half longitudinal slide, which
-created a crown collision and deadlocking assembly path.
+## 4. Support placement and interference
 
-## 4. Rail-free seams and thermal movement
+### 5 ft through arm
 
-The release-candidate baseline deliberately has no separate stitch rails,
-rail pins, or run-end ties. The geometry-current study would add 119
-unqualified objects per level, lacked a defined cassette attachment, and
-risked forming a second rigid
-thermal loop. It is retained only as optional research and receives no
-installed-object or load-path credit. Re-entry requires a named rail-on versus
-rail-off full-bay comparison showing a repeatable stiffness, recovery, or
-failure-mode benefit while preserving the full 1.2 mm supported-pier travel.
+- Deck stations: 0.6875–59.875 in from the corner datum.
+- Four desired support lines: 6.28125, 22.28125, 38.28125, and 54.28125 in.
+- Support intervals: 16 in.
+- End overhangs: 5.59375 in.
 
-The active shelf instead relies on the integral front and rear chords within
-each two-skin cassette, three diaphragm keys at every seam, one fixed front tie
-at each crown, and direct corbel support at every pier boundary. The nine crown
-seams are fixed only within their independently supported bays. At the seven
-supported pier seams, the crownward cassette side is the local fixed datum;
-the springward side uses an elongated pocket and lock seat over the integral
-corbel cap. Cap contact is vertical bearing/sliding only and receives zero
-axial credit.
-No ornament, keeper, adhesive, end closure, or optional-study part may bypass
-that movement and turn the five-foot run into one thermally locked PETG chord.
+### 3 ft return arm
 
-## 5. Corner and level independence
+- Deck stations: 8.750492–35.875 in from the corner datum.
+- Three desired support lines: 10.750492, 22.312746, and 33.875 in.
+- Support intervals: approximately 11.562254 in.
+- End overhangs: 2 in.
 
-The corner is a visual meeting, not a rigid structural elbow. The through arm
-owns the corner volume. The return remains separately corbel-supported. A
-nine-petal rosette is fixed to the through-side finish and its return mate
-floats; neither receives mechanical L-joint or structural credit. This avoids
-forcing two bowed or non-square walls into one PETG plane.
+These are desired geometry, not drilling coordinates. Every line must land on verified wood framing or purpose-installed structural blocking. Field centers must be finite, distinct by at least the current 2 in independent-support development guard, within their deck, no more than 16 in apart, and leave no more than 6 in end overhang.
 
-Likewise, the provisional +12 in and +33 in shelf-top levels align visually
-but remain mechanically separate. The upper level is installed first because
-its cross-key, crown-pin, driver, and removal paths must be reachable before the
-lower level occupies the working space.
+Using the 7.26 in reference bracket reach and nominal offsets, perpendicular bracket-body clearance is approximately 2.803 in. Using the more conservative entire 8 in shelf envelope, clearance is approximately 2.063 in. Both exceed the 1 in development minimum, but neither captures actual bracket width, locks, screws, manufacturing tolerance, wall angle, or installation error. Physical two-bracket dry fit is mandatory.
 
-## 6. Classical structure and isolated detail
+The 42 mm Palatine groin-vault soffit occupies stations 7.010–8.664 in beneath the through-owned corner square. Its nominal distance from the nearest through support plane at 6.281 in is 18.519 mm. Regeneration stops below the 10 mm development minimum, and the real bracket body still requires a dry fit.
 
-Roman arcade, pier, and entablature geometry form the visible candidate
-chassis. Greek proportion and six-flute pier overlays discipline the facade.
-Egyptian influence is limited to a shallow upper cavetto. Restrained Art Deco
-sunbursts, three nested chevrons, and a stepped visual keystone create a
-secondary layer.
+![Nominal support stations](generated/support_layout.svg)
 
-Fine archivolts, flutes, dentils, paterae, rosettes, cavetto moldings,
-sunbursts, chevrons, seam keys, and the visible keystone attach to isolated
-carriers. The right carrier owns the visual keystone while the left floats at
-the seam. All 33 ornament objects per level are removable and receive zero
-structural credit. Drawings govern geometry and access; the artist rendering
-is illustrative only.
+## 5. Wall hardware, plywood, and steel
 
-## 7. Original named-mechanism reconciliation
+The reference basis is KV 82/182 or an equivalently documented complete system:
 
-The governing request named several joint concepts before collision, thermal,
-service-access, and inventory sweeps were complete. They are reconciled here
-explicitly; none is silently claimed as an installed part when the final
-release-candidate topology uses a different mechanism.
+- 39 in black double-slot steel standards;
+- 7 in black brackets intended for 8 in shelves;
+- approximately 1.25 in vertical adjustment increments;
+- a bracket lock at every station;
+- mechanical deck attachment at every bracket;
+- manufacturer-prescribed compatible fasteners, holes, spacing, and installation.
 
-| Original requested mechanism | r6 release-candidate resolution | Reason and structural-credit boundary |
-| --- | --- | --- |
-| Sliding saddle plus separate saddle-retention pin | **Integrated caps replace the sliding saddles/pins.** Each X-corbel owns a full-width broad bearing cap with tight/elongated locator pockets and two removable cassette locks. Installed counts are 11 caps integral to the corbels, 22 locks, 0 sliding saddles, and 0 saddle pins per level. | The separate stack added two tolerance-sensitive interfaces, dead mass, and another pin service path without improving broad bearing. The integral cap carries candidate compression bearing; locators and locks retain/alignment only and receive no independent load rating. |
-| Floating pier diaphragm/alignment keys plus a floating front entablature key | **The fixed-diaphragm/cap topology replaces floating front keys.** Each of nine crown seams has three fixed diaphragm keys, a positively pinned keeper strip, and one separately pinned visible-front tie. Each of seven supported pier seams instead has three elongated diaphragm keys trapped by the integral cap through 1.2 mm travel and has 0 front entablature keys. | The proposed floating front key's underside access collided with the cap/lock service envelope and could create an unintended axial tie. Direct cap support plus trapped elongated diaphragm keys preserves alignment and thermal travel. All keys, keepers, ties, and pins receive zero independent vertical-load credit. |
-| Comb and half-lap stitch-rail joinery | The half-lap rails, rail comb/locator features, overlap pins, and run-end ties remain **noninstalled optional research geometry**. The study has 41 rail segments and 37 overlap joints represented by 74 pins, plus 4 end ties: 119 optional printed objects per level. Installed package count and structural credit are both zero. | The active cassettes already provide integral front/rear chords, three seam keys, fixed crown ties, and direct pier support. Adding the rail study would introduce an unqualified second thermal/load loop. It may return only after a named rail-on/rail-off test proves benefit while retaining the full 1.2 mm movement reserve. |
+Do not combine a capacity result from one product family with components or installation details from another.
 
-Broad shoulders, mortise/receiver seats, removable keys, pinned keeper/tie
-interfaces, and asymmetric handed parts preserve the requested serviceable
-"Lincoln Logs" character. The table records deliberate engineering
-substitutions; it does not convert an untested joint into capacity evidence.
+The user-reported distance from outlet top to ceiling is 43.5 in. A nominal 39 in standard leaves only 4.5 in total placement margin. Remeasure the zone, locate wiring and protective plates, and establish the common shelf-top datum before drilling.
 
-## 8. Physical-object reconciliation
+Use 23/32 in cabinet-grade veneer-core plywood with the long arm parallel to the face grain. MDF, particleboard, sheathing-grade, damaged, or warped stock is not an equivalent substitution. Cut both arms from the same panel where practical to reduce thickness mismatch.
 
-Interfaces and integral features are not counted as separate objects. The 36
-top tenons and 18 spring tenons per level are integral to arcade halves; their
-receivers are integral to cassettes and corbels. The 16 cassette seams are
-interfaces.
+Each arm uses a continuous 1 x 1 x 1/8 in steel angle under its front edge. Predrill with reviewed edge distances and fasteners that cannot break through the deck top. Optional field-fitted slotted steel alignment plates may assist coplanarity after bracket dry fit, but they do not replace either arm's nearest bracket and receive no load-rating credit.
 
-| Installed family | Per level |
-| --- | ---: |
-| Deck cassettes | 18 |
-| Arcade halves | 18 |
-| X-corbels with integral bearing caps, plus cassette locks | 33 |
-| Top and spring positive quarter-turn cross-keys | 54 |
-| Diaphragm keys, crown keeper strips, and fixed-crown ties | 66 |
-| Indexed keeper/front-tie quarter-turn pins | 18 |
-| Crown bridges and crown pins | 18 |
-| **Chassis, joinery, and retention subtotal** | **225** |
-| Removable ornament carriers/overlays/end/corner pieces | 33 |
-| **Installed total per independent level** | **258** |
-| **Selected two-level installed total** | **516** |
+## 6. PETG top and rear-curb architecture
 
-Coupons, sacrificial mockups, destructive specimens, and recommended spares
-are outside these installed totals.
+All printable components are PETG-only and nonstructural. Saved orientations fit the declared 180 x 180 x 180 mm minimum model envelope.
 
-## 9. What can and cannot be claimed
+The 8 in top is divided into two 101.3 mm rows with a 0.6 mm seam. The length system uses a 152.4 mm pitch:
 
-Geometry tests may show watertight meshes, deterministic packages, fit
-clearances, collision-free paths, and consistency between configuration,
-inventory, drawings, and manifests. They cannot establish capacity, long-term
-creep performance, wall adequacy, fastener pullout, or safe overhead use.
+- universal center: 151.8 mm;
+- shared top ends: 116.081 mm;
+- all top-tile plan radii: 0.25 mm, which remains no greater than half the 0.6 mm seam;
+- four 101.3 x 101.3 mm quadrants cover the through-owned corner square;
+- both straight top arms start 0.6 mm beyond the through corner front line;
+- the return inner tile overhangs the hidden plywood gap by 1.0 mm without structural credit.
 
-No numerical load claim may be made until the actual wall, fasteners, printer,
-orientation, black PETG, service temperature, target load, written stop limits,
-full-bay behavior, 90-day creep, 72-hour recovery, and teardown evidence are
-qualified. Even then, any published rating needs an explicit engineering basis
-and a defined scope; passing one prototype is not automatically a general
-rating.
+The rear-curb system is split so no PETG curb crosses the plywood joint:
 
-The preserved `reference/hybrid_r5/` architecture remains a fallback rather
-than hidden evidence for r6. Results from one architecture may not be
-transferred to the other.
+- a fitted L replaces the first 30 mm on both wall directions;
+- the long-wall straight curb begins at station 1.892 in;
+- a separate 172.6 mm short-wall piece stays on the through-owned corner square and stops at station 8.6875 in;
+- the return straight curb begins on its own board at station 8.750492 in;
+- nominal through ends: 126.481 mm; nominal return ends: 115.581 mm;
+- center counts: 8 through and 3 return.
+
+Installed vertical stack:
+
+```text
+deck top datum             z = 0
+top tile                   z = 0–2.0 mm
+rear-curb base             z = 2.0–4.4 mm
+rear-curb upright top      z = 17.0 mm
+```
+
+Each straight curb piece has one 8 x 4.4 mm generated clearance slot. The L replacement has one slot per arm. Field-drill the matching tile only after layout; then use a short nonstructural pan-head screw into plywood with verified underside clearance. Never clamp PETG rigidly, bridge a printed seam, or cross the wood joint.
+
+## 7. Triadic Palatine fascia architecture
+
+The r5 ornament is a replaceable skin with zero structural credit:
+
+- 3 complete segmental bays on the return and 6 on the through arm;
+- 6 short-arm and 12 long-arm handed half-arches;
+- half widths: 113.99375 mm return and 107.630208 mm through;
+- 0.6 mm seams between all 18 halves;
+- functional fascia height: 76.05625 mm;
+- arch drop: 92 mm;
+- total saved height: 168.05625 mm;
+- segmental rise: 48 mm with 6 mm overlap into the fascia;
+- panel thickness: 3.2 mm;
+- 5 mm outer archivolt, 2.4 mm true shadow slot, and 4 mm inner archivolt;
+- 22 mm shared pier with three 1 mm flutes per half, resolving six across an assembled pier, a 9 mm-high / 4 mm-projecting base, and an 8 mm-high / 5 mm-projecting capital;
+- one 3:4:5 spandrel void per half;
+- a holeless full-depth upper/lower channel around the real plywood, tile, and continuous-angle stack.
+
+Each half receives its own removable 24 mm-high entablature overlay: 2.0 mm base, 1.2 mm relief, 9 dentils, 3 triglyph groups, 3 continuous orders, and an 11 mm central patera. The overlay attaches only to its host half.
+
+Nine 18 x 24 x 2.4 mm keystones hide bay-center seams. Each is retained to one half only and floats across the other. The 18 mm-leg, 168.056 mm-high corner pilaster follows the same rule: fix one upper leg and float the perpendicular leg.
+
+Two compound 168.056 mm-high endcaps close the exposed arcade/fascia ends. Each straight fascia layout already reserves the 2.0 mm cap thickness.
+
+The 42 x 42 x 2.0 mm groin-vault soffit has diagonal ribs, border, and a nine-petal boss. Its two slots mount it only beneath the through-owned corner square; it must not bridge the return joint.
+
+The fascia upper flange overlays the top tile. Its nominal channel opening is:
+
+`18.256 mm plywood + 25.4 mm angle leg + 2.0 mm tile + 0.6 mm clearance = 46.256 mm`
+
+The coupon must be tested against that complete physical stack. Arcade shapes that resemble brackets or piers remain decoration only.
+
+![Exact nominal Triadic Palatine elevation](generated/palatine_elevation.svg)
+
+The elevation drawing documents module geometry and ornament only; support locations and structural dimensions remain governed by the corner and support plans.
+
+## 8. Removable attachment policy
+
+Attachment controls trim movement and falling; it does not carry shelf contents or create a rated restraint.
+
+- **Top tiles:** one small centered dot of qualified removable neutral-cure silicone on sealed plywood; keep edges and seams free and remove with floss.
+- **Rear curbs:** one slotted short pan-head screw per straight piece and one per replacement arm after tile drilling and underside-clearance check.
+- **Arcade/fascia halves:** the full-depth upper and lower flanges mechanically capture the real shelf stack. Assemble the lateral train before the outer endcaps and re-entrant corner cover, then use one tiny centered dot of qualified removable neutral-cure silicone inside each channel only to resist creep and rattle. Do not drill or notch the continuous steel angle for cosmetic retention.
+- **Entablatures:** one tiny centered qualified removable silicone dot on the overlay's own fascia half; no overlay bridges a 0.6 mm seam.
+- **Keystones:** two pinhead-size qualified removable silicone dots on one arch half; the other side floats across the 0.6 mm center seam.
+- **Corner pilaster:** two tiny qualified removable silicone dots inside one upper leg; the perpendicular leg floats and adhesive does not cross the seam.
+- **Endcaps:** two tiny qualified removable silicone dots inside the completed channel plus a hand pull-check.
+- **Groin vault:** two generated clearance slots and short nonstructural pan-head screws into the underside of the through-owned plywood after a depth-stop and bracket-clearance check; never bridge the plywood joint.
+
+Every adhesive and fastener must be qualified on printed PETG, sealed plywood, and the actual coated steel. Keep all structural fasteners, locks, alignment plates, and the wood joint inspectable.
+
+## 9. Package, modularity, and reconfiguration
+
+The nominal r5 full print set contains 101 objects: 98 installed pieces plus the corner gauge, fascia coupon, and Palatine detail coupon. Geometry-volume estimates are 2.45 kg packaged and 2.42 kg installed PETG. These exclude purge, supports, failures, spares, attachment hardware, plywood, and steel.
+
+Allowed customization is constrained:
+
+1. **Vertical movement:** unload the complete L and move both arms to one verified common elevation.
+2. **Wall-fit changes:** enter both limiting wall lengths, both installed back offsets, the corner angle, and verified support centers; regenerate all affected geometry and plans.
+3. **Finish reuse:** universal 151.8 mm top/rear centers may move between arms where counts permit. Ends, Palatine halves, curbs, and corner pieces are regenerated when their controlling geometry changes.
+
+The plywood and front angles do not use printed snap joints. Moving one arm alone, moving a standard horizontally, changing depth, changing through/return ownership, changing the 3/6-bay order, or adding a shelf level requires another geometry, framing, electrical, collision, attachment, and cumulative-load review.
+
+## 10. Selection targets—not ratings
+
+The deliberately limited plywood-span check uses a **30 lb/ft total development line-load proxy**. That proxy sits above the approximately 24.3 lb/ft contents-selection density to leave a rough allowance for unmeasured shelf dead load; it is not measured demand, a safety factor, or a rating.
+
+Current round-number contents-selection targets are:
+
+- 55 lb evenly distributed on the 27.125 in return deck;
+- 120 lb evenly distributed on the 59.188 in through deck, including the corner square.
+
+The calculation excludes wall and stud capacity; standards, brackets, locks, and fasteners; cumulative shelf levels; point, impact, front-edge, seismic, and accidental loads; plywood variability; connection slip; and corner differential movement. The selection targets cannot be inferred from or multiplied by a bracket laboratory result.
+
+Keep dense items close to and between brackets, avoid concentrated front-edge loads, and put the heaviest storage on the lowest suitable shelf. Do not store people, fragile liquid containers, or unusually dense objects overhead.
+
+## 11. Failure controls
+
+| Failure mode | Required control |
+|---|---|
+| Two full-depth boards overlap | Through/return formulas and zero-overlap validation |
+| Unequal wall offsets are hidden | Measure and enter `field_verified_installed_shelf_back_offset_in` independently for both runs |
+| Non-square edges consume the joint | ±0.25° gate, 0.6 mm residual rule, and full-size template |
+| Perpendicular brackets collide | Numerical envelope checks plus mandatory physical dry fit |
+| Return seam hangs unsupported | First return bracket 2 in from its structural end; no joint capacity credit |
+| Angle ends collide | Continuous per-arm angles, return trim/deburring, and controlled clearance |
+| PETG architecture is mistaken for structure | Explicit zero credit; hidden plywood/steel load path remains mandatory |
+| Groin vault hits a bracket or bridges decks | Through-only footprint, 10 mm generated clearance minimum, field dry fit |
+| Corner finish binds | 0.6 mm seams; keystone and pilaster fixed on one side and floating on the other |
+| Rear curb crosses the wood joint | Separate through-zone and return pieces with arm-specific starts |
+| Curb base overlaps the top tile | Explicit installed z stack and matching tile fastener clearance |
+| Finish falls or creeps | Captured fascia channels, qualified removable attachment, curb/soffit clearance slots, hand pull-check, inspection |
+| Deck surfaces form a ridge | Same panel stock, laser common datum, unloaded bare-structure dry fit |
+| One arm moves independently | Treat each L level as one unloaded coupled assembly |
+| Wall attachment fails | Verified framing/blocking, compatible complete hardware system, no primary hollow-wall anchors |
+| Electrical route is struck | Wiring/plate verification before selecting or drilling standard lines |
+
+## 12. Controlled verification and service
+
+1. Install standards and brackets, then dry-fit both bare plywood/steel arms without PETG.
+2. Confirm every standard is plumb, each top is coplanar, every lock is engaged, every deck is mechanically attached, and perpendicular brackets/angles do not touch unexpectedly.
+3. Record unloaded front-edge position at the center and ends of both arms using a fixed reference.
+4. Apply known, nonfragile weights gradually and evenly while keeping people clear.
+5. Stop for fastener motion, wall crushing, sound, distortion, cracking, whitening, ridge formation, or unexpected deflection.
+6. Hold only the intended selection target—never a guessed overload—and recheck after 1 hour, 24 hours, and one week.
+7. Unload and record residual movement.
+8. Install qualified PETG attachment and finish only after the bare structure remains stable; hand-check every hanging Palatine component and repeat visual inspection.
+
+This process can reveal obvious defects but cannot certify a safe-working load. Obtain qualified local review whenever failure could injure someone or the wall construction, fasteners, steel drilling, or cumulative loading remain uncertain.
+
+Inspect after initial loading, after one month, after every move, and at least annually. Unload for loose screws, failed adhesive, corrosion, wall movement, permanent deflection, damaged plywood, binding trim, loose ornament, or cracked/warped PETG. Record exact hardware, measurements, stud locations, test weights, installation date, attachment products, and every later configuration change.
