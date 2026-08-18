@@ -1,0 +1,35 @@
+{
+  "blockers": [
+    "exact current Bambu slice evidence has not been supplied externally",
+    "fresh exact-job human permission has not been supplied externally",
+    "single-use external permit has not been issued and consumed for one Send attempt"
+  ],
+  "catalog_authorized": false,
+  "effective_print_authorized": false,
+  "ephemeral_single_use_permit_present": false,
+  "exact_reviewed_slice_present": false,
+  "fresh_human_permission_present": false,
+  "fresh_human_permission_required_before_every_print": true,
+  "hard_boundary": {
+    "drilling_coordinates_released": false,
+    "drilling_schedule_released": false,
+    "full_wall_printing_authorized": false,
+    "production_printing_authorized": false,
+    "rated_load_kg": 0.0,
+    "rated_load_lb": 0.0,
+    "stored_load_authorized": false,
+    "test_load_authorized": false,
+    "wall_installation_authorized": false
+  },
+  "immutable_v1_verified": true,
+  "package_id": "r11_gate_a_left_controlled_qualification_print_v2",
+  "print_authorized": false,
+  "right_half_authorized": false,
+  "runtime_evidence_must_remain_outside_repository": true,
+  "schema_version": "r11.gate-a-left-static-status.v2",
+  "selected_article_id": "r11_bay0_left_terminal_integrated_half_deck",
+  "selected_copy_count": 1,
+  "selected_model_3mf_sha256": "ff6793255147413b9845dbc771a5b2e5581c1dcbbdcfe5e39b2a7cdb8e6bcbfc",
+  "static_release_complete": true,
+  "v1_manifest_sha256": "bc267498314d37f1528b20e46727d90e8184270351f6a4e6fda7bcf82f986661"
+}

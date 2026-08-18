@@ -1,0 +1,755 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:r11:gate-a-left:attempt-evidence:v1",
+  "title": "R11 Gate A-left reviewed attempt evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "attempt_id",
+    "captured_at_utc",
+    "selected_article",
+    "slicer",
+    "plate_object",
+    "slice_result",
+    "screenshots",
+    "live_state",
+    "provenance",
+    "evidence_files",
+    "reviewed_job_digest"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "r11.gate-a-left-attempt-evidence.v1"
+    },
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^r11-gate-a-left-[A-Za-z0-9][A-Za-z0-9._-]{7,95}$"
+    },
+    "captured_at_utc": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "selected_article": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "article_id",
+        "model_3mf_relative_path",
+        "model_3mf_sha256",
+        "model_3mf_bytes",
+        "stl_sha256",
+        "canonical_geometry_sha256"
+      ],
+      "properties": {
+        "article_id": {
+          "const": "r11_bay0_left_terminal_integrated_half_deck"
+        },
+        "model_3mf_relative_path": {
+          "const": "individual_model_only_3mf/MODEL_ONLY_r11_bay0_left_terminal_integrated_half_deck.3mf"
+        },
+        "model_3mf_sha256": {
+          "const": "ff6793255147413b9845dbc771a5b2e5581c1dcbbdcfe5e39b2a7cdb8e6bcbfc"
+        },
+        "model_3mf_bytes": {
+          "const": 3969
+        },
+        "stl_sha256": {
+          "const": "28e73c75004ea4b9e59e74295272de4bfb19ff908382936b1742cdb0d7a820c6"
+        },
+        "canonical_geometry_sha256": {
+          "const": "5fe65ebfda9f1d3df77f3db99485983b6313e829a202b536b89b15d2eaea12d1"
+        }
+      }
+    },
+    "slicer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "application",
+        "version",
+        "application_executable_sha256",
+        "temporary_project_sha256",
+        "sliced_plate_file_sha256",
+        "sliced_plate_file_bytes",
+        "gcode_payload_sha256",
+        "gcode_config_block_sha256",
+        "printer_profile_export_sha256",
+        "filament_profile_export_sha256",
+        "process_profile_export_sha256",
+        "printer_profile_snapshot_sha256",
+        "filament_profile_snapshot_sha256",
+        "process_profile_snapshot_sha256",
+        "printer_model",
+        "nozzle_diameter_mm",
+        "nozzle_flow",
+        "plate_type",
+        "process_preset",
+        "layer_height_mm",
+        "initial_layer_height_mm",
+        "wall_loops",
+        "sparse_infill_density_percent",
+        "sparse_infill_pattern",
+        "top_shell_layers",
+        "bottom_shell_layers",
+        "support_enabled",
+        "support_build_plate_only",
+        "support_critical_regions_only",
+        "support_remove_small_overhang",
+        "brim_type",
+        "brim_width_mm",
+        "brim_object_gap_mm"
+        ,
+        "nozzle_temperature_first_layer_c",
+        "nozzle_temperature_other_layers_c",
+        "bed_temperature_first_layer_c",
+        "bed_temperature_other_layers_c",
+        "flow_ratio",
+        "maximum_volumetric_speed_mm3_s",
+        "part_cooling_fan_min_percent",
+        "part_cooling_fan_max_percent",
+        "overhang_fan_percent",
+        "bridge_speed_mm_s",
+        "overhang_0_25_speed_mm_s",
+        "overhang_25_50_speed_mm_s",
+        "overhang_50_75_speed_mm_s",
+        "overhang_75_100_speed_mm_s",
+        "machine_start_gcode_sha256",
+        "machine_end_gcode_sha256",
+        "change_filament_gcode_sha256",
+        "layer_change_gcode_sha256",
+        "time_lapse_gcode_sha256"
+      ],
+      "properties": {
+        "application": {
+          "const": "Bambu Studio"
+        },
+        "version": {
+          "const": "02.07.01.62"
+        },
+        "application_executable_sha256": {
+          "const": "b022be6750898454803e9e07178b7c7446c0e5b4d148c593b4b56efde09ba281"
+        },
+        "temporary_project_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "sliced_plate_file_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "sliced_plate_file_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "gcode_payload_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "gcode_config_block_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "printer_profile_export_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "filament_profile_export_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "process_profile_export_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "printer_profile_snapshot_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "filament_profile_snapshot_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "process_profile_snapshot_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "printer_model": {
+          "const": "Bambu Lab A1 mini"
+        },
+        "nozzle_diameter_mm": {
+          "const": 0.4
+        },
+        "nozzle_flow": {
+          "const": "standard"
+        },
+        "plate_type": {
+          "const": "Textured PEI Plate"
+        },
+        "process_preset": {
+          "const": "0.20mm Strength @BBL A1M"
+        },
+        "layer_height_mm": {
+          "const": 0.2
+        },
+        "initial_layer_height_mm": {
+          "const": 0.2
+        },
+        "wall_loops": {
+          "const": 6
+        },
+        "sparse_infill_density_percent": {
+          "const": 25
+        },
+        "sparse_infill_pattern": {
+          "const": "grid"
+        },
+        "top_shell_layers": {
+          "const": 5
+        },
+        "bottom_shell_layers": {
+          "const": 3
+        },
+        "support_enabled": {
+          "const": false
+        },
+        "support_build_plate_only": {
+          "const": false
+        },
+        "support_critical_regions_only": {
+          "const": false
+        },
+        "support_remove_small_overhang": {
+          "const": true
+        },
+        "brim_type": {
+          "const": "outer"
+        },
+        "brim_width_mm": {
+          "const": 5.0
+        },
+        "brim_object_gap_mm": {
+          "const": 0.1
+        },
+        "nozzle_temperature_first_layer_c": {
+          "const": 250
+        },
+        "nozzle_temperature_other_layers_c": {
+          "const": 245
+        },
+        "bed_temperature_first_layer_c": {
+          "const": 60
+        },
+        "bed_temperature_other_layers_c": {
+          "const": 60
+        },
+        "flow_ratio": {
+          "const": 0.94
+        },
+        "maximum_volumetric_speed_mm3_s": {
+          "const": 9.0
+        },
+        "part_cooling_fan_min_percent": {
+          "const": 10
+        },
+        "part_cooling_fan_max_percent": {
+          "const": 30
+        },
+        "overhang_fan_percent": {
+          "const": 90
+        },
+        "bridge_speed_mm_s": {
+          "const": 50
+        },
+        "overhang_0_25_speed_mm_s": {
+          "const": 0
+        },
+        "overhang_25_50_speed_mm_s": {
+          "const": 50
+        },
+        "overhang_50_75_speed_mm_s": {
+          "const": 30
+        },
+        "overhang_75_100_speed_mm_s": {
+          "const": 10
+        },
+        "machine_start_gcode_sha256": {
+          "const": "98b77ddf8f9dd85612adf93c87d82cb6618e952968ff12ada7f7109bfe4a977e"
+        },
+        "machine_end_gcode_sha256": {
+          "const": "10a6b35a5b0236cc338b0e323a57255cd76a7b6bb7fceefaadce5d55dc30c877"
+        },
+        "change_filament_gcode_sha256": {
+          "const": "7d97876d466c074e7ff166a29a790928e6cb2219b2cbc6c9896da2e986e55a65"
+        },
+        "layer_change_gcode_sha256": {
+          "const": "137df44edc98f7192367ef747fa45b94e38f29286791277b8eccf64dc5af227e"
+        },
+        "time_lapse_gcode_sha256": {
+          "const": "01b3039a61b288a88931d5ece9f2c41eb77753deaacaf617d4813e97cdd11a52"
+        }
+      }
+    },
+    "plate_object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plate_object_count",
+        "copy_count",
+        "article_id",
+        "scale_percent_xyz",
+        "rotation_degrees_xyz",
+        "mirrored",
+        "auto_oriented",
+        "repaired",
+        "modifier_present",
+        "negative_volume_present",
+        "support_enforcer_present"
+      ],
+      "properties": {
+        "plate_object_count": {
+          "const": 1
+        },
+        "copy_count": {
+          "const": 1
+        },
+        "article_id": {
+          "const": "r11_bay0_left_terminal_integrated_half_deck"
+        },
+        "scale_percent_xyz": {
+          "const": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "rotation_degrees_xyz": {
+          "const": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mirrored": {
+          "const": false
+        },
+        "auto_oriented": {
+          "const": false
+        },
+        "repaired": {
+          "const": false
+        },
+        "modifier_present": {
+          "const": false
+        },
+        "negative_volume_present": {
+          "const": false
+        },
+        "support_enforcer_present": {
+          "const": false
+        }
+      }
+    },
+    "slice_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "layer_count",
+        "print_time_seconds",
+        "filament_mass_g",
+        "filament_length_mm",
+        "bed_envelope_violation",
+        "support_toolpaths_present",
+        "detached_islands_present",
+        "capture_geometry_blocked",
+        "walls_omitted",
+        "unintended_bridges_present",
+        "undocumented_repairs_present",
+        "all_slicer_warnings_recorded",
+        "warnings"
+      ],
+      "properties": {
+        "layer_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "print_time_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "filament_mass_g": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "filament_length_mm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "bed_envelope_violation": {
+          "const": false
+        },
+        "support_toolpaths_present": {
+          "const": false
+        },
+        "detached_islands_present": {
+          "const": false
+        },
+        "capture_geometry_blocked": {
+          "const": false
+        },
+        "walls_omitted": {
+          "const": false
+        },
+        "unintended_bridges_present": {
+          "const": false
+        },
+        "undocumented_repairs_present": {
+          "const": false
+        },
+        "all_slicer_warnings_recorded": {
+          "const": true
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "exact_text",
+              "layer_level_disposition",
+              "resolved"
+            ],
+            "properties": {
+              "exact_text": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "layer_level_disposition": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "resolved": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "screenshots": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prepare_and_transform_sha256",
+        "effective_settings_sha256",
+        "slice_summary_and_warnings_sha256",
+        "first_layer_sha256",
+        "critical_capture_layer_sha256",
+        "cross_lap_layer_sha256",
+        "final_layers_sha256",
+        "current_printer_and_filament_state_sha256"
+      ],
+      "properties": {
+        "prepare_and_transform_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "effective_settings_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "slice_summary_and_warnings_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "first_layer_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "critical_capture_layer_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "cross_lap_layer_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "final_layers_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "current_printer_and_filament_state_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "live_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "captured_at_utc",
+        "plate_physically_empty",
+        "plate_clean",
+        "plate_correctly_seated",
+        "printer_idle",
+        "printer_error_free",
+        "physical_printer_model",
+        "printer_serial_sha256",
+        "firmware_version",
+        "module_firmware",
+        "physical_nozzle_diameter_mm",
+        "physical_nozzle_material",
+        "physical_nozzle_flow",
+        "physical_plate_type",
+        "filament"
+      ],
+      "properties": {
+        "captured_at_utc": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "plate_physically_empty": {
+          "const": true
+        },
+        "plate_clean": {
+          "const": true
+        },
+        "plate_correctly_seated": {
+          "const": true
+        },
+        "printer_idle": {
+          "const": true
+        },
+        "printer_error_free": {
+          "const": true
+        },
+        "physical_printer_model": {
+          "const": "Bambu Lab A1 mini"
+        },
+        "printer_serial_sha256": {
+          "const": "a3c07a6f58e39c108ea8f0ee1d96e9582d00a8b9c7973195e26fe2625ff525d8"
+        },
+        "firmware_version": {
+          "const": "01.08.01.00"
+        },
+        "module_firmware": {
+          "const": {
+            "esp32_software_version": "01.16.41.96",
+            "esp32_hardware_revision": "AP05",
+            "motion_controller_software_version": "00.00.34.17",
+            "motion_controller_hardware_revision": "MC02",
+            "motion_controller_loader_revision_suffix": ".32",
+            "toolhead_software_version": "00.01.07.73",
+            "toolhead_hardware_revision": "TH03",
+            "toolhead_loader_revision_suffix": ".26"
+          }
+        },
+        "physical_nozzle_diameter_mm": {
+          "const": 0.4
+        },
+        "physical_nozzle_material": {
+          "const": "stainless_steel"
+        },
+        "physical_nozzle_flow": {
+          "const": "standard"
+        },
+        "physical_plate_type": {
+          "const": "Textured PEI Plate"
+        },
+        "filament": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "brand",
+            "material",
+            "color",
+            "diameter_mm",
+            "product_asin",
+            "lot_id",
+            "drying_record",
+            "external_spool_mapping_verified",
+            "project_filament_mapping"
+          ],
+          "properties": {
+            "brand": {
+              "const": "SUNLU"
+            },
+            "material": {
+              "const": "PETG"
+            },
+            "color": {
+              "const": "black"
+            },
+            "diameter_mm": {
+              "const": 1.75
+            },
+            "product_asin": {
+              "const": "B0D1KC72YP"
+            },
+            "lot_id": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "drying_record": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "dried",
+                "method",
+                "temperature_c",
+                "duration_hours",
+                "completed_at_utc"
+              ],
+              "properties": {
+                "dried": {
+                  "const": true
+                },
+                "method": {
+                  "$ref": "#/$defs/nonEmptyString"
+                },
+                "temperature_c": {
+                  "const": 50.0
+                },
+                "duration_hours": {
+                  "type": "number",
+                  "minimum": 6.0,
+                  "maximum": 8.0
+                },
+                "completed_at_utc": {
+                  "$ref": "#/$defs/utcTimestamp"
+                }
+              }
+            },
+            "external_spool_mapping_verified": {
+              "const": true
+            },
+            "project_filament_mapping": {
+              "const": "SUNLU PETG @BBL A1M 0.4 nozzle"
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "printer_telemetry",
+        "plate_observation",
+        "nozzle_observation",
+        "spool_label",
+        "drying_log"
+      ],
+      "properties": {
+        "printer_telemetry": {
+          "allOf": [
+            {"$ref": "#/$defs/provenanceRecord"},
+            {"properties": {"source_kind": {"const": "read_only_printer_telemetry"}}}
+          ]
+        },
+        "plate_observation": {
+          "allOf": [
+            {"$ref": "#/$defs/provenanceRecord"},
+            {"properties": {"source_kind": {"const": "fresh_human_plate_observation"}}}
+          ]
+        },
+        "nozzle_observation": {
+          "allOf": [
+            {"$ref": "#/$defs/provenanceRecord"},
+            {"properties": {"source_kind": {"const": "fresh_human_nozzle_observation"}}}
+          ]
+        },
+        "spool_label": {
+          "allOf": [
+            {"$ref": "#/$defs/provenanceRecord"},
+            {"properties": {"source_kind": {"const": "photographed_physical_spool_label"}}}
+          ]
+        },
+        "drying_log": {
+          "allOf": [
+            {"$ref": "#/$defs/provenanceRecord"},
+            {"properties": {"source_kind": {"const": "dryer_log_or_photographed_display"}}}
+          ]
+        }
+      }
+    },
+    "evidence_files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "temporary_project",
+        "sliced_plate_file",
+        "gcode_payload",
+        "gcode_config_block",
+        "printer_profile_export",
+        "filament_profile_export",
+        "process_profile_export",
+        "printer_profile_snapshot",
+        "filament_profile_snapshot",
+        "process_profile_snapshot",
+        "prepare_and_transform_screenshot",
+        "effective_settings_screenshot",
+        "slice_summary_and_warnings_screenshot",
+        "first_layer_screenshot",
+        "critical_capture_layer_screenshot",
+        "cross_lap_layer_screenshot",
+        "final_layers_screenshot",
+        "current_printer_and_filament_state_screenshot",
+        "printer_telemetry_snapshot",
+        "plate_observation_record",
+        "nozzle_observation_record",
+        "spool_label_evidence",
+        "drying_log_evidence"
+      ],
+      "properties": {
+        "temporary_project": {"$ref": "#/$defs/fileRecord"},
+        "sliced_plate_file": {"$ref": "#/$defs/fileRecord"},
+        "gcode_payload": {"$ref": "#/$defs/fileRecord"},
+        "gcode_config_block": {"$ref": "#/$defs/fileRecord"},
+        "printer_profile_export": {"$ref": "#/$defs/fileRecord"},
+        "filament_profile_export": {"$ref": "#/$defs/fileRecord"},
+        "process_profile_export": {"$ref": "#/$defs/fileRecord"},
+        "printer_profile_snapshot": {"$ref": "#/$defs/fileRecord"},
+        "filament_profile_snapshot": {"$ref": "#/$defs/fileRecord"},
+        "process_profile_snapshot": {"$ref": "#/$defs/fileRecord"},
+        "prepare_and_transform_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "effective_settings_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "slice_summary_and_warnings_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "first_layer_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "critical_capture_layer_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "cross_lap_layer_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "final_layers_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "current_printer_and_filament_state_screenshot": {"$ref": "#/$defs/fileRecord"},
+        "printer_telemetry_snapshot": {"$ref": "#/$defs/fileRecord"},
+        "plate_observation_record": {"$ref": "#/$defs/fileRecord"},
+        "nozzle_observation_record": {"$ref": "#/$defs/fileRecord"},
+        "spool_label_evidence": {"$ref": "#/$defs/fileRecord"},
+        "drying_log_evidence": {"$ref": "#/$defs/fileRecord"}
+      }
+    },
+    "reviewed_job_digest": {
+      "$ref": "#/$defs/sha256"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "utcTimestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]{1,6})?Z$"
+    },
+    "provenanceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_kind", "captured_at_utc", "sha256"],
+      "properties": {
+        "source_kind": {"$ref": "#/$defs/nonEmptyString"},
+        "captured_at_utc": {"$ref": "#/$defs/utcTimestamp"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "fileRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relative_path", "bytes", "sha256"],
+      "properties": {
+        "relative_path": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]{0,511}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "exact_file_allowlist": [
+    "README.md",
+    "baseline_lock.json",
+    "manifest.json",
+    "release_contract.json",
+    "schemas/attempt_evidence.schema.json",
+    "schemas/ephemeral_permit.schema.json",
+    "schemas/fresh_permission.schema.json",
+    "schemas/send_attempt_consumption.schema.json",
+    "status.json"
+  ],
+  "hard_boundary": {
+    "drilling_coordinates_released": false,
+    "drilling_schedule_released": false,
+    "full_wall_printing_authorized": false,
+    "production_printing_authorized": false,
+    "rated_load_kg": 0.0,
+    "rated_load_lb": 0.0,
+    "stored_load_authorized": false,
+    "test_load_authorized": false,
+    "wall_installation_authorized": false
+  },
+  "hashed_artifacts_excluding_manifest": [
+    {
+      "bytes": 1301,
+      "path": "README.md",
+      "sha256": "9eb7d0369225d311f6e84c898afaeabfdea380c1743908159bda9c9af23ae8ad"
+    },
+    {
+      "bytes": 1453,
+      "path": "baseline_lock.json",
+      "sha256": "f6ec32d41213c547f6787c237f6ca88935f117d3c05050d3890af0975464c0cd"
+    },
+    {
+      "bytes": 11590,
+      "path": "release_contract.json",
+      "sha256": "9107554f674376a4a765ab5386766b9963608e1ac82ac08a8cf42e632685a087"
+    },
+    {
+      "bytes": 21879,
+      "path": "schemas/attempt_evidence.schema.json",
+      "sha256": "67df979dd3fb61055fcf2cea49de9d5c4aeebb948d26e107818575352f20416d"
+    },
+    {
+      "bytes": 4531,
+      "path": "schemas/ephemeral_permit.schema.json",
+      "sha256": "cdd44bf048a10ca4ab909f2f4bdf8025581601d9a6aef64628c16b12e8f66873"
+    },
+    {
+      "bytes": 1610,
+      "path": "schemas/fresh_permission.schema.json",
+      "sha256": "7786849bfaf60edfff53adee37f6526c5acf8e2cacd671fe5b00b67184110bd9"
+    },
+    {
+      "bytes": 1787,
+      "path": "schemas/send_attempt_consumption.schema.json",
+      "sha256": "e42743dea45dc8b02a64c133c5628e12bb6166f40fd3e3c69bb532c085819706"
+    },
+    {
+      "bytes": 1495,
+      "path": "status.json",
+      "sha256": "e0d06e974968aa64f688cd2b127367bc3f154057d92770f332b69904ea881905"
+    }
+  ],
+  "immutable_v1": {
+    "canonical_config_sha256": "de47d37ba05446a49a34f7e346f93e3187a7be64f24495783d8b4fee58abbb68",
+    "manifest_sha256": "bc267498314d37f1528b20e46727d90e8184270351f6a4e6fda7bcf82f986661",
+    "package_id": "r11_first_outer_actual_bay_neutral_qualification_v1",
+    "selected_article": {
+      "article_id": "r11_bay0_left_terminal_integrated_half_deck",
+      "canonical_geometry_sha256": "5fe65ebfda9f1d3df77f3db99485983b6313e829a202b536b89b15d2eaea12d1",
+      "model_3mf_bytes": 3969,
+      "model_3mf_relative_path": "individual_model_only_3mf/MODEL_ONLY_r11_bay0_left_terminal_integrated_half_deck.3mf",
+      "model_3mf_sha256": "ff6793255147413b9845dbc771a5b2e5581c1dcbbdcfe5e39b2a7cdb8e6bcbfc",
+      "saved_extents_mm": [
+        162.175003,
+        152.399994,
+        32.0
+      ],
+      "stl_bytes": 16584,
+      "stl_relative_path": "stl/r11_bay0_left_terminal_integrated_half_deck.stl",
+      "stl_sha256": "28e73c75004ea4b9e59e74295272de4bfb19ff908382936b1742cdb0d7a820c6"
+    },
+    "source_tree": {
+      "source_bytes": 362091,
+      "source_file_count": 22,
+      "source_tree_sha256": "91544e30a14fdf16e0cd770c1e9492b24221362d47a172bde0718c82fa00137c"
+    },
+    "tree": {
+      "file_count": 33,
+      "total_bytes": 475553,
+      "tree_sha256": "af5f8a4b97e857fb0aeb08c40b5b576c05efe7b651d6555151518180377eec99"
+    }
+  },
+  "package_id": "r11_gate_a_left_controlled_qualification_print_v2",
+  "schema_version": "r11.gate-a-left-static-manifest.v2",
+  "selection": {
+    "allowed_copy_count": 1,
+    "allowed_plate_object_count": 1,
+    "catalog_authorized": false,
+    "left_terminal_only": true,
+    "right_half_authorized": false,
+    "supports_keystone_and_cable_articles_authorized": false
+  },
+  "slice_contract": {
+    "application": "Bambu Studio",
+    "application_executable_bytes": 253787536,
+    "application_executable_sha256": "b022be6750898454803e9e07178b7c7446c0e5b4d148c593b4b56efde09ba281",
+    "application_version": "02.07.01.62",
+    "bed_temperature_first_layer_c": 60,
+    "bed_temperature_other_layers_c": 60,
+    "bottom_shell_layers": 3,
+    "bridge_speed_mm_s": 50,
+    "brim_object_gap_mm": 0.1,
+    "brim_type": "outer",
+    "brim_width_mm": 5.0,
+    "change_filament_gcode_sha256": "7d97876d466c074e7ff166a29a790928e6cb2219b2cbc6c9896da2e986e55a65",
+    "flow_ratio": 0.94,
+    "initial_layer_height_mm": 0.2,
+    "layer_change_gcode_sha256": "137df44edc98f7192367ef747fa45b94e38f29286791277b8eccf64dc5af227e",
+    "layer_height_mm": 0.2,
+    "machine_end_gcode_sha256": "10a6b35a5b0236cc338b0e323a57255cd76a7b6bb7fceefaadce5d55dc30c877",
+    "machine_start_gcode_sha256": "98b77ddf8f9dd85612adf93c87d82cb6618e952968ff12ada7f7109bfe4a977e",
+    "maximum_volumetric_speed_mm3_s": 9.0,
+    "nozzle_diameter_mm": 0.4,
+    "nozzle_flow": "standard",
+    "nozzle_temperature_first_layer_c": 250,
+    "nozzle_temperature_other_layers_c": 245,
+    "overhang_0_25_speed_mm_s": 0,
+    "overhang_25_50_speed_mm_s": 50,
+    "overhang_50_75_speed_mm_s": 30,
+    "overhang_75_100_speed_mm_s": 10,
+    "overhang_fan_percent": 90,
+    "part_cooling_fan_max_percent": 30,
+    "part_cooling_fan_min_percent": 10,
+    "plate_type": "Textured PEI Plate",
+    "printer_model": "Bambu Lab A1 mini",
+    "process_preset": "0.20mm Strength @BBL A1M",
+    "rotation_degrees_xyz": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale_percent_xyz": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "sparse_infill_density_percent": 25,
+    "sparse_infill_pattern": "grid",
+    "support_build_plate_only": false,
+    "support_critical_regions_only": false,
+    "support_enabled": false,
+    "support_remove_small_overhang": true,
+    "time_lapse_gcode_sha256": "01b3039a61b288a88931d5ece9f2c41eb77753deaacaf617d4813e97cdd11a52",
+    "top_shell_layers": 5,
+    "wall_loops": 6
+  },
+  "source_records": [
+    {
+      "bytes": 4781,
+      "path": "development/r11_print_v2/PRINT_GATE_A_LEFT.md",
+      "sha256": "05640227603c0ed6d881b84eabffdc07c920f8d98410e4b257c5feed974c493b"
+    },
+    {
+      "bytes": 4020,
+      "path": "development/r11_print_v2/README.md",
+      "sha256": "f8d39ce379cc336f3319b2eb2c9963238e0c1e7b3a243fbc59599b0541814ce8"
+    },
+    {
+      "bytes": 1453,
+      "path": "development/r11_print_v2/baseline_lock.json",
+      "sha256": "f6ec32d41213c547f6787c237f6ca88935f117d3c05050d3890af0975464c0cd"
+    },
+    {
+      "bytes": 102351,
+      "path": "development/r11_print_v2/control_contract.py",
+      "sha256": "a071cb25346124468eb5692b4afb072e5e11c592c9c9bbf32f19145b5550d00c"
+    },
+    {
+      "bytes": 3491,
+      "path": "development/r11_print_v2/evaluate_attempt.py",
+      "sha256": "fef09ef625fe281b5d13422042a20a16691cb754e4754ed780470e41305409c2"
+    },
+    {
+      "bytes": 6646,
+      "path": "development/r11_print_v2/generate_controlled_release.py",
+      "sha256": "02175e9ae8ccbeaca791e9ca46b53a540078b726bd86f5579bc39d44fb2dba21"
+    },
+    {
+      "bytes": 11590,
+      "path": "development/r11_print_v2/release_contract.json",
+      "sha256": "9107554f674376a4a765ab5386766b9963608e1ac82ac08a8cf42e632685a087"
+    },
+    {
+      "bytes": 21879,
+      "path": "development/r11_print_v2/schemas/attempt_evidence.schema.json",
+      "sha256": "67df979dd3fb61055fcf2cea49de9d5c4aeebb948d26e107818575352f20416d"
+    },
+    {
+      "bytes": 4531,
+      "path": "development/r11_print_v2/schemas/ephemeral_permit.schema.json",
+      "sha256": "cdd44bf048a10ca4ab909f2f4bdf8025581601d9a6aef64628c16b12e8f66873"
+    },
+    {
+      "bytes": 1610,
+      "path": "development/r11_print_v2/schemas/fresh_permission.schema.json",
+      "sha256": "7786849bfaf60edfff53adee37f6526c5acf8e2cacd671fe5b00b67184110bd9"
+    },
+    {
+      "bytes": 1787,
+      "path": "development/r11_print_v2/schemas/send_attempt_consumption.schema.json",
+      "sha256": "e42743dea45dc8b02a64c133c5628e12bb6166f40fd3e3c69bb532c085819706"
+    }
+  ],
+  "source_tree_evidence": {
+    "source_bytes": 164139,
+    "source_file_count": 11,
+    "source_tree_sha256": "26c2b312205e956cfee32a0fdbafff036c23c6f5a1fe6d218abeb57fcf1b354d"
+  },
+  "static_effective_print_authorized": false,
+  "static_print_authorized": false
+}

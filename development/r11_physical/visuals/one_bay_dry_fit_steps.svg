@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">One bay dry-fit sequence for the R11 shelf</title>
+  <desc id="desc">Six beginner-friendly cards match the written R11 tabletop dry-fit sequence: orient the unloaded left and right shelf halves, align all three reciprocal lap rows, make the first gentle straight fit, inspect the joined pair, reverse the same straight motion, and inspect at cycles one, five, and ten. Orange means motion, green means bearing or contact, and red means stop. Do not sand, force, use tools or glue, mount to a wall, or apply load during this dry fit.</desc>
+
+  <defs>
+    <style>
+      .page { fill: #f6f8fa; }
+      .panel { fill: #ffffff; stroke: #24292f; stroke-width: 2; rx: 18; }
+      .panel-head { fill: #24292f; }
+      .heading { font: 700 42px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0d1117; }
+      .subheading { font: 500 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #57606a; }
+      .panel-title { font: 700 25px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
+      .label { font: 700 19px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #24292f; }
+      .onpart { font: 700 19px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
+      .small { font: 500 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #24292f; }
+      .tiny { font: 500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #57606a; }
+      .part-left { fill: #5c6370; stroke: #24292f; stroke-width: 2; }
+      .part-right { fill: #8c959f; stroke: #24292f; stroke-width: 2; }
+      .part-side { fill: #6e7781; stroke: #24292f; stroke-width: 2; }
+      .table { fill: #d0d7de; stroke: #8c959f; stroke-width: 2; }
+      .contact { fill: #2da44e; stroke: #1a7f37; stroke-width: 2; }
+      .contact-line { fill: none; stroke: #2da44e; stroke-width: 8; stroke-linecap: round; }
+      .motion { fill: none; stroke: #f28c28; stroke-width: 8; stroke-linecap: round; marker-end: url(#arrow-orange); }
+      .motion-thin { fill: none; stroke: #f28c28; stroke-width: 5; stroke-linecap: round; marker-end: url(#arrow-orange); }
+      .guide { fill: none; stroke: #8c959f; stroke-width: 2; stroke-dasharray: 8 7; }
+      .dimension { fill: #fff8c5; stroke: #bf8700; stroke-width: 2; rx: 9; }
+      .badge { fill: #ddf4ff; stroke: #0969da; stroke-width: 2; rx: 12; }
+      .stop-box { fill: #ffebe9; stroke: #d1242f; stroke-width: 4; rx: 16; }
+      .stop { font: 800 25px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cf222e; }
+      .check { font: 800 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1a7f37; }
+    </style>
+    <marker id="arrow-orange" markerWidth="22" markerHeight="22" refX="20" refY="11" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L22,11 L0,22 Z" fill="#f28c28"/>
+    </marker>
+  </defs>
+
+  <rect class="page" width="1600" height="1120"/>
+  <text class="heading" x="60" y="62">One-bay dry fit — unloaded and reversible</text>
+  <text class="subheading" x="60" y="96">Orange = motion  •  Green = bearing/contact  •  Red = STOP</text>
+
+  <g aria-label="Orientation key">
+    <rect class="badge" x="1040" y="26" width="205" height="44"/>
+    <text class="label" x="1060" y="55">WALL SIDE ↑</text>
+    <rect class="badge" x="1260" y="26" width="280" height="44"/>
+    <text class="label" x="1280" y="55">FRONT EDGE ↓</text>
+    <text class="tiny" x="1045" y="94">Keep TOP surfaces upward unless a panel says SIDE VIEW.</text>
+  </g>
+
+  <!-- Step 1 -->
+  <g aria-label="Step 1: orient the parts">
+    <rect class="panel" x="40" y="125" width="490" height="370" rx="18"/>
+    <path class="panel-head" d="M58 125h454a18 18 0 0 1 18 18v45H40v-45a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="64" y="166">1  ORIENT ON A FLAT TABLE</text>
+    <rect class="table" x="76" y="424" width="418" height="24" rx="4"/>
+    <path class="part-left" d="M90 240h150v36h48v118h-198z"/>
+    <path class="part-right" d="M480 240h-150v36h-48v118h198z"/>
+    <text class="label" x="105" y="228">LEFT HALF</text>
+    <text class="label" x="341" y="228">RIGHT HALF</text>
+    <text class="onpart" x="140" y="315">TOP</text>
+    <text class="onpart" x="367" y="315">TOP</text>
+    <path class="guide" d="M75 210H495"/>
+    <text class="tiny" x="82" y="204">WALL SIDE</text>
+    <text class="tiny" x="82" y="478">FRONT EDGE • Keep both halves unloaded.</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g aria-label="Step 2: align all three reciprocal lap rows">
+    <rect class="panel" x="555" y="125" width="490" height="370" rx="18"/>
+    <path class="panel-head" d="M573 125h454a18 18 0 0 1 18 18v45H555v-45a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="579" y="166">2  ALIGN ALL THREE ROWS</text>
+    <path class="part-left" d="M585 240h160v35h82v28h-82v31h82v28h-82v32H585z"/>
+    <path class="part-right" d="M1015 240H855v35h-82v28h82v31h-82v28h82v32h160z"/>
+    <rect class="contact" x="797" y="275" width="17" height="28" rx="3"/>
+    <rect class="contact" x="797" y="334" width="17" height="28" rx="3"/>
+    <rect class="contact" x="797" y="362" width="17" height="28" rx="3"/>
+    <text class="small" x="607" y="223">LEFT HALF</text>
+    <text class="small" x="898" y="223">RIGHT HALF</text>
+    <text class="check" x="588" y="440">✓ Row 1  ✓ Row 2  ✓ Row 3</text>
+    <text class="tiny" x="588" y="470">Tabs and slots must face each other. Do not tilt.</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g aria-label="Step 3: slide the reciprocal laps together in a straight line">
+    <rect class="panel" x="1070" y="125" width="490" height="370" rx="18"/>
+    <path class="panel-head" d="M1088 125h454a18 18 0 0 1 18 18v45h-490v-45a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="1094" y="166">3  SLIDE STRAIGHT TOGETHER</text>
+    <path class="part-left" d="M1100 248h145v28h66v29h-66v28h66v29h-66v32h-145z"/>
+    <path class="part-right" d="M1530 248h-145v28h-66v29h66v28h-66v29h66v32h145z"/>
+    <path class="motion" d="M1170 217H1270"/>
+    <path class="motion" d="M1460 217H1360"/>
+    <path class="contact-line" d="M1315 277v113"/>
+    <text class="label" x="1160" y="426">One straight motion</text>
+    <text class="tiny" x="1100" y="458">Use fingertips only. Stop at any binding or flex.</text>
+    <text class="tiny" x="1100" y="480">No rocking, twisting, hammering, or side loading.</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g aria-label="Step 4: inspect the dry fit">
+    <rect class="panel" x="40" y="520" width="490" height="370" rx="18"/>
+    <path class="panel-head" d="M58 520h454a18 18 0 0 1 18 18v45H40v-45a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="64" y="561">4  MAKE THE FIRST GENTLE FIT</text>
+    <rect class="table" x="76" y="793" width="418" height="24" rx="4"/>
+    <path class="part-side" d="M102 690h356v95H102z"/>
+    <path class="contact-line" d="M280 690v95"/>
+    <text class="small" x="251" y="678">SIDE VIEW • DESIGNED SEAM</text>
+    <text class="check" x="87" y="623">✓ Stop at the body shoulders</text>
+    <text class="check" x="87" y="654">✓ Keep the top flat; do not squeeze</text>
+    <text class="check" x="87" y="851">✓ Gentle fingertips only</text>
+    <text class="tiny" x="87" y="874">STOP for bind, scrape, dust, whitening, crack, or flex.</text>
+  </g>
+
+  <!-- Step 5 -->
+  <g aria-label="Step 5: inspect the joined pair from every side">
+    <rect class="panel" x="555" y="520" width="490" height="370" rx="18"/>
+    <path class="panel-head" d="M573 520h454a18 18 0 0 1 18 18v45H555v-45a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="579" y="561">5  INSPECT THE JOINED PAIR</text>
+    <path class="part-left" d="M603 674h190v112H603z"/>
+    <path class="part-right" d="M793 674h218v112H793z"/>
+    <path class="contact-line" d="M793 676v108"/>
+    <path class="contact-line" d="M622 703h369"/>
+    <path class="contact-line" d="M622 732h369"/>
+    <path class="contact-line" d="M622 761h369"/>
+    <text class="small" x="712" y="654">TOP VIEW • SEAM EVEN</text>
+    <text class="check" x="585" y="616">✓ Rear  ✓ Center  ✓ Front fully seated</text>
+    <text class="small" x="585" y="827">Look from TOP • FRONT • REAR • BOTH ENDS</text>
+    <text class="tiny" x="585" y="857">No proud row, trapped strand, growing gap, rock, or twist.</text>
+    <text class="tiny" x="585" y="879">Do not use a keystone to pull a gap closed.</text>
+  </g>
+
+  <!-- Step 6 -->
+  <g aria-label="Step 6: reverse once and inspect at cycles one five and ten">
+    <rect class="panel" x="1070" y="520" width="490" height="370" rx="18"/>
+    <path class="panel-head" d="M1088 520h454a18 18 0 0 1 18 18v45h-490v-45a18 18 0 0 1 18-18z"/>
+    <text class="panel-title" x="1094" y="561">6  REVERSE • CHECK 1 / 5 / 10</text>
+    <path class="part-left" d="M1102 664h155v36h58v92h-213z"/>
+    <path class="part-right" d="M1528 664h-155v36h-58v92h213z"/>
+    <path class="motion" d="M1266 626h-92"/>
+    <path class="motion" d="M1364 626h92"/>
+    <text class="small" x="1164" y="607">Exact reverse straight motion</text>
+    <rect class="badge" x="1110" y="816" width="112" height="42"/>
+    <rect class="badge" x="1260" y="816" width="112" height="42"/>
+    <rect class="badge" x="1410" y="816" width="112" height="42"/>
+    <text class="label" x="1137" y="844">CYCLE 1</text>
+    <text class="label" x="1287" y="844">CYCLE 5</text>
+    <text class="label" x="1432" y="844">CYCLE 10</text>
+    <text class="tiny" x="1098" y="879">Inspect and photograph. Stop if motion or condition changes.</text>
+  </g>
+
+  <g aria-label="Stop rules">
+    <rect class="stop-box" x="40" y="920" width="1520" height="160" rx="16"/>
+    <text class="stop" x="75" y="966">STOP — THIS IS A DRY FIT, NOT AN INSTALLATION OR LOAD TEST</text>
+    <text class="label" x="75" y="1008">No sanding  •  No force  •  No tools  •  No glue  •  No wall mounting  •  No load</text>
+    <text class="small" x="75" y="1045">If anything binds, rocks, flexes, cracks, or will not separate by the reverse straight path: stop and record it.</text>
+  </g>
+</svg>

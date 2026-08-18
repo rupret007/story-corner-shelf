@@ -1,0 +1,1544 @@
+{
+  "assembly_visual": {
+    "bytes": 13434,
+    "checks": {
+      "accessible_title_and_description_present": true,
+      "all_required_labels_present": true,
+      "canvas_exact": true,
+      "no_external_references": true,
+      "no_script_foreign_object_or_embedded_image": true,
+      "sha256_exact": true,
+      "svg_root_exact": true
+    },
+    "path": "visuals/r11_first_outer_bay_exploded_and_wall_topology.svg",
+    "required_labels": [
+      "QUALIFICATION-ONLY ENGINEERING SCHEMATIC · R11 v1",
+      "NO PRINT · NO DRILL · NO INSTALL · NO LOAD · RATED LOAD 0 kg / 0 lb",
+      "LEFT TERMINAL HALF-DECK · 162.175 mm",
+      "RIGHT TERMINAL HALF-DECK · 162.175 mm",
+      "1 removable keystone 0 VERTICAL-LOAD CREDIT",
+      "S0 · fused two-socket outer support",
+      "S1 · ordinary support",
+      "No drilling map: bore positions intentionally omitted; drilling coordinates are not released.",
+      "1 · lower with 2 mm clearance",
+      "2 · slide 32 mm wallward",
+      "3 · settle 2 mm",
+      "two flush blanks or blank + comb/hook",
+      "4 terminal halves × 162.175 mm (both halves of bays 0 and 5)",
+      "8 regular halves × 154.325 mm",
+      "28-kit · 27 active max · 28 safe starts · 21 unverified batched target"
+    ],
+    "sha256": "8d00061476ac89d026a6f8cc560ff255b2c5e0ffa377b49f114e53e8052a3ea5"
+  },
+  "both_bay0_half_decks_are_terminal_length": true,
+  "canonical_config_sha256": "de47d37ba05446a49a34f7e346f93e3187a7be64f24495783d8b4fee58abbb68",
+  "catalog": {
+    "do_not_print": true,
+    "object_translations_mm": {
+      "r11_bay0_left_terminal_integrated_half_deck": [
+        317.857606,
+        0.0,
+        0.0
+      ],
+      "r11_bay0_positive_keystone": [
+        682.207614,
+        0.0,
+        0.0
+      ],
+      "r11_bay0_right_terminal_integrated_half_deck": [
+        500.03261,
+        0.0,
+        0.0
+      ],
+      "r11_first_wall_multi_cable_comb_hook": [
+        804.207614,
+        0.0,
+        0.0
+      ],
+      "r11_first_wall_s0_fused_two_socket_support": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "r11_first_wall_s1_ordinary_support": [
+        158.928803,
+        0.0,
+        0.0
+      ],
+      "r11_first_wall_socket_0_flush_blank": [
+        724.207614,
+        0.0,
+        0.0
+      ],
+      "r11_first_wall_socket_1_flush_blank": [
+        764.207614,
+        0.0,
+        0.0
+      ]
+    },
+    "off_plate_inspection_only": true,
+    "path": "model_only_3mf/MODEL_ONLY_R11_FIRST_OUTER_ACTUAL_BAY_CATALOG_NOT_A_PRINT_PLATE.3mf"
+  },
+  "drilling_coordinates_released": false,
+  "drilling_schedule_released": false,
+  "embedded_slicer_profile_present": false,
+  "full_wall_set": false,
+  "gcode_or_toolpath_present": false,
+  "geometry_gate": {
+    "analytic_blockers": [],
+    "available_part_order": [
+      "r11_first_wall_s0_fused_two_socket_support",
+      "r11_first_wall_s1_ordinary_support",
+      "r11_bay0_left_terminal_integrated_half_deck",
+      "r11_bay0_right_terminal_integrated_half_deck",
+      "r11_bay0_positive_keystone",
+      "r11_first_wall_socket_0_flush_blank",
+      "r11_first_wall_socket_1_flush_blank",
+      "r11_first_wall_multi_cable_comb_hook"
+    ],
+    "checks": {
+      "all_saved_meshes_are_one_body_closed_positive_and_fit": true,
+      "authored_support_free_intent_passed": true,
+      "bay0_uses_two_terminal_halves": true,
+      "exact_eight_unique_articles": true,
+      "integrated_geometry_module_present": true,
+      "no_predecessor_substitution": true,
+      "saved_layer_connectivity_passed": true,
+      "support_cable_analytic_evidence_passed": true,
+      "support_cable_geometry_module_present": true,
+      "support_cable_provider_complete": true,
+      "terminal_bay_analytic_evidence_passed": true,
+      "terminal_bay_provider_complete": true
+    },
+    "expected_part_order": [
+      "r11_first_wall_s0_fused_two_socket_support",
+      "r11_first_wall_s1_ordinary_support",
+      "r11_bay0_left_terminal_integrated_half_deck",
+      "r11_bay0_right_terminal_integrated_half_deck",
+      "r11_bay0_positive_keystone",
+      "r11_first_wall_socket_0_flush_blank",
+      "r11_first_wall_socket_1_flush_blank",
+      "r11_first_wall_multi_cable_comb_hook"
+    ],
+    "passed": true,
+    "physical_and_field_blockers": [
+      "complete independent structural review, creep conditioning, proof load, and destructive qualification",
+      "complete ten assembly/release cycles without force, fracture, or walkout",
+      "field-verify wall construction, utilities, trim, door, cable-loop, and screw-axis clearances",
+      "inspect all five exact saved articles in slicer Preview before any print decision",
+      "print and cycle both support captures at least ten times without force or damage",
+      "print and cycle each cable module in both sockets, including snag and removal checks",
+      "print both exact terminal and regular joint articles",
+      "qualify the support lugs, bearing surfaces, wall connection, creep, and proof loads"
+    ],
+    "saved_mesh_reports": [
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_first_wall_s0_fused_two_socket_support",
+        "raw_extents_mm": [
+          138.928805,
+          138.928805,
+          152.399994
+        ],
+        "required_build_volume_mm": [
+          153.128805,
+          153.128805,
+          152.399994
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              138.928802,
+              138.928802,
+              152.399994
+            ]
+          ],
+          "canonical_float32_triangle_digest": "ff423ed6d62227c53e432d7b869464326179da63895a1ebf3a1816864d46f0c1",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            138.928802,
+            138.928802,
+            152.399994
+          ],
+          "positive_volume": true,
+          "triangle_count": 1186,
+          "vertex_count": 579,
+          "volume_mm3": 196556.124344,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      },
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_first_wall_s1_ordinary_support",
+        "raw_extents_mm": [
+          138.928805,
+          138.928805,
+          152.399994
+        ],
+        "required_build_volume_mm": [
+          153.128805,
+          153.128805,
+          152.399994
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              138.928802,
+              138.928802,
+              152.399994
+            ]
+          ],
+          "canonical_float32_triangle_digest": "0c9d9bd9106b1c3b65206194b070b18cf97ff9b1ea684dab46353d9ec2aecaa4",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            138.928802,
+            138.928802,
+            152.399994
+          ],
+          "positive_volume": true,
+          "triangle_count": 1162,
+          "vertex_count": 567,
+          "volume_mm3": 177212.12187,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      },
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_bay0_left_terminal_integrated_half_deck",
+        "raw_extents_mm": [
+          162.175003,
+          152.399994,
+          32.0
+        ],
+        "required_build_volume_mm": [
+          176.375003,
+          166.599994,
+          32.0
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              162.175003,
+              152.399994,
+              32.0
+            ]
+          ],
+          "canonical_float32_triangle_digest": "5fe65ebfda9f1d3df77f3db99485983b6313e829a202b536b89b15d2eaea12d1",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            162.175003,
+            152.399994,
+            32.0
+          ],
+          "positive_volume": true,
+          "triangle_count": 330,
+          "vertex_count": 167,
+          "volume_mm3": 317289.119004,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      },
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_bay0_right_terminal_integrated_half_deck",
+        "raw_extents_mm": [
+          162.175003,
+          152.399994,
+          32.0
+        ],
+        "required_build_volume_mm": [
+          176.375003,
+          166.599994,
+          32.0
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              162.175003,
+              152.399994,
+              32.0
+            ]
+          ],
+          "canonical_float32_triangle_digest": "b714da3ad19d553b74389d9ffb1abbc9903a34662f3fba3f2b79397d13e6ceea",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            162.175003,
+            152.399994,
+            32.0
+          ],
+          "positive_volume": true,
+          "triangle_count": 322,
+          "vertex_count": 163,
+          "volume_mm3": 317289.113899,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      },
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_bay0_positive_keystone",
+        "raw_extents_mm": [
+          22.0,
+          18.0,
+          14.0
+        ],
+        "required_build_volume_mm": [
+          36.2,
+          32.2,
+          14.0
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              22.0,
+              18.0,
+              14.0
+            ]
+          ],
+          "canonical_float32_triangle_digest": "a02dc79ca0bd7391ee03effc37f7e3dba5d611e27150fde29f14c004cff7e3b7",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            22.0,
+            18.0,
+            14.0
+          ],
+          "positive_volume": true,
+          "triangle_count": 92,
+          "vertex_count": 48,
+          "volume_mm3": 3848.0,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      },
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_first_wall_socket_0_flush_blank",
+        "raw_extents_mm": [
+          20.0,
+          16.0,
+          10.300001
+        ],
+        "required_build_volume_mm": [
+          34.2,
+          30.2,
+          10.300001
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              20.0,
+              16.0,
+              10.300001
+            ]
+          ],
+          "canonical_float32_triangle_digest": "8dd9725e27ca49d014686e29644455bc6c98a487ce578f3a08a87d6200b54bc1",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            20.0,
+            16.0,
+            10.300001
+          ],
+          "positive_volume": true,
+          "triangle_count": 44,
+          "vertex_count": 24,
+          "volume_mm3": 1512.800293,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      },
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_first_wall_socket_1_flush_blank",
+        "raw_extents_mm": [
+          20.0,
+          16.0,
+          10.300001
+        ],
+        "required_build_volume_mm": [
+          34.2,
+          30.2,
+          10.300001
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              20.0,
+              16.0,
+              10.300001
+            ]
+          ],
+          "canonical_float32_triangle_digest": "8dd9725e27ca49d014686e29644455bc6c98a487ce578f3a08a87d6200b54bc1",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            20.0,
+            16.0,
+            10.300001
+          ],
+          "positive_volume": true,
+          "triangle_count": 44,
+          "vertex_count": 24,
+          "volume_mm3": 1512.800293,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      },
+      {
+        "fits_a1_mini_with_14p2_mm_xy_allowance": true,
+        "mesh_id": "r11_first_wall_multi_cable_comb_hook",
+        "raw_extents_mm": [
+          20.0,
+          16.0,
+          22.950001
+        ],
+        "required_build_volume_mm": [
+          34.2,
+          30.2,
+          22.950001
+        ],
+        "serialized_mesh": {
+          "body_count": 1,
+          "bounds_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              20.0,
+              16.0,
+              22.950001
+            ]
+          ],
+          "canonical_float32_triangle_digest": "71e836a85d1d8b5c8566a9c42a35b89da6dd543862bdae93136b7d7a5557bcf2",
+          "closed_one_body_positive": true,
+          "extents_mm": [
+            20.0,
+            16.0,
+            22.950001
+          ],
+          "positive_volume": true,
+          "triangle_count": 148,
+          "vertex_count": 76,
+          "volume_mm3": 2216.240524,
+          "watertight": true,
+          "winding_consistent": true,
+          "zero_area_triangle_count": 0
+        },
+        "valid": true
+      }
+    ],
+    "support_cable_evidence": {
+      "all_saved_layer_islands_clear": true,
+      "analytic_blockers": [],
+      "analytic_checks": {
+        "all_saved_meshes_closed_support_off_and_a1_fit": true,
+        "cable_accessories_receive_zero_structural_credit": true,
+        "capture_interface_exact_and_independent": true,
+        "exact_ordered_five_article_provider": true,
+        "exact_two_inward_sockets": true,
+        "module_service_paths_clear": true,
+        "new_r11_support_datums_exact": true,
+        "receiver_clears_all_wall_bores": true,
+        "receiver_clears_lug_service_region": true,
+        "support_core_preserved_additive_only": true,
+        "three_exact_7mm_bores_and_full_washer_lands": true
+      },
+      "cable_contract": {
+        "comb_hook_quantity": 1,
+        "flush_blank_quantity": 2,
+        "installed_socket_capacity": 2,
+        "interchangeable_spare_articles": 1,
+        "inward_axis": "+X along first-wall run",
+        "receiver_fused_additive_only": true,
+        "service_lift_drop_mm": 8.0,
+        "service_samples": [
+          {
+            "approach_sample_count": 9,
+            "collision_free": true,
+            "drop_sample_count": 9,
+            "maximum_intersection_mm3": 0.0,
+            "module": "flush_blank",
+            "removal_is_exact_reverse": true,
+            "service_lift_mm": 8.0,
+            "socket_clearance_per_face_mm": 0.4,
+            "station_index": 0
+          },
+          {
+            "approach_sample_count": 9,
+            "collision_free": true,
+            "drop_sample_count": 9,
+            "maximum_intersection_mm3": 0.0,
+            "module": "flush_blank",
+            "removal_is_exact_reverse": true,
+            "service_lift_mm": 8.0,
+            "socket_clearance_per_face_mm": 0.4,
+            "station_index": 1
+          },
+          {
+            "approach_sample_count": 9,
+            "collision_free": true,
+            "drop_sample_count": 9,
+            "maximum_intersection_mm3": 0.0,
+            "module": "comb_hook",
+            "removal_is_exact_reverse": true,
+            "service_lift_mm": 8.0,
+            "socket_clearance_per_face_mm": 0.4,
+            "station_index": 0
+          },
+          {
+            "approach_sample_count": 9,
+            "collision_free": true,
+            "drop_sample_count": 9,
+            "maximum_intersection_mm3": 0.0,
+            "module": "comb_hook",
+            "removal_is_exact_reverse": true,
+            "service_lift_mm": 8.0,
+            "socket_clearance_per_face_mm": 0.4,
+            "station_index": 1
+          }
+        ],
+        "socket_clearance_per_face_mm": 0.4,
+        "socket_count": 2,
+        "structural_credit": false,
+        "support_index": 0
+      },
+      "core_preservation": {
+        "missing_structural_core_volume_mm3": 0.0,
+        "preserved": true,
+        "support_core_subtraction_for_cable_allowed": false
+      },
+      "geometry_subset_passed": true,
+      "independent_capture_contract": {
+        "adjacent_bay_release_independent": true,
+        "full_support_service_path": {
+          "all_service_samples_collision_free": true,
+          "exact_reverse_maximum_intersection_mm3": 0.0,
+          "forbidden_horizontal_reverse_intersection_mm3": 97.28000946044479,
+          "full_s0_and_s1_support_meshes_exercised": true,
+          "gravity_settle_maximum_intersection_mm3": 0.0,
+          "lower_maximum_intersection_mm3": 0.0,
+          "positive_reverse_stop": true,
+          "target_maximum_intersection_mm3": 0.0,
+          "wallward_slide_maximum_intersection_mm3": 0.0
+        },
+        "gravity_settle_mm": 2.0,
+        "keystone_receives_capture_credit": false,
+        "lower_to_service_elevation_mm": 2.0,
+        "lug_center_y_mm": 48.0,
+        "lug_centers_x_mm": [
+          -7.85,
+          7.85
+        ],
+        "release_is_exact_reverse": true,
+        "shared_release_component_count": 0,
+        "wallward_slide_mm": 32.0
+      },
+      "part_order": [
+        "r11_first_wall_s0_fused_two_socket_support",
+        "r11_first_wall_s1_ordinary_support",
+        "r11_first_wall_socket_0_flush_blank",
+        "r11_first_wall_socket_1_flush_blank",
+        "r11_first_wall_multi_cable_comb_hook"
+      ],
+      "parts": {
+        "r11_first_wall_multi_cable_comb_hook": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 88.0,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.4,
+            "sampled_layer_count": 58,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "raw_part_mm": [
+              20.0,
+              16.0,
+              22.950001
+            ],
+            "required_build_volume_mm": [
+              34.2,
+              30.2,
+              22.950001
+            ]
+          },
+          "saved_orientation": "lug_head_face_on_plate_then_stem_base_and_hook",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        },
+        "r11_first_wall_s0_fused_two_socket_support": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 5445.844325951115,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.4,
+            "sampled_layer_count": 381,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "raw_part_mm": [
+              138.928805,
+              138.928805,
+              152.399994
+            ],
+            "required_build_volume_mm": [
+              153.128805,
+              153.128805,
+              152.399994
+            ]
+          },
+          "saved_orientation": "wall_face_on_plate_long_envelope_rotated_45_degrees",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        },
+        "r11_first_wall_s1_ordinary_support": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 4925.044349602236,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.4,
+            "sampled_layer_count": 381,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "raw_part_mm": [
+              138.928805,
+              138.928805,
+              152.399994
+            ],
+            "required_build_volume_mm": [
+              153.128805,
+              153.128805,
+              152.399994
+            ]
+          },
+          "saved_orientation": "wall_face_on_plate_long_envelope_rotated_45_degrees",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        },
+        "r11_first_wall_socket_0_flush_blank": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 88.0,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.4,
+            "sampled_layer_count": 26,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "raw_part_mm": [
+              20.0,
+              16.0,
+              10.300001
+            ],
+            "required_build_volume_mm": [
+              34.2,
+              30.2,
+              10.300001
+            ]
+          },
+          "saved_orientation": "lug_head_face_on_plate_then_stem_base_and_hook",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        },
+        "r11_first_wall_socket_1_flush_blank": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 88.0,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.4,
+            "sampled_layer_count": 26,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "raw_part_mm": [
+              20.0,
+              16.0,
+              10.300001
+            ],
+            "required_build_volume_mm": [
+              34.2,
+              30.2,
+              10.300001
+            ]
+          },
+          "saved_orientation": "lug_head_face_on_plate_then_stem_base_and_hook",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        }
+      },
+      "passed": false,
+      "physical_and_field_blockers": [
+        "inspect all five exact saved articles in slicer Preview before any print decision",
+        "print and cycle both support captures at least ten times without force or damage",
+        "print and cycle each cable module in both sockets, including snag and removal checks",
+        "field-verify wall construction, utilities, trim, door, cable-loop, and screw-axis clearances",
+        "complete independent structural review, creep conditioning, proof load, and destructive qualification"
+      ],
+      "schema_version": "r11_outer_bay_support_cable_geometry_subset_v1",
+      "structural_contract": {
+        "cable_receiver_structural_credit": false,
+        "central_diagonal_web_x_bounds_mm": [
+          -10.0,
+          10.0
+        ],
+        "palatine_mouldings_are_additive": true,
+        "palatine_mouldings_structural_credit": false,
+        "palatine_side_moulding_count": 2,
+        "projection_mm": 152.4,
+        "run_width_mm": 31.75,
+        "structural_strap_height_mm": 158.75,
+        "support_station_line_x_mm": 0.0,
+        "support_x_bounds_mm": [
+          -15.875,
+          15.875
+        ]
+      },
+      "subset_analytic_blockers": [],
+      "subset_physical_and_field_blockers": [
+        "inspect all five exact saved articles in slicer Preview before any print decision",
+        "print and cycle both support captures at least ten times without force or damage",
+        "print and cycle each cable module in both sockets, including snag and removal checks",
+        "field-verify wall construction, utilities, trim, door, cable-loop, and screw-axis clearances",
+        "complete independent structural review, creep conditioning, proof load, and destructive qualification"
+      ],
+      "support_required_by_part": {
+        "r11_first_wall_multi_cable_comb_hook": false,
+        "r11_first_wall_s0_fused_two_socket_support": false,
+        "r11_first_wall_s1_ordinary_support": false,
+        "r11_first_wall_socket_0_flush_blank": false,
+        "r11_first_wall_socket_1_flush_blank": false
+      },
+      "wall_connection_geometry": {
+        "capture_lug_height_above_bearing_mm": 10.0,
+        "complete_installed_z_envelope_mm": 168.75,
+        "drilling_coordinates_released": false,
+        "receiver_bore_intersection_mm3": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "structural_strap_height_mm": 158.75,
+        "wall_bore_centers_installed_xz_mm": [
+          [
+            0.0,
+            -19.05
+          ],
+          [
+            0.0,
+            -79.375
+          ],
+          [
+            0.0,
+            -139.7
+          ]
+        ],
+        "wall_bore_count": 3,
+        "wall_bore_diameter_mm": 7.0,
+        "washer_land_missing_material_mm3": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "washer_land_outer_diameter_mm": 27.025
+      },
+      "zero_rating_and_authorization": {
+        "drilling_coordinates_released": false,
+        "print_authorized": false,
+        "production_ready": false,
+        "rated_load_kg": 0.0,
+        "rated_load_lb": 0.0,
+        "test_load_authorized": false,
+        "wall_installation_authorized": false
+      }
+    },
+    "terminal_bay_evidence": {
+      "all_saved_layer_islands_clear": true,
+      "analytic_blockers": [
+        "full R11 support and S0 fused cable receiver meshes are outside this module",
+        "wall keepouts, blocking, and exact fastener schedule remain unverified",
+        "outer-bay bundle also requires explicit S0 support, ordinary support, and three cable-module providers"
+      ],
+      "assembly_order": [
+        "off-support, slide the two terminal half-decks together along X",
+        "lower the one bay-local Palatine keystone vertically into its midpoint pocket",
+        "hold the joined bay 32 mm forward and 14 mm above final pose",
+        "lower to 2 mm above bearing with both lug heads in their entry pockets",
+        "slide the rigid joined bay 32 mm toward the wall",
+        "settle 2 mm by gravity behind both positive reverse-slide shoulders",
+        "release by lifting 2 mm, sliding 32 mm away, lifting clear, removing the keystone, and separating the halves"
+      ],
+      "geometry_subset_passed": true,
+      "part_order": [
+        "r11_bay0_left_terminal_integrated_half_deck",
+        "r11_bay0_right_terminal_integrated_half_deck",
+        "r11_bay0_positive_keystone"
+      ],
+      "parts": {
+        "r11_bay0_left_terminal_integrated_half_deck": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 20286.039130172765,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.2,
+            "sampled_layer_count": 160,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "minimum_xy_spare_mm": 3.625,
+            "raw_part_mm": [
+              162.175,
+              152.4,
+              32.0
+            ],
+            "required_build_volume_mm": [
+              176.375,
+              166.6,
+              32.0
+            ],
+            "xy_process_allowance_mm": 14.2
+          },
+          "saved_orientation": "complete_top_datum_on_plate_one_half_deck_per_plate",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        },
+        "r11_bay0_positive_keystone": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 340.0,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.2,
+            "sampled_layer_count": 70,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "minimum_xy_spare_mm": 143.8,
+            "raw_part_mm": [
+              22.0,
+              18.0,
+              14.0
+            ],
+            "required_build_volume_mm": [
+              36.2,
+              32.2,
+              14.0
+            ],
+            "xy_process_allowance_mm": 14.2
+          },
+          "saved_orientation": "keystone_decorative_cap_on_plate",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        },
+        "r11_bay0_right_terminal_integrated_half_deck": {
+          "body_count": 1,
+          "layer_connectivity": {
+            "first_layer_contact_area_mm2": 20286.03932924028,
+            "island_layer_indices": [],
+            "layer_height_mm": 0.2,
+            "sampled_layer_count": 160,
+            "support_required": false
+          },
+          "print_envelope": {
+            "available_build_volume_mm": [
+              180.0,
+              180.0,
+              180.0
+            ],
+            "fits": true,
+            "minimum_xy_spare_mm": 3.625,
+            "raw_part_mm": [
+              162.175,
+              152.4,
+              32.0
+            ],
+            "required_build_volume_mm": [
+              176.375,
+              166.6,
+              32.0
+            ],
+            "xy_process_allowance_mm": 14.2
+          },
+          "saved_orientation": "complete_top_datum_on_plate_one_half_deck_per_plate",
+          "support_required": false,
+          "watertight": true,
+          "winding_consistent": true
+        }
+      },
+      "passed": false,
+      "physical_blockers": [
+        "print both exact terminal and regular joint articles",
+        "complete ten assembly/release cycles without force, fracture, or walkout",
+        "qualify the support lugs, bearing surfaces, wall connection, creep, and proof loads"
+      ],
+      "schema_version": "r11_outer_terminal_geometry_subset_v1",
+      "subset_analytic_blockers": [],
+      "subset_physical_and_field_blockers": [
+        "print both exact terminal and regular joint articles",
+        "complete ten assembly/release cycles without force, fracture, or walkout",
+        "qualify the support lugs, bearing surfaces, wall connection, creep, and proof loads"
+      ],
+      "support_required_by_part": {
+        "r11_bay0_left_terminal_integrated_half_deck": false,
+        "r11_bay0_positive_keystone": false,
+        "r11_bay0_right_terminal_integrated_half_deck": false
+      },
+      "zero_rating": {
+        "rated_load_kg": 0.0,
+        "rated_load_lb": 0.0,
+        "wall_installation_authorized": false
+      }
+    }
+  },
+  "geometry_records": [
+    {
+      "mesh_id": "r11_first_wall_s0_fused_two_socket_support",
+      "qualification_role": "first_outer_bay_structural_or_retention_article",
+      "raw_extents_mm": [
+        138.928805,
+        138.928805,
+        152.399994
+      ],
+      "required_build_volume_mm": [
+        153.128805,
+        153.128805,
+        152.399994
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            138.928802,
+            138.928802,
+            152.399994
+          ]
+        ],
+        "canonical_float32_triangle_digest": "ff423ed6d62227c53e432d7b869464326179da63895a1ebf3a1816864d46f0c1",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          138.928802,
+          138.928802,
+          152.399994
+        ],
+        "positive_volume": true,
+        "triangle_count": 1186,
+        "vertex_count": 579,
+        "volume_mm3": 196556.124344,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "mesh_id": "r11_first_wall_s1_ordinary_support",
+      "qualification_role": "first_outer_bay_structural_or_retention_article",
+      "raw_extents_mm": [
+        138.928805,
+        138.928805,
+        152.399994
+      ],
+      "required_build_volume_mm": [
+        153.128805,
+        153.128805,
+        152.399994
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            138.928802,
+            138.928802,
+            152.399994
+          ]
+        ],
+        "canonical_float32_triangle_digest": "0c9d9bd9106b1c3b65206194b070b18cf97ff9b1ea684dab46353d9ec2aecaa4",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          138.928802,
+          138.928802,
+          152.399994
+        ],
+        "positive_volume": true,
+        "triangle_count": 1162,
+        "vertex_count": 567,
+        "volume_mm3": 177212.12187,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "mesh_id": "r11_bay0_left_terminal_integrated_half_deck",
+      "qualification_role": "first_outer_bay_structural_or_retention_article",
+      "raw_extents_mm": [
+        162.175003,
+        152.399994,
+        32.0
+      ],
+      "required_build_volume_mm": [
+        176.375003,
+        166.599994,
+        32.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            162.175003,
+            152.399994,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "5fe65ebfda9f1d3df77f3db99485983b6313e829a202b536b89b15d2eaea12d1",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          162.175003,
+          152.399994,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 330,
+        "vertex_count": 167,
+        "volume_mm3": 317289.119004,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "mesh_id": "r11_bay0_right_terminal_integrated_half_deck",
+      "qualification_role": "first_outer_bay_structural_or_retention_article",
+      "raw_extents_mm": [
+        162.175003,
+        152.399994,
+        32.0
+      ],
+      "required_build_volume_mm": [
+        176.375003,
+        166.599994,
+        32.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            162.175003,
+            152.399994,
+            32.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "b714da3ad19d553b74389d9ffb1abbc9903a34662f3fba3f2b79397d13e6ceea",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          162.175003,
+          152.399994,
+          32.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 322,
+        "vertex_count": 163,
+        "volume_mm3": 317289.113899,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "mesh_id": "r11_bay0_positive_keystone",
+      "qualification_role": "first_outer_bay_structural_or_retention_article",
+      "raw_extents_mm": [
+        22.0,
+        18.0,
+        14.0
+      ],
+      "required_build_volume_mm": [
+        36.2,
+        32.2,
+        14.0
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            22.0,
+            18.0,
+            14.0
+          ]
+        ],
+        "canonical_float32_triangle_digest": "a02dc79ca0bd7391ee03effc37f7e3dba5d611e27150fde29f14c004cff7e3b7",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          22.0,
+          18.0,
+          14.0
+        ],
+        "positive_volume": true,
+        "triangle_count": 92,
+        "vertex_count": 48,
+        "volume_mm3": 3848.0,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "mesh_id": "r11_first_wall_socket_0_flush_blank",
+      "qualification_role": "first_wall_s0_zero_structural_credit_cable_article",
+      "raw_extents_mm": [
+        20.0,
+        16.0,
+        10.300001
+      ],
+      "required_build_volume_mm": [
+        34.2,
+        30.2,
+        10.300001
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            10.300001
+          ]
+        ],
+        "canonical_float32_triangle_digest": "8dd9725e27ca49d014686e29644455bc6c98a487ce578f3a08a87d6200b54bc1",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          20.0,
+          16.0,
+          10.300001
+        ],
+        "positive_volume": true,
+        "triangle_count": 44,
+        "vertex_count": 24,
+        "volume_mm3": 1512.800293,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "mesh_id": "r11_first_wall_socket_1_flush_blank",
+      "qualification_role": "first_wall_s0_zero_structural_credit_cable_article",
+      "raw_extents_mm": [
+        20.0,
+        16.0,
+        10.300001
+      ],
+      "required_build_volume_mm": [
+        34.2,
+        30.2,
+        10.300001
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            10.300001
+          ]
+        ],
+        "canonical_float32_triangle_digest": "8dd9725e27ca49d014686e29644455bc6c98a487ce578f3a08a87d6200b54bc1",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          20.0,
+          16.0,
+          10.300001
+        ],
+        "positive_volume": true,
+        "triangle_count": 44,
+        "vertex_count": 24,
+        "volume_mm3": 1512.800293,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    },
+    {
+      "mesh_id": "r11_first_wall_multi_cable_comb_hook",
+      "qualification_role": "first_wall_s0_zero_structural_credit_cable_article",
+      "raw_extents_mm": [
+        20.0,
+        16.0,
+        22.950001
+      ],
+      "required_build_volume_mm": [
+        34.2,
+        30.2,
+        22.950001
+      ],
+      "serialized_mesh": {
+        "body_count": 1,
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            22.950001
+          ]
+        ],
+        "canonical_float32_triangle_digest": "71e836a85d1d8b5c8566a9c42a35b89da6dd543862bdae93136b7d7a5557bcf2",
+        "closed_one_body_positive": true,
+        "extents_mm": [
+          20.0,
+          16.0,
+          22.950001
+        ],
+        "positive_volume": true,
+        "triangle_count": 148,
+        "vertex_count": 76,
+        "volume_mm3": 2216.240524,
+        "watertight": true,
+        "winding_consistent": true,
+        "zero_area_triangle_count": 0
+      },
+      "support_required_by_authored_geometry": false
+    }
+  ],
+  "included_handoff_documents": [
+    "ASSEMBLY.md",
+    "CUSTOMIZATION.md",
+    "DESIGN_REQUIREMENTS.md",
+    "GUIDELINES.md",
+    "LOAD_QUALIFICATION.md",
+    "MATERIALS_AND_HARDWARE.md",
+    "PLAN.md",
+    "PRINT_FIRST.md"
+  ],
+  "individual_article_count": 8,
+  "manual_preview_and_fresh_print_permission_required": true,
+  "object_names_in_order": [
+    "r11_first_wall_s0_fused_two_socket_support",
+    "r11_first_wall_s1_ordinary_support",
+    "r11_bay0_left_terminal_integrated_half_deck",
+    "r11_bay0_right_terminal_integrated_half_deck",
+    "r11_bay0_positive_keystone",
+    "r11_first_wall_socket_0_flush_blank",
+    "r11_first_wall_socket_1_flush_blank",
+    "r11_first_wall_multi_cable_comb_hook"
+  ],
+  "package_id": "r11_first_outer_actual_bay_neutral_qualification_v1",
+  "physical_qualification_complete": false,
+  "print_authorized": false,
+  "production_ready": false,
+  "qualification_only": true,
+  "rated_load_kg": 0.0,
+  "rated_load_lb": 0.0,
+  "requirements_lock_path": "requirements.txt",
+  "runtime_provenance": {
+    "byteorder": "little",
+    "manifold3d_version": "3.5.2",
+    "mapbox_earcut_version": "1.0.3",
+    "networkx_version": "3.5",
+    "numpy_version": "2.5.1",
+    "python_cache_tag": "cpython-312",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "r10_model_io_sha256_verified_before_execution": "13dbdb4914f089908aa9b9267c0eb99aea615ddc852e39ce7e7ad73f323392f8",
+    "requirements_runtime_exact_match": true,
+    "requirements_txt_sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd",
+    "requirements_versions": {
+      "manifold3d": "3.5.2",
+      "mapbox-earcut": "1.0.3",
+      "networkx": "3.5",
+      "numpy": "2.5.1",
+      "scipy": "1.18.0",
+      "shapely": "2.1.2",
+      "trimesh": "5.0.0"
+    },
+    "scipy_version": "1.18.0",
+    "shapely_version": "2.1.2",
+    "trimesh_version": "5.0.0",
+    "zlib_compile_version": "1.2.12",
+    "zlib_runtime_version": "1.2.12"
+  },
+  "schema_version": "r11_first_outer_bay_validation_v1",
+  "source_records": [
+    {
+      "bytes": 2594,
+      "path": "development/r10/model_io.py",
+      "sha256": "13dbdb4914f089908aa9b9267c0eb99aea615ddc852e39ce7e7ad73f323392f8"
+    },
+    {
+      "bytes": 9977,
+      "path": "development/r11/ASSEMBLY.md",
+      "sha256": "6b63530b66eb795e9ccd09826da2e4aba7387442197112a5aeb9193d3eb3c754"
+    },
+    {
+      "bytes": 10849,
+      "path": "development/r11/CUSTOMIZATION.md",
+      "sha256": "b4a786d993bdc300a63f771da4861842dab2e9847d8e0e948df5d59e28105876"
+    },
+    {
+      "bytes": 13239,
+      "path": "development/r11/DESIGN_REQUIREMENTS.md",
+      "sha256": "fd0246d25d8f5e4e0c223c3cb8c35521ed4f6565ff44c16235a9fe8b8cbaa03a"
+    },
+    {
+      "bytes": 802,
+      "path": "development/r11/FROZEN_BASELINES.json",
+      "sha256": "12d95e151db41de1647cd895c85443dfd7321246417535edafc545e45f463be8"
+    },
+    {
+      "bytes": 5861,
+      "path": "development/r11/GUIDELINES.md",
+      "sha256": "1bff3b0c5abb45b8aa3d2caaf41d0afff10c62234730eb4b1c856ed1f81ebb43"
+    },
+    {
+      "bytes": 13875,
+      "path": "development/r11/LOAD_QUALIFICATION.md",
+      "sha256": "22af38bb91f1f396ca179a3ecfe6c2e79e89fea59d3b4f5cbb41ba305032d7b8"
+    },
+    {
+      "bytes": 10789,
+      "path": "development/r11/MATERIALS_AND_HARDWARE.md",
+      "sha256": "3ce175483d2dff8f8a2a6ab4e280058ccbbd9dbb221eca0a9d33373c9287e589"
+    },
+    {
+      "bytes": 10885,
+      "path": "development/r11/PLAN.md",
+      "sha256": "b42c79ddb924566a116b95e5dd1e14c5e1bbdac6f103bfd065cf533ed6a0bcf1"
+    },
+    {
+      "bytes": 11228,
+      "path": "development/r11/PRINT_FIRST.md",
+      "sha256": "fde1de302c9fdbd3345627766592ea306f50cecb8ea38aa02ff99f5133f1d6af"
+    },
+    {
+      "bytes": 11033,
+      "path": "development/r11/README.md",
+      "sha256": "a53454abe9da643beb701c19d59a01891e052d325c414210ca32317dd9b9b693"
+    },
+    {
+      "bytes": 5226,
+      "path": "development/r11/config.json",
+      "sha256": "e9986d7a4c95c40d4ae8692a9ccb06ac631e8c98c908c5c92a603e9e64fadb9e"
+    },
+    {
+      "bytes": 23289,
+      "path": "development/r11/generate_qualification.py",
+      "sha256": "805d741a64bb208894415d5b9c83ea172257f9b02cb22fc911b1958329e3cd7e"
+    },
+    {
+      "bytes": 43637,
+      "path": "development/r11/integrated_geometry.py",
+      "sha256": "36172e0566906906da9df68704cc6f2b0edbcc15f9d4f813cc6fde8859f43ef7"
+    },
+    {
+      "bytes": 64976,
+      "path": "development/r11/layout.py",
+      "sha256": "63c2395ed59dd8918004dbe0d1b72e2634ea60ee82a19b4e41936247a7f262e0"
+    },
+    {
+      "bytes": 2740,
+      "path": "development/r11/model_io.py",
+      "sha256": "a5cc3e785d9156fcaeda74569456af5f81e5fe369246f6ad4729769d66bccc88"
+    },
+    {
+      "bytes": 41316,
+      "path": "development/r11/release_status.py",
+      "sha256": "3382b2427127f85a514f896e4418804eda879abede4514f28445034f76781ed4"
+    },
+    {
+      "bytes": 38678,
+      "path": "development/r11/support_cable_geometry.py",
+      "sha256": "8d329d373864bbc0c2e064a1755ba77478730a844c2719972586977c275aa8c4"
+    },
+    {
+      "bytes": 13434,
+      "path": "development/r11/visuals/r11_first_outer_bay_exploded_and_wall_topology.svg",
+      "sha256": "8d00061476ac89d026a6f8cc560ff255b2c5e0ffa377b49f114e53e8052a3ea5"
+    },
+    {
+      "bytes": 25019,
+      "path": "development/r8/model_io.py",
+      "sha256": "28c26fb7b73d6993c77d19eb8555ad65d78d327d658a86d6f3b37fd74882475b"
+    },
+    {
+      "bytes": 2534,
+      "path": "development/r9/model_io.py",
+      "sha256": "74f0451d66d8e72316d8d17405bd10860485783cd16f7033a0e56dbf88df55f5"
+    },
+    {
+      "bytes": 110,
+      "path": "requirements.txt",
+      "sha256": "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+    }
+  ],
+  "source_tree_evidence": {
+    "source_bytes": 362091,
+    "source_file_count": 22,
+    "source_tree_sha256": "91544e30a14fdf16e0cd770c1e9492b24221362d47a172bde0718c82fa00137c"
+  },
+  "support_cable_part_order": [
+    "r11_first_wall_s0_fused_two_socket_support",
+    "r11_first_wall_s1_ordinary_support",
+    "r11_first_wall_socket_0_flush_blank",
+    "r11_first_wall_socket_1_flush_blank",
+    "r11_first_wall_multi_cable_comb_hook"
+  ],
+  "terminal_bay_part_order": [
+    "r11_bay0_left_terminal_integrated_half_deck",
+    "r11_bay0_right_terminal_integrated_half_deck",
+    "r11_bay0_positive_keystone"
+  ],
+  "terminal_half_deck_length_mm": 162.175,
+  "test_load_authorized": false,
+  "unsliced": true,
+  "wall_installation_authorized": false
+}
