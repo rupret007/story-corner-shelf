@@ -1467,7 +1467,7 @@ def write_support_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
                 previous = center
 
 
-def write_structural_sanity_check(cfg: dict) -> None:
+def write_structural_sanity_check(cfg: dict, dimensions: dict[str, dict]) -> None:
     """Write a deliberately limited plywood-span serviceability calculation.
 
     This is not a capacity analysis. It checks whether the short longitudinal
@@ -1478,7 +1478,34 @@ def write_structural_sanity_check(cfg: dict) -> None:
     structural = cfg["structural"]
     span = float(structural["maximum_support_spacing_in"])
     overhang = float(structural["maximum_end_overhang_in"])
-    line_load = float(structural["serviceability_check_development_line_load_proxy_lb_per_ft"]) / 12.0
+    proxy_lb_per_ft = float(structural["serviceability_check_development_line_load_proxy_lb_per_ft"])
+    # A measured arm dead load raises the governing serviceability line load
+    # when contents target + measured dead weight exceeds the development
+    # proxy; it never lowers the check below the proxy and creates no rating.
+    measured_arm_loads = []
+    governing_lb_per_ft = proxy_lb_per_ft
+    governing_source = "development_line_load_proxy"
+    for run in cfg["closet"]["runs"]:
+        dead_load = run["field_verified_shelf_arm_dead_load_lb"]
+        if dead_load is None:
+            continue
+        deck_length_ft = float(dimensions[run["id"]]["deck_length_in"]) / 12.0
+        combined_lb_per_ft = (
+            float(run["design_target_contents_lb_edl"]) + float(dead_load)
+        ) / deck_length_ft
+        measured_arm_loads.append(
+            {
+                "run_id": run["id"],
+                "field_verified_shelf_arm_dead_load_lb": float(dead_load),
+                "contents_target_plus_measured_dead_line_load_lb_per_ft": round(
+                    combined_lb_per_ft, 3
+                ),
+            }
+        )
+        if combined_lb_per_ft > governing_lb_per_ft:
+            governing_lb_per_ft = combined_lb_per_ft
+            governing_source = f"field_verified_dead_load_{run['id']}"
+    line_load = governing_lb_per_ft / 12.0
     modulus = float(structural["serviceability_check_plywood_modulus_psi"])
     width = float(cfg["closet"]["shelf_depth_in"])
     thickness = float(structural["deck_thickness_in"])
@@ -1502,6 +1529,9 @@ def write_structural_sanity_check(cfg: dict) -> None:
         ],
         "inputs": {
             "development_line_load_proxy_lb_per_ft": structural["serviceability_check_development_line_load_proxy_lb_per_ft"],
+            "field_verified_arm_dead_loads": measured_arm_loads,
+            "governing_line_load_lb_per_ft": round(governing_lb_per_ft, 3),
+            "governing_line_load_source": governing_source,
             "support_span_in": span,
             "maximum_end_overhang_in": overhang,
             "deck_depth_in": width,
@@ -2047,7 +2077,7 @@ def main() -> None:
     write_part_3mfs(parts, cfg)
     write_cut_plan(cfg, dimensions)
     write_support_plan(cfg, dimensions)
-    write_structural_sanity_check(cfg)
+    write_structural_sanity_check(cfg, dimensions)
     write_support_svg(cfg, dimensions)
     write_corner_svg(cfg, dimensions, corner_data)
     write_palatine_elevation_svg(cfg, dimensions)

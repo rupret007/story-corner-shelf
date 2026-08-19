@@ -4,6 +4,15 @@ Design revisions are named in `config.json`. The project has not been assigned a
 
 ## Unreleased — `triadic_palatine_fitted_l_corner_r5`
 
+### Documentation and assembly completion (design review)
+
+- New `ASSEMBLY.md` owns the complete build sequence: entry gate, structural install (including the install-standards → measure-offsets → regenerate → then-cut ordering), part staging and left/right identification, tiles, curbs, fascia-train direction (inside corner outward), ornament order, 98-piece close-out tally, load-acceptance record, and disassembly/service order. The silicone dot counts and installed z-stack are stated once there and in `ENGINEERING_DESIGN.md` rather than duplicated across five documents.
+- New `MEASUREMENT_WORKSHEET.md` provides fill-in tables for every field measurement with a worksheet-to-config key map (JSON paths, units, worked example) and a post-entry verification step against the `*_source` fields in `generated/validation.json`.
+- `field_verified_shelf_arm_dead_load_lb` is now consumed: entered values raise the serviceability check's governing line load above the 30 lb/ft development proxy, reported with its source in `generated/structural_sanity_check.json`. It can only raise the check and still creates no rating.
+- Consistency fixes: the end-overhang gate is stated as the configured 6 in maximum (nominal through-arm value 5.594 in); one inspection schedule (SAFETY.md) replaces three variants; pier flutes stated as three per half / six assembled; the 17.0 mm curb top documented as 15.0 mm curb + 2.0 mm tile; the 39 in standard zone's 4.5 in margin stated in SAFETY.md; groin-vault 2.0 mm documented as 1.2 mm base + 0.8 mm relief.
+- Plate-fit and batching cautions for a 180 mm printer added to `PRINT_ME_FIRST.md` (brim margin on 168 mm parts, thin-tile warp and spares, batching guidance).
+- `scripts/check_repository.py` now requires `ASSEMBLY.md` and `MEASUREMENT_WORKSHEET.md`; the measurement issue template names the exact config keys, collects the corner angle numerically, splits support centers per wall, and records dead loads separately.
+
 ### Added
 
 - **Triadic Palatine Order** visual system, governed by a 3–6–9 composition rather than unrelated ornament.

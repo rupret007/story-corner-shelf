@@ -2,12 +2,12 @@
 """Run a frozen R11-era test suite, excluding retired root-router tests.
 
 The frozen trees under development/r11* are preserved unchanged, including
-their tests. Three of those tests assert that the repository's root
-README.md, PRINT_ME_FIRST.md, PROGRESS.md, docs/ mirrors, and
-PUBLICATION_MANIFEST.json still route readers to R11 as the current
-development focus. That root-doc contract was retired by the r5 Triadic
-Palatine migration (see CHANGELOG.md); the root docs now point to the frozen
-R11 trees instead of being governed by them. This runner executes every
+their tests. Three of those tests asserted that the R11-era root files
+(README.md and PRINT_ME_FIRST.md with docs/ mirrors, PROGRESS.md, and
+PUBLICATION_MANIFEST.json — the latter three no longer exist) routed readers
+to R11 as the current development focus. That root-doc contract was retired
+by the r5 Triadic Palatine migration (see CHANGELOG.md); the root docs now
+point to the frozen R11 trees instead of being governed by them. This runner executes every
 remaining test in a given suite while skipping only those retired
 assertions, so the frozen test files themselves stay byte-identical.
 """

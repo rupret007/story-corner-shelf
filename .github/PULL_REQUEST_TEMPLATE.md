@@ -22,6 +22,7 @@ Describe the design, documentation, measurement, attachment, or generated-artifa
 - [ ] Bambu Studio import/export was run locally, or the reason it was unavailable is documented.
 - [ ] Documentation references `generated/artist_rendering_triadic_palatine_order.png` as the final r5 design-intent rendering.
 - [ ] `generated/palatine_elevation.svg` agrees with the configured and generated r5 module geometry.
+- [ ] Assembly-sequence or attachment changes are reflected in `ASSEMBLY.md` (the owning document), and measurement-workflow changes in `MEASUREMENT_WORKSHEET.md`, rather than duplicated across the other docs.
 - [ ] Portable tests, repository checks, and a clean deterministic rebuild pass.
 - [ ] No stale r4 artifacts/counts, local archives, virtual environments, slicer scratch files, machine code, or personal data are included.
 

@@ -77,25 +77,22 @@ The installed set is 98 objects; the gauge and two coupons are not installed.
 
 ## Attachment and installed stack
 
-The rear-curb stack is deliberate:
-
-```text
-deck top datum             z = 0
-top tile                   z = 0–2.0 mm
-rear-curb base             z = 2.0–4.4 mm
-rear-curb upright top      z = 17.0 mm
-```
-
-- Put one small centered dot of qualified removable neutral-cure silicone beneath each top tile. Keep all seams and perimeters free; remove with floss rather than prying.
-- Every straight rear-curb part contains one 8 x 4.4 mm clearance slot; the fitted corner replacement contains one per arm. After final layout, drill the matching top tile and use a short nonstructural pan-head screw into plywood only after checking underside clearance. Do not clamp rigidly or bridge any seam/joint.
-- Every arcade/fascia half uses full-depth upper and lower flanges to capture the real plywood/tile/angle stack. Assemble the lateral train before the two outer endcaps and re-entrant corner cover, then use one tiny centered dot of qualified removable neutral-cure silicone inside each channel only to prevent creep and rattle. Do not drill or notch the continuous steel angle for cosmetic retention.
-- Retain each entablature overlay to its own fascia half with one tiny centered qualified removable silicone dot. Retain each keystone with two pinhead-size dots on one half only. Use two tiny dots inside one upper leg of the corner pilaster; its perpendicular leg floats.
-- Retain each outer endcap with two tiny qualified removable silicone dots inside the final fascia channel, then perform a hand pull-check.
-- Mount the groin vault through its two generated clearance slots with short nonstructural pan-head screws into the underside of the through-owned plywood only after a depth-stop and bracket-clearance check; never bridge the plywood joint.
+Every finish piece attaches with qualified removable products only. The full
+build sequence, silicone dot counts, curb drilling procedure, and installed
+z-stack are owned by [ASSEMBLY.md](ASSEMBLY.md) (with the geometry defined in
+[ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 6 and the policy in
+section 8). Never drill or notch the continuous steel angle, bridge a 0.6 mm
+seam or the plywood joint, or clamp PETG rigidly.
 
 ## Saved-orientation rule
 
-All r5 meshes fit the declared 180 x 180 x 180 mm minimum model envelope in their generated orientation. The largest arcade halves are 168.056 mm tall, leaving little room for arbitrary rotation or an oversized brim on a 180 mm plate. Use the saved orientation as the starting point, print the Palatine overlay/detail faces up, and re-run arrangement checks on the confirmed printer. No supports, layer heights, temperatures, speeds, or machine profiles are embedded in the model-only 3MFs.
+All r5 meshes fit the declared 180 x 180 x 180 mm minimum model envelope in their generated orientation. The largest arcade halves are 168.056 mm tall, leaving little room for arbitrary rotation or an oversized brim on a 180 mm plate. Use the saved orientation as the starting point, print the Palatine overlay/detail faces up, and re-run arrangement checks on the confirmed printer. The arcade halves are saved front-face-down so their channel flanges grow upward and need no support material. No supports, layer heights, temperatures, speeds, or machine profiles are embedded in the model-only 3MFs.
+
+## Plate-fit and batching cautions for a 180 mm printer
+
+- The 168.056 mm plate footprint of each arcade half, endcap, and corner pilaster — and the 172.6 mm corner-side curb — leaves roughly 6 mm of plate margin per side. Keep any brim to about 5 mm or less on these parts, or place the long curbs diagonally; confirm the slicer's exclusion zones before slicing.
+- The 2.0 mm top tiles are large thin PETG flats (up to 151.8 x 101.3 mm) and are the most warp-prone parts in the set. Use a clean, adhesion-checked plate, avoid drafts, and plan a small number of spare tiles — 20 centers are needed and a single lifted corner scraps the tile.
+- The full set is roughly a hundred objects across many plates on a 180 mm printer. Batch like parts together (tiles with tiles, halves one or two per plate), print one part from each family for the step-9 dry fit before committing to production quantities, and track finished counts against the production table above.
 
 ## Production boundary
 

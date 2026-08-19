@@ -19,6 +19,8 @@ REQUIRED_FILES = (
     "PRINT_ME_FIRST.md",
     "ENGINEERING_DESIGN.md",
     "SAFETY.md",
+    "ASSEMBLY.md",
+    "MEASUREMENT_WORKSHEET.md",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "config.json",

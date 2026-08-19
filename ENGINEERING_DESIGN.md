@@ -157,6 +157,8 @@ rear-curb base             z = 2.0–4.4 mm
 rear-curb upright top      z = 17.0 mm
 ```
 
+The 17.0 mm upright top is the 15.0 mm printed curb height (`rear_curb_height_mm` in config.json) sitting on the 2.0 mm tile; edit the config value, not the sum.
+
 Each straight curb piece has one 8 x 4.4 mm generated clearance slot. The L replacement has one slot per arm. Field-drill the matching tile only after layout; then use a short nonstructural pan-head screw into plywood with verified underside clearance. Never clamp PETG rigidly, bridge a printed seam, or cross the wood joint.
 
 ## 7. Triadic Palatine fascia architecture
@@ -183,7 +185,7 @@ Nine 18 x 24 x 2.4 mm keystones hide bay-center seams. Each is retained to one h
 
 Two compound 168.056 mm-high endcaps close the exposed arcade/fascia ends. Each straight fascia layout already reserves the 2.0 mm cap thickness.
 
-The 42 x 42 x 2.0 mm groin-vault soffit has diagonal ribs, border, and a nine-petal boss. Its two slots mount it only beneath the through-owned corner square; it must not bridge the return joint.
+The 42 x 42 x 2.0 mm groin-vault soffit (1.2 mm base plus 0.8 mm relief, per the config `groin_vault_base_mm` and `groin_vault_relief_mm` keys) has diagonal ribs, border, and a nine-petal boss. Its two slots mount it only beneath the through-owned corner square; it must not bridge the return joint.
 
 The fascia upper flange overlays the top tile. Its nominal channel opening is:
 
@@ -224,7 +226,7 @@ The plywood and front angles do not use printed snap joints. Moving one arm alon
 
 ## 10. Selection targets—not ratings
 
-The deliberately limited plywood-span check uses a **30 lb/ft total development line-load proxy**. That proxy sits above the approximately 24.3 lb/ft contents-selection density to leave a rough allowance for unmeasured shelf dead load; it is not measured demand, a safety factor, or a rating.
+The deliberately limited plywood-span check uses a **30 lb/ft total development line-load proxy**. That proxy sits above the approximately 24.3 lb/ft contents-selection density to leave a rough allowance for unmeasured shelf dead load; it is not measured demand, a safety factor, or a rating. When a run's `field_verified_shelf_arm_dead_load_lb` is entered, the check's governing line load becomes the larger of the proxy and that arm's contents target plus measured dead weight over its deck length; `generated/structural_sanity_check.json` reports the governing value and its source. A measured value can only raise the check, never relax it, and still creates no rating.
 
 Current round-number contents-selection targets are:
 
@@ -263,10 +265,10 @@ Keep dense items close to and between brackets, avoid concentrated front-edge lo
 3. Record unloaded front-edge position at the center and ends of both arms using a fixed reference.
 4. Apply known, nonfragile weights gradually and evenly while keeping people clear.
 5. Stop for fastener motion, wall crushing, sound, distortion, cracking, whitening, ridge formation, or unexpected deflection.
-6. Hold only the intended selection target—never a guessed overload—and recheck after 1 hour, 24 hours, and one week.
+6. Hold only the intended selection target—never a guessed overload—and re-inspect on the schedule in [SAFETY.md](SAFETY.md) "Before loading": after one hour, 24 hours, one week, one month, after every move, and at least annually.
 7. Unload and record residual movement.
 8. Install qualified PETG attachment and finish only after the bare structure remains stable; hand-check every hanging Palatine component and repeat visual inspection.
 
 This process can reveal obvious defects but cannot certify a safe-working load. Obtain qualified local review whenever failure could injure someone or the wall construction, fasteners, steel drilling, or cumulative loading remain uncertain.
 
-Inspect after initial loading, after one month, after every move, and at least annually. Unload for loose screws, failed adhesive, corrosion, wall movement, permanent deflection, damaged plywood, binding trim, loose ornament, or cracked/warped PETG. Record exact hardware, measurements, stud locations, test weights, installation date, attachment products, and every later configuration change.
+Follow the single inspection schedule above (SAFETY.md "Before loading"). Unload for loose screws, failed adhesive, corrosion, wall movement, permanent deflection, damaged plywood, binding trim, loose ornament, or cracked/warped PETG. Record exact hardware, measurements, stud locations, test weights, installation date, attachment products, and every later configuration change.

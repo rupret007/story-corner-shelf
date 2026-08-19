@@ -32,27 +32,17 @@ The Palatine arches, fluted piers, keystones, groin vault, and entablatures are 
 
 The full set includes hanging and overlay components. A loose decorative part can still injure someone even though it carries no shelf load.
 
-- Verify that every arcade/fascia half is captured by both full-depth channel flanges without splitting, binding, lifting a tile, or bearing on ornament. Assemble the lateral train before closing it with the two outer endcaps and re-entrant corner cover.
-- Use one tiny centered dot of qualified removable neutral-cure silicone inside each fascia channel only to prevent creep and rattle. Do not drill or notch the continuous steel angle for cosmetic retention.
-- Retain each entablature overlay to its own fascia half with one tiny centered qualified removable silicone dot; never bridge its 0.6 mm seams.
-- Retain each keystone with two pinhead-size qualified removable silicone dots on one half only; let it float over the opposite half's 0.6 mm seam.
-- Use two tiny qualified removable silicone dots inside one upper leg of the re-entrant corner pilaster; its perpendicular leg floats and no adhesive crosses the seam.
-- Mount the 42 mm groin-vault soffit through its two generated clearance slots with short nonstructural pan-head screws only into the underside of the through-owned corner square after a depth-stop and bracket-clearance check. Preserve at least 10 mm generated clearance to the nearest verified bracket plane and never bridge the plywood joint.
-- Use only qualified removable attachment products. Hand pull-check every overlay, endcap, keystone, pilaster, and soffit before loading and after every move.
+- Verify that every arcade/fascia half is captured by both full-depth channel flanges without splitting, binding, lifting a tile, or bearing on ornament. Assemble the lateral train before closing it with the two outer endcaps and re-entrant corner cover; the full sequence and silicone dot counts are in [ASSEMBLY.md](ASSEMBLY.md).
+- Use only qualified removable attachment products, exactly as specified in [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 8. Do not drill or notch the continuous steel angle for cosmetic retention, never bridge a 0.6 mm seam or the plywood joint with adhesive, and keep every floating leg or half genuinely floating.
+- Mount the 42 mm groin-vault soffit only into the underside of the through-owned corner square after a depth-stop and bracket-clearance check, preserving at least 10 mm to the nearest verified bracket plane.
+- Hand pull-check every overlay, endcap, keystone, pilaster, and soffit before loading and after every move.
 - Unload immediately for a loose, cracked, warped, whitening, or rattling ornament.
 
 Attachment retains trim only. It does not make the fascia lip, curb, arches, or vault a rated cargo restraint.
 
 ## Rear-curb and top-tile controls
 
-The rear curb sits on the printed tile, not directly on bare plywood:
-
-```text
-deck top datum             z = 0
-top tile                   z = 0–2.0 mm
-rear-curb base             z = 2.0–4.4 mm
-rear-curb upright top      z = 17.0 mm
-```
+The rear curb sits on the printed tile, not directly on bare plywood; the installed z-stack is defined in [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 6.
 
 - Keep the long-wall straight curb and 172.6 mm through-zone piece on the through deck.
 - Start the return curb on its own board beyond the 1.6 mm plywood gap. No printed curb or fastener may cross that joint.
@@ -67,7 +57,7 @@ rear-curb upright top      z = 17.0 mm
 - Map both stud edges and centers on both walls, especially within 14 in of the corner, using more than one method.
 - Confirm every proposed standard has usable structural backing and passes spacing/overhang limits. Field centers must be finite and independently spaced.
 - Locate wiring, pipes, and protective plates around the outlets. Never infer cable paths from outlet position alone.
-- Verify the common shelf-top elevation, ceiling clearance, door/trim clearance, the 39 in standard zone, and the complete 168.056 mm Palatine fascia envelope.
+- Verify the common shelf-top elevation, ceiling clearance, door/trim clearance, the 39 in standard zone (the reported outlet-top-to-ceiling distance of 43.5 in leaves only 4.5 in total placement margin — see [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 5), and the complete 168.056 mm Palatine fascia envelope.
 - Follow the current instructions for one compatible hardware system, including prescribed fasteners, holes, edge distances, torque, locks, and deck attachment.
 - Stop and involve a qualified local professional if framing, wiring, structural fastener selection, any drilling needed for the steel angle's structural connection, wall condition, or injury consequences remain uncertain. Cosmetic fascia retention must not add holes or notches to the angle.
 

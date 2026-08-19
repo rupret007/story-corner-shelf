@@ -12,6 +12,9 @@
   ],
   "inputs": {
     "development_line_load_proxy_lb_per_ft": 30.0,
+    "field_verified_arm_dead_loads": [],
+    "governing_line_load_lb_per_ft": 30.0,
+    "governing_line_load_source": "development_line_load_proxy",
     "support_span_in": 16.0,
     "maximum_end_overhang_in": 6.0,
     "deck_depth_in": 8.0,

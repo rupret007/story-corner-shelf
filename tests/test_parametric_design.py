@@ -503,6 +503,49 @@ class ParametricDesignTests(unittest.TestCase):
         )
         self.assertIn("not a measured dead load", sanity["load_scope_note"])
 
+    def test_field_verified_dead_load_raises_governing_line_load(self) -> None:
+        import tempfile
+
+        config = copy.deepcopy(self.config)
+        through = self.run_config(config, "long_wall_5ft")
+        through["field_verified_shelf_arm_dead_load_lb"] = 40.0
+        dimensions = self.dimensions(config)
+        deck_length_ft = dimensions["long_wall_5ft"]["deck_length_in"] / 12.0
+        expected = (through["design_target_contents_lb_edl"] + 40.0) / deck_length_ft
+        proxy = config["structural"]["serviceability_check_development_line_load_proxy_lb_per_ft"]
+        self.assertGreater(expected, proxy)
+
+        original_out = generator.OUT
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                generator.OUT = Path(tmp)
+                generator.write_structural_sanity_check(config, dimensions)
+                sanity = json.loads(
+                    (Path(tmp) / "structural_sanity_check.json").read_text(encoding="utf-8")
+                )
+        finally:
+            generator.OUT = original_out
+
+        inputs = sanity["inputs"]
+        self.assertAlmostEqual(inputs["governing_line_load_lb_per_ft"], expected, places=3)
+        self.assertEqual(inputs["governing_line_load_source"], "field_verified_dead_load_long_wall_5ft")
+        self.assertEqual(len(inputs["field_verified_arm_dead_loads"]), 1)
+        self.assertEqual(inputs["development_line_load_proxy_lb_per_ft"], proxy)
+
+        # A small measured dead load must never relax the check below the proxy.
+        through["field_verified_shelf_arm_dead_load_lb"] = 1.0
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                generator.OUT = Path(tmp)
+                generator.write_structural_sanity_check(config, self.dimensions(config))
+                sanity = json.loads(
+                    (Path(tmp) / "structural_sanity_check.json").read_text(encoding="utf-8")
+                )
+        finally:
+            generator.OUT = original_out
+        self.assertEqual(sanity["inputs"]["governing_line_load_lb_per_ft"], proxy)
+        self.assertEqual(sanity["inputs"]["governing_line_load_source"], "development_line_load_proxy")
+
     def test_fascia_opening_includes_top_tile_and_saved_cover_lies_flat(self) -> None:
         expected = (
             generator.inches(self.config["structural"]["deck_thickness_in"])

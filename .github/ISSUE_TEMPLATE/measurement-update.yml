@@ -9,11 +9,13 @@ body:
 
         Story Corner is an untested hybrid prototype. PETG is finish and ornament only; plywood and steel remain the permanent load path. No tested load rating or embedded G-code is provided.
 
+        Fill MEASUREMENT_WORKSHEET.md first; its section H maps every value below to its exact config.json key. Each field here names the key it feeds.
+
   - type: input
     id: short_width
     attributes:
       label: Short-wall limiting clear width
-      description: Smallest rear/center/front-plane width across every shelf elevation that may be used, in inches.
+      description: Smallest rear/center/front-plane width across every shelf elevation that may be used, in inches. Feeds closet.runs[id=short_wall_3ft].field_verified_min_clear_wall_width_in.
       placeholder: "Example: 35.875 in"
     validations:
       required: true
@@ -22,7 +24,7 @@ body:
     id: long_width
     attributes:
       label: Long-wall limiting clear width
-      description: Smallest rear/center/front-plane width across every shelf elevation that may be used, in inches.
+      description: Smallest rear/center/front-plane width across every shelf elevation that may be used, in inches. Feeds closet.runs[id=long_wall_5ft].field_verified_min_clear_wall_width_in.
       placeholder: "Example: 59.750 in"
     validations:
       required: true
@@ -39,7 +41,7 @@ body:
     id: short_back_offset
     attributes:
       label: Short-wall installed shelf-back offset
-      description: Measured finished short wall to its installed plywood back plane, including the real standard, shims, mud, and fastener seating.
+      description: Measured finished short wall to its installed plywood back plane, including the real standard, shims, mud, and fastener seating, in inches. Feeds closet.runs[id=short_wall_3ft].field_verified_installed_shelf_back_offset_in.
       placeholder: "Do not copy the catalog projection"
     validations:
       required: true
@@ -48,8 +50,17 @@ body:
     id: long_back_offset
     attributes:
       label: Long-wall installed shelf-back offset
-      description: Measured finished long wall to its installed plywood back plane, independently of the short-wall value.
+      description: Measured finished long wall to its installed plywood back plane, independently of the short-wall value, in inches. Feeds closet.runs[id=long_wall_5ft].field_verified_installed_shelf_back_offset_in.
       placeholder: "Do not assume both walls match"
+    validations:
+      required: true
+
+  - type: input
+    id: corner_angle
+    attributes:
+      label: Worst included corner angle
+      description: The measured included angle furthest from 90.0 across all candidate elevations, in degrees. Feeds closet.inside_corner.field_verified_angle_deg. R5 stops generation beyond ±0.25 degrees deviation.
+      placeholder: "Example: 89.82"
     validations:
       required: true
 
@@ -57,8 +68,8 @@ body:
     id: corner_geometry
     attributes:
       label: Inside-corner geometry and full-size template
-      description: Record angle at each elevation, wall bow/buildup, and template method. R5 requires deviation within ±0.25 degrees and at least 0.6 mm residual from the 1.6 mm gap.
-      placeholder: "Example: 89.82 degrees; residual calculation attached; maximum bow 1/8 in; hardboard template attached"
+      description: Record the angle at each elevation, wall bow/buildup, and template method. R5 requires deviation within ±0.25 degrees and at least 0.6 mm residual from the 1.6 mm gap.
+      placeholder: "Example: residual calculation attached; maximum bow 1/8 in; hardboard template attached"
     validations:
       required: true
 
@@ -66,15 +77,25 @@ body:
     id: hardware_envelope
     attributes:
       label: Installed bracket and angle envelope
-      description: Record bracket wall-to-tip reach, body width, locks, fasteners, steel-angle fit, and the physical perpendicular dry-fit clearance using the exact hardware.
+      description: Record bracket wall-to-tip reach (feeds structural.field_verified_bracket_reach_in, in inches), body width, locks, fasteners, steel-angle fit, and the physical perpendicular dry-fit clearance using the exact hardware.
     validations:
       required: true
 
   - type: textarea
-    id: supports
+    id: supports_short
     attributes:
-      label: Verified structural support centers
-      description: List each center as an absolute distance from the inside-corner datum. Include stud edges/centers, material, blocking, and the nearest through support used for the groin-vault clearance check.
+      label: Verified support centers, short wall (3 values)
+      description: Absolute distances from the inside-corner datum, in inches, plus stud evidence and material per center. The three numbers feed closet.runs[id=short_wall_3ft].field_verified_support_centers_in.
+      placeholder: "Example: 10.5, 22.0, 33.5 — each on a verified stud center"
+    validations:
+      required: true
+
+  - type: textarea
+    id: supports_long
+    attributes:
+      label: Verified support centers, long wall (4 values)
+      description: Absolute distances from the inside-corner datum, in inches, plus stud evidence and material per center, including the nearest through support used for the groin-vault clearance check. The four numbers feed closet.runs[id=long_wall_5ft].field_verified_support_centers_in.
+      placeholder: "Example: 6.25, 22.25, 38.25, 54.25 — each on a verified stud or blocking"
     validations:
       required: true
 
@@ -105,10 +126,19 @@ body:
   - type: textarea
     id: bins
     attributes:
-      label: Bins, contents, and dead load
-      description: Record outside dimensions, quantities, loaded weights, heaviest individual item, intended distribution, and measured dead load of each completed shelf arm.
+      label: Bins and contents
+      description: Record outside dimensions, quantities, loaded weights, heaviest individual item, and intended distribution.
     validations:
       required: true
+
+  - type: input
+    id: dead_loads
+    attributes:
+      label: Measured shelf-arm dead loads
+      description: Weighed dead load of each completed arm, in pounds — return first, then through. Feed closet.runs[id=short_wall_3ft].field_verified_shelf_arm_dead_load_lb and closet.runs[id=long_wall_5ft].field_verified_shelf_arm_dead_load_lb; entered values raise the serviceability check's governing line load.
+      placeholder: "Example: return 9.4, through 19.8"
+    validations:
+      required: false
 
   - type: textarea
     id: attachment

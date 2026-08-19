@@ -23,7 +23,7 @@ The shortened return still completes the full short-wall surface because the thr
 
 ![Dimensioned fitted corner plan](generated/corner_layout.svg)
 
-The desired support layout limits longitudinal spacing to 16 in and overhang to 5.594 in or less. It is not a drilling map. Every standard must land on verified wood framing or purpose-installed structural blocking. Dry-fit the two nearest perpendicular brackets, locks, fasteners, and both steel angles together before drilling.
+The desired support layout limits longitudinal spacing to 16 in and end overhang to the configured 6 in maximum; the nominal plan works out to 5.594 in on the through arm and 2 in on the return. It is not a drilling map. Every standard must land on verified wood framing or purpose-installed structural blocking. Dry-fit the two nearest perpendicular brackets, locks, fasteners, and both steel angles together before drilling.
 
 ## Permanent load path
 
@@ -69,7 +69,7 @@ The ornament follows a controlled 3–6–9 grammar rather than adding unrelated
 - 113.994 mm short-arm halves and 107.630 mm long-arm halves;
 - 92 mm arch drop, 48 mm rise, 6 mm overlap into the functional fascia, and 168.056 mm total saved height;
 - a 5 mm outer archivolt order, 2.4 mm true shadow reveal, and 4 mm inner order;
-- a 22 mm shared pier with six 1 mm flutes when its two halves meet, plus 9 mm-high / 4 mm-projecting bases and 8 mm-high / 5 mm-projecting capitals;
+- a 22 mm shared pier with three 1 mm flutes per half — six across the assembled pier — plus 9 mm-high / 4 mm-projecting bases and 8 mm-high / 5 mm-projecting capitals;
 - one 3:4:5 spandrel void per half;
 - removable 24 mm-high entablature overlays, each with 9 dentils, 3 triglyph groups, 3 cornice orders, and an 11 mm central patera;
 - an 18 x 24 x 2.4 mm keystone at every bay center, retained to one half while floating over the other;
@@ -86,26 +86,13 @@ The elevation drawing records exact nominal stations, counts, and module dimensi
 
 - All top tiles use a 0.25 mm plan radius and 0.6 mm seams. Four 101.3 mm quadrants finish the through-owned corner square. The return's inner tile floats 1.0 mm over the concealed 1.6 mm plywood gap without receiving load-path credit.
 - The fascia channel opening is nominally 46.256 mm: 18.256 mm plywood + 25.4 mm steel-angle vertical leg + 2.0 mm top tile + 0.6 mm fitting clearance. The upper flange overlays the tile.
-- Each arcade/fascia half is mechanically captured around the real shelf stack by its full-depth upper and lower channel flanges. Assemble the lateral fascia train before fitting the two outer endcaps and the re-entrant corner cover; use one tiny centered dot of qualified removable neutral-cure silicone inside each channel only to prevent creep and rattle. Do not drill or notch the continuous steel angle for cosmetic retention.
-- Each entablature overlay uses one tiny centered qualified removable silicone dot on its own fascia half. Each keystone uses two pinhead-size dots on one arch half and floats over the other. The corner pilaster uses two tiny dots inside one upper leg while its perpendicular leg floats.
-- A top tile uses one small centered dot of qualified removable neutral-cure silicone on sealed plywood, with every perimeter and seam free to move.
-- Endcaps use two tiny qualified removable silicone dots inside the final fascia channel, followed by a hand pull-check.
-- The groin vault uses its two generated clearance slots and short nonstructural pan-head screws into the underside of the through-owned plywood only after a depth-stop and bracket-clearance check; it never bridges the joint.
+- Every finish piece attaches only with qualified removable products — silicone dots, captured channels, or short nonstructural screws through generated slots. The complete attachment sequence, dot counts, and installed z-stack live in [ASSEMBLY.md](ASSEMBLY.md); the attachment policy is in [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 8. Never drill or notch the continuous steel angle for cosmetic retention.
 
 Attachment prevents loose trim, rattle, and falling only. It does not carry stored weight or turn the printed anti-fall features into rated cargo restraints.
 
 ## Split rear-curb system
 
-The rear curb sits on the PETG tile/plywood stack and never crosses the structural joint:
-
-- deck top datum: `z = 0`;
-- top tile: `z = 0–2.0 mm`;
-- curb base: `z = 2.0–4.4 mm`;
-- curb upright top: `z = 17.0 mm`.
-
-The long-wall straight curb starts at station 1.892 in after the 30 mm fitted replacement. A separate 172.6 mm corner-side curb stays on the through-owned corner square and stops at the through front plane. The return curb starts on its own plywood at 8.750 in, beyond the 1.6 mm wood gap. Nominal rear-curb ends are therefore arm-specific: 126.481 mm on the through arm and 115.581 mm on the return.
-
-Each straight curb piece has one generated 8 x 4.4 mm clearance slot; the corner replacement has one per arm. Field-drill the matching top tile only after final layout and verify that the selected short pan-head screw cannot emerge from the plywood underside. Do not clamp PETG rigidly, bridge a seam, or put a fastener through the wood joint.
+The rear curb sits on the PETG tile/plywood stack — never on bare plywood and never across the structural joint. The long-wall straight curb starts at station 1.892 in after the 30 mm fitted replacement; a separate 172.6 mm corner-side curb stays on the through-owned corner square; the return curb starts on its own plywood at 8.750 in, beyond the 1.6 mm wood gap. Rear-curb ends are arm-specific: 126.481 mm through, 115.581 mm return. The installed z-stack and the slot/drill/screw procedure are in [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 6 and [ASSEMBLY.md](ASSEMBLY.md) Stage 4.
 
 ## Safe customization
 
@@ -122,8 +109,9 @@ The structural plywood and steel angle do not use printed snap joints. Modularit
 1. Read [PRINT_ME_FIRST.md](PRINT_ME_FIRST.md) before opening a production file.
 2. Read [SAFETY.md](SAFETY.md) before cutting, drilling, attaching trim, or loading.
 3. Review [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) for formulas, failure modes, and verification limits.
-4. Enter field measurements in [config.json](config.json), then rebuild every generated artifact.
-5. Open [the full model-only print set](generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf) only after confirming the printer, nozzle, plate, PETG product, and attachment coupons.
+4. Fill in [MEASUREMENT_WORKSHEET.md](MEASUREMENT_WORKSHEET.md), transcribe its section H into [config.json](config.json), then rebuild every generated artifact and verify the `*_source` fields per worksheet section I.
+5. Follow [ASSEMBLY.md](ASSEMBLY.md) for the build sequence, from structural install through load acceptance and service.
+6. Open [the full model-only print set](generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf) only after confirming the printer, nozzle, plate, PETG product, and attachment coupons.
 
 The full 3MF contains **101 exact-quantity catalog objects**: 98 installed finish pieces plus three print-first test objects. It is not arranged into real printer plates and contains no machine instructions. The nominal geometry estimate is **2.45 kg packaged PETG** and **2.42 kg installed PETG**, excluding purge, supports, failures, spares, fasteners, plywood, and steel.
 
@@ -141,7 +129,7 @@ Before this can become an installation-ready revision, record:
 8. Intended evenly distributed contents, point loads, measured shelf-arm dead load, common shelf-top elevation, and number of levels sharing the standards.
 9. The exact removable silicone products, captured-channel fit, rear-curb screw stack, groin-vault screws, and removal method, qualified on printed PETG, sealed plywood, and the actual coated steel where each product is used.
 
-In `config.json`, fill each run's `field_verified_min_clear_wall_width_in`, `field_verified_installed_shelf_back_offset_in`, `field_verified_support_centers_in`, and `field_verified_shelf_arm_dead_load_lb`; also fill the corner's `field_verified_angle_deg` and structural `field_verified_bracket_reach_in`. Empty values keep the output explicitly nominal. Support centers are absolute distances from the intersection of the finished wall planes, not from a board end.
+[MEASUREMENT_WORKSHEET.md](MEASUREMENT_WORKSHEET.md) maps each of these measurements to its exact `config.json` key, with units and a worked example. Fill each run's `field_verified_min_clear_wall_width_in`, `field_verified_installed_shelf_back_offset_in`, `field_verified_support_centers_in`, and `field_verified_shelf_arm_dead_load_lb` (a measured dead load raises the serviceability check's governing line load); also fill the corner's `field_verified_angle_deg` and structural `field_verified_bracket_reach_in`. Empty values keep the output explicitly nominal. Support centers are absolute distances from the intersection of the finished wall planes, not from a board end.
 
 ## Generated deliverables
 
