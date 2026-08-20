@@ -28,15 +28,15 @@ Never send or reuse G-code prepared for another printer, nozzle, plate, filament
 
 ## First-print and fit sequence
 
-1. Print [`MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf). Reject lifted edges, dragged strands, separated first-layer lines, delamination, or more than 0.5 mm cooled corner lift.
-2. Obtain the actual 23/32 in plywood and 1 x 1 x 1/8 in steel angle. Print [`MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf) and fit it to that stack **with a printed 2.4 mm top-tile sample in place**. The nominal 46.656 mm opening must slide without splitting, binding, lifting the tile, or excessive rattle.
-3. Print [`MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf) face-up. Approve the 2.4 mm archivolt shadow reveal, 3:4:5 void, flutes, pier base/capital relief, nine dentils, three triglyph groups, three cornice orders, central patera, bridge quality, edge finish, and removability before printing ornate production parts.
+1. Print one [`MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf`](generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf). This is an actual installed part; the long wall uses 14. Reject lifted edges, dragged strands, separated first-layer lines, delamination, or more than 0.5 mm cooled corner lift.
+2. After that tile passes, print the remaining 13 long-wall center tiles. Universal rear-curb centers may follow; the long wall uses eight.
+3. Before fitted fascia or corner production, print [`MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf).
+4. Obtain the actual 23/32 in plywood and 1 x 1 x 1/8 in steel angle. Print [`MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf) and fit it to that stack **with a printed 2.4 mm top-tile sample in place**. The nominal 46.656 mm opening must slide without splitting, binding, lifting the tile, or excessive rattle.
+5. Print [`MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf) face-up. Approve the 2.4 mm archivolt shadow reveal, 3:4:5 void, flutes, pier base/capital relief, nine dentils, three triglyph groups, three cornice orders, central patera, bridge quality, edge finish, and removability before printing ornate production parts.
    Compare it with the [nominal Palatine elevation](generated/palatine_elevation.svg), whose stations, counts, and dimensions are exact while its displayed arch curves are schematic. It is not a structural drawing or proof of printer fit.
-4. Print [`MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf), compare it with the real corner and a full-size cardboard or hardboard template, and confirm the ±0.25° gate and at least 0.6 mm residual joint clearance.
-5. Measure the shelf-back offset separately on both walls. Do not substitute the catalog standard projection for either installed measurement.
-6. Coupon-test the selected neutral-cure silicone on printed PETG, sealed plywood, and coated steel; test curb and groin-vault screws in representative plywood with safe underside clearance.
-7. If any gauge, coupon, or attachment test fails, update the configuration or process, rebuild, and repeat. Never selectively scale a fitted part.
-8. Print and inspect one long-wall fascia half before the remaining long-wall production queue.
+6. Print [`MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf), compare it with the real corner and a full-size cardboard or hardboard template, and confirm the ±0.25° gate and at least 0.6 mm residual joint clearance.
+7. Measure the shelf-back offset separately on both walls. Do not substitute the catalog standard projection for either installed measurement.
+8. Coupon-test attachments, rebuild fitted pieces, then inspect one long-wall fascia half before its remaining production queue.
 9. Dry-assemble PETG only on the unloaded, independently supported plywood-and-steel structure and verify every seam, capture, floating joint, cap, curb, and soffit clearance.
 10. Do not print return-arm production quantities until its field measurements are entered and regenerated.
 

@@ -55,6 +55,35 @@ before mounting or loading.
 
 The 36 in return arm remains nominal. Do not cut, mount, or bulk-print its
 production parts until that wall and its framing have been measured.
+
+READY NOW: print `models/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf`.
+It is an actual installed part, not a coupon. The measured long wall uses 14
+of these universal center tiles. Inspect the first one before repeating it.
+""",
+    )
+    write(
+        DESTINATION / "START_PRINTING_NOW.md",
+        """
+# Start printing an actual project part now
+
+Open `models/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf` in Bambu Studio.
+This is a 151.8 x 101.3 x 2.4 mm installed top-finish tile. It is not a test
+coupon, and the long wall requires 14 identical copies.
+
+Use the A1 Mini 0.4 nozzle, Textured PEI Plate, SUNLU clear PETG, the supplied
+R12 strength profile, saved orientation, and 100% scale. Confirm six walls,
+five top/bottom shells, 60% gyroid, supports off, 3 mm outer brim, 240 C nozzle,
+70 C bed, 20 mm/s first layer, and calibrated flow.
+
+Watch the first layer before leaving. Continue only if its lines are continuous
+and fully bonded with no dragged strand or lifted corner. Let the tile cool on
+the plate before removal. A passing tile counts toward the final installation;
+after it passes, print the remaining 13 long-wall center tiles as separate jobs
+or conservative batches.
+
+Do not print fitted fascia, parametric ends, or corner pieces yet. Those remain
+on hold until installed shelf-back offsets and the full-size corner geometry are
+verified. Do not cut or mount the shelf until end blocking is installed.
 """,
     )
     write(
@@ -83,19 +112,18 @@ Never use the superseded 8 mm brim, 90-100 C bed guidance, or forced 105% first-
     write(
         DESTINATION / "PRINT_ORDER.md",
         """
-# R12 print order
+# R12 production-first print order
 
-1. `MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf`
-2. `MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf`
-3. `MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf`
-4. `MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf`
-5. `MODEL_ONLY_PETG_Palatine_ArcadeFascia_Half_left_long_wall_5ft.3mf`
-6. Remaining long-wall production parts after the first fascia passes
-7. Return-arm production parts only after return-wall measurements and regeneration
+1. Print one `MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf`; it is an installed part.
+2. After it passes first-layer and cooled-flatness inspection, print the remaining 13 long-wall center tiles.
+3. Universal rear-curb centers may follow; the long wall uses eight.
+4. Before any fitted fascia or corner piece, print the adhesion-corner, fascia-fit, Palatine-detail, and corner-gauge qualifications.
+5. Regenerate fitted pieces after both installed shelf-back offsets and full-size corner geometry are verified.
+6. Return-arm production parts remain on hold until its measurements are entered.
 
-Coupon acceptance: continuous first-layer lines, no dragged strand, no lifted
-corner, no delamination, and no more than 0.5 mm cooled corner lift on a flat
-reference surface. Stop the queue on any failure.
+A production tile passes only with continuous bonded first-layer lines, no
+dragged strand, no lifted corner, no delamination, and no more than 0.5 mm
+cooled corner lift on a flat reference surface.
 """,
     )
     print(f"Packaged {len(models)} R12 model files in {DESTINATION}")

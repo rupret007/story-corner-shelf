@@ -10,6 +10,8 @@ The long wall is field measured at 61.5 in. Its three measured studs resolve to 
 
 The authoritative print handoff is [`generated/final_release_r12/README_FIRST.md`](generated/final_release_r12/README_FIRST.md). The previous `generated/ready_to_print_now/` folder records the failed R5 corner attempt and is superseded.
 
+To begin with a real installed component, follow [`generated/final_release_r12/START_PRINTING_NOW.md`](generated/final_release_r12/START_PRINTING_NOW.md) and print one universal top center tile. The measured long wall needs 14. Fitted fascia, ends, and corner components remain gated by installed offsets and full-size corner verification.
+
 > **Prototype status:** the meshes and model-only 3MF packages are generated design-development artifacts. The wall lengths, separate installed offset on each wall, corner angle, wall bow, framing map, hardware envelope, 8 in depth, attachment stack, printer, nozzle, build plate, PETG product, and completed assembly remain unverified. No tested load rating is claimed. No embedded G-code is included.
 
 ![Artist rendering of the Story Corner Triadic Palatine Order](generated/artist_rendering_triadic_palatine_order.png)

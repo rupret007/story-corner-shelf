@@ -3,6 +3,8 @@
   "name": "0.20mm Story Corner R12 Durable Strength @BBL A1M",
   "inherits": "0.20mm Strength @BBL A1M",
   "from": "User",
+  "instantiation": "true",
+  "compatible_printers": ["Bambu Lab A1 mini 0.4 nozzle"],
   "layer_height": "0.2",
   "wall_loops": "6",
   "top_shell_layers": "5",

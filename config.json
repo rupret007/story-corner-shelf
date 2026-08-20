@@ -16,7 +16,7 @@
     "minimum_model_build_envelope_mm": [180, 180, 180]
   },
   "print_profile": {
-    "name": "0.20mm Story Corner R12 Durable SUNLU PETG @BBL A1M",
+    "name": "0.20mm Story Corner R12 Durable Strength @BBL A1M",
     "plate": "Textured PEI Plate",
     "layer_height_mm": 0.2,
     "wall_loops": 6,
