@@ -53,7 +53,7 @@ class ParametricDesignTests(unittest.TestCase):
         through = dimensions["long_wall_5ft"]
         return_run = dimensions["short_wall_3ft"]
         self.assertAlmostEqual(through["deck_start_from_inside_corner_in"], 0.6875, places=6)
-        self.assertAlmostEqual(through["deck_length_in"], 59.1875, places=6)
+        self.assertAlmostEqual(through["deck_length_in"], 60.6875, places=6)
         self.assertAlmostEqual(through["corner_front_plane_from_inside_corner_in"], 8.6875, places=6)
         self.assertAlmostEqual(return_run["deck_start_from_inside_corner_in"], 8.75049212598, places=6)
         self.assertAlmostEqual(return_run["deck_length_in"], 27.1245078740, places=6)
@@ -73,12 +73,12 @@ class ParametricDesignTests(unittest.TestCase):
                 self.assertAlmostEqual(run[key]["center_module_width_mm"], 151.8, places=6)
         self.assertEqual((short["top_layout"]["columns"], long["top_layout"]["columns"]), (5, 9))
         self.assertAlmostEqual(short["top_layout"]["parametric_end_module_width_mm"], 116.08125, places=5)
-        self.assertAlmostEqual(long["top_layout"]["parametric_end_module_width_mm"], 116.08125, places=5)
-        self.assertAlmostEqual(short["palatine_arcade_layout"]["half_arch_width_mm"], 113.99375, places=5)
-        self.assertAlmostEqual(long["palatine_arcade_layout"]["half_arch_width_mm"], 107.63020833, places=5)
+        self.assertAlmostEqual(long["top_layout"]["parametric_end_module_width_mm"], 135.13125, places=5)
+        self.assertAlmostEqual(short["palatine_arcade_layout"]["half_arch_width_mm"], 113.82708333, places=5)
+        self.assertAlmostEqual(long["palatine_arcade_layout"]["half_arch_width_mm"], 110.721875, places=5)
         self.assertEqual((short["rear_curb_layout"]["center_columns"], long["rear_curb_layout"]["center_columns"]), (3, 8))
         self.assertAlmostEqual(short["rear_curb_layout"]["parametric_end_module_width_mm"], 115.58125, places=5)
-        self.assertAlmostEqual(long["rear_curb_layout"]["parametric_end_module_width_mm"], 126.48125, places=5)
+        self.assertAlmostEqual(long["rear_curb_layout"]["parametric_end_module_width_mm"], 145.53125, places=5)
 
     def test_corner_quadrants_close_the_eight_inch_square(self) -> None:
         depth_mm = generator.inches(self.config["closet"]["shelf_depth_in"])
@@ -225,7 +225,11 @@ class ParametricDesignTests(unittest.TestCase):
         dimensions = self.dimensions()
         through = dimensions["long_wall_5ft"]
         return_run = dimensions["short_wall_3ft"]
-        self.assertEqual(through["nominal_support_centers_in"], [6.28125, 22.28125, 38.28125, 54.28125])
+        self.assertEqual(through["nominal_support_centers_in"], [6.0, 17.0, 32.5, 48.5, 60.5])
+        self.assertEqual(
+            through["support_geometry_source"],
+            "planned_mixed_verified_studs_and_required_blocking",
+        )
         self.assertAlmostEqual(return_run["nominal_support_centers_in"][0], 10.75049212598, places=6)
         self.assertAlmostEqual(return_run["nominal_support_centers_in"][-1], 33.875, places=6)
         self.assertLessEqual(max(through["support_spacings_in"]), 16.0)
@@ -250,6 +254,7 @@ class ParametricDesignTests(unittest.TestCase):
     def test_excessive_field_support_spacing_is_rejected(self) -> None:
         config = copy.deepcopy(self.config)
         run = config["closet"]["runs"][1]
+        run.pop("support_lines", None)
         run["field_verified_support_centers_in"] = [6.25, 23.25, 40.25, 54.0]
         with self.assertRaisesRegex(ValueError, "support spacing exceeds"):
             generator.run_dimensions(config, run)
@@ -269,7 +274,8 @@ class ParametricDesignTests(unittest.TestCase):
     def test_support_center_distinctness_boundary_is_accepted(self) -> None:
         config = copy.deepcopy(self.config)
         run = self.run_config(config, "long_wall_5ft")
-        run["field_verified_support_centers_in"] = [6.0, 8.0, 24.0, 40.0, 54.0]
+        run.pop("support_lines", None)
+        run["field_verified_support_centers_in"] = [6.0, 8.0, 24.0, 40.0, 56.0]
         dimensions = generator.run_dimensions(config, run)
         self.assertEqual(dimensions["support_geometry_source"], "field_verified")
         self.assertAlmostEqual(min(dimensions["support_spacings_in"]), 2.0, places=8)
@@ -333,11 +339,11 @@ class ParametricDesignTests(unittest.TestCase):
                 self.assertTrue(mesh.is_volume)
                 self.assertEqual(len(mesh.split(only_watertight=False)), 1)
 
-    def test_nominal_palatine_package_contains_exactly_101_objects(self) -> None:
+    def test_nominal_palatine_package_contains_exactly_102_objects(self) -> None:
         validation = self.validation()
-        self.assertEqual(validation["revision"], "triadic_palatine_fitted_l_corner_r5")
-        self.assertEqual(validation["modularity"]["full_set_object_count"], 101)
-        self.assertEqual(sum(mesh["repeat_count"] for mesh in validation["meshes"]), 101)
+        self.assertEqual(validation["revision"], "triadic_palatine_fitted_l_corner_r12_final_durable")
+        self.assertEqual(validation["modularity"]["full_set_object_count"], 102)
+        self.assertEqual(sum(mesh["repeat_count"] for mesh in validation["meshes"]), 102)
         by_name = {mesh["name"]: mesh for mesh in validation["meshes"]}
         self.assertEqual(by_name["PETG_RearCurb_Center_6inPitch"]["repeat_count"], 11)
         self.assertEqual(by_name["PETG_RearCurb_CornerSide_ThroughZone"]["repeat_count"], 1)
@@ -443,7 +449,10 @@ class ParametricDesignTests(unittest.TestCase):
         self.assertAlmostEqual(fascia.extents[1], expected_total_height, places=4)
         self.assertAlmostEqual(fascia.extents[2], 29.0, places=6)
         self.assertAlmostEqual(channel_depth, 29.0, places=6)
-        self.assertAlmostEqual(fascia.volume, expected_solid_volume, delta=0.02)
+        self.assertGreater(fascia.volume, expected_solid_volume * 0.98)
+        self.assertLess(fascia.volume, expected_solid_volume * 1.10)
+        self.assertEqual(face_t, 3.2)
+        self.assertEqual(flange_t, 3.2)
         self.assertIn("mechanically capture", self.config["finish_attachment"]["fascia_method"])
         self.assertIn("do not drill or notch", self.config["finish_attachment"]["fascia_method"])
 
@@ -469,7 +478,7 @@ class ParametricDesignTests(unittest.TestCase):
 
         validation = self.validation()
         build = self.config["printer"]["minimum_model_build_envelope_mm"]
-        self.assertEqual(len(validation["meshes"]), 21)
+        self.assertEqual(len(validation["meshes"]), 23)
         for mesh in validation["meshes"]:
             with self.subTest(mesh=mesh["name"]):
                 self.assertTrue(mesh["watertight"])

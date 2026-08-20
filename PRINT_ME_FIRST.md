@@ -1,14 +1,16 @@
-# Print me first — Triadic Palatine Order r5
+# Print me first — Triadic Palatine Order R12 final durable
 
 > **Frozen earlier revisions:** the R6–R11 trees under `development/` are historical records governed by their own gate documents, including the R11 print hold, single-use permit protocol, and **0 kg / 0 lb** rating. Nothing in those trees authorizes printing, drilling, installation, or load, and nothing in this r5 document authorizes an R11 job. See [development/r11/README.md](development/r11/README.md), the [R11 print hold](development/r11/PRINT_FIRST.md), the [Gate A-left v2 control overlay](development/r11_print_v2/PRINT_GATE_A_LEFT.md), and the [append-only physical record](development/r11_physical/PHYSICAL_RECORD.md).
 
 The files in `generated/model_only_3mf/` contain geometry only. They deliberately contain **no embedded G-code** because the printer, nozzle, build plate, Bambu Studio version, and exact PETG product remain unconfirmed.
 
-All generated printable components are black PETG finish, ornament, modest item-retention, or fit-check parts. The plywood, steel angles, brackets, standards, locks, alignment hardware, and wall fasteners are nonprinted structural components and are not contained in any 3MF.
+All generated printable components are SUNLU clear PETG finish, ornament, modest item-retention, or fit-check parts. The plywood, steel angles, brackets, standards, locks, blocking, alignment hardware, and wall fasteners are nonprinted structural components and are not contained in any 3MF.
+
+Use only [`generated/final_release_r12/`](generated/final_release_r12/). Its locked A1 Mini profile uses 0.20 mm layers, six walls, five top/bottom shells, 60% gyroid, supports off, a 3 mm outer brim, 240 C nozzle, 70 C Textured PEI bed, 20 mm/s first layer, calibrated flow, and no fan for the first three layers. The old 8 mm brim, 90–100 C bed, and forced 105% flow instructions are superseded.
 
 ## Do not print the full set yet
 
-[`MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf`](generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf) contains **101 exact-quantity objects** on a virtual catalog canvas: 98 installed pieces and three print-first test objects. It is not a real plate layout. Its nominal geometry estimate is 2.45 kg packaged PETG and 2.42 kg installed PETG, excluding slicer-dependent purge, supports, failures, spares, fasteners, plywood, and steel.
+[`MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf`](generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf) contains **102 exact-quantity objects** on a virtual catalog canvas: 98 installed pieces and four print-first qualification objects. It is not a real plate layout. Its R12 geometry estimate is 3.12 kg packaged PETG and 3.06 kg installed PETG, excluding slicer-dependent purge, supports, failures, spares, fasteners, plywood, and steel.
 
 Before production, confirm:
 
@@ -16,28 +18,27 @@ Before production, confirm:
 - the included corner angle and a full-size corner template;
 - the installed shelf-back offset separately on the long and short walls;
 - the actual perpendicular-bracket envelope and the groin-vault clearance after support locations are verified;
-- the 8 in depth and 168.056 mm Palatine fascia envelope against doors, trim, outlets, people, and bins;
+- the 8 in depth and 170.056 mm Palatine fascia envelope against doors, trim, outlets, people, and bins;
 - verified framing or purpose-installed blocking at every support line;
 - exact printer model, nozzle diameter and material, build plate, and Bambu Studio version;
-- black PETG manufacturer/product line, an appropriate preset, and dry filament;
+- SUNLU clear PETG lot, the supplied R12 preset, and dry filament;
 - the exact removable silicone products, captured fascia-channel fit, rear-curb and groin-vault screws, removal method, and underside clearance below every proposed finish fastener.
 
 Never send or reuse G-code prepared for another printer, nozzle, plate, filament, or design revision.
 
 ## First-print and fit sequence
 
-1. Print [`MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf) with the confirmed setup.
-2. Compare it with the real corner and a full-size cardboard or hardboard template. The configured square-deck gate is **±0.25°**, and the remaining nominal plywood-joint clearance must be at least **0.6 mm**. The full-size template is mandatory even when the small gauge fits.
-3. Measure the shelf-back offset separately on both walls. Do not substitute the catalog standard projection for either installed measurement.
-4. Obtain the actual 23/32 in plywood and 1 x 1 x 1/8 in steel angle. Measure the completed front stack.
-5. Print [`MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf) and fit it to a real plywood/angle scrap **with a printed 2.0 mm top-tile sample in place**. The nominal 46.256 mm opening includes plywood, the 25.4 mm angle leg, the tile, and 0.6 mm clearance. It must slide without splitting, binding, lifting the tile, or excessive rattle.
-6. Print [`MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf) face-up. Approve the 2.4 mm archivolt shadow reveal, 3:4:5 void, flutes, pier base/capital relief, nine dentils, three triglyph groups, three cornice orders, central patera, bridge quality, edge finish, and removability before printing ornate production parts.
+1. Print [`MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf). Reject lifted edges, dragged strands, separated first-layer lines, delamination, or more than 0.5 mm cooled corner lift.
+2. Obtain the actual 23/32 in plywood and 1 x 1 x 1/8 in steel angle. Print [`MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf) and fit it to that stack **with a printed 2.4 mm top-tile sample in place**. The nominal 46.656 mm opening must slide without splitting, binding, lifting the tile, or excessive rattle.
+3. Print [`MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf) face-up. Approve the 2.4 mm archivolt shadow reveal, 3:4:5 void, flutes, pier base/capital relief, nine dentils, three triglyph groups, three cornice orders, central patera, bridge quality, edge finish, and removability before printing ornate production parts.
    Compare it with the [nominal Palatine elevation](generated/palatine_elevation.svg), whose stations, counts, and dimensions are exact while its displayed arch curves are schematic. It is not a structural drawing or proof of printer fit.
-7. Coupon-test the selected neutral-cure silicone on printed PETG, sealed plywood, and the actual coated steel wherever it will touch. Verify captured-channel fit on the complete fascia stack, and test the selected curb and groin-vault screws in representative plywood with safe underside clearance. Do not drill or notch the continuous steel angle for fascia retention. Attachment prevents loose trim only; it receives no shelf-load credit.
-8. If any gauge, coupon, or attachment test fails, update the measured configuration or clearance, rebuild everything, and repeat. Do not selectively scale a fitted part in the slicer.
-9. Print and dry-fit one left and one right arcade/fascia half for each arm, one matching entablature overlay, one keystone, one top center, one top end, one corner quadrant, both arm-specific rear-curb ends, the 172.6 mm corner-side curb, the 30 mm corner replacement, the full-height corner pilaster, one endcap, and the groin-vault soffit.
-10. Dry-assemble the PETG only on scrap or on the **unloaded, independently supported** plywood-and-steel L. Verify every 0.6 mm seam, the 1.0 mm return-tile overhang, full upper/lower fascia capture without binding, the required lateral assembly order, no rear-curb overlap, a floating keystone/pilaster leg, flush outer caps, and at least 10 mm groin-vault clearance from the nearest verified bracket plane.
-11. Only after all checks pass should the remaining production quantities be arranged and sliced.
+4. Print [`MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf), compare it with the real corner and a full-size cardboard or hardboard template, and confirm the ±0.25° gate and at least 0.6 mm residual joint clearance.
+5. Measure the shelf-back offset separately on both walls. Do not substitute the catalog standard projection for either installed measurement.
+6. Coupon-test the selected neutral-cure silicone on printed PETG, sealed plywood, and coated steel; test curb and groin-vault screws in representative plywood with safe underside clearance.
+7. If any gauge, coupon, or attachment test fails, update the configuration or process, rebuild, and repeat. Never selectively scale a fitted part.
+8. Print and inspect one long-wall fascia half before the remaining long-wall production queue.
+9. Dry-assemble PETG only on the unloaded, independently supported plywood-and-steel structure and verify every seam, capture, floating joint, cap, curb, and soffit clearance.
+10. Do not print return-arm production quantities until its field measurements are entered and regenerated.
 
 ## Current nominal production counts
 
@@ -57,22 +58,22 @@ Never send or reuse G-code prepared for another printer, nozzle, plate, filament
 | Palatine re-entrant corner pilaster | — | — | 1 | 1 |
 | Palatine groin-vault corner soffit | — | 1 | — | 1 |
 | Rear-curb fitted corner replacement | — | — | 1 | 1 |
-| Corner gauge + fascia coupon + Palatine coupon | — | — | 3 | 3 |
-| **Total** |  |  |  | **101** |
+| Adhesion corner + corner gauge + fascia + Palatine coupons | — | — | 4 | 4 |
+| **Total** |  |  |  | **102** |
 
-The installed set is 98 objects; the gauge and two coupons are not installed.
+The installed set is 98 objects; the gauge and three coupons are not installed.
 
 ## Nominal module facts
 
-- Top centers: 151.8 x 101.3 x 2.0 mm; shared top ends: 116.081 x 101.3 x 2.0 mm.
-- Corner quadrants: four identical 101.3 x 101.3 x 2.0 mm parts.
-- Short-arm arcade halves: 113.994 x 168.056 x 29.0 mm, three left and three right, resolving three bays.
-- Long-arm arcade halves: 107.630 x 168.056 x 29.0 mm, six left and six right, resolving six bays.
+- Top centers: 151.8 x 101.3 x 2.4 mm; arm-specific ends regenerate from measured length.
+- Corner quadrants: four identical 101.3 x 101.3 x 2.4 mm parts.
+- Short-arm arcade halves: 113.827 x 170.056 x 29.0 mm, three left and three right, resolving three bays; nominal/on hold.
+- Long-arm arcade halves: 110.722 x 170.056 x 29.0 mm, six left and six right, resolving six bays.
 - Entablature overlays: one per arcade half, 24 mm high and 3.2 mm overall relief thickness.
 - Keystones: nine at 18 x 24 x 2.4 mm; retain each to one half and float it across the other.
 - Through rear-curb ends: 126.481 mm; return rear-curb ends: 115.581 mm.
 - Through-owned corner-side rear curb: 172.6 mm. It stops before the 1.6 mm plywood joint.
-- Full-height endcaps and corner pilaster: 168.056 mm tall.
+- Full-height endcaps and corner pilaster: 170.056 mm tall.
 - Groin-vault soffit: 42 mm square and nominally 18.519 mm from the nearest support plane; the configured minimum is 10 mm.
 
 ## Attachment and installed stack
@@ -86,12 +87,12 @@ seam or the plywood joint, or clamp PETG rigidly.
 
 ## Saved-orientation rule
 
-All r5 meshes fit the declared 180 x 180 x 180 mm minimum model envelope in their generated orientation. The largest arcade halves are 168.056 mm tall, leaving little room for arbitrary rotation or an oversized brim on a 180 mm plate. Use the saved orientation as the starting point, print the Palatine overlay/detail faces up, and re-run arrangement checks on the confirmed printer. The arcade halves are saved front-face-down so their channel flanges grow upward and need no support material. No supports, layer heights, temperatures, speeds, or machine profiles are embedded in the model-only 3MFs.
+All R12 meshes fit the declared 180 x 180 x 180 mm model envelope in their generated orientation. The largest arcade halves are 170.056 mm tall. Preserve saved orientation and use the supplied 3 mm brim; a larger brim does not fit the A1 Mini plate safely. Arcade halves are saved front-face-down so their channel flanges grow upward without supports. Model-only 3MFs contain no G-code.
 
 ## Plate-fit and batching cautions for a 180 mm printer
 
-- The 168.056 mm plate footprint of each arcade half, endcap, and corner pilaster — and the 172.6 mm corner-side curb — leaves roughly 6 mm of plate margin per side. Keep any brim to about 5 mm or less on these parts, or place the long curbs diagonally; confirm the slicer's exclusion zones before slicing.
-- The 2.0 mm top tiles are large thin PETG flats (up to 151.8 x 101.3 mm) and are the most warp-prone parts in the set. Use a clean, adhesion-checked plate, avoid drafts, and plan a small number of spare tiles — 20 centers are needed and a single lifted corner scraps the tile.
+- The 170.056 mm fascia footprint leaves less than 5 mm per side before brim. Center it, use exactly the 3 mm brim, and confirm exclusion zones in Preview.
+- The 2.4 mm top tiles are large PETG flats and remain warp-sensitive. Use a detergent-washed, fingerprint-free plate, avoid drafts, and reject any lifted corner.
 - The full set is roughly a hundred objects across many plates on a 180 mm printer. Batch like parts together (tiles with tiles, halves one or two per plate), print one part from each family for the step-9 dry fit before committing to production quantities, and track finished counts against the production table above.
 
 ## Production boundary

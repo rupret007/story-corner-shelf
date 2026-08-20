@@ -1,4 +1,12 @@
-# Measurement worksheet — Triadic Palatine Order r5
+# Measurement worksheet — Triadic Palatine Order R12 final durable
+
+## Recorded long-wall measurements
+
+- Clear finished-wall length: 61.5 in.
+- Studs reported from the right/outer end: 13.0, 29.0, and 44.5 in.
+- Converted from the inside-corner datum: 48.5, 32.5, and 17.0 in.
+- Planned end supports: 6.0 and 60.5 in, both requiring purpose-installed structural blocking before mounting.
+- The 36 in return-wall values below remain nominal and on hold.
 
 Print or copy this file, fill it in the closet, then transcribe section H
 into [config.json](config.json) and rebuild. Empty config values keep every
@@ -66,8 +74,8 @@ stay ≥ 0.6 mm. If the worst measured angle exceeds the gate, stop — see
 
 ## D. Framing map (one row per support line)
 
-Desired nominal centers (from [generated/support_plan.csv](generated/support_plan.csv)):
-return 10.750, 22.313, 33.875 in; through 6.281, 22.281, 38.281, 54.281 in.
+Current centers (from [generated/support_plan.csv](generated/support_plan.csv)):
+return nominal 10.750, 22.313, 33.875 in; long wall planned 6.000, 17.000, 32.500, 48.500, 60.500 in.
 Field centers must land on verified wood framing or installed blocking, stay
 ≤ 16 in apart, ≥ 2 in distinct, and leave ≤ 6 in end overhang.
 
@@ -76,10 +84,11 @@ Field centers must land on verified wood framing or installed blocking, stay
 | return | 1 | | | | |
 | return | 2 | | | | |
 | return | 3 | | | | |
-| through | 1 | | | | |
-| through | 2 | | | | |
-| through | 3 | | | | |
-| through | 4 | | | | |
+| through | 1 | 6.000 | blocking required | purpose-installed structural blocking | pending |
+| through | 2 | 17.000 | measured stud | wood stud | pending utility check |
+| through | 3 | 32.500 | measured stud | wood stud | pending utility check |
+| through | 4 | 48.500 | measured stud | wood stud | pending utility check |
+| through | 5 | 60.500 | blocking required | purpose-installed structural blocking | pending |
 
 If a nominal station misses framing: [ ] blocking will be installed, or
 [ ] the centers above will be entered so the plan regenerates around them.
@@ -116,7 +125,7 @@ catalog projection (nominal fallback is 0.6875 in).
 | Nozzle diameter and material | |
 | Build plate type and condition | |
 | Bambu Studio version | |
-| Black PETG brand, product line, lot | |
+| SUNLU clear PETG lot | |
 | Spool opened date / storage RH / drying method | |
 
 ## H. Transcribe into config.json
@@ -131,7 +140,8 @@ array holds the 3 ft wall at `id: "short_wall_3ft"` and the 5 ft wall at
 | B minimum, through wall | `closet.runs[id=long_wall_5ft].field_verified_min_clear_wall_width_in` |
 | C worst included angle | `closet.inside_corner.field_verified_angle_deg` |
 | D verified centers, return (3 numbers) | `closet.runs[id=short_wall_3ft].field_verified_support_centers_in` |
-| D verified centers, through (4 numbers) | `closet.runs[id=long_wall_5ft].field_verified_support_centers_in` |
+| D measured stud centers, through (3 numbers) | `closet.runs[id=long_wall_5ft].field_verified_support_centers_in` |
+| D complete planned support records | `closet.runs[id=long_wall_5ft].support_lines` |
 | E offset, return wall | `closet.runs[id=short_wall_3ft].field_verified_installed_shelf_back_offset_in` |
 | E offset, through wall | `closet.runs[id=long_wall_5ft].field_verified_installed_shelf_back_offset_in` |
 | E bracket reach | `structural.field_verified_bracket_reach_in` |

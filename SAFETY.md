@@ -1,6 +1,8 @@
 # Safety boundary
 
-Story Corner r5 is an untested DIY prototype—not a stamped structural design, code approval, certified installation, or rated storage product. The current 55 lb return-arm and 120 lb through-arm evenly distributed values are system-selection targets only. They are not published safe-working loads.
+Story Corner R12 is an untested DIY prototype—not a stamped structural design, code approval, certified installation, or rated storage product. The current 55 lb return-arm and 120 lb through-arm evenly distributed values are system-selection targets only. They are not published safe-working loads.
+
+The measured 61.5 in long wall cannot be mounted from the three measured studs alone under this design's spacing/overhang rules. Install and verify structural blocking at 6.0 and 60.5 in from the inside corner before mounting standards; measured studs are at 17.0, 32.5, and 48.5 in. The nominal return arm remains on hold until measured.
 
 ## Nonnegotiable hybrid load path
 
@@ -57,7 +59,7 @@ The rear curb sits on the printed tile, not directly on bare plywood; the instal
 - Map both stud edges and centers on both walls, especially within 14 in of the corner, using more than one method.
 - Confirm every proposed standard has usable structural backing and passes spacing/overhang limits. Field centers must be finite and independently spaced.
 - Locate wiring, pipes, and protective plates around the outlets. Never infer cable paths from outlet position alone.
-- Verify the common shelf-top elevation, ceiling clearance, door/trim clearance, the 39 in standard zone (the reported outlet-top-to-ceiling distance of 43.5 in leaves only 4.5 in total placement margin — see [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 5), and the complete 168.056 mm Palatine fascia envelope.
+- Verify the common shelf-top elevation, ceiling clearance, door/trim clearance, the 39 in standard zone (the reported outlet-top-to-ceiling distance of 43.5 in leaves only 4.5 in total placement margin—see [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 5), and the complete 170.056 mm Palatine fascia envelope.
 - Follow the current instructions for one compatible hardware system, including prescribed fasteners, holes, edge distances, torque, locks, and deck attachment.
 - Stop and involve a qualified local professional if framing, wiring, structural fastener selection, any drilling needed for the steel angle's structural connection, wall condition, or injury consequences remain uncertain. Cosmetic fascia retention must not add holes or notches to the angle.
 
@@ -76,4 +78,4 @@ This controlled check can reveal obvious defects; it does not certify a load rat
 
 ## Before printing
 
-Confirm the exact printer, nozzle diameter and material, plate, slicer version, black PETG product, and filament condition. Print the corner gauge, fascia coupon, and Palatine detail coupon first. The repository intentionally contains model-only 3MFs and no embedded G-code. Arrange and slice for the confirmed machine; never reuse machine instructions from another setup.
+Use the confirmed Bambu Lab A1 mini, 0.4 mm nozzle, Textured PEI Plate, supplied R12 process/filament presets, SUNLU clear PETG, and dry filament. Print the R12 adhesion-corner coupon, fascia coupon, Palatine detail coupon, and corner gauge before production. The repository contains model-only 3MFs and no embedded G-code. Never reuse the superseded R5 handoff.

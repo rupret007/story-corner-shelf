@@ -2,7 +2,13 @@
 
 **Triadic Palatine Order — a parametric PETG-finished hybrid closet shelf**
 
-Story Corner is a same-height L shelf for nominal 3 ft and 5 ft closet walls. The r5 **Triadic Palatine Order** gives the visible black PETG skin a palace-like 3–6–9 composition: three arcade bays on the short arm, six on the long arm, nine keystones, fluted shared piers, stepped entablatures, dentils, a fitted corner pilaster, and a groin-vault corner soffit. Continuous plywood and steel—not the printed architecture—carry stored weight.
+Story Corner is a same-height L shelf for nominal 3 ft and measured 61.5 in closet walls. The R12 **Triadic Palatine Order** gives the visible SUNLU clear PETG skin a durable 3–6–9 composition: three arcade bays on the short arm, six on the long arm, nine keystones, fluted shared piers, stepped entablatures, dentils, a fitted corner pilaster, and a groin-vault corner soffit. Continuous plywood and steel—not the printed architecture—carry stored weight.
+
+## R12 final-release status
+
+The long wall is field measured at 61.5 in. Its three measured studs resolve to 17.0, 32.5, and 48.5 in from the inside-corner datum. The five-line support plan additionally requires purpose-installed structural blocking at 6.0 and 60.5 in before standards are mounted or the shelf is loaded. The 36 in return remains nominal: do not cut, mount, or bulk-print return-arm production parts until that wall, its framing, installed back offset, and full-size corner template are measured.
+
+The authoritative print handoff is [`generated/final_release_r12/README_FIRST.md`](generated/final_release_r12/README_FIRST.md). The previous `generated/ready_to_print_now/` folder records the failed R5 corner attempt and is superseded.
 
 > **Prototype status:** the meshes and model-only 3MF packages are generated design-development artifacts. The wall lengths, separate installed offset on each wall, corner angle, wall bow, framing map, hardware envelope, 8 in depth, attachment stack, printer, nozzle, build plate, PETG product, and completed assembly remain unverified. No tested load rating is claimed. No embedded G-code is included.
 
@@ -67,7 +73,7 @@ The ornament follows a controlled 3–6–9 grammar rather than adding unrelated
 - 3 segmental-arch bays on the short arm and 6 on the long arm;
 - 18 handed arcade/fascia halves separated by 0.6 mm seams and finished by 9 floating keystones;
 - 113.994 mm short-arm halves and 107.630 mm long-arm halves;
-- 92 mm arch drop, 48 mm rise, 6 mm overlap into the functional fascia, and 168.056 mm total saved height;
+- 92 mm arch drop, 48 mm rise, 6 mm overlap into the functional fascia, and 170.056 mm total saved height;
 - a 5 mm outer archivolt order, 2.4 mm true shadow reveal, and 4 mm inner order;
 - a 22 mm shared pier with three 1 mm flutes per half — six across the assembled pier — plus 9 mm-high / 4 mm-projecting bases and 8 mm-high / 5 mm-projecting capitals;
 - one 3:4:5 spandrel void per half;
@@ -85,7 +91,7 @@ The elevation drawing records exact nominal stations, counts, and module dimensi
 ## Finish fit and attachment
 
 - All top tiles use a 0.25 mm plan radius and 0.6 mm seams. Four 101.3 mm quadrants finish the through-owned corner square. The return's inner tile floats 1.0 mm over the concealed 1.6 mm plywood gap without receiving load-path credit.
-- The fascia channel opening is nominally 46.256 mm: 18.256 mm plywood + 25.4 mm steel-angle vertical leg + 2.0 mm top tile + 0.6 mm fitting clearance. The upper flange overlays the tile.
+- The fascia channel opening is nominally 46.656 mm: 18.256 mm plywood + 25.4 mm steel-angle vertical leg + 2.4 mm top tile + 0.6 mm fitting clearance. The upper flange overlays the tile.
 - Every finish piece attaches only with qualified removable products — silicone dots, captured channels, or short nonstructural screws through generated slots. The complete attachment sequence, dot counts, and installed z-stack live in [ASSEMBLY.md](ASSEMBLY.md); the attachment policy is in [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 8. Never drill or notch the continuous steel angle for cosmetic retention.
 
 Attachment prevents loose trim, rattle, and falling only. It does not carry stored weight or turn the printed anti-fall features into rated cargo restraints.
@@ -113,7 +119,7 @@ The structural plywood and steel angle do not use printed snap joints. Modularit
 5. Follow [ASSEMBLY.md](ASSEMBLY.md) for the build sequence, from structural install through load acceptance and service.
 6. Open [the full model-only print set](generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf) only after confirming the printer, nozzle, plate, PETG product, and attachment coupons.
 
-The full 3MF contains **101 exact-quantity catalog objects**: 98 installed finish pieces plus three print-first test objects. It is not arranged into real printer plates and contains no machine instructions. The nominal geometry estimate is **2.45 kg packaged PETG** and **2.42 kg installed PETG**, excluding purge, supports, failures, spares, fasteners, plywood, and steel.
+The full 3MF contains **102 exact-quantity catalog objects**: 98 installed finish pieces plus four print-first qualification objects. It is not arranged into real printer plates and contains no machine instructions. The R12 geometry estimate is **3.12 kg packaged PETG** and **3.06 kg installed PETG**, excluding purge, supports, failures, spares, fasteners, plywood, and steel.
 
 ## Field information still required
 
@@ -123,9 +129,9 @@ Before this can become an installation-ready revision, record:
 2. The included inside-corner angle, wall bow, drywall/caulk buildup, and a full-size cardboard or hardboard corner template.
 3. The installed wall-to-plywood-back offset **separately for each wall**, plus bracket wall-to-tip envelope, bracket width, locks, and final wall-to-fascia projection using the exact hardware.
 4. Both edges and center of every stud on both walls—especially the first 14 in from the corner—plus framing material, drywall thickness, wiring, pipes, and protective plates.
-5. Confirmation that the 8 in depth and 168.056 mm Palatine fascia envelope clear the doorway, trim, people, bins, outlets, and every intended elevation.
+5. Confirmation that the 8 in depth and 170.056 mm Palatine fascia envelope clear the doorway, trim, people, bins, outlets, and every intended elevation.
 6. Storage-bin outside width, depth, height, lid overhang, quantity, loaded weight, and the heaviest individual object.
-7. Exact printer, nozzle diameter and material, build plate, Bambu Studio version, black PETG brand/product, and filament condition.
+7. Bambu Lab A1 mini, 0.4 mm nozzle, Textured PEI Plate, Bambu Studio version, SUNLU clear PETG lot, and filament condition.
 8. Intended evenly distributed contents, point loads, measured shelf-arm dead load, common shelf-top elevation, and number of levels sharing the standards.
 9. The exact removable silicone products, captured-channel fit, rear-curb screw stack, groin-vault screws, and removal method, qualified on printed PETG, sealed plywood, and the actual coated steel where each product is used.
 
@@ -161,7 +167,7 @@ On macOS with Bambu Studio in the normal Applications location, run the stricter
 PYTHON_BIN=.venv/bin/python REQUIRE_BAMBU=1 scripts/build_all.sh
 ```
 
-The build regenerates generator-owned STL/3MF outputs, exercises parametric relationships, and checks mesh closure, body count, the 180 mm saved-orientation envelope, exact 101-object packaging, 3MF integrity, hashes, documentation links, and absence of embedded G-code. Strict local mode also imports each 3MF into Bambu Studio and exports it back to STL.
+The build regenerates generator-owned STL/3MF outputs, exercises parametric relationships, and checks mesh closure, body count, the 180 mm saved-orientation envelope, exact 102-object packaging, 3MF integrity, hashes, documentation links, and absence of embedded G-code. Strict local mode also imports each 3MF into Bambu Studio and exports it back to STL.
 
 ## Hardware and rating boundary
 
@@ -171,8 +177,8 @@ The current 55 lb return-arm and 120 lb through-arm evenly distributed values ar
 
 ## Repository status
 
-The canonical repository is [rupret007/story-corner-shelf](https://github.com/rupret007/story-corner-shelf). The active revision is `triadic_palatine_fitted_l_corner_r5`. See [CHANGELOG.md](CHANGELOG.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+The canonical repository is [rupret007/story-corner-shelf](https://github.com/rupret007/story-corner-shelf). The active revision is `triadic_palatine_fitted_l_corner_r12_final_durable`. See [CHANGELOG.md](CHANGELOG.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The earlier R6–R11 development trees under `development/` are retained as frozen historical records with their own print-authorization rules; the r5 Triadic Palatine Order supersedes them as the current design focus. In particular, the R11 tree keeps an explicit print hold, a single-use permit protocol, and a **0 kg / 0 lb** rating — nothing checked in there authorizes printing, drilling, installation, or load. See [development/r11/README.md](development/r11/README.md), the [R11 print hold](development/r11/PRINT_FIRST.md), and the [append-only physical record](development/r11_physical/PHYSICAL_RECORD.md).
+The earlier R6–R11 development trees under `development/` are retained as frozen historical records with their own print-authorization rules; R12 supersedes them and R5 as the current design focus. In particular, the historical R11 tree keeps an explicit print hold, a single-use permit protocol, and a **0 kg / 0 lb** rating—nothing there authorizes an R12 print, drilling, installation, or load. See [development/r11/README.md](development/r11/README.md), the [R11 print hold](development/r11/PRINT_FIRST.md), and the [append-only physical record](development/r11_physical/PHYSICAL_RECORD.md).
 
 No open-source license has been selected. Add the intended license before inviting public reuse or contributions.

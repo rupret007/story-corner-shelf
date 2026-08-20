@@ -38,6 +38,7 @@ REQUIRED_FILES = (
 )
 MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 GENERATED_NONPRINTABLE_ALLOWLIST = {
+    ".DS_Store",
     "artifact_manifest.json",
     "artist_rendering_triadic_palatine_order.png",
     "bambu_import_report.json",  # local integration evidence; intentionally ignored by Git
@@ -118,7 +119,7 @@ def check_generated_tree(errors: list[str]) -> None:
     unexpected_dirs = sorted(
         path.name
         for path in GENERATED.iterdir()
-        if path.is_dir() and path.name not in {"model_only_3mf", "previews"}
+        if path.is_dir() and path.name not in {"model_only_3mf", "previews", "final_release_r12"}
     )
     if unexpected:
         errors.append(f"Unexpected generated deliverables would be published: {unexpected}")
