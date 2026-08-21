@@ -1,248 +1,230 @@
-# Usage Guide — Storage Arcade
+# Usage Guide — Two-Level Storage Arcade
 
-Mapping closet stuff to printed features.
+Mapping closet stuff to printed features across two shelf levels.
 
 ## The Architecture
 
 ```
-       ╔══════════════════════════════════════════════════════╗
-       ║                    DECK MODULES                       ║
-       ║              (ribbed box sections)                    ║
-       ╠════╤════════════╤════╤════════════╤════╤═════════════╣
-       ║    │    ARCH    │    │    ARCH    │    │    ARCH     ║
-       ║ S  │   OPENING  │ S  │   OPENING  │ S  │   OPENING   ║
-       ║ P  │  (storage) │ P  │  (storage) │ P  │  (storage)  ║
-       ║ I  │            │ I  │            │ I  │             ║
-       ║ N  │    bay     │ N  │    bay     │ N  │    bay      ║
-       ║ E  │   floor    │ E  │   floor    │ E  │   floor     ║
-       ║    │  (trough)  │    │  (trough)  │    │  (trough)   ║
-       ╚════╧════════════╧════╧════════════╧════╧═════════════╝
-         │                 │                 │
-         ▼                 ▼                 ▼
-        STUD              STUD              STUD
+                            CEILING (25mm clearance)
+┌────────────────────────────────────────────────────────────┐
+│                    UPPER DECK                              │
+├────────────────────────────────────────────────────────────┤
+│  ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗                       │
+│  ║   ║  S  ║   ║  S  ║   ║  S  ║   ║   UPPER LEVEL        │
+│  ║BAY║  P  ║BAY║  P  ║BAY║  P  ║BAY║   4 bays + 8 piers   │
+│  ║   ║  I  ║   ║  I  ║   ║  I  ║   ║                       │
+│  ╚═══╝  N  ╚═══╝  N  ╚═══╝  N  ╚═══╝                       │
+│         E         E         E                              │
+└────────────────────────────────────────────────────────────┘
+                         ↑ 20mm gap
+┌────────────────────────────────────────────────────────────┐
+│                    LOWER DECK                              │
+├────────────────────────────────────────────────────────────┤
+│  ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗                       │
+│  ║   ║  S  ║   ║  S  ║   ║  S  ║   ║   LOWER LEVEL        │
+│  ║BAY║  P  ║BAY║  P  ║BAY║  P  ║BAY║   4 bays + 8 piers   │
+│  ║   ║  I  ║   ║  I  ║   ║  I  ║   ║                       │
+│  ╚═══╝  N  ╚═══╝  N  ╚═══╝  N  ╚═══╝                       │
+│         E         E         E                              │
+└────────────────────────────────────────────────────────────┘
+                         ↑ 50mm clearance
+═══════════════════════════════════════════════════════════════
+                    OUTLET TOP
 ```
 
-Every feature stores something or carries load:
+## Storage Zones Summary
 
-| Feature | What It's For |
-|---------|---------------|
-| Arch opening | Main storage bay — cables, bins, boxes |
-| Hollow piers | Vertical storage columns — inserts slide in |
-| Bay floor | Cable trough / bin seat |
-| Deck surface | Top storage — flat items, boxes |
-| Spine crown | Structural only — connects bays to wall |
+| Zone | Count | Use For |
+|------|-------|---------|
+| Upper bay openings | 4 | Seasonal items, less-accessed storage |
+| Upper deck surface | 1 continuous | Boxes, bins, flat items |
+| Upper pier hollows | 8 | Cable inserts, cassettes |
+| Lower bay openings | 4 | Daily-use cables, bins |
+| Lower deck surface | 1 continuous | Boxes, frequently accessed items |
+| Lower pier hollows | 8 | Cable inserts, cassettes |
+| Guitar hanger | 1 | Guitar (hangs below lower level) |
 
----
-
-## Cables
-
-### Charging Cables, USB Cables, Audio Cables
-
-**Where:** Bay opening + Cable Insert in pier
-
-**Setup:**
-1. Print 1-2 cable inserts
-2. Slide insert into a pier hollow (either side of a bay)
-3. Drape cables over hooks
-4. Plug ends stay accessible at bay opening
-
-**Capacity:** ~10-15 cables per insert
-
-### Power Strips, Extension Cords
-
-**Where:** Bay floor (the trough at bottom of arch)
-
-**Setup:**
-1. Coil extension cord
-2. Place in bay floor trough
-3. Plug end routes out front of bay
-
-**Tip:** One bay floor can hold a coiled 25' extension cord
+**Total: 8 bays + 2 decks + 16 piers + 1 guitar hanger**
 
 ---
 
-## Guitar Gear
+## Upper Level — Less Frequent Access
 
-### Strings (Packaged)
+The upper level is harder to reach. Use it for:
 
-**Where:** String Cassette in pier hollow
+### Seasonal / Archive Storage
+- Holiday decorations in bins
+- Old cables you might need someday
+- Backup guitar strings (bulk)
+- Tax documents (in waterproof box)
 
-**Setup:**
-1. Print string cassette
-2. Slide into pier
-3. Stack string packages flat
-4. Divider separates acoustic from electric
+### What Fits in Upper Bays
+- Arch opening: ~150mm deep × ~105mm wide at floor
+- Fits small bins, containers up to that size
+- Bay floor is a trough — good for coiled cables
 
-**Capacity:** ~20 string sets per cassette
-
-### Picks, Capos, Slides
-
-**Where:** String cassette (open-top section)
-
-**Setup:**
-1. Same cassette as strings
-2. Small items drop into open compartments
-3. Easy grab from front
-
-### Tuners, Batteries, Allen Keys
-
-**Where:** Bay opening (small bin on bay floor)
-
-**Setup:**
-1. Get a small bin (~100mm square)
-2. Set on bay floor
-3. Arch opening provides access
-
-### The Guitar Itself
-
-**Where:** Guitar Hanger bolted to spine
-
-**Setup:**
-1. Print guitar hanger
-2. Select a spine (leftmost recommended — keeps guitar away from traffic)
-3. Bolt hanger to spine using M4s (4 bolts)
-4. Neck rests in slot
-5. Body hangs in ROOM (not on deck — 6" deck can't hold a guitar body)
-
-**Clearance:** Guitar hangs ~100mm out from wall, body clears everything
-
-**IMPORTANT:** The guitar hanger is NOT on the deck. It bolts directly to a spine, below the deck level. The guitar hangs in free space.
+### Upper Deck
+- Continuous surface across all bays
+- 25 kg total capacity
+- Best for flat storage: shoeboxes, photo boxes
 
 ---
 
-## Small Bins and Boxes
+## Lower Level — Daily Access
 
-### Fabric Bins (~150mm wide)
+The lower level is at convenient height. Use it for:
 
-**Where:** Arch opening
+### Cables (Active Use)
+**Where:** Lower bay openings + Cable Inserts in piers
 
-**Setup:**
-1. Measure bin (must fit ~150mm opening)
-2. Place in bay
-3. Bay floor supports bottom
-4. Arch sides contain bin
+| Cable Type | Location |
+|------------|----------|
+| Phone chargers | Cable insert in pier |
+| USB cables | Cable insert hooks |
+| Audio cables | Bay floor trough |
+| HDMI/DisplayPort | Bay opening |
+| Extension cords | Bay floor (coiled) |
 
-**Note:** Arch opening is ~105mm wide at floor, ~155mm at crown. Tapered bins work best.
+### Guitar Gear
+**Where:** String cassette in pier + Guitar hanger
 
-### Shoebox-Size Storage
+| Item | Location |
+|------|----------|
+| Guitar | Hanger on lower spine (body hangs in room) |
+| Strings (packaged) | String cassette in pier |
+| Picks | String cassette divider |
+| Capo | String cassette |
+| Slide | String cassette |
+| Tuner | Bay opening (small bin) |
 
-**Where:** Deck surface
+### Small Bins
+**Where:** Lower bay openings
 
-**Setup:**
-1. Stack on deck
-2. Deck spans multiple bays
-3. Don't concentrate load at deck edges
+- Charging brick storage
+- Small tools
+- Batteries
+- Adapters and dongles
 
-**Capacity:** Deck holds 25 kg total, distributed
-
----
-
-## Wall Chargers and Power Bricks
-
-### USB Wall Chargers
-
-**Where:** Cable insert hooks
-
-**Setup:**
-1. Coil cable
-2. Hang on hook
-3. Charger brick rests on hook or dangles
-
-### Laptop Power Bricks
-
-**Where:** Bay floor trough
-
-**Setup:**
-1. Set brick in trough
-2. Cable coils around brick
-3. Plug end accessible at front
+### Lower Deck
+- Continuous surface
+- 25 kg capacity
+- Shoeboxes, organizer bins
+- Items you grab weekly
 
 ---
 
-## The Piers as Storage Columns
+## Pier Storage (Both Levels)
 
-Each arch bay has TWO hollow piers (left and right). That's storage space:
+Each bay has two hollow piers. 8 bays × 2 piers = **16 pier columns**.
 
-```
-     ┌────┐   ┌────┐
-     │    │   │    │
-     │PIER│   │PIER│   ← Insert fits here
-     │    │   │    │
-     │ 17 │   │ 17 │   ← 17mm internal width
-     │ mm │   │ mm │
-     └────┘   └────┘
-```
+### Pier Dimensions
+- Internal width: 17 mm
+- Depth: ~140 mm
+- Height: ~110 mm
 
-What fits in a pier:
-- Cable insert (hooks for cables)
-- String cassette (drawer for small items)
-- Nothing (leave empty for future use)
+### What Fits
+| Insert | Purpose |
+|--------|---------|
+| Cable Insert | 3 hooks for cable organization |
+| String Cassette | Divided tray for small items |
+| Empty | Future use, custom inserts |
 
-**4 bays × 2 piers = 8 storage columns** beyond the bay openings.
+### Suggested Pier Layout
+
+| Level | Pier Position | Insert |
+|-------|---------------|--------|
+| Lower | Bay 1 Left | Cable insert |
+| Lower | Bay 1 Right | Cable insert |
+| Lower | Bay 2 Left | String cassette |
+| Lower | Bay 2 Right | Empty (picks overflow) |
+| Lower | Bay 3 Left | Cable insert |
+| Lower | Bay 3 Right | Empty |
+| Lower | Bay 4 Left | Empty |
+| Lower | Bay 4 Right | Empty |
+| Upper | All | Empty or seasonal storage |
+
+---
+
+## Guitar Hanger Placement
+
+The guitar hanger bolts to a **spine**, not to a bay.
+
+**Recommended position:** Leftmost lower spine
+- Guitar body hangs in room (not on deck)
+- Neck rests in slot at ~1m height
+- Clearance needed: ~100mm from wall + guitar body depth
+
+**Do not mount guitar hanger to upper spines** — body would hit lower deck.
 
 ---
 
 ## Load Distribution
 
-### Do This:
-- Spread weight across multiple bays
-- Use all deck modules, not just one
+### Per Bay Floor
+- Maximum: 5 kg (11 lb)
+- Good for: coiled cables, small bins
+- Don't stack heavy items
+
+### Per Deck Surface
+- Maximum: 25 kg (55 lb) distributed
+- Spread weight across modules
 - Keep heavy items near spines (shorter spans)
 
-### Don't Do This:
-- Stack 25 kg on one bay
-- Hang from arch opening front edge
-- Put heavy items at deck edges away from spines
+### Two Decks Combined
+- Maximum: 50 kg (110 lb)
+- Upper + Lower together
+- Accounts for PETG creep
 
-### Load Path:
-```
-LOAD on deck
-     ↓
-Deck module (ribbed box)
-     ↓
-Bay crown / Spine crown
-     ↓
-M4 bolts
-     ↓
-Spine backplate
-     ↓
-Wood screws
-     ↓
-STUDS
-```
-
-Every gram of load follows this path. No snap-fit, no friction-fit in the load path.
+### Guitar Hanger
+- Maximum: 5 kg (11 lb)
+- One standard guitar
 
 ---
 
-## Quick Reference
+## Access Pattern
 
-| Stuff | Where | Print Qty |
-|-------|-------|-----------|
-| Charging cables | Pier + cable insert | 2-4 inserts |
-| Guitar strings | Pier + string cassette | 1-2 cassettes |
-| Picks, capos | String cassette dividers | (same) |
-| Guitar | Guitar hanger on spine | 1 hanger |
-| Small bins | Bay opening | - |
-| Flat items | Deck surface | - |
-| Extension cords | Bay floor trough | - |
-| Power bricks | Bay floor trough | - |
+```
+EASY    ──────────────────────────────────►    HARD
+
+Lower bays   Lower deck   Upper bays   Upper deck
+(eye level)  (reach up)   (step stool) (high reach)
+```
+
+**Daily items:** Lower bays, lower piers  
+**Weekly items:** Lower deck  
+**Monthly items:** Upper bays  
+**Seasonal items:** Upper deck  
 
 ---
 
-## Customization
+## Short Wall (Future)
 
-Need different inserts? The pier internal dimensions are:
-- Width: 17 mm
+When the ~36" return wall is measured and ready:
+
+- Same bay modules work
+- Same spine modules work
+- Corner connection where walls meet
+- Potentially 1-2 bays on short wall per level
+- Creates L-shaped storage arcade
+
+**Status: ON HOLD until measured**
+
+---
+
+## Custom Inserts
+
+Want something other than cable hooks or string cassettes?
+
+**Pier insert envelope:**
+- Width: 16 mm (fits 17 mm internal)
+- Depth: up to 140 mm
+- Height: up to 100 mm
+
+Design your own insert, print it, slide it in.
+
+**Bay opening envelope:**
+- Width: ~105 mm at floor
 - Depth: ~140 mm
-- Height: ~110 mm
+- Height: ~100 mm (to arch crown)
 
-Design your own insert to fit this envelope. Model it, print it, slide it in.
-
-The bay opening dimensions are:
-- Width at floor: ~105 mm
-- Width at crown: ~155 mm (full width)
-- Depth: ~150 mm
-- Height: ~130 mm (floor to arch crown)
-
-Any bin or box that fits these dimensions works.
+Any container fitting these dimensions works.

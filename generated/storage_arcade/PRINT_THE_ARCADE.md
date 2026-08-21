@@ -1,13 +1,43 @@
-# Print the Storage Arcade
+# Print the Storage Arcade — Two-Level Edition
 
-100% PETG closet system. Every gram stores something or carries load. No decorative air.
+100% PETG closet system. Two stacked shelf levels on the long wall. Every gram stores or carries.
+
+## Height Assumption (UNVERIFIED)
+
+**Outlet-top to ceiling: 43.5 in (1104.9 mm)**
+
+| Value | Amount | Note |
+|-------|--------|------|
+| Outlet to ceiling | 43.5 in | **USER-REPORTED, NOT FIELD-VERIFIED** |
+| Ceiling clearance | 25 mm | Gap from top deck to ceiling |
+| Outlet clearance | 50 mm | Gap from lower bay bottom to outlet top |
+| Inter-level gap | 20 mm | Between upper and lower arcade |
+| Available for shelves | ~1030 mm | Two levels fit in this band |
+
+**FIELD-MEASURE BEFORE PRINTING SPINES.** If the actual measurement differs significantly, adjust the spine stacking or contact before proceeding.
+
+---
+
+## Wall Status
+
+### Long Wall — ACTIVE
+- Length: 61.5 in
+- Studs: 17.0, 32.5, 48.5 in from inside corner
+- **Two stacked shelf levels** above the electric box
+
+### Short Wall — ON HOLD
+- Length: ~36 in (nominal, **NEEDS MEASUREMENT**)
+- Same bay/spine system will turn the corner
+- **Do not print until field-measured**
+
+---
 
 ## The Bed Rule (Non-Negotiable)
 
-**Bambu A1 mini: 180 mm build volume, but XY must be ≤160 mm with brim.**
+**Bambu A1 mini: 180 mm build volume, XY ≤160 mm with brim.**
 
-| Part | XY Bed Footprint | Z Height | Fits? |
-|------|------------------|----------|-------|
+| Part | XY Footprint | Z Height | Fits? |
+|------|--------------|----------|-------|
 | Stud Spine | 50 × 40 mm | 158 mm | ✓ |
 | Arch Bay | 155 × 150 mm | 155 mm | ✓ |
 | Deck Module | 158 × 150 mm | 35 mm | ✓ |
@@ -17,28 +47,40 @@
 
 All parts verified to fit with 3 mm brim + calibration region.
 
-## Part Counts
+---
 
-For a 61.5" wall with studs at 17.0", 32.5", 48.5":
+## Part Counts — Two Levels on Long Wall
 
-| Part | Quantity | Print Time Each | Total Hours |
-|------|----------|-----------------|-------------|
-| Stud Spine | 3 | 4 hrs | 12 hrs |
-| Arch Bay | 4 | 8 hrs | 32 hrs |
-| Deck Module | 6 | 4 hrs | 24 hrs |
-| Cable Insert | 2-4 | 1.5 hrs | 3-6 hrs |
-| String Cassette | 1-2 | 2 hrs | 2-4 hrs |
-| Guitar Hanger | 1 | 2.5 hrs | 2.5 hrs |
+| Part | Per Level | × 2 Levels | Total | Notes |
+|------|-----------|------------|-------|-------|
+| Stud Spine | 3 | × 2 | **6** | 2 per stud, stacked |
+| Arch Bay | 4 | × 2 | **8** | 4 bays span the wall |
+| Deck Module | 6 | × 2 | **12** | Top surface per level |
+| Cable Insert | — | — | 2-4 | As needed |
+| String Cassette | — | — | 1-2 | As needed |
+| Guitar Hanger | — | — | **1** | Bolts to any spine |
 
-**Total print time: ~76-81 hours**  
-**Total PETG: ~2.0-2.2 kg**
+### Print Time Estimate
+
+| Part | Qty | Hours Each | Total Hours |
+|------|-----|------------|-------------|
+| Stud Spine | 6 | 4 | 24 |
+| Arch Bay | 8 | 8 | 64 |
+| Deck Module | 12 | 4 | 48 |
+| Inserts | ~5 | ~2 | 10 |
+| Guitar Hanger | 1 | 2.5 | 2.5 |
+| **TOTAL** | | | **~150 hrs** |
+
+**PETG needed: ~4-5 kg**
+
+---
 
 ## Print Settings
 
 ```
 Material:        PETG (SUNLU black recommended)
 Layer height:    0.2 mm
-Wall loops:      6 (THIS IS CRITICAL)
+Wall loops:      6 (CRITICAL for PETG creep resistance)
 Top/bottom:      6 layers
 Infill:          40% gyroid
 Nozzle temp:     245°C
@@ -48,140 +90,158 @@ Fan:             50-60%
 Speed:           60 mm/s
 ```
 
-**Why 6 walls / 40% gyroid?** PETG creeps. Box sections with thick walls and gyroid resist creep under sustained load.
+---
 
 ## Print Orientations
 
 ### Stud Spine
 - **Orientation:** Wall face down (backplate flat on bed)
 - **Supports:** No
-- **Why:** Backplate is large flat surface, prints without supports
 
 ### Arch Bay
 - **Orientation:** Back wall down (arch opening facing UP)
 - **Supports:** YES - organic supports for arch interior
-- **Why:** Arch overhangs need support. Pier walls print vertically.
 
 ### Deck Module
-- **Orientation:** Top surface down (will be the usable surface)
+- **Orientation:** Top surface down (smooth bed finish)
 - **Supports:** No
-- **Why:** Box is self-supporting. Top surface gets smooth bed finish.
 
-### Cable Insert
-- **Orientation:** Base down
+### Cable Insert / String Cassette / Guitar Hanger
+- **Orientation:** Base/mounting plate down
 - **Supports:** No
-- **Why:** Hooks print upward with minimal overhang
 
-### String Cassette
-- **Orientation:** Open top facing up
-- **Supports:** No
-- **Why:** Simple box shape
+---
 
-### Guitar Hanger
-- **Orientation:** Mounting plate down
-- **Supports:** No
-- **Why:** Arms print upward from solid base
-
-## Hardware List
+## Hardware List (Two-Level System)
 
 ### Wall Fasteners
 | Item | Spec | Qty | Notes |
 |------|------|-----|-------|
-| Wood screws | #10 × 3" | 9 | 3 per spine, INTO STUDS ONLY |
-| Fender washers | 1/4" (1" OD) | 9 | Under screw heads |
+| Wood screws | #10 × 3" | 18 | 3 per spine × 6 spines |
+| Fender washers | 1/4" (1" OD) | 18 | Under screw heads |
 
 ### Assembly Fasteners
 | Item | Spec | Qty | Notes |
 |------|------|-----|-------|
-| M4 × 25mm | Socket head cap screw | 50 | Bay-to-spine, deck-to-bay |
-| M4 nylock nuts | - | 50 | Resist loosening |
-| M4 flat washers | - | 100 | Both sides |
+| M4 × 25mm | Socket head cap screw | 100 | Bay-to-spine, deck-to-bay |
+| M4 nylock nuts | — | 100 | Resist loosening |
+| M4 flat washers | — | 200 | Both sides |
 
-**No hollow-wall anchors.** All load goes into studs via wood screws.
+**No hollow-wall anchors.** All load goes into studs.
+
+---
 
 ## Assembly Order
 
-### Phase 1: Wall Prep
-1. Locate studs at 17.0", 32.5", 48.5" from inside corner
-2. Mark vertical lines at stud centers
-3. Mark spine positions (centered on studs)
+### Phase 1: Verify Height
+1. **MEASURE** outlet-top to ceiling
+2. Compare to 43.5 in assumption
+3. If significantly different, recalculate level positions
 
-### Phase 2: Mount Spines
-1. Hold first spine against wall, centered on stud
-2. Level and mark screw holes
-3. Pre-drill pilot holes into stud
-4. Drive three #10 × 3" screws with washers
-5. Repeat for remaining two spines
-6. Check all three are level and coplanar
+### Phase 2: Mount Lower Spine Set
+1. Mark stud locations (17.0, 32.5, 48.5 in from corner)
+2. Position lower spine at outlet clearance height (50 mm above outlet top)
+3. Level and pre-drill pilot holes
+4. Drive 3 × #10 screws per spine with washers
+5. Repeat for all 3 studs
 
-### Phase 3: Install Arch Bays
-1. Working from left, slide first bay between spines
-2. Align bay back wall with spine crowns
-3. Insert M4 bolts through back wall into spine grid
-4. Finger-tighten only
-5. Repeat for remaining bays
-6. Check alignment, then torque all M4s to snug
+### Phase 3: Install Lower Level
+1. Attach arch bays (4 total) to lower spines via M4 bolts
+2. Bays bolt through back wall to spine M4 grid
+3. Install deck modules (6 total) on top of lower arcade
+4. Check level before final torque
 
-### Phase 4: Install Deck
-1. Place first deck module on top of bays/spines
-2. Align M4 holes with bay crowns
-3. Bolt through deck into bay crown
-4. Continue with remaining deck modules
-5. Adjacent decks butt together (no gap)
+### Phase 4: Mount Upper Spine Set
+1. Stack upper spine above lower spine (20 mm gap between arcade levels)
+2. Upper spine mounts to same stud, higher position
+3. Drive 3 × #10 screws per spine
+4. Repeat for all 3 studs
 
-### Phase 5: Add Inserts
+### Phase 5: Install Upper Level
+1. Attach arch bays (4 total) to upper spines
+2. Install deck modules (6 total) on top of upper arcade
+3. Check level and alignment with lower level
+
+### Phase 6: Add Inserts & Hanger
 1. Slide cable inserts into pier hollows as needed
-2. String cassettes drop into pier hollows
-3. Guitar hanger bolts to spine (select a spine, use M4s through mounting plate)
+2. Drop string cassettes into pier hollows
+3. Bolt guitar hanger to a lower spine (guitar hangs in room below lower arcade)
 
-## What Each Bay Is For
+---
 
-The Roman arch opening IS the storage bay:
+## Level Configuration
 
-| Bay Position | Primary Use | Insert |
-|--------------|-------------|--------|
-| Bay 1 (leftmost) | Charging cables | Cable insert |
-| Bay 2 | Guitar strings, picks | String cassette |
-| Bay 3 | Small bins | None (open bay) |
-| Bay 4 (rightmost) | Misc storage | Open |
+```
+CEILING
+  ↑ 25mm clearance
+┌─────────────────────────────────────────────────────┐
+│           UPPER DECK (6 modules)                    │
+├─────────────────────────────────────────────────────┤
+│   ╭───╮   ╭───╮   ╭───╮   ╭───╮                     │
+│   │   │   │   │   │   │   │   │   UPPER BAYS (4)   │
+│   │   │   │   │   │   │   │   │                     │
+│   ╰───╯   ╰───╯   ╰───╯   ╰───╯                     │
+└─────────────────────────────────────────────────────┘
+  ↑ 20mm inter-level gap
+┌─────────────────────────────────────────────────────┐
+│           LOWER DECK (6 modules)                    │
+├─────────────────────────────────────────────────────┤
+│   ╭───╮   ╭───╮   ╭───╮   ╭───╮                     │
+│   │   │   │   │   │   │   │   │   LOWER BAYS (4)   │
+│   │   │   │   │   │   │   │   │                     │
+│   ╰───╯   ╰───╯   ╰───╯   ╰───╯                     │
+└─────────────────────────────────────────────────────┘
+  ↑ 50mm clearance
+═══════════════════════════════════════════════════════
+              ELECTRIC BOX (outlet top)
+```
 
-The **hollow piers** between bays are also storage:
-- Each pier can hold a cable insert OR string cassette
-- That's 8 more storage columns (4 bays × 2 piers each)
+---
 
 ## Load Capacity
 
 | Location | Working Load | Notes |
 |----------|--------------|-------|
 | Per bay floor | 5 kg (11 lb) | Cable bins, string boxes |
-| Deck total | 25 kg (55 lb) | Distributed across all modules |
+| Per deck level | 25 kg (55 lb) | Distributed across modules |
+| Two decks total | 50 kg (110 lb) | Combined upper + lower |
 | Guitar hanger | 5 kg (11 lb) | One guitar |
 
-**Do not exceed.** PETG creeps under sustained load. These are conservative estimates.
+**Do not exceed.** PETG creeps under sustained load.
+
+---
+
+## What's Next: Short Wall
+
+The ~36 in return wall uses the same system:
+- Same bay modules
+- Same spine modules  
+- Same deck modules
+- Corner connection where walls meet
+
+**Status: ON HOLD until field-measured.**
+
+When ready:
+1. Measure actual short wall length
+2. Measure stud positions on short wall
+3. Calculate bay count for short wall spans
+4. Generator can produce corner-turn parts
+
+---
 
 ## Quality Gates
 
 Before use, verify:
 
-- [ ] All three spines screwed into studs (9 screws total, all countersunk)
-- [ ] All bays bolted to spines (M4s snug, not over-torqued)
-- [ ] Deck modules bolted down and level
-- [ ] No visible layer delamination on any part
-- [ ] Arch bays stable—push gently on front pier, no wobble
-
-## If Something Doesn't Fit
-
-The stud spacing on your wall may differ. The design assumes:
-- Span 1: 393.7 mm (15.5")
-- Span 2: 406.4 mm (16.0")
-
-If your spans are different:
-1. Edit `STUD_POSITIONS_IN` in `generate_storage_arcade.py`
-2. Re-run generator
-3. Check output for new bay counts
-
-You may get 2 or 3 bays per span depending on actual spacing.
+- [ ] Height measured and matches assumption (±1 in)
+- [ ] All 6 spines screwed to studs (18 screws total)
+- [ ] Lower level installed and level
+- [ ] Upper level installed and level
+- [ ] Both levels aligned with each other
+- [ ] All M4 joints snug (not over-torqued)
+- [ ] No visible layer delamination
+- [ ] Guitar hanger secure (push test)
 
 ---
 
-**This is a working storage system.** The arch opening stores things. The pier stores things. The deck stores things. No gram is wasted.
+**This is a two-level storage system.** Each arch opening stores things. Each pier stores things. Each deck stores things. Sixteen storage bays plus 32 pier columns across two levels.

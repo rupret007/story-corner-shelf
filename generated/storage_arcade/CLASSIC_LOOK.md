@@ -1,129 +1,156 @@
-# The Classic Look — Storage Arcade Edition
+# The Classic Look — Two-Level Storage Arcade
 
-Why this reads as a Roman arcade, not "plastic shelving."
+Why two stacked Roman arcades read as architecture, not shelving.
 
-## Design Philosophy: Every-Part-Used
+## Design Philosophy: Double Arcade
 
-The prior Roman bracket design was decorative: a semicircular opening with a 62mm sliver you couldn't use. Jeff rejected it as wasted space.
+Classical Roman aqueducts and amphitheaters often used **stacked arcades** — two or three levels of arches, one above another. The Colosseum is the most famous example: four stories of repeated arches.
 
-This design inverts the relationship:
-
-**The arch opening IS the storage bay.**
-
-There's no decorative hole. The Roman arch shape defines a usable volume. You put things in it. The visual language is classical, but every cubic millimeter serves a purpose.
-
-## Why It Still Reads as "Roman"
-
-### 1. True Semicircular Arch
-
-The arch profile is a proper Roman semicircle:
-- Arch span: 105 mm
-- Arch radius: 52.5 mm (exactly half the span)
-- No pointed Gothic arch, no segmental arc
-
-This is the signature of Roman architecture. When you see a semicircular arch, your brain says "Roman aqueduct" or "triumphal arch."
-
-### 2. Proper Pier Proportions
-
-Classical Roman arches have substantial piers. Our piers are:
-- Width: 25 mm
-- Height: 107 mm (arch spring + radius)
-
-Pier-to-span ratio: 25 / 105 ≈ 1:4.2
-
-This is within the classical range (1:4 to 1:3 for arcade construction). The piers have visual mass — they look like they're holding something up.
-
-### 3. The Arcade Pattern
-
-Multiple bays repeat the same arch profile:
+This design applies the same principle to closet storage:
 
 ```
-╭───╮ ╭───╮ ╭───╮ ╭───╮
-│   │ │   │ │   │ │   │
-│   │ │   │ │   │ │   │
-╰───╯ ╰───╯ ╰───╯ ╰───╯
+    UPPER ARCADE
+    ╭───╮ ╭───╮ ╭───╮ ╭───╮
+    │   │ │   │ │   │ │   │
+    ╰───╯ ╰───╯ ╰───╯ ╰───╯
+    
+    LOWER ARCADE  
+    ╭───╮ ╭───╮ ╭───╮ ╭───╮
+    │   │ │   │ │   │ │   │
+    ╰───╯ ╰───╯ ╰───╯ ╰───╯
 ```
 
-This is an **arcade** — a series of arches supported by piers. Roman aqueducts, the Colosseum's exterior, Renaissance loggias — all use this pattern. The repetition creates rhythm and visual coherence.
+When you see stacked arches, your brain says "Roman" — even in PETG.
 
-### 4. Load Path Reads Visually
+## Why Stacking Works
 
-The eye follows the structural logic:
-- Heavy stuff sits on deck → deck transfers load to bay crowns
-- Bay crowns transfer through spandrel fill → down the arch ring
-- Arch ring transfers to piers → piers bear on bay floor
-- Whole assembly hangs from spines → spines screw to studs
+### 1. Vertical Alignment
 
-This load path is visible. You can see the arch as a structural element, not decoration. Classical architecture exposes structure — that's what makes it read as architecture rather than ornament.
+The upper and lower arcades share the same rhythm:
+- Same bay width (155 mm)
+- Same arch profile (semicircle, 52.5 mm radius)
+- Same pier positions
 
-## What Makes It "Elon-Style"
+Piers stack on piers. Arches align with arches. This creates visual coherence across levels.
 
-Elon Musk's design philosophy (Tesla, SpaceX): "The best part is no part."
+### 2. Continuous Spines
 
-This arcade applies that thinking:
+The spines run from outlet clearance to ceiling clearance. Two spine sections per stud:
+- Lower spine supports lower arcade
+- Upper spine supports upper arcade
+- Both bolt to the same stud
 
-| Design Choice | Every-Part-Used Logic |
-|---------------|----------------------|
-| Arch opening | IS storage (not decoration) |
-| Hollow piers | ARE storage columns |
-| Bay floor | IS cable trough |
-| Deck surface | IS shelf |
-| Spandrel fill | IS structural (load transfer) |
+The spine is the vertical element that ties both levels together — like the engaged columns on the Colosseum's exterior.
 
-Nothing is decorative. The Roman visual language emerges from functional geometry.
+### 3. Horizontal Datum Lines
 
-## Comparison: Old Bracket vs. Storage Arcade
+Deck modules create strong horizontal bands:
+- Lower deck = level 1 cornice
+- Upper deck = level 2 cornice
 
-### Old Bracket
+These horizontal lines make the two levels read as a unified composition, not two separate shelves.
+
+## Classical Precedents
+
+| Building | Levels | Arch Type |
+|----------|--------|-----------|
+| Pont du Gard | 3 | Semicircular |
+| Colosseum | 4 | Semicircular |
+| Segovia Aqueduct | 2 | Semicircular |
+| This Closet | 2 | Semicircular |
+
+All use the same principle: repeat the arch module vertically.
+
+## The "Every Gram Used" Test
+
+Unlike decorative columns on a shopping mall, every element here works:
+
+| Element | Classical Name | What It Does |
+|---------|---------------|--------------|
+| Bay opening | Arcade bay | Storage volume |
+| Pier | Pier / pilaster | Storage column (hollow) |
+| Bay floor | Impost | Cable trough |
+| Arch ring | Archivolt | Encloses storage volume |
+| Deck | Entablature | Shelf surface |
+| Spine | Engaged column | Carries load to stud |
+
+No element is purely decorative. The Roman vocabulary emerges from functional geometry.
+
+## Why Two Levels?
+
+Jeff specified **two stacked shelf levels** above the electric box. The design responds to:
+
+1. **Height available:** 43.5 in outlet-to-ceiling (reported, unverified)
+2. **Clearances needed:** Ceiling (25 mm) + outlet (50 mm)
+3. **Bay height:** 155 mm per bay fits the A1 mini bed rule
+4. **Result:** Two full arcade levels fit the band
+
+A single level would waste vertical space. Three levels wouldn't fit. Two levels maximize storage while maintaining classical proportions.
+
+## Proportion Math
+
+Classical arcade proportions:
+- Pier width : arch span ≈ 1:4
+- Our design: 25 mm : 105 mm = 1:4.2 ✓
+
+Level height : bay width:
+- Our design: 190 mm : 155 mm ≈ 1.2:1
+- Within typical arcade range (1:1 to 1.5:1) ✓
+
+Inter-level gap : bay height:
+- Our design: 20 mm : 155 mm ≈ 1:8
+- Tight but clean — like a molding course between stories ✓
+
+## Comparison to Single-Level
+
+### Single Level
 ```
-      ╭─────╮
-     ╱  62mm ╲      ← Decorative hole
-    │  sliver │
-    │_________│
-        │
-      wall
+    ╭───╮ ╭───╮ ╭───╮ ╭───╮
+    │   │ │   │ │   │ │   │    "That's a shelf with arches"
+    ╰───╯ ╰───╯ ╰───╯ ╰───╯
 ```
-The arch opening was 62mm deep. You couldn't put anything in it. Pure decoration.
 
-### Storage Arcade
+### Two Levels
 ```
-      ╭─────╮
-     ╱       ╲
-    │  150mm  │     ← Usable storage
-    │  depth  │
-    │_________│
-        │
-      wall
+    ╭───╮ ╭───╮ ╭───╮ ╭───╮
+    │   │ │   │ │   │ │   │
+    ╰───╯ ╰───╯ ╰───╯ ╰───╯
+    ╭───╮ ╭───╮ ╭───╮ ╭───╮
+    │   │ │   │ │   │ │   │    "That's an arcade"
+    ╰───╯ ╰───╯ ╰───╯ ╰───╯
 ```
-The arch opening is 150mm deep. It's a bin, a trough, a storage bay. You put cables in it.
 
-## Classical Elements, Working Hard
-
-| Classical Element | What It Does Here |
-|-------------------|-------------------|
-| Pier | Hollow → holds cable insert / string cassette |
-| Arch ring | Structural shell → encloses storage volume |
-| Spandrel | Solid fill → transfers deck load to arch |
-| Impost (bay floor) | Trough → holds cables, supports bins |
-| Crown | Connection surface → bolts to deck/spines |
-
-Every classical element has a job. The vocabulary is Roman, but the grammar is "every gram earns its keep."
+The repetition in two directions — horizontal (bay to bay) and vertical (level to level) — creates the arcade effect. One level is a row of arches. Two levels is architecture.
 
 ## Visual Recognition Test
 
 A stranger looking at this system should think:
 
-> "That looks like a Roman arcade — like something from a Renaissance courtyard."
+> "That looks like a Roman arcade — like the Colosseum, but smaller and in PETG."
 
 Not:
 
-> "That's plastic shelving from Home Depot."
+> "That's two shelves with curved fronts."
 
-And critically, if they look closer:
+And critically:
 
-> "Wait — the arches are actually storage. The columns are hollow. Everything does something."
+> "Every opening is storage. Every column is hollow. The arches aren't just for looks."
 
-That's the design intent: classical visual language, no wasted space.
+## Short Wall Extension (Future)
+
+When the return wall is added, the arcade will turn the corner:
+
+```
+        LONG WALL
+    ╭───╮ ╭───╮ ╭───╮ ╭───╮
+    │   │ │   │ │   │ │   │
+    ╰───╯ ╰───╯ ╰───╯ ╰───╯╮
+                          │ ╭───╮
+        CORNER ──────────►│ │   │  SHORT WALL
+                          │ ╰───╯
+```
+
+The same bay modules work on the return wall. The Roman arcade vocabulary handles corners — think of a courtyard with arcades on multiple sides.
 
 ---
 
@@ -131,9 +158,10 @@ That's the design intent: classical visual language, no wasted space.
 
 | Question | Answer |
 |----------|--------|
-| Is it Roman? | True semicircular arches, proper pier proportions, arcade repetition |
+| Is it Roman? | True semicircular arches, proper pier proportions, stacked arcade pattern |
 | Is it decorative? | No — every element stores or carries |
-| Why does it read "classical"? | Visual vocabulary (arch, pier, spandrel), not ornamental detail |
-| What's the Elon principle? | The arch opening IS the storage, not a hole in front of storage |
+| Why two levels? | Fills available height, doubles storage, creates arcade effect |
+| Why does it read "classical"? | Vertical + horizontal repetition, strong datum lines, aligned elements |
+| What's the Elon principle? | Every gram stores or carries. No decorative air. |
 
-This is intentional design. The Roman arcade is one of history's most efficient structural forms — that's why we're using it for a closet organizer.
+This is intentional design: maximum storage, minimum waste, classical visual language.
