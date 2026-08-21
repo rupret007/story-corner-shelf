@@ -118,7 +118,7 @@ def check_generated_tree(errors: list[str]) -> None:
     unexpected_dirs = sorted(
         path.name
         for path in GENERATED.iterdir()
-        if path.is_dir() and path.name not in {"model_only_3mf", "previews"}
+        if path.is_dir() and path.name not in {"all_petg_shelf", "model_only_3mf", "previews"}
     )
     if unexpected:
         errors.append(f"Unexpected generated deliverables would be published: {unexpected}")

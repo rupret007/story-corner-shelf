@@ -1,0 +1,60 @@
+{
+  "system": "100% PETG two-shelf",
+  "wall": {
+    "length_in": 61.5,
+    "studs_in": [
+      17.0,
+      32.5,
+      48.5
+    ]
+  },
+  "parts": {
+    "stud_spine": {
+      "file": "stud_spine.stl",
+      "quantity": 6,
+      "dimensions_mm": [
+        40.0,
+        120.0,
+        155.0
+      ],
+      "watertight": true,
+      "fits_bed": true
+    },
+    "deck_module": {
+      "file": "deck_module.stl",
+      "quantity": 20,
+      "dimensions_mm": [
+        155.0,
+        155.0,
+        25.0
+      ],
+      "watertight": true,
+      "fits_bed": true
+    }
+  },
+  "hardware": {
+    "wood_screws": {
+      "spec": "#10 x 2.5 in",
+      "quantity": 18
+    },
+    "m4_bolts": {
+      "spec": "M4 x 20mm",
+      "quantity": 120
+    },
+    "m4_nuts": {
+      "spec": "M4 nylock",
+      "quantity": 120
+    },
+    "m4_washers": {
+      "spec": "M4 flat",
+      "quantity": 240
+    }
+  },
+  "print_settings": {
+    "material": "PETG",
+    "walls": 5,
+    "infill_percent": 40,
+    "infill_pattern": "gyroid",
+    "layer_height_mm": 0.2
+  }
+}
