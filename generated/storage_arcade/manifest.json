@@ -1,130 +1,60 @@
 {
-  "description": "100% PETG two-deck storage system - no arches, no decoration",
-  "why_no_arches": "Arches were removed because they are not in the load path. Spines carry load directly to studs. Every gram must store or carry.",
-  "height_assumption": {
-    "outlet_to_ceiling_in": 43.5,
-    "outlet_to_ceiling_mm": 1104.8999999999999,
-    "verified": false,
-    "note": "USER-REPORTED, NOT FIELD-VERIFIED"
-  },
-  "architecture": {
-    "stud_spine": "ONLY wall-load part. Screws to stud, crown supports deck.",
-    "deck_module": "Ribbed box-beam. Sits on spine crowns.",
-    "cable_trough": "U-channel with hooks. Mounts between decks.",
-    "string_cassette": "Drawer for strings/picks. Sits on lower deck or mounts to bracket.",
-    "inter_deck_bracket": "Connects upper/lower decks. Provides attachment points.",
-    "guitar_hanger": "Neck hanger bolts to spine. Guitar hangs in room."
-  },
-  "long_wall": {
-    "status": "ACTIVE",
+  "system": "100% PETG two-shelf",
+  "wall": {
     "length_in": 61.5,
-    "stud_positions_in": [
+    "studs_in": [
       17.0,
       32.5,
       48.5
-    ],
-    "levels": 2
-  },
-  "short_wall": {
-    "status": "ON HOLD",
-    "length_in": 36.0,
-    "note": "NEEDS FIELD MEASUREMENT"
-  },
-  "calculated_layout": {
-    "levels": 2,
-    "stud_count": 3,
-    "stud_positions_in": [
-      17.0,
-      32.5,
-      48.5
-    ],
-    "deck_per_level": 10,
-    "total_deck": 20,
-    "spine_sections": 6,
-    "bracket_count": 4,
-    "inter_deck_gap_mm": 200.0
+    ]
   },
   "parts": {
     "stud_spine": {
       "file": "stud_spine.stl",
       "quantity": 6,
-      "note": "2 per stud \u00d7 3 studs",
       "dimensions_mm": [
-        160.0,
         40.0,
-        158.0
-      ]
+        120.0,
+        155.0
+      ],
+      "watertight": true,
+      "fits_bed": true
     },
     "deck_module": {
       "file": "deck_module.stl",
       "quantity": 20,
-      "note": "10 per level \u00d7 2 levels",
-      "dimensions_mm": [
-        158.0,
-        155.0,
-        30.0
-      ]
-    },
-    "cable_trough": {
-      "file": "cable_trough.stl",
-      "quantity": "2-4 as needed",
       "dimensions_mm": [
         155.0,
-        64.0,
-        80.0
-      ]
-    },
-    "string_cassette": {
-      "file": "string_cassette.stl",
-      "quantity": "1-2 as needed",
-      "dimensions_mm": [
-        100.0,
-        80.0,
-        60.0
-      ]
-    },
-    "inter_deck_bracket": {
-      "file": "inter_deck_bracket.stl",
-      "quantity": 4,
-      "dimensions_mm": [
-        40.0,
         155.0,
-        158.0
-      ]
-    },
-    "guitar_hanger": {
-      "file": "guitar_hanger.stl",
-      "quantity": 1,
-      "dimensions_mm": [
-        60.0,
-        100.0,
-        60.0
-      ]
+        25.0
+      ],
+      "watertight": true,
+      "fits_bed": true
     }
   },
   "hardware": {
     "wood_screws": {
-      "spec": "#10 \u00d7 3 in",
-      "quantity": 18,
-      "note": "3 per spine \u00d7 6 spines"
+      "spec": "#10 x 2.5 in",
+      "quantity": 18
     },
     "m4_bolts": {
-      "spec": "M4 \u00d7 25mm socket head",
-      "quantity": 150
+      "spec": "M4 x 20mm",
+      "quantity": 120
     },
     "m4_nuts": {
       "spec": "M4 nylock",
-      "quantity": 150
+      "quantity": 120
     },
-    "washers": {
+    "m4_washers": {
       "spec": "M4 flat",
-      "quantity": 300
+      "quantity": 240
     }
   },
   "print_settings": {
     "material": "PETG",
-    "wall_loops": 6,
+    "walls": 5,
     "infill_percent": 40,
-    "infill_pattern": "gyroid"
+    "infill_pattern": "gyroid",
+    "layer_height_mm": 0.2
   }
 }
