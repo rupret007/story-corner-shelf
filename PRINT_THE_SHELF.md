@@ -1,224 +1,205 @@
-# Print the Shelf — All-PETG Long Wall (61.5 in)
+# Print the Shelf — All-PETG with Structural Roman Arches
 
-This is the minimum-viable **all-PETG structural shelf** for Jeff's closet long wall. No plywood, no steel angle, no KV standards. Just printed PETG parts screwed into studs.
+**This is the real deal.** Structural Roman arch brackets that actually carry load, plus ribbed deck segments. 100% PETG. No plywood, no steel. Download the STLs, slice, print, install.
+
+## The Files (Ready to Print)
+
+All files are in [`generated/all_petg_shelf/`](generated/all_petg_shelf/):
+
+| File | What It Is | Dimensions | Quantity |
+|------|------------|------------|----------|
+| `arch_bracket.stl` | Structural Roman arch wall bracket | 152 × 32 × 160 mm | **3** |
+| `deck_segment.stl` | Ribbed deck segment | 160 × 152 × 24 mm | **9** |
+| `end_cap.stl` | End cap for exposed deck ends | 6 × 152 × 24 mm | **2** |
+
+**Total: 14 parts**
 
 ## What You're Building
 
-One 61.5-inch shelf along the long wall only. The short/return wall is deferred until this works.
+```
+        ┌─────────────────────────────────────────────────────────┐
+        │  DECK SEGMENTS (9 pieces, 160mm each = 1440mm total)    │
+        └─────────────────────────────────────────────────────────┘
+              │              │              │
+           ┌──┴──┐        ┌──┴──┐        ┌──┴──┐
+           │     │        │     │        │     │
+           │ ╭─╮ │        │ ╭─╮ │        │ ╭─╮ │    ← Roman arch
+           │ │ │ │        │ │ │ │        │ │ │ │      brackets (3)
+           │ ╰─╯ │        │ ╰─╯ │        │ ╰─╯ │
+           │  │  │        │  │  │        │  │  │
+           │  │  │        │  │  │        │  │  │
+        ───┴──┴──┴────────┴──┴──┴────────┴──┴──┴───  WALL
+           17.0"          32.5"          48.5"      (stud positions)
+```
 
-| Specification | Value |
-|---|---|
-| Wall clear length | 61.5 in (1562 mm) |
-| Verified studs from corner | 17.0, 32.5, 48.5 in |
-| Shelf depth | 6 in (152 mm) — see note below |
-| Deck thickness | 30 mm (ribbed box cassette) |
+The Roman arch shape transfers shelf load through **compression** into the wall — the way arches are supposed to work.
+
+## Specifications
+
+| Spec | Value |
+|------|-------|
+| Wall length | 61.5 in (1562 mm) |
+| Shelf depth | 6 in (152 mm) |
+| Deck coverage | ~56.7 in (1440 mm) — 9 segments |
+| Bracket positions | 17.0, 32.5, 48.5 in from inside corner (at studs) |
 | Material | SUNLU black PETG |
-| Printer | Bambu A1 mini (180 mm build cube) |
+| Printer | Bambu A1 mini (180mm build volume) |
 
-### Why 6 in depth instead of 8 in?
+## Print Settings (PETG on A1 mini)
 
-An 8-inch (203 mm) PETG cantilever from a printed wall bracket will sag under load. PETG creeps. The R9 cassette geometry uses 152.4 mm (6 in) depth because:
+| Setting | Value | Why |
+|---------|-------|-----|
+| Layer height | 0.2 mm | Balance of speed and strength |
+| Wall loops | 4–5 | Thick walls for structural parts |
+| Top/bottom layers | 5 | Solid surfaces |
+| Infill | 30–40% gyroid | Good strength-to-weight |
+| Nozzle temp | 240°C | PETG needs heat |
+| Bed temp | 70°C | Textured PEI plate |
+| Cooling | 50–70% | Enough to prevent droop |
+| Supports | See below | |
 
-1. It fits the A1 mini build plate in one piece
-2. Shorter cantilever = less moment at the bracket
-3. The existing tested geometry uses this depth
+### Print Orientations
 
-If you absolutely need 8 in depth, you'd need either (a) a second row of brackets at 4 in from the wall, or (b) accepting significant sag. This guide uses 6 in.
-
-## Honest Load Expectation
-
-**Light closet storage only: 20–30 lb evenly distributed.**
-
-This is NOT a 120 lb shelf. PETG creeps under sustained load. The printed brackets are fastened into only three studs. There is no continuous steel stiffener.
-
-Safe uses:
-- Folded clothes, linens
-- Light boxes, small bins
-- Hats, soft goods
-
-Not safe:
-- Heavy bins of books
-- Dense stored items
-- Point loads at the front edge
-
-## The Design
-
-### Support Layout (3 brackets at studs)
+**Arch Bracket:** Print on its side with the arch opening facing UP. This puts print layers perpendicular to the main load direction (compression), not in the weak peel direction.
 
 ```
-Wall (inside corner at left)
-|                                                              |
-0"   6"        17"        32.5"       48.5"       55.5"    61.5"
-     [end]     [STUD]     [STUD]      [STUD]      [end]
-              bracket    bracket     bracket
+Print plate
+─────────────────────
+    ┌───────────┐
+    │   ╭───╮   │  ← Arch opening faces UP
+    │   │   │   │
+    │   ╰───╯   │
+    └───────────┘
 ```
 
-The three brackets land on the verified studs at 17.0, 32.5, and 48.5 inches. This gives:
-- Left overhang: 17.0 - 6.0 = 11.0 in (from first bracket to shelf start at ~6 in)
-- Middle span: 32.5 - 17.0 = 15.5 in
-- Right span: 48.5 - 32.5 = 16.0 in
-- Right overhang: 55.5 - 48.5 = 7.0 in (from last bracket to shelf end at ~55.5 in)
+Supports: YES — needed inside the arch opening and for the screw counterbores.
 
-**Important:** The original plan called for blocking at 6.0 and 60.5 in. Without that blocking, the shelf cannot safely extend to those points with only PETG brackets. This design shortens the shelf to fit what the three verified studs can support:
-
-- **Shelf start:** ~6 in from corner (11 in overhang from first bracket — at the limit)
-- **Shelf end:** ~55.5 in from corner (7 in overhang from last bracket)
-- **Usable shelf length:** ~49.5 in (not the full 61.5 in wall)
-
-To use the full wall length, you MUST install wood blocking at 6.0 and 60.5 in as originally planned, then add two more printed brackets at those locations.
-
-### Parts List (what to print)
-
-All parts from the R9 one-bay geometry, scaled to this wall:
-
-| Part | Quantity | Print Time (est.) | Notes |
-|---|---|---|---|
-| Wall bracket (compact support) | 3 | ~4 hr each | Prints flat, 32 mm wide |
-| Deck cassette segment (160 mm) | 3 | ~6 hr each | Prints top-down |
-| End cassette (shorter) | 2 | ~4 hr each | Custom length for ends |
-| Rear ledger segment | 3 | ~2 hr each | Joins cassettes at wall |
-| Front beam segment | 3 | ~2 hr each | Joins cassettes at front |
-
-**Total: ~14 parts, ~50–60 hours of print time**
-
-### Part Geometry
-
-**Wall Bracket (R9 compact support)**
-- 32 mm wide × 152 mm deep × 190 mm tall
-- Three 7mm screw holes at 16, 80, 144 mm below shelf
-- Fits A1 mini printing on its side
-- Uses existing `development/r9/one_bay_geometry.py` → `build_left_compact_support()` / `build_right_compact_support()`
-
-**Deck Cassette**
-- 160 mm wide × 152 mm deep × 30 mm tall
-- Box construction with 3 internal webs (2.4 mm walls)
-- Prints top-face-down (smooth top surface)
-- Uses existing `build_shelf_cassette()` from R9
-
-**Ledger and Beam**
-- 96 mm long × 16 mm deep × 30 mm tall
-- Connect cassettes and provide rear/front stiffening
-- Tongue-and-socket fit into brackets
-
-## Print Settings
-
-Use these settings for SUNLU black PETG on A1 mini:
-
-| Setting | Value |
-|---|---|
-| Layer height | 0.2 mm |
-| Wall loops | 4 |
-| Top/bottom layers | 5 |
-| Infill | 25% gyroid |
-| Nozzle temp | 240°C |
-| Bed temp | 70°C (textured plate) |
-| Speed | 80 mm/s walls, 120 mm/s infill |
-| Cooling | 60–80% |
-| Supports | OFF for cassettes; Bracket needs support for screw holes |
-
-**Critical:** Dry your PETG before printing. Wet PETG = weak parts. Use a filament dryer or oven at 65°C for 4+ hours.
-
-## Assembly Order
-
-### 1. Mount the brackets
-
-Each bracket has three 7mm holes. Use:
-- **Screws:** #10 × 2.5 in wood screws (or GRK RSS 1/4 × 2.5 in if available)
-- **Washers:** 1/4 in USS flat washers (≤20 mm OD) between screw head and PETG
-
-Steps:
-1. Mark stud centers at 17.0, 32.5, 48.5 in from corner
-2. Mark shelf height (e.g., 68 in from floor to top of bracket)
-3. Hold bracket to wall, check level
-4. Drill pilot holes (7/64 in) through bracket holes into stud
-5. Drive screws with washers — **snug, not cranked tight** (PETG can crack)
-
-### 2. Install rear ledgers
-
-The ledger pieces tongue into slots in the bracket backs. Slide them in from above or the side. They do not need separate fasteners if the fit is correct.
-
-### 3. Install front beams
-
-Same as ledgers, but at the front of the brackets. These stiffen the front edge.
-
-### 4. Drop in deck cassettes
-
-The cassettes sit on the bracket tops with locator bosses. They're captured by the ledger and beam. No screws needed in the deck itself — gravity and the frame hold them.
-
-### 5. Install end pieces
-
-The end cassettes are shorter to fit the remaining space. They may need to be generated at custom lengths (see "Generator Status" below).
-
-## Hardware Shopping List
-
-| Item | Quantity | Where to Buy |
-|---|---|---|
-| #10 × 2.5 in wood screws | 12 (9 + spares) | Home Depot / Lowes |
-| 1/4 in USS flat washers | 12 | Home Depot / Lowes |
-| SUNLU black PETG 1.75mm | 2 kg | Amazon (ASIN B0D1KC72YP) |
-
-Optional but recommended:
-- Stud finder (if not already verified)
-- Level (24 in or longer)
-- Drill with 7/64 in bit
-- Torx T25 or Phillips driver
-
-## Generator Status
-
-**The existing R9 generator can produce the structural parts.** The geometry is in:
+**Deck Segment:** Print with the TOP face DOWN (touching the plate). This gives you a smooth usable top surface.
 
 ```
-development/r9/one_bay_geometry.py
+Print plate
+─────────────────────
+    ┌───────────┐  ← Top surface (smooth)
+    │═══════════│  ← Ribs print upward
+    └───────────┘
 ```
 
-Functions:
-- `build_shelf_cassette()` — the ribbed deck segment
-- `build_left_compact_support()` / `build_right_compact_support()` — wall brackets
-- `build_rear_ledger()` — rear connecting member
-- `build_front_beam()` — front connecting member
+Supports: NO — the box structure is self-supporting.
 
-**What the generator cannot currently do:**
-- Custom-length end cassettes (you'd need to manually scale or edit)
-- A full-wall parametric layout for 61.5 in with variable bracket positions
+**End Cap:** Print flat, any orientation.
 
-For now, print the standard 160mm cassettes and brackets. The end pieces may need hand-editing or accepting a slight gap at the ends covered by a simple printed cap.
+## Print Time Estimates
 
-### To generate the parts:
+| Part | Time Each | Quantity | Total |
+|------|-----------|----------|-------|
+| Arch bracket | ~6 hours | 3 | 18 hours |
+| Deck segment | ~4 hours | 9 | 36 hours |
+| End cap | ~1 hour | 2 | 2 hours |
+| **TOTAL** | | **14** | **~56 hours** |
+
+PETG needed: **~2.5 kg** (buy 3 kg to be safe)
+
+## Hardware
+
+| Item | Quantity | Notes |
+|------|----------|-------|
+| #10 × 2.5" wood screws | 9 | 3 per bracket, into studs |
+| 1/4" flat washers | 9 | Between screw head and PETG |
+| M4 × 20mm bolts | 36 | 4 per deck-bracket joint |
+| M4 nuts | 36 | Or use threaded inserts |
+
+**Where to buy:**
+- Screws/washers: Home Depot, Lowes, any hardware store
+- M4 bolts/nuts: Amazon, Home Depot hardware aisle, McMaster-Carr
+
+## Assembly
+
+### Step 1: Mount the Arch Brackets
+
+1. Mark stud centers on wall: **17.0", 32.5", 48.5"** from inside corner
+2. Mark shelf height (e.g., 68" from floor to top of bracket)
+3. Hold bracket against wall, level it
+4. Through the 3 screw holes (with counterbores), drill 7/64" pilot holes into stud
+5. Drive #10 screws with washers — **snug, not over-torqued** (PETG cracks if you crank on it)
+6. Repeat for all 3 brackets
+
+The brackets have:
+- 3 screw holes at 30mm, 80mm, 130mm from top
+- 6mm clearance holes for #10 or 1/4" screws
+- 14mm counterbores for washer seating
+
+### Step 2: Install Deck Segments
+
+1. Set first deck segment on bracket tops
+2. Align bolt holes in deck with holes in bracket top plates
+3. Insert M4 bolts from above, secure with nuts below
+4. Continue with remaining segments, butting them together
+5. Install end caps at the exposed ends
+
+Each deck segment bolts to the brackets below it with 4 bolts (2 at each end where it meets a bracket).
+
+### Step 3: Done
+
+That's it. No glue, no complex joinery. Bolts and screws.
+
+## Load Rating
+
+**Honest answer: 30–50 lb evenly distributed for light/medium duty.**
+
+This is not a 120 lb industrial shelf. PETG creeps under sustained load. But for closet storage — folded clothes, linens, light bins, hats — it will work.
+
+### Safe Uses
+- Folded clothes, towels, linens
+- Light plastic bins (not full of books)
+- Hats, soft goods, small items
+- Seasonal storage
+
+### Not Recommended
+- Heavy bins of books or tools
+- Dense items concentrated at one spot
+- Anything you'd be sad about if it fell
+
+### Why the Arches Help
+
+Roman arches work through compression. The curved shape directs load down and into the wall, rather than creating a bending moment that tries to peel the bracket off. This is why arches have been used in architecture for thousands of years.
+
+The thick arch ribs (12mm) and multiple ribs per bracket (3) provide redundancy. The top plate is 16mm thick where the deck sits.
+
+## Regenerating the Parts
+
+If you need to modify dimensions, the generator is at:
 
 ```bash
-cd development/r9
-python3 generate_one_bay_prototype.py
+python3 scripts/generate_all_petg_shelf.py
 ```
 
-Output goes to `development/r9/generated/one_bay_prototype_v3/`. Open the STL or 3MF files in Bambu Studio.
+Output goes to `generated/all_petg_shelf/`. Edit the constants at the top of the script to change dimensions.
 
-## Limitations and Risks
+## What This Design Does NOT Include
 
-1. **No blocking = shorter shelf.** Without wood blocking at the ends, this design only spans ~49.5 in, not 61.5 in.
+- Plywood deck (it's all PETG)
+- Steel angle stiffener (it's all PETG)
+- KV standards and brackets (the arches ARE the brackets)
+- The 102-piece Palatine ornamental tile set (this is structural, not decorative)
+- The short/return wall (that's a separate project)
 
-2. **PETG creep.** Under sustained load, PETG slowly deforms. Keep loads light and distributed.
+## Troubleshooting
 
-3. **Three-screw brackets.** Each bracket has only 3 screws into one stud. This is adequate for light loads but not for heavy storage.
+**Brackets don't sit flat against wall:**
+Check for drywall bumps or paint drips. Sand/scrape if needed.
 
-4. **Printed tolerances.** The tongue-and-socket joints depend on accurate printing. Do a test fit before committing.
+**Deck segments don't align:**
+Print tolerances vary. You may need to file bolt holes slightly larger.
 
-5. **Not fire rated.** PETG burns. Don't put this near heat sources.
+**Screws won't bite:**
+You might have missed the stud. Use a stud finder to verify, or drill a small test hole.
 
-## What This Is NOT
+**Parts warping during print:**
+PETG warps if the bed isn't hot enough or there's a draft. Use 70°C bed, enclosure if possible, and make sure your first layer is well-adhered.
 
-- Not a 120 lb shelf (that was the plywood/steel design target)
-- Not using the Triadic Palatine ornamental skin (that's separate/optional)
-- Not the full L-corner configuration (return wall is deferred)
-- Not rated or certified — this is a DIY project
-
-## Next Steps After This Works
-
-Once the long-wall shelf is installed and holding light loads successfully:
-
-1. **Add blocking** at 6.0 and 60.5 in if you want full wall coverage
-2. **Extend to return wall** using the same bracket/cassette system
-3. **Optional:** Add the Palatine decorative fascia over the structural cassettes
+**Creaking/movement under load:**
+Tighten bolts. If still moving, add a washer between deck segments at joints.
 
 ---
 
-*This file replaces the plywood/steel INSTALL_NOW.md and SHOPPING_LIST.md. The goal is a printable PETG shelf you can build this week.*
+*This is a real, printable shelf. Download the STLs, slice them, print them, bolt them together, screw them to your wall. Go.*

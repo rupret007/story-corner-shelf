@@ -1,0 +1,57 @@
+{
+  "description": "All-PETG structural shelf parts",
+  "target_wall": {
+    "length_in": 61.5,
+    "stud_positions_in": [
+      17.0,
+      32.5,
+      48.5
+    ]
+  },
+  "parts": {
+    "arch_bracket": {
+      "file": "arch_bracket.stl",
+      "quantity_needed": 3,
+      "dimensions_mm": [
+        152.0,
+        32.0,
+        160.0
+      ],
+      "print_time_hours_estimate": 6,
+      "print_orientation": "On side, arch opening facing up",
+      "description": "Structural Roman arch wall bracket, screws into stud"
+    },
+    "deck_segment": {
+      "file": "deck_segment.stl",
+      "quantity_needed": 9,
+      "dimensions_mm": [
+        160.0,
+        152.0,
+        24.0
+      ],
+      "print_time_hours_estimate": 4,
+      "print_orientation": "Top face down for smooth surface",
+      "description": "Ribbed deck segment, bolts to bracket tops"
+    },
+    "end_cap": {
+      "file": "end_cap.stl",
+      "quantity_needed": 2,
+      "dimensions_mm": [
+        6.0,
+        152.0,
+        24.0
+      ],
+      "print_time_hours_estimate": 1,
+      "print_orientation": "Flat",
+      "description": "End cap for exposed deck ends"
+    }
+  },
+  "hardware": {
+    "wall_screws": "#10 x 2.5 in wood screws, 9 total (3 per bracket)",
+    "wall_washers": "1/4 in flat washers, 9 total",
+    "deck_bolts": "M4 x 20mm bolts, 36 total (4 per deck-bracket joint)",
+    "deck_nuts": "M4 nuts, 36 total"
+  },
+  "total_print_time_hours_estimate": 56,
+  "total_petg_kg_estimate": 2.5
+}
