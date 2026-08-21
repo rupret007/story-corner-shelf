@@ -1,230 +1,197 @@
-# Usage Guide — Two-Level Storage Arcade
+# USAGE
 
-Mapping closet stuff to printed features across two shelf levels.
+100% PETG Two-Deck Storage System
 
-## The Architecture
+---
+
+## Architecture
 
 ```
-                            CEILING (25mm clearance)
-┌────────────────────────────────────────────────────────────┐
-│                    UPPER DECK                              │
-├────────────────────────────────────────────────────────────┤
-│  ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗                       │
-│  ║   ║  S  ║   ║  S  ║   ║  S  ║   ║   UPPER LEVEL        │
-│  ║BAY║  P  ║BAY║  P  ║BAY║  P  ║BAY║   4 bays + 8 piers   │
-│  ║   ║  I  ║   ║  I  ║   ║  I  ║   ║                       │
-│  ╚═══╝  N  ╚═══╝  N  ╚═══╝  N  ╚═══╝                       │
-│         E         E         E                              │
-└────────────────────────────────────────────────────────────┘
-                         ↑ 20mm gap
-┌────────────────────────────────────────────────────────────┐
-│                    LOWER DECK                              │
-├────────────────────────────────────────────────────────────┤
-│  ╔═══╗     ╔═══╗     ╔═══╗     ╔═══╗                       │
-│  ║   ║  S  ║   ║  S  ║   ║  S  ║   ║   LOWER LEVEL        │
-│  ║BAY║  P  ║BAY║  P  ║BAY║  P  ║BAY║   4 bays + 8 piers   │
-│  ║   ║  I  ║   ║  I  ║   ║  I  ║   ║                       │
-│  ╚═══╝  N  ╚═══╝  N  ╚═══╝  N  ╚═══╝                       │
-│         E         E         E                              │
-└────────────────────────────────────────────────────────────┘
-                         ↑ 50mm clearance
-═══════════════════════════════════════════════════════════════
-                    OUTLET TOP
+┌──────────────────────────────────────────────────────────────┐
+│                      UPPER DECK                              │
+│  • Less frequent access                                      │
+│  • Cases, boxes, seasonal items                              │
+└──────────────────────────────────────────────────────────────┘
+                              ↕ 200mm gap
+┌──────────────────────────────────────────────────────────────┐
+│                    INTER-DECK SPACE                          │
+│  • Cable troughs with hooks                                  │
+│  • String cassettes (picks, strings, capos)                  │
+│  • Guitar hanger on spine (guitar hangs into room)           │
+└──────────────────────────────────────────────────────────────┘
+                              ↕
+┌──────────────────────────────────────────────────────────────┐
+│                      LOWER DECK                              │
+│  • Daily access                                              │
+│  • Pedalboard, amp head, frequently used gear                │
+└──────────────────────────────────────────────────────────────┘
 ```
 
-## Storage Zones Summary
+---
 
-| Zone | Count | Use For |
-|------|-------|---------|
-| Upper bay openings | 4 | Seasonal items, less-accessed storage |
-| Upper deck surface | 1 continuous | Boxes, bins, flat items |
-| Upper pier hollows | 8 | Cable inserts, cassettes |
-| Lower bay openings | 4 | Daily-use cables, bins |
-| Lower deck surface | 1 continuous | Boxes, frequently accessed items |
-| Lower pier hollows | 8 | Cable inserts, cassettes |
-| Guitar hanger | 1 | Guitar (hangs below lower level) |
+## Storage Zones
 
-**Total: 8 bays + 2 decks + 16 piers + 1 guitar hanger**
+| Zone | What Lives There |
+|------|-----------------|
+| Upper deck | Cases, boxes, backup gear, seasonal items |
+| Inter-deck | Cables (trough), strings/picks (cassette), guitar (hanger) |
+| Lower deck | Daily gear — pedalboard, amp head, practice items |
 
 ---
 
-## Upper Level — Less Frequent Access
+## Part Functions
 
-The upper level is harder to reach. Use it for:
+### Stud Spine
 
-### Seasonal / Archive Storage
-- Holiday decorations in bins
-- Old cables you might need someday
-- Backup guitar strings (bulk)
-- Tax documents (in waterproof box)
+The **only** wall-load part. Everything hangs from spines.
 
-### What Fits in Upper Bays
-- Arch opening: ~150mm deep × ~105mm wide at floor
-- Fits small bins, containers up to that size
-- Bay floor is a trough — good for coiled cables
+- Screws to stud with 3× #10 wood screws
+- Crown projects into room to support deck
+- M4 grid on crown for attachments
 
-### Upper Deck
-- Continuous surface across all bays
-- 25 kg total capacity
-- Best for flat storage: shoeboxes, photo boxes
+**Where:** At 17.0", 32.5", 48.5" stud positions. Two per stud (upper + lower level).
 
----
+### Deck Module
 
-## Lower Level — Daily Access
+Ribbed box-beam for flat storage surface.
 
-The lower level is at convenient height. Use it for:
+- Sits on spine crowns
+- M4 holes align with crown grid
+- Cross-ribs prevent deflection under point loads
 
-### Cables (Active Use)
-**Where:** Lower bay openings + Cable Inserts in piers
+**Where:** ~10 modules per level, spanning full wall length.
 
-| Cable Type | Location |
-|------------|----------|
-| Phone chargers | Cable insert in pier |
-| USB cables | Cable insert hooks |
-| Audio cables | Bay floor trough |
-| HDMI/DisplayPort | Bay opening |
-| Extension cords | Bay floor (coiled) |
+### Cable Trough
 
-### Guitar Gear
-**Where:** String cassette in pier + Guitar hanger
+U-channel with integrated hooks.
 
-| Item | Location |
-|------|----------|
-| Guitar | Hanger on lower spine (body hangs in room) |
-| Strings (packaged) | String cassette in pier |
-| Picks | String cassette divider |
-| Capo | String cassette |
-| Slide | String cassette |
-| Tuner | Bay opening (small bin) |
+- Mounts between decks
+- Hooks hold coiled cables
+- Trough catches loose ends
 
-### Small Bins
-**Where:** Lower bay openings
+**Where:** Bolts to inter-deck bracket or spine crown in the 200mm gap.
 
-- Charging brick storage
-- Small tools
-- Batteries
-- Adapters and dongles
+### String Cassette
 
-### Lower Deck
-- Continuous surface
-- 25 kg capacity
-- Shoeboxes, organizer bins
-- Items you grab weekly
+Drawer-style tray with dividers.
 
----
+- Open top for easy access
+- Four compartments for strings, picks, capos, slides
+- Handle cutout on front
 
-## Pier Storage (Both Levels)
+**Where:** Sits on lower deck or bolts to inter-deck bracket.
 
-Each bay has two hollow piers. 8 bays × 2 piers = **16 pier columns**.
+### Inter-Deck Bracket
 
-### Pier Dimensions
-- Internal width: 17 mm
-- Depth: ~140 mm
-- Height: ~110 mm
+Vertical connector between upper and lower decks.
 
-### What Fits
-| Insert | Purpose |
-|--------|---------|
-| Cable Insert | 3 hooks for cable organization |
-| String Cassette | Divided tray for small items |
-| Empty | Future use, custom inserts |
+- Top flange bolts to upper deck
+- Bottom flange bolts to lower deck
+- Side panel has M4 grid for mounting cable troughs
 
-### Suggested Pier Layout
-
-| Level | Pier Position | Insert |
-|-------|---------------|--------|
-| Lower | Bay 1 Left | Cable insert |
-| Lower | Bay 1 Right | Cable insert |
-| Lower | Bay 2 Left | String cassette |
-| Lower | Bay 2 Right | Empty (picks overflow) |
-| Lower | Bay 3 Left | Cable insert |
-| Lower | Bay 3 Right | Empty |
-| Lower | Bay 4 Left | Empty |
-| Lower | Bay 4 Right | Empty |
-| Upper | All | Empty or seasonal storage |
-
----
-
-## Guitar Hanger Placement
-
-The guitar hanger bolts to a **spine**, not to a bay.
-
-**Recommended position:** Leftmost lower spine
-- Guitar body hangs in room (not on deck)
-- Neck rests in slot at ~1m height
-- Clearance needed: ~100mm from wall + guitar body depth
-
-**Do not mount guitar hanger to upper spines** — body would hit lower deck.
-
----
-
-## Load Distribution
-
-### Per Bay Floor
-- Maximum: 5 kg (11 lb)
-- Good for: coiled cables, small bins
-- Don't stack heavy items
-
-### Per Deck Surface
-- Maximum: 25 kg (55 lb) distributed
-- Spread weight across modules
-- Keep heavy items near spines (shorter spans)
-
-### Two Decks Combined
-- Maximum: 50 kg (110 lb)
-- Upper + Lower together
-- Accounts for PETG creep
+**Where:** Between spines, typically 2 per span (4 total for long wall).
 
 ### Guitar Hanger
-- Maximum: 5 kg (11 lb)
-- One standard guitar
+
+Neck cradle that bolts to spine.
+
+- Padded slot holds guitar neck
+- Guitar body hangs into room (not on deck)
+- Bolts to M4 grid on spine crown
+
+**Where:** On lower spine, typically at middle stud (32.5") for centered access.
 
 ---
 
-## Access Pattern
+## Example Layout
 
 ```
-EASY    ──────────────────────────────────►    HARD
-
-Lower bays   Lower deck   Upper bays   Upper deck
-(eye level)  (reach up)   (step stool) (high reach)
+│← 17.0" →│← 15.5" →│← 16.0" →│← wall end
+│         │         │         │
+│  SPINE  │ BRACKET │  SPINE  │ BRACKET │  SPINE  │
+│         │         │         │         │         │
+│  trough │ cassette│  trough │ (empty) │ guitar  │
+│         │         │         │         │ hanger  │
 ```
 
-**Daily items:** Lower bays, lower piers  
-**Weekly items:** Lower deck  
-**Monthly items:** Upper bays  
-**Seasonal items:** Upper deck  
+---
+
+## Load Guidelines
+
+| Location | Max Load | Notes |
+|----------|----------|-------|
+| Upper deck (total) | 30 kg | Distributed across span |
+| Lower deck (total) | 30 kg | Distributed across span |
+| Single deck module | 5 kg | Centered point load |
+| Guitar hanger | 1 guitar | Acoustic or electric |
+| Cable trough | 2 kg | Full of cables |
+| String cassette | 1 kg | Full of accessories |
+
+PETG creep note: These limits assume 6 walls, 40% gyroid infill, and loads that sit there long-term. Short-term handling can exceed these.
 
 ---
 
-## Short Wall (Future)
+## Access Patterns
 
-When the ~36" return wall is measured and ready:
-
-- Same bay modules work
-- Same spine modules work
-- Corner connection where walls meet
-- Potentially 1-2 bays on short wall per level
-- Creates L-shaped storage arcade
-
-**Status: ON HOLD until measured**
+| Frequency | Store On | Example Items |
+|-----------|----------|---------------|
+| Daily | Lower deck, inter-deck hangers | Practice guitar, patch cables |
+| Weekly | Lower deck edges | Tuner, capo, metronome |
+| Monthly | Upper deck | Extra strings, backup cables |
+| Rarely | Upper deck back | Cases, seasonal, archives |
 
 ---
 
-## Custom Inserts
+## Cable Management
 
-Want something other than cable hooks or string cassettes?
+The cable trough system:
 
-**Pier insert envelope:**
-- Width: 16 mm (fits 17 mm internal)
-- Depth: up to 140 mm
-- Height: up to 100 mm
+1. **Hooks** — wrap coiled cables, prevent tangling
+2. **Trough floor** — catches loose ends
+3. **Open back** — allows cable runs to devices below
 
-Design your own insert, print it, slide it in.
+Suggested arrangement:
+- Group cables by function (power, audio, data)
+- Hang longest cables in back, shortest in front
+- Label cables with tape if needed
 
-**Bay opening envelope:**
-- Width: ~105 mm at floor
-- Depth: ~140 mm
-- Height: ~100 mm (to arch crown)
+---
 
-Any container fitting these dimensions works.
+## Guitar Storage
+
+The guitar hanger mounts to the **lower** spine so the guitar hangs in the room at accessible height.
+
+1. Bolt hanger to spine crown M4 grid
+2. Guitar neck rests in padded slot
+3. Body hangs free in room (not touching deck or wall)
+
+Weight is carried entirely by the spine → stud path.
+
+---
+
+## Future: Short Wall
+
+The ~36" return wall (on hold) will use:
+
+- Same spine vocabulary
+- Same deck modules
+- Corner bracket (future part) to turn the system
+
+When measured, add parts without changing existing long-wall installation.
+
+---
+
+## Customization
+
+All parts are parametric in `scripts/generate_storage_arcade.py`. To customize:
+
+1. Edit constants at top of script
+2. Run `python3 scripts/generate_storage_arcade.py`
+3. New STL/3MF files appear in `generated/storage_arcade/`
+
+Adjustable parameters:
+- Spine dimensions (width, height, crown depth)
+- Deck dimensions (length, width, rib count)
+- M4 grid positions
+- Trough hook count
+- Cassette compartment layout

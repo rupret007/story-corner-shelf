@@ -1,41 +1,42 @@
 #!/usr/bin/env python3
-"""Generate Elon-style 100% PETG storage arcade system.
+"""Generate 100% PETG two-deck storage system.
 
-Every gram printed stores something or carries load. No decorative air.
+Every gram printed stores something or carries load. No decorative elements.
 
-=== TWO-LEVEL ARCHITECTURE ===
-Long wall (61.5 in): Two stacked shelf levels above the electric box.
-Short wall (~36 in): ON HOLD for print until measured. Same bay/spine language.
+=== ARCHITECTURE ===
+- TWO stacked PETG decks on the 61.5 in long wall, above the electric box
+- Stud spines at 17.0 / 32.5 / 48.5 in are the ONLY wall-load parts
+- Storage is functional attachments between the two decks:
+  - Cable trough (hooks + channel)
+  - String cassette / drawer
+  - Guitar neck hanger (bolts to spine, guitar hangs in room)
 
-HEIGHT ASSUMPTION (UNVERIFIED):
-- User-reported outlet-top to ceiling: 43.5 in (1104.9 mm)
-- This is UNVERIFIED. Field-measure before printing spines.
-- Design provides clearance off ceiling and off the outlet box.
+=== WHY NO ARCHES ===
+Arches were removed because they are not in the load path.
+Spines carry the load directly to studs. Arches would be decorative mass.
+Every gram printed must store something or carry load.
 
-ARCHITECTURE:
-1) Stud spine (tall, print 3): Wall-load backplate with two M4 crown levels.
-2) Arch-bay module: Roman arch OPENING is a storage bay facing the room.
-3) Deck module: Ribbed box section on top of each arcade level.
-4) Inserts: Cable hook, string cassette, guitar neck hanger.
-
-HARD CONSTRAINTS:
-- 100% PETG. No plywood, steel angle, KV, Palatine tiles, R13 tubes.
+=== CONSTRAINTS ===
+- 100% PETG. No plywood, steel angle, KV, Palatine, R13 tubes.
 - Bambu A1 mini 180mm, 0.4mm nozzle. Every part: XY ≤160mm with brim.
 - Long wall 61.5 in. Studs at 17.0, 32.5, 48.5 in from inside corner.
 - Mechanical screws (wood into studs, M4 through PETG). No snap-fit load path.
+- Short wall (~36 in) ON HOLD until measured.
+
+=== HEIGHT ASSUMPTION (UNVERIFIED) ===
+- Outlet-top to ceiling: 43.5 in (user-reported, NOT field-verified)
+- Measure before cutting/printing final spine lengths
 """
 
 from __future__ import annotations
 
 import json
 import math
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence
 
 import numpy as np
 import trimesh
-from shapely.geometry import Polygon
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "generated" / "storage_arcade"
@@ -45,95 +46,35 @@ BUILD_VOLUME_MM = (180.0, 180.0, 180.0)
 MAX_BED_XY_MM = 160.0  # HARD LIMIT with 3mm brim + calibration region
 
 # === HEIGHT ASSUMPTIONS (UNVERIFIED) ===
-# User-reported outlet-top to ceiling: 43.5 in = 1104.9 mm
-# THIS IS UNVERIFIED. Field-measure before printing spines.
-OUTLET_TO_CEILING_IN = 43.5  # UNVERIFIED - user reported
+OUTLET_TO_CEILING_IN = 43.5  # USER-REPORTED, NOT FIELD-VERIFIED
 OUTLET_TO_CEILING_MM = OUTLET_TO_CEILING_IN * 25.4  # 1104.9 mm
 
 # Design clearances
-CEILING_CLEARANCE_MM = 25.0  # Gap from top of deck to ceiling
-OUTLET_CLEARANCE_MM = 50.0   # Gap from bottom of lower bay to outlet top
-INTER_LEVEL_GAP_MM = 20.0    # Gap between upper and lower arcade levels
-
-# Calculate available height for two levels
-AVAILABLE_HEIGHT_MM = OUTLET_TO_CEILING_MM - CEILING_CLEARANCE_MM - OUTLET_CLEARANCE_MM
-# 1104.9 - 25 - 50 = 1029.9 mm for two levels + gap
+CEILING_CLEARANCE_MM = 25.0
+OUTLET_CLEARANCE_MM = 50.0
+INTER_DECK_GAP_MM = 200.0  # Space between decks for attachments
 
 # === WALL LAYOUT ===
-# Long wall FIRST
 LONG_WALL_LENGTH_IN = 61.5
-STUD_POSITIONS_IN = [17.0, 32.5, 48.5]  # From inside corner
+STUD_POSITIONS_IN = [17.0, 32.5, 48.5]
 STUD_SPACING_MM = [
     (STUD_POSITIONS_IN[1] - STUD_POSITIONS_IN[0]) * 25.4,  # 393.7 mm
     (STUD_POSITIONS_IN[2] - STUD_POSITIONS_IN[1]) * 25.4,  # 406.4 mm
 ]
 
-# Short wall ON HOLD
 SHORT_WALL_LENGTH_IN = 36.0  # Nominal, NEEDS MEASUREMENT
 SHORT_WALL_ON_HOLD = True
 
-# === ARCH-BAY MODULE ===
-# Must fit A1 mini ≤160mm XY with brim
-BAY_WIDTH_MM = 155.0   # Along wall run
-BAY_DEPTH_MM = 150.0   # Into room  
-BAY_HEIGHT_MM = 155.0  # Bay height (fits 160mm bed rule)
-
-# Pier dimensions - hollow for storage
-PIER_WIDTH_MM = 25.0
-PIER_WALL_MM = 4.0
-PIER_INTERNAL_WIDTH_MM = PIER_WIDTH_MM - 2 * PIER_WALL_MM  # 17mm usable
-
-# Arch geometry - true Roman semicircle
-ARCH_SPAN_MM = BAY_WIDTH_MM - 2 * PIER_WIDTH_MM  # 105mm opening
-ARCH_RADIUS_MM = ARCH_SPAN_MM / 2.0  # 52.5mm radius
-ARCH_SPRING_Z_MM = 55.0  # Height where arch starts curving
-ARCH_WALL_MM = 5.0
-
-# Bay floor - cable trough / bin seat
-BAY_FLOOR_HEIGHT_MM = 25.0
-BAY_FLOOR_WALL_MM = 4.0
-
-# Crown that connects to deck
-BAY_CROWN_HEIGHT_MM = 20.0
-BAY_CROWN_WALL_MM = 4.0
-
-# === DECK MODULE ===
-DECK_LENGTH_MM = 158.0
-DECK_WIDTH_MM = 150.0
-DECK_HEIGHT_MM = 35.0
-DECK_WALL_MM = 4.0
-DECK_RIB_COUNT = 3
-
-# === STUD SPINE (TALL - TWO LEVELS) ===
-# Single bay height: BAY_HEIGHT_MM = 155mm
-# Deck height: DECK_HEIGHT_MM = 35mm  
-# Per level total: 155 + 35 = 190mm
-LEVEL_HEIGHT_MM = BAY_HEIGHT_MM + DECK_HEIGHT_MM  # 190mm per level
-
-# Two levels + gap
-TWO_LEVEL_HEIGHT_MM = 2 * LEVEL_HEIGHT_MM + INTER_LEVEL_GAP_MM  # 400mm
-
-# Spine must span from outlet clearance to ceiling clearance
-# Total height = outlet clearance + two-level + ceiling clearance
-# But spine is printed in sections due to 180mm Z limit
-# Design: Two spine sections that stack, or one tall spine printed on side
-
-# For A1 mini, max Z = 180mm. Spine needs ~400mm for two levels.
-# Solution: Print spine lying flat (158mm height prints as 158mm Y on bed)
-# OR: Modular spine sections that bolt together
-
-# We'll use a single spine design that can print lying flat
-SPINE_WIDTH_MM = 40.0   # Along wall run (X on bed when flat)
-SPINE_HEIGHT_MM = 158.0 # Height per section (prints as Y)
-SPINE_DEPTH_MM = 20.0   # Wall projection
+# === STUD SPINE ===
+# The ONLY wall-load part. Everything hangs from spines.
+SPINE_WIDTH_MM = 40.0   # Along wall run
+SPINE_HEIGHT_MM = 158.0 # Printable height (fits A1 mini)
+SPINE_DEPTH_MM = 25.0   # Wall projection (enough for M4 grid)
 SPINE_WALL_MM = 5.0
-SPINE_CROWN_HEIGHT_MM = 25.0
-SPINE_CROWN_DEPTH_MM = 50.0
 
-# For two-level system, we print spine sections and stack them
-# Lower spine: supports lower arcade
-# Upper spine: supports upper arcade
-# Both bolt to same stud
+# Crown extends out to support deck
+SPINE_CROWN_HEIGHT_MM = 30.0
+SPINE_CROWN_DEPTH_MM = 160.0  # Full deck depth support
 
 # Screw holes (3 per spine section)
 WOOD_SCREW_DIAMETER_MM = 5.5
@@ -141,20 +82,43 @@ WOOD_SCREW_POSITIONS_Z_MM = [25.0, 79.0, 133.0]
 COUNTERBORE_DIAMETER_MM = 12.0
 COUNTERBORE_DEPTH_MM = 4.0
 
-# M4 grid for attaching bays and deck
+# M4 grid
 M4_CLEARANCE_MM = 4.5
-M4_GRID_Y_MM = [15.0, 35.0]
-M4_GRID_X_MM = [10.0, 30.0]
+M4_GRID_Y_MM = [20.0, 60.0, 100.0, 140.0]  # 4 positions across crown depth
+M4_GRID_X_MM = [10.0, 30.0]  # 2 positions across width
 
-# === INSERTS ===
-CABLE_INSERT_WIDTH_MM = PIER_INTERNAL_WIDTH_MM - 1.0
-CABLE_INSERT_DEPTH_MM = BAY_DEPTH_MM - 10.0
-CABLE_INSERT_HEIGHT_MM = 40.0
+# === DECK MODULE ===
+DECK_LENGTH_MM = 158.0  # Along wall run
+DECK_WIDTH_MM = 155.0   # Depth into room
+DECK_HEIGHT_MM = 30.0   # Box section depth
+DECK_WALL_MM = 4.0
+DECK_RIB_COUNT = 3
 
-STRING_CASSETTE_WIDTH_MM = PIER_INTERNAL_WIDTH_MM - 1.0
-STRING_CASSETTE_DEPTH_MM = 60.0
-STRING_CASSETTE_HEIGHT_MM = 80.0
+# === CABLE TROUGH ===
+# Mounts between decks, provides cable organization
+TROUGH_LENGTH_MM = 155.0  # Spans between spines
+TROUGH_WIDTH_MM = 60.0    # Depth
+TROUGH_HEIGHT_MM = 50.0   # Height
+TROUGH_WALL_MM = 3.0
+HOOK_COUNT = 4
+HOOK_HEIGHT_MM = 30.0
+HOOK_DEPTH_MM = 15.0
 
+# === STRING CASSETTE ===
+# Drawer-style insert for guitar strings, picks, etc.
+CASSETTE_LENGTH_MM = 100.0
+CASSETTE_WIDTH_MM = 80.0
+CASSETTE_HEIGHT_MM = 60.0
+CASSETTE_WALL_MM = 2.5
+
+# === INTER-DECK BRACKET ===
+# Connects upper and lower deck, provides attachment points
+BRACKET_WIDTH_MM = 40.0   # Same as spine width
+BRACKET_DEPTH_MM = 155.0  # Full deck depth
+BRACKET_HEIGHT_MM = 158.0 # Fills inter-deck gap (printable)
+BRACKET_WALL_MM = 4.0
+
+# === GUITAR HANGER ===
 GUITAR_HANGER_WIDTH_MM = 60.0
 GUITAR_HANGER_DEPTH_MM = 100.0
 GUITAR_HANGER_HEIGHT_MM = 30.0
@@ -195,6 +159,14 @@ def cylinder_y(radius: float, length: float, center: tuple[float, float, float],
     return clean_mesh(mesh)
 
 
+def cylinder_x(radius: float, length: float, center: tuple[float, float, float], segments: int = 32) -> trimesh.Trimesh:
+    mesh = trimesh.creation.cylinder(radius=radius, height=length, sections=segments)
+    rot = trimesh.transformations.rotation_matrix(math.pi / 2, [0, 1, 0])
+    mesh.apply_transform(rot)
+    mesh.apply_translation(center)
+    return clean_mesh(mesh)
+
+
 def boolean_union(meshes: Sequence[trimesh.Trimesh]) -> trimesh.Trimesh:
     if not meshes:
         raise ValueError("No meshes to union")
@@ -215,37 +187,22 @@ def boolean_difference(body: trimesh.Trimesh, cutters: Sequence[trimesh.Trimesh]
     return clean_mesh(result)
 
 
-def extrude_yz_profile(profile: Polygon, x_length: float, x_start: float = 0.0) -> trimesh.Trimesh:
-    if not profile.is_valid or profile.is_empty:
-        raise ValueError("Invalid profile polygon")
-    mesh = trimesh.creation.extrude_polygon(profile, height=x_length, engine="earcut")
-    mesh.vertices = mesh.vertices[:, [2, 0, 1]]
-    mesh.vertices[:, 0] += x_start
-    mesh.fix_normals()
-    return clean_mesh(mesh)
-
-
 def build_stud_spine() -> trimesh.Trimesh:
-    """Build a single spine section (158mm tall).
+    """Build the wall-mount spine - the ONLY wall-load part.
     
-    For two-level system: Stack two spine sections on each stud.
-    Lower spine at outlet clearance height.
-    Upper spine above the lower arcade.
-    
-    Each spine section has:
-    - 3 wood screw holes into stud
-    - M4 grid on crown for bay/deck attachment
+    Screws to stud. Crown projects out to support deck.
+    M4 grid on crown for deck and attachment mounting.
     """
     parts: list[trimesh.Trimesh] = []
     
-    # Main backplate
+    # Main backplate (screws to stud)
     backplate = box(
         (SPINE_WALL_MM, SPINE_WIDTH_MM, SPINE_HEIGHT_MM),
         (0, 0, 0)
     )
     parts.append(backplate)
     
-    # Ribs for structural depth
+    # Ribs from wall to crown (triangular support)
     for y in [5.0, SPINE_WIDTH_MM - 10.0]:
         rib = box(
             (SPINE_DEPTH_MM, SPINE_WALL_MM, SPINE_HEIGHT_MM - SPINE_CROWN_HEIGHT_MM),
@@ -253,16 +210,26 @@ def build_stud_spine() -> trimesh.Trimesh:
         )
         parts.append(rib)
     
-    # Crown section (solid for simplicity, gyroid infill handles weight)
+    # Crown (supports deck) - solid block with M4 grid
     crown = box(
         (SPINE_CROWN_DEPTH_MM, SPINE_WIDTH_MM, SPINE_CROWN_HEIGHT_MM),
         (0, 0, SPINE_HEIGHT_MM - SPINE_CROWN_HEIGHT_MM)
     )
     parts.append(crown)
     
+    # Triangular gussets under crown for strength
+    gusset_height = 40.0
+    gusset_depth = SPINE_CROWN_DEPTH_MM - SPINE_DEPTH_MM
+    for y in [SPINE_WALL_MM, SPINE_WIDTH_MM - SPINE_WALL_MM * 2]:
+        gusset = box(
+            (gusset_depth, SPINE_WALL_MM, gusset_height),
+            (SPINE_DEPTH_MM, y, SPINE_HEIGHT_MM - SPINE_CROWN_HEIGHT_MM - gusset_height)
+        )
+        parts.append(gusset)
+    
     body = boolean_union(parts)
     
-    # Cut screw holes
+    # Cut screw holes for wood screws
     cutters: list[trimesh.Trimesh] = []
     for z in WOOD_SCREW_POSITIONS_Z_MM:
         hole = cylinder_y(
@@ -278,9 +245,9 @@ def build_stud_spine() -> trimesh.Trimesh:
         )
         cutters.append(cbore)
     
-    # M4 holes in crown
-    for x in M4_GRID_X_MM:
-        for y in M4_GRID_Y_MM:
+    # M4 holes in crown for deck mounting
+    for x in M4_GRID_Y_MM:  # These run along crown depth
+        for y in M4_GRID_X_MM:  # These run along spine width
             m4_hole = cylinder_z(
                 M4_CLEARANCE_MM / 2,
                 SPINE_CROWN_HEIGHT_MM + 2,
@@ -292,144 +259,32 @@ def build_stud_spine() -> trimesh.Trimesh:
     return normalize_mesh(result)
 
 
-def build_arch_bay() -> trimesh.Trimesh:
-    """Build an arch-bay module where the arch OPENING is storage.
+def build_deck_module() -> trimesh.Trimesh:
+    """Build a ribbed deck module - sits on spine crowns.
     
-    Same module used on both levels.
+    Box-beam construction. M4 holes for mounting to spines.
     """
     parts: list[trimesh.Trimesh] = []
     
-    # Left pier (hollow)
-    left_pier_outer = box(
-        (PIER_WIDTH_MM, BAY_DEPTH_MM, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM),
-        (0, 0, 0)
-    )
-    left_pier_inner = box(
-        (PIER_INTERNAL_WIDTH_MM, BAY_DEPTH_MM - 2 * PIER_WALL_MM, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM - PIER_WALL_MM),
-        (PIER_WALL_MM, PIER_WALL_MM, PIER_WALL_MM)
-    )
-    parts.append(left_pier_outer)
-    
-    # Right pier (hollow)
-    right_pier_outer = box(
-        (PIER_WIDTH_MM, BAY_DEPTH_MM, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM),
-        (BAY_WIDTH_MM - PIER_WIDTH_MM, 0, 0)
-    )
-    right_pier_inner = box(
-        (PIER_INTERNAL_WIDTH_MM, BAY_DEPTH_MM - 2 * PIER_WALL_MM, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM - PIER_WALL_MM),
-        (BAY_WIDTH_MM - PIER_WIDTH_MM + PIER_WALL_MM, PIER_WALL_MM, PIER_WALL_MM)
-    )
-    parts.append(right_pier_outer)
-    
-    # Bay floor (trough)
-    floor = box(
-        (ARCH_SPAN_MM, BAY_DEPTH_MM, BAY_FLOOR_HEIGHT_MM),
-        (PIER_WIDTH_MM, 0, 0)
-    )
-    parts.append(floor)
-    
-    floor_trough = box(
-        (ARCH_SPAN_MM - 2 * BAY_FLOOR_WALL_MM, BAY_DEPTH_MM - 2 * BAY_FLOOR_WALL_MM, BAY_FLOOR_HEIGHT_MM - BAY_FLOOR_WALL_MM),
-        (PIER_WIDTH_MM + BAY_FLOOR_WALL_MM, BAY_FLOOR_WALL_MM, BAY_FLOOR_WALL_MM)
-    )
-    
-    # Roman arch ring
-    arch_center_x = BAY_WIDTH_MM / 2
-    arch_center_z = ARCH_SPRING_Z_MM
-    num_points = 48
-    outer_r = ARCH_RADIUS_MM + ARCH_WALL_MM
-    inner_r = ARCH_RADIUS_MM
-    
-    outer_points = []
-    inner_points = []
-    for i in range(num_points + 1):
-        angle = math.pi * i / num_points
-        outer_points.append((
-            arch_center_x + outer_r * math.cos(angle),
-            arch_center_z + outer_r * math.sin(angle)
-        ))
-        inner_points.append((
-            arch_center_x + inner_r * math.cos(angle),
-            arch_center_z + inner_r * math.sin(angle)
-        ))
-    
-    ring_points = outer_points + inner_points[::-1]
-    arch_profile = Polygon(ring_points)
-    
-    if arch_profile.is_valid and arch_profile.area > 1.0:
-        arch_ring = extrude_yz_profile(arch_profile, BAY_DEPTH_MM, 0)
-        arch_ring.vertices[:, [0, 1]] = arch_ring.vertices[:, [1, 0]]
-        arch_ring.fix_normals()
-        parts.append(arch_ring)
-    
-    # Crown
-    crown = box(
-        (BAY_WIDTH_MM, BAY_DEPTH_MM, BAY_CROWN_HEIGHT_MM),
-        (0, 0, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM + ARCH_WALL_MM)
-    )
-    crown_hollow = box(
-        (BAY_WIDTH_MM - 2 * BAY_CROWN_WALL_MM, BAY_DEPTH_MM - 2 * BAY_CROWN_WALL_MM, BAY_CROWN_HEIGHT_MM - BAY_CROWN_WALL_MM),
-        (BAY_CROWN_WALL_MM, BAY_CROWN_WALL_MM, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM + ARCH_WALL_MM)
-    )
-    parts.append(crown)
-    
-    # Spandrels
-    spandrel_left = box(
-        (PIER_WIDTH_MM, BAY_DEPTH_MM, BAY_CROWN_HEIGHT_MM),
-        (0, 0, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM)
-    )
-    spandrel_right = box(
-        (PIER_WIDTH_MM, BAY_DEPTH_MM, BAY_CROWN_HEIGHT_MM),
-        (BAY_WIDTH_MM - PIER_WIDTH_MM, 0, ARCH_SPRING_Z_MM + ARCH_RADIUS_MM)
-    )
-    parts.append(spandrel_left)
-    parts.append(spandrel_right)
-    
-    # Back wall
-    back_wall = box(
-        (BAY_WIDTH_MM, BAY_FLOOR_WALL_MM, BAY_HEIGHT_MM),
-        (0, BAY_DEPTH_MM - BAY_FLOOR_WALL_MM, 0)
-    )
-    parts.append(back_wall)
-    
-    body = boolean_union(parts)
-    
-    # Cut hollows
-    cutters = [left_pier_inner, right_pier_inner, floor_trough, crown_hollow]
-    
-    # M4 mounting holes
-    for z_offset in [20.0, 70.0, 120.0]:
-        for x_offset in [BAY_WIDTH_MM / 3, 2 * BAY_WIDTH_MM / 3]:
-            m4_hole = cylinder_y(
-                M4_CLEARANCE_MM / 2,
-                BAY_FLOOR_WALL_MM + 2,
-                (x_offset, BAY_DEPTH_MM - BAY_FLOOR_WALL_MM / 2, z_offset)
-            )
-            cutters.append(m4_hole)
-    
-    result = boolean_difference(body, cutters)
-    return normalize_mesh(result)
-
-
-def build_deck_module() -> trimesh.Trimesh:
-    """Build a ribbed deck module. Same on both levels."""
-    parts: list[trimesh.Trimesh] = []
-    
+    # Top surface
     top = box((DECK_LENGTH_MM, DECK_WIDTH_MM, DECK_WALL_MM), (0, 0, DECK_HEIGHT_MM - DECK_WALL_MM))
     parts.append(top)
     
+    # Bottom surface
     bottom = box((DECK_LENGTH_MM, DECK_WIDTH_MM, DECK_WALL_MM), (0, 0, 0))
     parts.append(bottom)
     
+    # Front wall
     front = box((DECK_LENGTH_MM, DECK_WALL_MM, DECK_HEIGHT_MM), (0, 0, 0))
     parts.append(front)
     
+    # Back wall
     back = box((DECK_LENGTH_MM, DECK_WALL_MM, DECK_HEIGHT_MM), (0, DECK_WIDTH_MM - DECK_WALL_MM, 0))
     parts.append(back)
     
+    # End walls
     left_end = box((DECK_WALL_MM, DECK_WIDTH_MM, DECK_HEIGHT_MM), (0, 0, 0))
     parts.append(left_end)
-    
     right_end = box((DECK_WALL_MM, DECK_WIDTH_MM, DECK_HEIGHT_MM), (DECK_LENGTH_MM - DECK_WALL_MM, 0, 0))
     parts.append(right_end)
     
@@ -452,10 +307,10 @@ def build_deck_module() -> trimesh.Trimesh:
     
     body = boolean_union(parts)
     
-    # M4 holes
+    # M4 holes for mounting
     cutters: list[trimesh.Trimesh] = []
-    for x_pos in [15.0, DECK_LENGTH_MM / 2, DECK_LENGTH_MM - 15.0]:
-        for y_pos in [20.0, DECK_WIDTH_MM - 20.0]:
+    for x_pos in [15.0, DECK_LENGTH_MM - 15.0]:
+        for y_pos in [20.0, 60.0, 100.0, 140.0]:
             m4_hole = cylinder_z(
                 M4_CLEARANCE_MM / 2,
                 DECK_HEIGHT_MM + 2,
@@ -467,74 +322,215 @@ def build_deck_module() -> trimesh.Trimesh:
     return normalize_mesh(result)
 
 
-def build_cable_insert() -> trimesh.Trimesh:
-    """Cable hook insert for pier hollow."""
+def build_cable_trough() -> trimesh.Trimesh:
+    """Build a cable trough with integrated hooks.
+    
+    Mounts between spines in the inter-deck space.
+    Hooks hold cables, trough catches loose ends.
+    """
     parts: list[trimesh.Trimesh] = []
     
-    base = box((CABLE_INSERT_WIDTH_MM, CABLE_INSERT_DEPTH_MM, 3.0), (0, 0, 0))
-    parts.append(base)
+    # Main trough body (U-channel)
+    # Bottom
+    bottom = box((TROUGH_LENGTH_MM, TROUGH_WIDTH_MM, TROUGH_WALL_MM), (0, 0, 0))
+    parts.append(bottom)
     
-    hook_positions = [20.0, 60.0, 100.0]
-    hook_width = CABLE_INSERT_WIDTH_MM - 2
-    hook_height = CABLE_INSERT_HEIGHT_MM - 3
-    hook_depth = 15.0
+    # Front wall
+    front = box((TROUGH_LENGTH_MM, TROUGH_WALL_MM, TROUGH_HEIGHT_MM), (0, 0, 0))
+    parts.append(front)
     
-    for y_pos in hook_positions:
-        post = box((hook_width, 4.0, hook_height), (1.0, y_pos - 2.0, 3.0))
+    # Back wall (shorter to allow cable draping)
+    back = box((TROUGH_LENGTH_MM, TROUGH_WALL_MM, TROUGH_HEIGHT_MM * 0.6), (0, TROUGH_WIDTH_MM - TROUGH_WALL_MM, 0))
+    parts.append(back)
+    
+    # End walls
+    left = box((TROUGH_WALL_MM, TROUGH_WIDTH_MM, TROUGH_HEIGHT_MM), (0, 0, 0))
+    parts.append(left)
+    right = box((TROUGH_WALL_MM, TROUGH_WIDTH_MM, TROUGH_HEIGHT_MM), (TROUGH_LENGTH_MM - TROUGH_WALL_MM, 0, 0))
+    parts.append(right)
+    
+    # Cable hooks along front edge
+    hook_spacing = (TROUGH_LENGTH_MM - 2 * TROUGH_WALL_MM) / (HOOK_COUNT + 1)
+    for i in range(1, HOOK_COUNT + 1):
+        x_pos = TROUGH_WALL_MM + i * hook_spacing
+        
+        # Vertical post
+        post = box(
+            (8.0, 8.0, HOOK_HEIGHT_MM),
+            (x_pos - 4.0, -4.0, TROUGH_HEIGHT_MM)
+        )
         parts.append(post)
-        hook_top = box((hook_width, hook_depth, 4.0), (1.0, y_pos - 2.0, 3.0 + hook_height - 4.0))
-        parts.append(hook_top)
-        lip = box((hook_width, 4.0, 10.0), (1.0, y_pos - 2.0 + hook_depth - 4.0, 3.0 + hook_height - 14.0))
+        
+        # Hook arm
+        arm = box(
+            (8.0, HOOK_DEPTH_MM, 6.0),
+            (x_pos - 4.0, -4.0, TROUGH_HEIGHT_MM + HOOK_HEIGHT_MM - 6.0)
+        )
+        parts.append(arm)
+        
+        # Hook lip (prevents cable sliding off)
+        lip = box(
+            (8.0, 6.0, 12.0),
+            (x_pos - 4.0, HOOK_DEPTH_MM - 10.0, TROUGH_HEIGHT_MM + HOOK_HEIGHT_MM - 18.0)
+        )
         parts.append(lip)
     
-    return normalize_mesh(boolean_union(parts))
+    body = boolean_union(parts)
+    
+    # M4 mounting holes in end walls
+    cutters: list[trimesh.Trimesh] = []
+    for x_pos in [TROUGH_WALL_MM / 2, TROUGH_LENGTH_MM - TROUGH_WALL_MM / 2]:
+        for z_pos in [15.0, TROUGH_HEIGHT_MM - 10.0]:
+            hole = cylinder_x(
+                M4_CLEARANCE_MM / 2,
+                TROUGH_WALL_MM + 2,
+                (x_pos, TROUGH_WIDTH_MM / 2, z_pos)
+            )
+            cutters.append(hole)
+    
+    result = boolean_difference(body, cutters)
+    return normalize_mesh(result)
 
 
 def build_string_cassette() -> trimesh.Trimesh:
-    """String/pick cassette for pier hollow."""
-    wall_mm = 2.5
+    """Build a drawer-style cassette for guitar strings, picks, etc.
     
-    outer = box(
-        (STRING_CASSETTE_WIDTH_MM, STRING_CASSETTE_DEPTH_MM, STRING_CASSETTE_HEIGHT_MM),
-        (0, 0, 0)
-    )
+    Open top for easy access. Dividers for organization.
+    """
+    parts: list[trimesh.Trimesh] = []
+    
+    # Outer shell
+    outer = box((CASSETTE_LENGTH_MM, CASSETTE_WIDTH_MM, CASSETTE_HEIGHT_MM), (0, 0, 0))
+    parts.append(outer)
+    
+    # Inner cavity (open top)
     inner = box(
-        (STRING_CASSETTE_WIDTH_MM - 2 * wall_mm, STRING_CASSETTE_DEPTH_MM - wall_mm, STRING_CASSETTE_HEIGHT_MM - wall_mm),
-        (wall_mm, 0, wall_mm)
+        (CASSETTE_LENGTH_MM - 2 * CASSETTE_WALL_MM, 
+         CASSETTE_WIDTH_MM - 2 * CASSETTE_WALL_MM, 
+         CASSETTE_HEIGHT_MM - CASSETTE_WALL_MM + 1),  # +1 to open top
+        (CASSETTE_WALL_MM, CASSETTE_WALL_MM, CASSETTE_WALL_MM)
     )
     
-    parts = [outer]
-    divider = box(
-        (wall_mm, STRING_CASSETTE_DEPTH_MM - wall_mm, STRING_CASSETTE_HEIGHT_MM - wall_mm - 10),
-        (STRING_CASSETTE_WIDTH_MM / 2 - wall_mm / 2, 0, wall_mm)
+    # Center divider (lengthwise)
+    divider_l = box(
+        (CASSETTE_LENGTH_MM - 2 * CASSETTE_WALL_MM, CASSETTE_WALL_MM, CASSETTE_HEIGHT_MM - CASSETTE_WALL_MM - 10),
+        (CASSETTE_WALL_MM, CASSETTE_WIDTH_MM / 2 - CASSETTE_WALL_MM / 2, CASSETTE_WALL_MM)
     )
-    parts.append(divider)
+    parts.append(divider_l)
+    
+    # Cross divider
+    divider_c = box(
+        (CASSETTE_WALL_MM, CASSETTE_WIDTH_MM - 2 * CASSETTE_WALL_MM, CASSETTE_HEIGHT_MM - CASSETTE_WALL_MM - 10),
+        (CASSETTE_LENGTH_MM / 2 - CASSETTE_WALL_MM / 2, CASSETTE_WALL_MM, CASSETTE_WALL_MM)
+    )
+    parts.append(divider_c)
+    
+    # Handle cutout on front
+    handle = box(
+        (40.0, CASSETTE_WALL_MM + 2, 15.0),
+        (CASSETTE_LENGTH_MM / 2 - 20.0, -1, CASSETTE_HEIGHT_MM - 25.0)
+    )
     
     body = boolean_union(parts)
-    return normalize_mesh(boolean_difference(body, [inner]))
+    result = boolean_difference(body, [inner, handle])
+    return normalize_mesh(result)
+
+
+def build_inter_deck_bracket() -> trimesh.Trimesh:
+    """Build a bracket that connects upper and lower decks.
+    
+    Provides attachment points for cable troughs, cassettes, etc.
+    Adds rigidity to the two-deck system.
+    """
+    parts: list[trimesh.Trimesh] = []
+    
+    # Main vertical panel
+    panel = box(
+        (BRACKET_WALL_MM, BRACKET_DEPTH_MM, BRACKET_HEIGHT_MM),
+        (0, 0, 0)
+    )
+    parts.append(panel)
+    
+    # Top flange (connects to upper deck)
+    top_flange = box(
+        (BRACKET_WIDTH_MM, BRACKET_DEPTH_MM, BRACKET_WALL_MM),
+        (0, 0, BRACKET_HEIGHT_MM - BRACKET_WALL_MM)
+    )
+    parts.append(top_flange)
+    
+    # Bottom flange (connects to lower deck)
+    bottom_flange = box(
+        (BRACKET_WIDTH_MM, BRACKET_DEPTH_MM, BRACKET_WALL_MM),
+        (0, 0, 0)
+    )
+    parts.append(bottom_flange)
+    
+    # Stiffening ribs
+    rib_spacing = BRACKET_DEPTH_MM / 4
+    for i in range(1, 4):
+        y_pos = i * rib_spacing
+        rib = box(
+            (BRACKET_WIDTH_MM - BRACKET_WALL_MM, BRACKET_WALL_MM, BRACKET_HEIGHT_MM - 2 * BRACKET_WALL_MM),
+            (BRACKET_WALL_MM, y_pos - BRACKET_WALL_MM / 2, BRACKET_WALL_MM)
+        )
+        parts.append(rib)
+    
+    body = boolean_union(parts)
+    
+    # M4 holes in flanges
+    cutters: list[trimesh.Trimesh] = []
+    for y_pos in [30.0, 80.0, 130.0]:
+        for z_pos in [BRACKET_WALL_MM / 2, BRACKET_HEIGHT_MM - BRACKET_WALL_MM / 2]:
+            for x_pos in [10.0, 30.0]:
+                hole = cylinder_z(
+                    M4_CLEARANCE_MM / 2,
+                    BRACKET_WALL_MM + 2,
+                    (x_pos, y_pos, z_pos)
+                )
+                cutters.append(hole)
+    
+    # M4 holes in main panel for attachments
+    for y_pos in [40.0, 80.0, 120.0]:
+        for z_pos in [40.0, 80.0, 120.0]:
+            hole = cylinder_x(
+                M4_CLEARANCE_MM / 2,
+                BRACKET_WALL_MM + 2,
+                (BRACKET_WALL_MM / 2, y_pos, z_pos)
+            )
+            cutters.append(hole)
+    
+    result = boolean_difference(body, cutters)
+    return normalize_mesh(result)
 
 
 def build_guitar_hanger() -> trimesh.Trimesh:
-    """Guitar neck hanger - bolts to spine, guitar hangs in room."""
+    """Build a guitar neck hanger - bolts to spine.
+    
+    Guitar hangs in the ROOM (body in free space, not on deck).
+    """
     parts: list[trimesh.Trimesh] = []
     
+    # Main body
     main = box((GUITAR_HANGER_WIDTH_MM, GUITAR_HANGER_DEPTH_MM, GUITAR_HANGER_HEIGHT_MM), (0, 0, 0))
     parts.append(main)
     
-    mount_plate = box((GUITAR_HANGER_WIDTH_MM, 20.0, GUITAR_HANGER_HEIGHT_MM + 10.0), (0, GUITAR_HANGER_DEPTH_MM - 20.0, 0))
+    # Mounting plate (thicker at wall)
+    mount_plate = box((GUITAR_HANGER_WIDTH_MM, 25.0, GUITAR_HANGER_HEIGHT_MM + 15.0), (0, GUITAR_HANGER_DEPTH_MM - 25.0, 0))
     parts.append(mount_plate)
     
+    # Support arms
     arm_width = (GUITAR_HANGER_WIDTH_MM - GUITAR_NECK_SLOT_WIDTH_MM) / 2
-    arm_height = 25.0
+    arm_height = 30.0
     
-    left_arm = box((arm_width, GUITAR_HANGER_DEPTH_MM - 20.0, arm_height), (0, 0, GUITAR_HANGER_HEIGHT_MM))
+    left_arm = box((arm_width, GUITAR_HANGER_DEPTH_MM - 25.0, arm_height), (0, 0, GUITAR_HANGER_HEIGHT_MM))
     parts.append(left_arm)
     
-    right_arm = box((arm_width, GUITAR_HANGER_DEPTH_MM - 20.0, arm_height), (GUITAR_HANGER_WIDTH_MM - arm_width, 0, GUITAR_HANGER_HEIGHT_MM))
+    right_arm = box((arm_width, GUITAR_HANGER_DEPTH_MM - 25.0, arm_height), (GUITAR_HANGER_WIDTH_MM - arm_width, 0, GUITAR_HANGER_HEIGHT_MM))
     parts.append(right_arm)
     
     body = boolean_union(parts)
     
+    # Cut neck slot
     cutters: list[trimesh.Trimesh] = []
     neck_slot = box(
         (GUITAR_NECK_SLOT_WIDTH_MM, GUITAR_NECK_SLOT_DEPTH_MM + 1, GUITAR_HANGER_HEIGHT_MM + arm_height + 2),
@@ -542,12 +538,18 @@ def build_guitar_hanger() -> trimesh.Trimesh:
     )
     cutters.append(neck_slot)
     
-    for z_offset in [10.0, GUITAR_HANGER_HEIGHT_MM]:
+    # M4 mounting holes
+    for z_offset in [12.0, GUITAR_HANGER_HEIGHT_MM + 5.0]:
         for x_offset in [15.0, GUITAR_HANGER_WIDTH_MM - 15.0]:
-            m4_hole = cylinder_y(M4_CLEARANCE_MM / 2, 25.0, (x_offset, GUITAR_HANGER_DEPTH_MM - 10.0, z_offset))
-            cutters.append(m4_hole)
+            hole = cylinder_y(
+                M4_CLEARANCE_MM / 2,
+                30.0,
+                (x_offset, GUITAR_HANGER_DEPTH_MM - 12.0, z_offset)
+            )
+            cutters.append(hole)
     
-    return normalize_mesh(boolean_difference(body, cutters))
+    result = boolean_difference(body, cutters)
+    return normalize_mesh(result)
 
 
 def check_fits_bed(mesh: trimesh.Trimesh, name: str) -> bool:
@@ -584,61 +586,56 @@ def write_3mf(mesh: trimesh.Trimesh, path: Path, name: str) -> None:
 
 
 def calculate_layout() -> dict:
-    """Calculate two-level layout for long wall."""
-    
-    spacing_1 = STUD_SPACING_MM[0]  # 393.7 mm
-    spacing_2 = STUD_SPACING_MM[1]  # 406.4 mm
-    
-    effective_bay_width = BAY_WIDTH_MM + 5.0  # Gap for assembly
-    
-    bays_span_1 = int(spacing_1 / effective_bay_width)  # 2 bays
-    bays_span_2 = int(spacing_2 / effective_bay_width)  # 2 bays
-    
-    bays_per_level = bays_span_1 + bays_span_2  # 4 bays per level
-    total_bays = bays_per_level * 2  # 8 bays total (two levels)
-    
-    filler_1 = spacing_1 - bays_span_1 * effective_bay_width
-    filler_2 = spacing_2 - bays_span_2 * effective_bay_width
+    """Calculate two-deck layout for long wall."""
     
     # Deck count per level
-    total_span = spacing_1 + spacing_2 + SPINE_WIDTH_MM * 3
-    deck_per_level = int(total_span / DECK_LENGTH_MM) + 1
+    total_span_mm = LONG_WALL_LENGTH_IN * 25.4  # 1562.1 mm
+    deck_per_level = int(total_span_mm / DECK_LENGTH_MM) + 1  # ~10 decks
     total_deck = deck_per_level * 2  # Two levels
     
     # Spine count: 3 studs × 2 levels = 6 spine sections
     spine_sections = 3 * 2
     
+    # Inter-deck brackets: between spines
+    bracket_count = 2 * 2  # 2 per span × 2 spans = 4 brackets per level, but shared
+    
     return {
         "levels": 2,
-        "stud_spacing_mm": STUD_SPACING_MM,
-        "bays_per_span": [bays_span_1, bays_span_2],
-        "bays_per_level": bays_per_level,
-        "total_bays": total_bays,
-        "filler_widths_mm": [filler_1, filler_2],
+        "stud_count": 3,
+        "stud_positions_in": STUD_POSITIONS_IN,
         "deck_per_level": deck_per_level,
         "total_deck": total_deck,
         "spine_sections": spine_sections,
-        "studs": 3,
-        "level_height_mm": LEVEL_HEIGHT_MM,
-        "total_arcade_height_mm": TWO_LEVEL_HEIGHT_MM,
+        "bracket_count": bracket_count,
+        "inter_deck_gap_mm": INTER_DECK_GAP_MM,
     }
 
 
 def main():
     print("=" * 70)
-    print("STORAGE ARCADE GENERATOR — TWO-LEVEL EDITION")
-    print("100% PETG • Every gram stores or carries • No decorative air")
+    print("100% PETG TWO-DECK STORAGE SYSTEM")
+    print("Every gram stores or carries. No arches. No decoration.")
     print("=" * 70)
+    print()
+    print("WHY NO ARCHES:")
+    print("  Arches were removed because they are not in the load path.")
+    print("  Spines carry the load directly to studs.")
+    print("  Arches would be decorative mass. Every gram must work.")
     print()
     print("HEIGHT ASSUMPTION (UNVERIFIED):")
     print(f"  Outlet-top to ceiling: {OUTLET_TO_CEILING_IN} in ({OUTLET_TO_CEILING_MM:.1f} mm)")
     print("  THIS IS USER-REPORTED, NOT FIELD-VERIFIED.")
-    print(f"  Ceiling clearance: {CEILING_CLEARANCE_MM} mm")
-    print(f"  Outlet clearance: {OUTLET_CLEARANCE_MM} mm")
-    print(f"  Available for two levels: {AVAILABLE_HEIGHT_MM:.1f} mm")
     print()
     
     OUT.mkdir(parents=True, exist_ok=True)
+    
+    # Delete old arch files if they exist
+    old_files = ["arch_bay.stl", "arch_bay.3mf"]
+    for f in old_files:
+        old_path = OUT / f
+        if old_path.exists():
+            old_path.unlink()
+            print(f"  Deleted old file: {f}")
     
     print("[1] Generating stud spine (print 6 for two levels)...")
     spine = build_stud_spine()
@@ -647,63 +644,58 @@ def main():
         write_stl(spine, OUT / "stud_spine.stl")
         write_3mf(spine, OUT / "stud_spine.3mf", "stud_spine")
     
-    print("\n[2] Generating arch-bay module (print 8 for two levels)...")
-    arch_bay = build_arch_bay()
-    bay_ok = check_fits_bed(arch_bay, "arch_bay")
-    if bay_ok:
-        write_stl(arch_bay, OUT / "arch_bay.stl")
-        write_3mf(arch_bay, OUT / "arch_bay.3mf", "arch_bay")
-    
-    print("\n[3] Generating deck module (print 12 for two levels)...")
+    print("\n[2] Generating deck module (print ~20 for two levels)...")
     deck = build_deck_module()
     deck_ok = check_fits_bed(deck, "deck_module")
     if deck_ok:
         write_stl(deck, OUT / "deck_module.stl")
         write_3mf(deck, OUT / "deck_module.3mf", "deck_module")
     
-    print("\n[4] Generating cable insert...")
-    cable_insert = build_cable_insert()
-    cable_ok = check_fits_bed(cable_insert, "cable_insert")
-    if cable_ok:
-        write_stl(cable_insert, OUT / "cable_insert.stl")
-        write_3mf(cable_insert, OUT / "cable_insert.3mf", "cable_insert")
+    print("\n[3] Generating cable trough...")
+    trough = build_cable_trough()
+    trough_ok = check_fits_bed(trough, "cable_trough")
+    if trough_ok:
+        write_stl(trough, OUT / "cable_trough.stl")
+        write_3mf(trough, OUT / "cable_trough.3mf", "cable_trough")
     
-    print("\n[5] Generating string cassette...")
-    string_cassette = build_string_cassette()
-    string_ok = check_fits_bed(string_cassette, "string_cassette")
-    if string_ok:
-        write_stl(string_cassette, OUT / "string_cassette.stl")
-        write_3mf(string_cassette, OUT / "string_cassette.3mf", "string_cassette")
+    print("\n[4] Generating string cassette...")
+    cassette = build_string_cassette()
+    cassette_ok = check_fits_bed(cassette, "string_cassette")
+    if cassette_ok:
+        write_stl(cassette, OUT / "string_cassette.stl")
+        write_3mf(cassette, OUT / "string_cassette.3mf", "string_cassette")
+    
+    print("\n[5] Generating inter-deck bracket...")
+    bracket = build_inter_deck_bracket()
+    bracket_ok = check_fits_bed(bracket, "inter_deck_bracket")
+    if bracket_ok:
+        write_stl(bracket, OUT / "inter_deck_bracket.stl")
+        write_3mf(bracket, OUT / "inter_deck_bracket.3mf", "inter_deck_bracket")
     
     print("\n[6] Generating guitar hanger...")
-    guitar_hanger = build_guitar_hanger()
-    guitar_ok = check_fits_bed(guitar_hanger, "guitar_hanger")
-    if guitar_ok:
-        write_stl(guitar_hanger, OUT / "guitar_hanger.stl")
-        write_3mf(guitar_hanger, OUT / "guitar_hanger.3mf", "guitar_hanger")
+    hanger = build_guitar_hanger()
+    hanger_ok = check_fits_bed(hanger, "guitar_hanger")
+    if hanger_ok:
+        write_stl(hanger, OUT / "guitar_hanger.stl")
+        write_3mf(hanger, OUT / "guitar_hanger.3mf", "guitar_hanger")
     
     layout = calculate_layout()
     
     manifest = {
-        "description": "Elon-style 100% PETG storage arcade - TWO LEVELS on long wall",
+        "description": "100% PETG two-deck storage system - no arches, no decoration",
+        "why_no_arches": "Arches were removed because they are not in the load path. Spines carry load directly to studs. Every gram must store or carry.",
         "height_assumption": {
             "outlet_to_ceiling_in": OUTLET_TO_CEILING_IN,
             "outlet_to_ceiling_mm": OUTLET_TO_CEILING_MM,
             "verified": False,
-            "note": "USER-REPORTED, NOT FIELD-VERIFIED. Measure before printing spines."
-        },
-        "clearances": {
-            "ceiling_clearance_mm": CEILING_CLEARANCE_MM,
-            "outlet_clearance_mm": OUTLET_CLEARANCE_MM,
-            "inter_level_gap_mm": INTER_LEVEL_GAP_MM,
-            "available_height_mm": AVAILABLE_HEIGHT_MM,
+            "note": "USER-REPORTED, NOT FIELD-VERIFIED"
         },
         "architecture": {
-            "stud_spine": "Wall-mount backplate. Stack 2 per stud for two levels.",
-            "arch_bay": "Roman arch opening IS the storage bay.",
-            "deck_module": "Ribbed box section on top of each level.",
-            "cable_insert": "Hook/trough insert for pier hollow.",
-            "string_cassette": "Drawer for strings/picks in pier hollow.",
+            "stud_spine": "ONLY wall-load part. Screws to stud, crown supports deck.",
+            "deck_module": "Ribbed box-beam. Sits on spine crowns.",
+            "cable_trough": "U-channel with hooks. Mounts between decks.",
+            "string_cassette": "Drawer for strings/picks. Sits on lower deck or mounts to bracket.",
+            "inter_deck_bracket": "Connects upper/lower decks. Provides attachment points.",
             "guitar_hanger": "Neck hanger bolts to spine. Guitar hangs in room."
         },
         "long_wall": {
@@ -715,49 +707,48 @@ def main():
         "short_wall": {
             "status": "ON HOLD",
             "length_in": SHORT_WALL_LENGTH_IN,
-            "note": "~36 in nominal. NEEDS FIELD MEASUREMENT before print."
+            "note": "NEEDS FIELD MEASUREMENT"
         },
         "calculated_layout": layout,
         "parts": {
             "stud_spine": {
                 "file": "stud_spine.stl",
-                "quantity_for_two_levels": 6,
+                "quantity": 6,
                 "note": "2 per stud × 3 studs",
                 "dimensions_mm": [round(x, 1) for x in spine.bounding_box.extents],
             },
-            "arch_bay": {
-                "file": "arch_bay.stl",
-                "quantity_for_two_levels": 8,
-                "note": "4 per level × 2 levels",
-                "dimensions_mm": [round(x, 1) for x in arch_bay.bounding_box.extents],
-            },
             "deck_module": {
                 "file": "deck_module.stl",
-                "quantity_for_two_levels": 12,
-                "note": "6 per level × 2 levels",
+                "quantity": layout["total_deck"],
+                "note": f"{layout['deck_per_level']} per level × 2 levels",
                 "dimensions_mm": [round(x, 1) for x in deck.bounding_box.extents],
             },
-            "cable_insert": {
-                "file": "cable_insert.stl",
-                "quantity": "As needed",
-                "dimensions_mm": [round(x, 1) for x in cable_insert.bounding_box.extents],
+            "cable_trough": {
+                "file": "cable_trough.stl",
+                "quantity": "2-4 as needed",
+                "dimensions_mm": [round(x, 1) for x in trough.bounding_box.extents],
             },
             "string_cassette": {
                 "file": "string_cassette.stl",
-                "quantity": "As needed",
-                "dimensions_mm": [round(x, 1) for x in string_cassette.bounding_box.extents],
+                "quantity": "1-2 as needed",
+                "dimensions_mm": [round(x, 1) for x in cassette.bounding_box.extents],
+            },
+            "inter_deck_bracket": {
+                "file": "inter_deck_bracket.stl",
+                "quantity": layout["bracket_count"],
+                "dimensions_mm": [round(x, 1) for x in bracket.bounding_box.extents],
             },
             "guitar_hanger": {
                 "file": "guitar_hanger.stl",
                 "quantity": 1,
-                "dimensions_mm": [round(x, 1) for x in guitar_hanger.bounding_box.extents],
+                "dimensions_mm": [round(x, 1) for x in hanger.bounding_box.extents],
             },
         },
         "hardware": {
             "wood_screws": {"spec": "#10 × 3 in", "quantity": 18, "note": "3 per spine × 6 spines"},
-            "m4_bolts": {"spec": "M4 × 25mm socket head", "quantity": 100},
-            "m4_nuts": {"spec": "M4 nylock", "quantity": 100},
-            "washers": {"spec": "M4 flat", "quantity": 200},
+            "m4_bolts": {"spec": "M4 × 25mm socket head", "quantity": 150},
+            "m4_nuts": {"spec": "M4 nylock", "quantity": 150},
+            "washers": {"spec": "M4 flat", "quantity": 300},
         },
         "print_settings": {
             "material": "PETG",
@@ -772,18 +763,16 @@ def main():
     print("\n[7] Wrote manifest.json")
     
     print("\n" + "=" * 70)
-    print("TWO-LEVEL STORAGE ARCADE SUMMARY")
+    print("TWO-DECK STORAGE SYSTEM SUMMARY")
     print("=" * 70)
     print(f"\nLONG WALL: {LONG_WALL_LENGTH_IN} in with studs at {STUD_POSITIONS_IN}")
-    print(f"  Two stacked shelf levels above electric box")
-    print(f"  Bays per level: {layout['bays_per_level']} → Total: {layout['total_bays']} bays")
-    print(f"  Deck per level: {layout['deck_per_level']} → Total: {layout['total_deck']} deck modules")
+    print(f"  Two stacked decks, NO ARCHES")
+    print(f"  Decks per level: {layout['deck_per_level']} → Total: {layout['total_deck']}")
     print(f"  Spines: {layout['spine_sections']} (2 per stud × 3 studs)")
+    print(f"  Inter-deck gap: {layout['inter_deck_gap_mm']} mm for attachments")
     print(f"\nSHORT WALL: ~{SHORT_WALL_LENGTH_IN} in (nominal)")
     print("  STATUS: ON HOLD — needs field measurement")
-    print("  Same bay/spine language; ready when measured")
     print(f"\nHEIGHT: {OUTLET_TO_CEILING_IN} in outlet-to-ceiling (UNVERIFIED)")
-    print("  FIELD-MEASURE BEFORE PRINTING SPINES")
     print("=" * 70)
 
 

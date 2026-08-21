@@ -1,23 +1,18 @@
 {
-  "description": "Elon-style 100% PETG storage arcade - TWO LEVELS on long wall",
+  "description": "100% PETG two-deck storage system - no arches, no decoration",
+  "why_no_arches": "Arches were removed because they are not in the load path. Spines carry load directly to studs. Every gram must store or carry.",
   "height_assumption": {
     "outlet_to_ceiling_in": 43.5,
     "outlet_to_ceiling_mm": 1104.8999999999999,
     "verified": false,
-    "note": "USER-REPORTED, NOT FIELD-VERIFIED. Measure before printing spines."
-  },
-  "clearances": {
-    "ceiling_clearance_mm": 25.0,
-    "outlet_clearance_mm": 50.0,
-    "inter_level_gap_mm": 20.0,
-    "available_height_mm": 1029.8999999999999
+    "note": "USER-REPORTED, NOT FIELD-VERIFIED"
   },
   "architecture": {
-    "stud_spine": "Wall-mount backplate. Stack 2 per stud for two levels.",
-    "arch_bay": "Roman arch opening IS the storage bay.",
-    "deck_module": "Ribbed box section on top of each level.",
-    "cable_insert": "Hook/trough insert for pier hollow.",
-    "string_cassette": "Drawer for strings/picks in pier hollow.",
+    "stud_spine": "ONLY wall-load part. Screws to stud, crown supports deck.",
+    "deck_module": "Ribbed box-beam. Sits on spine crowns.",
+    "cable_trough": "U-channel with hooks. Mounts between decks.",
+    "string_cassette": "Drawer for strings/picks. Sits on lower deck or mounts to bracket.",
+    "inter_deck_bracket": "Connects upper/lower decks. Provides attachment points.",
     "guitar_hanger": "Neck hanger bolts to spine. Guitar hangs in room."
   },
   "long_wall": {
@@ -33,78 +28,68 @@
   "short_wall": {
     "status": "ON HOLD",
     "length_in": 36.0,
-    "note": "~36 in nominal. NEEDS FIELD MEASUREMENT before print."
+    "note": "NEEDS FIELD MEASUREMENT"
   },
   "calculated_layout": {
     "levels": 2,
-    "stud_spacing_mm": [
-      393.7,
-      406.4
+    "stud_count": 3,
+    "stud_positions_in": [
+      17.0,
+      32.5,
+      48.5
     ],
-    "bays_per_span": [
-      2,
-      2
-    ],
-    "bays_per_level": 4,
-    "total_bays": 8,
-    "filler_widths_mm": [
-      73.69999999999999,
-      86.39999999999998
-    ],
-    "deck_per_level": 6,
-    "total_deck": 12,
+    "deck_per_level": 10,
+    "total_deck": 20,
     "spine_sections": 6,
-    "studs": 3,
-    "level_height_mm": 190.0,
-    "total_arcade_height_mm": 400.0
+    "bracket_count": 4,
+    "inter_deck_gap_mm": 200.0
   },
   "parts": {
     "stud_spine": {
       "file": "stud_spine.stl",
-      "quantity_for_two_levels": 6,
+      "quantity": 6,
       "note": "2 per stud \u00d7 3 studs",
       "dimensions_mm": [
-        50.0,
+        160.0,
         40.0,
         158.0
       ]
     },
-    "arch_bay": {
-      "file": "arch_bay.stl",
-      "quantity_for_two_levels": 8,
-      "note": "4 per level \u00d7 2 levels",
-      "dimensions_mm": [
-        155.0,
-        150.0,
-        155.0
-      ]
-    },
     "deck_module": {
       "file": "deck_module.stl",
-      "quantity_for_two_levels": 12,
-      "note": "6 per level \u00d7 2 levels",
+      "quantity": 20,
+      "note": "10 per level \u00d7 2 levels",
       "dimensions_mm": [
         158.0,
-        150.0,
-        35.0
+        155.0,
+        30.0
       ]
     },
-    "cable_insert": {
-      "file": "cable_insert.stl",
-      "quantity": "As needed",
+    "cable_trough": {
+      "file": "cable_trough.stl",
+      "quantity": "2-4 as needed",
       "dimensions_mm": [
-        16.0,
-        140.0,
-        40.0
+        155.0,
+        64.0,
+        80.0
       ]
     },
     "string_cassette": {
       "file": "string_cassette.stl",
-      "quantity": "As needed",
+      "quantity": "1-2 as needed",
       "dimensions_mm": [
-        16.0,
-        60.0,
-        80.0
+        100.0,
+        80.0,
+        60.0
+      ]
+    },
+    "inter_deck_bracket": {
+      "file": "inter_deck_bracket.stl",
+      "quantity": 4,
+      "dimensions_mm": [
+        40.0,
+        155.0,
+        158.0
       ]
     },
     "guitar_hanger": {
@@ -113,7 +98,7 @@
       "dimensions_mm": [
         60.0,
         100.0,
-        55.0
+        60.0
       ]
     }
   },
@@ -125,15 +110,15 @@
     },
     "m4_bolts": {
       "spec": "M4 \u00d7 25mm socket head",
-      "quantity": 100
+      "quantity": 150
     },
     "m4_nuts": {
       "spec": "M4 nylock",
-      "quantity": 100
+      "quantity": 150
     },
     "washers": {
       "spec": "M4 flat",
-      "quantity": 200
+      "quantity": 300
     }
   },
   "print_settings": {
