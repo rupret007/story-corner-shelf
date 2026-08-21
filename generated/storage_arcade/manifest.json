@@ -1,0 +1,165 @@
+{
+  "description": "Elon-style 100% PETG storage arcade - every gram stores or carries",
+  "architecture": {
+    "stud_spine": "Wall-mount backplate with M4 grid. Only part that touches studs.",
+    "arch_bay": "Roman arch opening IS the storage bay. Hollow piers are storage columns.",
+    "deck_module": "Ribbed box section on top of arcade.",
+    "cable_insert": "Hook/trough insert that slides into pier hollow.",
+    "string_cassette": "Shallow drawer for strings/picks in pier hollow.",
+    "guitar_hanger": "Neck hanger that bolts to spine. Guitar hangs in room."
+  },
+  "constraints": {
+    "material": "100% PETG - no plywood, steel, or other materials",
+    "printer": "Bambu A1 mini (180mm build volume)",
+    "max_xy_with_brim_mm": 160.0,
+    "fasteners": "Wood screws into studs, M4 through PETG. No snap-fit in load path."
+  },
+  "wall_layout": {
+    "wall_length_in": 61.5,
+    "stud_positions_in": [
+      17.0,
+      32.5,
+      48.5
+    ],
+    "stud_spacing_mm": [
+      393.7,
+      406.4
+    ]
+  },
+  "calculated_layout": {
+    "stud_spacing_mm": [
+      393.7,
+      406.4
+    ],
+    "bays_per_span": [
+      2,
+      2
+    ],
+    "total_bays": 4,
+    "filler_widths_mm": [
+      73.69999999999999,
+      86.39999999999998
+    ],
+    "deck_count": 6,
+    "spine_count": 3
+  },
+  "parts": {
+    "stud_spine": {
+      "file": "stud_spine.stl",
+      "quantity": 3,
+      "dimensions_mm": [
+        50.0,
+        40.0,
+        158.0
+      ],
+      "print_time_hours": 4,
+      "petg_grams": 80,
+      "print_orientation": "Wall face down",
+      "supports": "No"
+    },
+    "arch_bay": {
+      "file": "arch_bay.stl",
+      "quantity": 4,
+      "dimensions_mm": [
+        155.0,
+        150.0,
+        155.0
+      ],
+      "print_time_hours": 8,
+      "petg_grams": 150,
+      "print_orientation": "Back wall down (arch opening facing up)",
+      "supports": "Yes - for arch interior"
+    },
+    "deck_module": {
+      "file": "deck_module.stl",
+      "quantity": 6,
+      "dimensions_mm": [
+        158.0,
+        150.0,
+        35.0
+      ],
+      "print_time_hours": 4,
+      "petg_grams": 100,
+      "print_orientation": "Top surface down",
+      "supports": "No"
+    },
+    "cable_insert": {
+      "file": "cable_insert.stl",
+      "quantity": "As needed",
+      "dimensions_mm": [
+        16.0,
+        140.0,
+        40.0
+      ],
+      "print_time_hours": 1.5,
+      "petg_grams": 25,
+      "print_orientation": "Base down",
+      "supports": "No"
+    },
+    "string_cassette": {
+      "file": "string_cassette.stl",
+      "quantity": "As needed",
+      "dimensions_mm": [
+        16.0,
+        60.0,
+        80.0
+      ],
+      "print_time_hours": 2,
+      "petg_grams": 30,
+      "print_orientation": "Open top up",
+      "supports": "No"
+    },
+    "guitar_hanger": {
+      "file": "guitar_hanger.stl",
+      "quantity": 1,
+      "dimensions_mm": [
+        60.0,
+        100.0,
+        55.0
+      ],
+      "print_time_hours": 2.5,
+      "petg_grams": 45,
+      "print_orientation": "Mounting plate down",
+      "supports": "No"
+    }
+  },
+  "hardware": {
+    "wood_screws": {
+      "spec": "#10 \u00d7 3 in wood screws",
+      "quantity": 9,
+      "note": "3 per spine, into studs only"
+    },
+    "m4_bolts": {
+      "spec": "M4 \u00d7 25mm socket head cap screws",
+      "quantity": 50,
+      "note": "For bay-to-spine and deck-to-bay connections"
+    },
+    "m4_nuts": {
+      "spec": "M4 nylock nuts",
+      "quantity": 50
+    },
+    "washers": {
+      "spec": "M4 flat washers",
+      "quantity": 100
+    }
+  },
+  "print_settings": {
+    "material": "PETG",
+    "layer_height_mm": 0.2,
+    "wall_loops": 6,
+    "top_bottom_layers": 6,
+    "infill_percent": 40,
+    "infill_pattern": "gyroid",
+    "nozzle_temp_c": 245,
+    "bed_temp_c": 75
+  },
+  "load_capacity": {
+    "working_load_per_bay_kg": 5.0,
+    "working_load_per_bay_lb": 11.0,
+    "deck_total_load_kg": 25.0,
+    "deck_total_load_lb": 55.0,
+    "basis": "Conservative PETG estimate. Short spans, ribbed sections, gyroid infill. Accounts for creep.",
+    "guitar_hanger_load_kg": 5.0,
+    "note": "Do not exceed. PETG creeps under sustained load."
+  }
+}
