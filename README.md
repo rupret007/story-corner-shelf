@@ -1,8 +1,16 @@
 # Story Corner
 
+## Want a shelf this week?
+
+**→ [PRINT_THE_SHELF.md](PRINT_THE_SHELF.md)** — An all-PETG structural shelf for the long wall (61.5 in). No plywood, no steel angle. Print the parts, screw brackets into the three verified studs (17.0, 32.5, 48.5 in), and have a working shelf for light storage.
+
+The Triadic Palatine decorative skin below is **optional and can be added later** (or never). The structural all-PETG shelf works on its own.
+
+---
+
 **Triadic Palatine Order — a parametric PETG-finished hybrid closet shelf**
 
-Story Corner is a same-height L shelf for nominal 3 ft and 5 ft closet walls. The r5 **Triadic Palatine Order** gives the visible black PETG skin a palace-like 3–6–9 composition: three arcade bays on the short arm, six on the long arm, nine keystones, fluted shared piers, stepped entablatures, dentils, a fitted corner pilaster, and a groin-vault corner soffit. Continuous plywood and steel—not the printed architecture—carry stored weight.
+Story Corner is a same-height L shelf for nominal 3 ft and 5 ft closet walls. The r5 **Triadic Palatine Order** gives the visible black PETG skin a palace-like 3–6–9 composition: three arcade bays on the short arm, six on the long arm, nine keystones, fluted shared piers, stepped entablatures, dentils, a fitted corner pilaster, and a groin-vault corner soffit. The original hybrid design used continuous plywood and steel as the load path, with PETG as finish only.
 
 > **Prototype status:** the meshes and model-only 3MF packages are generated design-development artifacts. The wall lengths, separate installed offset on each wall, corner angle, wall bow, framing map, hardware envelope, 8 in depth, attachment stack, printer, nozzle, build plate, PETG product, and completed assembly remain unverified. No tested load rating is claimed. No embedded G-code is included.
 
