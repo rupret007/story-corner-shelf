@@ -1,6 +1,20 @@
 {
-  "description": "HEAVY-DUTY all-PETG structural shelf - Roman arch design",
-  "design_philosophy": "Overbuilt for PETG creep. Thick sections, many ribs, mechanical fasteners.",
+  "description": "HEAVY-DUTY all-PETG structural shelf - Classical Roman arch design",
+  "design_philosophy": "Overbuilt for PETG creep. Classical Roman arch proportions. Thick sections, many ribs, mechanical fasteners.",
+  "visual_elements": {
+    "pier": "30.0mm wide front pier - visual anchor and structural column",
+    "impost": "8.0mm capital blocks where arch springs from piers",
+    "archivolt": "Semicircular arch profile with outer molding bands",
+    "keystone": "Implied keystone with 3.0mm extra thickness at crown",
+    "soffit": "4 ribs create masonry-like arch underside",
+    "spandrel": "Solid fill above arch for smooth deck support"
+  },
+  "build_constraints": {
+    "printer": "Bambu A1 mini (180mm cube)",
+    "max_xy_with_brim_mm": 160.0,
+    "max_z_mm": 180.0,
+    "note": "All parts verified to fit 160mm XY with brim enabled"
+  },
   "target_wall": {
     "length_in": 61.5,
     "stud_positions_in": [
@@ -17,7 +31,7 @@
   "structural_analysis": {
     "max_span_between_brackets_in": 17.0,
     "max_span_between_brackets_mm": 431.8,
-    "deck_section_depth_mm": 40.0,
+    "deck_section_depth_mm": 42.0,
     "deck_wall_thickness_mm": 5.0,
     "arch_thickness_mm": 40.0,
     "screws_per_bracket": 4,
@@ -26,7 +40,7 @@
   "load_rating": {
     "target_working_load_lb": 75,
     "target_working_load_kg": 34,
-    "basis": "Conservative estimate for 40mm deep PETG box beam over 17in max span with 5mm walls and gyroid infill. Accounts for PETG creep with 2x safety factor on deflection.",
+    "basis": "Conservative estimate for 42.0mm deep PETG box beam over 17in max span with 5.0mm walls and gyroid infill. Accounts for PETG creep with 2x safety factor.",
     "load_distribution": "Evenly distributed across shelf. No concentrated point loads at front edge.",
     "increase_to_100lb_requires": "Add 4th bracket at wall end (requires blocking) OR reduce max span to 12in OR increase deck depth to 50mm"
   },
@@ -37,27 +51,27 @@
       "dimensions_mm": [
         152.0,
         40.0,
-        170.4
+        160.0
       ],
-      "print_time_hours": 8,
-      "petg_grams": 180,
+      "print_time_hours": 9,
+      "petg_grams": 200,
       "print_orientation": "Arch opening facing UP - layers perpendicular to load",
-      "supports": "YES - for arch interior and counterbores",
-      "description": "Heavy-duty Roman arch wall bracket, 4 screws into stud"
+      "supports": "YES - organic supports for arch interior",
+      "description": "Classical Roman arch wall bracket with pier, impost, archivolt, and keystone"
     },
     "deck_segment": {
       "file": "deck_segment.stl",
-      "quantity": 8,
+      "quantity": 10,
       "dimensions_mm": [
-        170.0,
+        158.0,
         152.0,
-        40.0
+        42.0
       ],
       "print_time_hours": 6,
-      "petg_grams": 200,
+      "petg_grams": 190,
       "print_orientation": "Top face DOWN for smooth surface",
       "supports": "NO - box structure is self-supporting",
-      "description": "Heavy-duty 40mm deep box-beam deck segment"
+      "description": "Heavy-duty 42.0mm deep box-beam deck segment"
     },
     "end_bracket": {
       "file": "end_bracket.stl",
@@ -87,19 +101,19 @@
     },
     "deck_bolts": {
       "spec": "M5 x 50mm hex bolts",
-      "quantity": 52,
-      "note": "6 per deck-bracket joint (3 brackets \u00d7 2 ends \u00d7 8 decks, minus overlaps)"
+      "quantity": 60,
+      "note": "6 per deck-bracket joint"
     },
     "deck_nuts": {
       "spec": "M5 nylock nuts",
-      "quantity": 52,
+      "quantity": 60,
       "note": "Nylock prevents loosening under vibration/creep"
     }
   },
   "print_settings": {
     "material": "PETG (SUNLU black recommended)",
     "layer_height_mm": 0.2,
-    "wall_loops": 5,
+    "wall_loops": 6,
     "top_bottom_layers": 6,
     "infill_percent": 40,
     "infill_pattern": "gyroid",
@@ -107,11 +121,12 @@
     "bed_temp_c": 75,
     "cooling_percent": "50-60",
     "print_speed_mm_s": 60,
-    "note": "Slower speed and hotter temps for better layer adhesion = stronger parts"
+    "brim": "YES - required for bed adhesion, fits within 160mm limit",
+    "note": "6 walls / 40%+ gyroid for structural strength"
   },
   "totals": {
-    "parts_count": 13,
-    "print_time_hours": 76,
-    "petg_kg": 2.3
+    "parts_count": 15,
+    "print_time_hours": 91,
+    "petg_kg": 2.6
   }
 }
