@@ -4,6 +4,13 @@ Design revisions are named in `config.json`. The project has not been assigned a
 
 ## Unreleased — `triadic_palatine_fitted_l_corner_r5`
 
+### Toolchain maintenance
+
+- Active r5 regeneration now uses `requirements/r5/requirements.txt`, with
+  `mapbox-earcut` 2.0.0. The root `requirements.txt` remains the byte-identical
+  R11 v1 runtime lock, so dependency maintenance cannot rewrite the immutable
+  historical publication. Repository and CI gates enforce that separation.
+
 ### Documentation and assembly completion (design review)
 
 - New `ASSEMBLY.md` owns the complete build sequence: entry gate, structural install (including the install-standards → measure-offsets → regenerate → then-cut ordering), part staging and left/right identification, tiles, curbs, fascia-train direction (inside corner outward), ornament order, 98-piece close-out tally, load-acceptance record, and disassembly/service order. The silicone dot counts and installed z-stack are stated once there and in `ENGINEERING_DESIGN.md` rather than duplicated across five documents.

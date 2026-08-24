@@ -147,11 +147,14 @@ Before this can become an installation-ready revision, record:
 
 ## Rebuild and verify
 
-Python 3.12 and the pinned packages in `requirements.txt` reproduce the model artifacts:
+Python 3.12 and the pinned packages in `requirements/r5/requirements.txt`
+reproduce the active r5 model artifacts. The root `requirements.txt` remains
+byte-bound to the immutable R11 v1 publication and is intentionally maintained
+separately from the active design toolchain:
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements/r5/requirements.txt
 PYTHON_BIN=.venv/bin/python SKIP_BAMBU=1 scripts/build_all.sh
 ```
 

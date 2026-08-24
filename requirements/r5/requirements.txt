@@ -1,0 +1,9 @@
+# Active Triadic Palatine r5 geometry toolchain.
+# The root requirements.txt is the immutable R11 v1 source lock.
+numpy==2.5.1
+shapely==2.1.2
+trimesh==5.0.0
+manifold3d==3.5.2
+mapbox-earcut==2.0.0
+scipy==1.18.0
+networkx==3.5

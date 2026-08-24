@@ -29,9 +29,12 @@ The r5 3/6-bay arcade, nine-keystone rhythm, and related 3–6–9 details are e
 2. Update `config.json`; do not hard-code project measurements or Palatine proportions in the generator.
 3. Update documentation whenever an assumption, datum, measurement, part name, count, attachment policy, mass, safety boundary, rendering, or workflow changes.
 4. Add or update regression tests for every changed parameter relationship.
-5. Rebuild with Python 3.12 and the pinned dependencies:
+5. Rebuild with Python 3.12 and the active r5 dependency lock. The root
+   `requirements.txt` is byte-bound to the immutable R11 v1 publication and
+   must not be changed for active-r5 dependency maintenance:
 
    ```sh
+   .venv/bin/python -m pip install -r requirements/r5/requirements.txt
    PYTHON_BIN=.venv/bin/python SKIP_BAMBU=1 scripts/build_all.sh
    ```
 

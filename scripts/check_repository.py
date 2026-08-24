@@ -25,6 +25,8 @@ REQUIRED_FILES = (
     "CONTRIBUTING.md",
     "config.json",
     "requirements.txt",
+    "requirements/r5/requirements.txt",
+    "development/r11/generated/first_outer_actual_bay_qualification_v1/requirements.txt",
     "generated/artifact_manifest.json",
     "generated/corner_layout.svg",
     "generated/cut_plan.csv",
@@ -66,6 +68,41 @@ def load_json(relative_path: str) -> dict:
         (ROOT / relative_path).read_text(encoding="utf-8"),
         object_pairs_hook=reject_duplicate_json_keys,
     )
+
+
+def requirement_pins(relative_path: str) -> dict[str, str]:
+    pins: dict[str, str] = {}
+    for line in (ROOT / relative_path).read_text(encoding="utf-8").splitlines():
+        content = line.strip()
+        if not content or content.startswith("#"):
+            continue
+        if content.count("==") != 1:
+            raise ValueError(f"{relative_path} must use exact name==version pins")
+        name, version = content.split("==")
+        if not name or not version or name in pins:
+            raise ValueError(f"{relative_path} contains an invalid or duplicate pin")
+        pins[name] = version
+    if not pins:
+        raise ValueError(f"{relative_path} contains no dependency pins")
+    return pins
+
+
+def check_requirement_locks(errors: list[str]) -> None:
+    frozen_relative = "requirements.txt"
+    bundled_relative = (
+        "development/r11/generated/first_outer_actual_bay_qualification_v1/requirements.txt"
+    )
+    active_relative = "requirements/r5/requirements.txt"
+    if (ROOT / frozen_relative).read_bytes() != (ROOT / bundled_relative).read_bytes():
+        errors.append(
+            "The root R11 requirements lock differs from the immutable v1 bundle"
+        )
+    frozen_pins = requirement_pins(frozen_relative)
+    active_pins = requirement_pins(active_relative)
+    if set(active_pins) != set(frozen_pins):
+        errors.append(
+            "The active r5 and frozen R11 requirements locks must name the same geometry packages"
+        )
 
 
 def check_markdown_links(errors: list[str]) -> None:
@@ -247,6 +284,7 @@ def main() -> None:
 
     if not errors:
         try:
+            check_requirement_locks(errors)
             check_project_consistency(errors)
             check_manifest(errors)
             check_model_packages(errors)
