@@ -10,6 +10,7 @@ if [[ "${SKIP_BAMBU:-0}" == "1" && "${REQUIRE_BAMBU:-0}" == "1" ]]; then
 fi
 
 "$PYTHON_BIN" "$PROJECT_DIR/scripts/generate_shelf_parts.py"
+"$PYTHON_BIN" "$PROJECT_DIR/scripts/generate_shelf_mini.py"
 
 VALIDATOR_ARGS=()
 if [[ "${SKIP_BAMBU:-0}" == "1" ]]; then

@@ -1,0 +1,57 @@
+{
+  "profile": "shelf_mini_single_stud_bay",
+  "base_config": "config.json",
+  "project": {
+    "name": "Story Corner Mini",
+    "edition": "Single stud-bay all-PETG printable",
+    "revision": "shelf_mini_printable_v1",
+    "measurement_status": "nominal_stud_centers_from_r12_long_wall_field_data",
+    "warning": "All-printed PETG prototype for one 15.5 in stud bay at ~6 in depth. Untested, not a rated shelf. R12 hybrid plywood/steel load path does not apply; treat as light-duty development only."
+  },
+  "closet": {
+    "shelf_depth_in": 6.0,
+    "shelf_depth_status": "mini_design_selection_6in",
+    "stud_centers_from_inside_corner_in": [17.0, 32.5],
+    "deck_clear_span_in": 15.5,
+    "coordinate_note": "Stud centers match measured R12 long-wall studs at 17.0 and 32.5 in; deck spans the 15.5 in on-center bay between them."
+  },
+  "printer": {
+    "minimum_model_build_envelope_mm": [180, 180, 180],
+    "build_fit_margin_mm": 5.0
+  },
+  "structural_mini": {
+    "deck_tile_thickness_mm": 8.0,
+    "interlock_tongue_width_mm": 12.0,
+    "interlock_tongue_depth_mm": 3.0,
+    "interlock_clearance_mm": 0.35,
+    "bracket_wall_strap_width_mm": 72.0,
+    "bracket_wall_strap_thickness_mm": 16.0,
+    "bracket_shelf_arm_length_mm": 152.4,
+    "bracket_shelf_arm_thickness_mm": 12.0,
+    "bracket_vertical_drop_mm": 48.0,
+    "mounting_bore_diameter_mm": 7.0,
+    "mounting_bore_count_per_bracket": 2,
+    "mounting_bore_vertical_pitch_mm": 20.0,
+    "mounting_bore_top_offset_mm": 12.0,
+    "fastener_candidate_product": "GRK RSS 1/4 in x 3-1/2 in Climatek, part 90306 (geometric clearance only; see development/r9/one_bay_geometry.py)",
+    "fastener_note": "Seven-millimeter printed bores clear a 1/4 in-class shank; field-verify stud centering, washer bearing on PETG, and pull-out before loading.",
+    "design_selection_contents_lb_edl": 15,
+    "rated_load_lb": 0
+  },
+  "skin": {
+    "module_pitch_mm": 152.4,
+    "tile_gap_mm": 0.6,
+    "tile_depth_rows": 2,
+    "top_tile_plan_radius_mm": 0.25,
+    "minimum_parametric_end_module_width_mm": 60.0,
+    "maximum_parametric_end_module_width_mm": 179.0,
+    "petg_density_g_cm3": 1.27
+  },
+  "print_profile": {
+    "name": "0.20mm Story Corner R12 Durable Strength @BBL A1M",
+    "inherits_from_base_config": true
+  },
+  "output": {
+    "directory": "generated/mini"
+  }
+}
