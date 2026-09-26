@@ -68,6 +68,11 @@ class ShelfMiniTests(unittest.TestCase):
         self.assertLess(mini_kg, r12_kg)
         self.assertIn("unverified", comparison["print_time_estimate"])
 
+    def test_safety_and_print_mini_agree_on_zero_lb_rated_load(self) -> None:
+        phrase = "0 lb (development only)"
+        self.assertIn(phrase, (ROOT / "SAFETY.md").read_text(encoding="utf-8"))
+        self.assertIn(phrase, (ROOT / "PRINT_MINI.md").read_text(encoding="utf-8"))
+
     def test_outputs_exist_under_generated_mini(self) -> None:
         out = ROOT / "generated" / "mini"
         for entry in self.report["meshes"]:

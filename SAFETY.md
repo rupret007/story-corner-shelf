@@ -18,6 +18,14 @@ Never use a generated PETG component as:
 
 The Palatine arches, fluted piers, keystones, groin vault, and entablatures are architectural trim. Their Roman appearance does not give them masonry behavior or structural credit. PETG creeps under sustained stress and varies with temperature, formulation, moisture, print orientation, settings, layer adhesion, and stress concentration. A larger or more intricate printed part does not establish a safe long-term overhead rating. A structurally all-PETG shelf is outside this project.
 
+## Story Corner Mini (all-PETG development shelf)
+
+The single stud-bay mini is documented in [PRINT_MINI.md](PRINT_MINI.md); model-only PETG assets live under [`generated/mini/`](generated/mini/). It is **outside** the R12 hybrid load path above and inherits **no** R12 system-selection targets (55 lb return, 120 lb through, or any other R12 figure).
+
+- **Rated load:** 0 lb (development only). Any 15 lb evenly distributed contents figure in PRINT_MINI.md is a design-selection hint only—not a safe-working load.
+- **Stud brackets:** printed bores and fastener notes are geometric clearance compatibility only—not an approved structural connection.
+- Do not climb on the shelf, mount it without independently verified wood studs and adequate screw engagement, or treat printed PETG as code-approved structure.
+
 ## Corner stop conditions
 
 - Do not overlap two full-depth boards. The 5 ft through deck owns the corner; the shortened return begins beyond it.
