@@ -53,6 +53,12 @@ WASHER_OD_MM = 20.0
 # AWC NDS Supplement Table 12D; use low-end for SP/DF mix when exact species unknown.
 NDS_WITHDRAWAL_COEF_LB_PER_IN2 = 138.0
 
+# Re-entrant L at strap–arm junction (arm layers along shelf depth).
+BRACKET_ROOT_STRESS_CONCENTRATION_FACTOR = 1.5
+
+# Tile tongue clearance and FDM variance; applied on interlayer shear allowables at joints.
+DECK_INTERLOCK_SAFETY_FACTOR = 2.5
+
 
 @dataclass(frozen=True)
 class FailureModeResult:
@@ -170,8 +176,9 @@ def bracket_root_interlayer_limit_lb(
 ) -> tuple[float, dict[str, Any]]:
     """Root stress: interlayer peel (legacy orientation) or bulk bending with stress concentration."""
     if arm_layers_along_depth:
-        allowable = allowable_bulk_flex_mpa() / 1.5
-        basis = "bulk_bending_with_root_stress_concentration_factor_1p5"
+        kt = BRACKET_ROOT_STRESS_CONCENTRATION_FACTOR
+        allowable = allowable_bulk_flex_mpa() / kt
+        basis = f"bulk_bending_with_root_stress_concentration_factor_{kt}"
     else:
         allowable = allowable_interlayer_mpa()
         basis = "fdm_z_tension_with_layer_adhesion_factor"
@@ -262,6 +269,52 @@ def petg_washer_bearing_limit_lb(
     return n_to_lb(total_n), detail
 
 
+def deck_interlock_geometry_mm(
+    *,
+    deck_depth_mm: float,
+    deck_thickness_mm: float,
+    interlock_tongue_depth_mm: float,
+) -> dict[str, float]:
+    """Match `generate_shelf_mini._deck_interlock_features` plan dimensions (not config tongue_width)."""
+    tongue_contact_length_mm = deck_depth_mm * 0.7
+    tongue_thickness_mm = deck_thickness_mm * 0.5
+    return {
+        "tongue_engagement_span_mm": interlock_tongue_depth_mm,
+        "tongue_contact_length_mm": tongue_contact_length_mm,
+        "tongue_thickness_mm": tongue_thickness_mm,
+        "shear_plan_area_mm2": interlock_tongue_depth_mm * tongue_contact_length_mm,
+    }
+
+
+def deck_interlock_shear_limit_lb(
+    *,
+    deck_depth_mm: float,
+    deck_thickness_mm: float,
+    interlock_tongue_depth_mm: float,
+    spanwise_joint_count: int,
+) -> tuple[float, dict[str, Any]]:
+    """Conservative slip/shear at one tile joint; V_max = W/2 on a simply supported span."""
+    geom = deck_interlock_geometry_mm(
+        deck_depth_mm=deck_depth_mm,
+        deck_thickness_mm=deck_thickness_mm,
+        interlock_tongue_depth_mm=interlock_tongue_depth_mm,
+    )
+    # Treat interlayer allowable as an upper bound on shear at printed tongues (clearance reduces engagement).
+    tau_allow_mpa = allowable_interlayer_mpa() / DECK_INTERLOCK_SAFETY_FACTOR
+    shear_capacity_n = tau_allow_mpa * geom["shear_plan_area_mm2"]
+    # Worst joint carries half the total contents load (simply supported peak shear).
+    total_n = 2.0 * shear_capacity_n
+    detail = {
+        **geom,
+        "spanwise_joint_count": spanwise_joint_count,
+        "allowable_shear_mpa": tau_allow_mpa,
+        "deck_interlock_safety_factor": DECK_INTERLOCK_SAFETY_FACTOR,
+        "model": "single_joint_carries_half_total_vertical_shear",
+        "geometry_source": "scripts/generate_shelf_mini.py _deck_interlock_features",
+    }
+    return n_to_lb(total_n), detail
+
+
 def build_report(inputs: dict[str, Any] | None = None) -> LoadAnalysisReport:
     inputs = inputs or load_structural_inputs()
     sm = inputs["structural_mini"]
@@ -304,10 +357,28 @@ def build_report(inputs: dict[str, Any] | None = None) -> LoadAnalysisReport:
     )
     modes.append(
         FailureModeResult(
-            "bracket_root_interlayer_tension",
+            "bracket_root_stress_concentration",
             root_lb,
-            "fdm_z_tension_with_layer_adhesion_factor",
+            str(root_detail["limit_basis"]),
             root_detail,
+        )
+    )
+
+    columns = int(deck_layout.get("columns", 3))
+    joint_count = max(columns - 1, 1)
+    tongue_depth = float(sm.get("interlock_tongue_depth_mm", 3.0))
+    interlock_lb, interlock_detail = deck_interlock_shear_limit_lb(
+        deck_depth_mm=deck_depth_mm,
+        deck_thickness_mm=deck_t,
+        interlock_tongue_depth_mm=tongue_depth,
+        spanwise_joint_count=joint_count,
+    )
+    modes.append(
+        FailureModeResult(
+            "deck_tile_interlock_shear",
+            interlock_lb,
+            "interlayer_shear_at_tongue_with_joint_safety_factor",
+            interlock_detail,
         )
     )
 

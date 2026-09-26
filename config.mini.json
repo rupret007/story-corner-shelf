@@ -27,7 +27,7 @@
     "bracket_wall_strap_width_mm": 72.0,
     "bracket_wall_strap_thickness_mm": 16.0,
     "bracket_shelf_arm_length_mm": 152.4,
-    "bracket_shelf_arm_thickness_mm": 12.0,
+    "bracket_shelf_arm_thickness_mm": 14.0,
     "bracket_vertical_drop_mm": 48.0,
     "bracket_print_arm_layers_along_depth": true,
     "mounting_bore_diameter_mm": 7.0,

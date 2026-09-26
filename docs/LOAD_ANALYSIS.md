@@ -17,7 +17,7 @@
 | Deck tile thickness | `structural_mini.deck_tile_thickness_mm` | 8.0 mm |
 | Deck depth (two tile rows) | `generated/mini/validation.json` `deck_layout.deck_depth_mm` | 152.4 mm |
 | Bracket wall strap | `structural_mini` | 72 × 16 × 48 mm (W × through-wall × drop) |
-| Bracket shelf arm | `structural_mini` | 152.4 mm long × 12 × 12 mm |
+| Bracket shelf arm | `structural_mini` | 152.4 mm long × 14 × 14 mm (thickness raised for root bending within 170 mm bed) |
 | Brackets | `stud_mounting.bracket_quantity` | 2 |
 | Screws | GRK RSS 1/4 × 3-1/2 in candidate | 2 per bracket (geometric clearance only) |
 | Bracket print orientation | `bracket_print_arm_layers_along_depth` | Arm built in **+Y** so layers stack **along shelf depth** (see [PRINT_MINI.md](../PRINT_MINI.md)) |
@@ -62,10 +62,13 @@ GRK RSS values in ESR-2442 apply to **wood**, not to a PETG washer stack — wit
 ## Failure modes checked
 
 1. **Bracket arm cantilever (bulk bending)** — Each bracket carries half the total contents load; uniform load on arm length 152.4 mm; fixed at strap.
-2. **Bracket root** — Interlayer peel for old orientation; with arm layers along depth, bulk bending with **1.5×** stress concentration at the strap junction.
-3. **Deck span** — Simply supported uniform load over 393.7 mm; **interlayer** tension on bottom fiber (8 mm vertical thickness).
-4. **Screw withdrawal** — Two screws per bracket into side-grain stud (conservative penetration after PETG strap).
-5. **PETG washer bearing** — Compressible crushing under screw head.
+2. **Bracket root** — Interlayer peel for legacy orientation (arm layers in Z); with arm layers along depth ([`bracket_print_arm_layers_along_depth`](../config.mini.json)), bulk bending with **1.5×** stress concentration at the strap junction (`BRACKET_ROOT_STRESS_CONCENTRATION_FACTOR` in [`scripts/mini_load_analysis.py`](../scripts/mini_load_analysis.py)).
+3. **Deck tile interlock shear** — Tongue plan area from [`scripts/generate_shelf_mini.py`](../scripts/generate_shelf_mini.py) (`tongue_depth` × **0.7 × deck depth**); interlayer shear allowable ÷ **2.5** joint factor; worst joint carries **W/2** vertical shear (simply supported span between brackets).
+4. **Deck span** — Simply supported uniform load over 393.7 mm; **interlayer** tension on bottom fiber (8 mm vertical thickness).
+5. **Screw withdrawal** — Two screws per bracket into side-grain stud (conservative penetration after PETG strap).
+6. **PETG washer bearing** — Compressible crushing under screw head.
+
+Note: `structural_mini.interlock_tongue_width_mm` in config is a design label; the generator sets tongue contact length to **70% of deck depth** — the analysis uses that CAD rule, not the unused 12 mm key alone.
 
 Printed self-weight (~0.8 kg from geometry) is **not** included in the provisional contents figure; it adds to installed stress.
 
@@ -85,7 +88,7 @@ The script prints JSON including:
 - `governing_failure_mode`
 - `official_rated_load_lb` — always **0**
 
-After the bracket print-orientation fix (arm layers along shelf depth), **bracket root stress concentration** typically governs before deck interlayer or stud withdrawal in the conservative model. Recompute with the script — expect on the order of **~19 lb** contents (ANALYSIS-ONLY) with the current `config.mini.json` geometry and safety factors.
+After the bracket print-orientation fix and **14 mm** arm section (still within the 170 mm effective A1 mini envelope), **deck span interlayer bending** or **bracket root stress concentration** typically govern (within ~1 lb in the conservative model); interlock shear and stud withdrawal stay higher. Recompute with the script — do not cite a rounded figure here; use the JSON output (ANALYSIS-ONLY).
 
 ---
 
@@ -95,7 +98,7 @@ After the bracket print-orientation fix (arm layers along shelf depth), **bracke
 - Impact, point loads, climbing, seismic, or dynamic loads
 - Hollow wall, mis-located studs, or degraded lumber
 - Washer flex, screw shear through PETG, or GRK pull-through of the strap
-- Tile interlock slip or stress concentrations at tongues
+- Tongue **tensile disengagement** or stress concentrations at groove corners (only interlayer **shear** slip is modeled)
 - Any claim of code compliance or product certification
 
 Physical proof at **2×** the provisional analysis load for **24 h** on a real stud bay is defined in [LOAD_TEST.md](LOAD_TEST.md). Only after Jeff records a **pass** may the rated load in [SAFETY.md](../SAFETY.md) be updated.

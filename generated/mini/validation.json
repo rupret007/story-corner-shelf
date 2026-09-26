@@ -44,7 +44,7 @@
     "bracket_wall_strap_width_mm": 72.0,
     "bracket_wall_strap_thickness_mm": 16.0,
     "bracket_shelf_arm_length_mm": 152.4,
-    "bracket_shelf_arm_thickness_mm": 12.0,
+    "bracket_shelf_arm_thickness_mm": 14.0,
     "bracket_vertical_drop_mm": 48.0,
     "bracket_print_arm_layers_along_depth": true,
     "mounting_bore_diameter_mm": 7.0,
@@ -99,8 +99,8 @@
         168.38,
         48.0
       ],
-      "volume_mm3": 76015.11,
-      "estimated_petg_g_each": 96.5,
+      "volume_mm3": 83938.87,
+      "estimated_petg_g_each": 106.6,
       "fits_effective_build_envelope_in_saved_orientation": true,
       "effective_build_envelope_mm": [
         170.0,
@@ -217,14 +217,14 @@
       ]
     }
   ],
-  "estimated_packaged_petg_mass_kg": 0.801,
+  "estimated_packaged_petg_mass_kg": 0.821,
   "mass_estimate_note": "Geometry volume times petg_density_g_cm3; excludes purge, supports, failures, spares, and fasteners.",
   "comparison_to_r12": {
     "r12_packaged_kg_source": "generated/validation.json estimated_packaged_petg_mass_kg",
     "r12_packaged_kg": 3.12,
     "mini_packaged_kg_source": "generated/mini/validation.json geometry volume x petg_density",
-    "mini_packaged_kg": 0.801,
-    "mini_to_r12_mass_ratio": 0.2567,
+    "mini_packaged_kg": 0.821,
+    "mini_to_r12_mass_ratio": 0.2631,
     "print_time_estimate": "unverified \u2014 repository provides no slicer time metadata for mini or R12"
   },
   "stud_mounting": {

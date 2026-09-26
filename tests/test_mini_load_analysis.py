@@ -26,6 +26,9 @@ class MiniLoadAnalysisTests(unittest.TestCase):
             report.governing_failure_mode,
             min(report.modes, key=lambda mode: mode.limit_total_load_lb).name,
         )
+        mode_names = {mode.name for mode in report.modes}
+        self.assertIn("deck_tile_interlock_shear", mode_names)
+        self.assertIn("bracket_root_stress_concentration", mode_names)
 
     def test_layer_adhesion_factor_is_four(self) -> None:
         self.assertEqual(analysis.LAYER_ADHESION_SAFETY_FACTOR, 4.0)
@@ -59,6 +62,27 @@ class MiniLoadAnalysisTests(unittest.TestCase):
             use_half_bracket_reaction=True,
         )
         self.assertGreater(large, small)
+
+    def test_deck_interlock_shear_uses_generator_geometry(self) -> None:
+        geom = analysis.deck_interlock_geometry_mm(
+            deck_depth_mm=152.4,
+            deck_thickness_mm=8.0,
+            interlock_tongue_depth_mm=3.0,
+        )
+        self.assertAlmostEqual(geom["tongue_contact_length_mm"], 152.4 * 0.7)
+        self.assertAlmostEqual(geom["tongue_thickness_mm"], 4.0)
+        self.assertAlmostEqual(geom["shear_plan_area_mm2"], 3.0 * 152.4 * 0.7)
+        limit_lb, detail = analysis.deck_interlock_shear_limit_lb(
+            deck_depth_mm=152.4,
+            deck_thickness_mm=8.0,
+            interlock_tongue_depth_mm=3.0,
+            spanwise_joint_count=2,
+        )
+        self.assertGreater(limit_lb, 0.0)
+        self.assertEqual(detail["spanwise_joint_count"], 2)
+
+    def test_bracket_root_stress_concentration_factor(self) -> None:
+        self.assertEqual(analysis.BRACKET_ROOT_STRESS_CONCENTRATION_FACTOR, 1.5)
 
     def test_arm_along_depth_raises_root_limit_above_legacy_interlayer(self) -> None:
         legacy, _ = analysis.bracket_root_interlayer_limit_lb(
