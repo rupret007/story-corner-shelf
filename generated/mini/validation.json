@@ -1,0 +1,239 @@
+{
+  "profile": "shelf_mini_single_stud_bay",
+  "project": {
+    "name": "Story Corner Mini",
+    "edition": "Single stud-bay all-PETG printable",
+    "repository_slug": "story-corner-shelf",
+    "repository_url": "https://github.com/rupret007/story-corner-shelf",
+    "revision": "shelf_mini_printable_v1",
+    "measurement_status": "nominal_stud_centers_from_r12_long_wall_field_data",
+    "embedded_gcode_allowed": false,
+    "warning": "All-printed PETG prototype for one 15.5 in stud bay at ~6 in depth. Untested, not a rated shelf. R12 hybrid plywood/steel load path does not apply; treat as light-duty development only."
+  },
+  "printer": {
+    "model": "Bambu Lab A1 mini",
+    "nozzle_mm": 0.4,
+    "filament": "SUNLU clear PETG",
+    "minimum_model_build_envelope_mm": [
+      180,
+      180,
+      180
+    ],
+    "build_fit_margin_mm": 5.0,
+    "effective_build_envelope_mm": [
+      170.0,
+      170.0,
+      170.0
+    ]
+  },
+  "closet": {
+    "shelf_depth_in": 6.0,
+    "shelf_depth_status": "mini_design_selection_6in",
+    "stud_centers_from_inside_corner_in": [
+      17.0,
+      32.5
+    ],
+    "deck_clear_span_in": 15.5,
+    "coordinate_note": "Stud centers match measured R12 long-wall studs at 17.0 and 32.5 in; deck spans the 15.5 in on-center bay between them."
+  },
+  "structural_mini": {
+    "deck_tile_thickness_mm": 8.0,
+    "interlock_tongue_width_mm": 12.0,
+    "interlock_tongue_depth_mm": 3.0,
+    "interlock_clearance_mm": 0.35,
+    "bracket_wall_strap_width_mm": 72.0,
+    "bracket_wall_strap_thickness_mm": 16.0,
+    "bracket_shelf_arm_length_mm": 152.4,
+    "bracket_shelf_arm_thickness_mm": 14.0,
+    "bracket_vertical_drop_mm": 48.0,
+    "bracket_print_arm_layers_along_depth": true,
+    "mounting_bore_diameter_mm": 7.0,
+    "mounting_bore_count_per_bracket": 2,
+    "mounting_bore_vertical_pitch_mm": 20.0,
+    "mounting_bore_top_offset_mm": 12.0,
+    "fastener_candidate_product": "GRK RSS 1/4 in x 3-1/2 in Climatek, part 90306 (geometric clearance only; see development/r9/one_bay_geometry.py)",
+    "fastener_note": "Seven-millimeter printed bores clear a 1/4 in-class shank; field-verify stud centering, washer bearing on PETG, and pull-out before loading.",
+    "design_selection_contents_lb_edl": 15,
+    "rated_load_lb": 0
+  },
+  "deck_layout": {
+    "length_mm": 393.7,
+    "module_pitch_mm": 152.4,
+    "center_module_width_mm": 151.8,
+    "parametric_end_module_width_mm": 120.35,
+    "columns": 3,
+    "center_columns": 1,
+    "end_columns": 2,
+    "rows": 2,
+    "module_depth_mm": 75.9,
+    "deck_length_mm": 393.7,
+    "deck_depth_mm": 152.4
+  },
+  "part_count_unique": 4,
+  "part_count_total": 8,
+  "meshes": [
+    {
+      "name": "MINI_PETG_StudBracket",
+      "run_id": "mini_single_bay",
+      "repeat_count": 2,
+      "purpose": "printed wall strap and shelf arm for one verified stud; two 7 mm through-bores per bracket; not a rated substitute for steel hardware",
+      "vertices": 145,
+      "triangles": 294,
+      "watertight": true,
+      "winding_consistent": true,
+      "body_count": 1,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          72.0,
+          168.38,
+          48.0
+        ]
+      ],
+      "size_mm": [
+        72.0,
+        168.38,
+        48.0
+      ],
+      "volume_mm3": 83938.87,
+      "estimated_petg_g_each": 106.6,
+      "fits_effective_build_envelope_in_saved_orientation": true,
+      "effective_build_envelope_mm": [
+        170.0,
+        170.0,
+        170.0
+      ]
+    },
+    {
+      "name": "MINI_PETG_DeckTile_Center",
+      "run_id": "mini_single_bay",
+      "repeat_count": 2,
+      "purpose": "interlocking deck tile; tongue engages the next tile along the wall axis",
+      "vertices": 89,
+      "triangles": 174,
+      "watertight": true,
+      "winding_consistent": true,
+      "body_count": 1,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          154.45,
+          75.9,
+          8.0
+        ]
+      ],
+      "size_mm": [
+        154.45,
+        75.9,
+        8.0
+      ],
+      "volume_mm3": 92654.81,
+      "estimated_petg_g_each": 117.7,
+      "fits_effective_build_envelope_in_saved_orientation": true,
+      "effective_build_envelope_mm": [
+        170.0,
+        170.0,
+        170.0
+      ]
+    },
+    {
+      "name": "MINI_PETG_DeckTile_End_Left",
+      "run_id": "mini_single_bay",
+      "repeat_count": 2,
+      "purpose": "wall-adjacent deck end; single outward tongue",
+      "vertices": 81,
+      "triangles": 158,
+      "watertight": true,
+      "winding_consistent": true,
+      "body_count": 1,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          123.0,
+          75.9,
+          8.0
+        ]
+      ],
+      "size_mm": [
+        123.0,
+        75.9,
+        8.0
+      ],
+      "volume_mm3": 73639.26,
+      "estimated_petg_g_each": 93.5,
+      "fits_effective_build_envelope_in_saved_orientation": true,
+      "effective_build_envelope_mm": [
+        170.0,
+        170.0,
+        170.0
+      ]
+    },
+    {
+      "name": "MINI_PETG_DeckTile_End_Right",
+      "run_id": "mini_single_bay",
+      "repeat_count": 2,
+      "purpose": "outer deck end; groove receives center or neighbor tile",
+      "vertices": 80,
+      "triangles": 156,
+      "watertight": true,
+      "winding_consistent": true,
+      "body_count": 1,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          120.35,
+          75.9,
+          8.0
+        ]
+      ],
+      "size_mm": [
+        120.35,
+        75.9,
+        8.0
+      ],
+      "volume_mm3": 72995.19,
+      "estimated_petg_g_each": 92.7,
+      "fits_effective_build_envelope_in_saved_orientation": true,
+      "effective_build_envelope_mm": [
+        170.0,
+        170.0,
+        170.0
+      ]
+    }
+  ],
+  "estimated_packaged_petg_mass_kg": 0.821,
+  "mass_estimate_note": "Geometry volume times petg_density_g_cm3; excludes purge, supports, failures, spares, and fasteners.",
+  "comparison_to_r12": {
+    "r12_packaged_kg_source": "generated/validation.json estimated_packaged_petg_mass_kg",
+    "r12_packaged_kg": 3.12,
+    "mini_packaged_kg_source": "generated/mini/validation.json geometry volume x petg_density",
+    "mini_packaged_kg": 0.821,
+    "mini_to_r12_mass_ratio": 0.2631,
+    "print_time_estimate": "unverified \u2014 repository provides no slicer time metadata for mini or R12"
+  },
+  "stud_mounting": {
+    "stud_center_stations_in": [
+      17.0,
+      32.5
+    ],
+    "bracket_quantity": 2,
+    "fastener_candidate": "GRK RSS 1/4 in x 3-1/2 in Climatek, part 90306 (geometric clearance only; see development/r9/one_bay_geometry.py)"
+  },
+  "load_boundary": "Untested all-PETG development shelf. Not covered by R12 hybrid safety claims. Zero lb rated load; 15 lb contents figure is a design-selection hint only."
+}

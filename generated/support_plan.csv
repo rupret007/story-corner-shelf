@@ -2,7 +2,8 @@ run,geometry_source,support_number,center_from_inside_corner_wall_datum_in,cente
 short_wall_3ft,nominal_desired_geometry_not_drill_coordinates,1,10.750,2.000,,verified wood stud or purpose-installed structural blocking; not hollow wall
 short_wall_3ft,nominal_desired_geometry_not_drill_coordinates,2,22.313,13.562,11.562,verified wood stud or purpose-installed structural blocking; not hollow wall
 short_wall_3ft,nominal_desired_geometry_not_drill_coordinates,3,33.875,25.125,11.562,verified wood stud or purpose-installed structural blocking; not hollow wall
-long_wall_5ft,nominal_desired_geometry_not_drill_coordinates,1,6.281,5.594,,verified wood stud or purpose-installed structural blocking; not hollow wall
-long_wall_5ft,nominal_desired_geometry_not_drill_coordinates,2,22.281,21.594,16.000,verified wood stud or purpose-installed structural blocking; not hollow wall
-long_wall_5ft,nominal_desired_geometry_not_drill_coordinates,3,38.281,37.594,16.000,verified wood stud or purpose-installed structural blocking; not hollow wall
-long_wall_5ft,nominal_desired_geometry_not_drill_coordinates,4,54.281,53.594,16.000,verified wood stud or purpose-installed structural blocking; not hollow wall
+long_wall_5ft,planned_mixed_verified_studs_and_required_blocking,1,6.000,5.312,,purpose_installed_structural_blocking; required_before_mounting
+long_wall_5ft,planned_mixed_verified_studs_and_required_blocking,2,17.000,16.312,11.000,wood_stud; field_measured_from_44.5_in_right_end_offset
+long_wall_5ft,planned_mixed_verified_studs_and_required_blocking,3,32.500,31.812,15.500,wood_stud; field_measured_from_29.0_in_right_end_offset
+long_wall_5ft,planned_mixed_verified_studs_and_required_blocking,4,48.500,47.812,16.000,wood_stud; field_measured_from_13.0_in_right_end_offset
+long_wall_5ft,planned_mixed_verified_studs_and_required_blocking,5,60.500,59.812,12.000,purpose_installed_structural_blocking; required_before_mounting

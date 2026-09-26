@@ -369,14 +369,18 @@ def run_dimensions(cfg: dict, run: dict) -> dict:
     )
 
     field_supports = [float(value) for value in run.get("field_verified_support_centers_in", [])]
+    support_lines = run.get("support_lines", [])
+    planned_supports = [float(line["station_in"]) for line in support_lines]
     if not all(np.isfinite(value) for value in field_supports):
         raise ValueError(f"{run['id']} field support centers must all be finite numbers")
-    support_count = len(field_supports) if field_supports else int(run["support_count"])
+    if not all(np.isfinite(value) for value in planned_supports):
+        raise ValueError(f"{run['id']} planned support stations must all be finite numbers")
+    support_count = len(planned_supports) if planned_supports else (len(field_supports) if field_supports else int(run["support_count"]))
     if support_count < 2:
         raise ValueError(f"{run['id']} requires at least two independently supported lines")
     maximum_spacing = float(cfg["structural"]["maximum_support_spacing_in"])
-    if field_supports:
-        support_centers = sorted(field_supports)
+    if planned_supports or field_supports:
+        support_centers = sorted(planned_supports or field_supports)
         minimum_distinct_spacing = float(cfg["structural"]["minimum_distinct_support_center_spacing_in"])
         field_center_gaps = [
             support_centers[index + 1] - support_centers[index]
@@ -395,7 +399,11 @@ def run_dimensions(cfg: dict, run: dict) -> dict:
         support_spacings = field_center_gaps
         left_overhang = support_centers[0] - deck_start
         right_overhang = deck_end - support_centers[-1]
-        support_geometry_source = "field_verified"
+        support_geometry_source = (
+            "planned_mixed_verified_studs_and_required_blocking"
+            if planned_supports
+            else "field_verified"
+        )
     else:
         preferred_overhang = float(cfg["structural"]["preferred_end_overhang_in"])
         preferred_spacing = (deck_length - 2.0 * preferred_overhang) / (support_count - 1)
@@ -464,6 +472,7 @@ def run_dimensions(cfg: dict, run: dict) -> dict:
         "palatine_arcade_layout": palatine_arcade_layout,
         "rear_curb_layout": rear_layout,
         "support_geometry_source": support_geometry_source,
+        "support_lines": support_lines,
         "support_spacings_in": support_spacings,
         "left_end_overhang_in": left_overhang,
         "right_end_overhang_in": right_overhang,
@@ -665,18 +674,43 @@ def fascia(cfg: dict, width: float) -> trimesh.Trimesh:
     channel_d = float(f["channel_depth_mm"])
     top_d = float(f["top_flange_depth_mm"])
     total_h = fascia_total_height(cfg)
+    corner_radius = float(f.get("plate_facing_corner_radius_mm", 0.0))
+    root = float(f.get("channel_root_reinforcement_mm", 0.0))
 
     # Saved with the broad front face on the build plate. The channel flanges
     # grow in Z in this orientation, avoiding support material.
-    face = cuboid((width, total_h, face_t))
-    bottom = cuboid((width, flange_t, channel_d))
+    face = rounded_prism(width, total_h, face_t, radius=corner_radius)
+    bottom = rounded_prism(
+        width,
+        flange_t,
+        channel_d,
+        radius=min(corner_radius, flange_t / 2.0),
+    )
     top_y = flange_t + opening_h
-    top = cuboid((width, flange_t, top_d), origin=(0.0, top_y, 0.0))
+    top = rounded_prism(
+        width,
+        flange_t,
+        top_d,
+        radius=min(corner_radius, flange_t / 2.0),
+    )
+    top.apply_translation((0.0, top_y, 0.0))
+    reinforcements = []
+    if root > 0.0:
+        rail_width = min(root, flange_t)
+        reinforcements.extend(
+            [
+                cuboid((width, rail_width, root), origin=(0.0, 0.0, face_t)),
+                cuboid(
+                    (width, rail_width, root),
+                    origin=(0.0, top_y + flange_t - rail_width, face_t),
+                ),
+            ]
+        )
     # The upper and lower flanges capture the finish channel around the real
     # plywood/tile/angle stack. Lateral endcaps and a qualified removable
     # silicone dot prevent creep and rattle; the continuous steel angle is not
     # drilled or notched for cosmetic retention.
-    return boolean_union([face, bottom, top])
+    return boolean_union([face, bottom, top, *reinforcements])
 
 
 def segmental_arch_opening(
@@ -1124,6 +1158,19 @@ def fit_coupon(cfg: dict) -> trimesh.Trimesh:
     return fascia(cfg, width=35.0)
 
 
+def adhesion_corner_coupon(cfg: dict) -> trimesh.Trimesh:
+    """Reproduce the production plate-facing corner and channel root cheaply."""
+    width = 45.0
+    channel = fascia(cfg, width=width)
+    web = rounded_prism(
+        width,
+        30.0,
+        float(cfg["palatine"]["arch_panel_thickness_mm"]),
+        radius=float(cfg["fascia"]["plate_facing_corner_radius_mm"]),
+    )
+    return normalize_mesh(boolean_union([channel, web]))
+
+
 def validate_mesh(part: Part, cfg: dict) -> dict:
     mesh = part.mesh.copy()
     mesh.remove_unreferenced_vertices()
@@ -1185,7 +1232,7 @@ def model_xml(title: str, description: str, objects: list[tuple[str, trimesh.Tri
     ET.SubElement(model, f"{{{NS_3MF}}}metadata", {"name": "Application"}).text = "PETG Closet Shelf parametric generator"
     resources = ET.SubElement(model, f"{{{NS_3MF}}}resources")
     materials = ET.SubElement(resources, f"{{{NS_3MF}}}basematerials", {"id": "1"})
-    ET.SubElement(materials, f"{{{NS_3MF}}}base", {"name": "Black PETG (unconfirmed preset)", "displaycolor": "#111111FF"})
+    ET.SubElement(materials, f"{{{NS_3MF}}}base", {"name": "SUNLU clear PETG", "displaycolor": "#DDEEFF80"})
     build = ET.SubElement(model, f"{{{NS_3MF}}}build")
 
     for object_id, (name, source_mesh, translation) in enumerate(objects, start=2):
@@ -1324,6 +1371,7 @@ def write_part_3mfs(parts: list[Part], cfg: dict) -> None:
 
 
 def write_cut_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
+    material = cfg["printer"]["filament"]
     structural = cfg["structural"]
     with (OUT / "cut_plan.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle, lineterminator="\n")
@@ -1373,14 +1421,14 @@ def write_cut_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
                 f"{run['label']} PETG top center module",
                 top["center_columns"] * top["rows"] * run["quantity"],
                 f"{top['center_module_width_mm']:.3f} x {top['module_depth_mm']:.3f} x {cfg['skin']['tile_thickness_mm']:.1f} mm",
-                "black PETG",
+                material,
                 "reusable universal 6 in-pitch center; nonstructural finish",
             ])
             writer.writerow([
                 f"{run['label']} PETG top parametric end module",
                 top["end_columns"] * top["rows"] * run["quantity"],
                 f"{top['parametric_end_module_width_mm']:.3f} x {top['module_depth_mm']:.3f} x {cfg['skin']['tile_thickness_mm']:.1f} mm",
-                "black PETG",
+                material,
                 f"two ends per row; common corner seam is {d['corner_to_top_arm_finish_seam_mm']:.1f} mm; inner tile overhang into the wood gap is {d['top_inner_overhang_into_wood_joint_mm']:.1f} mm; regenerate after field changes",
             ])
             if d["owns_corner_top_zone"]:
@@ -1389,7 +1437,7 @@ def write_cut_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
                     "Through-owned PETG top corner quadrant",
                     4,
                     f"{quadrant:.3f} x {quadrant:.3f} x {cfg['skin']['tile_thickness_mm']:.1f} mm",
-                    "black PETG",
+                    material,
                     "four identical pieces cover the 8 x 8 in through-deck corner square; near-square mating corners minimize the center seam opening",
                 ])
             for handedness in ("left", "right"):
@@ -1397,28 +1445,28 @@ def write_cut_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
                     f"{run['label']} Triadic Palatine arcade/fascia {handedness} half",
                     arcade[f"{handedness}_half_count"] * run["quantity"],
                     f"{arcade['half_arch_width_mm']:.3f} x {arcade['total_height_mm']:.3f} x {cfg['fascia']['channel_depth_mm']:.1f} mm",
-                    "black PETG",
+                    material,
                     f"{arcade['bay_count']} complete bays on this arm; captured channel, 3:4:5 spandrel void, segmental archivolt, fluted pier with base/capital, and no steel-angle drilling; nonstructural",
                 ])
             writer.writerow([
                 f"{run['label']} removable Palatine entablature overlay",
                 arcade["segment_count"] * run["quantity"],
                 f"{arcade['half_arch_width_mm']:.3f} x {cfg['palatine']['entablature_overlay_height_mm']:.1f} mm",
-                "black PETG",
+                material,
                 "one per half arch; nine dentils, three triglyph groups, three-order cornice, and central patera; qualify one removable silicone dot and retain to its own segment only",
             ])
             writer.writerow([
                 f"{run['label']} PETG rear-curb center module",
                 rear["center_columns"] * run["quantity"],
                 f"{rear['center_module_width_mm']:.3f} mm module",
-                "black PETG",
+                material,
                 f"reusable universal center; {rear_note}; nonstructural",
             ])
             writer.writerow([
                 f"{run['label']} PETG rear-curb parametric end module",
                 rear["end_columns"] * run["quantity"],
                 f"{rear['parametric_end_module_width_mm']:.3f} mm module",
-                "black PETG",
+                material,
                 "one generated clearance slot; field-drill the matching top tile only after layout, then use a short nonstructural screw with bottom clearance; regenerate when field width changes",
             ])
             if d["owns_corner_side_rear_curb"]:
@@ -1426,7 +1474,7 @@ def write_cut_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
                     "Through-owned short-wall rear-curb corner-side piece",
                     1,
                     f"{d['corner_side_rear_curb_length_mm']:.3f} mm",
-                    "black PETG",
+                    material,
                     "rests on the PETG tile/plywood stack over the through-deck corner square, stops before the plywood joint, and has one generated clearance slot; nonstructural",
                 ])
         writer.writerow([
@@ -1436,14 +1484,15 @@ def write_cut_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
             "nonprinted slotted steel plates and mechanical fasteners",
             "alignment only; does not replace either run's independent brackets and is not a load-rating basis",
         ])
-        writer.writerow(["Triadic Palatine keystone seam cover", cfg["palatine"]["total_arcade_bays"], f"{cfg['palatine']['keystone_width_mm']:.1f} x {cfg['palatine']['keystone_height_mm']:.1f} mm", "black PETG", "one per arch; retain to one half only so the opposite half can float across the 0.6 mm seam"])
-        writer.writerow(["Palatine full-height fascia endcap", 2, f"{fascia_total_height(cfg) + cfg['palatine']['arch_drop_mm']:.3f} mm tall x {cfg['fascia']['endcap_thickness_mm']:.1f} mm", "black PETG", "one at each exposed outer end; straight fascia length already reserves its thickness"])
-        writer.writerow(["Palatine re-entrant-corner pilaster slip cover", 1, f"18 mm legs x {fascia_total_height(cfg) + cfg['palatine']['arch_drop_mm']:.3f} mm tall", "black PETG", "fix one upper leg only and let the perpendicular leg float; no structural function"])
-        writer.writerow(["Palatine groin-vault corner soffit", 1, f"{cfg['palatine']['groin_vault_size_mm']:.1f} mm square", "black PETG", "mount only beneath the through-owned corner square; keep the generated bracket clearance and never bridge the plywood joint"])
-        writer.writerow(["PETG rear-curb inside-corner replacement", 1, "30 mm-leg fitted L curb with one clearance slot per arm", "black PETG", "sits on the top tile, replaces—not overlays—the first 30 mm of both straight curbs, and never crosses the plywood joint"])
-        writer.writerow(["Corner fit gauge", 1, "60 mm-arm nominal L gauge", "black PETG", "print before corner production; confirm the real corner angle and regenerate if needed"])
-        writer.writerow(["Fascia fit coupon", 1, "35 mm-wide test slice", "black PETG", "print and fit before any fascia production run"])
-        writer.writerow(["Palatine detail coupon", 1, "75.9 x 98 mm true-scale detail montage", "black PETG", "approve the archivolt reveal, triangle, flutes, dentils, and finish before any ornate production run"])
+        writer.writerow(["Triadic Palatine keystone seam cover", cfg["palatine"]["total_arcade_bays"], f"{cfg['palatine']['keystone_width_mm']:.1f} x {cfg['palatine']['keystone_height_mm']:.1f} mm", material, "one per arch; retain to one half only so the opposite half can float across the 0.6 mm seam"])
+        writer.writerow(["Palatine full-height fascia endcap", 2, f"{fascia_total_height(cfg) + cfg['palatine']['arch_drop_mm']:.3f} mm tall x {cfg['fascia']['endcap_thickness_mm']:.1f} mm", material, "one at each exposed outer end; straight fascia length already reserves its thickness"])
+        writer.writerow(["Palatine re-entrant-corner pilaster slip cover", 1, f"18 mm legs x {fascia_total_height(cfg) + cfg['palatine']['arch_drop_mm']:.3f} mm tall", material, "fix one upper leg only and let the perpendicular leg float; no structural function"])
+        writer.writerow(["Palatine groin-vault corner soffit", 1, f"{cfg['palatine']['groin_vault_size_mm']:.1f} mm square", material, "mount only beneath the through-owned corner square; keep the generated bracket clearance and never bridge the plywood joint"])
+        writer.writerow(["PETG rear-curb inside-corner replacement", 1, "30 mm-leg fitted L curb with one clearance slot per arm", material, "sits on the top tile, replaces—not overlays—the first 30 mm of both straight curbs, and never crosses the plywood joint"])
+        writer.writerow(["R12 adhesion-corner coupon", 1, "45 x 78.056 x 29 mm production-thickness corner", material, "first print; reject dragged, lifted, separated, or delaminated first-layer lines"])
+        writer.writerow(["Corner fit gauge", 1, "60 mm-arm nominal L gauge", material, "print before corner production; confirm the real corner angle and regenerate if needed"])
+        writer.writerow(["Fascia fit coupon", 1, "35 mm-wide test slice", material, "print and fit before any fascia production run"])
+        writer.writerow(["Palatine detail coupon", 1, "75.9 x 98 mm true-scale detail montage", material, "approve the archivolt reveal, triangle, flutes, dentils, and finish before any ornate production run"])
 
 
 def write_support_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
@@ -1452,9 +1501,19 @@ def write_support_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
         writer.writerow(["run", "geometry_source", "support_number", "center_from_inside_corner_wall_datum_in", "center_local_to_deck_start_in", "previous_spacing_in", "field_requirement"])
         for run in cfg["closet"]["runs"]:
             d = dimensions[run["id"]]
+            support_by_station = {
+                float(line["station_in"]): line
+                for line in d.get("support_lines", [])
+            }
             previous = None
             for index, center in enumerate(d["nominal_support_centers_in"], start=1):
                 spacing = "" if previous is None else f"{center - previous:.3f}"
+                support = support_by_station.get(float(center))
+                requirement = (
+                    f"{support['backing']}; {support['verification_status']}"
+                    if support
+                    else "verified wood stud or purpose-installed structural blocking; not hollow wall"
+                )
                 writer.writerow([
                     run["id"],
                     d["support_geometry_source"],
@@ -1462,7 +1521,7 @@ def write_support_plan(cfg: dict, dimensions: dict[str, dict]) -> None:
                     f"{center:.3f}",
                     f"{center - d['deck_start_from_inside_corner_in']:.3f}",
                     spacing,
-                    "verified wood stud or purpose-installed structural blocking; not hollow wall",
+                    requirement,
                 ])
                 previous = center
 
@@ -2051,6 +2110,13 @@ def main() -> None:
                 "inside_corner_L",
                 1,
                 "nonstructural fitted replacement for the first 30 mm of both straight rear-curb arms; install before the straight pieces and do not overlay them",
+            ),
+            Part(
+                "PRINT_FIRST_R12_AdhesionCornerCoupon",
+                adhesion_corner_coupon(cfg),
+                None,
+                1,
+                "production-thickness plate-facing corner and channel-root adhesion qualification",
             ),
             Part("PRINT_FIRST_FasciaFitCoupon", fit_coupon(cfg), None, 1, "fit test for the real plywood and steel stack"),
             Part(

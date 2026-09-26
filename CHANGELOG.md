@@ -2,7 +2,17 @@
 
 Design revisions are named in `config.json`. The project has not been assigned a public semantic version.
 
-## Unreleased — `triadic_palatine_fitted_l_corner_r5`
+## Final durable release — `triadic_palatine_fitted_l_corner_r12_final_durable`
+
+- Recorded the 61.5 in long wall and converted measured studs to 17.0, 32.5, and 48.5 in from the inside-corner datum.
+- Added required structural-blocking lines at 6.0 and 60.5 in; the nominal 36 in return arm is explicitly on hold pending field measurements.
+- Increased all primary finish thicknesses and added rounded plate corners plus channel-root reinforcement.
+- Added an exact-production adhesion-corner coupon after the photographed plate-facing corner failure.
+- Added reproducible A1 Mini / SUNLU clear PETG presets and `generated/final_release_r12/` as the authoritative handoff.
+- Replaced the old 8 mm brim, 90–100 C bed, and forced 105% flow guidance with a 3 mm brim, 70 C bed, 240 C nozzle, and calibrated flow.
+- R12 contains 102 model-only objects: 98 installed pieces and four qualification objects. Estimated geometry mass is 3.12 kg packaged and 3.06 kg installed.
+
+## Superseded — `triadic_palatine_fitted_l_corner_r5`
 
 ### Documentation and assembly completion (design review)
 

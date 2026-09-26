@@ -1,10 +1,12 @@
 # Engineering design basis — Triadic Palatine fitted-L prototype
 
-This document records r5 design intent, parametric geometry, and verification requirements. It is not a stamped calculation, code approval, installation certification, or tested load rating.
+This document records R12 final-durable design intent, parametric geometry, and verification requirements. It is not a stamped calculation, code approval, installation certification, or tested load rating.
+
+The measured 61.5 in long wall uses five planned support lines at 6.0, 17.0, 32.5, 48.5, and 60.5 in from the inside corner. The middle three are measured studs; the two end lines require purpose-installed structural blocking before mounting. The nominal 36 in return is on hold pending field measurements.
 
 ## 1. Design problem and load-path split
 
-Story Corner is one same-height L shelf whose visible surface reaches the exposed ends of nominal 36 and 60 in walls. The selected development depth is 8 in. Black PETG creates the Triadic Palatine finish; long-term storage load remains outside creep-sensitive printed plastic.
+Story Corner is one same-height L shelf whose visible surface reaches the exposed ends of a nominal 36 in return and measured 61.5 in long wall. The selected development depth is 8 in. SUNLU clear PETG creates the Triadic Palatine finish; long-term storage load remains outside creep-sensitive printed plastic.
 
 The jobs are deliberately separate:
 
@@ -15,7 +17,7 @@ The jobs are deliberately separate:
 
 The 5 ft arm runs through and owns the corner. The shortened 3 ft return starts beyond the through deck's front plane. Both decks retain independent supports. The plywood joint, optional alignment plates, PETG fascia, arches, piers, and vault receive no capacity credit.
 
-An all-PETG structural shelf is not an alternate configuration of this design. Roman arches develop compression reactions between abutments; they do not eliminate tension at a cantilevered wall connection, printed layer anisotropy, joint behavior, or PETG creep. Any all-printed structural concept would be a separately scoped, tested, light-duty project and could not inherit r5's selection targets.
+An all-PETG structural shelf is not an alternate configuration of this design. Roman arches develop compression reactions between abutments; they do not eliminate tension at a cantilevered wall connection, printed layer anisotropy, joint behavior, or PETG creep. Any all-printed structural concept would be a separately scoped, tested, light-duty project and could not inherit R12's selection targets.
 
 ## 2. Two-wall corner coordinate model
 
@@ -153,17 +155,17 @@ Installed vertical stack:
 ```text
 deck top datum             z = 0
 top tile                   z = 0–2.0 mm
-rear-curb base             z = 2.0–4.4 mm
-rear-curb upright top      z = 17.0 mm
+rear-curb base             z = 2.4–5.6 mm
+rear-curb upright top      z = 17.4 mm
 ```
 
-The 17.0 mm upright top is the 15.0 mm printed curb height (`rear_curb_height_mm` in config.json) sitting on the 2.0 mm tile; edit the config value, not the sum.
+The 17.4 mm upright top is the 15.0 mm printed curb height (`rear_curb_height_mm` in config.json) sitting on the 2.4 mm tile; edit the config value, not the sum.
 
 Each straight curb piece has one 8 x 4.4 mm generated clearance slot. The L replacement has one slot per arm. Field-drill the matching tile only after layout; then use a short nonstructural pan-head screw into plywood with verified underside clearance. Never clamp PETG rigidly, bridge a printed seam, or cross the wood joint.
 
 ## 7. Triadic Palatine fascia architecture
 
-The r5 ornament is a replaceable skin with zero structural credit:
+The R12 ornament is a replaceable skin with zero structural credit. Primary fascia faces/flanges are 3.2 mm, arch webs 3.6 mm, rear curbs 3.2 mm, top tiles 2.4 mm, and non-mating plate corners use a 1.5 mm radius with 2.0 mm channel-root reinforcement:
 
 - 3 complete segmental bays on the return and 6 on the through arm;
 - 6 short-arm and 12 long-arm handed half-arches;
@@ -171,7 +173,7 @@ The r5 ornament is a replaceable skin with zero structural credit:
 - 0.6 mm seams between all 18 halves;
 - functional fascia height: 76.05625 mm;
 - arch drop: 92 mm;
-- total saved height: 168.05625 mm;
+- total saved height: 170.05625 mm;
 - segmental rise: 48 mm with 6 mm overlap into the fascia;
 - panel thickness: 3.2 mm;
 - 5 mm outer archivolt, 2.4 mm true shadow slot, and 4 mm inner archivolt;
@@ -181,15 +183,15 @@ The r5 ornament is a replaceable skin with zero structural credit:
 
 Each half receives its own removable 24 mm-high entablature overlay: 2.0 mm base, 1.2 mm relief, 9 dentils, 3 triglyph groups, 3 continuous orders, and an 11 mm central patera. The overlay attaches only to its host half.
 
-Nine 18 x 24 x 2.4 mm keystones hide bay-center seams. Each is retained to one half only and floats across the other. The 18 mm-leg, 168.056 mm-high corner pilaster follows the same rule: fix one upper leg and float the perpendicular leg.
+Nine 18 x 24 x 3.0 mm keystones hide bay-center seams. Each is retained to one half only and floats across the other. The 18 mm-leg, 170.056 mm-high corner pilaster follows the same rule: fix one upper leg and float the perpendicular leg.
 
-Two compound 168.056 mm-high endcaps close the exposed arcade/fascia ends. Each straight fascia layout already reserves the 2.0 mm cap thickness.
+Two compound 170.056 mm-high endcaps close the exposed arcade/fascia ends. Each straight fascia layout already reserves the 3.0 mm cap thickness.
 
-The 42 x 42 x 2.0 mm groin-vault soffit (1.2 mm base plus 0.8 mm relief, per the config `groin_vault_base_mm` and `groin_vault_relief_mm` keys) has diagonal ribs, border, and a nine-petal boss. Its two slots mount it only beneath the through-owned corner square; it must not bridge the return joint.
+The 42 x 42 x 3.0 mm groin-vault soffit (2.0 mm base plus 1.0 mm relief) has diagonal ribs, border, and a nine-petal boss. Its two slots mount it only beneath the through-owned corner square; it must not bridge the return joint.
 
 The fascia upper flange overlays the top tile. Its nominal channel opening is:
 
-`18.256 mm plywood + 25.4 mm angle leg + 2.0 mm tile + 0.6 mm clearance = 46.256 mm`
+`18.256 mm plywood + 25.4 mm angle leg + 2.4 mm tile + 0.6 mm clearance = 46.656 mm`
 
 The coupon must be tested against that complete physical stack. Arcade shapes that resemble brackets or piers remain decoration only.
 
@@ -214,7 +216,7 @@ Every adhesive and fastener must be qualified on printed PETG, sealed plywood, a
 
 ## 9. Package, modularity, and reconfiguration
 
-The nominal r5 full print set contains 101 objects: 98 installed pieces plus the corner gauge, fascia coupon, and Palatine detail coupon. Geometry-volume estimates are 2.45 kg packaged and 2.42 kg installed PETG. These exclude purge, supports, failures, spares, attachment hardware, plywood, and steel.
+The R12 full print set contains 102 objects: 98 installed pieces plus the adhesion-corner coupon, corner gauge, fascia coupon, and Palatine detail coupon. Geometry-volume estimates are 3.12 kg packaged and 3.06 kg installed PETG. These exclude purge, supports, failures, spares, attachment hardware, plywood, and steel.
 
 Allowed customization is constrained:
 

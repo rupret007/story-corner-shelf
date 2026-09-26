@@ -1,11 +1,11 @@
 {
   "project_name": "Story Corner",
   "design_edition": "Triadic Palatine Order",
-  "revision": "triadic_palatine_fitted_l_corner_r5",
+  "revision": "triadic_palatine_fitted_l_corner_r12_final_durable",
   "embedded_gcode_allowed": false,
   "source_config": "config.json",
   "artifact_type": "model-only 3MF; no embedded G-code",
-  "generated_files": 23,
+  "generated_files": 25,
   "all_files_pass": true,
   "package_files": [
     "MODEL_ONLY_PETG_Palatine_ArcadeFascia_Half_left_long_wall_5ft.3mf",
@@ -25,10 +25,12 @@
     "MODEL_ONLY_PETG_RearCurb_ParametricEnd_short_wall_3ft.3mf",
     "MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf",
     "MODEL_ONLY_PETG_TopTile_CornerQuadrant_SquareMating.3mf",
-    "MODEL_ONLY_PETG_TopTile_ParametricEnd.3mf",
+    "MODEL_ONLY_PETG_TopTile_ParametricEnd_long_wall_5ft.3mf",
+    "MODEL_ONLY_PETG_TopTile_ParametricEnd_short_wall_3ft.3mf",
     "MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf",
     "MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf",
     "MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf",
+    "MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf",
     "MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf",
     "MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_PARTS_CATALOG.3mf"
   ],
@@ -53,13 +55,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 529,
-      "total_triangles": 1066,
+      "total_vertices": 722,
+      "total_triangles": 1452,
       "mesh_details": [
         {
           "name": "PETG_Palatine_ArcadeFascia_Half_left_long_wall_5ft",
-          "vertices": 529,
-          "triangles": 1066
+          "vertices": 722,
+          "triangles": 1452
         }
       ],
       "mesh_details_omitted": false
@@ -84,13 +86,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 528,
-      "total_triangles": 1064,
+      "total_vertices": 717,
+      "total_triangles": 1442,
       "mesh_details": [
         {
           "name": "PETG_Palatine_ArcadeFascia_Half_left_short_wall_3ft",
-          "vertices": 528,
-          "triangles": 1064
+          "vertices": 717,
+          "triangles": 1442
         }
       ],
       "mesh_details_omitted": false
@@ -115,13 +117,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 529,
-      "total_triangles": 1066,
+      "total_vertices": 729,
+      "total_triangles": 1466,
       "mesh_details": [
         {
           "name": "PETG_Palatine_ArcadeFascia_Half_right_long_wall_5ft",
-          "vertices": 529,
-          "triangles": 1066
+          "vertices": 729,
+          "triangles": 1466
         }
       ],
       "mesh_details_omitted": false
@@ -146,13 +148,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 524,
-      "total_triangles": 1056,
+      "total_vertices": 725,
+      "total_triangles": 1458,
       "mesh_details": [
         {
           "name": "PETG_Palatine_ArcadeFascia_Half_right_short_wall_3ft",
-          "vertices": 524,
-          "triangles": 1056
+          "vertices": 725,
+          "triangles": 1458
         }
       ],
       "mesh_details_omitted": false
@@ -270,13 +272,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 850,
-      "total_triangles": 1704,
+      "total_vertices": 855,
+      "total_triangles": 1714,
       "mesh_details": [
         {
           "name": "PETG_Palatine_GroinVault_CornerSoffit",
-          "vertices": 850,
-          "triangles": 1704
+          "vertices": 855,
+          "triangles": 1714
         }
       ],
       "mesh_details_omitted": false
@@ -363,13 +365,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 114,
-      "total_triangles": 228,
+      "total_vertices": 117,
+      "total_triangles": 234,
       "mesh_details": [
         {
           "name": "PETG_RearCurb_Center_6inPitch",
-          "vertices": 114,
-          "triangles": 228
+          "vertices": 117,
+          "triangles": 234
         }
       ],
       "mesh_details_omitted": false
@@ -394,13 +396,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 117,
-      "total_triangles": 234,
+      "total_vertices": 118,
+      "total_triangles": 236,
       "mesh_details": [
         {
           "name": "PETG_RearCurb_CornerSide_ThroughZone",
-          "vertices": 117,
-          "triangles": 234
+          "vertices": 118,
+          "triangles": 236
         }
       ],
       "mesh_details_omitted": false
@@ -425,13 +427,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 233,
-      "total_triangles": 470,
+      "total_vertices": 235,
+      "total_triangles": 474,
       "mesh_details": [
         {
           "name": "PETG_RearCurb_InsideCorner_Replacement",
-          "vertices": 233,
-          "triangles": 470
+          "vertices": 235,
+          "triangles": 474
         }
       ],
       "mesh_details_omitted": false
@@ -456,13 +458,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 115,
-      "total_triangles": 230,
+      "total_vertices": 116,
+      "total_triangles": 232,
       "mesh_details": [
         {
           "name": "PETG_RearCurb_ParametricEnd_long_wall_5ft",
-          "vertices": 115,
-          "triangles": 230
+          "vertices": 116,
+          "triangles": 232
         }
       ],
       "mesh_details_omitted": false
@@ -561,7 +563,7 @@
       "mesh_details_omitted": false
     },
     {
-      "file": "MODEL_ONLY_PETG_TopTile_ParametricEnd.3mf",
+      "file": "MODEL_ONLY_PETG_TopTile_ParametricEnd_long_wall_5ft.3mf",
       "checks": {
         "zip_crc_ok": true,
         "required_entries_present": true,
@@ -584,7 +586,38 @@
       "total_triangles": 140,
       "mesh_details": [
         {
-          "name": "PETG_TopTile_ParametricEnd",
+          "name": "PETG_TopTile_ParametricEnd_long_wall_5ft",
+          "vertices": 72,
+          "triangles": 140
+        }
+      ],
+      "mesh_details_omitted": false
+    },
+    {
+      "file": "MODEL_ONLY_PETG_TopTile_ParametricEnd_short_wall_3ft.3mf",
+      "checks": {
+        "zip_crc_ok": true,
+        "required_entries_present": true,
+        "millimeter_units": true,
+        "contains_mesh_objects": true,
+        "object_ids_present_and_unique": true,
+        "object_names_present": true,
+        "object_names_unique": true,
+        "build_references_valid": true,
+        "build_references_exactly_once": true,
+        "triangle_indices_valid": true,
+        "contains_no_embedded_gcode": true
+      },
+      "all_checks_pass": true,
+      "missing_entries": [],
+      "unexpected_gcode_entries": [],
+      "object_count": 1,
+      "build_item_count": 1,
+      "total_vertices": 72,
+      "total_triangles": 140,
+      "mesh_details": [
+        {
+          "name": "PETG_TopTile_ParametricEnd_short_wall_3ft",
           "vertices": 72,
           "triangles": 140
         }
@@ -642,13 +675,13 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 23,
-      "total_triangles": 42,
+      "total_vertices": 254,
+      "total_triangles": 504,
       "mesh_details": [
         {
           "name": "PRINT_FIRST_FasciaFitCoupon",
-          "vertices": 23,
-          "triangles": 42
+          "vertices": 254,
+          "triangles": 504
         }
       ],
       "mesh_details_omitted": false
@@ -673,13 +706,44 @@
       "unexpected_gcode_entries": [],
       "object_count": 1,
       "build_item_count": 1,
-      "total_vertices": 573,
-      "total_triangles": 1150,
+      "total_vertices": 566,
+      "total_triangles": 1136,
       "mesh_details": [
         {
           "name": "PRINT_FIRST_PalatineDetailCoupon",
-          "vertices": 573,
-          "triangles": 1150
+          "vertices": 566,
+          "triangles": 1136
+        }
+      ],
+      "mesh_details_omitted": false
+    },
+    {
+      "file": "MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf",
+      "checks": {
+        "zip_crc_ok": true,
+        "required_entries_present": true,
+        "millimeter_units": true,
+        "contains_mesh_objects": true,
+        "object_ids_present_and_unique": true,
+        "object_names_present": true,
+        "object_names_unique": true,
+        "build_references_valid": true,
+        "build_references_exactly_once": true,
+        "triangle_indices_valid": true,
+        "contains_no_embedded_gcode": true
+      },
+      "all_checks_pass": true,
+      "missing_entries": [],
+      "unexpected_gcode_entries": [],
+      "object_count": 1,
+      "build_item_count": 1,
+      "total_vertices": 301,
+      "total_triangles": 598,
+      "mesh_details": [
+        {
+          "name": "PRINT_FIRST_R12_AdhesionCornerCoupon",
+          "vertices": 301,
+          "triangles": 598
         }
       ],
       "mesh_details_omitted": false
@@ -702,10 +766,10 @@
       "all_checks_pass": true,
       "missing_entries": [],
       "unexpected_gcode_entries": [],
-      "object_count": 101,
-      "build_item_count": 101,
-      "total_vertices": 21382,
-      "total_triangles": 42664,
+      "object_count": 102,
+      "build_item_count": 102,
+      "total_vertices": 25478,
+      "total_triangles": 50852,
       "mesh_details": null,
       "mesh_details_omitted": true
     },
@@ -727,10 +791,10 @@
       "all_checks_pass": true,
       "missing_entries": [],
       "unexpected_gcode_entries": [],
-      "object_count": 21,
-      "build_item_count": 21,
-      "total_vertices": 5232,
-      "total_triangles": 10468,
+      "object_count": 23,
+      "build_item_count": 23,
+      "total_vertices": 6624,
+      "total_triangles": 13244,
       "mesh_details": null,
       "mesh_details_omitted": true
     }

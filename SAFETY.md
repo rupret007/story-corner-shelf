@@ -1,6 +1,8 @@
 # Safety boundary
 
-Story Corner r5 is an untested DIY prototype—not a stamped structural design, code approval, certified installation, or rated storage product. The current 55 lb return-arm and 120 lb through-arm evenly distributed values are system-selection targets only. They are not published safe-working loads.
+Story Corner R12 is an untested DIY prototype—not a stamped structural design, code approval, certified installation, or rated storage product. The current 55 lb return-arm and 120 lb through-arm evenly distributed values are system-selection targets only. They are not published safe-working loads.
+
+The measured 61.5 in long wall cannot be mounted from the three measured studs alone under this design's spacing/overhang rules. Install and verify structural blocking at 6.0 and 60.5 in from the inside corner before mounting standards; measured studs are at 17.0, 32.5, and 48.5 in. The nominal return arm remains on hold until measured.
 
 ## Nonnegotiable hybrid load path
 
@@ -15,6 +17,15 @@ Never use a generated PETG component as:
 - a rated restraint for hazardous, fragile, dense, or liquid-filled objects.
 
 The Palatine arches, fluted piers, keystones, groin vault, and entablatures are architectural trim. Their Roman appearance does not give them masonry behavior or structural credit. PETG creeps under sustained stress and varies with temperature, formulation, moisture, print orientation, settings, layer adhesion, and stress concentration. A larger or more intricate printed part does not establish a safe long-term overhead rating. A structurally all-PETG shelf is outside this project.
+
+## Story Corner Mini (all-PETG development shelf)
+
+The single stud-bay mini is documented in [PRINT_MINI.md](PRINT_MINI.md); model-only PETG assets live under [`generated/mini/`](generated/mini/). It is **outside** the R12 hybrid load path above and inherits **no** R12 system-selection targets (55 lb return, 120 lb through, or any other R12 figure).
+
+- **Rated load:** 0 lb (development only). Any 15 lb evenly distributed contents figure in PRINT_MINI.md is a design-selection hint only—not a safe-working load.
+- **Provisional analysis (not a rating):** See [docs/LOAD_ANALYSIS.md](docs/LOAD_ANALYSIS.md) and run `scripts/mini_load_analysis.py` for a conservative ANALYSIS-ONLY contents limit from bracket, deck, and stud-side checks. Physical proof per [docs/LOAD_TEST.md](docs/LOAD_TEST.md) is required before changing the rated load above.
+- **Stud brackets:** printed bores and fastener notes are geometric clearance compatibility only—not an approved structural connection.
+- Do not climb on the shelf, mount it without independently verified wood studs and adequate screw engagement, or treat printed PETG as code-approved structure.
 
 ## Corner stop conditions
 
@@ -57,7 +68,7 @@ The rear curb sits on the printed tile, not directly on bare plywood; the instal
 - Map both stud edges and centers on both walls, especially within 14 in of the corner, using more than one method.
 - Confirm every proposed standard has usable structural backing and passes spacing/overhang limits. Field centers must be finite and independently spaced.
 - Locate wiring, pipes, and protective plates around the outlets. Never infer cable paths from outlet position alone.
-- Verify the common shelf-top elevation, ceiling clearance, door/trim clearance, the 39 in standard zone (the reported outlet-top-to-ceiling distance of 43.5 in leaves only 4.5 in total placement margin — see [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 5), and the complete 168.056 mm Palatine fascia envelope.
+- Verify the common shelf-top elevation, ceiling clearance, door/trim clearance, the 39 in standard zone (the reported outlet-top-to-ceiling distance of 43.5 in leaves only 4.5 in total placement margin—see [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 5), and the complete 170.056 mm Palatine fascia envelope.
 - Follow the current instructions for one compatible hardware system, including prescribed fasteners, holes, edge distances, torque, locks, and deck attachment.
 - Stop and involve a qualified local professional if framing, wiring, structural fastener selection, any drilling needed for the steel angle's structural connection, wall condition, or injury consequences remain uncertain. Cosmetic fascia retention must not add holes or notches to the angle.
 
@@ -76,4 +87,4 @@ This controlled check can reveal obvious defects; it does not certify a load rat
 
 ## Before printing
 
-Confirm the exact printer, nozzle diameter and material, plate, slicer version, black PETG product, and filament condition. Print the corner gauge, fascia coupon, and Palatine detail coupon first. The repository intentionally contains model-only 3MFs and no embedded G-code. Arrange and slice for the confirmed machine; never reuse machine instructions from another setup.
+Use the confirmed Bambu Lab A1 mini, 0.4 mm nozzle, Textured PEI Plate, supplied R12 process/filament presets, SUNLU clear PETG, and dry filament. Print the R12 adhesion-corner coupon, fascia coupon, Palatine detail coupon, and corner gauge before production. The repository contains model-only 3MFs and no embedded G-code. Never reuse the superseded R5 handoff.

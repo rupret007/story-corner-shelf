@@ -3,99 +3,104 @@
   "design_edition": "Triadic Palatine Order",
   "repository_slug": "story-corner-shelf",
   "repository_url": "https://github.com/rupret007/story-corner-shelf",
-  "revision": "triadic_palatine_fitted_l_corner_r5",
+  "revision": "triadic_palatine_fitted_l_corner_r12_final_durable",
   "scope": "Printable STL and model-only 3MF artifacts generated from config.json",
   "embedded_gcode_allowed": false,
   "artifacts": [
     {
       "path": "generated/PETG_Palatine_ArcadeFascia_Half_left_long_wall_5ft.stl",
-      "bytes": 53384,
-      "sha256": "d49cabb9bfc46f44accce339be7b606f910a7db6a29a18c3638a7c5363112217"
+      "bytes": 72684,
+      "sha256": "36952b3479c2b7aa24fd02b9884e02447083b7eacae064d07c1dfc0922fa51f1"
     },
     {
       "path": "generated/PETG_Palatine_ArcadeFascia_Half_left_short_wall_3ft.stl",
-      "bytes": 53284,
-      "sha256": "3a23c236d3056f48bfd00bf5382d59186dd9b19b977d88be89b7df58a72e5022"
+      "bytes": 72184,
+      "sha256": "82f6e82140e00aab29455d87f30e49477e9db5171dffe847c2c06f7184ae4d8c"
     },
     {
       "path": "generated/PETG_Palatine_ArcadeFascia_Half_right_long_wall_5ft.stl",
-      "bytes": 53384,
-      "sha256": "10235f9280a7665baa2c02fba126af422fc3bbf7e09c3960e0ab42afa4b00259"
+      "bytes": 73384,
+      "sha256": "a408f22adba79a6db762c7d4fcf89e42ba022c845017ed514f2852f242348295"
     },
     {
       "path": "generated/PETG_Palatine_ArcadeFascia_Half_right_short_wall_3ft.stl",
-      "bytes": 52884,
-      "sha256": "2455e9b33270fa84bd97b272007846a8ae4330338c069beb95396bd9385944ef"
+      "bytes": 72984,
+      "sha256": "91e53ef5f057fab3349378d5b01a1961df0a2e0ba526e5a852d5ca65fe99d520"
     },
     {
       "path": "generated/PETG_Palatine_EntablatureOverlay_long_wall_5ft.stl",
       "bytes": 32084,
-      "sha256": "4f47d2ce219b7ce61714e38e6a387973d087804da72eb7498475887914b5a7ec"
+      "sha256": "c142a1b56a2ec95be9ce4ed8d437f6a39aee818911581cceab96e0dd11461ba7"
     },
     {
       "path": "generated/PETG_Palatine_EntablatureOverlay_short_wall_3ft.stl",
       "bytes": 32084,
-      "sha256": "8f61ec3fbb36445bac14205ba65ab2ba40665ef3e86885431039a951f54a4dea"
+      "sha256": "4adc4cd477f8aee6894457d7e9e44a1beeb6ef21962446a1d0014d6e87e62ffc"
     },
     {
       "path": "generated/PETG_Palatine_Fascia_EndCap.stl",
       "bytes": 7884,
-      "sha256": "ca2e11f9984d385f0c3739933247d27d6f38d83d192db8acb081ee54d671ed78"
+      "sha256": "d0f23637ebe3fb27cef4856fc26b5e3ab134086ceee588925d6f24c18fbbff70"
     },
     {
       "path": "generated/PETG_Palatine_GroinVault_CornerSoffit.stl",
-      "bytes": 85284,
-      "sha256": "63b104ff02fb8b264295694a903c16b29c19b4c00cd1c31ea47f90f229a6ca3d"
+      "bytes": 85784,
+      "sha256": "d2e7e9af890a2b430b2dee6d15e2a0cd46693dcab838777fb77a07548d3b4726"
     },
     {
       "path": "generated/PETG_Palatine_Keystone_SeamCover.stl",
       "bytes": 684,
-      "sha256": "92a61324cae5374657cb240e142c56ba2c9297e7394e2fa09b42c02e5acc33d7"
+      "sha256": "93383e0f4e1c583af0f736b3d60200c5f6af6bb866c636c7f77b2cd0212aaab5"
     },
     {
       "path": "generated/PETG_Palatine_ReentrantCorner_Pilaster_SlipCover.stl",
       "bytes": 1484,
-      "sha256": "aac6b0c221a6069800fd6a21f151e0f3289914b760472d680c7da1e497c1db51"
+      "sha256": "072da6a52a36aa5e146317ff1bcd429db21b2ad6654ba88e1ccb594f65f4bf11"
     },
     {
       "path": "generated/PETG_RearCurb_Center_6inPitch.stl",
-      "bytes": 11484,
-      "sha256": "f3cc43d606e8cd1017ee74675adefd9e5c4b25f7b40f5f5bcc7095b8ab3e5dfc"
+      "bytes": 11784,
+      "sha256": "cac46bf9808184e73e554411b410d1542479ff89ea524ef2b8288bcbe12d9e8a"
     },
     {
       "path": "generated/PETG_RearCurb_CornerSide_ThroughZone.stl",
-      "bytes": 11784,
-      "sha256": "bb7bedb9d810d390b9dbbc9a2e74f164f673d8acd0b71254acc92707047c2fa3"
+      "bytes": 11884,
+      "sha256": "a9e59ca52975a4336e3fd4725da2df314e33c5d2d78f949e67ae494cfc0656e2"
     },
     {
       "path": "generated/PETG_RearCurb_InsideCorner_Replacement.stl",
-      "bytes": 23584,
-      "sha256": "7c1252b12889199836c033a0b914d85caffdf06a84e7e94cdb1a17a6f7e89f44"
+      "bytes": 23784,
+      "sha256": "40c6d0df46c8ef3b323aa760e08692eca958ed7ffd4c0ec44f235d00f46c80e3"
     },
     {
       "path": "generated/PETG_RearCurb_ParametricEnd_long_wall_5ft.stl",
-      "bytes": 11584,
-      "sha256": "c6d216553f9ee6e70e9777c3cf58bd4ad44f2f3cfecfabb47c35a171b5e5da2e"
+      "bytes": 11684,
+      "sha256": "cc329cb5dee07ba8f362898ad25e2705a85fbd25f6670edb1e69110dcac46921"
     },
     {
       "path": "generated/PETG_RearCurb_ParametricEnd_short_wall_3ft.stl",
       "bytes": 11784,
-      "sha256": "ce59d293670cd173c751c804f8502d21e7438281d60670d15566b5c27e5afda2"
+      "sha256": "2411473c0fd2dc38e31e85e29421cbb397af47a87674dd67e4483bc90f71bbe3"
     },
     {
       "path": "generated/PETG_TopTile_Center_6inPitch.stl",
       "bytes": 7084,
-      "sha256": "eb9b066861358ce0f0fc27441219793a1044795e0ca6660ef6b91985a14942ca"
+      "sha256": "b4d2bda519a13b9a2f69cdfab21534cd0b13fe9d960558da3fed2c85fea3f06e"
     },
     {
       "path": "generated/PETG_TopTile_CornerQuadrant_SquareMating.stl",
       "bytes": 7084,
-      "sha256": "032e7d79c29c3aee8894e800b721d9f08ad0592abedbcf92f9c3a7ed0d86f7e7"
+      "sha256": "81985b7227f831ff0cb2d21f1a979b85537b5d3275ef2bdcce37140088aa2807"
     },
     {
-      "path": "generated/PETG_TopTile_ParametricEnd.stl",
+      "path": "generated/PETG_TopTile_ParametricEnd_long_wall_5ft.stl",
       "bytes": 7084,
-      "sha256": "857ec8e72ee30492f0e9432252ab667c8607389aa464c80fb97b04d9161135a5"
+      "sha256": "7d8dcf9afac0dfb66445e1c4873b827f4025af7c3dddc55cd56166c5ab036b4c"
+    },
+    {
+      "path": "generated/PETG_TopTile_ParametricEnd_short_wall_3ft.stl",
+      "bytes": 7084,
+      "sha256": "ac7028d6b7c193cb1c1e0c3e074dc4db051113cac9e2037289c05939e05bf3f0"
     },
     {
       "path": "generated/PRINT_FIRST_CornerFitGauge.stl",
@@ -104,128 +109,143 @@
     },
     {
       "path": "generated/PRINT_FIRST_FasciaFitCoupon.stl",
-      "bytes": 2184,
-      "sha256": "7bb72ecd735b22f116321df9231fbb50d827bbf01279e7c8ea250c07309e5dc7"
+      "bytes": 25284,
+      "sha256": "81f7170c327a6fd45838091c5fc1a5707f72ff671bae8ccf8759b7436d58700f"
     },
     {
       "path": "generated/PRINT_FIRST_PalatineDetailCoupon.stl",
-      "bytes": 57584,
-      "sha256": "f0de2af5d7a6232856c0f9820db0de2ae56ec21fa1f7a7c8a09023cf4806e343"
+      "bytes": 56884,
+      "sha256": "1c1aade55f8016c90f747e7aabc3dde6a3e2547fd64b263eb2f4f50688b4e363"
+    },
+    {
+      "path": "generated/PRINT_FIRST_R12_AdhesionCornerCoupon.stl",
+      "bytes": 29984,
+      "sha256": "3b27cbcf79e0bcb45e0ff633e87e43115d0a35d99e352ca907f24db9df76d3c6"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_ArcadeFascia_Half_left_long_wall_5ft.3mf",
-      "bytes": 12526,
-      "sha256": "42645f6426989f356b878bafbc4736d5d48e8c6217207acf4e40ec04ab4855d9"
+      "bytes": 16293,
+      "sha256": "5e8e25daea695eb40d19d10b47e8bdefa53b0634349ab7b69e0a4a338c1b254b"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_ArcadeFascia_Half_left_short_wall_3ft.3mf",
-      "bytes": 12484,
-      "sha256": "78363f7a7ffbc7068958ef30e576dfe3463fe94780c26a10f7531a20043968ac"
+      "bytes": 16158,
+      "sha256": "84fd02ea366064560b28578ec4d697cfb5aa3ec8c33aa6b838e23c3b18b4ed15"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_ArcadeFascia_Half_right_long_wall_5ft.3mf",
-      "bytes": 12562,
-      "sha256": "52cbaaa57034d0f2980c608781c6302b3a4976119fc963433e4a063ca9282c3f"
+      "bytes": 16571,
+      "sha256": "ba1c7173c72088682ab21372a145e5c4ef0fed10b0b9700a99ccc6ac98f87a2e"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_ArcadeFascia_Half_right_short_wall_3ft.3mf",
-      "bytes": 12442,
-      "sha256": "4da005c2f30cb7af070a799a1e0bd1b873a801d7c166f3e25a96c305666d7803"
+      "bytes": 16474,
+      "sha256": "c7cf6c6110d4aae4aca1bd0c618e3181628411f4ab692ab7d7f1485c75ae6316"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_EntablatureOverlay_long_wall_5ft.3mf",
-      "bytes": 7357,
-      "sha256": "684824bf860e368a3830e45027c88814d8c424892985bc7c1714466b77023e75"
+      "bytes": 7367,
+      "sha256": "889aaf97663811160716eaa2bc773fea8c982187ebb8ea0126052748ad5386bf"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_EntablatureOverlay_short_wall_3ft.3mf",
-      "bytes": 7342,
-      "sha256": "7b0a0f2724f92c4ac4bfffac1efa411ec9ff95ab969d11790044bc6a20629d2e"
+      "bytes": 7358,
+      "sha256": "36923f22b66544931eba401bf6665aa75e31594f0eff2b1a713fbe1aeab37a86"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_Fascia_EndCap.3mf",
-      "bytes": 2744,
-      "sha256": "df4a7d7660aa6fa26346b8ba3a3b50baaf7b11547a2e311ed878d046ce951554"
+      "bytes": 2760,
+      "sha256": "b1274e74c43ad50ad814dc3e157e0a9232ae7401bbb46abede587b74574139c0"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_GroinVault_CornerSoffit.3mf",
-      "bytes": 19095,
-      "sha256": "0a74df483272b0865b8e806aa97470db8de881f0dfd56ad2068b8619dd8a013f"
+      "bytes": 19173,
+      "sha256": "d45dba863503d28f1ac4bfa12871553e1a6ac734a0a26f014b07dac98517c379"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_Keystone_SeamCover.3mf",
-      "bytes": 1421,
-      "sha256": "0ffd3d1f963ba70a42fd1f4611eb94d832e5406a4c8d3ef0ed1b53372c6251bd"
+      "bytes": 1426,
+      "sha256": "6e59f80ca72a89b35772bf284856e530ab0242912ce3d90d7cd2fdfa58384c2f"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_Palatine_ReentrantCorner_Pilaster_SlipCover.3mf",
-      "bytes": 1556,
-      "sha256": "92c8421dc6a5ada7fd1c72148e6c459ee815c7b6c6a013080a4c01ad5bae11ce"
+      "bytes": 1567,
+      "sha256": "7008f47836a87cccac04c1f7d4740e465d3954f2eecd909f7c416edc0f4063b6"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_RearCurb_Center_6inPitch.3mf",
-      "bytes": 3448,
-      "sha256": "d116a4113568822217a734b976302f5aea29f895afd1a73950d0948c14a29ccc"
+      "bytes": 3541,
+      "sha256": "3c7caa02d8d90f3883ac2a470111256ac7a42519bb2e3a64280d206dac192ef8"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_RearCurb_CornerSide_ThroughZone.3mf",
-      "bytes": 3524,
-      "sha256": "781c4d2e2d4ab6f50c6ab8f96c34af9fdb13e2c754165c87e3c20a662c932f58"
+      "bytes": 3574,
+      "sha256": "40021e7278a71a2ab0700350ba42fb7a2a6a47b23e16b67f1c040977a0e3248a"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_RearCurb_InsideCorner_Replacement.3mf",
-      "bytes": 5742,
-      "sha256": "dea57946fd6dea29543e2990ce42af9b1ae4420c2508cab722a3b43a674e13ce"
+      "bytes": 5785,
+      "sha256": "a0acc27d2a49a041110b26d20174e2d8c72092387042175ca02540b40149d936"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_RearCurb_ParametricEnd_long_wall_5ft.3mf",
-      "bytes": 3504,
-      "sha256": "03d766382245d050819161b424e45538edb6aec42c294b8b5898400a9346112b"
+      "bytes": 3543,
+      "sha256": "2d2e93cc4c003891a3c58090081e4992397ba09a3bcc23f9d17ddc0965b4614d"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_RearCurb_ParametricEnd_short_wall_3ft.3mf",
-      "bytes": 3551,
-      "sha256": "b0c423f63cbfdf953e32ea27259d67bc5275489533d8505f5feec7b7075067e6"
+      "bytes": 3582,
+      "sha256": "f0064bb6f3e0c885ab26f346e756d38fceb3efb24210e91199f70b2a0a20910c"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf",
-      "bytes": 2567,
-      "sha256": "7f6715348f72c6fa4b307512baf6118fdc2d6c2e5a846b190dd048d2cbdb335f"
+      "bytes": 2580,
+      "sha256": "b7bc99a2a6a0c7cb1ccbc10fb21f0dcba2519a0d51955137caa9a77e9ba36ed1"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_CornerQuadrant_SquareMating.3mf",
-      "bytes": 2565,
-      "sha256": "9a821b689e0315425a99453ea0694723ae46ee92c3b77effc359a6bd16667a0d"
+      "bytes": 2577,
+      "sha256": "03468d5b941f3011765f38ced54aaa04aaa179b523a272046b460a56f700eda5"
     },
     {
-      "path": "generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_ParametricEnd.3mf",
-      "bytes": 2583,
-      "sha256": "0b57a2a054034e4c4596b480afa0c7b3bc82280b673c867bb59f4caa62571518"
+      "path": "generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_ParametricEnd_long_wall_5ft.3mf",
+      "bytes": 2607,
+      "sha256": "3320e962f1eb28dad0f1b75b729058cb051587736361189aef8725b4ab0f6669"
+    },
+    {
+      "path": "generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_ParametricEnd_short_wall_3ft.3mf",
+      "bytes": 2609,
+      "sha256": "2ef493684cb5b2a2643ac2b116112021dea623a560b3a77c0025140f9ff4f5e2"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf",
-      "bytes": 1540,
-      "sha256": "6a0d2eaed19c65846d3ede52e01a5eaab28526b31e2129b6712c7d3d1991737a"
+      "bytes": 1549,
+      "sha256": "9b0128e20b999c446cde67b2056b6b586b8e4a620a32668c7b472626e1a7266e"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf",
-      "bytes": 1683,
-      "sha256": "e98ca89564f19b256f1aefe07077de6393795239372a09ba4328d30529da42f1"
+      "bytes": 6037,
+      "sha256": "35d2f9f126110e48f531158900326c8cf9d82a116c96dbd555fd7a31d5c9cc49"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf",
-      "bytes": 13600,
-      "sha256": "799e4697b85cb8dc51d5bef9b0f0be526eab3aced0206af0b2c6da334814a49e"
+      "bytes": 13411,
+      "sha256": "4bb992dd16884934be735c1cb3152afc627e1b5dfd9f3f542143bf9a4751cbd5"
+    },
+    {
+      "path": "generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf",
+      "bytes": 6975,
+      "sha256": "27ccb52b84e31cce5423b23cb8803379f9a81603e5619598c512049b074f8f25"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_FULL_PRINT_SET.3mf",
-      "bytes": 368857,
-      "sha256": "97c30c598235817bfb216bb5ee62af7201abe458dee76d23abc11bea159c9569"
+      "bytes": 448222,
+      "sha256": "a87426a35d3b71a5df4d8651debd3d588953908b5882ec487c2933a7b2d367da"
     },
     {
       "path": "generated/model_only_3mf/MODEL_ONLY_STORY_CORNER_TRIADIC_PALATINE_PARTS_CATALOG.3mf",
-      "bytes": 104933,
-      "sha256": "753f8d34d803efbd4a5f9bbc6420f45c152f7aed90771e26f6bf0469a531d2c8"
+      "bytes": 130252,
+      "sha256": "c294bfc26701bff12d51f85b4f0bfed1c7c7edcc439f10bb9c0fb8fefa382327"
     }
   ]
 }
