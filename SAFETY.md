@@ -23,6 +23,7 @@ The Palatine arches, fluted piers, keystones, groin vault, and entablatures are 
 The single stud-bay mini is documented in [PRINT_MINI.md](PRINT_MINI.md); model-only PETG assets live under [`generated/mini/`](generated/mini/). It is **outside** the R12 hybrid load path above and inherits **no** R12 system-selection targets (55 lb return, 120 lb through, or any other R12 figure).
 
 - **Rated load:** 0 lb (development only). Any 15 lb evenly distributed contents figure in PRINT_MINI.md is a design-selection hint only—not a safe-working load.
+- **Provisional analysis (not a rating):** See [docs/LOAD_ANALYSIS.md](docs/LOAD_ANALYSIS.md) and run `scripts/mini_load_analysis.py` for a conservative ANALYSIS-ONLY contents limit from bracket, deck, and stud-side checks. Physical proof per [docs/LOAD_TEST.md](docs/LOAD_TEST.md) is required before changing the rated load above.
 - **Stud brackets:** printed bores and fastener notes are geometric clearance compatibility only—not an approved structural connection.
 - Do not climb on the shelf, mount it without independently verified wood studs and adequate screw engagement, or treat printed PETG as code-approved structure.
 

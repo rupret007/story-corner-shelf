@@ -46,6 +46,7 @@
     "bracket_shelf_arm_length_mm": 152.4,
     "bracket_shelf_arm_thickness_mm": 12.0,
     "bracket_vertical_drop_mm": 48.0,
+    "bracket_print_arm_layers_along_depth": true,
     "mounting_bore_diameter_mm": 7.0,
     "mounting_bore_count_per_bracket": 2,
     "mounting_bore_vertical_pitch_mm": 20.0,
@@ -76,8 +77,8 @@
       "run_id": "mini_single_bay",
       "repeat_count": 2,
       "purpose": "printed wall strap and shelf arm for one verified stud; two 7 mm through-bores per bracket; not a rated substitute for steel hardware",
-      "vertices": 149,
-      "triangles": 302,
+      "vertices": 145,
+      "triangles": 294,
       "watertight": true,
       "winding_consistent": true,
       "body_count": 1,
@@ -88,17 +89,17 @@
           0.0
         ],
         [
-          152.4,
-          48.0,
-          27.98
+          72.0,
+          168.38,
+          48.0
         ]
       ],
       "size_mm": [
-        152.4,
-        48.0,
-        27.98
+        72.0,
+        168.38,
+        48.0
       ],
-      "volume_mm3": 76001.09,
+      "volume_mm3": 76015.11,
       "estimated_petg_g_each": 96.5,
       "fits_effective_build_envelope_in_saved_orientation": true,
       "effective_build_envelope_mm": [

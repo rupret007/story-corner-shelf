@@ -146,7 +146,12 @@ def deck_tile(
 
 
 def stud_bracket(cfg: dict) -> trimesh.Trimesh:
-    """Wall strap plus shelf arm; saved with the wall strap on the build plate."""
+    """Wall strap plus shelf arm; saved with the wall strap on the build plate.
+
+    Print orientation keeps the shelf arm growing in +Y so FDM layers stack along the
+    arm axis (better cantilever bending) while staying inside the effective 170 mm cube:
+    X <= strap_w, Y <= strap_t + arm_len, Z <= drop.
+    """
     sm = cfg["structural_mini"]
     strap_w = float(sm["bracket_wall_strap_width_mm"])
     strap_t = float(sm["bracket_wall_strap_thickness_mm"])
@@ -154,7 +159,6 @@ def stud_bracket(cfg: dict) -> trimesh.Trimesh:
     arm_t = float(sm["bracket_shelf_arm_thickness_mm"])
     drop = float(sm["bracket_vertical_drop_mm"])
 
-    # Wall strap lies on Y-Z when installed; print with strap face on bed (X=strap_w, Y=strap_t, Z=drop).
     strap = gen.cuboid((strap_w, strap_t, drop))
     bore_d = float(sm["mounting_bore_diameter_mm"])
     pitch = float(sm["mounting_bore_vertical_pitch_mm"])
@@ -170,10 +174,9 @@ def stud_bracket(cfg: dict) -> trimesh.Trimesh:
         cyl.apply_translation((strap_w / 2.0, strap_t / 2.0, zc))
         cutters.append(cyl)
     strap = gen.boolean_difference(strap, cutters)
-    arm = gen.cuboid((arm_len, arm_t, arm_t), origin=(0.0, strap_t - 0.02, drop - arm_t))
+    arm_x = min(arm_t, strap_w)
+    arm = gen.cuboid((arm_x, arm_len, arm_t), origin=(0.0, strap_t - 0.02, drop - arm_t))
     body = gen.boolean_union([strap, arm])
-    # Shelf arm on build plate: rotate so strap is vertical on plate, arm grows in +Y.
-    body.apply_transform(trimesh.transformations.rotation_matrix(-np.pi / 2.0, [1.0, 0.0, 0.0]))
     return gen.normalize_mesh(body)
 
 

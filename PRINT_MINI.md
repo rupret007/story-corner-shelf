@@ -4,7 +4,7 @@ Model-only SUNLU PETG files live under [`generated/mini/`](generated/mini/). The
 
 ## Print sequence
 
-1. **Two × `MINI_PETG_StudBracket`** — print first. Saved orientation places the wall strap on the build plate with the shelf arm rising in height. Confirm both 7 mm bores are clean and that a flat washer seats on the outer face without cracking PETG.
+1. **Two × `MINI_PETG_StudBracket`** — print first. Saved orientation places the wall strap on the build plate with the shelf arm extending in **+Y** (layers stack along shelf depth for cantilever bending). Confirm both 7 mm bores are clean and that a flat washer seats on the outer face without cracking PETG.
 2. **Deck tiles** (six unique prints, eight total parts) — batch by type after brackets pass visual inspection:
    - 2 × `MINI_PETG_DeckTile_End_Left`
    - 2 × `MINI_PETG_DeckTile_Center`
@@ -28,7 +28,7 @@ Effective check uses the A1 mini 180 mm cube minus a **5 mm per-side margin** (1
 
 | Part | Size (mm, X×Y×Z) | Fits 170 mm |
 |---|---|---|
-| Stud bracket | 152.4 × 48.0 × 28.0 | yes |
+| Stud bracket | 72.0 × 168.4 × 48.0 | yes |
 | Deck tile center | 154.5 × 75.9 × 8.0 | yes |
 | Deck tile end (left / right) | 123.0 × 75.9 × 8.0 / 120.4 × 75.9 × 8.0 | yes |
 
@@ -51,6 +51,7 @@ Print time: **unverified** — the repository does not store slicer time metadat
 This mini is an **all-PETG, untested prototype** for one 15.5 in stud bay at ~6 in depth. It is **outside** the R12 hybrid load path (plywood, steel angle, KV standards/brackets). [SAFETY.md](SAFETY.md) states that a structurally all-PETG shelf is outside the main project and inherits **no** R12 selection targets or ratings.
 
 - **Rated load:** 0 lb (development only).
+- **Provisional analysis (not a rating):** [docs/LOAD_ANALYSIS.md](docs/LOAD_ANALYSIS.md); proof protocol [docs/LOAD_TEST.md](docs/LOAD_TEST.md).
 - **Design-selection hint:** 15 lb evenly distributed contents — not a safe-working load.
 - Verify stud location, screw engagement, creep, and deflection with gradual test weights before normal use; stop for movement, cracking, or wall damage.
 - Do not climb on the shelf, mount it without confirmed studs, or treat printed plastic as code-approved structure.

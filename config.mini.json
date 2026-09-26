@@ -29,6 +29,7 @@
     "bracket_shelf_arm_length_mm": 152.4,
     "bracket_shelf_arm_thickness_mm": 12.0,
     "bracket_vertical_drop_mm": 48.0,
+    "bracket_print_arm_layers_along_depth": true,
     "mounting_bore_diameter_mm": 7.0,
     "mounting_bore_count_per_bracket": 2,
     "mounting_bore_vertical_pitch_mm": 20.0,
