@@ -4,7 +4,7 @@
 
 **Scope:** Single stud-bay, all-PETG mini ([`config.mini.json`](../config.mini.json), meshes in [`generated/mini/`](../generated/mini/)). Two printed brackets on verified studs at 17.0 and 32.5 in; deck spans **15.5 in** (393.7 mm) between bracket arms.
 
-**Executable model:** [`scripts/mini_load_analysis.py`](../scripts/mini_load_analysis.py) — unit-tested in [`tests/test_mini_load_analysis.py`](../tests/test_mini_load_analysis.py).
+**Executable model:** [`scripts/mini_load_analysis.py`](../scripts/mini_load_analysis.py) — unit-tested in [`tests/test_mini_load_analysis.py`](../tests/test_mini_load_analysis.py). Regenerated JSON evidence: [`generated/mini/load_analysis_report.json`](../generated/mini/load_analysis_report.json) (from `generate_shelf_mini.py`).
 
 ---
 
@@ -64,7 +64,7 @@ GRK RSS values in ESR-2442 apply to **wood**, not to a PETG washer stack — wit
 1. **Bracket arm cantilever (bulk bending)** — Each bracket carries half the total contents load; uniform load on arm length 152.4 mm; fixed at strap.
 2. **Bracket root** — Interlayer peel for legacy orientation (arm layers in Z); with arm layers along depth ([`bracket_print_arm_layers_along_depth`](../config.mini.json)), bulk bending with **1.5×** stress concentration at the strap junction (`BRACKET_ROOT_STRESS_CONCENTRATION_FACTOR` in [`scripts/mini_load_analysis.py`](../scripts/mini_load_analysis.py)).
 3. **Deck tile interlock shear** — Tongue plan area from [`scripts/generate_shelf_mini.py`](../scripts/generate_shelf_mini.py) (`tongue_depth` × **0.7 × deck depth**); interlayer shear allowable ÷ **2.5** joint factor; worst joint carries **W/2** vertical shear (simply supported span between brackets).
-4. **Deck span** — Simply supported uniform load over 393.7 mm; **interlayer** tension on bottom fiber (8 mm vertical thickness).
+4. **Deck tile segment span** — Each tile is supported at a bracket face or an interlock joint, not as one monolithic slab across the full 393.7 mm bay. Bending uses the **longest single module** along the wall axis (center tile **151.8 mm** from [`generated/mini/validation.json`](../generated/mini/validation.json) `deck_layout`), simply supported with uniform load; **interlayer** tension on the bottom fiber (8 mm Z). A separate **full-bay monolithic** deck check is retained in script output as an ultraconservative sensitivity line only (excluded from **P**).
 5. **Screw withdrawal** — Two screws per bracket into side-grain stud (conservative penetration after PETG strap).
 6. **PETG washer bearing** — Compressible crushing under screw head.
 
@@ -88,7 +88,9 @@ The script prints JSON including:
 - `governing_failure_mode`
 - `official_rated_load_lb` — always **0**
 
-After the bracket print-orientation fix and **14 mm** arm section (still within the 170 mm effective A1 mini envelope), **deck span interlayer bending** or **bracket root stress concentration** typically govern (within ~1 lb in the conservative model); interlock shear and stud withdrawal stay higher. Recompute with the script — do not cite a rounded figure here; use the JSON output (ANALYSIS-ONLY).
+After the bracket print-orientation fix, **14 mm** arm section, and **per-tile segment** deck bending (not full-bay monolithic), **bracket root stress concentration** and **wood screw withdrawal** typically govern within ~1 lb; interlock shear stays much higher. Recompute with the script — do not cite a rounded figure here; use the JSON output (ANALYSIS-ONLY).
+
+The script also prints `proof_load_2x_p_lb_analysis_only` (protocol target) and `field_milestone_proof_lb_jeff_24h` (**38 lb** fixed ballast hold — see [LOAD_TEST.md](LOAD_TEST.md)).
 
 ---
 

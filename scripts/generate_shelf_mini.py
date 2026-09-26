@@ -379,6 +379,15 @@ def main() -> None:
         ),
     }
     (out_dir / "validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+
+    # Analysis-only load evidence artifact (official rated load stays 0 in SAFETY.md).
+    import mini_load_analysis as load_analysis
+
+    load_report = load_analysis.report_to_dict(load_analysis.build_report())
+    (out_dir / "load_analysis_report.json").write_text(
+        json.dumps(load_report, indent=2) + "\n",
+        encoding="utf-8",
+    )
     print(json.dumps({"mini_packaged_kg": report["estimated_packaged_petg_mass_kg"], "parts": report["part_count_total"]}, indent=2))
 
 

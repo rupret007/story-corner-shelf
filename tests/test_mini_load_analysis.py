@@ -20,15 +20,39 @@ class MiniLoadAnalysisTests(unittest.TestCase):
 
     def test_provisional_load_is_minimum_mode(self) -> None:
         report = analysis.build_report()
-        limits = [mode.limit_total_load_lb for mode in report.modes]
+        rated_modes = [
+            mode
+            for mode in report.modes
+            if mode.name != "deck_tile_full_bay_span_interlayer_ultraconservative"
+        ]
+        limits = [mode.limit_total_load_lb for mode in rated_modes]
         self.assertAlmostEqual(report.provisional_contents_load_lb, min(limits), places=1)
         self.assertEqual(
             report.governing_failure_mode,
-            min(report.modes, key=lambda mode: mode.limit_total_load_lb).name,
+            min(rated_modes, key=lambda mode: mode.limit_total_load_lb).name,
         )
         mode_names = {mode.name for mode in report.modes}
         self.assertIn("deck_tile_interlock_shear", mode_names)
+        self.assertIn("deck_tile_segment_span_interlayer", mode_names)
         self.assertIn("bracket_root_stress_concentration", mode_names)
+
+    def test_deck_segment_span_matches_validation_layout(self) -> None:
+        inputs = analysis.load_structural_inputs()
+        segment = analysis.max_deck_tile_segment_span_mm(inputs["deck_layout"])
+        self.assertAlmostEqual(segment, 151.8, places=1)
+        segment_lb, detail = analysis.deck_span_limit_lb(
+            span_mm=segment,
+            deck_depth_mm=152.4,
+            thickness_mm=8.0,
+            interlayer_governed=True,
+        )
+        full_lb, _ = analysis.deck_span_limit_lb(
+            span_mm=393.7,
+            deck_depth_mm=152.4,
+            thickness_mm=8.0,
+            interlayer_governed=True,
+        )
+        self.assertGreater(segment_lb, full_lb)
 
     def test_layer_adhesion_factor_is_four(self) -> None:
         self.assertEqual(analysis.LAYER_ADHESION_SAFETY_FACTOR, 4.0)

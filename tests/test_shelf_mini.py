@@ -73,6 +73,15 @@ class ShelfMiniTests(unittest.TestCase):
         self.assertIn(phrase, (ROOT / "SAFETY.md").read_text(encoding="utf-8"))
         self.assertIn(phrase, (ROOT / "PRINT_MINI.md").read_text(encoding="utf-8"))
 
+    def test_load_analysis_report_matches_zero_official_rating(self) -> None:
+        path = ROOT / "generated" / "mini" / "load_analysis_report.json"
+        self.assertTrue(path.is_file(), path)
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(payload["official_rated_load_lb"], 0.0)
+        self.assertTrue(payload["qualification_only"])
+        self.assertGreater(payload["provisional_contents_load_lb_analysis_only"], 0.0)
+        self.assertEqual(payload["field_milestone_proof_lb_jeff_24h"], 38.0)
+
     def test_outputs_exist_under_generated_mini(self) -> None:
         out = ROOT / "generated" / "mini"
         for entry in self.report["meshes"]:

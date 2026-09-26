@@ -51,7 +51,7 @@ Print time: **unverified** — the repository does not store slicer time metadat
 This mini is an **all-PETG, untested prototype** for one 15.5 in stud bay at ~6 in depth. It is **outside** the R12 hybrid load path (plywood, steel angle, KV standards/brackets). [SAFETY.md](SAFETY.md) states that a structurally all-PETG shelf is outside the main project and inherits **no** R12 selection targets or ratings.
 
 - **Rated load:** 0 lb (development only).
-- **Provisional analysis (not a rating):** [docs/LOAD_ANALYSIS.md](docs/LOAD_ANALYSIS.md); proof protocol [docs/LOAD_TEST.md](docs/LOAD_TEST.md).
+- **Provisional analysis (not a rating):** [docs/LOAD_ANALYSIS.md](docs/LOAD_ANALYSIS.md) (per-tile deck bending between bracket/interlock supports; run `scripts/mini_load_analysis.py`); proof protocol [docs/LOAD_TEST.md](docs/LOAD_TEST.md) including the planned **38 lb / 24 h** field milestone.
 - **Design-selection hint:** 15 lb evenly distributed contents — not a safe-working load.
 - Verify stud location, screw engagement, creep, and deflection with gradual test weights before normal use; stop for movement, cracking, or wall damage.
 - Do not climb on the shelf, mount it without confirmed studs, or treat printed plastic as code-approved structure.

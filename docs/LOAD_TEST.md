@@ -25,9 +25,11 @@ Let **P** = `provisional_contents_load_lb_analysis_only` from:
 PYTHON_BIN=.venv/bin/python scripts/mini_load_analysis.py
 ```
 
-**Proof load (contents equivalent):** **2 × P** (lb), evenly distributed on the deck, sustained **24 hours**.
+**Proof load (contents equivalent):** **2 × P** (lb), evenly distributed on the deck, sustained **24 hours** (`proof_load_2x_p_lb_analysis_only` in script JSON).
 
-Add printed part self-weight (~0.8 kg / 1.8 lb) as part of the installed assembly; the proof **2×P** target applies to **contents ballast**, not double-counting dead weight unless you explicitly document combined loading.
+**Jeff field milestone (planned):** **38 lb** contents ballast for **24 h** (`field_milestone_proof_lb_jeff_24h` in script JSON). This predates the current segment-aware **P**; it is a fixed bench/stud-bay trial, not a substitute for the full **2×P** protocol when **P** rises. A pass at 38 lb supports confidence but does **not** by itself authorize raising [SAFETY.md](../SAFETY.md) unless **P ≤ 19 lb** at test time or you complete the **2×P** hold for the current **P**.
+
+Add printed part self-weight (~0.8 kg / 1.8 lb) as part of the installed assembly; proof targets apply to **contents ballast**, not double-counting dead weight unless you explicitly document combined loading.
 
 ---
 

@@ -200,6 +200,15 @@ def bracket_root_interlayer_limit_lb(
     return limit_lb, detail
 
 
+def max_deck_tile_segment_span_mm(deck_layout: dict[str, Any]) -> float:
+    """Longest tile module along the wall axis (bracket-to-joint or joint-to-joint)."""
+    center = float(deck_layout.get("center_module_width_mm", 0.0))
+    end = float(deck_layout.get("parametric_end_module_width_mm", 0.0))
+    if center <= 0.0 or end <= 0.0:
+        raise ValueError("deck_layout missing center_module_width_mm or parametric_end_module_width_mm")
+    return max(center, end)
+
+
 def deck_span_limit_lb(
     *,
     span_mm: float,
@@ -382,7 +391,30 @@ def build_report(inputs: dict[str, Any] | None = None) -> LoadAnalysisReport:
         )
     )
 
-    deck_lb, deck_detail = deck_span_limit_lb(
+    segment_span_mm = max_deck_tile_segment_span_mm(deck_layout)
+    deck_segment_lb, deck_segment_detail = deck_span_limit_lb(
+        span_mm=segment_span_mm,
+        deck_depth_mm=deck_depth_mm,
+        thickness_mm=deck_t,
+        interlayer_governed=True,
+    )
+    deck_segment_detail = {
+        **deck_segment_detail,
+        "segment_span_mm": segment_span_mm,
+        "full_bay_span_mm": span_mm,
+        "model": "simply_supported_uniform_load_on_longest_single_tile_between_bracket_or_interlock_supports",
+        "rejects_monolithic_full_bay_assumption": True,
+    }
+    modes.append(
+        FailureModeResult(
+            "deck_tile_segment_span_interlayer",
+            deck_segment_lb,
+            "fdm_z_tension_bottom_fiber_per_tile_segment",
+            deck_segment_detail,
+        )
+    )
+
+    deck_full_lb, deck_full_detail = deck_span_limit_lb(
         span_mm=span_mm,
         deck_depth_mm=deck_depth_mm,
         thickness_mm=deck_t,
@@ -390,10 +422,13 @@ def build_report(inputs: dict[str, Any] | None = None) -> LoadAnalysisReport:
     )
     modes.append(
         FailureModeResult(
-            "deck_tile_span_interlayer",
-            deck_lb,
-            "fdm_z_tension_bottom_fiber",
-            deck_detail,
+            "deck_tile_full_bay_span_interlayer_ultraconservative",
+            deck_full_lb,
+            "fdm_z_tension_if_entire_bay_were_one_monolithic_slab",
+            {
+                **deck_full_detail,
+                "note": "Not the installed tile layout; retained for sensitivity only.",
+            },
         )
     )
 
@@ -421,8 +456,14 @@ def build_report(inputs: dict[str, Any] | None = None) -> LoadAnalysisReport:
         )
     )
 
-    governing = min(modes, key=lambda m: m.limit_total_load_lb)
+    governing_candidates = tuple(
+        mode
+        for mode in modes
+        if mode.name != "deck_tile_full_bay_span_interlayer_ultraconservative"
+    )
+    governing = min(governing_candidates, key=lambda m: m.limit_total_load_lb)
     provisional = round(governing.limit_total_load_lb, 1)
+    proof_load_2x_p_lb = round(2.0 * provisional, 1)
 
     material_sources = (
         "ASTM D638 / ISO 527 typical PETG tensile (~50 MPa molded) — see docs/LOAD_ANALYSIS.md",
@@ -434,10 +475,12 @@ def build_report(inputs: dict[str, Any] | None = None) -> LoadAnalysisReport:
         "ANALYSIS-ONLY / PROVISIONAL — not a safe-working load.",
         "Official rated load remains 0 lb in SAFETY.md until docs/LOAD_TEST.md proof passes.",
         f"Printed self-weight (~{inputs.get('packaged_kg', 'unknown')} kg) is in addition to any contents rating.",
+        f"Protocol proof load 2×P = {proof_load_2x_p_lb} lb (contents ballast); Jeff field milestone 38 lb / 24 h is documented in docs/LOAD_TEST.md.",
     )
 
     report_inputs = {
         "deck_clear_span_mm": span_mm,
+        "deck_max_tile_segment_span_mm": segment_span_mm,
         "shelf_depth_mm": deck_depth_mm,
         "deck_tile_thickness_mm": deck_t,
         "bracket_arm_mm": [arm_len, arm_t, arm_t],
@@ -461,10 +504,13 @@ def build_report(inputs: dict[str, Any] | None = None) -> LoadAnalysisReport:
 
 
 def report_to_dict(report: LoadAnalysisReport) -> dict[str, Any]:
+    p = report.provisional_contents_load_lb
     return {
         "qualification_only": report.qualification_only,
         "official_rated_load_lb": report.official_rated_load_lb,
         "provisional_contents_load_lb_analysis_only": report.provisional_contents_load_lb,
+        "proof_load_2x_p_lb_analysis_only": round(2.0 * p, 1),
+        "field_milestone_proof_lb_jeff_24h": 38.0,
         "governing_failure_mode": report.governing_failure_mode,
         "layer_adhesion_safety_factor": report.layer_adhesion_safety_factor,
         "inputs": report.inputs,
