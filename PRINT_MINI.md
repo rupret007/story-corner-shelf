@@ -29,8 +29,8 @@ Effective check uses the A1 mini 180 mm cube minus a **5 mm per-side margin** (1
 | Part | Size (mm, X×Y×Z) | Fits 170 mm |
 |---|---|---|
 | Stud bracket | 152.4 × 48.0 × 28.0 | yes |
-| Deck tile center | 151.8 × 75.9 × 8.0 | yes |
-| Deck tile end | 120.4 × 75.9 × 8.0 | yes |
+| Deck tile center | 154.5 × 75.9 × 8.0 | yes |
+| Deck tile end (left / right) | 123.0 × 75.9 × 8.0 / 120.4 × 75.9 × 8.0 | yes |
 
 ## Fasteners
 
