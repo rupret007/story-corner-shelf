@@ -21,7 +21,7 @@ Every change must preserve these boundaries unless the project is explicitly re-
 - A same-height L level is unloaded and moved as one coupled assembly.
 - No untested load rating or machine-specific G-code is committed.
 
-The r5 3/6-bay arcade, nine-keystone rhythm, and related 3–6–9 details are edition-level parameters. Changing them creates a new reviewed edition rather than an incidental cosmetic patch.
+The R12 3/6-bay arcade, nine-keystone rhythm, reinforced thickness standard, and related 3–6–9 details are edition-level parameters. Changing them creates a new reviewed edition rather than an incidental cosmetic patch.
 
 ## Change workflow
 
@@ -56,9 +56,9 @@ The common coordinate datum is the intersection of the two finished wall planes.
 - included corner angle, wall bow, drywall/caulk profile, calculated residual joint clearance, and a full-size template;
 - exact bracket width/reach/body envelope, locks, fasteners, and perpendicular dry-fit result;
 - regenerated groin-vault-to-bracket clearance;
-- common shelf-top elevation, 168.056 mm Palatine fascia clearance, door/trim clearance, electrical/plumbing constraints, and number of loaded levels;
+- common shelf-top elevation, 170.056 mm Palatine fascia clearance, door/trim clearance, electrical/plumbing constraints, and number of loaded levels;
 - bin dimensions, heaviest object, intended evenly distributed contents, and measured shelf-arm dead load;
-- confirmed printer, nozzle, plate, slicer, black PETG product, and filament condition;
+- confirmed Bambu Lab A1 mini, 0.4 mm nozzle, Textured PEI Plate, slicer version, SUNLU clear PETG lot, and filament condition;
 - selected removable silicone, captured fascia-channel fit, curb/groin-vault screw stack, and removal method with qualification results on printed PETG, sealed plywood, and actual coated steel where applicable.
 
 Photographs must exclude faces, addresses, serial numbers, and other private information before being added to a public issue.

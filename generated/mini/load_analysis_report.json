@@ -1,0 +1,141 @@
+{
+  "qualification_only": true,
+  "official_rated_load_lb": 0.0,
+  "provisional_contents_load_lb_analysis_only": 29.3,
+  "proof_load_2x_p_lb_analysis_only": 58.6,
+  "field_milestone_proof_lb_jeff_24h": 38.0,
+  "governing_failure_mode": "wood_screw_withdrawal_stud",
+  "layer_adhesion_safety_factor": 4.0,
+  "inputs": {
+    "deck_clear_span_mm": 393.7,
+    "deck_max_tile_segment_span_mm": 151.8,
+    "shelf_depth_mm": 152.4,
+    "deck_tile_thickness_mm": 8.0,
+    "bracket_arm_mm": [
+      152.4,
+      14.0,
+      14.0
+    ],
+    "bracket_strap_mm": [
+      72.0,
+      16.0,
+      48.0
+    ],
+    "bracket_print_arm_layers_along_depth": true,
+    "layer_adhesion_safety_factor": 4.0,
+    "bulk_material_safety_factor": 3.0
+  },
+  "material_sources": [
+    "ASTM D638 / ISO 527 typical PETG tensile (~50 MPa molded) \u2014 see docs/LOAD_ANALYSIS.md",
+    "FDM interlayer strength literature (~15 MPa PETG Z before project safety factor)",
+    "AWC NDS lag-screw withdrawal coefficient (Table 12D, conservative)"
+  ],
+  "notes": [
+    "ANALYSIS-ONLY / PROVISIONAL \u2014 not a safe-working load.",
+    "Official rated load remains 0 lb in SAFETY.md until docs/LOAD_TEST.md proof passes.",
+    "Printed self-weight (~0.821 kg) is in addition to any contents rating.",
+    "Protocol proof load 2\u00d7P = 58.6 lb (contents ballast); Jeff field milestone 38 lb / 24 h is documented in docs/LOAD_TEST.md."
+  ],
+  "failure_modes": [
+    {
+      "name": "bracket_arm_bulk_bending",
+      "limit_total_load_lb": 44.97,
+      "limit_basis": "in_plane_fiber_bending_allowable",
+      "detail": {
+        "arm_length_mm": 152.4,
+        "section_modulus_mm3": 457.3333333333333,
+        "allowable_stress_mpa": 16.666666666666668,
+        "reaction_model": "each_bracket_carries_half_total_contents_load"
+      }
+    },
+    {
+      "name": "bracket_root_stress_concentration",
+      "limit_total_load_lb": 29.98,
+      "limit_basis": "bulk_bending_with_root_stress_concentration_factor_1.5",
+      "detail": {
+        "arm_length_mm": 152.4,
+        "section_modulus_mm3": 457.3333333333333,
+        "allowable_stress_mpa": 11.111111111111112,
+        "reaction_model": "each_bracket_carries_half_total_contents_load",
+        "allowable_root_mpa": 11.111111111111112,
+        "limit_basis": "bulk_bending_with_root_stress_concentration_factor_1.5",
+        "arm_layers_along_shelf_depth": true,
+        "estimated_bonded_plan_area_mm2": 1008.0
+      }
+    },
+    {
+      "name": "deck_tile_interlock_shear",
+      "limit_total_load_lb": 215.84,
+      "limit_basis": "interlayer_shear_at_tongue_with_joint_safety_factor",
+      "detail": {
+        "tongue_engagement_span_mm": 3.0,
+        "tongue_contact_length_mm": 106.67999999999999,
+        "tongue_thickness_mm": 4.0,
+        "shear_plan_area_mm2": 320.03999999999996,
+        "spanwise_joint_count": 2,
+        "allowable_shear_mpa": 1.5,
+        "deck_interlock_safety_factor": 2.5,
+        "model": "single_joint_carries_half_total_vertical_shear",
+        "geometry_source": "scripts/generate_shelf_mini.py _deck_interlock_features"
+      }
+    },
+    {
+      "name": "deck_tile_segment_span_interlayer",
+      "limit_total_load_lb": 72.22,
+      "limit_basis": "fdm_z_tension_bottom_fiber_per_tile_segment",
+      "detail": {
+        "span_mm": 151.8,
+        "section_width_mm": 152.4,
+        "section_thickness_mm": 8.0,
+        "moment_of_inertia_mm4": 6502.400000000001,
+        "allowable_stress_mpa": 3.75,
+        "stress_direction": "bottom_fiber_tension_across_print_layers",
+        "model": "simply_supported_uniform_load_on_longest_single_tile_between_bracket_or_interlock_supports",
+        "segment_span_mm": 151.8,
+        "full_bay_span_mm": 393.7,
+        "rejects_monolithic_full_bay_assumption": true
+      }
+    },
+    {
+      "name": "deck_tile_full_bay_span_interlayer_ultraconservative",
+      "limit_total_load_lb": 27.85,
+      "limit_basis": "fdm_z_tension_if_entire_bay_were_one_monolithic_slab",
+      "detail": {
+        "span_mm": 393.7,
+        "section_width_mm": 152.4,
+        "section_thickness_mm": 8.0,
+        "moment_of_inertia_mm4": 6502.400000000001,
+        "allowable_stress_mpa": 3.75,
+        "stress_direction": "bottom_fiber_tension_across_print_layers",
+        "model": "simply_supported_uniform_load_between_two_bracket_arms",
+        "note": "Not the installed tile layout; retained for sensitivity only."
+      }
+    },
+    {
+      "name": "wood_screw_withdrawal_stud",
+      "limit_total_load_lb": 29.26,
+      "limit_basis": "nds_conservative_withdrawal",
+      "detail": {
+        "nds_withdrawal_coef_lb_per_in2": 138.0,
+        "screw_diameter_in": 0.25,
+        "effective_penetration_in": 2.1200787401574805,
+        "per_screw_ultimate_withdrawal_lb": 18.28567913385827,
+        "per_screw_allowable_lb": 7.314271653543308,
+        "screws_per_bracket": 2,
+        "bracket_count": 2,
+        "caveat": "Stud species, edge distance, and GRK RSS thread form not certified here."
+      }
+    },
+    {
+      "name": "petg_washer_bearing",
+      "limit_total_load_lb": 1569.46,
+      "limit_basis": "compressive_bearing_on_strap_face",
+      "detail": {
+        "washer_od_mm": 20.0,
+        "bearing_area_mm2": 314.1592653589793,
+        "allowable_bearing_mpa": 5.555555555555556,
+        "strap_thickness_mm": 16.0
+      }
+    }
+  ]
+}
