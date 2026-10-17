@@ -30,22 +30,22 @@ The R12 3/6-bay arcade, nine-keystone rhythm, reinforced thickness standard, and
 3. Update documentation whenever an assumption, datum, measurement, part name, count, attachment policy, mass, safety boundary, rendering, or workflow changes.
 4. Add or update regression tests for every changed parameter relationship.
 5. Analytical mesh volume regressions use a ±0.2% band against the R12 reference math unless a reviewed edition explicitly documents a wider tolerance.
-5. Rebuild with Python 3.12 and the pinned dependencies:
+6. Rebuild with Python 3.12 and the pinned dependencies:
 
    ```sh
    PYTHON_BIN=.venv/bin/python SKIP_BAMBU=1 scripts/build_all.sh
    ```
 
-6. On a Mac with Bambu Studio installed, run the strict integration check before a printable release:
+7. On a Mac with Bambu Studio installed, run the strict integration check before a printable release:
 
    ```sh
    PYTHON_BIN=.venv/bin/python REQUIRE_BAMBU=1 scripts/build_all.sh
    ```
 
-7. Review the complete generated diff, including `corner_layout.svg`, `palatine_elevation.svg`, `validation.json`, structural/cut/support reports, every STL/3MF filename, object counts, packaged/installed mass estimates, and artifact hashes.
-8. Confirm the final rendering referenced by documentation is `generated/artist_rendering_triadic_palatine_order.png`.
-9. Run the build again and require a clean generated diff. Renamed parts must not leave stale artifacts or stale r4 counts.
-10. Keep commits small enough to distinguish source changes from regenerated artifacts.
+8. Review the complete generated diff, including `corner_layout.svg`, `palatine_elevation.svg`, `validation.json`, structural/cut/support reports, every STL/3MF filename, object counts, packaged/installed mass estimates, and artifact hashes.
+9. Confirm the final rendering referenced by documentation is `generated/artist_rendering_triadic_palatine_order.png`.
+10. Run the build again and require a clean generated diff. Renamed parts must not leave stale artifacts or stale r4 counts.
+11. Keep commits small enough to distinguish source changes from regenerated artifacts.
 
 ## Measurement changes
 

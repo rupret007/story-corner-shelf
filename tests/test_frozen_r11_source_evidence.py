@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import copy
+import hashlib
 import shutil
 import sys
 import tempfile
@@ -14,8 +16,37 @@ if str(V2_ROOT) not in sys.path:
 
 import control_contract as control  # noqa: E402
 
+# Byte-pinned publication of requirements.txt bound by the frozen R11 v1 manifest.
+_FROZEN_PUBLISHED_REQUIREMENTS_TXT = b"""numpy==2.5.1
+shapely==2.1.2
+trimesh==5.0.0
+manifold3d==3.5.2
+mapbox-earcut==1.0.3
+scipy==1.18.0
+networkx==3.5
+"""
+
+
+def _populate_v1_source_tree(root: Path, *, requirements_bytes: bytes | None = None) -> None:
+    manifest = control.strict_json(control.V1_ROOT / "manifest.json")
+    for record in manifest["source_records"]:
+        source = control.PROJECT_ROOT / record["path"]
+        destination = root / record["path"]
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if (
+            requirements_bytes is not None
+            and record["path"] == control.REPOSITORY_REQUIREMENTS_RELATIVE
+        ):
+            destination.write_bytes(requirements_bytes)
+        else:
+            shutil.copyfile(source, destination)
+
 
 class FrozenR11SourceEvidenceTests(unittest.TestCase):
+    def test_frozen_publication_requirements_bytes_are_pinned(self) -> None:
+        digest = hashlib.sha256(_FROZEN_PUBLISHED_REQUIREMENTS_TXT).hexdigest()
+        self.assertEqual(digest, control.FROZEN_PUBLISHED_REQUIREMENTS_SHA256)
+
     def test_canonical_repository_pins_verify_frozen_v1_source_closure(self) -> None:
         live_sha = control.sha256_file(ROOT / control.REPOSITORY_REQUIREMENTS_RELATIVE)
         self.assertEqual(live_sha, control.CANONICAL_REPOSITORY_REQUIREMENTS_SHA256)
@@ -74,6 +105,50 @@ class FrozenR11SourceEvidenceTests(unittest.TestCase):
                 control.verify_live_source_records(
                     records,
                     manifest["source_tree_evidence"],
+                    project_root=root,
+                )
+
+    def test_tampered_frozen_source_tree_sha256_is_rejected(self) -> None:
+        manifest = control.strict_json(control.V1_ROOT / "manifest.json")
+        records = manifest["source_records"]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory).resolve()
+            _populate_v1_source_tree(root)
+            tampered_evidence = copy.deepcopy(manifest["source_tree_evidence"])
+            tampered_evidence["source_tree_sha256"] = "0" * 64
+            with self.assertRaisesRegex(
+                control.ContractError,
+                "v1 frozen source-tree evidence is no longer recognized",
+            ):
+                control.verify_live_source_records(
+                    records,
+                    tampered_evidence,
+                    project_root=root,
+                )
+
+    def test_tampered_live_source_tree_evidence_is_rejected(self) -> None:
+        manifest = control.strict_json(control.V1_ROOT / "manifest.json")
+        records = manifest["source_records"]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory).resolve()
+            _populate_v1_source_tree(
+                root, requirements_bytes=_FROZEN_PUBLISHED_REQUIREMENTS_TXT
+            )
+            live_evidence = control.verify_live_source_records(
+                records,
+                manifest["source_tree_evidence"],
+                project_root=root,
+            )
+            self.assertEqual(live_evidence, manifest["source_tree_evidence"])
+            tampered_evidence = copy.deepcopy(manifest["source_tree_evidence"])
+            tampered_evidence["source_bytes"] += 1
+            with self.assertRaisesRegex(
+                control.ContractError,
+                "v1 live source-tree evidence changed",
+            ):
+                control.verify_live_source_records(
+                    records,
+                    tampered_evidence,
                     project_root=root,
                 )
 
