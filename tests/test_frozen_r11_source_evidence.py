@@ -26,6 +26,33 @@ class FrozenR11SourceEvidenceTests(unittest.TestCase):
             control.FROZEN_V1_SOURCE_TREE_SHA256,
         )
 
+    def test_non_canonical_requirements_are_rejected(self) -> None:
+        manifest = control.strict_json(control.V1_ROOT / "manifest.json")
+        records = manifest["source_records"]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory).resolve()
+            for record in records:
+                source = control.PROJECT_ROOT / record["path"]
+                destination = root / record["path"]
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, destination)
+            self.assertEqual(
+                control.verify_live_source_records(
+                    records, manifest["source_tree_evidence"], project_root=root
+                ),
+                manifest["source_tree_evidence"],
+            )
+            requirements = root / control.REPOSITORY_REQUIREMENTS_RELATIVE
+            requirements.write_bytes(requirements.read_bytes() + b"# non-canonical\n")
+            with self.assertRaisesRegex(
+                control.ContractError,
+                r"repository requirements\.txt changed without matching the frozen publication "
+                "or the canonical Dependabot-pinned repository lock",
+            ):
+                control.verify_live_source_records(
+                    records, manifest["source_tree_evidence"], project_root=root
+                )
+
     def test_non_requirements_source_tampering_is_rejected(self) -> None:
         manifest = control.strict_json(control.V1_ROOT / "manifest.json")
         records = manifest["source_records"]
