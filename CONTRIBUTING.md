@@ -29,6 +29,7 @@ The R12 3/6-bay arcade, nine-keystone rhythm, reinforced thickness standard, and
 2. Update `config.json`; do not hard-code project measurements or Palatine proportions in the generator.
 3. Update documentation whenever an assumption, datum, measurement, part name, count, attachment policy, mass, safety boundary, rendering, or workflow changes.
 4. Add or update regression tests for every changed parameter relationship.
+5. Analytical mesh volume regressions use a ±0.2% band against the R12 reference math unless a reviewed edition explicitly documents a wider tolerance.
 5. Rebuild with Python 3.12 and the pinned dependencies:
 
    ```sh

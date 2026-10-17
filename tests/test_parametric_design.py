@@ -13,6 +13,15 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import generate_shelf_parts as generator  # noqa: E402
 
+# Analytical mesh regressions compare live boolean output to R12 reference math
+# within ±0.2%, not a permissive volume slab.
+R12_GEOMETRY_RELATIVE_TOLERANCE = 0.002
+
+
+def r12_geometry_relative_volume_bounds(expected_volume: float) -> tuple[float, float]:
+    margin = R12_GEOMETRY_RELATIVE_TOLERANCE
+    return expected_volume * (1.0 - margin), expected_volume * (1.0 + margin)
+
 
 class ParametricDesignTests(unittest.TestCase):
     def setUp(self) -> None:
@@ -411,6 +420,15 @@ class ParametricDesignTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "groin-vault soffit"):
             generator.corner_geometry(invalid, self.dimensions(invalid))
 
+    def test_r12_geometry_relative_tolerance_rejects_soft_mutant_s3(self) -> None:
+        """Soft mutant S3 widened the fascia upper volume ratio to 1.10."""
+        self.assertEqual(R12_GEOMETRY_RELATIVE_TOLERANCE, 0.002)
+        lower, upper = r12_geometry_relative_volume_bounds(1000.0)
+        self.assertAlmostEqual(lower, 998.0, places=6)
+        self.assertAlmostEqual(upper, 1002.0, places=6)
+        soft_mutant_s3_upper = 1000.0 * 1.10
+        self.assertLess(upper, soft_mutant_s3_upper - 1.0)
+
     def test_captured_fascia_and_slotted_retention_meshes_fit_the_envelope(self) -> None:
         fascia_width = 151.8
         fascia = generator.fascia(self.config, fascia_width)
@@ -426,10 +444,9 @@ class ParametricDesignTests(unittest.TestCase):
             ]
         )
 
-        # The fascia is a holeless, single-body C channel. Its exact union
-        # volume catches accidental face perforations while its extents and
-        # configured opening protect the full-depth lower capture and the
-        # shallower upper tile-capture flange.
+        # The fascia is a holeless, single-body C channel. Watertightness and
+        # euler checks catch through-slots; mesh volume must stay within ±0.2%
+        # of the analytical rectangular union for R12 regression.
         face_t = float(fascia_config["face_thickness_mm"])
         flange_t = float(fascia_config["flange_thickness_mm"])
         channel_depth = float(fascia_config["channel_depth_mm"])
@@ -449,8 +466,9 @@ class ParametricDesignTests(unittest.TestCase):
         self.assertAlmostEqual(fascia.extents[1], expected_total_height, places=4)
         self.assertAlmostEqual(fascia.extents[2], 29.0, places=6)
         self.assertAlmostEqual(channel_depth, 29.0, places=6)
-        self.assertGreater(fascia.volume, expected_solid_volume * 0.98)
-        self.assertLess(fascia.volume, expected_solid_volume * 1.10)
+        lower_volume, upper_volume = r12_geometry_relative_volume_bounds(expected_solid_volume)
+        self.assertGreater(fascia.volume, lower_volume)
+        self.assertLess(fascia.volume, upper_volume)
         self.assertEqual(face_t, 3.2)
         self.assertEqual(flange_t, 3.2)
         self.assertIn("mechanically capture", self.config["finish_attachment"]["fascia_method"])
