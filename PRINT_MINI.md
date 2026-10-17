@@ -42,7 +42,7 @@ Effective check uses the A1 mini 180 mm cube minus a **5 mm per-side margin** (1
 | Source | Packaged PETG mass |
 |---|---:|
 | R12 full set — `generated/validation.json` `estimated_packaged_petg_mass_kg` | 3.12 kg |
-| Mini — `generated/mini/validation.json` `estimated_packaged_petg_mass_kg` | 0.801 kg |
+| Mini — `generated/mini/validation.json` `estimated_packaged_petg_mass_kg` | 0.821 kg |
 
 Print time: **unverified** — the repository does not store slicer time metadata for mini or R12.
 
