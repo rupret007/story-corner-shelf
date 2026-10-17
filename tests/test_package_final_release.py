@@ -52,6 +52,26 @@ class PackageFinalReleaseTests(unittest.TestCase):
         self.source.mkdir()
         self.assert_preserved("No generated model-only 3MF", sentinel)
 
+    def test_zero_byte_model_entries_preserve_existing_package(self) -> None:
+        sentinel = self.seed_package()
+        self.source.mkdir()
+        (self.source / "valid.3mf").write_bytes(b"model")
+        (self.source / "empty.3mf").write_bytes(b"")
+        self.assert_preserved("must be non-empty", sentinel)
+
+    def test_missing_profiles_directory_preserves_existing_package(self) -> None:
+        sentinel = self.seed_package()
+        self.source.mkdir()
+        (self.source / "valid.3mf").write_bytes(b"model")
+        self.assert_preserved("profiles directory is missing", sentinel)
+
+    def test_empty_profiles_directory_preserves_existing_package(self) -> None:
+        sentinel = self.seed_package()
+        self.source.mkdir()
+        (self.source / "valid.3mf").write_bytes(b"model")
+        (self.root / "profiles").mkdir()
+        self.assert_preserved("profiles directory must contain", sentinel)
+
     def test_non_file_model_entries_preserve_existing_package(self) -> None:
         sentinel = self.seed_package()
         self.source.mkdir()

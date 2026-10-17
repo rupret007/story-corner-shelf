@@ -26,6 +26,18 @@ def main() -> None:
         raise SystemExit("No generated model-only 3MF files were found")
     if any(not source.is_file() for source in models):
         raise SystemExit("Every generated model-only 3MF must be an existing file")
+    if any(source.stat().st_size == 0 for source in models):
+        raise SystemExit("Every generated model-only 3MF must be non-empty")
+
+    if not PROFILES.is_dir():
+        raise SystemExit("R12 profiles directory is missing")
+    profile_sources = sorted(PROFILES.glob("*.json"))
+    if not profile_sources:
+        raise SystemExit("R12 profiles directory must contain at least one JSON preset")
+    for profile_path in profile_sources:
+        if not profile_path.is_file() or profile_path.stat().st_size == 0:
+            raise SystemExit(f"R12 profile must be a non-empty file: {profile_path.name}")
+        json.loads(profile_path.read_text(encoding="utf-8"))
 
     config = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
     profile = config["print_profile"]

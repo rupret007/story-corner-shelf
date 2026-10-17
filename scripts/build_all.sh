@@ -21,6 +21,7 @@ fi
 "$PYTHON_BIN" -m unittest discover -s "$PROJECT_DIR/tests" -p "test_*.py"
 "$PYTHON_BIN" "$PROJECT_DIR/scripts/validate_model_3mf.py" "${VALIDATOR_ARGS[@]}"
 "$PYTHON_BIN" "$PROJECT_DIR/scripts/package_final_release.py"
+"$PYTHON_BIN" "$PROJECT_DIR/scripts/check_frozen_r11_source_evidence.py"
 "$PYTHON_BIN" "$PROJECT_DIR/scripts/check_repository.py"
 
 echo "Generated validated model-only 3MFs. No embedded G-code was created."
