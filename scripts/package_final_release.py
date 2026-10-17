@@ -19,6 +19,14 @@ def write(path: Path, content: str) -> None:
 
 
 def main() -> None:
+    if (ROOT / "generated").is_symlink():
+        raise SystemExit("Refusing to package through a symlinked generated directory")
+    models = sorted(SOURCE.glob("*.3mf"))
+    if not models:
+        raise SystemExit("No generated model-only 3MF files were found")
+    if any(not source.is_file() for source in models):
+        raise SystemExit("Every generated model-only 3MF must be an existing file")
+
     config = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
     profile = config["print_profile"]
     if DESTINATION.exists():
@@ -26,9 +34,6 @@ def main() -> None:
     (DESTINATION / "models").mkdir(parents=True)
     (DESTINATION / "profiles").mkdir()
 
-    models = sorted(SOURCE.glob("*.3mf"))
-    if not models:
-        raise SystemExit("No generated model-only 3MF files were found")
     for source in models:
         shutil.copy2(source, DESTINATION / "models" / source.name)
     for source in sorted(PROFILES.glob("*.json")):
