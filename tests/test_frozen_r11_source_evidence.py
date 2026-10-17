@@ -108,6 +108,17 @@ class FrozenR11SourceEvidenceTests(unittest.TestCase):
                     project_root=root,
                 )
 
+    def test_requirements_upgrade_keeps_non_requirements_drift_guard(self) -> None:
+        text = (V2_ROOT / "control_contract.py").read_text(encoding="utf-8")
+        self.assertIn(
+            "if live_non_requirements != frozen_non_requirements:",
+            text,
+        )
+        self.assertIn(
+            'raise ContractError("v1 live source bytes changed outside requirements.txt")',
+            text,
+        )
+
     def test_tampered_frozen_source_tree_sha256_is_rejected(self) -> None:
         manifest = control.strict_json(control.V1_ROOT / "manifest.json")
         records = manifest["source_records"]
