@@ -1,4 +1,8 @@
-# Assembly — Triadic Palatine Order r5
+# Assembly — Triadic Palatine Order R12 final durable
+
+> **Installation holds:** The measured 61.5 in long wall requires verified structural blocking at 6.0 and 60.5 in from the inside corner in addition to measured studs at 17.0, 32.5, and 48.5 in. The 36 in return remains nominal; do not cut, mount, or bulk-print return production parts until its dimensions and framing are entered and regenerated.
+
+Before staging production parts, pass the R12 adhesion-corner coupon, fascia fit coupon, Palatine detail coupon, and corner gauge in the order listed in `generated/final_release_r12/PRINT_ORDER.md`. A rough, dragged, lifted, or delaminated plate-facing corner is a failed part, not a cosmetic acceptance.
 
 This document owns the build sequence and the attachment rules. Where another
 document mentions assembly, this file is the authority; if a statement here
@@ -18,7 +22,7 @@ fasteners + verified framing, in that order, always.
       rebuilt, and every `*_source` field in
       [generated/validation.json](generated/validation.json) confirmed to read
       `field_verified_*` rather than a nominal fallback.
-- [ ] Corner gauge, fascia fit coupon (with 2.0 mm tile sample in place), and
+- [ ] R12 adhesion-corner coupon, corner gauge, fascia fit coupon (with 2.4 mm tile sample in place), and
       Palatine detail coupon all passed per
       [PRINT_ME_FIRST.md](PRINT_ME_FIRST.md) steps 1–8.
 - [ ] Neutral-cure removable silicone qualified on printed PETG, sealed
@@ -130,7 +134,7 @@ exposed-end clearance absorb it.
 2. Slip the first half over the shelf stack at the inside corner end of the
    through arm: both full-depth flanges must capture the plywood + angle +
    tile stack without splitting, binding, or lifting the tile. The nominal
-   channel opening is 46.256 mm and was proven by the coupon.
+   channel opening is 46.656 mm and must be proven by the R12 coupon.
 3. Before seating each half fully home, place **one tiny centered dot** of
    qualified silicone inside its channel, then seat it and slide it laterally
    against its neighbor to the 0.6 mm seam.

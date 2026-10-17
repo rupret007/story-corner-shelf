@@ -20,3 +20,13 @@ receive a new package ID, manifest, source closure, and dependent baseline.
 
 No model, geometry, process setting, permission, installation rule, or load
 claim is changed by this erratum.
+
+## Live dependency hash exception
+
+The live-source verifier accepts exactly one alternate `requirements.txt`
+SHA-256, `7abf9095c9e72a01d77d52d43c5907de9ef4a324ea557dbecbd21e0e88ab20ad`,
+for main's Dependabot pins, in addition to the original frozen hash. Every
+other recorded v1 source must still match its frozen bytes. The frozen v1
+bundle and its source evidence are retained unchanged; the v2 manifest was
+regenerated for the verifier change (`source_tree_sha256`: `26c2b312…` →
+`819141b0…`). No other requirements hash is allowed.
