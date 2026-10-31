@@ -92,6 +92,8 @@ class PackageFinalReleaseTests(unittest.TestCase):
     def test_symlinked_generated_directory_preserves_external_package(self) -> None:
         external = self.workspace / "external"
         external.mkdir()
+        if self.generated.exists():
+            shutil.rmtree(self.generated)
         self.generated.symlink_to(external, target_is_directory=True)
         sentinel = self.seed_package()
         self.source.mkdir()
@@ -102,6 +104,8 @@ class PackageFinalReleaseTests(unittest.TestCase):
 
     def test_dangling_generated_symlink_is_refused(self) -> None:
         missing = self.workspace / "missing"
+        if self.generated.exists():
+            shutil.rmtree(self.generated)
         self.generated.symlink_to(missing, target_is_directory=True)
         result = self.run_packager()
         self.assertNotEqual(result.returncode, 0)
@@ -111,6 +115,8 @@ class PackageFinalReleaseTests(unittest.TestCase):
 
     def test_valid_inputs_replace_package_and_copy_models_and_profiles(self) -> None:
         sentinel = self.seed_package()
+        self.generated.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(ROOT / "generated" / "validation.json", self.generated / "validation.json")
         self.source.mkdir()
         (self.source / "valid.3mf").write_bytes(b"model payload")
         profiles = self.root / "profiles"

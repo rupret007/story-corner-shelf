@@ -45,9 +45,9 @@ The corner formulas are:
 - return-deck end: `WS − c`;
 - return-deck length: `WS − c − bL − D − j`.
 
-At the current equal nominal offsets:
+With the field-verified 61.5 in long-wall clear width and equal 0.6875 in nominal offsets on both walls:
 
-- through deck: stations 0.6875–59.875 in; length 59.1875 in;
+- through deck: stations 0.6875–61.375 in; length 60.6875 in;
 - return deck: stations 8.750492–35.875 in; length 27.124508 in;
 - plywood footprint overlap: 0;
 - concealed gap: 1.6 mm.
@@ -89,10 +89,10 @@ This calculation addresses only ideal straight edges. A full-size template remai
 
 ### 5 ft through arm
 
-- Deck stations: 0.6875–59.875 in from the corner datum.
-- Four desired support lines: 6.28125, 22.28125, 38.28125, and 54.28125 in.
-- Support intervals: 16 in.
-- End overhangs: 5.59375 in.
+- Deck stations: 0.6875–61.375 in from the corner datum.
+- Five planned support lines: 6.0, 17.0, 32.5, 48.5, and 60.5 in (measured studs at 17.0, 32.5, and 48.5; purpose-installed blocking required at 6.0 and 60.5).
+- Support intervals: 11.0, 15.5, 16.0, and 12.0 in.
+- End overhangs: 5.3125 in at the corner side and 0.875 in at the outer end.
 
 ### 3 ft return arm
 
@@ -105,7 +105,7 @@ These are desired geometry, not drilling coordinates. Every line must land on ve
 
 Using the 7.26 in reference bracket reach and nominal offsets, perpendicular bracket-body clearance is approximately 2.803 in. Using the more conservative entire 8 in shelf envelope, clearance is approximately 2.063 in. Both exceed the 1 in development minimum, but neither captures actual bracket width, locks, screws, manufacturing tolerance, wall angle, or installation error. Physical two-bracket dry fit is mandatory.
 
-The 42 mm Palatine groin-vault soffit occupies stations 7.010–8.664 in beneath the through-owned corner square. Its nominal distance from the nearest through support plane at 6.281 in is 18.519 mm. Regeneration stops below the 10 mm development minimum, and the real bracket body still requires a dry fit.
+The 42 mm Palatine groin-vault soffit occupies stations 7.010–8.664 in beneath the through-owned corner square. Its nominal distance from the nearest through support plane at 6.0 in is 25.662 mm. Regeneration stops below the 10 mm development minimum, and the real bracket body still requires a dry fit.
 
 ![Nominal support stations](generated/support_layout.svg)
 
@@ -147,7 +147,7 @@ The rear-curb system is split so no PETG curb crosses the plywood joint:
 - the long-wall straight curb begins at station 1.892 in;
 - a separate 172.6 mm short-wall piece stays on the through-owned corner square and stops at station 8.6875 in;
 - the return straight curb begins on its own board at station 8.750492 in;
-- nominal through ends: 126.481 mm; nominal return ends: 115.581 mm;
+- nominal through ends: 145.531 mm; nominal return ends: 115.581 mm;
 - center counts: 8 through and 3 return.
 
 Installed vertical stack:
@@ -169,7 +169,7 @@ The R12 ornament is a replaceable skin with zero structural credit. Primary fasc
 
 - 3 complete segmental bays on the return and 6 on the through arm;
 - 6 short-arm and 12 long-arm handed half-arches;
-- half widths: 113.99375 mm return and 107.630208 mm through;
+- half widths: 113.827 mm return and 110.722 mm through;
 - 0.6 mm seams between all 18 halves;
 - functional fascia height: 76.05625 mm;
 - arch drop: 92 mm;
@@ -233,7 +233,7 @@ The deliberately limited plywood-span check uses a **30 lb/ft total development 
 Current round-number contents-selection targets are:
 
 - 55 lb evenly distributed on the 27.125 in return deck;
-- 120 lb evenly distributed on the 59.188 in through deck, including the corner square.
+- 120 lb evenly distributed on the 60.688 in through deck, including the corner square.
 
 The calculation excludes wall and stud capacity; standards, brackets, locks, and fasteners; cumulative shelf levels; point, impact, front-edge, seismic, and accidental loads; plywood variability; connection slip; and corner differential movement. The selection targets cannot be inferred from or multiplied by a bracket laboratory result.
 

@@ -17,6 +17,7 @@ before mounting or loading.
 The 36 in return arm remains nominal. Do not cut, mount, or bulk-print its
 production parts until that wall and its framing have been measured.
 
-READY NOW: print `models/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf`.
-It is an actual installed part, not a coupon. The measured long wall uses 14
-of these universal center tiles. Inspect the first one before repeating it.
+READY NOW: print the four qualification objects in PRINT_ORDER.md on the
+locked A1 Mini / SUNLU R12 preset before any production tile. After they pass,
+print `models/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf` (14 copies on the
+measured long wall).

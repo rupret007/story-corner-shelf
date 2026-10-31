@@ -2,7 +2,7 @@
 
 > **Frozen earlier revisions:** the R6–R11 trees under `development/` are historical records governed by their own gate documents, including the R11 print hold, single-use permit protocol, and **0 kg / 0 lb** rating. Nothing in those trees authorizes printing, drilling, installation, or load, and nothing in this r5 document authorizes an R11 job. See [development/r11/README.md](development/r11/README.md), the [R11 print hold](development/r11/PRINT_FIRST.md), the [Gate A-left v2 control overlay](development/r11_print_v2/PRINT_GATE_A_LEFT.md), and the [append-only physical record](development/r11_physical/PHYSICAL_RECORD.md).
 
-The files in `generated/model_only_3mf/` contain geometry only. They deliberately contain **no embedded G-code** because the printer, nozzle, build plate, Bambu Studio version, and exact PETG product remain unconfirmed.
+The files in `generated/model_only_3mf/` contain geometry only. They deliberately contain **no embedded G-code**. Slice with the locked Bambu Lab A1 mini, 0.4 mm nozzle, Textured PEI Plate, and SUNLU clear PETG presets in [`generated/final_release_r12/profiles/`](generated/final_release_r12/profiles/)—not ad hoc settings from another printer or revision.
 
 All generated printable components are SUNLU clear PETG finish, ornament, modest item-retention, or fit-check parts. The plywood, steel angles, brackets, standards, locks, blocking, alignment hardware, and wall fasteners are nonprinted structural components and are not contained in any 3MF.
 
@@ -20,21 +20,20 @@ Before production, confirm:
 - the actual perpendicular-bracket envelope and the groin-vault clearance after support locations are verified;
 - the 8 in depth and 170.056 mm Palatine fascia envelope against doors, trim, outlets, people, and bins;
 - verified framing or purpose-installed blocking at every support line;
-- exact printer model, nozzle diameter and material, build plate, and Bambu Studio version;
-- SUNLU clear PETG lot, the supplied R12 preset, and dry filament;
+- Bambu Studio version and SUNLU clear PETG lot on the locked R12 preset, with dry filament;
 - the exact removable silicone products, captured fascia-channel fit, rear-curb and groin-vault screws, removal method, and underside clearance below every proposed finish fastener.
 
 Never send or reuse G-code prepared for another printer, nozzle, plate, filament, or design revision.
 
 ## First-print and fit sequence
 
-1. Print one [`MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf`](generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf). This is an actual installed part; the long wall uses 14. Reject lifted edges, dragged strands, separated first-layer lines, delamination, or more than 0.5 mm cooled corner lift.
-2. After that tile passes, print the remaining 13 long-wall center tiles. Universal rear-curb centers may follow; the long wall uses eight.
-3. Before fitted fascia or corner production, print [`MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf).
-4. Obtain the actual 23/32 in plywood and 1 x 1 x 1/8 in steel angle. Print [`MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf) and fit it to that stack **with a printed 2.4 mm top-tile sample in place**. The nominal 46.656 mm opening must slide without splitting, binding, lifting the tile, or excessive rattle.
-5. Print [`MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf) face-up. Approve the 2.4 mm archivolt shadow reveal, 3:4:5 void, flutes, pier base/capital relief, nine dentils, three triglyph groups, three cornice orders, central patera, bridge quality, edge finish, and removability before printing ornate production parts.
+1. Print [`MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_R12_AdhesionCornerCoupon.3mf). Reject any rough, dragged, lifted, or delaminated plate-facing corner.
+2. Obtain the actual 23/32 in plywood and 1 x 1 x 1/8 in steel angle. Print [`MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_FasciaFitCoupon.3mf) and fit it to that stack **with a printed 2.4 mm top-tile sample in place**. The nominal 46.656 mm opening must slide without splitting, binding, lifting the tile, or excessive rattle.
+3. Print [`MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_PalatineDetailCoupon.3mf) face-up. Approve the 2.4 mm archivolt shadow reveal, 3:4:5 void, flutes, pier base/capital relief, nine dentils, three triglyph groups, three cornice orders, central patera, bridge quality, edge finish, and removability before printing ornate production parts.
    Compare it with the [nominal Palatine elevation](generated/palatine_elevation.svg), whose stations, counts, and dimensions are exact while its displayed arch curves are schematic. It is not a structural drawing or proof of printer fit.
-6. Print [`MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf), compare it with the real corner and a full-size cardboard or hardboard template, and confirm the ±0.25° gate and at least 0.6 mm residual joint clearance.
+4. Print [`MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf`](generated/model_only_3mf/MODEL_ONLY_PRINT_FIRST_CornerFitGauge.3mf), compare it with the real corner and a full-size cardboard or hardboard template, and confirm the ±0.25° gate and at least 0.6 mm residual joint clearance.
+5. Print one [`MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf`](generated/model_only_3mf/MODEL_ONLY_PETG_TopTile_Center_6inPitch.3mf). This is an actual installed part; the long wall uses 14. Reject lifted edges, dragged strands, separated first-layer lines, delamination, or more than 0.5 mm cooled corner lift.
+6. After that tile passes, print the remaining 13 long-wall center tiles. Universal rear-curb centers may follow; the long wall uses eight.
 7. Measure the shelf-back offset separately on both walls. Do not substitute the catalog standard projection for either installed measurement.
 8. Coupon-test attachments, rebuild fitted pieces, then inspect one long-wall fascia half before its remaining production queue.
 9. Dry-assemble PETG only on the unloaded, independently supported plywood-and-steel structure and verify every seam, capture, floating joint, cap, curb, and soffit clearance.
@@ -61,7 +60,7 @@ Never send or reuse G-code prepared for another printer, nozzle, plate, filament
 | Adhesion corner + corner gauge + fascia + Palatine coupons | — | — | 4 | 4 |
 | **Total** |  |  |  | **102** |
 
-The installed set is 98 objects; the gauge and three coupons are not installed.
+The installed set is 98 objects; the four print-first qualification objects are not installed.
 
 ## Nominal module facts
 
@@ -70,11 +69,11 @@ The installed set is 98 objects; the gauge and three coupons are not installed.
 - Short-arm arcade halves: 113.827 x 170.056 x 29.0 mm, three left and three right, resolving three bays; nominal/on hold.
 - Long-arm arcade halves: 110.722 x 170.056 x 29.0 mm, six left and six right, resolving six bays.
 - Entablature overlays: one per arcade half, 24 mm high and 3.2 mm overall relief thickness.
-- Keystones: nine at 18 x 24 x 2.4 mm; retain each to one half and float it across the other.
-- Through rear-curb ends: 126.481 mm; return rear-curb ends: 115.581 mm.
+- Keystones: nine at 18 x 24 x 3.0 mm; retain each to one half and float it across the other.
+- Through rear-curb ends: 145.531 mm; return rear-curb ends: 115.581 mm.
 - Through-owned corner-side rear curb: 172.6 mm. It stops before the 1.6 mm plywood joint.
 - Full-height endcaps and corner pilaster: 170.056 mm tall.
-- Groin-vault soffit: 42 mm square and nominally 18.519 mm from the nearest support plane; the configured minimum is 10 mm.
+- Groin-vault soffit: 42 mm square and nominally 25.662 mm from the nearest support plane at 6.0 in; the configured minimum is 10 mm.
 
 ## Attachment and installed stack
 

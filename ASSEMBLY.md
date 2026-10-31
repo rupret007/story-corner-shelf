@@ -180,7 +180,7 @@ Count the installed set — it must total **98**:
 
 Hand pull-check every overlay, keystone, endcap, pilaster leg, and the
 soffit. Confirm every 0.6 mm seam is free, nothing bears on ornament, and no
-tile has lifted. The gauge and two coupons are not installed.
+tile has lifted. The gauge and three coupons are not installed.
 
 ## Stage 8 — Load acceptance and record
 

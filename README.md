@@ -10,7 +10,7 @@ The long wall is field measured at 61.5 in. Its three measured studs resolve to 
 
 The authoritative print handoff is [`generated/final_release_r12/README_FIRST.md`](generated/final_release_r12/README_FIRST.md). The previous `generated/ready_to_print_now/` folder records the failed R5 corner attempt and is superseded.
 
-To begin with a real installed component, follow [`generated/final_release_r12/START_PRINTING_NOW.md`](generated/final_release_r12/START_PRINTING_NOW.md) and print one universal top center tile. The measured long wall needs 14. Fitted fascia, ends, and corner components remain gated by installed offsets and full-size corner verification.
+To begin printing, follow [`generated/final_release_r12/START_PRINTING_NOW.md`](generated/final_release_r12/START_PRINTING_NOW.md): pass the four SAFETY.md qualification objects (adhesion-corner, fascia-fit, Palatine-detail, and corner-gauge) on the locked A1 Mini / SUNLU R12 preset before any production tile. After those pass, the measured long wall needs 14 universal center top tiles. Fitted fascia, ends, and corner components remain gated by installed offsets and full-size corner verification.
 
 > **Prototype status:** the meshes and model-only 3MF packages are generated design-development artifacts. The wall lengths, separate installed offset on each wall, corner angle, wall bow, framing map, hardware envelope, 8 in depth, attachment stack, printer, nozzle, build plate, PETG product, and completed assembly remain unverified. No tested load rating is claimed. No embedded G-code is included.
 
@@ -24,14 +24,14 @@ Viewed from the closet opening, the nominal plan places the 5 ft through arm on 
 
 | Arm | Nominal plywood stations from inside corner | Nominal deck | Desired support centers from inside corner | Palatine arcade |
 |---|---:|---:|---|---:|
-| 5 ft through | 0.688–59.875 in | 59.188 x 8 in | 6.281, 22.281, 38.281, 54.281 in | 6 bays / 12 halves |
+| 5 ft through | 0.688–61.375 in | 60.688 x 8 in | 6.0, 17.0, 32.5, 48.5, 60.5 in (studs at 17.0/32.5/48.5; blocking at 6.0 and 60.5) | 6 bays / 12 halves |
 | 3 ft return | 8.750–35.875 in | 27.125 x 8 in | 10.750, 22.313, 33.875 in | 3 bays / 6 halves |
 
 The shortened return still completes the full short-wall surface because the through deck supplies the corner. Nominal geometry uses 0.6875 in as the provisional installed shelf-back offset on **each** wall, an 8 in deck, a 1.6 mm concealed plywood fit gap, and 1/8 in clearance at each exposed outer end. These are not field cut dimensions.
 
 ![Dimensioned fitted corner plan](generated/corner_layout.svg)
 
-The desired support layout limits longitudinal spacing to 16 in and end overhang to the configured 6 in maximum; the nominal plan works out to 5.594 in on the through arm and 2 in on the return. It is not a drilling map. Every standard must land on verified wood framing or purpose-installed structural blocking. Dry-fit the two nearest perpendicular brackets, locks, fasteners, and both steel angles together before drilling.
+The desired support layout limits longitudinal spacing to 16 in and end overhang to the configured 6 in maximum; the measured through arm works out to 5.312 in at the corner side and 0.875 in at the outer end, and the return to 2 in at each end. It is not a drilling map. Every standard must land on verified wood framing or purpose-installed structural blocking. Dry-fit the two nearest perpendicular brackets, locks, fasteners, and both steel angles together before drilling.
 
 ## Permanent load path
 
@@ -74,17 +74,17 @@ The ornament follows a controlled 3–6–9 grammar rather than adding unrelated
 
 - 3 segmental-arch bays on the short arm and 6 on the long arm;
 - 18 handed arcade/fascia halves separated by 0.6 mm seams and finished by 9 floating keystones;
-- 113.994 mm short-arm halves and 107.630 mm long-arm halves;
+- 113.827 mm short-arm halves and 110.722 mm long-arm halves;
 - 92 mm arch drop, 48 mm rise, 6 mm overlap into the functional fascia, and 170.056 mm total saved height;
 - a 5 mm outer archivolt order, 2.4 mm true shadow reveal, and 4 mm inner order;
 - a 22 mm shared pier with three 1 mm flutes per half — six across the assembled pier — plus 9 mm-high / 4 mm-projecting bases and 8 mm-high / 5 mm-projecting capitals;
 - one 3:4:5 spandrel void per half;
 - removable 24 mm-high entablature overlays, each with 9 dentils, 3 triglyph groups, 3 cornice orders, and an 11 mm central patera;
-- an 18 x 24 x 2.4 mm keystone at every bay center, retained to one half while floating over the other;
+- an 18 x 24 x 3.0 mm keystone at every bay center, retained to one half while floating over the other;
 - an 18 mm-leg full-height re-entrant corner pilaster fixed on one upper leg and floating on the perpendicular leg;
 - a 42 mm groin-vault soffit with diagonal ribs and a 9-petal boss, mounted only beneath the through-owned corner square.
 
-The groin-vault footprint currently has 18.519 mm nominal clearance to the nearest through support plane, above the 10 mm development minimum. Field support locations must regenerate and re-pass that check. None of these forms receives structural credit, even when it visually resembles an arch, pier, bracket, or vault.
+The groin-vault footprint currently has 25.662 mm nominal clearance to the nearest through support plane at 6.0 in, above the 10 mm development minimum. Field support locations must regenerate and re-pass that check. None of these forms receives structural credit, even when it visually resembles an arch, pier, bracket, or vault.
 
 ![Dimensioned Triadic Palatine elevation](generated/palatine_elevation.svg)
 
@@ -100,7 +100,7 @@ Attachment prevents loose trim, rattle, and falling only. It does not carry stor
 
 ## Split rear-curb system
 
-The rear curb sits on the PETG tile/plywood stack — never on bare plywood and never across the structural joint. The long-wall straight curb starts at station 1.892 in after the 30 mm fitted replacement; a separate 172.6 mm corner-side curb stays on the through-owned corner square; the return curb starts on its own plywood at 8.750 in, beyond the 1.6 mm wood gap. Rear-curb ends are arm-specific: 126.481 mm through, 115.581 mm return. The installed z-stack and the slot/drill/screw procedure are in [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 6 and [ASSEMBLY.md](ASSEMBLY.md) Stage 4.
+The rear curb sits on the PETG tile/plywood stack — never on bare plywood and never across the structural joint. The long-wall straight curb starts at station 1.892 in after the 30 mm fitted replacement; a separate 172.6 mm corner-side curb stays on the through-owned corner square; the return curb starts on its own plywood at 8.750 in, beyond the 1.6 mm wood gap. Rear-curb ends are arm-specific: 145.531 mm through, 115.581 mm return. The installed z-stack and the slot/drill/screw procedure are in [ENGINEERING_DESIGN.md](ENGINEERING_DESIGN.md) section 6 and [ASSEMBLY.md](ASSEMBLY.md) Stage 4.
 
 ## Safe customization
 
