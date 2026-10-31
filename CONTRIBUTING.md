@@ -21,7 +21,7 @@ Every change must preserve these boundaries unless the project is explicitly re-
 - A same-height L level is unloaded and moved as one coupled assembly.
 - No untested load rating or machine-specific G-code is committed.
 
-The r5 3/6-bay arcade, nine-keystone rhythm, and related 3–6–9 details are edition-level parameters. Changing them creates a new reviewed edition rather than an incidental cosmetic patch.
+The R12 3/6-bay arcade, nine-keystone rhythm, reinforced thickness standard, and related 3–6–9 details are edition-level parameters. Changing them creates a new reviewed edition rather than an incidental cosmetic patch.
 
 ## Change workflow
 
@@ -29,22 +29,23 @@ The r5 3/6-bay arcade, nine-keystone rhythm, and related 3–6–9 details are e
 2. Update `config.json`; do not hard-code project measurements or Palatine proportions in the generator.
 3. Update documentation whenever an assumption, datum, measurement, part name, count, attachment policy, mass, safety boundary, rendering, or workflow changes.
 4. Add or update regression tests for every changed parameter relationship.
-5. Rebuild with Python 3.12 and the pinned dependencies:
+5. Analytical mesh volume regressions use a ±0.2% band against the R12 reference math unless a reviewed edition explicitly documents a wider tolerance.
+6. Rebuild with Python 3.12 and the pinned dependencies:
 
    ```sh
    PYTHON_BIN=.venv/bin/python SKIP_BAMBU=1 scripts/build_all.sh
    ```
 
-6. On a Mac with Bambu Studio installed, run the strict integration check before a printable release:
+7. On a Mac with Bambu Studio installed, run the strict integration check before a printable release:
 
    ```sh
    PYTHON_BIN=.venv/bin/python REQUIRE_BAMBU=1 scripts/build_all.sh
    ```
 
-7. Review the complete generated diff, including `corner_layout.svg`, `palatine_elevation.svg`, `validation.json`, structural/cut/support reports, every STL/3MF filename, object counts, packaged/installed mass estimates, and artifact hashes.
-8. Confirm the final rendering referenced by documentation is `generated/artist_rendering_triadic_palatine_order.png`.
-9. Run the build again and require a clean generated diff. Renamed parts must not leave stale artifacts or stale r4 counts.
-10. Keep commits small enough to distinguish source changes from regenerated artifacts.
+8. Review the complete generated diff, including `corner_layout.svg`, `palatine_elevation.svg`, `validation.json`, structural/cut/support reports, every STL/3MF filename, object counts, packaged/installed mass estimates, and artifact hashes.
+9. Confirm the final rendering referenced by documentation is `generated/artist_rendering_triadic_palatine_order.png`.
+10. Run the build again and require a clean generated diff. Renamed parts must not leave stale artifacts or stale r4 counts.
+11. Keep commits small enough to distinguish source changes from regenerated artifacts.
 
 ## Measurement changes
 
@@ -56,9 +57,9 @@ The common coordinate datum is the intersection of the two finished wall planes.
 - included corner angle, wall bow, drywall/caulk profile, calculated residual joint clearance, and a full-size template;
 - exact bracket width/reach/body envelope, locks, fasteners, and perpendicular dry-fit result;
 - regenerated groin-vault-to-bracket clearance;
-- common shelf-top elevation, 168.056 mm Palatine fascia clearance, door/trim clearance, electrical/plumbing constraints, and number of loaded levels;
+- common shelf-top elevation, 170.056 mm Palatine fascia clearance, door/trim clearance, electrical/plumbing constraints, and number of loaded levels;
 - bin dimensions, heaviest object, intended evenly distributed contents, and measured shelf-arm dead load;
-- confirmed printer, nozzle, plate, slicer, black PETG product, and filament condition;
+- confirmed Bambu Lab A1 mini, 0.4 mm nozzle, Textured PEI Plate, slicer version, SUNLU clear PETG lot, and filament condition;
 - selected removable silicone, captured fascia-channel fit, curb/groin-vault screw stack, and removal method with qualification results on printed PETG, sealed plywood, and actual coated steel where applicable.
 
 Photographs must exclude faces, addresses, serial numbers, and other private information before being added to a public issue.

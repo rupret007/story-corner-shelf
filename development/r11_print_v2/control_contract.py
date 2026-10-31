@@ -37,6 +37,17 @@ LEDGER_RELATIVE_PATH = Path(
 LEDGER_IDENTITY_SCHEMA_VERSION = "r11.gate-a-left-ledger-identity.v1"
 
 BASELINE_LOCK_PATH = V2_ROOT / "baseline_lock.json"
+
+REPOSITORY_REQUIREMENTS_RELATIVE = "requirements.txt"
+FROZEN_PUBLISHED_REQUIREMENTS_SHA256 = (
+    "61581063407e74cf087c0af6083defd140dabe36c726b7adf6b2686cfca466cd"
+)
+CANONICAL_REPOSITORY_REQUIREMENTS_SHA256 = (
+    "7abf9095c9e72a01d77d52d43c5907de9ef4a324ea557dbecbd21e0e88ab20ad"
+)
+FROZEN_V1_SOURCE_TREE_SHA256 = (
+    "91544e30a14fdf16e0cd770c1e9492b24221362d47a172bde0718c82fa00137c"
+)
 RELEASE_CONTRACT_PATH = V2_ROOT / "release_contract.json"
 ATTEMPT_SCHEMA_PATH = V2_ROOT / "schemas/attempt_evidence.schema.json"
 PERMISSION_SCHEMA_PATH = V2_ROOT / "schemas/fresh_permission.schema.json"
@@ -342,6 +353,17 @@ def tree_evidence(root: Path) -> dict[str, Any]:
     }
 
 
+def _requirements_upgrade_allowed(live_sha256: str, frozen_record: Mapping[str, Any]) -> bool:
+    if live_sha256 == frozen_record["sha256"]:
+        return False
+    if live_sha256 != CANONICAL_REPOSITORY_REQUIREMENTS_SHA256:
+        raise ContractError(
+            "repository requirements.txt changed without matching the frozen publication "
+            "or the canonical Dependabot-pinned repository lock"
+        )
+    return True
+
+
 def verify_live_source_records(
     records: Any,
     expected_evidence: Any,
@@ -355,6 +377,7 @@ def verify_live_source_records(
     live_records: list[dict[str, Any]] = []
     root = Path(project_root).resolve()
     seen: set[str] = set()
+    requirements_upgraded = False
     for index, value in enumerate(records):
         record = _require_exact_keys(
             value, ("path", "bytes", "sha256"), f"v1.source_records[{index}]"
@@ -380,10 +403,31 @@ def verify_live_source_records(
             "sha256": snapshot.sha256,
         }
         if live != dict(record):
-            raise ContractError(f"v1 live source bytes changed: {relative_text}")
+            if relative_text != REPOSITORY_REQUIREMENTS_RELATIVE:
+                raise ContractError(f"v1 live source bytes changed: {relative_text}")
+            if _requirements_upgrade_allowed(live["sha256"], record):
+                requirements_upgraded = True
+            live_records.append(live)
+            continue
         live_records.append(live)
     if live_records != sorted(live_records, key=lambda item: item["path"]):
         raise ContractError("v1 source records are not in canonical path order")
+    if requirements_upgraded:
+        frozen_non_requirements = [
+            dict(record)
+            for record in records
+            if record["path"] != REPOSITORY_REQUIREMENTS_RELATIVE
+        ]
+        live_non_requirements = [
+            record
+            for record in live_records
+            if record["path"] != REPOSITORY_REQUIREMENTS_RELATIVE
+        ]
+        if live_non_requirements != frozen_non_requirements:
+            raise ContractError("v1 live source bytes changed outside requirements.txt")
+        if expected_evidence.get("source_tree_sha256") != FROZEN_V1_SOURCE_TREE_SHA256:
+            raise ContractError("v1 frozen source-tree evidence is no longer recognized")
+        return dict(expected_evidence)
     live_evidence = source_tree_evidence(live_records)
     if live_evidence != expected_evidence:
         raise ContractError("v1 live source-tree evidence changed")
