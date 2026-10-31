@@ -73,10 +73,20 @@ def cuboid(size: tuple[float, float, float], origin=(0.0, 0.0, 0.0)) -> trimesh.
     return mesh
 
 
-def rounded_prism(width: float, depth: float, height: float, radius: float) -> trimesh.Trimesh:
+def rounded_prism_outline(width: float, depth: float, radius: float) -> Polygon:
+    """Plan-view outline for a plate-facing rounded rectangle extrusion."""
     radius = min(radius, width / 2.0 - 0.01, depth / 2.0 - 0.01)
     center = shapely_box(radius, radius, width - radius, depth - radius)
-    outline = center.buffer(radius, quad_segs=8)
+    return center.buffer(radius, quad_segs=8)
+
+
+def rounded_prism_plan_area(width: float, depth: float, radius: float) -> float:
+    """Extruded cross-section area matching :func:`rounded_prism`."""
+    return float(rounded_prism_outline(width, depth, radius).area)
+
+
+def rounded_prism(width: float, depth: float, height: float, radius: float) -> trimesh.Trimesh:
+    outline = rounded_prism_outline(width, depth, radius)
     mesh = trimesh.creation.extrude_polygon(outline, height=height, engine="earcut")
     mesh.remove_unreferenced_vertices()
     return mesh
@@ -641,6 +651,32 @@ def fascia_total_height(cfg: dict) -> float:
         + fascia_opening_height(cfg)
         + float(f["front_lip_height_mm"])
     )
+
+
+def fascia_solid_volume(cfg: dict, width: float) -> float:
+    """Analytical solid volume for :func:`fascia`, including fillets and root rails."""
+    f = cfg["fascia"]
+    face_t = float(f["face_thickness_mm"])
+    flange_t = float(f["flange_thickness_mm"])
+    channel_d = float(f["channel_depth_mm"])
+    top_d = float(f["top_flange_depth_mm"])
+    total_h = fascia_total_height(cfg)
+    corner_radius = float(f.get("plate_facing_corner_radius_mm", 0.0))
+    root = float(f.get("channel_root_reinforcement_mm", 0.0))
+    flange_radius = min(corner_radius, flange_t / 2.0)
+
+    volume = (
+        rounded_prism_plan_area(width, total_h, corner_radius) * face_t
+        + rounded_prism_plan_area(width, flange_t, flange_radius) * (channel_d - face_t)
+        + rounded_prism_plan_area(width, flange_t, flange_radius) * (top_d - face_t)
+    )
+    if root > 0.0:
+        # Each root rail is a rectangular cuboid on a rounded flange. The width
+        # corners of the rail stick slightly past the filleted flange footprint;
+        # boolean union keeps that sliver while the bulk of the rail is internal.
+        corner_wedge = flange_radius**2 * (1.0 - np.pi / 4.0)
+        volume += 2.0 * 2.0 * corner_wedge * root
+    return float(volume)
 
 
 def top_tile(cfg: dict, width: float, depth: float) -> trimesh.Trimesh:

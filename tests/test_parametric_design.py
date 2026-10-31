@@ -446,18 +446,15 @@ class ParametricDesignTests(unittest.TestCase):
 
         # The fascia is a holeless, single-body C channel. Watertightness and
         # euler checks catch through-slots; mesh volume must stay within ±0.2%
-        # of the analytical rectangular union for R12 regression.
+        # of the analytical solid model (rounded plate-facing fillets plus
+        # channel-root reinforcement rails) for R12 regression.
         face_t = float(fascia_config["face_thickness_mm"])
         flange_t = float(fascia_config["flange_thickness_mm"])
         channel_depth = float(fascia_config["channel_depth_mm"])
         top_depth = float(fascia_config["top_flange_depth_mm"])
         opening = generator.fascia_opening_height(self.config)
         expected_total_height = 2.0 * flange_t + opening + float(fascia_config["front_lip_height_mm"])
-        expected_solid_volume = (
-            fascia_width * expected_total_height * face_t
-            + fascia_width * flange_t * (channel_depth - face_t)
-            + fascia_width * flange_t * (top_depth - face_t)
-        )
+        expected_solid_volume = generator.fascia_solid_volume(self.config, fascia_width)
         self.assertTrue(fascia.is_watertight)
         self.assertTrue(fascia.is_volume)
         self.assertEqual(len(fascia.split(only_watertight=False)), 1)
